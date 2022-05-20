@@ -9,8 +9,7 @@
 </head>
 <body>
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play Cap1.</tw-noscript></noscript></tw-story>
-<tw-storydata name="Cap1" startnode="38" creator="Twine" creator-version="2.3.16" ifid="E0545F9B-5186-404C-A358-DD1B07B4F8E6" zoom="0.6" format="Harlowe" format-version="3.2.3" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">/* *** una combinazione di tags: sfondo_sfumato0/1 + testo_bianco *** */
-
+<tw-storydata name="Cap1" startnode="38" creator="Twine" creator-version="2.3.16" ifid="E0545F9B-5186-404C-A358-DD1B07B4F8E6" zoom="0.6" format="Harlowe" format-version="3.2.3" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">/* *** combinazione di tags: sfondo_sfumato0/1 + testo_bianco *** */
 tw-story[tags~="sfondo_sfumato0"] {
   background-image: linear-gradient(135deg, #000000, #1d2f42);
 }
@@ -45,8 +44,7 @@ tw-story[tags~="sfondo_sfumato1"] textarea {
 }
 
 
-/* *** una combinazione di tags: sfondo_bianco/sfumato2/3/4 + testo_nero *** */
-
+/* *** combinazione di tags: sfondo_bianco/sfumato2/3/4 + testo_nero *** */
 tw-story[tags~="sfondo_bianco"] {
   background-color: white;
 }
@@ -77,9 +75,13 @@ tw-passage[tags~="testo_nero"] tw-link:hover {
   color: red;
 }
 
+tw-story[tags~="sfondo_sfumato3"] select {
+  color: yellow;
+  background-color: #3d5fa2;
+}
+
 
 /* *** per centrare oggetti html (class='center') *** */
-
 .center {
   display: block;
   margin-left: auto;
@@ -89,7 +91,6 @@ tw-passage[tags~="testo_nero"] tw-link:hover {
 
 
 /* *** per formattare testo typewriter (hook |preformat>) *** */
-
 tw-hook[name="preformat"] {
   font-family: Courier New;
   font-size: 16px;
@@ -98,7 +99,10 @@ tw-hook[name="preformat"] {
 }
 
 
-
+/* *** per formattare testo typewriter (hook |piccolo>) *** */
+tw-hook[name="piccolo"] {
+  font-size: 14px;
+}
 
 
 
@@ -234,7 +238,11 @@ Prima di cominciare con il racconto, rispondi per favore a qualche domanda per p
 * Che tipo di detective vuoi essere? (dropdown: 2bind $tipo, &quot;organizzata/o e razionale&quot;, &quot;cordiale e fantasiosa/o&quot;)
 * Vuoi tenere attiva la colonna sonora durante il gioco? (dropdown: 2bind $musica, &quot;si&quot;, &quot;no&quot;)&lt;br&gt;//(se giochi in classe, insieme o vicino ai tuoi compagni, potrebbe essere meglio disattivare l’audio)//
 
-E’ ora il momento di cominciare il gioco, con [[un’insolita sveglia-&gt;un&#39;insolita sveglia]]. \
+E’ ora il momento di cominciare il gioco: avrai [[un’insolita sveglia-&gt;un&#39;insolita sveglia]].
+
+---
+//[[Qualche informazione-&gt;credits]] su questo gioco e chi l’ha realizzato.//
+\
  \
 (set: $interrogatori to (ds:)) \
 (set: $poligrafo to false) \
@@ -382,7 +390,7 @@ Potresti chiedere un aiuto alla tua amica Rebecca, per capire (link: &quot;in ch
  \
 (if: $m) [(print: $cs4)] \
  \
-(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="10" name="interroga Martino Ravanelli" tags="testo_nero sfondo_sfumato3" position="2232,600" size="100,100">&lt;img src=&#39;res1/interr.jpg&#39; height=&#39;400&#39; alt=&#39;immagine&#39;&gt;
+(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="10" name="interroga Martino Ravanelli" tags="testo_nero sfondo_sfumato3" position="2232,598.3333333333334" size="100,100">&lt;img src=&#39;res1/interr.jpg&#39; height=&#39;400&#39; alt=&#39;immagine&#39;&gt;
 
 ## L’interrogatorio di Martino Ravanelli
  \
@@ -398,9 +406,9 @@ L’interrogatorio di Ravanelli è convincente: ti sembra innocente. Ma tu, per 
 
 &lt;img src=&quot;res1/graf1.png&quot; width=&quot;600&quot; height=&quot;350&quot;&gt;
 
-&lt;img src=&quot;res1/graf2.png&quot; width=&quot;400&quot; height=&quot;700&quot;&gt;
+&lt;img src=&quot;res1/graf2.png&quot; width=&quot;400&quot; height=&quot;700&quot;&gt;]
 
-Se vuoi interrogare un altro sospettato, [[torna allo schedario-&gt;schedario]]. (if: $t is &quot;org&quot;) [In alternativa, esci dalla sala dell’interrogatorio, e [[rileggi la scheda di Martino Ravanelli-&gt;leggi la scheda di Martino Ravanelli]].]]
+Se vuoi interrogare un altro sospettato, [[torna allo schedario-&gt;schedario]]. (if: $t is &quot;org&quot;) [In alternativa, esci dalla sala dell’interrogatorio, e [[rileggi la scheda di Martino Ravanelli-&gt;leggi la scheda di Martino Ravanelli]].]
 
 (set: $interrogatori to it + (ds: &quot;Ravanelli&quot;)) \
  \
@@ -459,40 +467,47 @@ Se concordi con la proposta di Claudio Lodigiani e vuoi fidarti della strumentaz
  \
 (if: $m) [(print: $cs4)] \
  \
-(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="13" name="accusa Lodigiani" tags="testo_font sfondo_nero testo_bianco" position="2643,977" size="100,100">&lt;img src=&quot;https://i.ibb.co/p01qTPv/error.png&quot; width=&quot;400&quot; height=&quot;90&quot;&gt;
+(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="13" name="accusa Lodigiani" tags="sfondo_nero testo_bianco" position="2643,977" size="100,100">&lt;img src=&quot;res1/error.png&quot; width=&quot;400&quot; height=&quot;90&quot;&gt;
 
 ## Hai accusato Lodigiani... che però non c’entra nulla!
 
-Purtroppo per te, Lodigiani non è il colpevole. La curva del poligrafo non ha avuto nessuna grande oscillazione dopo le tre domande che hai posto al sospettato, e ha mantenuto un andamento regolare. Questo avrebbe dovuto farti pensare che non stesse mentendo, e che effettivamente non avesse niente a che fare con il furto. Elementare, $nome.
+Purtroppo per te, Lodigiani non è il colpevole. Le curve del poligrafo non hanno avuto nessuna grande oscillazione dopo le tre domande che hai posto al sospettato, e hanno mantenuto un andamento regolare. Questo avrebbe dovuto farti pensare che non stesse mentendo, e che effettivamente non avesse niente a che fare con il furto. Elementare, $nome... ti avrebbe detto anche la tua amica Rebecca, a cui avresti potuto rivolgerti per (link: &quot;avere qualche spiegazione ed evitare il tuo errore&quot;)[(goto: &quot;serie storiche&quot;)].
 
-Nonostante il tuo ottimo lavoro, riconosciuto anche dal tuo capo, alla fine non si sono trovate prove che appoggiassero la colpevolezza di Lodigiani. Solo settimane dopo, tornando indietro e indagando gli altri sospettati, hai finalmente capito chi fosse davvero il colpevole. Però a quel punto era troppo tardi: il ladro era ormai scappato in un paese tropicale, privo di alcun accordo di estradizione con l’Italia. Il &#39;&#39;Bacio di Hayez&#39;&#39; ormai era stato venduto ed era sparito dalla circolazione: un grave danno per il nostro patrimonio artistico!
+Nonostante il tuo ottimo lavoro, riconosciuto anche dal tuo capo, alla fine non si sono trovate prove a supporto della colpevolezza di Lodigiani. Solo settimane dopo, tornando indietro e indagando gli altri sospettati, hai finalmente capito chi fosse davvero il colpevole. Però a quel punto era troppo tardi: il ladro era ormai scappato in un paese tropicale, privo di alcun accordo di estradizione con l’Italia. Il &#39;&#39;Bacio di Hayez&#39;&#39; era stato ormai venduto ed era sparito dalla circolazione: un grave danno per il nostro patrimonio artistico!
 
-Per te, adesso, si apre una nuova lunga attesa, in vista della prossima indagine...  
-Oppure, puoi ricominciare la tua investigazione, e vedere se con un nuovo tentativo sarai più abile!
+Per te, adesso, si apre una nuova attesa, in vista della prossima indagine...  
+... oppure, puoi ricominciare la tua investigazione (//per capirci: è come se prendessi la macchina del tempo e tornassi a qualche minuto fa...!//), e (link: &quot;vedere se con un nuovo tentativo sarai più abile!&quot;)[(goto: &quot;schedario&quot;)]
 
-(link: &quot;Clicca qui per capire qualcosa in più sul tuo errore&quot;)[(goto: &quot;serie storiche&quot;)]
-
-(link: &quot;Clicca qui per avere un’altra opportunità&quot;)[(goto: &quot;schedario&quot;)]&lt;img src=&quot;https://cdnb.artstation.com/p/assets/images/images/019/671/351/large/edward-okechukwu-interrogation-room-6.jpg?1564521441&amp;dl=1&quot; width=&quot;800&quot; height=&quot;533&quot;&gt;
-
-(if: $m) [&lt;audio src=&quot;https://cdn.pixabay.com/audio/2020/08/30/audio_926fbf0b66.mp3&quot; type=&quot;audio/mp3&quot; autoplay&gt;&lt;/audio&gt;]</tw-passagedata><tw-passagedata pid="14" name="accusa Freschini" tags="testo_font testo_bianco sfondo_nero" position="2643,793" size="100,100">
+&lt;img src=&#39;res1/interr.jpg&#39; height=&#39;400&#39; alt=&#39;immagine&#39;&gt;\
+\
+(if: $m) [(print: $cs5)] \
+ \
+(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="14" name="accusa Freschini" tags="testo_bianco sfondo_nero" position="2643,793" size="100,100">
 ## Hai accusato Freschini dunque!
 
 Quando hai chiesto a Freschini se fosse a conoscenza di qualunque informazione utile a ritrovare il quadro, la serie storica generata dal poligrafo ha avuto una forte oscillazione, sintomo che la risposta alla domanda ha causato stress nell’interrogato. Il che, dato il principio di funzionamento della macchina della verità, significa che ha mentito.
 
 Chiami quindi il commissario Tomba, e insieme decidete di mettere sotto torchio Freschini: che, dopo mezz’ora di domande insistenti, finalmente crolla.
 
-“Non sono stato io, l’avete visto anche dal poligrafo, io non c’entro niente. La curva era normale quando mi avete chiesto se fossi stato io ad aver compiuto il furto. Però forse so chi è stato. Insomma... ho un sospetto su chi possa essere stato: ecco cosa mi ha reso nervoso. Vi avverto però, potrei avere torto. E poi, ecco, parlo soltanto se mi promettete che poi vi dimenticherete di tutta questa faccenda”.
+“Non sono stato io, l’avete visto anche dal poligrafo, io non c’entro niente. La curva era normale quando mi avete chiesto se fossi stato io ad aver compiuto il furto. Però forse so chi è stato. Insomma... ho un sospetto su chi potrebbe essere stato: ecco cosa mi ha reso nervoso. Vi avverto però: potrei sbagliarmi. E poi, ecco, parlo soltanto se mi promettete che poi vi dimenticherete di tutta questa faccenda.”
 
-“Va bene”, gli rispondi, “Siamo tutt’orecchi, dunque”.
+“Va bene”, gli rispondi, “Siamo tutt’orecchi, dunque.”
 
-“Ottimo, allora vi dico tutto. Vedete, avevo in ballo un piccolo lavoretto, la falsificazione di un lotto di opere di un artista emergente. È una di quelle cose che si fanno sperando che un giorno, fra molti anni, quei falsi possano avere molto valore, e che essendo considerati lavori giovanili l’assenza di un certificato di autenticazione non sarà troppo notata.  
-Ora, ho chiesto a Martino Ravanelli, che è un esperto al proposito, se fosse interessato alla cosa. Lo conoscete per caso? Ecco, lui mi ha risposto di no perché aveva già fra le mani un lavoro grosso con cui sarebbe stato a posto per un bel po’. Ora, Ravanelli non è un pesce piccolo nell’ambiente: è famoso per il suo stile di vita molto agiato, e in una situazione normale non avrebbe mai detto di no a una proposta del genere. Un lavoro che lo metta a posto per un bel po’, per uno così... deve essere un lavoro davvero grosso!  
-Gli ho anche fatto qualche altra domanda, perché avrei voluto essere coinvolto, ma non mi ha detto niente e mi ha risposto stizzito di farmi gli affari miei e di dimenticarmi tutto quello che ci eravamo detti. Ecco, non so se lo avevate già preso in considerazione, ma secondo me potrebbe essere stato lui a rubare l’Hayez!”
+“Ottimo, allora vi dico tutto. Vedete, avevo in ballo un piccolo lavoretto, la falsificazione di un lotto di opere di un artista emergente. È una di quelle cose che si fanno sperando che un giorno, fra molti anni, quei falsi possano avere molto valore, e che essendo considerati lavori giovanili l’assenza di un certificato di autenticazione non sarà troppo notata.
+
+Ora, ho chiesto a Martino Ravanelli, che è un esperto al proposito, se fosse interessato alla cosa. Lo conoscete per caso? Ecco, lui mi ha risposto di no perché aveva già fra le mani un lavoro grosso con cui sarebbe stato a posto per un bel po’. Ora, Ravanelli non è un pesce piccolo nell’ambiente: ed è famoso per il suo stile di vita molto agiato. In una situazione normale non avrebbe mai detto di no a una proposta del genere. Un lavoro che lo metta a posto per un bel po’, per uno così... deve essere un lavoro davvero grosso!
+
+Gli ho anche fatto qualche altra domanda, perché avrei voluto essere coinvolto, ma non mi ha detto niente e anzi mi ha risposto stizzito di farmi gli affari miei e di dimenticarmi tutto quello che ci eravamo detti. Ecco, non so se lo avevate già preso in considerazione, ma secondo me potrebbe essere stato lui a rubare l’Hayez!”
 
 Ringrazi Freschini, ma sei indecis$g su cosa fare. Dovresti accusarlo comunque? Insomma, è in commissariato, e ti ha appena confessato che sta progettando un colpo. Il commissario Tomba, al tuo fianco, interrompe i tuoi pensieri. “Grazie, signor Freschini. Adesso esca di qui, e faccia in modo di non essere più convocato da noi. Chiuderemo un occhio, per questa volta, ma se dovessi sapere che lei è rimasto nel giro, sappia che mi interesserò personalmente della questione delle opere false che aveva in ballo. Ci siamo capiti?”
 
-Freschini annuisce con un cenno, si alza e, la giacca ancora in braccio, esce senza neanche rivestirsi. Ora, finalmente, hai qualche informazione in più.  
-Puoi tornare allo [[schedario]] per leggere la scheda di un altro sospettato e proseguire con le tue indagini.</tw-passagedata><tw-passagedata pid="15" name="accusa Ravanelli" tags="testo_font sfondo_bianco testo_nero" position="2641,603" size="100,100">
+Freschini annuisce con un cenno, si alza e, la giacca ancora sotto braccio, esce senza neanche rivestirsi. Ora, finalmente, hai qualche informazione in più. Puoi dunque [[tornare allo schedario-&gt;schedario]] per proseguire con le tue indagini.
+
+&lt;img src=&#39;res1/interr.jpg&#39; height=&#39;400&#39; alt=&#39;immagine&#39;&gt;\
+\
+(if: $m) [(print: $cs5)] \
+ \
+(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="15" name="accusa Ravanelli" tags="testo_font sfondo_bianco testo_nero" position="2641,603" size="100,100">
 ## Hai accusato Ravanelli, dunque!
 
 Messo alle strette, di fronte all’evidenza di un alibi che non regge, Martino Ravanelli crolla e confessa tutto. “Va bene, basta! Lo ammetto! Sono stato io!”  
@@ -504,22 +519,22 @@ Per te, è un grosso respiro di sollievo, così come per il commissario Tomba, a
 
 Vai al[[la mappa]] per guardare il grafico, oppure prova a [[interrogare ulteriormente Ravanelli]].
 
-(if: $m) [&lt;audio src=&quot;https://cdn.pixabay.com/audio/2021/10/03/audio_0b0df33160.mp3&quot; type=&quot;audio/mp3&quot; autoplay&gt;&lt;/audio&gt;]</tw-passagedata><tw-passagedata pid="16" name="accusa Rosso" tags="testo_font sfondo_nero testo_bianco" position="2638,411" size="100,100">&lt;img src=&quot;https://i.ibb.co/p01qTPv/error.png&quot; width=&quot;400&quot; height=&quot;90&quot;&gt;
+(if: $m) [&lt;audio src=&quot;https://cdn.pixabay.com/audio/2021/10/03/audio_0b0df33160.mp3&quot; type=&quot;audio/mp3&quot; autoplay&gt;&lt;/audio&gt;]</tw-passagedata><tw-passagedata pid="16" name="accusa Rosso" tags="testo_font sfondo_nero testo_bianco" position="2638,411" size="100,100">&lt;img src=&quot;res1/error.png&quot; width=&quot;400&quot; height=&quot;90&quot;&gt;
 
 ## Hai accusato Rosso... che però non c’entra nulla!
 
-Purtroppo per te, Gerry Rosso non è il colpevole. Riguardando i dati, potresti vedere che Rosso non ha mai percorso la tratta in questione in un tempo paragonabile a quello che avrebbe dovuto metterci per rubare il quadro in tempo. Il suo tempo migliore (quello minore) è molto più alto di quello che aveva a disposizione. Inoltre, la distanza da casello a casello è minore di quella che ci sarebbe voluta per andare a piedi dal ristorante al parcheggio, uscire da Roma, arrivare a Milano, e poi entrare in città e dirigersi alla pinacoteca. Di conseguenza, evidentemente non si tratta del colpevole. Elementare, $nome. 
+Purtroppo per te, Gerry Rosso non è il colpevole. Riguardando i dati, potresti vedere che Rosso non ha mai percorso la tratta in questione in un tempo paragonabile a quello che avrebbe dovuto metterci per rubare il quadro in tempo. Il suo tempo migliore (quello minore) è molto più alto di quello che aveva a disposizione. Inoltre, la distanza da casello a casello è minore di quella che ci sarebbe voluta per andare a piedi dal ristorante al parcheggio, uscire da Roma, arrivare a Milano, e poi entrare in città e dirigersi alla pinacoteca. Di conseguenza, evidentemente non si tratta del colpevole. Elementare, $nome... ti avrebbe detto anche la tua amica Rebecca, a cui avresti potuto rivolgerti per (link: &quot;avere qualche spiegazione ed evitare il tuo errore&quot;)[(goto: &quot;statistiche di un campione&quot;)]. 
 
-Nonostante il tuo ottimo lavoro, riconosciuto anche dal tuo capo, alla fine non si sono trovate prove che appoggiassero la colpevolezza di Rosso. Solo settimane dopo, tornando indietro e indagando gli altri sospettati, hai finalmente capito chi fosse davvero il colpevole. Però a quel punto era troppo tardi: il ladro era ormai scappato in un paese tropicale, privo di alcun accordo di estradizione con l’Italia. Il Bacio di Hayez ormai era stato venduto ed era sparito dalla circolazione.
+Nonostante il tuo ottimo lavoro, riconosciuto anche dal tuo capo, alla fine non si sono trovate prove che giustificassero la colpevolezza di Rosso. Solo settimane dopo, tornando indietro e indagando gli altri sospettati, hai finalmente capito chi fosse davvero il colpevole. Però a quel punto era troppo tardi: il ladro era ormai scappato in un paese tropicale, privo di alcun accordo di estradizione con l’Italia. Il &#39;&#39;Bacio di Hayez&#39;&#39; era stato ormai venduto ed era sparito dalla circolazione.
 
-Per te, adesso, si apre una nuova lunga attesa, in vista della prossima indagine...  
-Oppure, puoi ricominciare la tua investigazione, e vedere se con un nuovo tentativo sarai più abile!
+Per te, adesso, si apre una nuova attesa, in vista della prossima indagine...  
+... oppure, puoi ricominciare la tua investigazione (//per capirci: è come se prendessi la macchina del tempo e tornassi a qualche minuto fa...!//), e (link: &quot;vedere se con un nuovo tentativo sarai più abile!&quot;)[(goto: &quot;schedario&quot;)]
 
-(link: &quot;Clicca qui per capire dove sia stato l’errore&quot;)[(goto: &quot;statistiche di un campione&quot;)]
-
-(link: &quot;Clicca qui per avere un’altra opportunità&quot;)[(goto: &quot;schedario&quot;)]&lt;img src=&quot;https://cdnb.artstation.com/p/assets/images/images/019/671/351/large/edward-okechukwu-interrogation-room-6.jpg?1564521441&amp;dl=1&quot; width=&quot;800&quot; height=&quot;533&quot;&gt;
-
-(if: $m) [&lt;audio src=&quot;https://cdn.pixabay.com/audio/2020/08/30/audio_926fbf0b66.mp3&quot; type=&quot;audio/mp3&quot; autoplay&gt;&lt;/audio&gt;]</tw-passagedata><tw-passagedata pid="17" name="serie storiche" tags="" position="3764,609" size="100,100">Double-click this passage to edit it.
+&lt;img src=&#39;res1/interr.jpg&#39; height=&#39;400&#39; alt=&#39;immagine&#39;&gt;\
+\
+(if: $m) [(print: $cs5)] \
+ \
+(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="17" name="serie storiche" tags="" position="3764,609" size="100,100">Double-click this passage to edit it.
 
 
 
@@ -633,7 +648,8 @@ Oppure, clicca &#39;&#39;qui&#39;&#39; per andare alla prossima parte della stor
 (if: $m) [&lt;audio src=&quot;https://cdn.pixabay.com/audio/2022/02/10/audio_798efbe865.mp3&quot; type=&quot;audio/mp3&quot; autoplay&gt;&lt;/audio&gt;]
 
 
-</tw-passagedata><tw-passagedata pid="25" name="poligrafo a Lodigiani" tags="testo_font sfondo_bianco testo_nero" position="2460,979" size="100,100">
+</tw-passagedata><tw-passagedata pid="25" name="poligrafo a Lodigiani" tags="testo_nero sfondo_sfumato3" position="2460,979" size="100,100">&lt;img src=&#39;res1/interr.jpg&#39; height=&#39;400&#39; alt=&#39;immagine&#39;&gt;
+
 ## La seconda parte dell’interrogatorio di Claudio Lodigiani
 
 Dopo mezz’ora di attesa, Lodigiani ritorna trafelato in commissariato. “Agente $cognome, ho fatto più in fretta possibile. Questo è il poligrafo: sa come funziona?”
@@ -642,54 +658,77 @@ Sai come funziona un poligrafo? E sai come si leggono i dati che esso produce?
 
 (dropdown: 2bind $risp_poligrafo, &quot;Certo, vai pure avanti&quot;, &quot;No, per favore spiegamelo&quot;)
 
-(live: 0.5s)[(if: $risp_poligrafo is &quot;No, per favore spiegamelo&quot;) [“Allora, agente $cognome, il poligrafo è un oggetto che misura alcuni dati fisiologici di un individuo mentre è sottoposto ad alcune domande. Questi dati sono raccolti con una frequenza costante e compongono una //serie storica//, ovvero un insieme di dati temporalmente ordinati.  
-Questa serie storica si può leggere sullo schermo del dispositivo, che visualizza l’andamento dei campioni nel tempo. I dati raccolti sono abbastanza affidabili dello stato di ansia di un individuo:
+(live: 0.5s)[(if: $risp_poligrafo is &quot;No, per favore spiegamelo&quot;) [“Allora, agente $cognome, il poligrafo è un oggetto che misura alcuni dati fisiologici di un individuo, ed è tipicamente usato mentre la persona è sottoposta ad alcune domande. Questi dati sono raccolti con una frequenza costante e compongono una //serie storica//, ovvero un insieme di dati temporalmente ordinati. Questa serie storica si può leggere sullo schermo del dispositivo, che visualizza l’andamento dei campioni nel tempo. I dati raccolti sono abbastanza affidabili dello stato di ansia di un individuo:
 1. la respirazione toracica, misurata con l’ausilio con un tubo pneumatico posizionato intorno al busto (linea blu);
 2. la sudorazione, rilevata tramite elettrodi posti sui polpastrelli (linea verde);
 3. l’intensità dell’attività cardiaca, ottenuta misurando la frequenza cardiaca al polso e la pressione sanguigna tramite uno sfigmomanometro (linea rossa).
-Ora, lei mi farà delle domande, e osserverà l’andamento delle tre serie storiche sul grafico. Se dirò la verità, la serie storica si manterrà stazionaria, ovvero non avrà delle grandi variazioni, né crescerà né descrescerà, e osserverà solo una variazione costante nelle curve, che deriva dalla presenza del battito cardiaco”.](else:)[Bene, se sai già tutto possiamo andare avanti]]
 
-Ti metti quindi all’opera. Colleghi Lodigiani alla macchina, e fai qualche test per essere sicur$g che l’oggetto sia ben tarato, e che non dia falsi positivi o falsi negativi, compromettendo il risultato delle serie storiche che produce (per assicurarti di aver capito quali rischi corri facendo un test che produce falsi positivi o falsi negativi, (link: &quot;clicca qui&quot;)[(goto: &quot;risultati dei test&quot;)]; se vuoi scoprire qualcosa in più sulle serie storiche, (link: &quot;clicca qui&quot;)[(goto: &quot;serie storiche&quot;)]).  
+Ora, lei mi farà delle domande, e osserverà l’andamento delle tre serie storiche sul grafico. Se dirò la verità, la serie storica si manterrà stazionaria, ovvero non avrà delle grandi variazioni, né crescerà né descrescerà, e osserverà solo una variazione costante nelle curve, che deriva dalla presenza del battito cardiaco”.] \
+(else:) [Bene, se sai già tutto possiamo andare avanti.]]
+
+Ti metti quindi all’opera. Colleghi Lodigiani alla macchina, e fai qualche test per essere sicur$g che l’oggetto sia ben tarato, e che non dia falsi positivi o falsi negativi, compromettendo il risultato delle serie storiche che produce.
+
+Per altro, ricordi che puoi sempre ricorrere al prezioso aiuto della tua amica Rebecca, che è esperta di analisi dei dati e di statistica: le potresti chiedere chiarimenti su (link: &quot;cosa sono le serie storiche&quot;) [(goto: &quot;serie storiche&quot;)] e sui rischi che corri facendo un test che può (link: &quot;produrre falsi positivi o falsi negativi&quot;) [(goto: &quot;risultati dei test&quot;)].
+
 A questo punto, fai a Lodigiani tre domande:
 * Sei andato a fare un sopralluogo a Brera il pomeriggio prima della rapina?
 * Hai rubato il quadro di Hayez?
 * Sei a conoscenza di qualunque informazione che ci possa essere utile a ritrovare il quadro?
 
-Come avevi immaginato, a tutte e tre le tue domande Lodigiani ha risposto negativamente, e questo è il risultato prodotto dal poligrafo:
-&lt;img src=&quot;https://i.ibb.co/0FTmgf8/Poligrafo-Lodigiani.png&quot; width=&quot;800&quot; height=&quot;533&quot;&gt;
-in cui ogni linea verticale nera corrisponde al momento in cui una delle tre domande è stata posta.
+Come avevi immaginato, a tutte e tre le tue domande Lodigiani risponde negativamente, e questo è il risultato prodotto dal poligrafo:
+&lt;img src=&quot;res1/poliLodigiani.png&quot; height=&quot;400&quot;&gt;
+in cui ogni linea verticale nera corrisponde al momento in cui una delle tre domande è stata posta, la linea blu per la respirazione toracica, la linea verde per la sudorazione, e la linea rossa per l’intensità dell’attività cardiaca.
 
 In base alla lettura del poligrafo, ora hai abbastanza informazioni per prendere una decisione. 
 
-Vai allo [[schedario]] per tornare indietro e interrogare un altro sospettato. (if: $t is &quot;org&quot;) [Se vuoi riguardare le informazioni sull’interrogato, lascia per qualche istante la sala dell’interrogatorio e [[leggi la scheda di Claudio Lodigiani]].]  
-Oppure, [[accusa Lodigiani]] se pensi che Lodigiani sia il colpevole. 
+Vai allo [[schedario]] per tornare indietro e interrogare un altro sospettato. (if: $t is &quot;org&quot;) [Se invece vuoi riguardare le informazioni sull’interrogato, lascia per qualche istante la sala dell’interrogatorio e [[rileggi la scheda di Claudio Lodigiani-&gt;leggi la scheda di Claudio Lodigiani]].]  
 
-(set: $poligrafo to true)</tw-passagedata><tw-passagedata pid="26" name="poligrafo a Freschini" tags="testo_font sfondo_bianco testo_nero" position="2461,791" size="100,100">
+(if: $interrogatori&#39;s length &gt;= $min_interr) [Hai già interrogato vari sospettati: se credi di avere di fronte il colpevole, [[accusa Lodigiani]].] \
+(else:) [In ogni caso, il commissario è stato chiaro: prima di accusare qualcuno, è necessario aver interrogato anche qualche altro sospettato!] \
+ \
+(set: $poligrafo to true) \
+ \
+(if: $m) [(print: $cs4)] \
+ \
+(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="26" name="poligrafo a Freschini" tags="testo_nero sfondo_sfumato3" position="2461,791" size="100,100">&lt;img src=&#39;res1/interr.jpg&#39; height=&#39;400&#39; alt=&#39;immagine&#39;&gt;
+
 ## La seconda parte dell’interrogatorio di Marco Freschini
 
 Ti ricordi come funziona un poligrafo? E ti ricordi come si leggono i dati che produce?
 
 (dropdown: 2bind $risp_poligrafo, &quot;Certo, vai pure avanti&quot;, &quot;No, rileggi gli appunti che hai preso interrogando Lodigiani&quot;)
 
-(live: 0.5s)[(if: $risp_poligrafo is &quot;No, rileggi gli appunti che hai preso interrogando Lodigiani&quot;) [//Il poligrafo è un oggetto che misura alcuni dati fisiologici di un individuo mentre è sottoposto ad alcune domande. Questi dati sono raccolti con una frequenza costante e compongono una serie storica, ovvero un campione di dati temporalmente ordinati. Questa serie storica si può leggere sullo schermo del dispositivo, che rappresenta l&#39;andamento dei campioni nel tempo. I dati raccolti sono stimatori abbastanza affidabili dello stato di ansia di un individuo:
+(live: 0.5s)[(if: $risp_poligrafo is &quot;No, rileggi gli appunti che hai preso interrogando Lodigiani&quot;) [ \
+|preformat&gt;[Il poligrafo è un oggetto che misura alcuni dati fisiologici di un individuo mentre è sottoposto ad alcune domande. Questi dati sono raccolti con una frequenza costante e compongono una serie storica, ovvero un campione di dati temporalmente ordinati. Questa serie storica si può leggere sullo schermo del dispositivo, che rappresenta l’andamento dei campioni nel tempo. I dati raccolti sono stimatori abbastanza affidabili dello stato di ansia di un individuo:
 1. la respirazione toracica (linea blu);
 2. la sudorazione (linea verde);
-3. l’intensità dell&#39;attività cardiaca (linea rossa)
+3. l’intensità dell&#39;attività cardiaca (linea rossa).
 
-Per ottenere delle informazioni, è necessario generare delle serie storiche. Ciò si realizza accendendo il poligrafo, facendo delle domande all’interrogato e osservando l&#39;andamento delle tre serie storiche sul grafico. Se l’interrogato dice la verità, la serie storica si mantiene stazionaria, ovvero non ha variazioni nel proprio comportamento. Si osserva solo una variazione costante nelle curve, chiamata periodicità, che deriva dalla presenza del battito cardiaco.//
-]]
+Per ottenere delle informazioni, è necessario generare delle serie storiche. Ciò si realizza accendendo il poligrafo, facendo delle domande all’interrogato e osservando l’andamento delle tre serie storiche sul grafico. Se l’interrogato dice la verità, la serie storica si mantiene stazionaria, ovvero non ha variazioni nel proprio comportamento. Si osserva solo una variazione costante nelle curve, chiamata periodicità, che deriva dalla presenza del battito cardiaco.]]] \
 
 Ti metti quindi all’opera. Colleghi Freschini alla macchina, e fai un po’ di prove per tarare il poligrafo ed essere sicur$g che lo strumento sia correttamente funzionante, in modo che l’esame della serie storica generata non restituisca falsi positivi o falsi negativi. Se ciò accadesse, le indagini ne risulterebbero compromesse. Una volta che tutto è pronto, rivolgi tre domande a Freschini:
 * Sei andato a fare un sopralluogo a Brera il pomeriggio prima della rapina?
 * Hai rubato il quadro di Hayez?
 * Sei a conoscenza di qualunque informazione che ci possa essere utile a ritrovare il quadro?
 
-&lt;img src=&quot;https://i.ibb.co/cwypzRt/Poligrafo-Freschini.png&quot; width=&quot;800&quot; height=&quot;533&quot;&gt;
-Ogni linea bianca corrisponde al momento in cui una delle tre domande è stata posta. In base alla lettura del poligrafo, ora hai abbastanza informazioni per prendere una decisione.
+Ecco quello che si è formato sotto i tuoi occhi sullo schermo del poligrafo:
 
-Vai allo [[schedario]] per tornare indietro e interrogare un altro sospettato. Oppure, [[accusa Freschini]] se pensi che sia lui il colpevole o che sappia qualcosa che non ha voluto rivelare. (if: $t is &quot;org&quot;) [Infine, se vuoi ripassare le informazioni sull&#39;interrogato, lascia per un attimo la sala dell’interrogatorio e ri[[leggi la scheda di Marco Freschini]].]
+&lt;img src=&quot;res1/poliFreschini.png&quot; height=&quot;400&quot;&gt;
 
-(set: $poligrafo_Freschini to true)</tw-passagedata><tw-passagedata pid="27" name="curiosità" tags="" position="3379,997" size="100,100">tw-story { background-color: #A9F5F2;}
+in cui, ti ricordi, ogni linea verticale trattaggiata corrisponde al momento in cui una delle tre domande è stata posta.
+
+In base alla lettura del poligrafo, ora hai abbastanza informazioni per prendere una decisione.
+
+Vai allo [[schedario]] per tornare a interrogare un altro sospettato(if: $t is &quot;org&quot;) [ oppure, se vuoi rivedere le informazioni sull’interrogato, lascia per un attimo la sala dell’interrogatorio e [[rileggi la scheda di Marco Freschini-&gt;leggi la scheda di Marco Freschini]]].
+
+(if: $interrogatori&#39;s length &gt;= $min_interr) [Hai già interrogato vari sospettati: se credi di avere di fronte il colpevole, [[accusa Freschini]].] \
+(else:) [In ogni caso, il commissario è stato chiaro: prima di accusare qualcuno, è necessario aver interrogato anche qualche altro sospettato!] \
+ \
+(set: $poligrafo_Freschini to true) \
+ \
+(if: $m) [(print: $cs4)] \
+ \
+(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="27" name="curiosità" tags="" position="3379,997" size="100,100">tw-story { background-color: #A9F5F2;}
 
 ## Curiosità
 
@@ -785,7 +824,7 @@ Recuperi le chiavi al volo e ti metti in auto. Durante il breve viaggio verso il
 (display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="34" name="interrogare ulteriormente Ravanelli" tags="testo_font sfondo_bianco testo_nero" position="2801,465" size="100,100">
 ## La seconda parte dell’interrogatorio di Martino Ravanelli
 
-Ore e ore di interrogatorio non danno frutti. Purtroppo Ravanelli non vuole parlare. A un certo punto, gli racconti della telefonata misteriosa che avevi ricevuto all’inizio. (if: $t is &quot;cor&quot;)[Sei (if: $g is &quot;o&quot;)[un investigatore](else:)[un’investigatrice] originale e fantasios$g, e la tua empatia riesce evidentemente a fare breccia nella corazza di Ravanelli, che per un momento si lascia sfuggire un mormorio. “Maledetto traditore, ecco perché...” riesci a sentire. Ma poi rimane in silenzio.](else:)[Anche in questo caso, la corazza di Ravanelli non viene intaccata]. Di fronte a un silenzio costante, non ti rimane che andare avanti con le indagini, e guardare [[la mappa]].</tw-passagedata><tw-passagedata pid="35" name="include" tags="header" position="721,475" size="100,100">&lt;!-- dei default, anche per rendere più semplice il testing in fase di sviluppo --&gt; \
+Ore e ore di interrogatorio non danno frutti. Purtroppo Ravanelli non vuole parlare. A un certo punto, gli racconti della telefonata misteriosa che avevi ricevuto all’inizio. (if: $t is &quot;cor&quot;)[Sei (if: $g is &quot;o&quot;)[un investigatore](else:)[un’investigatrice] originale e fantasios$g, e la tua empatia riesce evidentemente a fare breccia nella corazza di Ravanelli, che per un momento si lascia sfuggire un mormorio. “Maledetto traditore, ecco perché...” riesci a sentire. Ma poi rimane in silenzio.](else:)[Anche in questo caso, la corazza di Ravanelli non viene intaccata]. Di fronte a un silenzio costante, non ti rimane che andare avanti con le indagini, e guardare [[la mappa]].</tw-passagedata><tw-passagedata pid="35" name="include" tags="header" position="722.6666666666666,475" size="100,100">&lt;!-- dei default, anche per rendere più semplice il testing in fase di sviluppo --&gt; \
 (if: $nome is 0) [(set: $nome to &quot;Alex&quot;)] \
 (if: $cognome is 0) [(set: $cognome to &quot;Bianchi&quot;)] \
 (if: $t is 0) [(set: $t to &quot;org&quot;)] \
@@ -800,6 +839,7 @@ $cs_post to &quot;.mp3&#39; type=&#39;audio/mp3&#39; autoplay&gt;&lt;/audio&gt;&
 (set: $cs2 to $cs_pre + &quot;2021/11/26/audio_e20882e29d&quot; + $cs_post) \
 (set: $cs3 to $cs_pre + &quot;2021/11/15/audio_75021cca14&quot; + $cs_post) \
 (set: $cs4 to $cs_pre + &quot;2022/01/05/audio_6954fd7675&quot; + $cs_post) \
+(set: $cs5 to $cs_pre + &quot;2020/08/30/audio_926fbf0b66&quot; + $cs_post) \
  \
 (if: (passage:)&#39;s name is not &quot;start&quot;) [(save-game: &quot;auto&quot;)]</tw-passagedata><tw-passagedata pid="36" name="risultati dei test" tags="" position="3749,724" size="100,100">Double-click this passage to edit it.
 
@@ -807,9 +847,11 @@ $cs_post to &quot;.mp3&#39; type=&#39;audio/mp3&#39; autoplay&gt;&lt;/audio&gt;&
 (set: $ultima_pag to (history:)&#39;s last)
 (link: &quot;Torna indietro&quot;)[(goto: $ultima_pag)]</tw-passagedata><tw-passagedata pid="37" name="piepagina" tags="" position="840,476" size="100,100">&lt;!-- deve essere incluso esplicitamente, con: (display: &quot;piepagina&quot;) --&gt;
 ---
-(se preferisci, [[puoi sempre ricominciare il gioco dall’inizio-&gt;frontespizio]] \
-(if: $m) [(link: &quot;&amp;nbsp;&amp;nbsp;e puoi sospendere l’audio&quot;) [&lt;script&gt;document.getElementById(&#39;cs&#39;).pause();&lt;/script&gt;]] )</tw-passagedata><tw-passagedata pid="38" name="start" tags="" position="599,474" size="100,100">(if: &quot;auto&quot; is in (saved-games:)) [(load-game: &quot;auto&quot;)]
-(else:) [(go-to: &quot;frontespizio&quot;)]</tw-passagedata><tw-passagedata pid="39" name="un’insolita sveglia" tags="" position="751,805" size="100,100">Double-click this passage to edit it.</tw-passagedata></tw-storydata>
+|piccolo&gt;[(se preferisci, [[puoi sempre ricominciare il gioco dall’inizio-&gt;frontespizio]] \
+(if: $m) [(link: &quot;&amp;nbsp;&amp;nbsp;e puoi sospendere l’audio&quot;) [&lt;script&gt;document.getElementById(&#39;cs&#39;).pause();&lt;/script&gt;]] )]</tw-passagedata><tw-passagedata pid="38" name="start" tags="" position="599,474" size="100,100">(if: &quot;auto&quot; is in (saved-games:)) [(load-game: &quot;auto&quot;)]
+(else:) [(go-to: &quot;frontespizio&quot;)]</tw-passagedata><tw-passagedata pid="39" name="credits" tags="sfondo_bianco testo_nero" position="751,805" size="100,100">&#39;&#39;Il furto dell’Hayez - Una storia di investigazione, basata sulla scienza dei dati&#39;&#39; è un libro-game...
+
+[[Torna al gioco-&gt;frontespizio]]</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">"use strict";var _slicedToArray=function(){return function(e,t){if(Array.isArray(e))return e;if(Symbol.iterator in Object(e))return function(e,t){var n=[],r=!0,a=!1,i=void 0;try{for(var o,s=e[Symbol.iterator]();!(r=(o=s.next()).done)&&(n.push(o.value),!t||n.length!==t);r=!0);}catch(e){a=!0,i=e}finally{try{!r&&s.return&&s.return()}finally{if(a)throw i}}return n}(e,t);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}!function(){
 /**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
