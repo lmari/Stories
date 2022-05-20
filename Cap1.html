@@ -45,23 +45,35 @@ tw-story[tags~="sfondo_sfumato1"] textarea {
 }
 
 
-/* *** una combinazione di tags: sfondo_sfumato0/1 + testo_bianco *** */
+/* *** una combinazione di tags: sfondo_bianco/sfumato2/3/4 + testo_nero *** */
 
-tw-story[tags~="sfondo_trascrizione"] {
-  background-color: #444444;
+tw-story[tags~="sfondo_bianco"] {
+  background-color: white;
 }
 
-tw-passage[tags~="testo_trascrizione"] {
-  font-family: Courier New;
-  font-size: 18px;
-  color: white;
+tw-story[tags~="sfondo_sfumato2"] {
+  background-image: linear-gradient(135deg, #3d5fa2, #ffffff);
 }
 
-tw-passage[tags~="testo_trascrizione"] tw-link {
-  color: yellow;
+tw-story[tags~="sfondo_sfumato3"] {
+  background-image: linear-gradient(135deg, #555555, #ffffff);
 }
 
-tw-passage[tags~="testo_trascrizione"] tw-link:hover {
+tw-story[tags~="sfondo_sfumato4"] {
+  background-image: linear-gradient(135deg, #aaaaaa, #ffffff);
+}
+
+tw-passage[tags~="testo_nero"] {
+  font-family: Didot;
+  font-size: 20px;
+  color: black;
+}
+
+tw-passage[tags~="testo_nero"] tw-link {
+  color: green;
+}
+
+tw-passage[tags~="testo_nero"] tw-link:hover {
   color: red;
 }
 
@@ -76,27 +88,24 @@ tw-passage[tags~="testo_trascrizione"] tw-link:hover {
 }
 
 
+/* *** per formattare testo typewriter (hook |preformat>) *** */
 
-
-
-
-tw-story[tags~="sfondo_bianco"] {
-  background-color: white;
+tw-hook[name="preformat"] {
+  font-family: Courier New;
+  font-size: 16px;
+  line-height: 22px;
+  display: block;
 }
 
-tw-story[tags~="sfondo_nero"] {
-  background-color: black;
-}
+
+
+
 
 
 tw-story[tags~="sfondo_sanmarino"] {
   background-color: #3d5fa2;
 }
 
-tw-passage[tags~="testo_nero"] {
-  font-size: 20px;
-  color: black;
-}
 
 tw-passage[tags~="testo_immagine"] {
   font-size: 60px;
@@ -113,7 +122,7 @@ tw-sidebar {
 </style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-tag name="Bianco" color="gray"></tw-tag>,<tw-tag name="bicicletta" color="red"></tw-tag>,<tw-tag name="frontespizio" color="red"></tw-tag>,<tw-tag name="macchina" color="red"></tw-tag>,<tw-tag name="sfondo_bianco" color="yellow"></tw-tag>,<tw-tag name="sfondo_nero" color="purple"></tw-tag>,<tw-tag name="sfondo_sanmarino" color="purple"></tw-tag>,<tw-tag name="sfondo_trascrizione" color="red"></tw-tag>,<tw-tag name="sfumato_sanmarino" color="purple"></tw-tag>,<tw-tag name="testo_bianco" color="purple"></tw-tag>,<tw-tag name="testo_bright_1" color="red"></tw-tag>,<tw-tag name="testo_font" color="green"></tw-tag>,<tw-tag name="testo_nero" color="yellow"></tw-tag>,<tw-tag name="testo_trascrizione" color="red"></tw-tag><tw-passagedata pid="1" name="un&#39;insolita sveglia" tags="testo_bianco sfondo_sfumato0" position="970,657" size="100,100">&lt;img src=&#39;res1/sunrise.jpg&#39; height=&#39;400&#39; class=&#39;center&#39; alt=&#39;immagine&#39;&gt;
 
 ## Un’insolita sveglia
-
+ \
 Un suono acuto ti sveglia di soprassalto: $nome, 24 anni, una laurea appena completata criminologia e una specializzazione in furti d’arte. La tua carriera al dipartimento di Polizia di Milano è iniziata da pochi mesi. Ti volti verso il comodino, e vedi che il rumore che ti ha destat$g proviene dal tuo smartphone. Il numero è memorizzato, ma anche se non lo fosse lo riconoscesti subito: è quello del tuo capo e mentore, il commissario Tomba. Sbadigli rumorosamente, e poi rispondi.
 
 “$nome, sono Carlo. Mettiti qualcosa addosso e vieni immediatamente in commissariato.”
@@ -136,14 +145,16 @@ Ti basta consultare per pochi secondi il tuo sito di news preferito per scoprire
 
 Ora, scegli come vuoi andare in ufficio. Vuoi [[prendere la bicicletta]] e pedalare fino in ufficio, ascoltando i suoni della città durante il tragitto? Oppure vuoi [[prendere la macchina]], e ascoltare la radio durante il percorso? \
  \
-(if: $m) [&lt;audio id=&quot;cs&quot; src=&quot;res1/cs1.mp3&quot; type=&quot;audio/mp3&quot; autoplay&gt;&lt;/audio&gt;] \
+(if: $m) [(print: $cs1)] \
  \
-(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="2" name="arrivando in ufficio" tags="testo_bianco sfondo_sfumato1" position="1349,664" size="100,100">&lt;img src=&#39;res1/ufficio.jpg&#39; height=&#39;400&#39; class=&#39;center&#39; alt=&#39;immagine&#39;&gt;
+(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="2" name="arrivando in ufficio" tags="testo_nero sfondo_sfumato3" position="1349,664" size="100,100">&lt;img src=&#39;res1/ufficio.jpg&#39; height=&#39;400&#39; class=&#39;center&#39; alt=&#39;immagine&#39;&gt;
 
 ## In ufficio
+ \
+Arrivat$g in commissariato, ti rechi subito nell’ufficio di Tomba, dove il commissario ti sta aspettando agitato. “$nome, non ci giro attorno: dobbiamo capire chi è stato e soprattutto dobbiamo recuperare questo maledetto quadro. Che poi, io non riesco a capire questa fascinazione della gente per dei pezzi di tela colorati.”
 
-Arrivat$g in commissariato, ti rechi subito nell’ufficio di Tomba, dove il commissario ti sta aspettando agitato. “$nome, non ci giro attorno: dobbiamo capire chi è stato e soprattutto dobbiamo recuperare questo maledetto quadro. Che poi, io non riesco a capire questa fascinazione della gente per dei pezzi di tela colorati.”  
-Dentro di te sorridi. Tomba è una persona molto intelligente, istruita e ricca di qualità. Però è misteriosamente privo della sensibilità per godersi un’opera d’arte: per lui &#39;&#39;Il Bacio di Hayez&#39;&#39; e un disegno di suo figlio sono praticamente indistinguibili...  
+Dentro di te sorridi. Tomba è una persona molto intelligente, istruita e ricca di qualità. Però è misteriosamente privo della sensibilità per godersi un’opera d’arte: per lui &#39;&#39;Il Bacio di Hayez&#39;&#39; e un disegno di suo figlio sono praticamente indistinguibili...
+
 Tomba prosegue: “Non sono solo i media che ci stanno addosso. Sai chi mi ha chiamato? Il ministro in persona. Vuole essere sicuro che ci avrei messo sufficiente impegno. Come se potessi ignorare un caso del genere: è la cosa più grossa che mi è passata fra le mani negli ultimi anni! Ora, le regole sono regole: si tratta di arte e quindi tecnicamente il caso è tuo. E quindi te lo lascierò condurre. Anche perché, come sai, di arte io non capisco proprio nulla. E poi lo so che questi primi mesi non sono stati molto stimolanti per te, e questa è una grande opportunità. Però, ti prego, cerca di capire quanto sia importante, sia per me che per tutto il dipartimento. Ci siamo intesi?”
 
 Tu non rispondi. Sei abbastanza intelligente da sapere che Carlo sa che tu hai capito. Il commissario ti guarda qualche secondo, fissandoti con intensità negli occhi, e poi ricomincia.
@@ -168,12 +179,12 @@ Come era iniziata, la conversazione si chiude di scatto. Il commissario Tomba ti
 
 Recati allo [[schedario]] per scoprire chi siano Marco Freschini, Martino Ravanelli, Claudio Lodigiani e Gerry Rosso. Oppure [[ripensa alla telefonata]]. \
  \
-(if: $m) [&lt;audio id=&quot;cs&quot; src=&quot;res1/cs2.mp3&quot; type=&quot;audio/mp3&quot; autoplay&gt;&lt;/audio&gt;] \
+(if: $m) [(print: $cs2)] \
  \
-(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="3" name="schedario" tags="testo_font sfondo_bianco testo_nero" position="1644,666.3333333333334" size="100,100">&lt;img src=&#39;res1/schedario.jpg&#39; height=&#39;400&#39; class=&#39;center&#39; alt=&#39;immagine&#39;&gt;
+(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="3" name="schedario" tags="testo_nero sfondo_sfumato4" position="1644,666" size="100,100">&lt;img src=&#39;res1/schedario.jpg&#39; height=&#39;400&#39; class=&#39;center&#39; alt=&#39;immagine&#39;&gt;
 
 ## Nello schedario
-
+ \
 (if: $t is &quot;org&quot;) [Visto che sei (if: $g is &quot;o&quot;)[un investigatore organizzato](else:)[un’investigatrice organizzata] e razionale, appena arrivat$g in dipartimento ti eri mess$g all’opera per rendere l’archivio più moderno. Grazie al grande lavoro di digitalizzazione degli archivi svolto negli ultimi mesi, ti basta aprire il computer del dipartimento e in pochi click hai a disposizione tutta l’informazione necessaria per decidere chi interrogare. “Brav$g $nome”, pensi fra te e te, “tutto il lavoro che hai fatto alla fine è servito a qualcosa.”
 
 La persona che si è recata alla Pinacoteca il giorno prima sarà anche il colpevole. Certo, se solo avessi più tempo a disposizione, controlleresti le riprese di tutte le telecamere di sicurezza durante il giorno, e incroceresti i risultati con i volti noti dello schedario. Purtroppo, hai ormai capito che il tempo è cruciale. Tutti gli indagati possono essere interrogati, ma in fretta. E, se si accusa la persona sbagliata e si concentrano le risorse su di lei, probabilmente il colpevole avrà tempo di fuggire e liberarsi della refurtiva.
@@ -197,7 +208,7 @@ Se vuoi avere più informazioni su questo sospettato, [[leggi la scheda di Marti
 Se vuoi avere più informazioni su questo sospettato, [[leggi la scheda di Gerry Rosso]]. 
 
 Data la tua ottima capacità organizzativa, durante la telefonata ti sei segnat$g le parole del misterioso sconosciuto all’altro capo della cornetta. Se ritieni che ti sia utile, puoi allora [[ripensare alla telefonata|ripensa alla telefonata]], leggendone la trascrizione.
-]
+] \
 (else:) [Lo schedario è un incubo. Le informazioni che ti potrebbero servire per farti qualche idea sull’identità dei sospettati sono sicuramente da qualche parte, ma tutto è molto caotico, e non è facile trovarle, nascoste come sono in un mare di scartoffie. Se solo fossi un(if: $g is &quot;a&quot;)[a] detective precis$g e organizzat$g e avessi digitalizzato tutto...
 
 Dopo ore di lavoro, riesci giusto a ottenere i numeri di telefono dei quattro sospettati, sentendo il tuo capo e facendo qualche telefonata a colleghi di altri dipartimenti. Puoi quindi scegliere una di queste strade:
@@ -206,7 +217,7 @@ Dopo ore di lavoro, riesci giusto a ottenere i numeri di telefono dei quattro so
 * [[interroga Martino Ravanelli]] 
 * [[interroga Gerry Rosso]] ] \
  \
-(if: $m) [&lt;audio id=&quot;cs&quot; src=&quot;res1/cs2.mp3&quot; type=&quot;audio/mp3&quot; autoplay&gt;&lt;/audio&gt;] \
+(if: $m) [(print: $cs2)] \
  \
 (display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="4" name="frontespizio" tags="testo_bianco sfondo_sfumato1" position="751,655" size="100,100">
 #Il furto dell’Hayez
@@ -237,111 +248,99 @@ E’ ora il momento di cominciare il gioco, con [[un’insolita sveglia-&gt;un&#
 (else:) [(set: $g to &quot;a&quot;)]] \
  \
 (live: 0.2s)[(if: $musica is &quot;si&quot;) [(set: $m to true)] \
-(else:) [(set: $m to false)]]</tw-passagedata><tw-passagedata pid="5" name="leggi la scheda di Claudio Lodigiani" tags="testo_font sfondo_bianco testo_nero" position="1943,984" size="100,100">
+(else:) [(set: $m to false)]]</tw-passagedata><tw-passagedata pid="5" name="leggi la scheda di Claudio Lodigiani" tags="sfondo_bianco testo_nero" position="1943,984" size="100,100">
 ## Claudio Lodigiani
-
-Decidi quindi di aprire la scheda di Claudio Lodigiani, per scoprire di chi si tratti.  
-Ecco cosa ci trovi dentro. 
+ \
+Decidi quindi di aprire la scheda di Claudio Lodigiani, per scoprire di chi si tratti. Ecco cosa ci trovi dentro. 
 
 ---
-//&#39;&#39;Generalità&#39;&#39;
-
-* Nome: Cladio
+|preformat&gt;[
+### Generalità
+* Nome: Claudio
 * Cognome: Lodigiani
 * Professione: artigiano
 * Residenza: Milano (zona Isola)
-
-&#39;&#39;Foto segnaletica&#39;&#39;
-
+ \
+### Foto segnaletica
 &lt;img src=&quot;https://i.ibb.co/S6RFkWQ/Lodigiani.jpg&quot; width=&quot;400&quot; height=&quot;480&quot;&gt;
 
-&#39;&#39;Descrizione&#39;&#39;
-
-Claudio Lodigiani è un commerciante molto noto di una delle zone più vivaci di Milano. Il suo negozio, una volta un semplice studio di artigianato, negli anni si è trasformato in un centro pulsante di commerci di piccoli manufatti ideati e realizzati da Lodigiani stesso, che possiede manualità e creatività rare. Purtroppo, questa pare non essere l’unica attività di Lodigiani. Da qualche anno a questa parte, infatti, il talentuoso artigiano ha cominciato anche a smerciare prodotti d’arte di alta qualità ma anche di dubbia provenienza. Il dipartimento di polizia non è mai stato in grado di incastrarlo, ma si ritiene che ci sia proprio lui dietro al furto dei piccioni di vetro del Louvre dell&#39;estate 2019. 
-//
+### Descrizione
+Claudio Lodigiani è un commerciante molto noto di una delle zone più vivaci di Milano. Il suo negozio, una volta un semplice studio di artigianato, negli anni si è trasformato in un centro pulsante di commerci di piccoli manufatti ideati e realizzati da Lodigiani stesso, che possiede manualità e creatività rare. Purtroppo, questa pare non essere l’unica attività di Lodigiani. Da qualche anno a questa parte, infatti, il talentuoso artigiano ha cominciato anche a smerciare prodotti d’arte di alta qualità ma anche di dubbia provenienza. Il dipartimento di polizia non è mai stato in grado di incastrarlo, ma si ritiene che ci sia proprio lui dietro al furto dei piccioni di vetro del Louvre dell&#39;estate 2019.]
 ---
-
-Ora, hai finito di leggere la scheda del sospettato e devi decidere come procedere. Se vuoi, [[interroga Claudio Lodigiani]], altrimenti puoi prima leggere la scheda di un altro sospettato tornando allo [[schedario]]. 
-
-(if: $m) [&lt;audio src=&quot;https://cdn.pixabay.com/audio/2021/11/15/audio_75021cca14.mp3&quot; autoplay&gt;&lt;/audio&gt;]</tw-passagedata><tw-passagedata pid="6" name="leggi la scheda di Marco Freschini" tags="testo_font sfondo_bianco testo_nero" position="1941,799" size="100,100">
+Ora, hai finito di leggere la scheda del sospettato e devi decidere come procedere. Se vuoi, [[interroga Claudio Lodigiani]], altrimenti puoi prima leggere la scheda di un altro sospettato tornando allo [[schedario]]. \
+ \
+(if: $m) [(print: $cs3)] \
+ \
+(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="6" name="leggi la scheda di Marco Freschini" tags="sfondo_bianco testo_nero" position="1941,799" size="100,100">
 ## Marco Freschini
+ \
+Decidi quindi di aprire la scheda di Marco Freschini, per scoprire di chi si tratti. Ecco cosa ci trovi dentro.
 
-Decidi quindi di aprire la scheda di Marco Freschini, per scoprire di chi si tratti.  
-Ecco cosa ci trovi dentro.
-
----
-//&#39;&#39;Generalità&#39;&#39;
-
+|preformat&gt;[
+### Generalità
 * Nome: Marco
 * Cognome: Freschini
 * Professione: preparatore atletico
 * Residenza: Milano
 * Nazionalità: italiana/francese
-
-&#39;&#39;Foto segnaletica&#39;&#39;
-
+ \
+### Foto segnaletica
 &lt;img src=&quot;https://i.ibb.co/tcbJTCZ/Freschini.jpg&quot; width=&quot;400&quot; height=&quot;480&quot;&gt;
 
-&#39;&#39;Descrizione&#39;&#39;
-
-Freschini è stato per anni il preparatore atletico di una delle più famose squadre di calcio del panorama europeo, e ciò lo ha portato a viaggiare in aerei privati in tutta Europa. Per questa ragione, ha potuto affiancare alla sua professione iniziale quella di “fattorino” di opere d’arte di contrabbando, trafugando soprattutto reperti archeologici di piccole dimensioni. Queste venivano via via recapitate nelle diverse città europee quando Freschini vi ci si recava per seguire la sua squadra. Questa attività parallela lo ha reso molto ricco, e il suo stile di vita era famigerato. Qualche anno fa, tutti i più lussuosi negozi di Parigi lo conoscevano per nome. Ciò ha ovviamente attirato l’attenzione delle forze dell’ordine, che hanno investigato su questa stranezza e lo hanno successivamente arrestato. Dopo un lungo periodo di detenzione, adesso Freschini vive a Milano, dove ha un piccolo studio di preparazione atletica in cui lavora con squadre giovanili. Al momento, pare che frequenti ancora certi ambienti loschi ma non si occupi che di piccoli lavoretti, per arrotondare.
-//
+### Descrizione
+Freschini è stato per anni il preparatore atletico di una delle più famose squadre di calcio del panorama europeo, e ciò lo ha portato a viaggiare in aerei privati in tutta Europa. Per questa ragione, ha potuto affiancare alla sua professione iniziale quella di “fattorino” di opere d’arte di contrabbando, trafugando soprattutto reperti archeologici di piccole dimensioni. Queste venivano via via recapitate nelle diverse città europee quando Freschini vi ci si recava per seguire la sua squadra. Questa attività parallela lo ha reso molto ricco, e il suo stile di vita era famigerato. Qualche anno fa, tutti i più lussuosi negozi di Parigi lo conoscevano per nome. Ciò ha ovviamente attirato l’attenzione delle forze dell’ordine, che hanno investigato su questa stranezza e lo hanno successivamente arrestato. Dopo un lungo periodo di detenzione, adesso Freschini vive a Milano, dove ha un piccolo studio di preparazione atletica in cui lavora con squadre giovanili. Al momento, pare che frequenti ancora certi ambienti loschi ma non si occupi che di piccoli lavoretti, per arrotondare.]
 ---
-
-Ora, hai finito di leggere la scheda del sospettato e devi decidere come procedere. Se vuoi, [[interroga Marco Freschini]], altrimenti puoi prima leggere la scheda di un altro sospettato tornando allo [[schedario]]. 
-
-(if: $m) [&lt;audio src=&quot;https://cdn.pixabay.com/audio/2021/11/15/audio_75021cca14.mp3&quot; autoplay&gt;&lt;/audio&gt;]</tw-passagedata><tw-passagedata pid="7" name="leggi la scheda di Martino Ravanelli" tags="testo_font sfondo_bianco testo_nero" position="1939,606" size="100,100">
+Ora, hai finito di leggere la scheda del sospettato e devi decidere come procedere. Se vuoi, [[interroga Marco Freschini]], altrimenti puoi prima leggere la scheda di un altro sospettato tornando allo [[schedario]]. \
+ \
+(if: $m) [(print: $cs3)] \
+ \
+(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="7" name="leggi la scheda di Martino Ravanelli" tags="sfondo_bianco testo_nero" position="1939,606" size="100,100">
 ## Martino Ravanelli
-Decidi quindi di aprire la scheda di Martino Ravanelli, per scoprire di chi si tratti.  
-Ecco cosa ci trovi dentro.
+ \
+Decidi quindi di aprire la scheda di Martino Ravanelli, per scoprire di chi si tratti. Ecco cosa ci trovi dentro.
 
 ---
-//&#39;&#39;Generalità&#39;&#39;
-
+|preformat&gt;[
+### Generalità
 * Nome: Martino
 * Cognome: Ravanelli
 * Professione: geometra
 * Residenza: Busto Arsizio (VA)
-
-&#39;&#39;Foto segnaletica&#39;&#39;
-
+ \
+### Foto segnaletica
 &lt;img src=&quot;https://i.ibb.co/F5px3WS/Ravanelli.jpg&quot; width=&quot;400&quot; height=&quot;480&quot;&gt;
 
-&#39;&#39;Descrizione&#39;&#39;
-
-Martino Ravanelli è un noto geometra che lavora in una città ai margini dell’hinterland milanese. In altri ambienti, più loschi, è conosciuto anche per le sue grandi doti da falsario. Aver studiato disegno tecnico sin da giovane gli ha fornito uno straordinario occhio per la riproduzione di quadri originali. Si tratta però di una persona astuta: al momento è incensurato, e non siamo mai riusciti a trovarlo con le mani nel sacco. Ciò probabilmente deriva dalla sua principale occupazione, la riproduzione di opere di artisti emergenti, più difficili da identificare e tracciare. Si dice che abbia un leggendario fiuto per la scoperta di nuovi artisti. Inoltre, pare che abbia un giro di ottimi compratori, potenti e discreti, che lo aiutano ad agire sotto traccia e tenere un basso profilo. 
-//
+### Descrizione
+Martino Ravanelli è un noto geometra che lavora in una città ai margini dell’hinterland milanese. In altri ambienti, più loschi, è conosciuto anche per le sue grandi doti da falsario. Aver studiato disegno tecnico sin da giovane gli ha fornito uno straordinario occhio per la riproduzione di quadri originali. Si tratta però di una persona astuta: al momento è incensurato, e non siamo mai riusciti a trovarlo con le mani nel sacco. Ciò probabilmente deriva dalla sua principale occupazione, la riproduzione di opere di artisti emergenti, più difficili da identificare e tracciare. Si dice che abbia un leggendario fiuto per la scoperta di nuovi artisti. Inoltre, pare che abbia un giro di ottimi compratori, potenti e discreti, che lo aiutano ad agire sotto traccia e tenere un basso profilo.]
 ---
-
-Ora, hai finito di leggere la scheda del sospettato e devi decidere come procedere. Se vuoi, [[interroga Martino Ravanelli]], altrimenti puoi prima leggere la scheda di un altro sospettato tornando allo [[schedario]]. 
-
-(if: $m) [&lt;audio src=&quot;https://cdn.pixabay.com/audio/2021/11/15/audio_75021cca14.mp3&quot; autoplay&gt;&lt;/audio&gt;]</tw-passagedata><tw-passagedata pid="8" name="leggi la scheda di Gerry Rosso" tags="testo_font sfondo_bianco testo_nero" position="1939,413" size="100,100">
+Ora, hai finito di leggere la scheda del sospettato e devi decidere come procedere. Se vuoi, [[interroga Martino Ravanelli]], altrimenti puoi prima leggere la scheda di un altro sospettato tornando allo [[schedario]]. \
+ \
+(if: $m) [(print: $cs3)] \
+ \
+(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="8" name="leggi la scheda di Gerry Rosso" tags="sfondo_bianco testo_nero" position="1939,413" size="100,100">
 ## Gerry Rosso
-
-Decidi quindi di aprire la scheda di Gerry Rosso, per scoprire di chi si tratti.  
-Ecco cosa ci trovi dentro.
+ \
+Decidi quindi di aprire la scheda di Gerry Rosso, per scoprire di chi si tratti. Ecco cosa ci trovi dentro.
 
 ---
-//&#39;&#39;Generalità&#39;&#39;
-
+|preformat&gt;[
+### Generalità
 * Nome: Gerry
 * Cognome: Rosso
 * Professione: imprenditore
 * Residenza: fra Milano e Roma
-
-&#39;&#39;Foto segnaletica&#39;&#39;
-
+ \
+### Foto segnaletica
 &lt;img src=&quot;https://i.ibb.co/1T8FjrC/Rosso.jpg&quot; width=&quot;400&quot; height=&quot;480&quot;&gt;
 
-&#39;&#39;Descrizione&#39;&#39;
-
-La famiglia del commendator Rosso gestisce da tre generazioni una nota azienda di impianti di riciclo di plastica, e ha una lunga storia di collezione di opere d’arte di grande valore. Rosso, in particolare, ha ereditato dal padre il senso per gli affari, e dalla madre un grande gusto per i classici della pittura e per il design di interni. Con la crisi del 2008, l’attività dell’azienda si è ridimensionata. Per mantenere il proprio stile di vita, Rosso ha quindi iniziato non solo a collezionare opere d’arte ma anche a operare come ricettatore, rivendendo in tutta Italia opere d’arte usando come pretesto un lavoro che lo porta a viaggiare molto. Di fatto, è in perpetuo movimento fra Milano e Roma. Questa vita itinerante lo ha peraltro reso un guidatore provetto. Arrestato nel 2019 per ricettazione di un lotto di piccoli pezzi d’arte etrusca, al momento sta affrontando un processo. Da allora, ha aperto una piccola società satellite che si occupa in modo legale di compravendita di opere d’arte, ma non si hanno segnali definitivi del fatto che abbia definitivamente smesso di operare fuori dai confini della legalità.
-//
+### Descrizione
+La famiglia del commendator Rosso gestisce da tre generazioni una nota azienda di impianti di riciclo di plastica, e ha una lunga storia di collezione di opere d’arte di grande valore. Rosso, in particolare, ha ereditato dal padre il senso per gli affari, e dalla madre un grande gusto per i classici della pittura e per il design di interni. Con la crisi del 2008, l’attività dell’azienda si è ridimensionata. Per mantenere il proprio stile di vita, Rosso ha quindi iniziato non solo a collezionare opere d’arte ma anche a operare come ricettatore, rivendendo in tutta Italia opere d’arte usando come pretesto un lavoro che lo porta a viaggiare molto. Di fatto, è in perpetuo movimento fra Milano e Roma. Questa vita itinerante lo ha peraltro reso un guidatore provetto. Arrestato nel 2019 per ricettazione di un lotto di piccoli pezzi d’arte etrusca, al momento sta affrontando un processo. Da allora, ha aperto una piccola società satellite che si occupa in modo legale di compravendita di opere d’arte, ma non si hanno segnali definitivi del fatto che abbia definitivamente smesso di operare fuori dai confini della legalità.]
 ---
-
-Ora, hai finito di leggere la scheda del sospettato e devi decidere come procedere. Se vuoi, [[interroga Gerry Rosso]], altrimenti puoi prima leggere la scheda di un altro sospettato tornando allo [[schedario]]. 
-
-(if: $m) [&lt;audio src=&quot;https://cdn.pixabay.com/audio/2021/11/15/audio_75021cca14.mp3&quot; autoplay&gt;&lt;/audio&gt;]</tw-passagedata><tw-passagedata pid="9" name="interroga Gerry Rosso" tags="testo_font testo_nero sfondo_bianco" position="2234,404" size="100,100">
+Ora, hai finito di leggere la scheda del sospettato e devi decidere come procedere. Se vuoi, [[interroga Gerry Rosso]], altrimenti puoi prima leggere la scheda di un altro sospettato tornando allo [[schedario]]. \
+ \
+(if: $m) [(print: $cs3)] \
+ \
+(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="9" name="interroga Gerry Rosso" tags="testo_font testo_nero sfondo_bianco" position="2234,404" size="100,100">
 ## L’interrogatorio di Gerry Rosso
 
 &lt;img src=&quot;https://cdnb.artstation.com/p/assets/images/images/019/671/351/large/edward-okechukwu-interrogation-room-6.jpg?1564521441&amp;dl=1&quot; width=&quot;800&quot; height=&quot;533&quot;&gt;
@@ -684,23 +683,22 @@ Durante il gioco, ti sei fidato della macchina della verità...ma sei sicuro che
 (link: &quot;Torna indietro&quot;)[(goto: $ultima_pag)]</tw-passagedata><tw-passagedata pid="30" name="statistiche di un campione" tags="" position="3599,364" size="100,100">Double-click this passage to edit it.
 
 (set: $ultima_pag to (history:)&#39;s last)
-(link: &quot;Torna indietro&quot;)[(goto: $ultima_pag)]</tw-passagedata><tw-passagedata pid="31" name="ripensa alla telefonata" tags="sfondo_trascrizione testo_trascrizione" position="1479,498" size="100,100">
+(link: &quot;Torna indietro&quot;)[(goto: $ultima_pag)]</tw-passagedata><tw-passagedata pid="31" name="ripensa alla telefonata" tags="testo_nero sfondo_sfumato3" position="1479,498" size="100,100">
 ##Ripensando alla telefonata...
-
+ \
 (if: $t is &quot;org&quot;) [Riapri il tuo smartphone, e nelle note puoi leggere la trascrizione della telefonata che ti eri fatta rapidamente, mentre lo sconosciuto parlava.
 
-//“Commissario, non mi interrompa e soprattutto non provi a rintracciarmi. Il quadro rubato, signor Tomba, non è un problema normale. Immagino che lei non sappia dove andare a parare. Non le posso dire chi sia stato, se lo trovasse troppo in fretta poi qualcuno comincerebbe a fare domande. Però le posso dare un suggerimento: lo prenda come un piccolo aiuto da parte di un amico, che ha interesse quanto lei che la faccenda si risolva per il meglio. Al Bar Camillo, nella periferia nord, si trovano spesso antiquari che affiancano alle attività legali furto e contrabbando, basisti che devono smerciare quadri e piccole sculture, ladri d’arte e saccheggiatori di siti archeologici. Mi è giunta voce che quattro di loro nelle ultime settimane siano stati stranamente assenti: Claudio Lodigiani, Marco Freschini, Martino Ravanelli e Gerry Rosso  Magari, uno di questi era impegnato a preparare il colpo. E magari è passato da Brera il giorno prima del furto a fare un ultimo sopralluogo e controllare se la via di fuga che si era preparato fosse libera. Stia bene commissario.”//
-]
-(else:)[
-Se fossi stat$g (if: $g is &quot;o&quot;)[un investigatore organizzato](else:)[un’investigatrice organizzata] e razionale, avresti trascritto la telefonata... Hai certamente altre doti, ma ora ti rendi conto che le parole ti stanno sfuggendo dalla mente. Meno male che almeno ti ricordi i quattro nomi, e con un po’ di lavoro ne puoi recuperare i contatti.]
+|preformat&gt;[“Commissario, non mi interrompa e soprattutto non provi a rintracciarmi. Il quadro rubato, signor Tomba, non è un problema normale. Immagino che lei non sappia dove andare a parare. Non le posso dire chi sia stato, se lo trovasse troppo in fretta poi qualcuno comincerebbe a fare domande. Però le posso dare un suggerimento: lo prenda come un piccolo aiuto da parte di un amico, che ha interesse quanto lei che la faccenda si risolva per il meglio. Al Bar Camillo, nella periferia nord, si trovano spesso antiquari che affiancano alle attività legali furto e contrabbando, basisti che devono smerciare quadri e piccole sculture, ladri d’arte e saccheggiatori di siti archeologici. Mi è giunta voce che quattro di loro nelle ultime settimane siano stati stranamente assenti: Claudio Lodigiani, Marco Freschini, Martino Ravanelli e Gerry Rosso. Magari, uno di questi era impegnato a preparare il colpo. E magari è passato da Brera il giorno prima del furto a fare un ultimo sopralluogo e controllare se la via di fuga che si era preparato fosse libera. Stia bene, commissario.”] \
+] \
+(else:)[Se fossi stat$g (if: $g is &quot;o&quot;)[un investigatore organizzato](else:)[un’investigatrice organizzata] e razionale, avresti trascritto la telefonata... Hai certamente altre doti, ma ora ti rendi conto che le parole ti stanno sfuggendo dalla mente. Meno male che almeno ti ricordi i quattro nomi, e con un po’ di lavoro ne puoi recuperare i contatti.]
 Ora, è davvero il momento giusto per andare allo [[schedario]]. \
  \
-(if: $m) [&lt;audio id=&quot;cs&quot; src=&quot;res1/cs1.mp3&quot; type=&quot;audio/mp3&quot; autoplay&gt;&lt;/audio&gt;] \
+(if: $m) [(print: $cs2)] \
  \
 (display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="32" name="prendere la bicicletta" tags="testo_bianco sfondo_sfumato0" position="1157,795" size="100,100">&lt;img src=&#39;res1/bici.jpg&#39; height=&#39;430&#39; class=&#39;center&#39; alt=&#39;immagine&#39;&gt;
 
 ##In viaggio in bicicletta...
-
+ \
 (if: $g is &quot;a&quot;) [Inforchi la bicicletta e fai per recarti al commissariato. Sulla strada incontri Clara, una tua cara amica medico, che sta tornando a casa dall’ospedale dopo una chiamata d’urgenza. “Hai sentito cosa è successo?”, ti domanda. Le rispondi che sai già tutto, e che stai andando in commissariato proprio per quel motivo. La saluti per andare via, ma lei ti trattiene un attimo.
 
 “Aspetta $nome, ho avuto un flash! Guarda, magari è una cosa che non c’entra niente, ma nel dubbio te la dico. Oggi pomeriggio si è presentato in reparto un uomo per un brutto taglio alla mano. Non mi ricordo il suo aspetto fisico né come si chiamasse, ma ricordo che aveva combinato qualche cosa attorno alla Pinacoteca di Brera nel pomeriggio, ed era strano perché non era di Milano. E poi, quando gli abbiamo chiesto i documenti, si è mostrato preoccupato ed è scappato. Non mi ricordo esattamente di dove fosse, ma era da qualche parte vicino a un lago, verso nord. Comunque quando torno in ospedale do un’occhiata, magari riesco a recuperare qualche informazione in più.”
@@ -708,12 +706,12 @@ Ora, è davvero il momento giusto per andare allo [[schedario]]. \
 Chissà se verrà fuori qualcosa di utile... ma ora stai [[arrivando in ufficio]].]
 (else:) [La pedalata è stata piacevole, e ti ha consentito di cominciare a riordinare le idee, ora che stai [[arrivando in ufficio]].] \
  \
-(if: $m) [&lt;audio id=&quot;cs&quot; src=&quot;res1/cs1.mp3&quot; type=&quot;audio/mp3&quot; autoplay&gt;&lt;/audio&gt;] \
+(if: $m) [(print: $cs2)] \
  \
 (display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="33" name="prendere la macchina" tags="testo_bianco sfondo_sfumato0" position="1159,514" size="100,100">&lt;img src=&#39;res1/citta.webp&#39; height=&#39;430&#39; class=&#39;center&#39; alt=&#39;immagine&#39;&gt;
 
 ##In viaggio in macchina...
-
+ \
 Non usi mai l’automobile: semplicemente, a Milano non è così utile. La prendi solo in caso di emergenza, e per questo tieni le chiavi in una piccola cassaforte.
 
 Ti avvicini per recuperare le chiavi, ma in quel momento ti accorgi che sono passati mesi da quando l’hai aperta l’ultima volta, e non ti ricordi la combinazione. Sono solo due le cose che ti vengono in mente: la prima è che si tratta di un codice di quattro cifre; la seconda è che la tua amica Rebecca, studiosa di storia e di statistica con una mente capace di intuizioni fulminee, una volta ti aveva fatto notare che la combinazione era curiosamente la media fra l’anno di nascita di tua madre, che da (if: $g is &quot;o&quot;)[buon figlio](else:)[buona figlia] ti ricordi essere il 1968, l’anno della caduta dell’Impero Romano d’Occidente e quello della scoperta dell’America da parte di Cristoforo Colombo.
@@ -728,26 +726,32 @@ Recuperi le chiavi al volo e ti metti in auto. Durante il breve viaggio verso il
 
 ... e ora dunque stai [[arrivando in ufficio]]]] \
  \
-(if: $m) [&lt;audio id=&quot;cs&quot; src=&quot;res1/cs1.mp3&quot; type=&quot;audio/mp3&quot; autoplay&gt;&lt;/audio&gt;] \
+(if: $m) [(print: $cs2)] \
  \
 (display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="34" name="interrogare ulteriormente Ravanelli" tags="testo_font sfondo_bianco testo_nero" position="2801,465" size="100,100">
 ## La seconda parte dell’interrogatorio di Martino Ravanelli
 
-Ore e ore di interrogatorio non danno frutti. Purtroppo Ravanelli non vuole parlare. A un certo punto, gli racconti della telefonata misteriosa che avevi ricevuto all’inizio. (if: $t is &quot;cor&quot;)[Sei (if: $g is &quot;o&quot;)[un investigatore](else:)[un’investigatrice] originale e fantasios$g, e la tua empatia riesce evidentemente a fare breccia nella corazza di Ravanelli, che per un momento si lascia sfuggire un mormorio. “Maledetto traditore, ecco perché...” riesci a sentire. Ma poi rimane in silenzio.](else:)[Anche in questo caso, la corazza di Ravanelli non viene intaccata]. Di fronte a un silenzio costante, non ti rimane che andare avanti con le indagini, e guardare [[la mappa]].</tw-passagedata><tw-passagedata pid="35" name="include" tags="header" position="721,475" size="100,100">&lt;!-- dei default, anche per rendere più efficace il testing in fase di sviluppo --&gt; \
+Ore e ore di interrogatorio non danno frutti. Purtroppo Ravanelli non vuole parlare. A un certo punto, gli racconti della telefonata misteriosa che avevi ricevuto all’inizio. (if: $t is &quot;cor&quot;)[Sei (if: $g is &quot;o&quot;)[un investigatore](else:)[un’investigatrice] originale e fantasios$g, e la tua empatia riesce evidentemente a fare breccia nella corazza di Ravanelli, che per un momento si lascia sfuggire un mormorio. “Maledetto traditore, ecco perché...” riesci a sentire. Ma poi rimane in silenzio.](else:)[Anche in questo caso, la corazza di Ravanelli non viene intaccata]. Di fronte a un silenzio costante, non ti rimane che andare avanti con le indagini, e guardare [[la mappa]].</tw-passagedata><tw-passagedata pid="35" name="include" tags="header" position="721,475" size="100,100">&lt;!-- dei default, anche per rendere più semplice il testing in fase di sviluppo --&gt; \
 (if: $nome is 0) [(set: $nome to &quot;Alex&quot;)] \
 (if: $cognome is 0) [(set: $cognome to &quot;Bianchi&quot;)] \
 (if: $t is 0) [(set: $t to &quot;org&quot;)] \
 (if: $g is 0) [(set: $g to &quot;a&quot;)] \
 (if: $m is 0) [(set: $m to true)] \
-(if: (passage:)&#39;s name is not &quot;start&quot;)[(save-game: &quot;auto&quot;)]</tw-passagedata><tw-passagedata pid="36" name="risultati dei test" tags="" position="3749,724" size="100,100">Double-click this passage to edit it.
+ \
+(set: $cs_pre to &quot;&lt;audio id=&#39;cs&#39; src=&#39;https://cdn.pixabay.com/audio/&quot;,
+$cs_post to &quot;.mp3&#39; type=&#39;audio/mp3&#39; autoplay&gt;&lt;/audio&gt;&quot;) \
+(set: $cs1 to $cs_pre + &quot;2022/03/30/audio_52a596f0b5&quot; + $cs_post) \
+(set: $cs2 to $cs_pre + &quot;2021/11/26/audio_e20882e29d&quot; + $cs_post) \
+(set: $cs3 to $cs_pre + &quot;2021/11/15/audio_75021cca14&quot; + $cs_post) \
+ \
+(if: (passage:)&#39;s name is not &quot;start&quot;) [(save-game: &quot;auto&quot;)]</tw-passagedata><tw-passagedata pid="36" name="risultati dei test" tags="" position="3749,724" size="100,100">Double-click this passage to edit it.
 
 
 (set: $ultima_pag to (history:)&#39;s last)
 (link: &quot;Torna indietro&quot;)[(goto: $ultima_pag)]</tw-passagedata><tw-passagedata pid="37" name="piepagina" tags="" position="840,476" size="100,100">&lt;!-- deve essere incluso esplicitamente, con: (display: &quot;piepagina&quot;) --&gt;
 ---
-(se preferisci, puoi sempre [[ricominciare il gioco dall’inizio-&gt;frontespizio]]) \
-&amp;nbsp;&amp;nbsp; \
-(if: $m) [(link: &quot;Sospendi l’audio&quot;) [&lt;script&gt;document.getElementById(&#39;cs&#39;).pause();&lt;/script&gt;]]</tw-passagedata><tw-passagedata pid="38" name="start" tags="" position="599,474" size="100,100">(if: &quot;auto&quot; is in (saved-games:)) [(load-game: &quot;auto&quot;)]
+(se preferisci, [[puoi sempre ricominciare il gioco dall’inizio-&gt;frontespizio]] \
+(if: $m) [(link: &quot;&amp;nbsp;&amp;nbsp;e puoi sospendere l’audio&quot;) [&lt;script&gt;document.getElementById(&#39;cs&#39;).pause();&lt;/script&gt;]] )</tw-passagedata><tw-passagedata pid="38" name="start" tags="" position="599,474" size="100,100">(if: &quot;auto&quot; is in (saved-games:)) [(load-game: &quot;auto&quot;)]
 (else:) [(go-to: &quot;frontespizio&quot;)]</tw-passagedata><tw-passagedata pid="39" name="un’insolita sveglia" tags="" position="751,805" size="100,100">Double-click this passage to edit it.</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">"use strict";var _slicedToArray=function(){return function(e,t){if(Array.isArray(e))return e;if(Symbol.iterator in Object(e))return function(e,t){var n=[],r=!0,a=!1,i=void 0;try{for(var o,s=e[Symbol.iterator]();!(r=(o=s.next()).done)&&(n.push(o.value),!t||n.length!==t);r=!0);}catch(e){a=!0,i=e}finally{try{!r&&s.return&&s.return()}finally{if(a)throw i}}return n}(e,t);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}!function(){
 /**
