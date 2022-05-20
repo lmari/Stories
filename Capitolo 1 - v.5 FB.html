@@ -195,7 +195,7 @@ Ora vai avanti, per cominciare il gioco con [[un&#39;insolita sveglia]].
 (else:) [(set: $g to &quot;a&quot;)]]
 
 (live: 0.2s)[(if: $musica is &quot;si&quot;) [(set: $m to true)]
-(else:) [(set: $m to false)]]</tw-passagedata><tw-passagedata pid="5" name="leggi la scheda di Claudio Lodigiani" tags="testo_font sfondo_bianco testo_nero" position="1943,982.3333333333334" size="100,100">
+(else:) [(set: $m to false)]]</tw-passagedata><tw-passagedata pid="5" name="leggi la scheda di Claudio Lodigiani" tags="testo_font sfondo_bianco testo_nero" position="1943,982" size="100,100">
 ## Claudio Lodigiani
 
 Decidi quindi di aprire la scheda di Claudio Lodigiani, per scoprire di chi si tratti.  
@@ -621,7 +621,9 @@ Ti metti quindi all’opera. Colleghi Freschini alla macchina, e fai un po’ di
 &lt;img src=&quot;https://i.ibb.co/cwypzRt/Poligrafo-Freschini.png&quot; width=&quot;800&quot; height=&quot;533&quot;&gt;
 Ogni linea bianca corrisponde al momento in cui una delle tre domande è stata posta. In base alla lettura del poligrafo, ora hai abbastanza informazioni per prendere una decisione.
 
-Vai allo [[schedario]] per tornare indietro e interrogare un altro sospettato. Oppure, [[accusa Freschini]] se pensi che sia lui il colpevole o che sappia qualcosa che non ha voluto rivelare. (if: $t is &quot;org&quot;) [Infine, se vuoi ripassare le informazioni sull&#39;interrogato, lascia per un attimo la sala dell’interrogatorio e ri[[leggi la scheda di Marco Freschini]].]</tw-passagedata><tw-passagedata pid="27" name="curiosità" tags="testo_font sfondo_bianco testo_nero" position="3667,757" size="100,100">
+Vai allo [[schedario]] per tornare indietro e interrogare un altro sospettato. Oppure, [[accusa Freschini]] se pensi che sia lui il colpevole o che sappia qualcosa che non ha voluto rivelare. (if: $t is &quot;org&quot;) [Infine, se vuoi ripassare le informazioni sull&#39;interrogato, lascia per un attimo la sala dell’interrogatorio e ri[[leggi la scheda di Marco Freschini]].]
+
+(set: $poligrafo_Freschini to true)</tw-passagedata><tw-passagedata pid="27" name="curiosità" tags="testo_font sfondo_bianco testo_nero" position="3667,757" size="100,100">
 ## Curiosità
 
 Adesso che hai completato il gioco, ti vogliamo lasciare con qualche informazione aggiuntiva, che ti possa aiutare a capire come hai preso le decisioni che hai preso, quale fosse la loro bontà, e se nel mondo reale avesse senso comportarsi in questo modo.

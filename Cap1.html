@@ -193,19 +193,19 @@ Puoi quindi leggere le schede dei sospettati.
 
 ### Claudio Lodigiani
 &lt;img src=&#39;res1/Lodigiani.jpg&#39; height=&#39;400&#39; alt=&#39;immagine&#39;&gt;
-Se vuoi avere più informazioni su questo sospettato, [[leggi la scheda di Claudio Lodigiani]]. 
+Se vuoi avere più informazioni su questo sospettato, [[leggi la scheda di Claudio Lodigiani]](if: &quot;Lodigiani&quot; is in $interrogatori)[ oppure puoi tornare direttamente a [[interrogarlo-&gt;interroga Claudio Lodigiani]]]. 
 
 ### Marco Freschini
 &lt;img src=&#39;res1/Freschini.jpg&#39; height=&#39;400&#39; alt=&#39;immagine&#39;&gt;
-Se vuoi avere più informazioni su questo sospettato, [[leggi la scheda di Marco Freschini]]. 
+Se vuoi avere più informazioni su questo sospettato, [[leggi la scheda di Marco Freschini]](if: &quot;Freschini&quot; is in $interrogatori)[ oppure puoi tornare direttamente a [[interrogarlo-&gt;interroga Marco Freschini]]]. 
 
 ### Martino Ravanelli
 &lt;img src=&#39;res1/Ravanelli.jpg&#39; height=&#39;400&#39; alt=&#39;immagine&#39;&gt;
-Se vuoi avere più informazioni su questo sospettato, [[leggi la scheda di Martino Ravanelli]]. 
+Se vuoi avere più informazioni su questo sospettato, [[leggi la scheda di Martino Ravanelli]](if: &quot;Ravanelli&quot; is in $interrogatori)[ oppure puoi tornare direttamente a [[interrogarlo-&gt;interroga Martino Ravanelli]]]. 
 
 ### Gerry Rosso
 &lt;img src=&#39;res1/Rosso.jpg&#39; height=&#39;400&#39; alt=&#39;immagine&#39;&gt;
-Se vuoi avere più informazioni su questo sospettato, [[leggi la scheda di Gerry Rosso]]. 
+Se vuoi avere più informazioni su questo sospettato, [[leggi la scheda di Gerry Rosso]](if: &quot;Rosso&quot; is in $interrogatori)[ oppure puoi tornare direttamente a [[interrogarlo-&gt;interroga Gerry Rosso]]]. 
 
 Data la tua ottima capacità organizzativa, durante la telefonata ti sei segnat$g le parole del misterioso sconosciuto all’altro capo della cornetta. Se ritieni che ti sia utile, puoi allora [[ripensare alla telefonata|ripensa alla telefonata]], leggendone la trascrizione.
 ] \
@@ -223,7 +223,7 @@ Dopo ore di lavoro, riesci giusto a ottenere i numeri di telefono dei quattro so
 #Il furto dell’Hayez
 ###//Una storia di investigazione,&lt;br&gt;basata sulla scienza dei dati//
 
-&lt;img src=&#39;res1/bacio.jpg&#39; height=&#39;500&#39; class=&#39;center&#39; alt=&#39;immagine&#39;&gt;
+&lt;img src=&#39;res1/bacio.jpg&#39; height=&#39;450&#39; class=&#39;center&#39; alt=&#39;immagine&#39;&gt;
 
 Questo che hai appena aperto è un &#39;&#39;libro-game digitale&#39;&#39;, il cui racconto è sviluppato secondo i canoni classici del genere “giallo”. In questo gioco il protagonista sei tu: un’investigatrice / un investigatore che ha un caso da risolvere e per riuscirci dovrai trovare la soluzione dei problemi che nel corso dell’indagine ti si presenteranno.
 
@@ -236,7 +236,9 @@ Prima di cominciare con il racconto, rispondi per favore a qualche domanda per p
 
 E’ ora il momento di cominciare il gioco, con [[un’insolita sveglia-&gt;un&#39;insolita sveglia]]. \
  \
+(set: $interrogatori to (ds:)) \
 (set: $poligrafo to false) \
+(set: $poligrafo_Freschini to false) \
  \
 (if: $nome is &quot;&quot;) [(set: $nome to &quot;Alex&quot;)] \
 (if: $cognome is &quot;&quot;) [(set: $cognome to &quot;Bianchi&quot;)] \
@@ -340,74 +342,124 @@ Ora, hai finito di leggere la scheda del sospettato e devi decidere come procede
  \
 (if: $m) [(print: $cs3)] \
  \
-(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="9" name="interroga Gerry Rosso" tags="testo_font testo_nero sfondo_bianco" position="2234,404" size="100,100">
+(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="9" name="interroga Gerry Rosso" tags="testo_nero sfondo_sfumato3" position="2234,404" size="100,100">&lt;img src=&#39;res1/interr.jpg&#39; height=&#39;400&#39; alt=&#39;immagine&#39;&gt;
+
 ## L’interrogatorio di Gerry Rosso
+ \
+(if: &quot;Rosso&quot; is not in $interrogatori) [Hai convocato Gerry Rosso, e gli hai chiesto se abbia nulla a che fare con il furto del &#39;&#39;Bacio di Hayez&#39;&#39;. Rosso è di fronte a te, e ti guarda con gli occhi sbarrati: “Car$g agente $cognome”, esordisce. “Avrebbe dovuto fare meglio i suoi compiti. La sera del furto ero a cena con un cliente a Roma, in un ristorante accanto a piazza Santa Maria di Trastevere. Come avrei potuto compiere il furto?” Tu sei sorpres$g dalla notizia, ma in fondo anche sollevat$g. Se veramente era a Roma, puoi escludere Rosso dalla lista dei sospettati! \
 
-&lt;img src=&quot;https://cdnb.artstation.com/p/assets/images/images/019/671/351/large/edward-okechukwu-interrogation-room-6.jpg?1564521441&amp;dl=1&quot; width=&quot;800&quot; height=&quot;533&quot;&gt;
+(if: $poligrafo) [Però, per principio, non ti puoi fidare solo della sua parola. Ti ricordi che Lodigiani ti ha lasciato il suo poligrafo per l’indagine. “Signor Rosso, le spiacerebbe sottoporsi al test del poligrafo? In modo del tutto informale, ovviamente, senza alcun obbligo da parte sua.” Rosso, alla proposta, si volta sdegnato: “Non ci penso nemmeno. Le darò i contatti del ristorante, che confermeranno il mio alibi. Io da quella diavoleria elettronica non mi faccio toccare!”] \
 
-Hai convocato Gerry Rosso, e gli hai chiesto se abbia nulla a che fare con il furto del &#39;&#39;Bacio di Hayez&#39;&#39;. Rosso è di fronte a te, e ti guarda con gli occhi sbarrati: “Car$g agente $cognome” esordisce. “Avrebbe dovuto fare meglio i suoi compiti. La sera del furto ero a cena con un cliente a Roma, in un ristorante accanto a piazza Santa Maria di Trastevere. Come avrei potuto compiere il furto?”. Tu sei sorpres$g dalla notizia, ma in fondo anche sollevat$g. Se veramente era a Roma, puoi escludere Rosso dalla lista dei sospettati!
-
-(if: $poligrafo) [Però, per principio, non ti puoi fidare solo della sua parola. Ti ricordi che Lodigiani ti ha lasciato il suo poligrafo per l’indagine. “Signor Rosso, le spiacerebbe sottoporsi al test del poligrafo? In modo del tutto informale, ovviamente, senza alcun obbligo da parte sua”. Rosso, alla proposta, si volta sdegnato. “Non ci penso nemmeno. Le darò i contatti del ristorante, che confermeranno il mio alibi. Io da quella diavoleria elettronica non mi faccio toccare!”]
 (else:) [Tu però, per principio, non ti puoi fidare, e perciò chiedi a Rosso i contatti del ristorante e del cliente con cui ha cenato.]
 
-Quando lasci la stanza dell’interrogatorio hai i numeri di telefono, ed effettivamente sia il cliente che il proprietario del ristorante confermano che Rosso quella sera si trovasse a Roma. Il proprietario del ristorante addirittura recupera lo scontrino, e così scopri che Rosso è uscito dal ristorante alle 23:42. Una rapida occhiata a Google Maps ti fa capire che sarebbe stato difficile che Rosso fosse riuscito ad arrivare in tempo a Milano. Però, forse non impossibile. (if: $t is &quot;org&quot;) [Dalla scheda di Rosso ti ricordi che è un’autista provetto, e una rapida occhiata ai suoi profili social di fanno vedere che ha recentemente acquistato una potente auto sportiva.] Ti domandi quindi se effettivamente non sia stato in grado di percorrere i 591 chilometri che separano le due località nelle 3 ore e 32 minuti intercorsi fra il pagamento al ristorante e il furto nella pinacoteca.
+Quando lasci la stanza dell’interrogatorio hai i numeri di telefono, ed effettivamente sia il cliente che il proprietario del ristorante confermano che Rosso quella sera si trovava a Roma. Il proprietario del ristorante addirittura recupera lo scontrino, e così scopri che Rosso è uscito dal ristorante alle 23:42. Una rapida occhiata a Google Maps ti fa capire che sarebbe stato difficile che Rosso fosse riuscito ad arrivare in tempo a Milano. Però, forse non impossibile. \
+
+(if: $t is &quot;org&quot;) [Dalla scheda di Rosso ti ricordi che è un’autista provetto, e una rapida occhiata ai suoi profili social di fanno vedere che ha recentemente acquistato una potente auto sportiva.] Ti domandi quindi se effettivamente non sia stato in grado di percorrere i 591 chilometri che separano le due località nelle 3 ore e 32 minuti intercorsi fra il pagamento al ristorante e il furto nella pinacoteca.
 
 All’improvviso hai un’illuminazione: potresti controllare il suo Telepass. Fai una serie di telefonate, e mentre Rosso è fermo nell’ufficio che aspetta, tu riesci a recuperare tutti i tempi di percorrenza della tratta Milano-Roma (if: $t is &quot;org&quot;) [da quando ha comprato la nuova automobile]. La tabella che hai a disposizione è la seguente.
 
 &lt;iframe src=&quot;https://docs.google.com/spreadsheets/d/e/2PACX-1vQ3diIqN_W-N4_Zi7Hr2iub63_9ck4Z2hBkA5x0Tf5GNhTzm0gJ-2ESsJ2xmByO8AcdvFB3FjgWfRwx/pubhtml?gid=0&amp;amp;single=true&amp;amp;widget=true&amp;amp;headers=false&quot; width=&quot;450&quot; height=&quot;450&quot;&gt;&lt;/iframe&gt;
 
-Purtroppo non compaiono i viaggi dell&#39;ultima settimana, poiché il dispositivo si è recentemente guastato, e quindi non puoi usarlo per confermare direttamente l’alibi di Rosso. Ad ogni modo, osservando i dati del telepass, cerchi di capire se l’alibi regga, oppure se potrebbe davvero essere lui il colpevole.
+Purtroppo non compaiono i viaggi dell&#39;ultima settimana, poiché il dispositivo si è recentemente guastato, e quindi non puoi usarlo per confermare direttamente l’alibi di Rosso. Ad ogni modo, osservando i dati del Telepass, cerchi di capire se l’alibi regga, oppure se potrebbe davvero essere lui il colpevole.] \
+(else:)[Sei di nuovo di fronte a Gerry Rosso, che, alla tua domanda, continua a confermare di avere nulla a che fare con il furto del &#39;&#39;Bacio di Hayez&#39;&#39;. Gli accenni di aver recuperato la tabella con i suoi recenti tempi di viaggio tra Milano e Roma, e gliela mostri:
 
-Se vuoi leggere la scheda e interrogare un altro sospettato, torna allo [[schedario]]. (if: $t is &quot;org&quot;) [In alternativa, esci un attimo dalla sala dell’interrogatorio, fermati e ri[[leggi la scheda di Gerry Rosso]].] Altrimenti, se credi che la persona che hai interrogato sia il colpevole, [[accusa Rosso]].
+&lt;iframe src=&quot;https://docs.google.com/spreadsheets/d/e/2PACX-1vQ3diIqN_W-N4_Zi7Hr2iub63_9ck4Z2hBkA5x0Tf5GNhTzm0gJ-2ESsJ2xmByO8AcdvFB3FjgWfRwx/pubhtml?gid=0&amp;amp;single=true&amp;amp;widget=true&amp;amp;headers=false&quot; width=&quot;450&quot; height=&quot;450&quot;&gt;&lt;/iframe&gt;
 
-(link: &quot;Clicca qui per scoprire perché i dati nella tabella sono un campione&quot;)[(goto: &quot;campione di dati&quot;)]
+Dal suo sguardo, capisci che Rosso non ti aiuterà a interpretarla, ma puoi lavorarci ancora tu, se ritieni, per capire se potrebbe essere lui il colpevole.]
 
-(link: &quot;Clicca qui per scoprire come calcolare le principali statistiche di un campione&quot;)[(goto: &quot;statisiche di un campione&quot;)]
 
-(if: $m) [&lt;audio src=&quot;https://cdn.pixabay.com/download/audio/2022/01/05/audio_6954fd7675.mp3&quot; type=&quot;audio/mp3&quot; autoplay&gt;&lt;/audio&gt;]</tw-passagedata><tw-passagedata pid="10" name="interroga Martino Ravanelli" tags="testo_font sfondo_bianco testo_nero" position="2232,600" size="100,100">
+Devi ora decidere cosa fare...
+
+Potresti chiedere un aiuto alla tua amica Rebecca, per capire (link: &quot;in che senso i dati nella tabella sono un campione&quot;)[(goto: &quot;campione di dati&quot;)] o per scoprire (link: &quot;come calcolare le principali statistiche di un campione&quot;)[(goto: &quot;statistiche di un campione&quot;)]. \
+
+(if: $t is &quot;org&quot;) [Potresti anche uscire per qualche istante dalla sala dell’interrogatorio e [[rileggere la scheda di Gerry Rosso-&gt;leggi la scheda di Gerry Rosso]]. Oppure potresti cercare di acquisire nuove informazioni su un altro sospettato, leggendone la scheda e magari interrogandolo, e per questo [[tornando allo schedario-&gt;schedario]].] \
+(else:) [A questo punto ti chiedi se sarebbe utile acquisire nuove informazioni su un altro sospettato, magari interrogandolo, e per questo [[tornando allo schedario-&gt;schedario]].]
+
+(set: $interrogatori to it + (ds: &quot;Rosso&quot;)) \
+ \
+(if: $interrogatori&#39;s length &gt;= $min_interr) [D&#39;altra parte, hai già interrogato vari sospettati: se credi di avere di fronte il colpevole, [[accusa Rosso]].] \
+(else:) [Il commissario è stato comunque chiaro: prima di accusare qualcuno, è necessario aver interrogato anche qualche altro sospettato!] \
+ \
+(if: $m) [(print: $cs4)] \
+ \
+(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="10" name="interroga Martino Ravanelli" tags="testo_nero sfondo_sfumato3" position="2232,600" size="100,100">&lt;img src=&#39;res1/interr.jpg&#39; height=&#39;400&#39; alt=&#39;immagine&#39;&gt;
+
 ## L’interrogatorio di Martino Ravanelli
+ \
+(if: &quot;Ravanelli&quot; is not in $interrogatori) [“Agente $cognome”, esordisce Martino Ravanelli, dopo che gli hai chiesto se si fosse recato in zona Brera nei giorni precedenti al furto. “Sì, sono passato da quelle parti nella giornata di giovedì. Ma non sono andato alla Pinacoteca. Ho sentito di recente, non ricordo più da chi, che ha aperto un’ottima piadineria in quell’area, e sono andato per provarla. Non avendo appuntamenti nel pomeriggio, ho chiuso il mio studio alle 15 e un’ora dopo circa ero lì. Agente $cognome, le darò un consiglio: non ci vada. Sono rimasto deluso dalla piadina, ed era pure pieno di gente.”
 
-&lt;img src=&quot;https://cdnb.artstation.com/p/assets/images/images/019/671/351/large/edward-okechukwu-interrogation-room-6.jpg?1564521441&amp;dl=1&quot; width=&quot;800&quot; height=&quot;533&quot;&gt;
+L’interrogatorio di Ravanelli è convincente: ti sembra innocente. Ma tu, per principio, non ti puoi fidare. Devi trovare un modo per capire se ci siano delle incongruenze nella storia. Per farlo, controlli il profilo Google della piadineria in questione, e vedi se quello che ti ha raccontato è realistico.
 
-“Agente $cognome” esordisce Martino Ravanelli, dopo che gli hai chiesto se si fosse recato in zona Brera nei giorni precedenti al furto. “Sì, sono passato da quelle parti nella giornata di giovedì. Ma non sono andato alla Pinacoteca. Ho sentito di recente, non ricordo più da chi, che ha aperto un’ottima piadineria in quell’area, e sono andato per provarla. Non avendo appuntamenti nel pomeriggio, ho chiuso il mio studio alle 15 e un’ora dopo circa ero lì. Agente $cognome, le darò un consiglio: non ci vada. Sono rimasto deluso dalla piadina, ed era pure pieno di gente”.
+&lt;img src=&quot;res1/graf1.png&quot; width=&quot;600&quot; height=&quot;350&quot;&gt;
 
-L’interrogatorio di Ravanelli è convincente: ti sembra innocente. Ma tu, per principio, non ti puoi fidare. Devi trovare un modo per capire se ci siano delle incongruenze nella storia. Per farlo, controlli il profilo google della piadineria in questione, e vedi se quello che ti ha raccontato è realistico.
+&lt;img src=&quot;res1/graf2.png&quot; width=&quot;400&quot; height=&quot;700&quot;&gt;
+] \
+(else:) [Eccoti nuovamente faccia a faccia con Martino Ravanelli, che conferma ancora la sua innocenza: con il furto del &#39;&#39;Bacio di Hayez&#39;&#39; lui non c’entra! Ne approfitti comunque per riguardare i dati che avevi raccolto:
 
-&lt;img src=&quot;https://i.ibb.co/x5Xx58d/Schermata-2022-04-04-alle-12-29-42.png&quot; width=&quot;600&quot; height=&quot;350&quot;&gt;
+&lt;img src=&quot;res1/graf1.png&quot; width=&quot;600&quot; height=&quot;350&quot;&gt;
 
-&lt;img src=&quot;https://i.ibb.co/DVDCjSJ/Ravanelli-Orari-1.png&quot; width=&quot;400&quot; height=&quot;700&quot;&gt;
+&lt;img src=&quot;res1/graf2.png&quot; width=&quot;400&quot; height=&quot;700&quot;&gt;
 
-Se vuoi interrogare un altro sospettato, torna allo [[schedario]]. (if: $t is &quot;org&quot;) [In alternativa, esci un attimo dalla sala dell’interrogatorio, fermati e ri[[leggi la scheda di Martino Ravanelli]].] Altrimenti, se credi che quello che hai interrogato sia il colpevole, [[accusa Ravanelli]].
+Se vuoi interrogare un altro sospettato, [[torna allo schedario-&gt;schedario]]. (if: $t is &quot;org&quot;) [In alternativa, esci dalla sala dell’interrogatorio, e [[rileggi la scheda di Martino Ravanelli-&gt;leggi la scheda di Martino Ravanelli]].]]
 
-(if: $m) [&lt;audio src=&quot;https://cdn.pixabay.com/download/audio/2022/01/05/audio_6954fd7675.mp3&quot; type=&quot;audio/mp3&quot; autoplay&gt;&lt;/audio&gt;]</tw-passagedata><tw-passagedata pid="11" name="interroga Marco Freschini" tags="testo_font sfondo_bianco testo_nero" position="2240,794" size="100,100">
+(set: $interrogatori to it + (ds: &quot;Ravanelli&quot;)) \
+ \
+(if: $interrogatori&#39;s length &gt;= $min_interr) [A questo punto, se credi che quello che hai interrogato sia il colpevole, [[accusa Ravanelli]].] \
+(else:) [Ricordi comunque la raccomandazione del commissario: prima di accusare qualcuno, è necessario aver interrogato anche qualche altro sospettato!] \
+ \
+(if: $m) [(print: $cs4)] \
+ \
+(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="11" name="interroga Marco Freschini" tags="testo_nero sfondo_sfumato3" position="2240,794" size="100,100">&lt;img src=&#39;res1/interr.jpg&#39; height=&#39;400&#39; alt=&#39;immagine&#39;&gt;
+
 ## L’interrogatorio di Marco Freschini
+ \
+(if: &quot;Freschini&quot; is not in $interrogatori) [(if: $t is &quot;cor&quot;) [(if: $poligrafo) [Come fai a prendere una decisione, se Freschini non sembra né innocente né colpevole? Semplice, usi il marchingegno di Claudio Lodigiani: la macchina della verità, il poligrafo. Proponi a Freschini di sottoporsi al test, in modo informale, giusto per poterlo escludere rapidamente dal novero degli indagati. Freschini è titubante, ma poi dice di non avere niente da nascondere e decide di accettare.
 
-&lt;img src=&quot;https://cdnb.artstation.com/p/assets/images/images/019/671/351/large/edward-okechukwu-interrogation-room-6.jpg?1564521441&amp;dl=1&quot; width=&quot;800&quot; height=&quot;533&quot;&gt;
-
-(if: $t is &quot;cor&quot;) [
-(if: $poligrafo) [Come fai a prendere una decisione, se Freschini non sembra né innocente né colpevole? Semplice, usi il marchingegno di Claudio Lodigiani: la macchina della verità, il poligrafo. Proponi a Freschini di sottoporsi al test, in modo informale, giusto per poterlo escludere rapidamente dal novero degli indagati. Freschini è titubante, ma poi dice di non avere niente da nascondere e decide di accettare.  
 Scegli dunque se fare il [[test del poligrafo a Freschini|poligrafo a Freschini]], oppure se [[tornare allo schedario|schedario]].]
-(else:) [Come fai a prendere una decisione? Freschini non sembra colpevole, ma non sembra neanche innocente. Non ci sono tutti i dati a disposizione per avere un&#39;informazione precisa riguardo alla sua colpevolezza. In quel momento ripensi a quella serie TV americana che ti piace tanto. Nella serie, il detective ogni tanto risolve dei casi usando una macchina della verità... quanto sarebbe efficace se ne avessi una anche tu! Con le tue capacità relazionali, saresti sicuramente in grado di convincere Freschini a sottoporsi a un test.
+(else:) [Come fai a prendere una decisione? Freschini non sembra colpevole, ma neanche innocente. Non ci sono tutti i dati a disposizione per avere un’informazione precisa riguardo alla sua colpevolezza. In quel momento ripensi a quella serie TV americana che ti piace tanto. Nella serie, il detective ogni tanto risolve dei casi usando una macchina della verità... quanto sarebbe efficace se ne avessi una anche tu! Con le tue capacità relazionali, saresti sicuramente in grado di convincere Freschini a sottoporsi a un test.
 
-Per ora non pare che tu possa fare altro che [[tornare allo schedario|schedario]].]
-] (else:) [
-Come fai a prendere una decisione? Freschini non sembra colpevole, ma non sembra neanche innocente. Non ci sono tutti i dati a disposizione per avere un’informazione precisa riguardo alla sua colpevolezza. In quel momento ripensi a quella serie TV americana che ti piace tanto. Nella serie, il detective poteva sempre venire a capo dei problemi usando una macchina della verità... quanto sarebbe efficace se ne avessi una anche tu! La verità è che tu sei (if: $g is &quot;o&quot;)[un investigatore](else:)[un’investigatrice] molto precis$g, ma non sei bravissim$g a convincere i sospettati: difficilmente Freschini si farebbe convincere da te a sottoporsi a un test del genere.
+Per ora non pare che tu possa fare altro che [[tornare allo schedario|schedario]].]] \
+(else:) [(if: $poligrafo) [Come fai a prendere una decisione, se Freschini non sembra né innocente né colpevole? Semplice, usi il marchingegno di Claudio Lodigiani: la macchina della verità, il poligrafo. Proponi a Freschini di sottoporsi al test, in modo informale, giusto per poterlo escludere rapidamente dal novero degli indagati. Freschini è molto perplesso, e le tue non eccelse capacità relazionali non ti aiutano a fargli cambiare idea.
 
-Per ora pare che tu possa solo [[tornare allo schedario|schedario]] oppure [[rileggere la scheda di Marco Freschini|leggi la scheda di Marco Freschini]].]
+Decidi di lasciargli qualche istante per pensarci, e nel frattempo tu puoi [[tornare allo schedario-&gt;schedario]] oppure [[rileggere la scheda di Marco Freschini-&gt;leggi la scheda di Marco Freschini]].] \
+(else:) [Come fai a prendere una decisione? Freschini non sembra colpevole, ma neanche innocente. Non ci sono tutti i dati a disposizione per avere un’informazione precisa riguardo alla sua colpevolezza. In quel momento ripensi a quella serie TV americana che ti piace tanto. Nella serie, il detective poteva sempre venire a capo dei problemi usando una macchina della verità... quanto sarebbe efficace se ne avessi una anche tu! La verità è che tu sei (if: $g is &quot;o&quot;)[un investigatore](else:)[un’investigatrice] molto precis$g, ma non sei bravissim$g a convincere i sospettati: difficilmente Freschini si farebbe convincere da te a sottoporsi a un test del genere.
 
-(if: $m) [&lt;audio src=&quot;https://cdn.pixabay.com/download/audio/2022/01/05/audio_6954fd7675.mp3&quot; type=&quot;audio/mp3&quot; autoplay&gt;&lt;/audio&gt;]</tw-passagedata><tw-passagedata pid="12" name="interroga Claudio Lodigiani" tags="testo_font testo_nero sfondo_bianco" position="2239,983" size="100,100">
+Per ora pare che tu possa solo [[tornare allo schedario|schedario]] oppure [[rileggere la scheda di Marco Freschini-&gt;leggi la scheda di Marco Freschini]].]]] \
+(else:) [(if: $poligrafo_Freschini) [Hai nuovamente di fronte Freschini, ma sai di aver avuto le informazione che cercavi da lui, dato che che si è già sottoposto al test della macchina della verità. Puoi comunque decidere di tornare a [[guardare i risultati del test-&gt;poligrafo a Freschini]] che gli avevi fatto.] \
+(else:) [Hai nuovamente di fronte Freschini: dopo qualche altro tentativo, ti dichiara finalmente di essere disponibile a [[fare il test della macchina della verità-&gt;poligrafo a Freschini]].]
+
+(if: $t is &quot;org&quot;) [Certo, puoi anche [[tornare allo schedario|schedario]] oppure [[rileggere la scheda di Marco Freschini-&gt;leggi la scheda di Marco Freschini]].] \
+(else:) [In alternativa, puoi [[tornare allo schedario|schedario]].]] \
+
+(set: $interrogatori to it + (ds: &quot;Freschini&quot;)) \
+ \
+(if: $interrogatori&#39;s length &gt;= $min_interr) [Hai già interrogato vari sospettati: se credi di avere di fronte il colpevole, [[accusa Freschini]].] \
+(else:) [In ogni caso, il commissario è stato chiaro: prima di accusare qualcuno, è necessario aver interrogato anche qualche altro sospettato!] \
+ \
+(if: $m) [(print: $cs4)] \
+ \
+(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="12" name="interroga Claudio Lodigiani" tags="testo_nero sfondo_sfumato3" position="2239,983" size="100,100">&lt;img src=&#39;res1/interr.jpg&#39; height=&#39;400&#39; alt=&#39;immagine&#39;&gt;
+
 ## L’interrogatorio di Claudio Lodigiani
+ \
+(if: &quot;Lodigiani&quot; is not in $interrogatori) [Quando ti si siede di fronte, Claudio Lodigiani è molto calmo. Ne ammiri la tranquillità, cercando di capire se si tratti di sangue freddo o davvero non abbia nulla da temere. Decidi di esser schiett$g, e glielo chiedi. “Guardi...”, inizia Lodigiani, “non ho veramente nulla da nascondere, questa volta. Non sarò uno stinco di santo, ma nel mio ambiente chi lo è?”
 
-&lt;img src=&quot;https://cdnb.artstation.com/p/assets/images/images/019/671/351/large/edward-okechukwu-interrogation-room-6.jpg?1564521441&amp;dl=1&quot; width=&quot;800&quot; height=&quot;533&quot;&gt;
+Tu sorridi, e sorride anche lui. Magari è il colpevole, ma anche se lo fosse, sarebbe un colpevole intellettualmente onesto. “Lo sa, agente $cognome, se vuole le posso dare una mano, e chiudere la faccenda in fretta. Recentemente ho acquisito in negozio uno strumento stupendo, un poligrafo. Sa che cos’è? È quella che di solito viene chiamata una macchina della verità. L’avrei già venduta, per altro, ma l’acquirente non è ancora riuscito a passare a prenderla. Se vuole, in mezz’ora posso essere di ritorno in commissariato e la può provare su di me, così si convince che io non c’entro nulla con la faccenda di cui si sta occupando”.
 
-Quando ti si siede di fronte, Claudio Lodigiani è molto calmo. Ne ammiri la tranquillità, cercando di capire se si tratti di sangue freddo o davvero non abbia nulla da temere. Decidi di esser schiett$g, e glielo chiedi.
-“Guardi...”, inizia Lodigiani, “non ho veramente nulla da nascondere, questa volta. Non sarò uno stinco di santo, ma nel mio ambiente chi lo è?”  
-Tu sorridi, e sorride anche lui. Magari è il colpevole, ma anche se lo fosse, sarebbe un colpevole intellettualmente onesto. 
-“Lo sa, agente $cognome, se vuole le posso dare una mano, e chiudere la faccenda in fretta. Recentemente ho acquisito in negozio uno strumento stupendo, un poligrafo. Sa che cos’è? È quella che di solito viene chiamata una macchina della verità. L’avrei già venduta, per altro, ma l’acquirente non è ancora riuscito a passare a prenderla. Se vuole, in mezz’ora posso essere di ritorno in commissariato e la può provare su di me, così si convince che io non c’entro nulla con la faccenda di cui si sta occupando”.
+Se concordi con la proposta di Claudio Lodigiani e vuoi fidarti della strumentazione di cui ti ha parlato, fai la prova del [[poligrafo a Lodigiani]].]
+(else:) [(if: $poligrafo) [Hai nuovamente di fronte Lodigiani, ma ti rendi conto ora di non avere altro da cercare di ottenere da lui, considerando che si è già sottoposto al test della macchina della verità. Puoi comunque decidere di tornare a [[guardare i risultati del test-&gt;poligrafo a Lodigiani]] che avevi fatto a Lodigiani.] \
+(else:) [Hai nuovamente di fronte Lodigiani, che ti ripete brevemente la sua versione dei fatti e ti propone ancora di essere disponibile ad andare a recuperare il poligrafo e [[provarlo su di sé-&gt;poligrafo a Lodigiani]]]]
 
-Se concordi con la proposta di Claudio Lodigiani e vuoi fidarti della strumentazione di cui ti ha parlato, fai la prova del [[poligrafo a Lodigiani]]. (if: $t is &quot;org&quot;) [Se vuoi approfondire le informazioni sul sospettato [[leggi la scheda di Claudio Lodigiani]].] Altrimenti, torna allo [[schedario]] per occuparti di un altro sospettato.
+(if: $t is &quot;org&quot;) [Se vuoi approfondire le informazioni sul sospettato [[leggi la scheda di Claudio Lodigiani]].] Puoi decidere di [[tornare allo schedario-&gt;schedario]] per occuparti di un altro sospettato.
 
-(if: $m) [&lt;audio src=&quot;https://cdn.pixabay.com/download/audio/2022/01/05/audio_6954fd7675.mp3&quot; type=&quot;audio/mp3&quot; autoplay&gt;&lt;/audio&gt;]</tw-passagedata><tw-passagedata pid="13" name="accusa Lodigiani" tags="testo_font sfondo_nero testo_bianco" position="2643,977" size="100,100">&lt;img src=&quot;https://i.ibb.co/p01qTPv/error.png&quot; width=&quot;400&quot; height=&quot;90&quot;&gt;
+(set: $interrogatori to it + (ds: &quot;Lodigiani&quot;)) \
+ \
+(if: $interrogatori&#39;s length &gt;= $min_interr) [Hai già interrogato vari sospettati: se credi di avere di fronte il colpevole, [[accusa Lodigiani]].] \
+(else:) [In ogni caso, il commissario è stato chiaro: prima di accusare qualcuno, è necessario aver interrogato anche qualche altro sospettato!] \
+ \
+(if: $m) [(print: $cs4)] \
+ \
+(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="13" name="accusa Lodigiani" tags="testo_font sfondo_nero testo_bianco" position="2643,977" size="100,100">&lt;img src=&quot;https://i.ibb.co/p01qTPv/error.png&quot; width=&quot;400&quot; height=&quot;90&quot;&gt;
 
 ## Hai accusato Lodigiani... che però non c’entra nulla!
 
@@ -635,7 +687,9 @@ Ti metti quindi all’opera. Colleghi Freschini alla macchina, e fai un po’ di
 &lt;img src=&quot;https://i.ibb.co/cwypzRt/Poligrafo-Freschini.png&quot; width=&quot;800&quot; height=&quot;533&quot;&gt;
 Ogni linea bianca corrisponde al momento in cui una delle tre domande è stata posta. In base alla lettura del poligrafo, ora hai abbastanza informazioni per prendere una decisione.
 
-Vai allo [[schedario]] per tornare indietro e interrogare un altro sospettato. Oppure, [[accusa Freschini]] se pensi che sia lui il colpevole o che sappia qualcosa che non ha voluto rivelare. (if: $t is &quot;org&quot;) [Infine, se vuoi ripassare le informazioni sull&#39;interrogato, lascia per un attimo la sala dell’interrogatorio e ri[[leggi la scheda di Marco Freschini]].]</tw-passagedata><tw-passagedata pid="27" name="curiosità" tags="" position="3379,997" size="100,100">tw-story { background-color: #A9F5F2;}
+Vai allo [[schedario]] per tornare indietro e interrogare un altro sospettato. Oppure, [[accusa Freschini]] se pensi che sia lui il colpevole o che sappia qualcosa che non ha voluto rivelare. (if: $t is &quot;org&quot;) [Infine, se vuoi ripassare le informazioni sull&#39;interrogato, lascia per un attimo la sala dell’interrogatorio e ri[[leggi la scheda di Marco Freschini]].]
+
+(set: $poligrafo_Freschini to true)</tw-passagedata><tw-passagedata pid="27" name="curiosità" tags="" position="3379,997" size="100,100">tw-story { background-color: #A9F5F2;}
 
 ## Curiosità
 
@@ -738,11 +792,14 @@ Ore e ore di interrogatorio non danno frutti. Purtroppo Ravanelli non vuole parl
 (if: $g is 0) [(set: $g to &quot;a&quot;)] \
 (if: $m is 0) [(set: $m to true)] \
  \
+(set: $min_interr to 3) \
+ \
 (set: $cs_pre to &quot;&lt;audio id=&#39;cs&#39; src=&#39;https://cdn.pixabay.com/audio/&quot;,
 $cs_post to &quot;.mp3&#39; type=&#39;audio/mp3&#39; autoplay&gt;&lt;/audio&gt;&quot;) \
 (set: $cs1 to $cs_pre + &quot;2022/03/30/audio_52a596f0b5&quot; + $cs_post) \
 (set: $cs2 to $cs_pre + &quot;2021/11/26/audio_e20882e29d&quot; + $cs_post) \
 (set: $cs3 to $cs_pre + &quot;2021/11/15/audio_75021cca14&quot; + $cs_post) \
+(set: $cs4 to $cs_pre + &quot;2022/01/05/audio_6954fd7675&quot; + $cs_post) \
  \
 (if: (passage:)&#39;s name is not &quot;start&quot;) [(save-game: &quot;auto&quot;)]</tw-passagedata><tw-passagedata pid="36" name="risultati dei test" tags="" position="3749,724" size="100,100">Double-click this passage to edit it.
 
