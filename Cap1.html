@@ -75,6 +75,11 @@ tw-passage[tags~="testo_nero"] tw-link:hover {
   color: red;
 }
 
+tw-story[tags~="sfondo_sfumato2"] select {
+  color: yellow;
+  background-color: #3d5fa2;
+}
+
 tw-story[tags~="sfondo_sfumato3"] select {
   color: yellow;
   background-color: #3d5fa2;
@@ -390,7 +395,7 @@ Potresti chiedere un aiuto alla tua amica Rebecca, per capire (link: &quot;in ch
  \
 (if: $m) [(print: $cs4)] \
  \
-(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="10" name="interroga Martino Ravanelli" tags="testo_nero sfondo_sfumato3" position="2232,598.3333333333334" size="100,100">&lt;img src=&#39;res1/interr.jpg&#39; height=&#39;400&#39; alt=&#39;immagine&#39;&gt;
+(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="10" name="interroga Martino Ravanelli" tags="testo_nero sfondo_sfumato3" position="2232,598" size="100,100">&lt;img src=&#39;res1/interr.jpg&#39; height=&#39;400&#39; alt=&#39;immagine&#39;&gt;
 
 ## L’interrogatorio di Martino Ravanelli
  \
@@ -507,19 +512,26 @@ Freschini annuisce con un cenno, si alza e, la giacca ancora sotto braccio, esce
 \
 (if: $m) [(print: $cs5)] \
  \
-(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="15" name="accusa Ravanelli" tags="testo_font sfondo_bianco testo_nero" position="2641,603" size="100,100">
+(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="15" name="accusa Ravanelli" tags="testo_nero sfondo_sfumato2" position="2641,603" size="100,100">
 ## Hai accusato Ravanelli, dunque!
 
-Messo alle strette, di fronte all’evidenza di un alibi che non regge, Martino Ravanelli crolla e confessa tutto. “Va bene, basta! Lo ammetto! Sono stato io!”  
-Per te, è un grosso respiro di sollievo, così come per il commissario Tomba, accanto a te. Vi date il cinque. Finalmente sapete di avere fra le mani il colpevole. Purtroppo però manca ancora un tassello, prima di poter chiudere l’indagine: bisogna ritrovare &#39;&#39;Il Bacio di Hayez&#39;&#39;. Martino Ravanelli ha confessato, ma, per ragioni ignote visto che ormai è stato arrestato, non sembra voler rivelare il nascondiglio del quadro. 
+Messo alle strette, di fronte all’evidenza di un alibi che non regge, Martino Ravanelli crolla e confessa tutto. “Va bene, basta! Lo ammetto! Sono stato io!”
 
-“$nome, io ho un sospetto”, ti rivela il commissario Tomba, dopo qualche ora di interrogatorio infruttuoso. “Comincio a pensare che Ravanelli non sia stato che l’esecutore del colpo, e che solo il committente sia a conoscenza del nascondiglio del quadro. Sai cosa vuol dire? Che se non ci sbrighiamo a trovarlo, rischiamo di trovare il nascondiglio vuoto. Devi trovare in fretta la posizione del quadro e correre a recuperarlo”.
+Per te è un grosso respiro di sollievo, così come per il commissario Tomba, accanto a te. Vi stringete la mano, con soddisfazone. Finalmente sapete di avere fra le mani il colpevole.
 
-“Ha ragione, commissario” rispondi te. “E le dirò di più: probabilmente il complice è già in viaggio, e noi abbiamo tempo per perquisire un solo posto”. Fortunatamente per te, Ravanelli è una persona attiva e attenta alla propria salute fisica. E ha un’applicazione che usa per tenere traccia della propria attività fisica durante il giorno. Questa applicazione ha memorizzato ciascuna località visitata, l’orario e il tempo cui vi si è trattenuto. Non è possibile individuare il momento esatto della visita, ma si sa quanto tempo abbia passato, e in quali momenti della giornata, in ciascun posto nell’ultima settimana. 
+Purtroppo però manca ancora un tassello, prima di poter chiudere l’indagine: bisogna ritrovare &#39;&#39;Il Bacio di Hayez&#39;&#39;. Martino Ravanelli ha confessato, ma, per ragioni non così chiare visto che ormai è stato arrestato, non sembra voler rivelare il nascondiglio del quadro. 
 
-Vai al[[la mappa]] per guardare il grafico, oppure prova a [[interrogare ulteriormente Ravanelli]].
+“$nome, io ho un sospetto”, ti rivela il commissario Tomba, dopo qualche ora di interrogatorio infruttuoso. “Comincio a pensare che Ravanelli sia stato solo l’esecutore del colpo, e che anche il committente sia a conoscenza del nascondiglio del quadro. Sai cosa vuol dire? Che se non ci sbrighiamo a trovarlo, rischiamo di trovare il nascondiglio vuoto. Devi trovare in fretta la posizione del quadro e correre a recuperarlo.”
 
-(if: $m) [&lt;audio src=&quot;https://cdn.pixabay.com/audio/2021/10/03/audio_0b0df33160.mp3&quot; type=&quot;audio/mp3&quot; autoplay&gt;&lt;/audio&gt;]</tw-passagedata><tw-passagedata pid="16" name="accusa Rosso" tags="testo_font sfondo_nero testo_bianco" position="2638,411" size="100,100">&lt;img src=&quot;res1/error.png&quot; width=&quot;400&quot; height=&quot;90&quot;&gt;
+“Ha ragione, commissario!” rispondi tu. “E le dirò di più: probabilmente il complice è già in viaggio, e noi abbiamo tempo per perquisire un solo posto.”
+
+Si apre di fronte a te un nuovo problema, dunque... Ma poi hai un’intuizione: Ravanelli è una persona attiva e attenta alla propria salute fisica. E sul suo smartphone ha un’app che usa per tenere traccia della propria attività fisica durante il giorno. E questa app ha memorizzata ciascuna località visitata, con l’orario e la durata della visita. Anche se non è possibile individuare il momento esatto della visita, si può però sapere dunque quanto tempo abbia passato, e in quali momenti della giornata, in ciascun posto nell’ultima settimana.
+
+Dunque puoi [[studiare la mappa-&gt;la mappa]] oppure provare a [[interrogare ulteriormente Ravanelli]]. \
+\
+(if: $m) [(print: $cs6)] \
+ \
+(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="16" name="accusa Rosso" tags="sfondo_nero testo_bianco" position="2638,411" size="100,100">&lt;img src=&quot;res1/error.png&quot; width=&quot;400&quot; height=&quot;90&quot;&gt;
 
 ## Hai accusato Rosso... che però non c’entra nulla!
 
@@ -553,15 +565,17 @@ Per te, adesso, si apre una nuova attesa, in vista della prossima indagine...
 
 
 (set: $ultima_pag to (history:)&#39;s last)
-(link: &quot;Torna indietro&quot;)[(goto: $ultima_pag)]</tw-passagedata><tw-passagedata pid="20" name="la mappa" tags="testo_font sfondo_bianco testo_nero" position="2933,593" size="100,100">
-## La Mappa
+(link: &quot;Torna indietro&quot;)[(goto: $ultima_pag)]</tw-passagedata><tw-passagedata pid="20" name="la mappa" tags="sfondo_sfumato2 testo_nero" position="2933,593" size="100,100">
+## Studiare la Mappa!
 
-La mappa si presenta in questo modo:
-&lt;img src=&quot;https://i.ibb.co/LQ5Rbcd/Ravanelli-Mappa.png&quot; width=&quot;800&quot; height=&quot;900&quot;&gt;
-La legenda della mappa è la seguente:
-* dimensione figura: durata del tempo passato nel luogo localizzato mediante GPS;
-* colore: momento del giorno in cui si è recato nella localizzazione GPS (blu : giorno, viola : notte);
-* forma: internet attivo al momento? (cerchio : sì, triangolo : no).
+La mappa si presenta così:
+
+&lt;img src=&quot;res1/mappa.png&quot; width=&quot;800&quot; height=&quot;900&quot;&gt;
+
+Hai appena guardato la legenda della mappa, secondo cui di ogni simbolo, cerchio o triangolo:
+* la dimensione è proporzionale alla durata del tempo passato nel luogo localizzato mediante GPS;
+* il colore indica il momento del giorno in cui si è visitato il luogo, blu per il giorno e viola per la notte;
+* e infine la forma specifica se la connessione internet era attiva, sì se è un cerchio e no se è un triangolo.\
 
 Grazie a ulteriori approfondimenti e indagini, oltre che da quanto emerso durante l’interrogatorio, disponi di queste informazioni su Ravanelli:
 * è domiciliato a Busto Arsizio;
@@ -574,81 +588,68 @@ Sai bene che hai una sola possibilità, e che probabilmente il complice di Ravan
 
 Scegli quale luogo vuoi perquisire (dropdown: 2bind $direzione, &quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;4&quot;, &quot;5&quot;, &quot;6&quot;, &quot;7&quot;, &quot;8&quot;, &quot;9&quot;, &quot;10&quot;, &quot;11&quot;, &quot;12&quot;, &quot;13&quot;, &quot;14&quot;, &quot;15&quot;, &quot;16&quot;, &quot;17&quot;, &quot;18&quot;, &quot;19&quot;) e quindi vai a investigare.
 {(click: &quot;vai a investigare&quot;)[
-(if: $direzione is &quot;5&quot;)[(go-to: &quot;Direzione corretta&quot;)]
-(else:)[(go-to: &quot;Direzione sbagliata&quot;)]
+(if: $direzione is &quot;5&quot;) [(go-to: &quot;Direzione corretta&quot;)]
+(else:) [(go-to: &quot;Direzione sbagliata&quot;)]
 ]}
-
-
-
-
-
-
-
-
-
-
-
-
-
-qq</tw-passagedata><tw-passagedata pid="21" name="visualizzazione di dati" tags="" position="3649,946" size="100,100">Double-click this passage to edit it.
+ \
+(if: $m) [(print: $cs6)] \
+ \
+(display: &quot;piepagina&quot;) [[...-&gt;schedario]]</tw-passagedata><tw-passagedata pid="21" name="visualizzazione di dati" tags="" position="3649,946" size="100,100">Double-click this passage to edit it.
 
 
 
 
 
 (set: $ultima_pag to (history:)&#39;s last)
-(link: &quot;Torna indietro&quot;)[(goto: $ultima_pag)]</tw-passagedata><tw-passagedata pid="22" name="Direzione corretta" tags="testo_font sfumato_sanmarino testo_bianco" position="3141,586" size="100,100">
+(link: &quot;Torna indietro&quot;)[(goto: $ultima_pag)]</tw-passagedata><tw-passagedata pid="22" name="Direzione corretta" tags="sfondo_sfumato2 testo_nero" position="3141,586" size="100,100">
 ## ... e dunque?
 
 La ricerca ha dato i suoi frutti. Seguendo la traccia GPS, il tuo navigatore ti guida da Milano fino alle sponde del lago di Como. Passata la città, ti fermi sul retro di una splendida villa sul lago di Como, il punto in cui il segnale GPS sembra indicarti. Il cui piano terra è nascosto da un’imponente siepe, mentre il primo e il secondo piano sono uno scintillante esempio di architettura del primo novecento.
 
 Dopo esserti domandat$g come abbia fatto Ravanelli a entrare nella villa senza essere scoperto, e a scavalcare la protezione, ecco arrivare un’intuizione: la siepe, così folta e spessa, è il luogo ideale per nascondere un quadro, specialmente se questo è ripiegato con attenzione in un tubo. Informi i proprietari del problema e ti armi di pazienza, perlustrando centimetro per centimetro l’intero perimetro della villa, rovistando con pazienza fra i rami della siepe. Sei quasi arrivat$g alla fine e non hai trovato ancora nulla. Ma, negli ultimi metri di siepe, la tua mano tocca un oggetto strano. 
 
-[[Guarda l&#39;oggetto]], oppure se ritieni che sia una pista cieca torna al[[la mappa]].</tw-passagedata><tw-passagedata pid="23" name="Direzione sbagliata" tags="testo_font sfondo_nero testo_bianco" position="3141,432" size="100,100">
+[[Guarda l’oggetto-&gt;Guarda l&#39;oggetto]], oppure se ritieni che sia una pista cieca [[torna alla mappa-&gt;la mappa]]. \
+\
+(if: $m) [(print: $cs6)] \
+ \
+(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="23" name="Direzione sbagliata" tags="sfondo_sfumato2 testo_nero" position="3141,432" size="100,100">
 ## ... e dunque?
 
 Avendo ipotizzato quale sia la località in cui è nascosto il quadro, ti ci rechi subito a perdifiato, le sirene spiegate. Una volta arrivata, perlustri l’area con attenzione, senza dimenticare alcun angolo, né dando nulla per scontato.
 
-Purtroppo dopo ore di ricerche, arrivi alla conclusione: hai scelto il posto sbagliato. Quando rientri in commissariato, trovi il commissario Tomba che ti aspetta all’ingresso, lo sguardo tetro. 
-“Mi spiace, $nome. Ho appena parlato con Ravanelli. Mi ha rivelato il nascondiglio del quadro, perché, dice lui, tanto ormai è troppo tardi per recuperarlo: il suo complice l’ha sicuramente recuperato. Hai fatto un ottimo lavoro, e hai incastrato il colpevole, ma purtroppo per la refurtiva non c’è più nulla da fare”.
+Purtroppo dopo ore di ricerche, arrivi alla conclusione: hai scelto il posto sbagliato. Quando rientri in commissariato, trovi il commissario Tomba che ti aspetta all’ingresso, lo sguardo tetro: “Mi spiace, $nome. Ho appena parlato con Ravanelli. Mi ha rivelato il nascondiglio del quadro, perché, dice lui, tanto ormai è troppo tardi per recuperarlo: il suo complice l’ha sicuramente recuperato. Hai fatto un ottimo lavoro, e hai incastrato il colpevole, ma purtroppo per la refurtiva non c’è più nulla da fare.”
 
-Per te, adesso, si apre una nuova lunga attesa, in vista della prossima opportunità...  
-...oppure, puoi tornare indietro, e vedere se con un nuovo tentativo ti andrà meglio!
+Ma dove hai sbagliato? Potresti fare una rapida telefonata alla tua amica Rebecca e (link: &quot;chiederle un parere&quot;)[(goto: &quot;visualizzazione di dati&quot;)].
 
-(link: &quot;Clicca qui per scoprire perché hai sbagliato&quot;)[(goto: &quot;visualizzazione di dati&quot;)]
-
-(link: &quot;Clicca qui per fare un altro tentativo&quot;)[(goto: &quot;la mappa&quot;)]
-
-(if: $m) [&lt;audio src=&quot;https://cdn.pixabay.com/audio/2020/08/30/audio_926fbf0b66.mp3&quot; type=&quot;audio/mp3&quot; autoplay&gt;&lt;/audio&gt;]</tw-passagedata><tw-passagedata pid="24" name="Guarda l&#39;oggetto" tags="testo_font testo_nero sfondo_bianco" position="3333,588" size="100,100">
+Per te, adesso, si apre una nuova attesa, in vista della prossima indagine...  
+... oppure, puoi provare tornando a guardare la mappa (//per capirci: è come se prendessi la macchina del tempo e tornassi a quando eri ancora in commissariato...!//), e (link: &quot;vedere se con un nuovo tentativo sarai più abile!&quot;)[(goto: &quot;la mappa&quot;)] \
+\
+(if: $m) [(print: $cs5)] \
+ \
+(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="24" name="Guarda l&#39;oggetto" tags="testo_nero sfondo_sfumato2" position="3333,588" size="100,100">
 ## Eccoci...
 
 È il contenitore di un quadro!
 
-Lo apri velocemente, con impazienza, ed ecco che dal tubo appare &#39;&#39;Il Bacio di Hayez&#39;&#39; in perfette condizioni, pronto per essere restituito alla Pinacoteca di Brera.  
-Prendi il telefono e chiami il commissario Tomba: “Capo, l’ho trovato!”. In breve il commissario è lì con te, e con lui poco dopo vi raggiungono anche altri colleghi e i media, che trasmettono in diretta il ritrovamento del quadro: che successo! 
+Lo apri velocemente, con impazienza, ed ecco che dal tubo appare &#39;&#39;Il Bacio di Hayez&#39;&#39;, in perfette condizioni e pronto per essere restituito alla Pinacoteca di Brera.
 
-&lt;img src=&quot;https://tomatosouce.files.wordpress.com/2019/02/bacio-hayez-copertina.jpg?w=800&amp;h=417&amp;crop=1&quot; width=&quot;800&quot; height=&quot;400&quot;&gt;
+Prendi il telefono e chiami il commissario Tomba: “Capo, l’ho trovato!” In breve il commissario è lì con te, e con lui poco dopo vi raggiungono anche altri colleghi e i media, che trasmettono in diretta il ritrovamento del quadro: che successo! 
 
-## Complimenti $nome $cognome, il caso è risolto!
+&lt;img src=&quot;res1/bacio2.webp&quot; width=&quot;800&quot; height=&quot;400&quot;&gt;
 
-&lt;img src=&quot;https://i.ibb.co/VY2KDhr/grunge-mission-complete-label-png.png&quot; width=&quot;800&quot; height=&quot;180&quot;&gt;
+### Complimenti $nome $cognome, il caso è risolto!
+
+&lt;img src=&quot;res1/missioncomplete.png&quot; width=&quot;800&quot; height=&quot;180&quot;&gt;
 
 ---
 
-Ora, possiamo salutarci qui, oppure puoi rimanere ancora qualche minuto con noi e fare una delle seguenti operazioni.
-* (link: &quot;Clicca qui per rigiocare la storia&quot;)[(goto: &quot;frontespizio&quot;)]
-* (link: &quot;Clicca qui per scoprire che cosa hai imparato giocando (per esempio, perché ciò che produce un poligrafo è una serie storica&quot;)[(goto: &quot;Statistica&quot;)]
-* (link: &quot;Clicca qui per scoprire curiosità legate al gioco (per esempio, come ingannare la macchina della verità)&quot;)[(goto: &quot;Statistica&quot;)]
-* (link: &quot;Clicca qui per dirci se ti è piaciuto&quot;)[(open-url:&quot;https://docs.google.com/forms/d/e/1FAIpQLSfOMJE6uzNoe0GNYageuqbXvHjLAsqTpoKgehsAgdkQwydDBg/viewform?usp=pp_url&quot;)]
+Ora, possiamo salutarci qui, oppure puoi certamente (link: &quot;rigiocare la storia&quot;)[(goto: &quot;frontespizio&quot;)], magari nei panni di un altro personaggio, oppure puoi (link: &quot;scoprire che cosa hai imparato giocando (per esempio, perché ciò che produce un poligrafo è una serie storica&quot;)[(goto: &quot;Statistica&quot;)] o anche (link: &quot;scoprire curiosità legate al gioco (per esempio, come ingannare la macchina della verità)&quot;)[(goto: &quot;Statistica&quot;)].
 
+In ogni caso, alla fine di preghiamo di rimanere ancora qualche minuto con noi e (link-rerun: &quot;darci un tuo parere su questo gioco&quot;)[(open-url:&quot;https://docs.google.com/forms/d/e/1FAIpQLSfOMJE6uzNoe0GNYageuqbXvHjLAsqTpoKgehsAgdkQwydDBg/viewform?usp=pp_url&quot;)].
 
-
-Oppure, clicca &#39;&#39;qui&#39;&#39; per andare alla prossima parte della storia. Perché se è vero che hai trovato il colpevole, non sai ancora chi abbia fatto la telefonata, ne chi sia il misterioso complice che avrebbe dovuto recuperare il quadro nella siepe. 
-
-(if: $m) [&lt;audio src=&quot;https://cdn.pixabay.com/audio/2022/02/10/audio_798efbe865.mp3&quot; type=&quot;audio/mp3&quot; autoplay&gt;&lt;/audio&gt;]
-
-
-</tw-passagedata><tw-passagedata pid="25" name="poligrafo a Lodigiani" tags="testo_nero sfondo_sfumato3" position="2460,979" size="100,100">&lt;img src=&#39;res1/interr.jpg&#39; height=&#39;400&#39; alt=&#39;immagine&#39;&gt;
+Oppure, clicca &#39;&#39;qui&#39;&#39; per andare alla prossima parte della storia. Perché se è vero che hai trovato il colpevole, non sai ancora chi abbia fatto la telefonata, né chi sia il misterioso complice che avrebbe dovuto recuperare il quadro nella siepe. \
+\
+(if: $m) [(print: $cs7)]</tw-passagedata><tw-passagedata pid="25" name="poligrafo a Lodigiani" tags="testo_nero sfondo_sfumato3" position="2460,979" size="100,100">&lt;img src=&#39;res1/interr.jpg&#39; height=&#39;400&#39; alt=&#39;immagine&#39;&gt;
 
 ## La seconda parte dell’interrogatorio di Claudio Lodigiani
 
@@ -821,10 +822,14 @@ Recuperi le chiavi al volo e ti metti in auto. Durante il breve viaggio verso il
  \
 (if: $m) [(print: $cs2)] \
  \
-(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="34" name="interrogare ulteriormente Ravanelli" tags="testo_font sfondo_bianco testo_nero" position="2801,465" size="100,100">
+(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="34" name="interrogare ulteriormente Ravanelli" tags="testo_nero sfondo_sfumato2" position="2801,465" size="100,100">
 ## La seconda parte dell’interrogatorio di Martino Ravanelli
 
-Ore e ore di interrogatorio non danno frutti. Purtroppo Ravanelli non vuole parlare. A un certo punto, gli racconti della telefonata misteriosa che avevi ricevuto all’inizio. (if: $t is &quot;cor&quot;)[Sei (if: $g is &quot;o&quot;)[un investigatore](else:)[un’investigatrice] originale e fantasios$g, e la tua empatia riesce evidentemente a fare breccia nella corazza di Ravanelli, che per un momento si lascia sfuggire un mormorio. “Maledetto traditore, ecco perché...” riesci a sentire. Ma poi rimane in silenzio.](else:)[Anche in questo caso, la corazza di Ravanelli non viene intaccata]. Di fronte a un silenzio costante, non ti rimane che andare avanti con le indagini, e guardare [[la mappa]].</tw-passagedata><tw-passagedata pid="35" name="include" tags="header" position="722.6666666666666,475" size="100,100">&lt;!-- dei default, anche per rendere più semplice il testing in fase di sviluppo --&gt; \
+Ore e ore di interrogatorio non danno frutti. Purtroppo Ravanelli non vuole parlare. A un certo punto, gli racconti della telefonata misteriosa che avevi ricevuto all’inizio. (if: $t is &quot;cor&quot;)[Sei (if: $g is &quot;o&quot;)[un investigatore](else:)[un’investigatrice] originale e fantasios$g, e la tua empatia riesce evidentemente a fare breccia nella corazza di Ravanelli, che per un momento si lascia sfuggire un mormorio. “Maledetto traditore, ecco perché...” riesci a sentire. Ma poi rimane in silenzio.](else:)[Anche in questo caso, la corazza di Ravanelli non viene intaccata]. Di fronte a un silenzio costante, non ti rimane che andare avanti con le indagini, e guardare [[la mappa]]. \
+\
+(if: $m) [(print: $cs6)] \
+ \
+(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="35" name="include" tags="header" position="722,473" size="100,100">&lt;!-- dei default, anche per rendere più semplice il testing in fase di sviluppo --&gt; \
 (if: $nome is 0) [(set: $nome to &quot;Alex&quot;)] \
 (if: $cognome is 0) [(set: $cognome to &quot;Bianchi&quot;)] \
 (if: $t is 0) [(set: $t to &quot;org&quot;)] \
@@ -840,7 +845,9 @@ $cs_post to &quot;.mp3&#39; type=&#39;audio/mp3&#39; autoplay&gt;&lt;/audio&gt;&
 (set: $cs3 to $cs_pre + &quot;2021/11/15/audio_75021cca14&quot; + $cs_post) \
 (set: $cs4 to $cs_pre + &quot;2022/01/05/audio_6954fd7675&quot; + $cs_post) \
 (set: $cs5 to $cs_pre + &quot;2020/08/30/audio_926fbf0b66&quot; + $cs_post) \
- \
+(set: $cs6 to $cs_pre + &quot;2021/10/03/audio_0b0df33160&quot; + $cs_post) \
+(set: $cs7 to $cs_pre + &quot;2022/02/10/audio_798efbe865&quot; + $cs_post) \
+\
 (if: (passage:)&#39;s name is not &quot;start&quot;) [(save-game: &quot;auto&quot;)]</tw-passagedata><tw-passagedata pid="36" name="risultati dei test" tags="" position="3749,724" size="100,100">Double-click this passage to edit it.
 
 
