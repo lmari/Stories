@@ -9,7 +9,7 @@
 </head>
 <body>
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play Cap1.</tw-noscript></noscript></tw-story>
-<tw-storydata name="Cap1" startnode="38" creator="Twine" creator-version="2.3.16" ifid="E0545F9B-5186-404C-A358-DD1B07B4F8E6" zoom="0.6" format="Harlowe" format-version="3.2.3" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">/* *** combinazione di tags: sfondo_sfumato0/1 + testo_bianco *** */
+<tw-storydata name="Cap1" startnode="37" creator="Twine" creator-version="2.3.16" ifid="E0545F9B-5186-404C-A358-DD1B07B4F8E6" zoom="0.6" format="Harlowe" format-version="3.2.3" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">/* *** combinazione di tags: sfondo_sfumato0/1 + testo_bianco *** */
 tw-story[tags~="sfondo_sfumato0"] {
   background-image: linear-gradient(135deg, #000000, #1d2f42);
 }
@@ -110,20 +110,14 @@ tw-hook[name="piccolo"] {
 }
 
 
-
-tw-story[tags~="sfondo_sanmarino"] {
-  background-color: #3d5fa2;
+/* *** per enfatizzare (hook |enfat>) *** */
+tw-hook[name="enfat"] {
+  display: block;
+  background-color: yellow;
 }
 
 
-tw-passage[tags~="testo_immagine"] {
-  font-size: 60px;
-  color: white;
-}
 
-tw-passage[tags~="testo_bright_1"] {
-  opacity: 1;
-}
 
 tw-sidebar {
   display: none;
@@ -546,26 +540,42 @@ Per te, adesso, si apre una nuova attesa, in vista della prossima indagine...
 \
 (if: $m) [(print: $cs5)] \
  \
-(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="17" name="serie storiche" tags="" position="3764,609" size="100,100">Double-click this passage to edit it.
+(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="17" name="serie storiche" tags="testo_nero sfondo_bianco" position="3867.3333333333335,694" size="100,100">
+## Serie storiche
 
+&lt;img src=&quot;https://i.ibb.co/0FTmgf8/Poligrafo-Logigiani.png&quot; width=&quot;800&quot; height=&quot;533&quot;&gt;
 
+Perché le serie storiche sono importanti? Perché per per diventare milionari non serve nient&#39;altro che essere il più grande esperto al mondo di serie storiche, e la cosa sarebbe (almeno parzialmente) vera. Che poi questo possa non essere semplicissimo è tutto un altro discorso, ma di sicuro hai capito quando sia rilevante questo argomento. 
 
+Quindi, che cos&#39;è una serie storica che può renderti potenzialmente ricco? È un campione di dati (si veda la relativa scheda) che non contiene soltanto un valore ma anche dei riferimenti temporali. Un esempio che probabilmente è chiaro a tutti è quello delle (ormai famigerate) curve dei nuovi infetti da Covid giornalieri, che negli ultimi 2 anni abbiamo imparato a leggere (aspettando i &quot;picchi&quot;, e osservando con apprensione o sollievo &quot;salite&quot; e &quot;discese&quot;).
 
-(set: $ultima_pag to (history:)&#39;s last)
-(link: &quot;Torna indietro&quot;)[(goto: $ultima_pag)]</tw-passagedata><tw-passagedata pid="18" name="istogrammi" tags="" position="3744,492" size="100,100">Double-click this passage to edit it.
+La serie storica del Covid è composta quindi da due elementi: un giorno, che è posizionato sull&#39;asse delle ascisse (le x del piano cartesiano), e il numero di nuovi infetti, posizionato in ordinata (le y del piano cartesiano). Quindi, ogni dato ha due variabili (come le x e le y), e uno di questi riporta o scorrere del tempo, ed è rappresentato tipicamente sull&#39;asse delle x. Ecco, ogni serie storica è fatta in questo modo. 
 
-
-
-
-
-(set: $ultima_pag to (history:)&#39;s last)
-(link: &quot;Torna indietro&quot;)[(goto: $ultima_pag)]</tw-passagedata><tw-passagedata pid="19" name="tipi di variabili" tags="" position="3708,836" size="100,100">Double-click this passage to edit it.
-
-
-
+E quindi, perché un grandissimo esperto di serie storiche può diventare molto ricco? E perché un certo numero di persone che vogliono diventare molto ricche studiano con attenzione le proprietà delle serie storiche? La ragione, esattamente come nell&#39;esempio del Covid, è che queste descrivono un fenomeno del passato (quanti nuovi contagi ci sono stati negli N giorni precedenti). Però, osservandole con criterio e con adeguati strumenti matematici, si può provare a &quot;prevedere&quot; il futuro. Chi gioca in borsa, e per lavoro compra azioni per poi cercare di rivenderle a un prezzo più alto, fa esattamente questo: osserva l&#39;andamento delle serie storiche dei prezzi dei titoli azionari (o, più di recente, delle criptovalute) per cercare di scoprire in anticipo quale sarà il momento migliore per comprare o vendere. Capisci adesso perché chi vuole diventare ricco in fretta spesso si occuppa di serie storiche?
 
 (set: $ultima_pag to (history:)&#39;s last)
-(link: &quot;Torna indietro&quot;)[(goto: $ultima_pag)]</tw-passagedata><tw-passagedata pid="20" name="la mappa" tags="sfondo_sfumato2 testo_nero" position="2933,593" size="100,100">
+(link: &quot;Torna indietro&quot;)[(goto: $ultima_pag)]</tw-passagedata><tw-passagedata pid="18" name="istogrammi" tags="testo_nero sfondo_bianco" position="3865.6666666666665,587" size="100,100">
+## Istogrammi
+
+&lt;img src=&quot;res1/graf1.png&quot; height=&quot;300&quot;&gt;
+
+Non è necessario essere espirti di scienza di dati per accorgersi di essere circondati di istogrammi. Sui giornali, sui depliant, nei servizi di approfondimento in televisione, fino a libri di testo di più o meno qualunque materia: gli istogrammi sono forse il più comune strumento di visualizzazione di dati. Diciamo che se creassimo una squadra di calcio con gli 11 grafici di visualizzazione di dati più importanti, l’istogramma sarebbe numero 10, regista e capitano.
+
+Ma perché è uno strumento così importante per chi lavora con i dati? Proviamo a spiegarne l’importanza svelandone il funzionamento. La procedura per costruire un istogramma è semplice, ma molto potente: 
+
+1. si sceglie un insieme di categorie in cui dividere i valori di cui si dispone; 
+2. per ciascuna categoria, si conta il numero dei valori che le appartengono;
+3. si rappresenta su un piano ogni categoria con una barra, la cui altezza è proporzionale al numero dei valori in quella categoria; sotto o sopra a ciascuna barra, ci sarà un&#39;etichetta che spiega il significato della categoria.
+
+Facciamo un semplice esempio. Poniamo per esempio che tu sia interessat$g a quale sia la materia preferita dai tuoi compagni. Potrai allora:
+1. fare l’elenco delle materie;
+2. per ogni materia, contare quanti dei tuoi compagni e delle tue compagne la considerano la loro materia preferita;
+3. disegnare! 
+
+Si può quindi valutare la numerosità di ciascuna categoria con un semplice colpo d’occhio. 
+
+(set: $ultima_pag to (history:)&#39;s last)
+(link: &quot;Torna indietro&quot;)[(goto: $ultima_pag)]</tw-passagedata><tw-passagedata pid="19" name="la mappa" tags="sfondo_sfumato2 testo_nero" position="2933,593" size="100,100">
 ## Studiare la Mappa!
 
 La mappa si presenta così:
@@ -594,14 +604,31 @@ Scegli quale luogo vuoi perquisire (dropdown: 2bind $direzione, &quot;1&quot;, &
  \
 (if: $m) [(print: $cs6)] \
  \
-(display: &quot;piepagina&quot;) [[...-&gt;schedario]]</tw-passagedata><tw-passagedata pid="21" name="visualizzazione di dati" tags="" position="3649,946" size="100,100">Double-click this passage to edit it.
+(display: &quot;piepagina&quot;) [[...-&gt;schedario]]</tw-passagedata><tw-passagedata pid="20" name="visualizzazione di dati" tags="testo_nero sfondo_bianco" position="3864,481" size="100,100">
+## Visualizzazione di dati
 
+Guarda la tabella qui in basso, un esempio possibile fra i milioni che si possono trovare con una veloce ricerca sul web. Prova a leggerla, giusto qualche secondo. 
 
+&lt;img src=&quot;res1/tabella.png&quot;&gt;
 
+Se non sei riuscit$g a capire niente e hai desistito dopo pochi secondi in preda allo sconforto, non preoccuparti. È la normale reazione di fronte a dei dati non riassunti in alcun modo. Con rarissime eccezioni, nessuno è in grado di leggere e usare tanti dati grezzi messi insieme.
 
+La statistica originariamente nasce come strumento per cercare di risolvere quel problema: creare sintesi di tanti dati sparsi per scoprire qualcosa di nuovo sul fenomeno che lo ha creato. Ma c’è un altro modo per fare ciò, più semplice e diventato molto popolare negli ultimi 20 anni: la //visualizzazione dei dati//. Ma cosa significa &quot;visualizzare dei dati&quot;? Vuol dire rappresentare i valori in forma grafica, possibilmente in modo di comunicare in modo più chiaro e rapido l’informazione contenuta e nascosta nei meandri dei dati. Forse non te ne sei accort$g, ma durante questo libro-game hai usato spesso strumenti di visualizzazione di dati, e sei anche riuscit$g, almeno grazie al tuo intuitivo, a usarli (altrimenti non saresti arrivat$g alla fine della storia!). Proviamo a dare una rapida occhiata insieme.
+
+#### Istogramma
+
+&lt;img src=&quot;res1/graf1.png&quot; height=&quot;300&quot;&gt;
+
+#### Grafico a linea
+
+&lt;img src=&quot;res1/poliLodigiani.png&quot; height=&quot;400&quot;&gt;
+
+#### Diagramma di dispersione su una mappa
+
+&lt;img src=&quot;res1/mappa.png&quot; height=&quot;600&quot;&gt;
 
 (set: $ultima_pag to (history:)&#39;s last)
-(link: &quot;Torna indietro&quot;)[(goto: $ultima_pag)]</tw-passagedata><tw-passagedata pid="22" name="Direzione corretta" tags="sfondo_sfumato2 testo_nero" position="3141,586" size="100,100">
+(link: &quot;Torna indietro&quot;)[(goto: $ultima_pag)]</tw-passagedata><tw-passagedata pid="21" name="Direzione corretta" tags="sfondo_sfumato2 testo_nero" position="3141,586" size="100,100">
 ## ... e dunque?
 
 La ricerca ha dato i suoi frutti. Seguendo la traccia GPS, il tuo navigatore ti guida da Milano fino alle sponde del lago di Como. Passata la città, ti fermi sul retro di una splendida villa sul lago di Como, il punto in cui il segnale GPS sembra indicarti. Il cui piano terra è nascosto da un’imponente siepe, mentre il primo e il secondo piano sono uno scintillante esempio di architettura del primo novecento.
@@ -612,7 +639,7 @@ Dopo esserti domandat$g come abbia fatto Ravanelli a entrare nella villa senza e
 \
 (if: $m) [(print: $cs6)] \
  \
-(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="23" name="Direzione sbagliata" tags="sfondo_sfumato2 testo_nero" position="3141,432" size="100,100">
+(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="22" name="Direzione sbagliata" tags="sfondo_sfumato2 testo_nero" position="3141,432" size="100,100">
 ## ... e dunque?
 
 Avendo ipotizzato quale sia la località in cui è nascosto il quadro, ti ci rechi subito a perdifiato, le sirene spiegate. Una volta arrivata, perlustri l’area con attenzione, senza dimenticare alcun angolo, né dando nulla per scontato.
@@ -626,7 +653,7 @@ Per te, adesso, si apre una nuova attesa, in vista della prossima indagine...
 \
 (if: $m) [(print: $cs5)] \
  \
-(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="24" name="Guarda l&#39;oggetto" tags="testo_nero sfondo_sfumato2" position="3333,588" size="100,100">
+(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="23" name="Guarda l&#39;oggetto" tags="testo_nero sfondo_sfumato2" position="3333,588" size="100,100">
 ## Eccoci...
 
 È il contenitore di un quadro!
@@ -643,13 +670,19 @@ Prendi il telefono e chiami il commissario Tomba: “Capo, l’ho trovato!” In
 
 ---
 
-Ora, possiamo salutarci qui, oppure puoi certamente (link: &quot;rigiocare la storia&quot;)[(goto: &quot;frontespizio&quot;)], magari nei panni di un altro personaggio, oppure puoi (link: &quot;scoprire che cosa hai imparato giocando (per esempio, perché ciò che produce un poligrafo è una serie storica&quot;)[(goto: &quot;Statistica&quot;)] o anche (link: &quot;scoprire curiosità legate al gioco (per esempio, come ingannare la macchina della verità)&quot;)[(goto: &quot;Statistica&quot;)].
+|enfat&gt;[Ora, possiamo salutarci qui,
+
+oppure puoi certamente (link: &quot;rigiocare la storia&quot;)[(goto: &quot;frontespizio&quot;)], magari nei panni di un altro personaggio,
+
+oppure puoi (link: &quot;scoprire che cosa hai imparato giocando (per esempio, perché ciò che produce un poligrafo è una serie storica&quot;)[(goto: &quot;Statistica&quot;)]
+
+o anche (link: &quot;scoprire curiosità legate al gioco (per esempio, come ingannare la macchina della verità)&quot;)[(goto: &quot;curiosità&quot;)].
 
 In ogni caso, alla fine di preghiamo di rimanere ancora qualche minuto con noi e (link-rerun: &quot;darci un tuo parere su questo gioco&quot;)[(open-url:&quot;https://docs.google.com/forms/d/e/1FAIpQLSfOMJE6uzNoe0GNYageuqbXvHjLAsqTpoKgehsAgdkQwydDBg/viewform?usp=pp_url&quot;)].
 
-Oppure, clicca &#39;&#39;qui&#39;&#39; per andare alla prossima parte della storia. Perché se è vero che hai trovato il colpevole, non sai ancora chi abbia fatto la telefonata, né chi sia il misterioso complice che avrebbe dovuto recuperare il quadro nella siepe. \
+Oppure, clicca &#39;&#39;qui&#39;&#39; per andare alla prossima parte della storia. Perché se è vero che hai trovato il colpevole, non sai ancora chi abbia fatto la telefonata, né chi sia il misterioso complice che avrebbe dovuto recuperare il quadro nella siepe.] \
 \
-(if: $m) [(print: $cs7)]</tw-passagedata><tw-passagedata pid="25" name="poligrafo a Lodigiani" tags="testo_nero sfondo_sfumato3" position="2460,979" size="100,100">&lt;img src=&#39;res1/interr.jpg&#39; height=&#39;400&#39; alt=&#39;immagine&#39;&gt;
+(if: $m) [(print: $cs7)]</tw-passagedata><tw-passagedata pid="24" name="poligrafo a Lodigiani" tags="testo_nero sfondo_sfumato3" position="2460,979" size="100,100">&lt;img src=&#39;res1/interr.jpg&#39; height=&#39;400&#39; alt=&#39;immagine&#39;&gt;
 
 ## La seconda parte dell’interrogatorio di Claudio Lodigiani
 
@@ -691,7 +724,7 @@ Vai allo [[schedario]] per tornare indietro e interrogare un altro sospettato. (
  \
 (if: $m) [(print: $cs4)] \
  \
-(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="26" name="poligrafo a Freschini" tags="testo_nero sfondo_sfumato3" position="2461,791" size="100,100">&lt;img src=&#39;res1/interr.jpg&#39; height=&#39;400&#39; alt=&#39;immagine&#39;&gt;
+(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="25" name="poligrafo a Freschini" tags="testo_nero sfondo_sfumato3" position="2461,791" size="100,100">&lt;img src=&#39;res1/interr.jpg&#39; height=&#39;400&#39; alt=&#39;immagine&#39;&gt;
 
 ## La seconda parte dell’interrogatorio di Marco Freschini
 
@@ -729,41 +762,50 @@ Vai allo [[schedario]] per tornare a interrogare un altro sospettato(if: $t is &
  \
 (if: $m) [(print: $cs4)] \
  \
-(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="27" name="curiosità" tags="" position="3379,997" size="100,100">tw-story { background-color: #A9F5F2;}
-
+(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="26" name="curiosità" tags="testo_nero sfondo_bianco" position="3509,750.3333333333333" size="100,100">
 ## Curiosità
 
-Adesso che hai completato il gioco, ti vogliamo lasciare con qualche informazione aggiuntiva, che ti possa aiutare a capire come hai preso le decisioni che hai preso, quale fosse la loro bontà, e se nel mondo reale avesse senso comportarsi in questo modo.
+Adesso che hai completato il gioco, ti vogliamo lasciare con qualche informazione aggiuntiva, che ti possa aiutare a capire come hai preso le decisioni che hai preso, quale sia stata la loro bontà, e se nel mondo reale avrebbe avuto senso comportarsi in questo modo.
+
 
 ### Il bacio di Hayez
+Nel corso del racconto, sei riuscit$g a recuperare il Bacio di Hayez... ma ne conosci la storia? Sai che è uno dei simboli del risorgimento, il momemnto in cui dopo più di 1000 anni l&#39;Italia è tornata a essere unita? 
 
+(link-rerun: &quot;Clicca qui se vuoi scoprire qualcosa di più sul Bacio di Hayez, direttamente dal sito della Pinacoteca di Brera&quot;)[(open-url: &quot;https://pinacotecabrera.org/educazione/prepara-la-tua-visita/francesco-hayez-un-pittore-che-ha-stoffa/&quot;)]
 
 
 ### Ingannare la macchina della verità
+Durante il gioco, ti sei fidato della macchina della verità... ma sei sicuro che sia stata una buona idea? Le decisioni basate sui dati sono tanto buone quanto buoni sono i dati utilizzati. Se, per esempio, Lodigiani o Freschini fossero stati in grado di ingannare la macchina della verità, l’indagine avrebbe potuto avere un esito diverso. In genere, questa dipendenza viene riassunta con l’acronimo GIGO, dall’espressione inglese //Garbage In, Garbage Out//: se una regola di decisione, e quindi anche un qualunque algoritmo, si basa su dati in qualche misura errati, dunque //garbage//, &quot;spazzatura&quot; in inglese, allora il risultato che ne conseguirà sarà a rischio di essere a sua volta errato.
 
-Durante il gioco, ti sei fidato della macchina della verità...ma sei sicuro che sia stata una buona idea? Le decisioni basate sui dati sono tanto buone quanto buoni sono i dati utilizzati. Se, per esempio, Lodigiani o Freschini fossero stati in grado di ingannare la macchina della verità, l&#39;indagine avrebbe potuto avere un esito diverso. In genere, questa dipendenza viene riassunta dal seguente acronimo: GIGO, che sta per &quot;Garbage in, garbage out&quot;, e vuol dire che se un processo decisionale (o un qualunque algoritmo) si basa su dati in qualche misura errati (da qui &quot;garbage&quot;, spazzatura in inglese), allora anche l&#39;analisi o la decisione che ne conseguirà sarà necessariamente errata
+(link-rerun: &quot;Clicca qui se vuoi scoprire come ingannare la macchina della verità&quot;)[(open-url: &quot;https://www.ilpost.it/2015/04/12/macchina-della-verita-funziona/&quot;)]
 
-(link: &quot;Clicca qui se vuoi scoprire come ingannare la macchina della verità&quot;)[(open-url: &quot;https://www.ilpost.it/2015/04/12/macchina-della-verita-funziona/&quot;)]
+(link-rerun: &quot;Clicca qui se vuoi scoprire qualcosa in più sull’importanza di avere dati corretti in algoritmi e regole di decisione basati su dati&quot;)[(open-url: &quot;https://en.wikipedia.org/wiki/Garbage_in,_garbage_out&quot;)]
 
-(link: &quot;Clicca qui se vuoi scoprire qualcosa in più sull&#39;importanza di avere dati corretti in algoritmi e processi decisionali basati su dati&quot;)[(open-url: &quot;https://en.wikipedia.org/wiki/Garbage_in,_garbage_out&quot;)]
-
-(link: &quot;Clicca qui se vuoi scoprire qualcosa di più avanzato sulla qualità dei dati&quot;)[(open-url: &quot;https://vivalascuola.studenti.it/come-calcolare-l-errore-di-campionamento-349477.html#steps_2&quot;)]
-
-### Attraversare l&#39;Italia in diverse epoche
+(link-rerun: &quot;Clicca qui se vuoi scoprire qualcosa di più avanzato sulla qualità dei dati&quot;)[(open-url: &quot;https://vivalascuola.studenti.it/come-calcolare-l-errore-di-campionamento-349477.html#steps_2&quot;)]
 
 
-(link: &quot;Clicca qui  se vuoi scoprire come gli antichi romani attraversavano l&#39;Italia&quot;)[(open-url: &quot;https://www.webuildvalue.com/it/curiosita-infrastrutture/come-erano-fatte-le-strade-romane-e-cosa-ci-insegnano.html&quot;)
+### Attraversare l’Italia in diverse epoche
+Oggi si può arrivare in circa un’ora di aereo da Bolzano a Catania, e viaggiare per l’Italia, con qualunque mezzo, non è mai stato così rapido e sicuro. Ma in passato non è sempre stato così. Per ragioni tecnologiche (non esistevano né aerei né automobili) e politiche (l’Italia era frazionata in una moltitudine di stati, ciascuno con le proprie dogane e le proprie regole riguardo i tragitti dei forestieri), andare da nord a sud della nostra penisola in altre epoche è stata un’impresa. Ciononostante, ci sono sempre state, anche in passato, piste e infrastrutture che aiutavano i viaggiatori a spostarsi. Nei link di seguito, puoi leggere qualche curiosità a riguardo. 
 
-(link: &quot;Clicca qui  se vuoi scoprire come si poteva attraversare l&#39;Italia durante il medioevo&quot;)[(open-url: &quot;https://www.viefrancigene.org/it/introduzione/la-storia/&quot;)
+(link-rerun: &quot;Clicca qui  se vuoi scoprire come gli antichi romani attraversavano l’Italia&quot;)[(open-url: &quot;https://www.webuildvalue.com/it/curiosita-infrastrutture/come-erano-fatte-le-strade-romane-e-cosa-ci-insegnano.html&quot;)]
 
-(link: &quot;Clicca qui per leggere della prodigiosa costruzione della prima autostrada d&#39;Italia&quot;)[(open-url: &quot;https://www.webuildvalue.com/it/opere-e-progetti/costruzione-dell-a1-la-storia-dell-autostrada-del-sole.html&quot;)]
+(link-rerun: &quot;Clicca qui se vuoi scoprire come si poteva attraversare l’Italia durante il medioevo&quot;)[(open-url: &quot;https://www.viefrancigene.org/it/introduzione/la-storia/&quot;)]
 
-### Che cos&#39;è la Brianza
+(link-rerun: &quot;Clicca qui per leggere della prodigiosa costruzione della prima autostrada d’Italia&quot;)[(open-url: &quot;https://www.webuildvalue.com/it/opere-e-progetti/costruzione-dell-a1-la-storia-dell-autostrada-del-sole.html&quot;)]
 
 
+### Che cos’è la Brianza
+La mappa che hai dovuto leggere per scoprire dove Ravanelli aveva nascosto il quadro rappresenta graficamente una sezione della Lombardia, fra cui una vasta area a nord di Milano, compresa fra il capoluogo regionale e i laghi di Como e Lecco, che è chiamata &quot;Brianza&quot;, ed è citata anche nel parlare comune di persone che vi vivono lontano, ma che spesso è conosciuta soltanto per i suoi stereotipi. Trovi qui qualche informazione in più su questa area geografica.
 
-</tw-passagedata><tw-passagedata pid="28" name="Statistica" tags="" position="3504,586" size="100,100">Che argomento del gioco ti interessa capire meglio?
-* [[tipi di variabili]] 
+(link-rerun: &quot;Clicca qui se vuoi scoprire che cosa sia la Brianza, che hai visto nella mappa del gioco&quot;)[(open-url: &quot;https://it.wikipedia.org/wiki/Brianza&quot;)]
+
+(link-rerun: &quot;Clicca qui se vuoi scoprire che cosa sia la Brianza &#39;alta&#39;&quot;)[(open-url: &quot;http://www.altabrianza.org/brianza.html&quot;)]
+---
+Quando vuoi, puoi (link: &quot;tornare all’ultima pagina del gioco&quot;)[(goto: &quot;Guarda l&#39;oggetto&quot;)].</tw-passagedata><tw-passagedata pid="27" name="Statistica" tags="sfondo_bianco testo_nero" position="3504,586" size="100,100">
+## Qualche principio di scienza dei dati
+
+Hai finito questo primo capitolo della storia, e per arrivare in fondo hai applicato dei concetti di scienza dei dati, forse senza neppure accorgertene. Se vuoi, puoi ora approfondire qualcuno di questi argomenti: ti sarà data una spiegazione semplice ma (speriamo) chiara e utile.
+* [[tipi di dati]] 
 * [[visualizzazione di dati]] 
 * [[istogrammi]] 
 * [[serie storiche]] 
@@ -771,13 +813,29 @@ Durante il gioco, ti sei fidato della macchina della verità...ma sei sicuro che
 * [[campioni di dati]] 
 * [[statistiche di un campione]] 
 
-(link: &quot;Oppure, torna alla schermata finale.&quot;)[(goto: &quot;Guarda l&#39;oggetto&quot;)]</tw-passagedata><tw-passagedata pid="29" name="campioni di dati" tags="" position="3715,382" size="100,100">Double-click this passage to edit it.
+Quando vuoi, puoi (link: &quot;tornare all’ultima pagina del gioco&quot;)[(goto: &quot;Guarda l&#39;oggetto&quot;)].</tw-passagedata><tw-passagedata pid="28" name="campioni di dati" tags="testo_nero sfondo_bianco" position="3870.6666666666665,903.6666666666667" size="100,100">
+## Campioni di dati
+
+Negli ultimi anni si è sentita spesso, ripetuta in diverse forme, una frase che suona più o meno in questo modo: &quot;I dati sono il nuovo petrolio&quot;. Si tratta di una frase pronunciata nel 2006 da Clive Humby, un imprenditore e matematico britannico, che racchiude un concetto affascinante, che però è necessario contestualizzare. Negli ultimi 40 anni, la capacità degli esseri umani di collezionare, memorizzare, processare e condividere dati è cresciuta come mai prima durante la storia dell&#39;uomo. Ma cosa vuol dire, nel concreto, compiere queste operazioni? Come si può &quot;salvare&quot; e &quot;memorizzare&quot; un insieme di dati?
+
+Non è questa certo la sede per fornire un&#39;introduzione tecnica a questo aspetto, ma solo per mettere in evidenza un concetto cruciale di scienza dei dati: il concetto di campione, che è l&#39;insieme di dati collezionati, memorizzati e processati che si riassumono tramite statistiche. Poniamo, per esempio, che tu voglia conoscere l&#39;altezza media di tutti gli abitanti della tua città, oppure la loro opinione riguardo a qualche questione civile particolarmente rilevante per esmepio se costruire o meno una biblioteca in un parco, o quale candidato hanno intenzione di votare alle prossime elezioni amministrative. Il modo più immediato per raccogliere questa informazione sarebbe domandare all&#39;intera popolazione della città il dato in questione. Ciò è però spesso impraticabile, per ragioni meramente pratiche: se vivete in una grande città, questo vuol dire intervistare centinaia di migliaia (o milioni) di persone, con un consumo di risorse (in termini di tempo e denaro) che va spesso oltre quelle disponibili. Al contrario, si può selezionare un sottoinsieme di questa popolazione, che sia però &quot;rappresentativo&quot; della stessa. Quindi, per esempio, sapendo a priori che le altezze medie di maschi e femmine sono diverse e che la popolazione è composta al 50% da maschi e al 50% da femmine, il sottoinsieme della popolazione scelto sarà rappresentativo solo se manterrà la proporzione osservata nell&#39;intera popolazione. 
+
+Questo sottoinsieme è detto &quot;campione&quot;, e l&#39;operazione di selezionare il sottoinsieme è detta &quot;campionatura&quot;. Un campione che non sia solo un sottoinsieme delle persone ma che contenga uno (o più) dati a loro riferiti (come, per esempio, la loro altezza) è detto un &quot;campione di dati&quot;. Un campione di dati è qualcosa su cui possono essere fatte delle statistiche.
+
+Un ultimissima nota riguardo ai campioni. Quelli più attenti di voi potranno aver notato che, se il campione non corrisponde con la popolazione &quot;campionata&quot;, allora si potrebbero avere degli errori. Questo è, ovviamente, vero. Dato che il più delle volte è impossibile campionare l&#39;intera popolazione, ci sono delle tecniche numeriche che collegano la numerosità del campione all&#39;errore potenziale, in modo da sapere quante persone intervistare (o, in modo più generico, quanti dati raccogliere) prima di avere un risultato sufficientemente affidabile. 
 
 (set: $ultima_pag to (history:)&#39;s last)
-(link: &quot;Torna indietro&quot;)[(goto: $ultima_pag)]</tw-passagedata><tw-passagedata pid="30" name="statistiche di un campione" tags="" position="3599,364" size="100,100">Double-click this passage to edit it.
+(link: &quot;Torna indietro&quot;)[(goto: $ultima_pag)]</tw-passagedata><tw-passagedata pid="29" name="statistiche di un campione" tags="testo_nero sfondo_bianco" position="3869.0000000000005,1007.6666666666666" size="100,100">
+## Statistiche di un campione
+
+Tutti sanno che la statistica è una branca della matematica e uno dei pilastri della scienza dei dati. Ciò nonostante, il significato di &quot;statistica&quot; è spesso vago, almeno per i non addetti ai lavori. Per provare a capire che cosa ciò voglia dire, facciamo un esempio pratico. Mettiamoci nei panni del proprietario di un ristorante, che intenda migliorare i risultati economici della propria attività. Come prima cosa, dovrà ottenere delle informazioni sullo stato attuale del ristorante, come per esempio sapere quanto ha guadagnato complessivamente nell&#39;ultimo anno (il fatturato), quali sono i piatti più venduti fra quelli in menù e quante persone vengono nel locale ogni sera, magari distinguendo fra weekend e le serate infrasettimanali. Verosimilmente, questi sono dati che si possono ottenere a partire dagli scontrini emessi nelle settimane e nei mesi precedenti, oppure da un software gestionale che contenga questi dati. In entrambi i casi, risulta intuitivo che per prendere decisioni a partire da questi dati bisogna avere degli strumenti per usarli. Mettersi a un tavolo pieno di scontrini è un&#39;attività che da sola non genera alcuna informazione, anche se poi questi hanno al loro interno dei dati potenzialmente utili. Bisogna trovare delle tecniche che consentano di &quot;riassumere&quot; questi dati. Ed eccoci arrivati al significato di statistica: fare una statistica di dati vuole dire farne appunto un riassunto. A questo punto, dovrebbe essere chiaro anche la ragione per cui si fanno delle statistiche: per riuscire a carpire i segreti celati da un insieme di dati in apparenza confuso.
+
+La statistica più famosa, e probabilmente anche la più utilizzata, è la media. Fare la media di un campione (numerico) di dati vuol dire sommare tutti i dati del campione, e poi dividerli per il numero di dati. Quindi, nell&#39;esempio del ristorante, il gestore che voglia stimare quale sia il numero medio di consumazioni effettuate ogni giorno dovrà contare tutti gli scontrini emessi in un certo arco di tempo e dividere poi questo numero per il numero di giorni in cui è rimasto aperto. Se quindi avra emesso 100 scontrini in 5 giorni, potrà scoprire di aver avuto in media 20 clienti al giorno. Si noti che questo sistema, come tutta la statistica, può incorrere in errore. Per esempio, una coppia di fidanzati in cui uno dei due offre la cena all&#39;altro produce un singolo scontrino, mentre gli avventori sono due. Quindi, per avere una statistica rappresentativa del campione (in questo caso, avere una media che spieghi bene quante persone vengono ogni sera a cena al ristorante), è prima necessario conoscere bene i dati e il processo che li genera, e solo in un secondo momento fare i conti. 
 
 (set: $ultima_pag to (history:)&#39;s last)
-(link: &quot;Torna indietro&quot;)[(goto: $ultima_pag)]</tw-passagedata><tw-passagedata pid="31" name="ripensa alla telefonata" tags="testo_nero sfondo_sfumato3" position="1479,498" size="100,100">
+(link: &quot;Torna indietro&quot;)[(goto: $ultima_pag)]
+
+Oppure, [[scopri un&#39;altra statistica molto utilizzata-&gt;deviazione standard]]</tw-passagedata><tw-passagedata pid="30" name="ripensa alla telefonata" tags="testo_nero sfondo_sfumato3" position="1479,498" size="100,100">
 ##Ripensando alla telefonata...
  \
 (if: $t is &quot;org&quot;) [Riapri il tuo smartphone, e nelle note puoi leggere la trascrizione della telefonata che ti eri fatta rapidamente, mentre lo sconosciuto parlava.
@@ -789,7 +847,7 @@ Ora, è davvero il momento giusto per andare allo [[schedario]]. \
  \
 (if: $m) [(print: $cs2)] \
  \
-(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="32" name="prendere la bicicletta" tags="testo_bianco sfondo_sfumato0" position="1157,795" size="100,100">&lt;img src=&#39;res1/bici.jpg&#39; height=&#39;430&#39; class=&#39;center&#39; alt=&#39;immagine&#39;&gt;
+(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="31" name="prendere la bicicletta" tags="testo_bianco sfondo_sfumato0" position="1157,795" size="100,100">&lt;img src=&#39;res1/bici.jpg&#39; height=&#39;430&#39; class=&#39;center&#39; alt=&#39;immagine&#39;&gt;
 
 ##In viaggio in bicicletta...
  \
@@ -802,7 +860,7 @@ Chissà se verrà fuori qualcosa di utile... ma ora stai [[arrivando in ufficio]
  \
 (if: $m) [(print: $cs2)] \
  \
-(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="33" name="prendere la macchina" tags="testo_bianco sfondo_sfumato0" position="1159,514" size="100,100">&lt;img src=&#39;res1/citta.webp&#39; height=&#39;430&#39; class=&#39;center&#39; alt=&#39;immagine&#39;&gt;
+(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="32" name="prendere la macchina" tags="testo_bianco sfondo_sfumato0" position="1159,514" size="100,100">&lt;img src=&#39;res1/citta.webp&#39; height=&#39;430&#39; class=&#39;center&#39; alt=&#39;immagine&#39;&gt;
 
 ##In viaggio in macchina...
  \
@@ -822,14 +880,14 @@ Recuperi le chiavi al volo e ti metti in auto. Durante il breve viaggio verso il
  \
 (if: $m) [(print: $cs2)] \
  \
-(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="34" name="interrogare ulteriormente Ravanelli" tags="testo_nero sfondo_sfumato2" position="2801,465" size="100,100">
+(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="33" name="interrogare ulteriormente Ravanelli" tags="testo_nero sfondo_sfumato2" position="2801,465" size="100,100">
 ## La seconda parte dell’interrogatorio di Martino Ravanelli
 
 Ore e ore di interrogatorio non danno frutti. Purtroppo Ravanelli non vuole parlare. A un certo punto, gli racconti della telefonata misteriosa che avevi ricevuto all’inizio. (if: $t is &quot;cor&quot;)[Sei (if: $g is &quot;o&quot;)[un investigatore](else:)[un’investigatrice] originale e fantasios$g, e la tua empatia riesce evidentemente a fare breccia nella corazza di Ravanelli, che per un momento si lascia sfuggire un mormorio. “Maledetto traditore, ecco perché...” riesci a sentire. Ma poi rimane in silenzio.](else:)[Anche in questo caso, la corazza di Ravanelli non viene intaccata]. Di fronte a un silenzio costante, non ti rimane che andare avanti con le indagini, e guardare [[la mappa]]. \
 \
 (if: $m) [(print: $cs6)] \
  \
-(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="35" name="include" tags="header" position="722,473" size="100,100">&lt;!-- dei default, anche per rendere più semplice il testing in fase di sviluppo --&gt; \
+(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="34" name="include" tags="header" position="722,473" size="100,100">&lt;!-- dei default, anche per rendere più semplice il testing in fase di sviluppo --&gt; \
 (if: $nome is 0) [(set: $nome to &quot;Alex&quot;)] \
 (if: $cognome is 0) [(set: $cognome to &quot;Bianchi&quot;)] \
 (if: $t is 0) [(set: $t to &quot;org&quot;)] \
@@ -848,17 +906,41 @@ $cs_post to &quot;.mp3&#39; type=&#39;audio/mp3&#39; autoplay&gt;&lt;/audio&gt;&
 (set: $cs6 to $cs_pre + &quot;2021/10/03/audio_0b0df33160&quot; + $cs_post) \
 (set: $cs7 to $cs_pre + &quot;2022/02/10/audio_798efbe865&quot; + $cs_post) \
 \
-(if: (passage:)&#39;s name is not &quot;start&quot;) [(save-game: &quot;auto&quot;)]</tw-passagedata><tw-passagedata pid="36" name="risultati dei test" tags="" position="3749,724" size="100,100">Double-click this passage to edit it.
+(if: (passage:)&#39;s name is not &quot;start&quot;) [(save-game: &quot;auto&quot;)]</tw-passagedata><tw-passagedata pid="35" name="risultati dei test" tags="testo_nero sfondo_bianco" position="3867.3333333333335,799" size="100,100">Double-click this passage to edit it.
 
 
 (set: $ultima_pag to (history:)&#39;s last)
-(link: &quot;Torna indietro&quot;)[(goto: $ultima_pag)]</tw-passagedata><tw-passagedata pid="37" name="piepagina" tags="" position="840,476" size="100,100">&lt;!-- deve essere incluso esplicitamente, con: (display: &quot;piepagina&quot;) --&gt;
+(link: &quot;Torna indietro&quot;)[(goto: $ultima_pag)]</tw-passagedata><tw-passagedata pid="36" name="piepagina" tags="" position="840,476" size="100,100">&lt;!-- deve essere incluso esplicitamente, con: (display: &quot;piepagina&quot;) --&gt;
 ---
 |piccolo&gt;[(se preferisci, [[puoi sempre ricominciare il gioco dall’inizio-&gt;frontespizio]] \
-(if: $m) [(link: &quot;&amp;nbsp;&amp;nbsp;e puoi sospendere l’audio&quot;) [&lt;script&gt;document.getElementById(&#39;cs&#39;).pause();&lt;/script&gt;]] )]</tw-passagedata><tw-passagedata pid="38" name="start" tags="" position="599,474" size="100,100">(if: &quot;auto&quot; is in (saved-games:)) [(load-game: &quot;auto&quot;)]
-(else:) [(go-to: &quot;frontespizio&quot;)]</tw-passagedata><tw-passagedata pid="39" name="credits" tags="sfondo_bianco testo_nero" position="751,805" size="100,100">&#39;&#39;Il furto dell’Hayez - Una storia di investigazione, basata sulla scienza dei dati&#39;&#39; è un libro-game...
+(if: $m) [(link: &quot;&amp;nbsp;&amp;nbsp;e puoi sospendere l’audio&quot;) [&lt;script&gt;document.getElementById(&#39;cs&#39;).pause();&lt;/script&gt;]] )]</tw-passagedata><tw-passagedata pid="37" name="start" tags="" position="599,474" size="100,100">(if: &quot;auto&quot; is in (saved-games:)) [(load-game: &quot;auto&quot;)]
+(else:) [(go-to: &quot;frontespizio&quot;)]</tw-passagedata><tw-passagedata pid="38" name="credits" tags="sfondo_bianco testo_nero" position="751,805" size="100,100">&#39;&#39;Il furto dell’Hayez - Una storia di investigazione, basata sulla scienza dei dati&#39;&#39; è un libro-game...
 
-[[Torna al gioco-&gt;frontespizio]]</tw-passagedata></tw-storydata>
+[[Torna al gioco-&gt;frontespizio]]</tw-passagedata><tw-passagedata pid="39" name="tipi di dati" tags="testo_nero sfondo_bianco" position="3861.6666666666665,375.3333333333333" size="100,100">
+## Tipi di dati
+
+Capire che esistono tipi di dati diversi non è forse interessantissimo, ma è perlomeno molto utile per capire la ragione per cui scrivere &quot;1 + Rosso&quot; non ha alcun significato. Proviamo a ragionarci un secondo, partendo da questo semplicissimo esempio chiaramente senza significato. 
+
+Se al posto di scrivere &quot;1 + Rosso&quot; avessi scritto &quot;1 + 1&quot;, non avresti avuto alcun dubbio nel dire che c&#39;era molto senso, e che probabilmente equivaleva a scrivere &quot;2&quot; (ragione per cui vale l&#39;equazione &quot;1 + 1 = 2&quot;). Al contrario, scrivere &quot;Rosso + Rosso&quot; potrebbe essere perlomeno ambiguo. Magari ho due rossi, magari no: appunto, non è chiaro. In modo analogo, scrivere &quot;Rosso / Blu&quot; non sembra avere senso, mentre &quot;6 / 3&quot; equivale a scrivere &quot;2&quot;. Possiamo dire quindi che con i numeri posso fare delle operazioni, e con degli attributi (come rosso, giallo, alto, basso, buono, cattivo, ...) invece no. Allora chiamiamo un dato che al proprio interno contenga dei numeri un dato &quot;numerico&quot;. E un dato che contenga un&#39;attributo? Lo chiamiamo &quot;categorico&quot;, perché definisce la categoria a cui appertiene un dato. Per esempio, nella tua classe, potresti raccogliere i dati dei colore dei capelli delle persone che la compongono, e ritrovarti quindi un insieme di dati dai valori come &quot;biondo&quot;, &quot;moro&quot;, &quot;rosso&quot; o &quot;castano&quot;. Appunto, delle categorie.
+
+(set: $ultima_pag to (history:)&#39;s last)
+(link: &quot;Torna indietro&quot;)[(goto: $ultima_pag)]</tw-passagedata><tw-passagedata pid="40" name="deviazione standard" tags="" position="3869.0000000000005,1139.3333333333333" size="100,100">
+## La deviazione standard
+
+Un&#39;altra statistica molto famosa è la deviazione standard, che indica la dipersione di un campione. Ma, più nel dettaglio, cosa vuol dire che un campione è &quot;tanto disperso&quot; o &quot;poco disperso&quot;? Proviamo a rispondere usando la Serie A (o un qualunque altro campionato sportivo, professionistico o meno, di un qualunque altro sport in cui i risultati possibili sono vittoria, pareggio o sconfitta). 
+
+Tipicamente, una squadra di calcio può terminare una partita in tre modi: vincendo, pareggiando o perdendo. Quindi, il campione dei risultati di una squadra durante una stagione sarà dato da una successione di quesi tre possibili risulati. Inoltre, da ciò si può ottenere un campione con i punti ottenuti per ciascuna partita (per esempio 3 per una vittoria, 1 per un pareggio e 0 per una sconfitta). 
+
+Una squadra molto forte probabilmente vincerà sempre, o comunque vincerà spesso. Quindi, otterrà molto spesso 3 punti a vittoria, ogni tanto 1 punto e solo raramente 0 punti. Nel campionato di Serie A maschile di calcio, la squadra che alla fine arriva al primo posto tendenzialmente ha una media punti per gara attorno a 2.5. Quindi, ogni volta che vince (e ottiene 3 punti), lo scarto dalla sua media punti sarà circa |3 - 2.5| = 0.5, mentre quando perde avrà uno scarto |0 - 2.5| = 2.5. Essendo però una squadra che vince spesso, il primo risultato accadrà più spesso, quindi la somma degli scarti sarà più vicina a 0.5 rispetto che a 2.5.
+
+In modo analogo, una squadra molto debole perde la maggior parte delle partite, e ha una media punti inferire al punto a partita (per esempio, di 0.5 punti a partita). Perdendo molto spesso, la differenza dei punti ottenuti dalla media dei punti per gara (quello che prima abbiamo chiamato scarto) è spesso |0 - 0.5| = 0.5, e solo raramente |1 - 0.5| = 0.5 (in caso di pareggio) o |3 - 0.5| = 2.5 (in caso di vittoria). Come prima, anche qui lo scarto medio di una squadra che perde con costanza sarà poco più grande di 0.5. 
+
+Ora, proviamo a pensare invece a una squadra che alterni vittorie e sconfitte in modo regolare. Intuitivamente, sarà una squadra con una grande variabilità nei risultati, e che avrà una media punti di 1.5 punti per partita (poiché a ogni partita vinta con 3 punti corrisponde una sconfitta con 0 punti, e la media è quindi (3 + 0) / 2). In questo caso, lo scarto in caso di sconfitta è |0 - 1.5| = 1.5 e quello incaso di vittoria è |3 - 1.5| = 1.5. Vincendo e perdendo alternativamente ciascuna partita, si otterrà che lo scarto medio sarà sempre di 1.5 (poiché (1.5 + 1.5)/2 = 1.5). Si vede intuitivamente che 1.5 è ben tre volte più grande di 0.5.
+
+Lo scarto quadratico medio (il nome meno usato della deviazione standard) consiste nel fare la media del quadrato dello scarto, e quindi fare le medie non di |valore - media| ma del quadrato di |valore - media|. In modo analogo a prima, questa statistica riassume i dati fornendoci la seguente informazione. Se una squadra ha dei risultati costanti (vince molto spesso, o perde molto spesso) e quindi la variabilità dei suoi risultati è bassa, allora la deviazione standard è bassa. Al contrario, se una squadra ha una variabilità nei punti ottenuti per partita molto alta (nel caso limite, alternaticamente vince e perde ogni partita), allora la deviazione standard è altresì alta. Quindi, concludendo, la deviazione standard serve per scoprire, a partire dai dati, quanto essi sono variabili rispetto alla loro media. 
+
+(set: $ultima_pag to (history:)&#39;s last)
+(link: &quot;Torna indietro&quot;)[(goto: $ultima_pag)]</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">"use strict";var _slicedToArray=function(){return function(e,t){if(Array.isArray(e))return e;if(Symbol.iterator in Object(e))return function(e,t){var n=[],r=!0,a=!1,i=void 0;try{for(var o,s=e[Symbol.iterator]();!(r=(o=s.next()).done)&&(n.push(o.value),!t||n.length!==t);r=!0);}catch(e){a=!0,i=e}finally{try{!r&&s.return&&s.return()}finally{if(a)throw i}}return n}(e,t);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}!function(){
 /**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
