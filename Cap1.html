@@ -104,7 +104,7 @@ tw-hook[name="preformat"] {
 }
 
 
-/* *** per formattare testo typewriter (hook |piccolo>) *** */
+/* *** per formattare testo in font più piccolo (hook |piccolo>) *** */
 tw-hook[name="piccolo"] {
   font-size: 14px;
 }
@@ -114,6 +114,13 @@ tw-hook[name="piccolo"] {
 tw-hook[name="enfat"] {
   display: block;
   background-color: yellow;
+}
+
+
+/* *** per enfatizzare (hook |bianco>) *** */
+tw-hook[name="bianco"] {
+  display: block;
+  background-color: white;
 }
 
 
@@ -694,7 +701,8 @@ Sai come funziona un poligrafo? E sai come si leggono i dati che esso produce?
 
 (dropdown: 2bind $risp_poligrafo, &quot;Certo, vai pure avanti&quot;, &quot;No, per favore spiegamelo&quot;)
 
-(live: 0.5s)[(if: $risp_poligrafo is &quot;No, per favore spiegamelo&quot;) [“Allora, agente $cognome, il poligrafo è un oggetto che misura alcuni dati fisiologici di un individuo, ed è tipicamente usato mentre la persona è sottoposta ad alcune domande. Questi dati sono raccolti con una frequenza costante e compongono una //serie storica//, ovvero un insieme di dati temporalmente ordinati. Questa serie storica si può leggere sullo schermo del dispositivo, che visualizza l’andamento dei campioni nel tempo. I dati raccolti sono abbastanza affidabili dello stato di ansia di un individuo:
+(live: 0.5s)[(if: $risp_poligrafo is &quot;No, per favore spiegamelo&quot;)
+|bianco&gt;[“Allora, agente $cognome: il poligrafo è un oggetto che misura alcuni dati fisiologici di un individuo, ed è tipicamente usato mentre la persona è sottoposta ad alcune domande. Questi dati sono raccolti con una frequenza costante e compongono una //serie storica//, ovvero un insieme di dati temporalmente ordinati. Questa serie storica si può leggere sullo schermo del dispositivo, che visualizza l’andamento dei campioni nel tempo. I dati raccolti sono abbastanza affidabili dello stato di ansia di un individuo:
 1. la respirazione toracica, misurata con l’ausilio con un tubo pneumatico posizionato intorno al busto (linea blu);
 2. la sudorazione, rilevata tramite elettrodi posti sui polpastrelli (linea verde);
 3. l’intensità dell’attività cardiaca, ottenuta misurando la frequenza cardiaca al polso e la pressione sanguigna tramite uno sfigmomanometro (linea rossa).
@@ -823,7 +831,12 @@ Quando vuoi, puoi (link: &quot;tornare all’ultima pagina del gioco&quot;)[(got
 
 Negli ultimi anni si è sentita spesso, ripetuta in diverse forme, una frase che suona più o meno in questo modo: &quot;I dati sono il nuovo petrolio&quot;. Si tratta di una frase pronunciata nel 2006 da Clive Humby, un imprenditore e matematico britannico, che racchiude un concetto affascinante, che però è necessario contestualizzare. Negli ultimi 40 anni, la capacità degli esseri umani di acquisire, memorizzare, elaborare, trasmettere e condividere dati è cresciuta come mai prima durante la storia dell’uomo. Ma cosa vuol dire, nel concreto, compiere queste operazioni? Come significa per esempio &quot;salvare&quot; e &quot;memorizzare&quot; un insieme di dati?
 
-Non è il contesto per proporre un’introduzione tecnica a questo tema, ma possiamo accennare a un argomento cruciale di scienza dei dati: il concetto di campione, che è l&#39;insieme di dati collezionati, memorizzati e processati che si riassumono tramite statistiche. Poniamo, per esempio, che tu voglia conoscere l’altezza media di tutti gli abitanti della tua città, oppure la loro opinione riguardo a qualche questione civile particolarmente rilevante per esmepio se costruire o meno una biblioteca in un parco, o quale candidato hanno intenzione di votare alle prossime elezioni amministrative. Il modo più immediato per raccogliere questa informazione sarebbe domandare all’intera popolazione della città il dato in questione. Ciò è però spesso impraticabile, per ragioni meramente pratiche: se vivete in una grande città, questo vuol dire intervistare centinaia di migliaia (o milioni) di persone, con un consumo di risorse (in termini di tempo e denaro) che va spesso oltre quelle disponibili. Al contrario, si può selezionare un sottoinsieme di questa popolazione, che sia però &quot;rappresentativo&quot; della stessa. Quindi, per esempio, sapendo a priori che le altezze medie di maschi e femmine sono diverse e che la popolazione è composta al 50% da maschi e al 50% da femmine, il sottoinsieme della popolazione scelto sarà rappresentativo solo se manterrà la proporzione osservata nell&#39;intera popolazione. 
+Non è il contesto per proporre un’introduzione tecnica a questo tema, ma possiamo accennare a un argomento cruciale di scienza dei dati: il concetto di //campione//. Un campione, in senso statistico, è una collezione di dati riferiti a individui diversi ...
+
+((( da rivedere )))
+
+
+si riassumono tramite statistiche. Poniamo, per esempio, che tu voglia conoscere l’altezza media di tutti gli abitanti della tua città, oppure la loro opinione riguardo a qualche questione civile particolarmente rilevante per esmepio se costruire o meno una biblioteca in un parco, o quale candidato hanno intenzione di votare alle prossime elezioni amministrative. Il modo più immediato per raccogliere questa informazione sarebbe domandare all’intera popolazione della città il dato in questione. Ciò è però spesso impraticabile, per ragioni meramente pratiche: se vivete in una grande città, questo vuol dire intervistare centinaia di migliaia (o milioni) di persone, con un consumo di risorse (in termini di tempo e denaro) che va spesso oltre quelle disponibili. Al contrario, si può selezionare un sottoinsieme di questa popolazione, che sia però &quot;rappresentativo&quot; della stessa. Quindi, per esempio, sapendo a priori che le altezze medie di maschi e femmine sono diverse e che la popolazione è composta al 50% da maschi e al 50% da femmine, il sottoinsieme della popolazione scelto sarà rappresentativo solo se manterrà la proporzione osservata nell&#39;intera popolazione. 
 
 Questo sottoinsieme è detto &quot;campione&quot;, e l&#39;operazione di selezionare il sottoinsieme è detta &quot;campionatura&quot;. Un campione che non sia solo un sottoinsieme delle persone ma che contenga uno (o più) dati a loro riferiti (come, per esempio, la loro altezza) è detto un &quot;campione di dati&quot;. Un campione di dati è qualcosa su cui possono essere fatte delle statistiche.
 
