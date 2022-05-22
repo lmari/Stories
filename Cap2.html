@@ -9,7 +9,35 @@
 </head>
 <body>
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play Cap2.</tw-noscript></noscript></tw-story>
-<tw-storydata name="Cap2" startnode="1" creator="Twine" creator-version="2.3.16" ifid="BD0D17D2-C4FA-489C-8989-3B18A93EFAFB" zoom="0.6" format="Harlowe" format-version="3.2.3" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">
+<tw-storydata name="Cap2" startnode="51" creator="Twine" creator-version="2.3.16" ifid="BD0D17D2-C4FA-489C-8989-3B18A93EFAFB" zoom="0.6" format="Harlowe" format-version="3.2.3" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">tw-story[tags~="Grigio_c"] {
+  background-color: #f2f2f2;
+}
+
+tw-story[tags~="Bianco"] {
+  background-color: #ffffff;
+}
+
+tw-passage[tags~="T_Nero"] {
+  font-family: Didot;
+  font-size: 20px; 
+  color: black;
+}
+
+tw-passage[tags~="T_Nero"] h1, h2, h3 {
+  font-family: Didot;
+  color: #339af0;
+}
+
+tw-passage[tags~="T_Nero"] tw-link {
+  color: green;
+}
+
+tw-passage[tags~="T_Nero"] tw-link:hover {
+  color: red;
+}
+
+
+
 /* *** per centrare oggetti html (class='center') *** */
 .center {
   display: block;
@@ -22,7 +50,6 @@
 tw-hook[name="centrato"] {
   display: block;
   text-align: center;
-  border: 3px solid green;
 }
 
 
@@ -32,24 +59,30 @@ tw-hook[name="piccolo"] {
 }
 
 
-
-
-tw-story[tags~="Bianco"]{
-  	background-color:  #ffffff
+/* *** per enfatizzare (hook |enfat>) *** */
+tw-hook[name="enfat"] {
+  display: block;
+  background-color: yellow;
 }
 
-tw-story[tags~="Grigio_c"]{
-  	background-color:  #f2f2f2
+
+/* *** per enfatizzare (hook |scuro>) *** */
+tw-hook[name="scuro"] {
+  display: block;
+  background-color: #333333;
 }
+
+
+
+
+
+
+
+
 
 tw-story[tags~="Grigio_s"]{
   	background-color:  #b3b3b3
 }
-
-tw-passage[tags~="T_Nero"]{
-  font-family: Didot;
-  font-size: 20px; 
-  color: black}
 
 tw-story[tags~="Telefono"] {
  background-image:url("https://assettstemp.yolasite.com/ws/media-library/644ad23ef12a4751b35dec49265077b6/img_8769-3.webp");
@@ -82,8 +115,9 @@ tw-story[tags~="Legno"] {
   background-size: 15% 15%;
   background-repeat: repeat;
 }
-</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-tag name="Bianco" color="blue"></tw-tag>,<tw-tag name="Grigio_c" color="green"></tw-tag>,<tw-tag name="Legno" color="yellow"></tw-tag>,<tw-tag name="Pistola" color="yellow"></tw-tag>,<tw-tag name="Postit" color="yellow"></tw-tag>,<tw-tag name="T_Nero" color="orange"></tw-tag>,<tw-tag name="Telefono" color="yellow"></tw-tag><tw-passagedata pid="1" name="frontespizio" tags="Bianco T_Nero" position="1400,900" size="100,100">(text-colour:#4dabf7)[#Il furto della lupa capitolina
-####//Una storia di investigazione, basata sulla scienza dei dati//]
+</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-tag name="Bianco" color="blue"></tw-tag>,<tw-tag name="Grigio_c" color="green"></tw-tag>,<tw-tag name="Legno" color="yellow"></tw-tag>,<tw-tag name="Pistola" color="yellow"></tw-tag>,<tw-tag name="Postit" color="yellow"></tw-tag>,<tw-tag name="T_Nero" color="orange"></tw-tag>,<tw-tag name="Telefono" color="yellow"></tw-tag><tw-passagedata pid="1" name="frontespizio" tags="Bianco T_Nero" position="1400,900" size="100,100">
+# Il furto della Lupa capitolina
+### //Una storia di investigazione,&lt;br&gt;basata sulla scienza dei dati//
 
 &lt;img src=&#39;res2/lupa.png&#39; class=&#39;center&#39; width=&#39;600&#39;&gt;
 
@@ -91,22 +125,23 @@ Questo che hai appena aperto è un &#39;&#39;libro-game digitale&#39;&#39;, il c
 
 Prima di cominciare con il racconto, rispondi per favore a qualche domanda per personalizzare la tua esperienza di gioco.
 
-###(text-colour:#339af0)[&#39;&#39;Detective, inserisci le tue generalità!&#39;&#39;]
-
-Qual è il tuo nome? (input-box: bind $nome, &quot;XXXXX=&quot;, 1)
-Qual è il tuo cognome? (input-box: bind $cognome, &quot;XXXXX=&quot;, 1)
+### Detective, inserisci le tue generalità!
+Qual è il tuo nome? (input-box: bind $nome, &quot;XXX==&quot;, 1)
+Qual è il tuo cognome? (input-box: bind $cognome, &quot;XXX==&quot;, 1)
 Con che genere vuoi che ci si riferisca a te durante il gioco?
 (dropdown: 2bind $genere, &quot;femminile&quot;, &quot;maschile&quot;)
 
 (live: 1s)[(if: $g is &quot;o&quot;) [&lt;img src=&#39;res2/inv_m.png&#39; class=&#39;center&#39; width=&#39;300&#39;&gt;] (else:) [&lt;img src=&#39;res2/inv_f.png&#39; class=&#39;center&#39; width=&#39;300&#39;&gt;]]
 
-### (text-colour:#339af0)[&#39;&#39;Detective, dichiara le tue capacità!&#39;&#39;]
+### Detective, dichiara le tue capacità!
 Hai 5 punti a disposizione, da ripartire tra intelligenza e capacità relazionali: quanti punti vuoi destinare alla tua intelligenza? (dropdown: 2bind $punti, &quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;4&quot;)
 (live: 0.5s)[Avrai dunque $punti_int //punt(if: $punti_int is 1)[o](else:)[i] intelligenza// e $punti_soc //punt(if: $punti_soc is 1)[o](else:)[i] socialità//].
 
----
 
-(text-colour:black)[Benissimo: puoi ora ] [[iniziare-&gt;1 Introduzione]](text-colour:black)[ la tua avventura!]
+|enfat&gt;[Benissimo: puoi ora [[iniziare-&gt;1 Introduzione]] la tua avventura!]
+
+---
+//[[Qualche informazione-&gt;credits]] su questo gioco e chi l’ha realizzato.//
 
 (live: 0.2s)[(if: $genere is &quot;maschile&quot;) [(set: $g to &quot;o&quot;)] \
 (else:)[(set: $g to &quot;a&quot;)]]
@@ -265,8 +300,8 @@ La prima targa assegnata con la procedura attuale è stata AA000AA, mentre l’a
 (text-colour:#74c0fc)[(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;dissolve&quot;)+(t8n-time:1s)[[Torna indietro|Targhe]]]
 
 </tw-passagedata><tw-passagedata pid="7" name="1 Introduzione" tags="Grigio_c T_Nero" position="1600,900" size="100,100">
-## (text-colour:#339af0)[Alla ricerca della Lupa Capitolina]
-\
+## Alla ricerca della Lupa Capitolina
+ \
 Sono passati mesi da quando hai brillantemente risolto il caso del furto del Bacio dell’Hayez. Il clamore mediatico del ritrovamento del quadro rubato ti ha dato i proverbiali 15 minuti di notorietà. Interviste su tutti i principali telegiornali, ospitate in televisione. Ti è arrivato addirittura un invito da parte della neo-eletta presidente della Repubblica, che si è voluta congraturare con te di persona per il contributo che hai dato alla comunità.
 
 Poi, però, il clamore è finito, e hai potuto ricominciare con la tua normale routine lavorativa... tirando un sospiro di sollievo! Un po’ perché dopo qualche giorno non ne potevi già più di essere fermat$g da sconosciuti per strada in cerca di un selfie. E, soprattutto, perché avevi cose più importanti a cui pensare: quando hai arrestato Ravanelli, il colpevole del furto del Bacio di Hayez, non sei riuscit$g a trovare il complice.
@@ -387,8 +422,8 @@ Mettendo la mano dentro il veicolo, trovi un modo per aprire la portiera ed entr
 
 (if: $flag_rebus is 0)[&lt;audio src=&quot;https://cdn.pixabay.com/download/audio/2022/04/19/audio_37bb6e26a7.mp3?filename=suono-messaggio-109758.mp3
 autoplay&gt;&lt;/audio&gt;]</tw-passagedata><tw-passagedata pid="11" name="2 Introduzione" tags="Grigio_c T_Nero" position="2600,900" size="100,100">
-## (text-colour:#339af0)[Ispezione dei Musei Capitolini]
-\
+## Ispezione dei Musei Capitolini
+ \
 Arrivat$g sulla scena del crimine, ti imbatti subito nel Maresciallo Caputo, che ti viene incontro chiaramente preoccupato, il viso scuro.
 
 (text-colour:#74c0fc)[&#39;&#39;Maresciallo Caputo&#39;&#39;]: Carissim$g agente $nome, sono felice che sia riuscit$g ad arrivare così in fretta: la ringrazio molto. Io sono qui giusto da qualche minuto, e non ho trovato nulla di strano, per adesso. Certo che però si tratta di una strana coincidenza, che l’allarme dei Musei Capitolini suoni due giorni dopo il furto della Lupa dalla piazza. Cosa pensa che sia accaduto?
@@ -444,15 +479,13 @@ Questa frase ti desta dallo tuo stato di concentrazione: di colpo, lasci i tuoi 
 
 Ciò significa che non c’è tempo da perdere, non puoi più stare lì ferm$g a riflettere: devi assolutamente riuscire a scovare il ladro e ritrovare la statua.
 
-Sei nervos$g ma anche molto concentrat$g, hai l’ansia di trovare indizi ma non sai da dove partire. A un certo punto vedi avvicinarsi una guardia, cammina con la testa bassa e passo svelto. Ti arriva in fianco e ti consegna un libro.
-
-(text-colour:#74c0fc)[&#39;&#39;Guardia&#39;&#39;]: E’ stato trovato vicino all’uscita di emergenza.
+Sei nervos$g ma anche molto concentrat$g, hai l’ansia di trovare indizi ma non sai da dove partire. A un certo punto vedi avvicinarsi una guardia, cammina con la testa bassa e passo svelto. Ti arriva in fianco e ti consegna un libro, dichiarando che è stato trovato vicino all’uscita di emergenza.
 
 Allunghi le mani, sei molto emozionat$g: sai che questa può essere finalmente la prima prova! Noti subito che è il manuale che il museo rilascia a coloro che studiano per diventare future guide. Quindi, dovrebbe appartenere a uno degli studenti del museo. È come nuovo, senza alcuna sottolineatura, appunto o pieghettatura.
 
 C’è però una cosa interessante: il manuale è la versione scritta in inglese, quella che viene consegnata in dotazione agli stranieri. E allora, potrebbe esserci una persona non italiana coinvolta. Se è una guida, vuol dire che è qualcuno venuto apposta per studiare storia dell’arte, e che non è in Italia da abbastanza tempo da poter usare un manuale in italiano. E visto che per ottenere la cittadinanza è necessario sostenere un test di lingua, è verosimile che identificando i cittadini stranieri si possa trovare il ladro. 
 
-Quindi, arrivato a questo punto, [[valuta le possibili opzioni|1 Stat]]] a tua disposizione. \
+Quindi, arrivato a questo punto, [[valuta le possibili opzioni-&gt;1 Stat]] a tua disposizione. \
  \
 (display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="12" name="Fine" tags="Grigio_c T_Nero" position="5904,801" size="100,100">
 ## (text-colour:#74c0fc)[Il colpevole è a Treviso]
@@ -472,8 +505,8 @@ Capite subito che, se il frappé viene da un posto così strano, probabilmente d
 
 (text-colour:#74c0fc)[&#39;&#39;[Maresciallo Caputo]&#39;&#39;]“Detective $nome, guardi! Ho scoperto che quel negozio è presente solo a Treviso. Questo conferma anche il messaggio che abbiamo risolto. Andiamo direttamente lì”
 
-[[Arriva allo StarBanks di Treviso|2 Fine2]]]]</tw-passagedata><tw-passagedata pid="13" name="coordinate" tags="Grigio_c T_Nero" position="1800,998" size="100,100">
-## (text-colour:#339af0)[Interpreta le coordinate]
+[[Arriva allo StarBanks di Treviso|2 Fine2]]]]</tw-passagedata><tw-passagedata pid="13" name="coordinate" tags="Grigio_c T_Nero" position="1800,1000" size="100,100">
+## Interpreta le coordinate
  \
 (set: $extra_punti to 0)
  \
@@ -578,9 +611,9 @@ Il libro è stato portato lì da qualcuno interno al museo, a cui era consentito
 
 
 
-</tw-passagedata><tw-passagedata pid="19" name="Coordinate 2" tags="Grigio_c T_Nero" position="2000,1102" size="100,100">
-## (text-colour:#339af0)[Ancora sulla lettura di coordinate]
-\
+</tw-passagedata><tw-passagedata pid="19" name="Coordinate 2" tags="Grigio_c T_Nero" position="2000,1100" size="100,100">
+## Ancora sulla lettura di coordinate
+ \
 Brav$g, risposta corretta. Cerca di capire bene in che direzione muoverti, per arrivare ai Musei nel minor tempo possibile. 
 
 Come si interpretano dunque le coordinate dei Musei Capitolini? 
@@ -729,8 +762,8 @@ Ok, questo va bene: vuol dire che ci possiamo appostare vicino alla lavanderia, 
 
 (if: $2fine_v is 0)[(set: $punto_soc_n to $punto_soc_n + 1)]
 (set: $2fine_v to 1)
-</tw-passagedata><tw-passagedata pid="26" name="Coordinate 3" tags="Grigio_c T_Nero" position="2201,998" size="100,100">
-## (text-colour:#339af0)[Tira le somme sulle coordinate]
+</tw-passagedata><tw-passagedata pid="26" name="Coordinate 3" tags="Grigio_c T_Nero" position="2200,1000" size="100,100">
+## Tira le somme sulle coordinate
  \
 (set: $punti_int to $punti_int + $extra_punti) \
 (set: $risp_sbagliate to 2 - $extra_punti) \
@@ -741,38 +774,39 @@ Ok, questo va bene: vuol dire che ci possiamo appostare vicino alla lavanderia, 
 
 Potresti ora decidere di informarti un poco a proposito di [[coordinate geografiche]].
 
-In ogni caso, stai cominciando a capire che la questione ai Musei Capitolini potrebbe essere seria, e che sia davvero necessario [[proseguire la tua indagine|2 Introduzione]]. \
+In ogni caso, stai cominciando a capire che la questione ai Musei Capitolini potrebbe essere seria, e che sia davvero necessario [[proseguire la tua indagine-&gt;2 Introduzione]]. \
  \
-(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="27" name="coordinate geografiche" tags="Grigio_c T_Nero" position="2398,1004" size="100,100">
-## (text-colour:#339af0)[Un&#39;occhiata a Wikipedia]
+(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="27" name="coordinate geografiche" tags="Grigio_c T_Nero" position="2400,1000" size="100,100">
+## Un’occhiata a Wikipedia
 
-Apri Wikipedia dal tuo device mobile e cerchi coordinate geografiche. Ti si para davanti un&#39;interessante pagina. Il tuo istinto ti dice che rimanere a leggere la pagina almeno 30 secondi potrebbe farti bene...
+Apri Wikipedia dal tuo dispositivo e cerchi coordinate geografiche. Ti si presenta un’interessante pagina. Il tuo istinto ti dice che rimanere a leggere la pagina almeno 30 secondi potrebbe esserti utile...
 
-&lt;iframe src=&quot;https://it.m.wikipedia.org/wiki/Coordinate_geografiche&quot; width=&quot;800&quot; height=&quot;1200&quot;&gt;&lt;/iframe&gt;
+&lt;iframe src=&#39;https://it.m.wikipedia.org/wiki/Coordinate_geografiche&#39; width=&#39;800&#39; height=&#39;1200&#39;&gt;&lt;/iframe&gt;
 
+Ora che sei un po’ più espert$g di dati e coordinate geografiche, [[prosegui con l’indagine-&gt;2 Introduzione]].
 
-Ora che sei un po&#39; più esperto di dati e coordinate geografiche, [[prosegui con l&#39;indagine|2 Introduzione]].
-
-
-(set: $flag to 0)
-(set: $punti_assegnati to 0)
-(set: $time_ass to 30s)
-(set: $time_ass_text to $time_ass / 1000)
-(live: $time_ass)[(set: $flag to 1)]
-(live: $time_ass  + 0.5)[(if: $flag is 1)[(if: $punti_assegnati is 0)[(set: $punti_assegnati to 1)(set: $punto_int_n to $punto_int_n + 1)]]]
-
-(live: $time_ass  + 0.5)[(bg:magenta)[//Complimenti! Hai passato più di $time_ass_text secondi a leggere il testo. Non solo hai imparato qualcosa che magari ti tornerà magari utile in futuro, ma noi sviluppatori di questo libro-game abbiamo deciso di premiare la tua curiosità con un ulteriore punto intelligenza. Adesso, hai $punto_int_n punti intelligenza!//]]</tw-passagedata><tw-passagedata pid="28" name="senza navigatore" tags="Grigio_c T_Nero" position="1803,800" size="100,100">
-##(text-colour:#339af0)[Viaggiando senza navigatore]
-\
+(set: $flag to 0) \
+(set: $punti_assegnati to 0) \
+(set: $time_ass to 30s) \
+(set: $time_ass_text to $time_ass / 1000) \
+(live: $time_ass)[(set: $flag to 1)] \
+(live: $time_ass + 0.5)[(if: $flag is 1) [(if: $punti_assegnati is 0)[(set: $punti_assegnati to 1)(set: $punti_int to $punti_int + 1)]]] \
+ \
+(live: $time_ass + 0.5)
+|enfat&gt;[Complimenti! Hai passato più di $time_ass_text secondi a leggere il testo. Non solo hai imparato qualcosa che magari ti tornerà magari utile in futuro, ma noi sviluppatori di questo libro-game abbiamo deciso di premiare la tua curiosità con un ulteriore punto intelligenza. Adesso, hai $punti_int //punti intelligenza//!] \
+ \
+(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="28" name="senza navigatore" tags="Grigio_c T_Nero" position="1800,800" size="100,100">
+## Viaggiando senza navigatore
+ \
 Andare in giro per Roma senza navigatore è una scelta per lo meno coraggiosa... 
 
 Ti godi le vie della città eterna, di primissima mattina, quando il traffico non rumoreggia ancora per i viali e la maggior parte delle persone sta dormendo tranquilla nei propri letti. Perlomeno, quelle che non stanno tentando un colpo nei Musei Capitolini!
 
 Arrivato però all’ultimo bivio, è veramente poco chiaro dove devi andare: a destra o a sinistra? Puoi [[chiedere indicazioni]] a una persona che sta camminando al marciapiede poco distante da te e fumando tranquillamente una pipa. Oppure, puoi [[tentare la fortuna]]. \
  \
-(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="29" name="chiedere indicazioni" tags="Grigio_c T_Nero" position="2002,800" size="100,100">
-## (text-colour:#339af0)[Hai chiesto indicazioni]
-\
+(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="29" name="chiedere indicazioni" tags="Grigio_c T_Nero" position="2000,800" size="100,100">
+## Hai chiesto indicazioni
+ \
 (set: $punti_soc to $punti_soc + 1) \
  \
 Ti fermi per domandare indicazioni al signore con la pipa. Questi, affabile, si schernisce: i Musei Capitolini sono letteralmente a un centinaio di metri da dove vi trovate...
@@ -781,16 +815,16 @@ Come hai fatto a non accorgertene? Poi ti chiede se il tuo arrivo centri qualcos
 
 Dopo alcuni altri convenevoli, ti rimetti in cammino: avrai anche perso un po’ di tempo, ma hai migliorato le tue capacità sociali grazie alla scelta di parlare con il signore con la pipa e alla breve ma piacevole conversazione che hai fatto. Ora hai $punti_soc //punti socialità//. 
 
-Imbocchi quindi la direzione corretta, percorri quindi gli ultimi 100 metri e [[arrivi ai Musei Capitolini|2 Introduzione]]. \
+Imbocchi quindi la direzione corretta, percorri quindi gli ultimi 100 metri e [[arrivi ai Musei Capitolini-&gt;2 Introduzione]]. \
  \
-(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="30" name="tentare la fortuna" tags="Grigio_c T_Nero" position="2001,595" size="100,100">
-## (text-colour:#339af0)[Hai tentato la fortuna...]
-\
+(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="30" name="tentare la fortuna" tags="Grigio_c T_Nero" position="2000,600" size="100,100">
+## Hai tentato la fortuna...
+ \
 È il tuo giorno fortunato! Seguendo una sensazione di stomaco, svolti a destra, e dopo pochi metri ti ritrovi di fronte ai Musei Capitolini.
 
 Meno male che non hai perso del tempo a chiedere informazioni su come arrivare a un posto che era letteralmente a 100 metri da dove ti trovavi. Chissà cosa avrebbe pensato di te quel signore con la pipa...
 
-Scendi dunque dall’auto e [[arrivi ai Musei Capitolini|2 Introduzione]]. \
+Scendi dunque dall’auto e [[arrivi ai Musei Capitolini-&gt;2 Introduzione]]. \
  \
 (display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="31" name="2 Fine" tags="T_Nero Grigio_c" position="6100,699" size="100,100">
 ## (text-colour:#74c0fc)[ Il covo di Mercer]]
@@ -825,34 +859,30 @@ La scientifica con le sue tipiche tute inodore e antibatteriche è pronta a scat
 È tutto maniacalmente in ordine e non c’è granché alla fine. L’unica cosa che risalta all’occhio degli agenti è la scrivania, sopra la quale apparentemente non è presente nessun oggetto di grande rilevanza (apparte una pigna di scontrini e fogli) ma non c’è tempo, bisogna provarle tutte, il ladro non può scappare ancora una volta!
 
 [[Guarda il tavolo con gli scontrini|3 Fine]]</tw-passagedata><tw-passagedata pid="32" name="1 Stat" tags="Grigio_c T_Nero" position="2800,900" size="100,100">
-## (text-colour:#339af0)[Decidi cosa fare!]
+## Decidi cosa fare!
+ \
+Arrivat$g a questo punto, hai quattro possibili strade, per acquisire informazioni su:
+* [[le persone non italiane che potrebbero aver compiuto il furto|stranieri Stat]];
+* [[i filmati del furto|filmati Stat]];
+* [[i percorsi nel museo dei possibili sospettati|percorsi Stat]];
+* [[i tempi di percorrenza nel museo dei possibili sospettati|tempi Stat]]. \
+ \
+(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="33" name="stranieri Stat" tags="Grigio_c T_Nero" position="3025,625" size="100,100">
+## Nazionalità dei partecipanti al corso d’arte dei Musei Capitolini
 \
-Arrivato a questo punto, hai quindi quattro possibili strade.
-* [[Controlla quali sono gli stranieri possibili|stranieri Stat]]
-* [[Controlla i filmati del furto|filmati Stat]]
-* [[Controlla i percorsi nel museo dei possibili sospettati|percorsi Stat]]
-* [[Controlla i tempi di percorrenza nel museo dei possibili sospettati|tempi Stat]]</tw-passagedata><tw-passagedata pid="33" name="stranieri Stat" tags="Grigio_c T_Nero" position="3302,1197" size="100,100">
-## (text-colour:#339af0)[Nazionalità dei partecipanti al corso d&#39;arte dei Musei Capitolini]
-\
-(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[&lt;style&gt; img {
-	max-width: 75%;
-	max-height: 100%;
-}
+&lt;img src=&#39;res2/graf1.png&#39; class=&#39;center&#39; width=&#39;600&#39;&gt;
 
-&lt;/style&gt;
-&lt;img
-src=https://i.ibb.co/k2r02Qt/Grafico.png&gt;
-&lt;/div&gt;]
+(if: $flag_stan_Stat is 0) [Prendi in mano il grafico che ti ha fornito un funzionario del museo, appena arrivato, e la osservi con cura. Vedi che la maggioranza degli studenti sono italiani, ma che ci sono pure molti stranieri. Non solo: questi stranieri in grande maggioranza Francesi. Quindi, è possibile che il colpevole sia francese, ma non hai né prove né certezze, arrivati a questo punto. Se pensi di aver bisogno di una mano a capire la tabella, puoi [[mandare un messaggio|scrivi a Rebecca 1]] alla tua amica Rebecca, laureata in statistica e grande esperta di scienza dei dati.]
 
-(if: $flag_stan_Stat is 0)[Prendi in mano il grafico che ti ha fornito un funzionario del museo, appena arrivato, e la osservi con cura. Vedi che la maggioranza degli studenti sono italiani, ma che ci sono pure molti stranieri. Non solo: questi stranieri in grande maggioranza Francesi. Quindi, è possibile che il colpevole sia francese, ma non hai né prove né certezze, arrivati a questo punto. Se pensi di aver bisogno di una mano a capire la tabella, puoi [[mandare un messaggio|scrivi a Rebecca 1]] alla tua amica Rebecca, laureata in statistica e grande esperta di scienza dei dati.]
-
-Se vuoi, vai avanti e [[scegli il colpevole|2 Stat]] oppure, [[torna indietro e analizza un&#39;altra prova|1 Stat]].
+Se vuoi, vai avanti e [[scegli il colpevole|2 Stat]] oppure, [[torna indietro e analizza un’altra prova-&gt;1 Stat]].
 
 (set: $Stat2 to false)
 (set: $Tabella2 to false)
 (set: $Stat2tot to false)
 
-(set: $flag_stan_Stat is 1)</tw-passagedata><tw-passagedata pid="34" name="filmati Stat" tags="Grigio_c T_Nero" position="3298,1002" size="100,100">
+(set: $flag_stan_Stat is 1) \
+ \
+(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="34" name="filmati Stat" tags="Grigio_c T_Nero" position="3025,775" size="100,100">
 ## (text-colour:#339af0)[Controlla le telecamere]
 \
 (if: $flag_video_Stat is 0)[Hai chiesto di dare un’occhiata ai filmati di sicurezza. Vieni condotto in una stanzetta scura, nei meandri del museo. Ti fanno sedere davanti ad uno schermo e inizi a guardare le riprese.
@@ -873,7 +903,7 @@ Il ladro è entrato nel museo a volto coperto, indossando un casco. Chiaramente 
 
 Se vuoi, vai avanti e prova comunque a [[scegliere il colpevole|2 Stat]] oppure, [[torna indietro e analizza un&#39;altra prova|1 Stat]].
 
-(set: $flag_video_Stat to 1)</tw-passagedata><tw-passagedata pid="35" name="percorsi Stat" tags="Grigio_c T_Nero" position="3298,798" size="100,100">
+(set: $flag_video_Stat to 1)</tw-passagedata><tw-passagedata pid="35" name="percorsi Stat" tags="Grigio_c T_Nero" position="3025,925" size="100,100">
 ## (text-colour:#339af0)[Visualizza i percorsi]
 \
 (if: $flag_percorsi_Stat is 0)[Un giro di telefonate e il supporto di uno dei tecnici informatici del museo ti permette di avere sotto mano le heatmap dei percorsi di tutti gli studenti del corso che hanno visitato il museo nell&#39;ultima settimana, e fra i quali, verosimilmente, si nasconde la persona che ha lasciato il manuale d&#39;arte in inglese.]
@@ -890,7 +920,7 @@ Se vuoi, vai avanti e prova comunque a [[scegliere il colpevole|2 Stat]] oppure,
 
 Se vuoi, vai avanti e [[scegli il colpevole|2 Stat]] oppure, [[torna indietro e analizza un&#39;altra prova|1 Stat]]. Infine, se pensi di aver bisogno di una spiegazione sulle heatmap, puoi [[mandare un messaggio|scrivi a Rebecca 2]] alla tua amica Rebecca, laureata in statistica e grande esperta di scienza dei dati.
 
-(set: $flag_percorsi_Stat to 1)</tw-passagedata><tw-passagedata pid="36" name="tempi Stat" tags="Grigio_c T_Nero" position="3298,401" size="100,100">
+(set: $flag_percorsi_Stat to 1)</tw-passagedata><tw-passagedata pid="36" name="tempi Stat" tags="Grigio_c T_Nero" position="3025,1075" size="100,100">
 ### (text-colour:#339af0)[Tempi di percorrenza]
 
 (if: $flag_tempi_Stat is 0)[Ti rechi nell&#39;ufficio gestione flussi del museo, dove un addetto è appena arrivato e si sta giusto levando un cappotto leggero. Ti presenti e gli spieghi ciò di cui ha bisogno. Lui è affabile e disponibile, si mette subito al lavoro. Nel giro di qualche minuti, la stampante inizia a rumoreggiare, e ne viene fuori in pochi secondi uno schema estratto da Excel. &quot;Agente $cognome, questi sono i tempi di percorrenza dall&#39;ingresso all&#39;uscita del museo dei suoi possibili sospettati&quot;.] 
@@ -899,9 +929,9 @@ Se vuoi, vai avanti e [[scegli il colpevole|2 Stat]] oppure, [[torna indietro e 
 
 Se vuoi, vai avanti e [[scegli il colpevole|2 Stat]] oppure, [[torna indietro e analizza un&#39;altra prova|1 Stat]].
 
-(set: $flag_tempi_Stat to 1)</tw-passagedata><tw-passagedata pid="37" name="2 Stat" tags="Grigio_c T_Nero" position="3602,900" size="100,100">
-## (text-colour:#339af0)[Scegli chi accusare?]
-
+(set: $flag_tempi_Stat to 1)</tw-passagedata><tw-passagedata pid="37" name="2 Stat" tags="Grigio_c T_Nero" position="3400,900" size="100,100">
+## Scegli chi accusare?
+ \
 Bene, $nome $cognome, hai analizzato tutte le prove a disposizone. Ora, secondo te, chi fra questi possibili sospettati è il colpevole?
 
 (dropdown: 2bind $stat_scelta_name,&quot;Marco Bagni&quot;, &quot;Andres Salza&quot;,&quot;Chiara Rassio&quot;,&quot;Sofia Cremoli&quot;,&quot;Axel Jorri&quot;,&quot;Beatrice Ravilio&quot;,&quot;Giorgio Entommi&quot;,&quot;Matilde Francolini&quot;,&quot;Rosalie Renoire&quot;,&quot;Franco Drevi&quot;,&quot;David Mercer&quot;,&quot;Valerio Liggio&quot;,&quot;Rebecca Gerri&quot;,&quot;Vittorio Iozzi&quot;,&quot;Damien Bunchard&quot;,&quot;Fabio Bressa&quot;,&quot;Jacopo Attolo&quot;,&quot;Isabelle Tucci&quot;,&quot;Tommaso Millezza&quot;)
@@ -909,21 +939,21 @@ Bene, $nome $cognome, hai analizzato tutte le prove a disposizone. Ora, secondo 
 (live: 1s)[(if: $stat_scelta_name is &quot;David Mercer&quot;)[[[Vai avanti|risp giusta Stat]]]
 (else:)[[[Vai avanti|risp sbagliata Stat]]]]
 
-</tw-passagedata><tw-passagedata pid="38" name="scrivi a Rebecca 1" tags="Grigio_c T_Nero" position="3298,1395" size="100,100">
+</tw-passagedata><tw-passagedata pid="38" name="scrivi a Rebecca 1" tags="Grigio_c T_Nero" position="3200,625" size="100,100">
 ## (text-colour:#339af0)[Chiedi consiglio a Rebecca riguardo la probabilità che il colpevole sia francese]
 \
 Mandi un messaggio a Rebecca, spiegandole la situazione e mandandole la foto del grafico a torta che ti hanno apppena fatto vedere. Lei, nonostante la tarda ora, ti risponde dopo pochi minuti un messaggio abbastanza chiaro. 
 
 //&quot;Ciao $nome!! Sono contenta di sentirti! Come sta andando a Roma? Guarda, la cosa interessante del grafico è che lo puoi risolvere con un giochino di probabilità. Se tu non sapessi che il ladro è straniero, allora avresti il 70% di probabilità che sia italiano, e dovresti andare in quella direzione. Però, una volta che hai già capito che sia straniero, allora quel 70% di probabilità sparisce. Quindi, la probabilità che sia francese è più alta, 26% / 30%, poco meno del 90%. Quindi, non sei ancora cert$g, ma di sicuro è molto probabile che sia francese. Spero di esserti stat$g d&#39;aiuto! Buona serata e in bocca al lupo con l&#39;indagine!!&quot;//
 
-Rileggi più volte il messaggio, cercando di capire che cosa voglia dire Rebecca, che è molto preparata ma ogni tanto usa parole strane. Quando sei soddisfatt$g e hai finalmente capito, vai avanti e [[scegli il colpevole|2 Stat]] oppure, [[torna indietro e analizza un&#39;altra prova|1 Stat]].</tw-passagedata><tw-passagedata pid="39" name="scrivi a Rebecca 2" tags="Grigio_c T_Nero" position="3300,603" size="100,100">
+Rileggi più volte il messaggio, cercando di capire che cosa voglia dire Rebecca, che è molto preparata ma ogni tanto usa parole strane. Quando sei soddisfatt$g e hai finalmente capito, vai avanti e [[scegli il colpevole|2 Stat]] oppure, [[torna indietro e analizza un&#39;altra prova|1 Stat]].</tw-passagedata><tw-passagedata pid="39" name="scrivi a Rebecca 2" tags="Grigio_c T_Nero" position="3200,925" size="100,100">
 ## (text-colour:#339af0)[Chiedi consiglio a Rebecca riguardo le Heatmap]
 \
 Mandi un messaggio a Rebecca, spiegandole la situazione e mandandole la foto del grafico a torta che ti hanno apppena fatto vedere. Lei, nonostante la tarda ora, ti risponde dopo pochi minuti un messaggio abbastanza chiaro. 
 
 //&quot;Ciao $nome!! Sono contenta di sentirti! Come sta andando a Roma? Ooooh , io amoooo le heatmap!!! Vedi, sono degli strumenti semplici ed efficaci. Praticamente, le celle con un colore più intenso sono quelle che descrivono delle zone del museo in cui ha camminato più gente, oppure su cui la singola persona osservata ha camminato di più. Sai come potresti usarla? Cerca di trovare qualche percorso strano, molto diverso dal percorso medio: magari era qualcuno non interessato alle opere d&#39;arte, che stava controllando la sicurezza e le telecamere! A presto!!!&quot;//
 
-Rileggi più volte il messaggio, cercando di capire che cosa voglia dire Rebecca, che è molto preparata ma ogni tanto usa parole strane. Quando sei soddisfatt$g e hai finalmente capito, [[riguarda le heatmap|percorsi Stat]] oppure, [[torna indietro e analizza un&#39;altra prova|1 Stat]].</tw-passagedata><tw-passagedata pid="40" name="risp giusta Stat" tags="Grigio_c T_Nero" position="3800,1001" size="100,100">
+Rileggi più volte il messaggio, cercando di capire che cosa voglia dire Rebecca, che è molto preparata ma ogni tanto usa parole strane. Quando sei soddisfatt$g e hai finalmente capito, [[riguarda le heatmap|percorsi Stat]] oppure, [[torna indietro e analizza un&#39;altra prova|1 Stat]].</tw-passagedata><tw-passagedata pid="40" name="risp giusta Stat" tags="Grigio_c T_Nero" position="3575,975" size="100,100">
 ## (text-colour:#339af0)[Bel colpo, agente $cognome!]
 \
 Come per magia, le prove si mettono in ordine davanti ai tuoi occhi, e all&#39;improvviso tutti i dati che hai letto diventano un&#39;informazione: il sospettato su cui devi concentrarti è David Mercer. 
@@ -933,7 +963,7 @@ Come per magia, le prove si mettono in ordine davanti ai tuoi occhi, e all&#39;i
 (if: $risp_stat_sbagliata is 0)[(set: $new_point to 2)](else:)[(set: $new_point to 1)](set: $punto_int_n to $punto_int_n + $new_point)
 ]
 
-A questo punto, prosegui con le indagini e [[decidi come andare avanti|3 Stat]]. </tw-passagedata><tw-passagedata pid="41" name="risp sbagliata Stat" tags="Grigio_c T_Nero" position="3803,801" size="100,100">
+A questo punto, prosegui con le indagini e [[decidi come andare avanti|3 Stat]]. </tw-passagedata><tw-passagedata pid="41" name="risp sbagliata Stat" tags="Grigio_c T_Nero" position="3575,775" size="100,100">
 ## (text-colour:#339af0)[Purtroppo non è la persona che stavi cercando!]
 \
 Mi spiace, purtroppo quello che hai selezionato non è il colpevole. Puoi [[tornare indietro|2 Stat]], riguardare gli indizi e provare a selezionarne un altro.
@@ -1042,17 +1072,18 @@ Il maresciallo Caputo lascia la stanza, e tu hai un bel da fare a rincorrerlo e 
 Questo errore però ha delle conseguenze: perdi 1 punto socialità, e adesso ne hai $punto_soc_n.
 
 (set: $punto_soc_n to $punto_soc_n - 1)
-</tw-passagedata><tw-passagedata pid="49" name="ACI" tags="Grigio_c T_Nero" position="5100,902" size="100,100">PLACEHOLDER APPROFONDIMENTO SU COSA SIA L&#39;ACI</tw-passagedata><tw-passagedata pid="50" name="credits" tags="" position="1404,1096" size="100,100">&lt;img src=&quot;res1/loghi.png&quot; class=&quot;center&quot;&gt;
+</tw-passagedata><tw-passagedata pid="49" name="ACI" tags="Grigio_c T_Nero" position="5100,902" size="100,100">PLACEHOLDER APPROFONDIMENTO SU COSA SIA L&#39;ACI</tw-passagedata><tw-passagedata pid="50" name="credits" tags="Bianco T_Nero" position="1400,1050" size="100,100">&lt;img src=&quot;res2/loghi.png&quot; class=&quot;center&quot;&gt;
 
 &#39;&#39;Il furto della Lupa Capitolina - Una storia di investigazione, basata sulla scienza dei dati&#39;&#39; è un libro-game realizzato nell’ambito del &#39;&#39;progetto GaLe&#39;&#39; (//Game supported / enhanced Learning//), che ha l’obiettivo di esplorare e sperimentare nella scuola modelli e condizioni di uso di giochi per migliorare l’efficacia dell’apprendimento, nella prospettiva che gli strumenti per giocare siano assimilabili a materiali didattici e nell’ipotesi che possano essere i docenti stessi a progettare e almeno in qualche situazione a realizzare tali materiali.
 
 
 Una sintesi dei contenuti di questo gioco:
-* “scienza dei dati”: campioni di dati; media, minimo e massimo di un campione; comprendere semplici serie storiche; visualizzare dati su una mappa; istogrammi e frequenze; variabili ordinali;
-* altre discipline: arte: Bacio di Hayez e risorgimento; scienze: funzionamento della macchina della verità; storia: attraversare l’Italia in epoche diverse; geografia: dov’è/che cos’è la Brianza; educazione civica: digitalizzazione di archivi pubblici.
+* scienza dei dati: lettura e confronto di semplici probabilità; calcolo della media e differenza di un campione dalla media; heatmap; calcolo del massimo e minimo; variabili numeriche, ordinali e categoriche;
+* altre discipline: Lupa capitolina (arte); targhe automobilistiche (educazione civica); la torre civica di Treviso (storia); risoluzione di sistemi lineari (matematica).
 
 
-&lt;center&gt;&lt;img src=&quot;res1/cc.png&quot; width=&quot;100&quot;&gt;&lt;br&gt;Quest&#39;opera è distribuita con (link-rerun: &quot;Licenza Creative Commons Attribuzione – Non Commerciale – Condividi allo Stesso Modo&quot;)[(open-url: &quot;https://creativecommons.org/licenses/by-nc-sa/4.0/deed.it&quot;)]&lt;/center&gt;
+|centrato&gt;[&lt;img src=&#39;res2/cc.png&#39; width=&#39;100&#39;&gt;
+Quest&#39;opera è distribuita con (link-rerun: &quot;Licenza Creative Commons Attribuzione – Non Commerciale – Condividi allo Stesso Modo&quot;)[(open-url: &quot;https://creativecommons.org/licenses/by-nc-sa/4.0/deed.it&quot;)]]
 
 Il progetto GaLe è promosso dalla (link-rerun: &quot;Camera di Commercio di Varese&quot;)[(open-url: &quot;https://www.va.camcom.it&quot;)] nell’ambito del progetto (link-rerun: &quot;“Interreg Transform”&quot;)[(open-url: &quot;https://www.va.camcom.it/archivio42_transform_0_84.html&quot;)] (finanziato a valere sul Programma Operativo di Cooperazione Transfrontaliera Italia Svizzera 2014-2020) ed è realizzato da (link-rerun: &quot;idea.lab&quot;)[(open-url: &quot;https://idealab.va.it&quot;)] e (link-rerun: &quot;FlipFly&quot;)[(open-url: &quot;https://www.flipfly.it&quot;)] con il supporto dell’(link-rerun: &quot;Ufficio Scolastico Territoriale di Varese&quot;)[(open-url: &quot;https://varese.istruzione.lombardia.gov.it&quot;)].
 
