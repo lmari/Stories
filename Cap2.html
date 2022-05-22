@@ -12,10 +12,19 @@
 <tw-storydata name="Cap2" startnode="1" creator="Twine" creator-version="2.3.16" ifid="BD0D17D2-C4FA-489C-8989-3B18A93EFAFB" zoom="0.6" format="Harlowe" format-version="3.2.3" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">
 /* *** per centrare oggetti html (class='center') *** */
 .center {
-  display: block;  
-  margin-left: auto;  
-  margin-right: auto;  
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
+
+
+/* *** per centrare testo (hook |centrato>) *** */
+tw-hook[name="centrato"] {
+  display: block;
+  text-align: center;
+  border: 3px solid green;
+}
+
 
 /* *** per formattare testo in font più piccolo (hook |piccolo>) *** */
 tw-hook[name="piccolo"] {
@@ -92,8 +101,8 @@ Con che genere vuoi che ci si riferisca a te durante il gioco?
 (live: 1s)[(if: $g is &quot;o&quot;) [&lt;img src=&#39;res2/inv_m.png&#39; class=&#39;center&#39; width=&#39;300&#39;&gt;] (else:) [&lt;img src=&#39;res2/inv_f.png&#39; class=&#39;center&#39; width=&#39;300&#39;&gt;]]
 
 ### (text-colour:#339af0)[&#39;&#39;Detective, dichiara le tue capacità!&#39;&#39;]
-Hai 5 punti a disposizione, da ripartire tra capacità intuitive e capacità relazionali: quanti punti vuoi destinare alle tue capacità intuitive? (dropdown: 2bind $punto_int, &quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;4&quot;)
-Avrai dunque (live: 0.2s)[$punto_soc_n] punti di capacità relazionali.
+Hai 5 punti a disposizione, da ripartire tra intelligenza e capacità relazionali: quanti punti vuoi destinare alla tua intelligenza? (dropdown: 2bind $punti, &quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;4&quot;)
+(live: 0.5s)[Avrai dunque $punti_int //punt(if: $punti_int is 1)[o](else:)[i] intelligenza// e $punti_soc //punt(if: $punti_soc is 1)[o](else:)[i] socialità//].
 
 ---
 
@@ -102,8 +111,9 @@ Avrai dunque (live: 0.2s)[$punto_soc_n] punti di capacità relazionali.
 (live: 0.2s)[(if: $genere is &quot;maschile&quot;) [(set: $g to &quot;o&quot;)] \
 (else:)[(set: $g to &quot;a&quot;)]]
 
-(live: 0.2s)[(set: $punto_int_n to (num: $punto_int))]
-(live: 0.2s)[(set: $punto_soc_n to 5 - $punto_int_n)]
+(live: 0.2s)[(set: $punti_int to (num: $punti))]
+(live: 0.2s)[(set: $punti_soc to 5 - $punti_int)]
+(set: $risp_sbagliate to 0)
 
 (if: (trimmed: &quot; &quot;, $nome) is &quot;&quot;) [(set: $nome to &quot;Alex&quot;)] \
 (if: (trimmed: &quot; &quot;, $cognome) is &quot;&quot;) [(set: $cognome to &quot;Bianchi&quot;)]</tw-passagedata><tw-passagedata pid="2" name="Targhe" tags="Grigio_c T_Nero" position="4598,897" size="100,100">
@@ -457,20 +467,23 @@ Capite subito che, se il frappé viene da un posto così strano, probabilmente d
 (text-colour:#74c0fc)[&#39;&#39;[Maresciallo Caputo]&#39;&#39;]“Detective $nome, guardi! Ho scoperto che quel negozio è presente solo a Treviso. Questo conferma anche il messaggio che abbiamo risolto. Andiamo direttamente lì”
 
 [[Arriva allo StarBanks di Treviso|2 Fine2]]]]</tw-passagedata><tw-passagedata pid="13" name="coordinate" tags="Grigio_c T_Nero" position="1800,998" size="100,100">
-## (text-colour:#339af0)[Cerca di capire le coordinate]
-\
-Come è scritta la seguente coordinata, che indica la posizione dei Musei Capitolini a Roma? “41°53′34.6″N 12°28′57.54″E”
+## (text-colour:#339af0)[Interpreta le coordinate]
+ \
+(set: $extra_punti to 0)
+ \
+Come si interpretano queste coordinate, che indicano la posizione dei Musei Capitolini a Roma?
 
-* Gradi decimali (DD)
-* Gradi, minuti e secondi (DMS)
-* Gradi e minuti decimali (DMM)
+|centrato&gt;[&#39;&#39;41°53′34.6″N 12°28′57.54″E&#39;&#39;]
 
-Come si legge la coordinata?(dropdown: 2bind $risposta_cord_1,&quot;DD&quot;,&quot;DMS&quot;,&quot;DMM&quot;)
+Queste sono coordinate in (dropdown: 2bind $risp_coord_1, &quot;Gradi decimali (DD)&quot;, &quot;Gradi, minuti e secondi (DMS)&quot;,&quot;Gradi e minuti decimali (DMM)&quot;)
 
-(live: 0.5s)[(if: $risposta_cord_1 is &quot;DD&quot;)[[Schiaccia qui se pensi di aver selezionato la risposta corretta|Coordinate 3]](if: $risposta_cord_1 is &quot;DMS&quot;)[[Schiaccia qui se pensi di aver selezionato la risposta corretta|Coordinate 2]](if: $risposta_cord_1 is &quot;DMM&quot;)[[Schiaccia qui se pensi di aver selezionato la risposta corretta|Coordinate 3]]]
-
-(live: 0.5s)[(if: $risposta_cord_1 is &quot;DD&quot;)[(set: $risp_1_errore to 1)](if: $risposta_cord_1 is &quot;DMS&quot;)[(set: $risp_1_errore to 0)](if: $risposta_cord_1 is &quot;DMM&quot;)[(set: $risp_1_errore to 1)]]
-</tw-passagedata><tw-passagedata pid="14" name="Cugino" tags="Grigio_c T_Nero" position="5300,704" size="100,100">
+(link: &quot;Conferma la tua scelta&quot;) [ \
+(if: $risp_coord_1 is &quot;Gradi, minuti e secondi (DMS)&quot;) [ \
+   (set: $extra_punti to 1) + (goto: &quot;Coordinate 2&quot;)]
+(else:) [ \
+   (set: $extra_punti to 0) + (goto: &quot;Coordinate 3&quot;)]] \
+ \
+(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="14" name="Cugino" tags="Grigio_c T_Nero" position="5300,704" size="100,100">
 ## (text-colour:#339af0)[Fatti dare un passaggio dal cugino del maresciallo]
 
 Hai scelto di farti dare un passaggio dal cugino del maresciallo, che è ovviamente disponibile.
@@ -562,25 +575,23 @@ Il libro è stato portato lì da qualcuno interno al museo, a cui era consentito
 </tw-passagedata><tw-passagedata pid="19" name="Coordinate 2" tags="Grigio_c T_Nero" position="2000,1102" size="100,100">
 ## (text-colour:#339af0)[Ancora sulla lettura di coordinate]
 \
-Bravo, riposta corretta. Cerca di capire bene in che direzione muoverti, per arrivare al museo nel minor tempo possibile. 
+Brav$g, risposta corretta. Cerca di capire bene in che direzione muoverti, per arrivare ai Musei nel minor tempo possibile. 
 
-Come si legge la coordinata? Scegli il numero corrispondente a una delle seguenti opzioni?
-1. Quasi 42° a nord dell’equatore in latitudine e a circa 12° a est del meridiano fondamentale in longitudine
-2.	Quasi 42° a nord dell’equatore in longitudine e a circa 12° a est del meridiano fondamentale in latitudine
-3.	Quasi 42° a sud dell’equatore in latitudine e a circa 12° a ovest del meridiano fondamentale in longitudine
-4.	Quasi 42° a sud dell’equatore in longitudine e a circa 12° a ovest del meridiano fondamentale in latitudine
+Come si interpretano dunque le coordinate dei Musei Capitolini? 
 
-Come si legge la coordinata?(dropdown: 2bind $risposta_cord_2,&quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;4&quot;)
-(live: 0.2s)[(if: $risposta_cord_2 is &quot;1&quot;)[(set: $risposta_cord_n_2 to 0)]]
-(live: 0.2s)[(if: $risposta_cord_2 is &quot;2&quot;)[(set: $risposta_cord_n_2 to 1)]]
-(live: 0.2s)[(if: $risposta_cord_2 is &quot;3&quot;)[(set: $risposta_cord_n_2 to 0)]]
-(live: 0.2s)[(if: $risposta_cord_2 is &quot;4&quot;)[(set: $risposta_cord_n_2 to 0)]]
+|centrato&gt;[&#39;&#39;41°53′34.6″N 12°28′57.54″E&#39;&#39;]
 
-=|=
-[[Schiaccia qui se pensi di aver selezionato la risposta corretta|Coordinate 3]]]
-|==|
-(set: $risp_2_errore to 1)
-(if: $risposta_cord_n_2 is 1)[(set: $risp_2_errore to 0)]</tw-passagedata><tw-passagedata pid="20" name="3 Fine" tags="T_Nero Legno" position="6303,698" size="100,100">
+1: quasi 42° a nord dell’equatore in latitudine e a circa 12° a est del meridiano fondamentale in longitudine
+2: quasi 42° a nord dell’equatore in longitudine e a circa 12° a est del meridiano fondamentale in latitudine
+3: quasi 42° a sud dell’equatore in latitudine e a circa 12° a ovest del meridiano fondamentale in longitudine
+4: quasi 42° a sud dell’equatore in longitudine e a circa 12° a ovest del meridiano fondamentale in latitudine
+
+Qual è la tua scelta? (dropdown: 2bind $risp_coord_2, &quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;4&quot;)
+
+(link: &quot;Conferma la tua scelta&quot;) [ \
+(if: $risp_coord_2 is &quot;2&quot;) [(set: $extra_punti to 2)] + (goto: &quot;Coordinate 3&quot;)] \
+ \
+(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="20" name="3 Fine" tags="T_Nero Legno" position="6303,698" size="100,100">
 ## (text-colour:#74c0fc)[Scegli quale oggetto prendere]
 
 (bg:#f1f3f5)[(text-colour:#74c0fc)[&#39;&#39;[Maresciallo Caputo]&#39;&#39;] Detective $nome quale dei seguenti oggetti ci può essere utile?
@@ -714,22 +725,19 @@ Ok, questo va bene: vuol dire che ci possiamo appostare vicino alla lavanderia, 
 (set: $2fine_v to 1)
 </tw-passagedata><tw-passagedata pid="26" name="Coordinate 3" tags="Grigio_c T_Nero" position="2201,998" size="100,100">
 ## (text-colour:#339af0)[Tira le somme sulle coordinate]
-\
-Dalle tue risposte, hai guadagnato $extra_punti punti intelligenza. Adess0, hai ben $punto_int_n punti intelligenza. 
+ \
+(set: $punti_int to $punti_int + $extra_punti) \
+(set: $risp_sbagliate to 2 - $extra_punti) \
+ \
+(if: $extra_punti is 0) [Peccato che tu non ricordassi come interpretare le coordinate geografiche: avresti guadagnato qualche //punto intelligenza//...] \
+(else-if: $extra_punti is 1) [Questa risposta è invece sbagliata, purtroppo... Grazie al buon lavoro a proposito di coordinate geografiche, hai tenuto in allenamento la tua intelligenza, hai guadagnato 1 punto e hai ora $punti_int //punti intelligenza//.] \
+(else:) [Giusto anche questa volta! Grazie al buon lavoro a proposito di coordinate geografiche, hai tenuto in allenamento la tua intelligenza, hai guadagnato 1 punto e hai ora $punti_int //punti intelligenza//.]
 
-Ora, ti trovi di fronte una scelta. Puoi capire che la questione ai musei capitolini potrebbe essere seria, e [[indagare il più velocemente possibile|2 Introduzione]]. Oppure, puoi aprire lo smartphone e leggere come funzionano le coordinate geografiche, e in quale modo si colleghino alla scienza dei dati, clicca su [[coordinate geografiche]].]
+Potresti ora decidere di informarti un poco a proposito di [[coordinate geografiche]].
 
-
-(set: $extra_punti to 0)
-(if: $risposta_cord_n_2 is 1)[(set: $extra_punti to $extra_punti + 1)]
-(if: $risposta_cord_1 is &quot;DMS&quot;)[(set: $extra_punti to $extra_punti + 1)]
-(set: $punto_int_n to $punto_int_n + $extra_punti)
-
-(if: $risposta_cord_cont_2 is 0)[(if: $risposta_cord_n_2 is 1)[(set: $punto_int_n to $punto_int_n + 2)]]
-(set: $risposta_cord_cont_2 to 1)
-
-(set: $risp_sbagliate to $risp_1_errore + $risp_2_errore)
-</tw-passagedata><tw-passagedata pid="27" name="coordinate geografiche" tags="Grigio_c T_Nero" position="2398,1004" size="100,100">
+In ogni caso, stai cominciando a capire che la questione ai Musei Capitolini potrebbe essere seria, e che sia davvero necessario [[proseguire la tua indagine|2 Introduzione]]. \
+ \
+(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="27" name="coordinate geografiche" tags="Grigio_c T_Nero" position="2398,1004" size="100,100">
 ## (text-colour:#339af0)[Un&#39;occhiata a Wikipedia]
 
 Apri Wikipedia dal tuo device mobile e cerchi coordinate geografiche. Ti si para davanti un&#39;interessante pagina. Il tuo istinto ti dice che rimanere a leggere la pagina almeno 30 secondi potrebbe farti bene...
@@ -750,21 +758,35 @@ Ora che sei un po&#39; più esperto di dati e coordinate geografiche, [[prosegui
 (live: $time_ass  + 0.5)[(bg:magenta)[//Complimenti! Hai passato più di $time_ass_text secondi a leggere il testo. Non solo hai imparato qualcosa che magari ti tornerà magari utile in futuro, ma noi sviluppatori di questo libro-game abbiamo deciso di premiare la tua curiosità con un ulteriore punto intelligenza. Adesso, hai $punto_int_n punti intelligenza!//]]</tw-passagedata><tw-passagedata pid="28" name="senza navigatore" tags="Grigio_c T_Nero" position="1803,800" size="100,100">
 ##(text-colour:#339af0)[Viaggiando senza navigatore]
 \
-Andare in giro per Roma senza navigatore è una scelta per lo mano coraggiosa. Ti godi le vie della città eterna, di primissima mattina, quando il traffico non rumoreggia ancora per i viali e la maggior parte delle persone sta dormendo tranquille nei propri letti. Perlomeno, quelle che non stanno tentando un colpo nei musei Capitolini  Arrivato però all&#39;ultimo bivio, è veramente poco chiaro dove devi andare: a destra o a sinistra? Puoi [[chiedere indicazioni]] a un signore che sta camminando a bordo strada, fumando tranquillamente una pipa. Oppure, puoi [[tentare la fortuna]]. </tw-passagedata><tw-passagedata pid="29" name="chiedere indicazioni" tags="Grigio_c T_Nero" position="2002,800" size="100,100">
+Andare in giro per Roma senza navigatore è una scelta per lo meno coraggiosa... 
+
+Ti godi le vie della città eterna, di primissima mattina, quando il traffico non rumoreggia ancora per i viali e la maggior parte delle persone sta dormendo tranquilla nei propri letti. Perlomeno, quelle che non stanno tentando un colpo nei Musei Capitolini!
+
+Arrivato però all’ultimo bivio, è veramente poco chiaro dove devi andare: a destra o a sinistra? Puoi [[chiedere indicazioni]] a una persona che sta camminando al marciapiede poco distante da te e fumando tranquillamente una pipa. Oppure, puoi [[tentare la fortuna]]. \
+ \
+(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="29" name="chiedere indicazioni" tags="Grigio_c T_Nero" position="2002,800" size="100,100">
 ## (text-colour:#339af0)[Hai chiesto indicazioni]
 \
-Ti fermi per domandare indicazioni al signore con la pipa. Questi, affabile, ti schernisce, perché i Musei Capitolini sono letteralmente a un centinaio di metri da dove sei te. Ma come hai fatto a non accorgertene? Poi ti chiede se il tuo arrivo centri qualcosa con la sirena.
-&quot;Ovviamente&quot; rispondi. &quot;Non sappiamo ancora perché l&#39;allarme sia suonato, ma magari ha qualcosa a che fare con il furto della lupa di un paio di giorni fa&quot;. 
+(set: $punti_soc to $punti_soc + 1) \
+ \
+Ti fermi per domandare indicazioni al signore con la pipa. Questi, affabile, si schernisce: i Musei Capitolini sono letteralmente a un centinaio di metri da dove vi trovate...
 
-Dopo un altro po&#39; di convenienti, ti rimetti in viaggio, ma prima guadagni un punto socialità grazie alla scelta di parlare con il signore con la pipa e la breve ma piacevole conversazione che hai fatto. Ora hai $punto_soc_n punti socialità. 
+Come hai fatto a non accorgertene? Poi ti chiede se il tuo arrivo centri qualcosa con la sirena. &quot;Ovviamente&quot;, rispondi. &quot;Non sappiamo ancora perché l’allarme sia suonato, ma magari ha qualcosa a che fare con il furto della Lupa di un paio di giorni fa.&quot;
 
-Imbocchi quindi la direzione corretta, percorri quindi gli ultimi 100 metri e [[arriva ai Musei Capitolini|2 Introduzione]].
+Dopo alcuni altri convenevoli, ti rimetti in cammino: avrai anche perso un po’ di tempo, ma hai migliorato le tue capacità sociali grazie alla scelta di parlare con il signore con la pipa e alla breve ma piacevole conversazione che hai fatto. Ora hai $punti_soc //punti socialità//. 
 
-(set: $punto_soc_n to $punto_soc_n + 1)</tw-passagedata><tw-passagedata pid="30" name="tentare la fortuna" tags="Grigio_c T_Nero" position="2001,595" size="100,100">
-## (text-colour:#339af0)[Hai tentato la fortuna!]
+Imbocchi quindi la direzione corretta, percorri quindi gli ultimi 100 metri e [[arrivi ai Musei Capitolini|2 Introduzione]]. \
+ \
+(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="30" name="tentare la fortuna" tags="Grigio_c T_Nero" position="2001,595" size="100,100">
+## (text-colour:#339af0)[Hai tentato la fortuna...]
 \
-È il tuo giorno fortunato! Seguendo una sensazione di stomaco, svolti a destra, e dopo pochi mesi ti ritrovi ai musei capitolini. Meno male che non hai perso del tempo a chiedere un signore qualunque come arrivare a un posto che era letteralmente a 100 metri da dove ti trovavi. Chiss° cosa avrebbe pensato di te! Scendi dall&#39;auto e [[arrivi ai Musei Capitolini|2 Introduzione]].
-</tw-passagedata><tw-passagedata pid="31" name="2 Fine" tags="T_Nero Grigio_c" position="6100,699" size="100,100">
+È il tuo giorno fortunato! Seguendo una sensazione di stomaco, svolti a destra, e dopo pochi metri ti ritrovi di fronte ai Musei Capitolini.
+
+Meno male che non hai perso del tempo a chiedere informazioni su come arrivare a un posto che era letteralmente a 100 metri da dove ti trovavi. Chissà cosa avrebbe pensato di te quel signore con la pipa...
+
+Scendi dunque dall’auto e [[arrivi ai Musei Capitolini|2 Introduzione]]. \
+ \
+(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="31" name="2 Fine" tags="T_Nero Grigio_c" position="6100,699" size="100,100">
 ## (text-colour:#74c0fc)[ Il covo di Mercer]]
 
 Gli agenti e tu, Detective $nome, siete arrivati nel minor tempo possibile 
@@ -1032,7 +1054,12 @@ Il progetto GaLe è promosso dalla (link-rerun: &quot;Camera di Commercio di Var
 [[Torna al gioco-&gt;frontespizio]]</tw-passagedata><tw-passagedata pid="51" name="start" tags="" position="1200,900" size="100,100">(if: &quot;auto&quot; is in (saved-games:)) [(load-game: &quot;auto&quot;)]
 (else:) [(go-to: &quot;frontespizio&quot;)]</tw-passagedata><tw-passagedata pid="52" name="piepagina" tags="" position="1400,700" size="100,100">&lt;!-- deve essere incluso esplicitamente, con: (display: &quot;piepagina&quot;) --&gt;
 ---
-|piccolo&gt;[(se preferisci, [[puoi sempre ricominciare il gioco dall’inizio-&gt;frontespizio]])]</tw-passagedata></tw-storydata>
+|piccolo&gt;[([[puoi sempre ricominciare il gioco dall’inizio-&gt;frontespizio]] -- hai $punti_int //punt(if: $punti_int is 1)[o](else:)[i] intelligenza// e $punti_soc //punt(if: $punti_soc is 1)[o](else:)[i] socialità//)]</tw-passagedata><tw-passagedata pid="53" name="include" tags="header" position="1257.6666666666665,698.3333333333334" size="100,100">&lt;!-- dei default, anche per rendere più semplice il testing in fase di sviluppo --&gt; \
+(if: $nome is 0) [(set: $nome to &quot;Alex&quot;)] \
+(if: $cognome is 0) [(set: $cognome to &quot;Bianchi&quot;)] \
+(if: $punti_int is 0) [(set: $punti_int to 1)] \
+(if: $punti_soc is 0) [(set: $punti_soc to 4)] \
+(if: $g is 0) [(set: $g to &quot;a&quot;)]</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">"use strict";var _slicedToArray=function(){return function(e,t){if(Array.isArray(e))return e;if(Symbol.iterator in Object(e))return function(e,t){var n=[],r=!0,a=!1,i=void 0;try{for(var o,s=e[Symbol.iterator]();!(r=(o=s.next()).done)&&(n.push(o.value),!t||n.length!==t);r=!0);}catch(e){a=!0,i=e}finally{try{!r&&s.return&&s.return()}finally{if(a)throw i}}return n}(e,t);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}!function(){
 /**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
