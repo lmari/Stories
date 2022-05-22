@@ -300,7 +300,9 @@ Ieri sera però è successa una cosa strana, che col senno di poi potrebbe esser
 
 Finita questa fruttuosa conversazione, effettui con i colleghi un’ispezione sul campo, senza però ottenere alcun risultato: più ci pensi, più ti convinci che non abbia senso. C’è una cosa però che ti preoccupa più delle altre: chi ti ha mandato quel messaggio la mattina del 20 aprile, prima ancora che ti scrivesse il commissario Tomba per avvisarti? Magari era solo uno scherzo, ma tu hai il sospetto che ci sia qualcuno che si stia prendendo gioco di te. Magari, sospetti, è la stessa persona coinvolta nel furto del &#39;&#39;Bacio di Hayez&#39;&#39;...
 
-Dopo due lunghi giorni di indagini infruttuose, arriva una chiamata nella prima mattinata. È il maresciallo Caputo che ti dice di correre ai Musei Capitolini. Tu ci pensi subito: i Musei Capitolini sono proprio accanto alla Piazza del Campidoglio. Sarà una coincidenza? Non credi proprio! A questo punto, hai due strade possibili. Puoi cercare le [[coordinate]] dei Musei Capitolini, e poi capire come usarle per metterle sul tuo navigatore GPS, per arrivare prima sulla scena del crimine. Oppure, puoi andare [[senza navigatore]], rischiando di perderti ma anche conoscendo un po’ meglio la città, dato che comunque sei stato in quell’area giusto due giorni prima e dovresti perciò ricordarti il tragitto. \
+Dopo due lunghi giorni di indagini infruttuose, arriva una chiamata nella prima mattinata. È il maresciallo Caputo che ti dice di correre ai Musei Capitolini: sta suonando un allarme!
+
+Tu ci pensi subito: i Musei Capitolini sono proprio accanto alla Piazza del Campidoglio. Sarà una coincidenza? Non credi proprio... A questo punto, hai due strade possibili. Puoi cercare le [[coordinate]] dei Musei Capitolini, e poi capire come usarle per metterle sul tuo navigatore GPS, per arrivare prima sulla scena del crimine. Oppure, puoi andare [[senza navigatore]], rischiando di perderti ma anche conoscendo un po’ meglio la città, dato che comunque sei stato in quell’area giusto due giorni prima e dovresti perciò ricordarti il tragitto. \
  \
 (display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="8" name="3 Esatto" tags="Grigio_c T_Nero" position="5499,797" size="100,100">
 ## (text-colour:#339af0)[Ispeziona il furgoncino]
@@ -384,69 +386,73 @@ Mettendo la mano dentro il veicolo, trovi un modo per aprire la portiera ed entr
 (set: $soluzione_val to 0)
 
 (if: $flag_rebus is 0)[&lt;audio src=&quot;https://cdn.pixabay.com/download/audio/2022/04/19/audio_37bb6e26a7.mp3?filename=suono-messaggio-109758.mp3
-autoplay&gt;&lt;/audio&gt;]</tw-passagedata><tw-passagedata pid="11" name="2 Introduzione" tags="Grigio_c T_Nero" position="2600,904" size="100,100">
+autoplay&gt;&lt;/audio&gt;]</tw-passagedata><tw-passagedata pid="11" name="2 Introduzione" tags="Grigio_c T_Nero" position="2600,900" size="100,100">
 ## (text-colour:#339af0)[Ispezione dei Musei Capitolini]
 \
-Arrivato sulla scena del crimine, ti imbatti subito nel Maresciallo Caputo, che ti viene incontro chiaramente preoccupato, il viso scuro. 
-(text-colour:#74c0fc)[&#39;&#39;[Maresciallo Caputo]&#39;&#39;]“Carissimo agente $nome, sono felice che sia riuscit$g ad arrivare così in fretta, la ringrazio moltissimo. Io sono qui giusto da qualche minuto, e non ho trovato nulla di strano, per adesso. Certo che però si tratta di una strana coincidenza, che proprio l&#39;allarme dei Musei Capitolini suoni due giorni dopo il furto della lupa dalla piazza. Cosa pensa che sia accaduto?”
+Arrivat$g sulla scena del crimine, ti imbatti subito nel Maresciallo Caputo, che ti viene incontro chiaramente preoccupato, il viso scuro.
 
-(text-colour:#74c0fc)[&#39;&#39;[Detective $nome]&#39;&#39;]“Ma guardi, se i tecnici dell’impianto allarme confermano che è tutto in regola e perfettamente funzionante, e pure le pattuglie garantiscono che hanno eseguito a perfezione il protocollo per arrivare qui il prima possibile, proprio non mi spiego cosa sia successo. Magari ci stiamo preoccupando per niente, e l&#39;allarme, che è molto sensibile, è stato fatto scattare da un topo o qualche altro animaletto che è riuscito a infilarsi nel museo da qualche pertugio. Dai, allora aspettiamo che i tecnici facciano le rilevazioni, e allontanoci dal trambusto, così possiamo lavorare con un po&#39; silenzio al furto dell&#39;altra sera.”]
+(text-colour:#74c0fc)[&#39;&#39;Maresciallo Caputo&#39;&#39;]: Carissim$g agente $nome, sono felice che sia riuscit$g ad arrivare così in fretta: la ringrazio molto. Io sono qui giusto da qualche minuto, e non ho trovato nulla di strano, per adesso. Certo che però si tratta di una strana coincidenza, che l’allarme dei Musei Capitolini suoni due giorni dopo il furto della Lupa dalla piazza. Cosa pensa che sia accaduto?
 
-Vi allontanate e iniziate a discutere concitati del furto avvenuto due sere prime, mentre la notte lascia spazio definitivamente al giorno e le luci del mattino accarezzano con sempre più forza i tetti della città eterna. 
+|||||=
+(text-colour:#74c0fc)[&#39;&#39;[Detective $nome]&#39;&#39;]: Insomma... Se i tecnici del sistema d’allarme confermano che è tutto in regola e perfettamente funzionante, e le pattuglie garantiscono che hanno eseguito a perfezione il protocollo per arrivare qui il prima possibile, proprio non mi spiego cosa sia successo. Magari ci stiamo preoccupando per niente, e l’allarme, che immagino sia molto sensibile, è stato fatto scattare da un topo o qualche altro animaletto che è riuscito a infilarsi nel museo da qualche pertugio.
+Propongo di aspettare che i tecnici facciano le loro rilevazioni, e allontanoci dal trambusto, così possiamo lavorare con un po’ più di silenzio al furto dell’altra sera.
+=|=
+(if: $g is &quot;o&quot;) [&lt;img src=&#39;res2/inv_m2.png&#39; class=&#39;center&#39; width=&#39;200&#39;&gt;] (else: ) [&lt;img src=&#39;res2/inv_f2.png&#39; class=&#39;center&#39; width=&#39;200&#39;&gt;]
+|==|
 
-(text-colour:#74c0fc)[&#39;&#39;[Maresciallo Caputo]&#39;&#39;]&quot;Ci sono novità? Indizi? Una pista su cui indagare?”
+Vi allontanate e ricominciate a discutere del furto avvenuto due sere prima, mentre la notte lascia spazio definitivamente al giorno e le luci del mattino accarezzano con sempre più forza i tetti della città eterna.
 
-(text-colour:#74c0fc)[&#39;&#39;[Detective $nome]&#39;&#39;]“Non ancora purtroppo, piccole tracce o solo qualche segno lasciato sulla pavimentazione, ma sono prove irrilevanti per ora. Ciò che non mi torna in nessun modo è il movente. Cosa può spingere un criminale a rubare una statua del genere. Non ha neppure un grande valore economico, essendo una copia. Rubare un simbolo del genere è più che altro uno sfregio all&#39;urbe, un danno morale che economico.”
+(text-colour:#74c0fc)[&#39;&#39;Maresciallo Caputo&#39;&#39;]: Ci sono novità? Indizi? Una pista su cui indagare?
 
-(text-colour:#74c0fc)[&#39;&#39;[Maresciallo Caputo]&#39;&#39;]“Ha perfettamente ragione. Ma vedrà, troveremo sicuramente una prova o un indizio che incastrerà il ladro, ne sono certo!&quot;
+|||||=
+(text-colour:#74c0fc)[&#39;&#39;Detective $nome&#39;&#39;]: Non ancora purtroppo: piccole tracce o solo qualche segno lasciato sulla pavimentazione, ma sono prove irrilevanti per ora. Ciò che non mi torna in nessun modo è il movente. Cosa può spingere un criminale a rubare una statua del genere? Non ha neppure un grande valore economico, essendo una copia. Rubare un simbolo del genere è più che altro uno sfregio all’urbe, un danno morale più che economico.
+=|=
+(if: $g is &quot;o&quot;) [&lt;img src=&#39;res2/inv_m2.png&#39; class=&#39;center&#39; width=&#39;200&#39;&gt;] (else: ) [&lt;img src=&#39;res2/inv_f2.png&#39; class=&#39;center&#39; width=&#39;200&#39;&gt;]
+|==|
 
-In quel momento, un uomo della scientifica vi fa cenno da lontano di entrare: evidentemente ci deve essere qualcosa da vedere. Un&#39;impronta digitale, magari, oppure un filmato che possa chiarire l&#39;identità del ladro. Mentre camminate, passi davanti alla statua della Lupa Capitolina, l&#39;originale, e non puoi fare a meno di squadrarla, pensando che sei andat$g a Roma per la sua gemella, che è uguale a parte...a parte...e in quel momento hai un&#39;epifania.
+(text-colour:#74c0fc)[&#39;&#39;Maresciallo Caputo&#39;&#39;]: Ha perfettamente ragione. Ma vedrà, troveremo sicuramente una prova o un indizio che incastrerà il ladro, ne sono certo!
 
-(text-colour:#74c0fc)[&#39;&#39;[Detective $nome]&#39;&#39;]“Un secondo Maresciallo, ho capito cosa ci sta sfuggendo. Non ci posso credere, aspetti che controllo meglio...ma si, è proprio così, anche da vicino. Non ho parole! Maresciallo, questa non è la Lupa Capitolina originale. Non so veramente cosa dire, ce l’hanno fatta sotto il naso&quot;
+In quel momento, un uomo della scientifica vi fa cenno da lontano di entrare: evidentemente ci deve essere qualcosa da vedere. Un’impronta digitale, magari, oppure un filmato che possa chiarire l’identità del ladro. Mentre camminate, passi davanti alla statua della Lupa Capitolina, l’originale, e non puoi fare a meno di squadrarla, pensando che sei venut$g a Roma per la sua gemella, che è uguale a parte... a parte... e in quel momento hai un’epifania.
 
-(text-colour:#74c0fc)[&#39;&#39;[Maresciallo Caputo]&#39;&#39;]“Ma non mi dica che…”
+|||||=
+(text-colour:#74c0fc)[&#39;&#39;Detective $nome&#39;&#39;]: Solo un attimo, Maresciallo: temo di aver capito cosa ci sta sfuggendo. Non ci posso credere, aspetti che controllo meglio... ma sì, è proprio così... Non ho parole! Maresciallo, questa non è la Lupa Capitolina originale. Non so veramente cosa dire, ce l’hanno fatta sotto il naso!
+=|=
+(if: $g is &quot;o&quot;) [&lt;img src=&#39;res2/inv_m2.png&#39; class=&#39;center&#39; width=&#39;200&#39;&gt;] (else: ) [&lt;img src=&#39;res2/inv_f2.png&#39; class=&#39;center&#39; width=&#39;200&#39;&gt;]
+|==|
 
-(text-colour:#74c0fc)[&#39;&#39;[Detective $nome]&#39;&#39;]“Esatto! Questa è la statua della lupa di Piazza del Campidoglio, quella rubata tre notti fa. Ora tutto torna. La statua in piazza era stata rubata solamente come diversivo, dato che la sorveglianza all’esterno è molto più blanda. Il ladro ha studiato tutto nei minimi dettagli, aveva già la statua pronta per sostituirla all’originale con una versione molto simile a primo impatto. In questo modo ha guadagnato del tempo prezioso per la fuga. Nel momento in cui le pattuglie sono accorse al momento dell’allarme e non hanno trovato differenze, proprio perché a primo impatto le differenze non ci sono. Se non fossi appassionat$g di storia dell&#39;arte non me ne sarei mai accort$g neanche io, e magari ci sarebbero volute settimane prima che qualcuno ci facesse caso. Ha fatto tutto questo per prendere tempo, e ci è riuscito, almeno un po&#39;. Adesso ha quattro ore di vantaggio, tutto il tempo necessario per essersi nascosto a dovere. Ma non può farla franca. Quattro ore di vantaggio sono poche, se ti porti dietro una scultura di metallo. Lo prenderemo, ha la mia parola!”
+(text-colour:#74c0fc)[&#39;&#39;Maresciallo Caputo&#39;&#39;]: Ma non mi dica che...
 
-Sei ancora sbalordito, quasi non vuoi credere a ciò che hai appena realizzato. Dentro alla tua testa continua a risuonare una sola domanda: “Quale genio del male potrà mai aver pensato una cosa del genere?”. Il furto è stato compiuto alla perfezione: tutto è in ordine, nulla è rotto, solamente, al posto della statua originale, è presente una sua copia. Ma ormai sei sicuro: la mente diabolica che ha progettato questo furto deve essere la stessa che ha progettato il furto dell&#39;Hayez dalla Pinacoteca di Brera.
+|||||=
+(text-colour:#74c0fc)[&#39;&#39;Detective $nome&#39;&#39;]: Sì, purtroppo! Questa è la statua della Lupa di Piazza del Campidoglio, quella rubata tre notti fa. Ora tutto torna. La statua in piazza era stata rubata solamente come diversivo, dato che la sorveglianza all’esterno è molto più blanda.
+
+Il ladro ha studiato tutto nei minimi dettagli, aveva già la statua pronta per sostituirla all’originale con una versione a prima vista molto simile. In questo modo ha guadagnato del tempo prezioso per la fuga. Se non avessi una certa competenza di storia dell&#39;arte, non me ne sarei mai accort$g neanch’io, e magari ci sarebbero volute settimane prima che qualcuno ci facesse caso. Ha fatto tutto questo per prendere tempo, e ci è riuscito, almeno un po’.
+
+Adesso ha quattro ore di vantaggio, tutto il tempo necessario per essersi nascosto a dovere. Ma non può farla franca. Quattro ore di vantaggio sono poche, se ti porti dietro una scultura di quel peso e di quelle dimensioni. Lo prenderemo, ha la mia parola!
+=|=
+(if: $g is &quot;o&quot;) [&lt;img src=&#39;res2/inv_m2.png&#39; class=&#39;center&#39; width=&#39;200&#39;&gt;] (else: ) [&lt;img src=&#39;res2/inv_f2.png&#39; class=&#39;center&#39; width=&#39;200&#39;&gt;]
+|==|
+
+Sei ancora sbalordito, e quasi non vuoi credere a ciò che hai appena realizzato. Dentro alla tua testa continua a risuonare una sola domanda: “Quale genio del male potrà mai aver pensato una cosa del genere?”. Il furto è stato compiuto alla perfezione: tutto è in ordine, nulla è rotto Solamente, al posto della statua originale, è presente una sua copia. Ma ormai sei sicur$g: la mente diabolica che ha progettato questo furto deve essere la stessa che ha progettato il furto dell&#39;Hayez dalla Pinacoteca di Brera.
 
 Mentre tu rifletti, si avvicinano due agenti di corsa, trafelati.
 
-(text-colour:#74c0fc)[&#39;&#39;[Agente Palladini e Riccardi all’unisono]&#39;&#39;]“Abbiamo delle novità!”
+(text-colour:#74c0fc)[&#39;&#39;Agenti Palladini e Riccardi all’unisono&#39;&#39;]: Abbiamo delle novità!
 
-Questa frase ti desta dal torpore. Di colpo ti riprendi dai tuoi pensieri e ti metti ad ascoltare che cosa hanno da dirti.
+Questa frase ti desta dallo tuo stato di concentrazione: di colpo, lasci i tuoi pensieri e ti metti ad ascoltare che cosa hanno da dirti.
 
-(text-colour:#74c0fc)[&#39;&#39;[Agente Palladini]&#39;&#39;]“Sono state analizzati tutti i filmati delle telecamere all’ora in cui è suonato l’allarme. Effettivamente questa notte qualcuno è entrato nel museo, ma purtroppo non è possibile identificare il ladro perché era a volto coperto.”
+(text-colour:#74c0fc)[&#39;&#39;Agente Palladini&#39;&#39;]: Sono stati analizzati tutti i filmati delle telecamere all’ora in cui è suonato l’allarme. Effettivamente questa notte qualcuno è entrato nel museo, ma purtroppo non è possibile identificare il ladro perché era a volto coperto.
 
-Ciò significa che non c’è tempo da perdere, non puoi più stare lì fermo a riflettere, devi assolutamente riuscire a scovare il ladro e ritrovare la statua.
+Ciò significa che non c’è tempo da perdere, non puoi più stare lì ferm$g a riflettere: devi assolutamente riuscire a scovare il ladro e ritrovare la statua.
 
-Sei nervoso ma anche molto concentrato, hai l’ansia di trovare indizi ma non sai da dove partire. Ad un certo punto vedi avvicinarsi una guardia, cammina con la testa bassa e passo svelto. Ti arriva in fianco e ti consegna un libro.
+Sei nervos$g ma anche molto concentrat$g, hai l’ansia di trovare indizi ma non sai da dove partire. A un certo punto vedi avvicinarsi una guardia, cammina con la testa bassa e passo svelto. Ti arriva in fianco e ti consegna un libro.
 
-(text-colour:#74c0fc)[&#39;&#39;[Guardia]&#39;&#39;]“E’ stato trovato vicino all’uscita di emergenza.”
+(text-colour:#74c0fc)[&#39;&#39;Guardia&#39;&#39;]: E’ stato trovato vicino all’uscita di emergenza.
 
-(if:$g is 0)[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[&lt;style&gt; img {
-	max-width: 75%;
-	max-height: 100%;
-}
+Allunghi le mani, sei molto emozionat$g: sai che questa può essere finalmente la prima prova! Noti subito che è il manuale che il museo rilascia a coloro che studiano per diventare future guide. Quindi, dovrebbe appartenere a uno degli studenti del museo. È come nuovo, senza alcuna sottolineatura, appunto o pieghettatura.
 
-&lt;/style&gt;
-&lt;img
-src=https://i.ibb.co/cFLXHKC/Detective-U2.png&gt;
-&lt;/div&gt;]]
-(if:$g is 1)[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[&lt;style&gt; img {
-	max-width: 75%;
-	max-height: 100%;
-}
+C’è però una cosa interessante: il manuale è la versione scritta in inglese, quella che viene consegnata in dotazione agli stranieri. E allora, potrebbe esserci una persona non italiana coinvolta. Se è una guida, vuol dire che è qualcuno venuto apposta per studiare storia dell’arte, e che non è in Italia da abbastanza tempo da poter usare un manuale in italiano. E visto che per ottenere la cittadinanza è necessario sostenere un test di lingua, è verosimile che identificando i cittadini stranieri si possa trovare il ladro. 
 
-&lt;/style&gt;
-&lt;img
-src=https://assettstemp.yolasite.com/ws/media-library/a871679be03c489d8c9cf2cce4d782f9/detective-donna3.webp&gt;
-&lt;/div&gt;]]
-
-Allunghi le mani, sei molto emozionat$g. Sai che questa può essere finalmente la prima prova. Noti subito che è il manuale che il museo rilascia a coloro che studiano per diventare future guide. Quindi, dovrebbe appartenere a uno degli studenti del museo. È come nuovo, senza alcuna sottolineatura, appunto o pieghettatura.
-C&#39;è però una cosa interessante: il manuale è la versione scritta in inglese, quella che viene consegnata in dotazione agli stranieri. E allora, potrebbe esserci uno straniero coinvolto, e non uno qualunque. Se è una guida, vuol dire che è qualcuno venuto apposta per studiare storia dell&#39;Arte, e che non è in Italia da abbastanza tempo da poter usare un manuale in italiano. E visto che per ottenere la cittadinanza è necessario sostenere un test di lingua, è verosimile che identificando i cittadini stranieri si possa trovare il ladro. 
-
-Quindi, arrivato a questo punti, [[valuta tutte le possibili opzionie|-1 Stat]]] a tua disposizione. \
+Quindi, arrivato a questo punto, [[valuta le possibili opzioni|1 Stat]]] a tua disposizione. \
  \
 (display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="12" name="Fine" tags="Grigio_c T_Nero" position="5904,801" size="100,100">
 ## (text-colour:#74c0fc)[Il colpevole è a Treviso]
@@ -818,7 +824,7 @@ La scientifica con le sue tipiche tute inodore e antibatteriche è pronta a scat
 
 È tutto maniacalmente in ordine e non c’è granché alla fine. L’unica cosa che risalta all’occhio degli agenti è la scrivania, sopra la quale apparentemente non è presente nessun oggetto di grande rilevanza (apparte una pigna di scontrini e fogli) ma non c’è tempo, bisogna provarle tutte, il ladro non può scappare ancora una volta!
 
-[[Guarda il tavolo con gli scontrini|3 Fine]]</tw-passagedata><tw-passagedata pid="32" name="-1 Stat" tags="Grigio_c T_Nero" position="2992,905" size="100,100">
+[[Guarda il tavolo con gli scontrini|3 Fine]]</tw-passagedata><tw-passagedata pid="32" name="1 Stat" tags="Grigio_c T_Nero" position="2800,900" size="100,100">
 ## (text-colour:#339af0)[Decidi cosa fare!]
 \
 Arrivato a questo punto, hai quindi quattro possibili strade.
@@ -840,7 +846,7 @@ src=https://i.ibb.co/k2r02Qt/Grafico.png&gt;
 
 (if: $flag_stan_Stat is 0)[Prendi in mano il grafico che ti ha fornito un funzionario del museo, appena arrivato, e la osservi con cura. Vedi che la maggioranza degli studenti sono italiani, ma che ci sono pure molti stranieri. Non solo: questi stranieri in grande maggioranza Francesi. Quindi, è possibile che il colpevole sia francese, ma non hai né prove né certezze, arrivati a questo punto. Se pensi di aver bisogno di una mano a capire la tabella, puoi [[mandare un messaggio|scrivi a Rebecca 1]] alla tua amica Rebecca, laureata in statistica e grande esperta di scienza dei dati.]
 
-Se vuoi, vai avanti e [[scegli il colpevole|2 Stat]] oppure, [[torna indietro e analizza un&#39;altra prova|-1 Stat]].
+Se vuoi, vai avanti e [[scegli il colpevole|2 Stat]] oppure, [[torna indietro e analizza un&#39;altra prova|1 Stat]].
 
 (set: $Stat2 to false)
 (set: $Tabella2 to false)
@@ -865,7 +871,7 @@ Se vuoi, vai avanti e [[scegli il colpevole|2 Stat]] oppure, [[torna indietro e 
 
 Il ladro è entrato nel museo a volto coperto, indossando un casco. Chiaramente che è una persona agile, forte e con grandi abilità manuali: è stato capace di sostituire una statua con cura e senza rompere nulla. Queste sono le uniche informazioni che riesci a trarre da quei pochi secondi di immagini. Non bastano: i dati sono troppo pochi per poter generare dell&#39;informazione valida che consenta di prendere una decisione affidabile, ciò individuare il colpevole.
 
-Se vuoi, vai avanti e prova comunque a [[scegliere il colpevole|2 Stat]] oppure, [[torna indietro e analizza un&#39;altra prova|-1 Stat]].
+Se vuoi, vai avanti e prova comunque a [[scegliere il colpevole|2 Stat]] oppure, [[torna indietro e analizza un&#39;altra prova|1 Stat]].
 
 (set: $flag_video_Stat to 1)</tw-passagedata><tw-passagedata pid="35" name="percorsi Stat" tags="Grigio_c T_Nero" position="3298,798" size="100,100">
 ## (text-colour:#339af0)[Visualizza i percorsi]
@@ -882,7 +888,7 @@ Se vuoi, vai avanti e prova comunque a [[scegliere il colpevole|2 Stat]] oppure,
 
 (align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[&lt;style&gt; img {max-width: 100%; max-height: 100%; } &lt;/style&gt; &lt;img src=https://i.ibb.co/P6jn5pz/Heatmap20.png&gt; &lt;/div&gt;]
 
-Se vuoi, vai avanti e [[scegli il colpevole|2 Stat]] oppure, [[torna indietro e analizza un&#39;altra prova|-1 Stat]]. Infine, se pensi di aver bisogno di una spiegazione sulle heatmap, puoi [[mandare un messaggio|scrivi a Rebecca 2]] alla tua amica Rebecca, laureata in statistica e grande esperta di scienza dei dati.
+Se vuoi, vai avanti e [[scegli il colpevole|2 Stat]] oppure, [[torna indietro e analizza un&#39;altra prova|1 Stat]]. Infine, se pensi di aver bisogno di una spiegazione sulle heatmap, puoi [[mandare un messaggio|scrivi a Rebecca 2]] alla tua amica Rebecca, laureata in statistica e grande esperta di scienza dei dati.
 
 (set: $flag_percorsi_Stat to 1)</tw-passagedata><tw-passagedata pid="36" name="tempi Stat" tags="Grigio_c T_Nero" position="3298,401" size="100,100">
 ### (text-colour:#339af0)[Tempi di percorrenza]
@@ -891,7 +897,7 @@ Se vuoi, vai avanti e [[scegli il colpevole|2 Stat]] oppure, [[torna indietro e 
 
 &lt;style&gt; img {max-width: 50%; max-height: 100%; } &lt;/style&gt; &lt;img src=https://i.ibb.co/4jj0LLG/IMG-8792.jpg&gt; &lt;/div&gt;
 
-Se vuoi, vai avanti e [[scegli il colpevole|2 Stat]] oppure, [[torna indietro e analizza un&#39;altra prova|-1 Stat]].
+Se vuoi, vai avanti e [[scegli il colpevole|2 Stat]] oppure, [[torna indietro e analizza un&#39;altra prova|1 Stat]].
 
 (set: $flag_tempi_Stat to 1)</tw-passagedata><tw-passagedata pid="37" name="2 Stat" tags="Grigio_c T_Nero" position="3602,900" size="100,100">
 ## (text-colour:#339af0)[Scegli chi accusare?]
@@ -910,14 +916,14 @@ Mandi un messaggio a Rebecca, spiegandole la situazione e mandandole la foto del
 
 //&quot;Ciao $nome!! Sono contenta di sentirti! Come sta andando a Roma? Guarda, la cosa interessante del grafico è che lo puoi risolvere con un giochino di probabilità. Se tu non sapessi che il ladro è straniero, allora avresti il 70% di probabilità che sia italiano, e dovresti andare in quella direzione. Però, una volta che hai già capito che sia straniero, allora quel 70% di probabilità sparisce. Quindi, la probabilità che sia francese è più alta, 26% / 30%, poco meno del 90%. Quindi, non sei ancora cert$g, ma di sicuro è molto probabile che sia francese. Spero di esserti stat$g d&#39;aiuto! Buona serata e in bocca al lupo con l&#39;indagine!!&quot;//
 
-Rileggi più volte il messaggio, cercando di capire che cosa voglia dire Rebecca, che è molto preparata ma ogni tanto usa parole strane. Quando sei soddisfatt$g e hai finalmente capito, vai avanti e [[scegli il colpevole|2 Stat]] oppure, [[torna indietro e analizza un&#39;altra prova|-1 Stat]].</tw-passagedata><tw-passagedata pid="39" name="scrivi a Rebecca 2" tags="Grigio_c T_Nero" position="3300,603" size="100,100">
+Rileggi più volte il messaggio, cercando di capire che cosa voglia dire Rebecca, che è molto preparata ma ogni tanto usa parole strane. Quando sei soddisfatt$g e hai finalmente capito, vai avanti e [[scegli il colpevole|2 Stat]] oppure, [[torna indietro e analizza un&#39;altra prova|1 Stat]].</tw-passagedata><tw-passagedata pid="39" name="scrivi a Rebecca 2" tags="Grigio_c T_Nero" position="3300,603" size="100,100">
 ## (text-colour:#339af0)[Chiedi consiglio a Rebecca riguardo le Heatmap]
 \
 Mandi un messaggio a Rebecca, spiegandole la situazione e mandandole la foto del grafico a torta che ti hanno apppena fatto vedere. Lei, nonostante la tarda ora, ti risponde dopo pochi minuti un messaggio abbastanza chiaro. 
 
 //&quot;Ciao $nome!! Sono contenta di sentirti! Come sta andando a Roma? Ooooh , io amoooo le heatmap!!! Vedi, sono degli strumenti semplici ed efficaci. Praticamente, le celle con un colore più intenso sono quelle che descrivono delle zone del museo in cui ha camminato più gente, oppure su cui la singola persona osservata ha camminato di più. Sai come potresti usarla? Cerca di trovare qualche percorso strano, molto diverso dal percorso medio: magari era qualcuno non interessato alle opere d&#39;arte, che stava controllando la sicurezza e le telecamere! A presto!!!&quot;//
 
-Rileggi più volte il messaggio, cercando di capire che cosa voglia dire Rebecca, che è molto preparata ma ogni tanto usa parole strane. Quando sei soddisfatt$g e hai finalmente capito, [[riguarda le heatmap|percorsi Stat]] oppure, [[torna indietro e analizza un&#39;altra prova|-1 Stat]].</tw-passagedata><tw-passagedata pid="40" name="risp giusta Stat" tags="Grigio_c T_Nero" position="3800,1001" size="100,100">
+Rileggi più volte il messaggio, cercando di capire che cosa voglia dire Rebecca, che è molto preparata ma ogni tanto usa parole strane. Quando sei soddisfatt$g e hai finalmente capito, [[riguarda le heatmap|percorsi Stat]] oppure, [[torna indietro e analizza un&#39;altra prova|1 Stat]].</tw-passagedata><tw-passagedata pid="40" name="risp giusta Stat" tags="Grigio_c T_Nero" position="3800,1001" size="100,100">
 ## (text-colour:#339af0)[Bel colpo, agente $cognome!]
 \
 Come per magia, le prove si mettono in ordine davanti ai tuoi occhi, e all&#39;improvviso tutti i dati che hai letto diventano un&#39;informazione: il sospettato su cui devi concentrarti è David Mercer. 
@@ -1054,12 +1060,14 @@ Il progetto GaLe è promosso dalla (link-rerun: &quot;Camera di Commercio di Var
 [[Torna al gioco-&gt;frontespizio]]</tw-passagedata><tw-passagedata pid="51" name="start" tags="" position="1200,900" size="100,100">(if: &quot;auto&quot; is in (saved-games:)) [(load-game: &quot;auto&quot;)]
 (else:) [(go-to: &quot;frontespizio&quot;)]</tw-passagedata><tw-passagedata pid="52" name="piepagina" tags="" position="1400,700" size="100,100">&lt;!-- deve essere incluso esplicitamente, con: (display: &quot;piepagina&quot;) --&gt;
 ---
-|piccolo&gt;[([[puoi sempre ricominciare il gioco dall’inizio-&gt;frontespizio]] -- hai $punti_int //punt(if: $punti_int is 1)[o](else:)[i] intelligenza// e $punti_soc //punt(if: $punti_soc is 1)[o](else:)[i] socialità//)]</tw-passagedata><tw-passagedata pid="53" name="include" tags="header" position="1257.6666666666665,698.3333333333334" size="100,100">&lt;!-- dei default, anche per rendere più semplice il testing in fase di sviluppo --&gt; \
+|piccolo&gt;[([[puoi sempre ricominciare il gioco dall’inizio-&gt;frontespizio]] -- hai $punti_int //punt(if: $punti_int is 1)[o](else:)[i] intelligenza// e $punti_soc //punt(if: $punti_soc is 1)[o](else:)[i] socialità//)]</tw-passagedata><tw-passagedata pid="53" name="include" tags="header" position="1257,698" size="100,100">&lt;!-- dei default, anche per rendere più semplice il testing in fase di sviluppo --&gt; \
 (if: $nome is 0) [(set: $nome to &quot;Alex&quot;)] \
 (if: $cognome is 0) [(set: $cognome to &quot;Bianchi&quot;)] \
 (if: $punti_int is 0) [(set: $punti_int to 1)] \
 (if: $punti_soc is 0) [(set: $punti_soc to 4)] \
-(if: $g is 0) [(set: $g to &quot;a&quot;)]</tw-passagedata></tw-storydata>
+(if: $g is 0) [(set: $g to &quot;a&quot;)] \
+ \
+(if: (passage:)&#39;s name is not &quot;start&quot;) [(save-game: &quot;auto&quot;)]</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">"use strict";var _slicedToArray=function(){return function(e,t){if(Array.isArray(e))return e;if(Symbol.iterator in Object(e))return function(e,t){var n=[],r=!0,a=!1,i=void 0;try{for(var o,s=e[Symbol.iterator]();!(r=(o=s.next()).done)&&(n.push(o.value),!t||n.length!==t);r=!0);}catch(e){a=!0,i=e}finally{try{!r&&s.return&&s.return()}finally{if(a)throw i}}return n}(e,t);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}!function(){
 /**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
