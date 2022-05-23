@@ -516,13 +516,15 @@ Come si interpretano queste coordinate, che indicano la posizione dei Musei Capi
 
 Queste sono coordinate in (dropdown: 2bind $risp_coord_1, &quot;Gradi decimali (DD)&quot;, &quot;Gradi, minuti e secondi (DMS)&quot;,&quot;Gradi e minuti decimali (DMM)&quot;)
 
-(link: &quot;Conferma la tua scelta&quot;) [ \
-(if: $risp_coord_1 is &quot;Gradi, minuti e secondi (DMS)&quot;) [ \
+{(link: &quot;Conferma la tua scelta&quot;) [
+(if: $risp_coord_1 is &quot;Gradi, minuti e secondi (DMS)&quot;) [
    (set: $extra_punti to 1) + (goto: &quot;Coordinate 2&quot;)]
-(else:) [ \
-   (set: $extra_punti to 0) + (goto: &quot;Coordinate 3&quot;)]] \
- \
-(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="14" name="Cugino" tags="Grigio_c T_Nero" position="5300,704" size="100,100">
+(else:) [
+   (set: $extra_punti to 0) + (goto: &quot;Coordinate 3&quot;)]]
+
+|cloacked)[ [[Coordinate 2]] [[Coordinate 3]]]
+
+(display: &quot;piepagina&quot;) }</tw-passagedata><tw-passagedata pid="14" name="Cugino" tags="Grigio_c T_Nero" position="5300,704" size="100,100">
 ## (text-colour:#339af0)[Fatti dare un passaggio dal cugino del maresciallo]
 
 Hai scelto di farti dare un passaggio dal cugino del maresciallo, che è ovviamente disponibile.
@@ -627,10 +629,12 @@ Come si interpretano dunque le coordinate dei Musei Capitolini?
 
 Qual è la tua scelta? (dropdown: 2bind $risp_coord_2, &quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;4&quot;)
 
-(link: &quot;Conferma la tua scelta&quot;) [ \
-(if: $risp_coord_2 is &quot;2&quot;) [(set: $extra_punti to 2)] + (goto: &quot;Coordinate 3&quot;)] \
- \
-(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="20" name="3 Fine" tags="T_Nero Legno" position="6303,698" size="100,100">
+{(link: &quot;Conferma la tua scelta&quot;) [
+(if: $risp_coord_2 is &quot;2&quot;) [(set: $extra_punti to 2)] + (goto: &quot;Coordinate 3&quot;)]
+
+|cloacked)[ [[Coordinate 3]] ]
+
+(display: &quot;piepagina&quot;)}</tw-passagedata><tw-passagedata pid="20" name="3 Fine" tags="T_Nero Legno" position="6303,698" size="100,100">
 ## (text-colour:#74c0fc)[Scegli quale oggetto prendere]
 
 (bg:#f1f3f5)[(text-colour:#74c0fc)[&#39;&#39;[Maresciallo Caputo]&#39;&#39;] Detective $nome quale dei seguenti oggetti ci può essere utile?
