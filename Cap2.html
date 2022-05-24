@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1" name="viewport">
 <title>Cap2</title>
-<style title="Twine CSS">@keyframes appear{0%{opacity:0}to{opacity:1}}@keyframes fade-in-out{0%,to{opacity:0}50%{opacity:1}}@keyframes rumble{25%{top:-0.1em}75%{top:0.1em}0%,to{top:0px}}@keyframes shudder{25%{left:0.1em}75%{left:-0.1em}0%,to{left:0px}}@keyframes buoy{25%{top:0.25em}75%{top:-0.25em}0%,to{top:0px}}@keyframes sway{25%{left:0.25em}75%{left:-0.25em}0%,to{left:0px}}@keyframes pulse{0%{transform:scale(0, 0)}20%{transform:scale(1.2, 1.2)}40%{transform:scale(0.9, 0.9)}60%{transform:scale(1.05, 1.05)}80%{transform:scale(0.925, 0.925)}to{transform:scale(1, 1)}}@keyframes zoom-in{0%{transform:scale(0, 0)}to{transform:scale(1, 1)}}@keyframes shudder-in{0%, to{transform:translateX(0em)}5%, 25%, 45%{transform:translateX(-1em)}15%, 35%, 55%{transform:translateX(1em)}65%{transform:translateX(-0.6em)}75%{transform:translateX(0.6em)}85%{transform:translateX(-0.2em)}95%{transform:translateX(0.2em)}}@keyframes rumble-in{0%, to{transform:translateY(0em)}5%, 25%, 45%{transform:translateY(-1em)}15%, 35%, 55%{transform:translateY(1em)}65%{transform:translateY(-0.6em)}75%{transform:translateY(0.6em)}85%{transform:translateY(-0.2em)}95%{transform:translateY(0.2em)}}@keyframes fidget{0%, 8.1%, 82.1%, 31.1%, 38.1%, 44.1%, 40.1%, 47.1%, 74.1%, 16.1%, 27.1%, 72.1%, 24.1%, 95.1%, 6.1%, 36.1%, 20.1%, 4.1%, 91.1%, 14.1%, 87.1%, to{left:0px;top:0px}8%, 82%, 31%, 38%, 44%{left:-1px}40%, 47%, 74%, 16%, 27%{left:1px}72%, 24%, 95%, 6%, 36%{top:-1px}20%, 4%, 91%, 14%, 87%{top:1px}}@keyframes slide-right{0%{transform:translateX(-100vw)}}@keyframes slide-left{0%{transform:translateX(100vw)}}@keyframes slide-up{0%{transform:translateY(100vh)}}@keyframes slide-down{0%{transform:translateY(-100vh)}}@keyframes fade-right{0%{opacity:0;transform:translateX(-1em)}to{opacity:1}}@keyframes fade-left{0%{opacity:0;transform:translateX(1em)}to{opacity:1}}@keyframes fade-up{0%{opacity:0;transform:translateY(1em)}to{opacity:1}}@keyframes fade-down{0%{opacity:0;transform:translateY(-1em)}to{opacity:1}}@keyframes flicker{0%,29%,31%,63%,65%,77%,79%,86%,88%,91%,93%{opacity:0}30%{opacity:0.2}64%{opacity:0.4}78%{opacity:0.6}87%{opacity:0.8}92%, to{opacity:1}}@keyframes blur{0%{filter:blur(2rem);opacity:0}25%{opacity:1}to{filter:blur(0rem);opacity:1}}.dom-debug-mode tw-story,.dom-debug-mode tw-passage,.dom-debug-mode tw-sidebar,.dom-debug-mode tw-include,.dom-debug-mode tw-hook,.dom-debug-mode tw-expression,.dom-debug-mode tw-link,.dom-debug-mode tw-dialog,.dom-debug-mode tw-columns,.dom-debug-mode tw-column,.dom-debug-mode tw-align{outline:1px solid #f5a3da;min-height:32px;display:block !important}.dom-debug-mode tw-story::before,.dom-debug-mode tw-passage::before,.dom-debug-mode tw-sidebar::before,.dom-debug-mode tw-include::before,.dom-debug-mode tw-hook::before,.dom-debug-mode tw-expression::before,.dom-debug-mode tw-link::before,.dom-debug-mode tw-dialog::before,.dom-debug-mode tw-columns::before,.dom-debug-mode tw-column::before,.dom-debug-mode tw-align::before{position:absolute;top:0;left:0;height:16px;background-color:#f5a3da;color:black;font-size:16px;font-weight:normal;font-style:normal;font-family:monospace;display:inline-block;line-height:100%;white-space:pre;z-index:999997}.dom-debug-mode tw-story:hover,.dom-debug-mode tw-passage:hover,.dom-debug-mode tw-sidebar:hover,.dom-debug-mode tw-include:hover,.dom-debug-mode tw-hook:hover,.dom-debug-mode tw-expression:hover,.dom-debug-mode tw-link:hover,.dom-debug-mode tw-dialog:hover,.dom-debug-mode tw-columns:hover,.dom-debug-mode tw-column:hover,.dom-debug-mode tw-align:hover{outline:1px solid #fc9}.dom-debug-mode tw-story:hover::before,.dom-debug-mode tw-passage:hover::before,.dom-debug-mode tw-sidebar:hover::before,.dom-debug-mode tw-include:hover::before,.dom-debug-mode tw-hook:hover::before,.dom-debug-mode tw-expression:hover::before,.dom-debug-mode tw-link:hover::before,.dom-debug-mode tw-dialog:hover::before,.dom-debug-mode tw-columns:hover::before,.dom-debug-mode tw-column:hover::before,.dom-debug-mode tw-align:hover::before{background-color:#fc9;transition:background-color 1s}.dom-debug-mode tw-passage,.dom-debug-mode tw-include,.dom-debug-mode tw-hook,.dom-debug-mode tw-expression,.dom-debug-mode tw-link,.dom-debug-mode tw-dialog,.dom-debug-mode tw-columns,.dom-debug-mode tw-column,.dom-debug-mode tw-align{padding:1em;margin:0}.dom-debug-mode tw-story::before{content:'<tw-story tags="' attr(tags) '">'}.dom-debug-mode tw-passage::before{top:-16px;content:'<tw-passage tags="' attr(tags) '">'}.dom-debug-mode tw-sidebar::before{top:-16px;content:"<tw-sidebar>"}.dom-debug-mode tw-hook::before{content:'<tw-hook name="' attr(name) '">'}.dom-debug-mode tw-expression::before{content:'<tw-expression name="' attr(name) '">'}.dom-debug-mode tw-link::before{content:'<tw-link name="' attr(name) '">'}.dom-debug-mode tw-dialog::before{content:"<tw-dialog>"}.dom-debug-mode tw-columns::before{content:"<tw-columns>"}.dom-debug-mode tw-column::before{content:"<tw-column>"}.dom-debug-mode tw-align::before{content:"<tw-align>"}.dom-debug-mode tw-include::before{content:'<tw-include type="' attr(type) '" name="' attr(name) '">'}.debug-mode tw-expression{display:inline-block !important}.debug-mode tw-expression[type=variable]::after{font-size:0.8rem;padding-left:0.2rem;padding-right:0.2rem;vertical-align:top;content:"$" attr(name)}.debug-mode tw-expression[type=tempVariable]::after{font-size:0.8rem;padding-left:0.2rem;padding-right:0.2rem;vertical-align:top;content:"_" attr(name)}.debug-mode tw-expression[return=boolean]{background-color:rgba(179,179,179,0.2)}.debug-mode tw-expression[return=array]{background-color:rgba(255,102,102,0.2)}.debug-mode tw-expression[return=dataset]{background-color:rgba(255,128,0,0.2)}.debug-mode tw-expression[return=number]{background-color:rgba(255,179,102,0.2)}.debug-mode tw-expression[return=datamap]{background-color:rgba(255,255,102,0.2)}.debug-mode tw-expression[return=changer]{background-color:rgba(179,255,102,0.2)}.debug-mode tw-expression[return=lambda]{background-color:rgba(102,255,102,0.2)}.debug-mode tw-expression[return=hookname]{background-color:rgba(102,255,204,0.2)}.debug-mode tw-expression[return=string]{background-color:rgba(102,255,255,0.2)}.debug-mode tw-expression[return=datatype]{background-color:rgba(102,153,255,0.2)}.debug-mode tw-expression[return=gradient],.debug-mode tw-expression[return=colour]{background-color:rgba(204,102,255,0.2)}.debug-mode tw-expression[return=instant],.debug-mode tw-expression[return=macro]{background-color:rgba(240,117,199,0.2)}.debug-mode tw-expression[return=command]{background-color:rgba(153,153,255,0.2)}.debug-mode tw-expression.false{background-color:rgba(255,0,0,0.2) !important}.debug-mode tw-expression[type=macro]::before{content:"(" attr(name) ":)";padding:0 0.5rem;font-size:1rem;vertical-align:middle;line-height:normal;background-color:inherit;border:1px solid rgba(255,255,255,0.5)}.debug-mode tw-hook{background-color:rgba(0,85,255,0.1) !important}.debug-mode tw-hook::before{font-size:0.8rem;padding-left:0.2rem;padding-right:0.2rem;vertical-align:top;content:"["}.debug-mode tw-hook::after{font-size:0.8rem;padding-left:0.2rem;padding-right:0.2rem;vertical-align:top;content:"]"}.debug-mode tw-hook[name]::after{font-size:0.8rem;padding-left:0.2rem;padding-right:0.2rem;vertical-align:top;content:"]<" attr(name) "|"}.debug-mode tw-pseudo-hook{background-color:rgba(255,170,0,0.1) !important}.debug-mode tw-collapsed::before{font-size:0.8rem;padding-left:0.2rem;padding-right:0.2rem;vertical-align:top;content:"{"}.debug-mode tw-collapsed::after{font-size:0.8rem;padding-left:0.2rem;padding-right:0.2rem;vertical-align:top;content:"}"}.debug-mode tw-verbatim::before,.debug-mode tw-verbatim::after{font-size:0.8rem;padding-left:0.2rem;padding-right:0.2rem;vertical-align:top;content:"`"}.debug-mode tw-align[style*="text-align: center"]{background:linear-gradient(to right, rgba(255,204,189,0) 0%, rgba(255,204,189,0.25) 50%, rgba(255,204,189,0) 100%)}.debug-mode tw-align[style*="text-align: left"]{background:linear-gradient(to right, rgba(255,204,189,0.25) 0%, rgba(255,204,189,0) 100%)}.debug-mode tw-align[style*="text-align: right"]{background:linear-gradient(to right, rgba(255,204,189,0) 0%, rgba(255,204,189,0.25) 100%)}.debug-mode tw-column{background-color:rgba(189,228,255,0.2)}.debug-mode tw-enchantment{animation:enchantment 0.5s infinite;border:1px solid}.debug-mode tw-link::after,.debug-mode tw-broken-link::after{font-size:0.8rem;padding-left:0.2rem;padding-right:0.2rem;vertical-align:top;content:attr(passage-name)}.debug-mode tw-include{background-color:rgba(204,128,51,0.1)}.debug-mode tw-include::before{font-size:0.8rem;padding-left:0.2rem;padding-right:0.2rem;vertical-align:top;content:attr(type) ' "' attr(name) '"'}@keyframes enchantment{0%,to{border-color:#ffb366}50%{border-color:#6fc}}tw-debugger{position:fixed;box-sizing:border-box;bottom:0;right:0;z-index:999999;min-width:10em;min-height:1em;padding:0em 0.5em 0.5em 1em;font-size:1.25em;font-family:sans-serif;color:#000;border-left:solid #000 2px;border-top:solid #000 2px;border-top-left-radius:.5em;background:#fff;opacity:1}tw-debugger select{margin-right:1em;width:12em}tw-debugger button{border-radius:3px;border:solid #999 1px;margin:auto 4px;background-color:#fff;font-size:inherit;color:#000}tw-debugger button.enabled{background-color:#eee;box-shadow:inset #ddd 3px 5px 0.5em}tw-debugger .panel{display:-ms-flexbox;display:flex;-ms-flex-direction:column;flex-direction:column;position:absolute;bottom:100%;left:-2px;right:0;padding:1em;max-height:40vh;overflow-y:scroll;overflow-x:hidden;z-index:999998;background:#fff;border:inherit;border-bottom:solid #999 2px;border-top-left-radius:.5em;border-bottom-left-radius:.5em;font-size:0.8em}tw-debugger .panel:empty,tw-debugger .panel[hidden]{display:none}tw-debugger .panel-source,tw-debugger .panel-row-source{font-family:monospace;overflow-x:scroll;white-space:pre;-ms-flex-preferred-size:100%;flex-basis:100%}tw-debugger .panel-row-source{margin:5px 0}tw-debugger .panel-rows{width:100%;overflow-x:scroll}tw-debugger .panel-rows>*{display:table-row}tw-debugger .panel-rows>div:nth-of-type(2n){background:#EEE}tw-debugger .panel-row-buttons{text-align:right}tw-debugger .panel-variables .panel-rows:empty::before{content:"~ No variables ~";font-style:italic;color:#888;text-align:center}tw-debugger .panel-enchantments .panel-rows:empty::before{content:"~ No enchantments ~";font-style:italic;color:#888;text-align:center}tw-debugger .panel-errors .panel-rows:empty::before{content:"~ No errors... for now. ~";font-style:italic;color:#888;text-align:center}tw-debugger .panel-rows:empty+.panel-variables-bottom{display:none}tw-debugger .panel-storylets:not(.panel-exclusive) .storylet-exclusive,tw-debugger .panel-storylets:not(.panel-urgent) .storylet-urgent{display:none}tw-debugger .panel-variables-bottom{padding-top:5px}tw-debugger .enchantment-row{min-height:1.5em}tw-debugger .variable-path{opacity:0.4}tw-debugger .temporary-variable-scope,tw-debugger .enchantment-local{font-family:sans-serif;font-weight:normal;opacity:0.8;font-size:0.75em}tw-debugger .temporary-variable-scope:not(:empty)::before,tw-debugger .enchantment-local:not(:empty)::before{content:" in "}tw-debugger .variable-name,tw-debugger .enchantment-name{font-family:monospace;font-weight:bold}tw-debugger .variable-type{color:#444;font-weight:normal;text-overflow:ellipsis;overflow:hidden;max-width:10em}tw-debugger .error-row{display:table-row;background-color:rgba(230,101,204,0.3)}tw-debugger .error-row:nth-of-type(2n){background-color:rgba(237,145,219,0.3)}tw-debugger .error-row>*{display:table-cell;padding:0.25em 0.5em}tw-debugger .error-row .error-message{cursor:help}tw-debugger .error-row .error-passage{color:#444}tw-debugger .storylet-row{background-color:rgba(201,233,222,0.3)}tw-debugger .storylet-row:nth-child(2n){background-color:rgba(128,203,178,0.3)}tw-debugger .storylet-row.storylet-closed{font-style:italic;opacity:0.4;background-color:rgba(217,217,217,0.3)}tw-debugger .storylet-row.storylet-closed:nth-child(2n){background-color:rgba(166,166,166,0.3)}.storylet-error tw-debugger .storylet-row{background-color:rgba(230,101,204,0.3)}.storylet-error tw-debugger .storylet-row:nth-child(2n){background-color:rgba(237,145,219,0.3)}tw-debugger .storylet-row .storylet-name,tw-debugger .storylet-row .storylet-value{display:inline-block;width:50%}tw-debugger .tabs{padding-bottom:0.5em}tw-debugger .tab{border-radius:0px 0px 0.5em 0.5em;border-top:none}tw-debugger .resizer{position:absolute;height:3em;border-left:2px solid #ccc;border-right:2px solid #ccc;top:10px;left:4px;width:8px;cursor:ew-resize}tw-dialog{z-index:999997;border:#fff solid 2px;padding:2em;color:#fff;background-color:#000;display:block}@media (min-width: 576px){tw-dialog{max-width:50vw}}tw-dialog input[type=text]{font-size:inherit;width:100%}tw-dialog-links{text-align:right;display:-ms-flexbox;display:flex;-ms-flex-pack:end;justify-content:flex-end}tw-backdrop{z-index:999996;position:fixed;top:0;left:0;right:0;bottom:0;background-color:rgba(0,0,0,0.8);display:-ms-flexbox;display:flex;-ms-flex-align:center;align-items:center;-ms-flex-pack:center;justify-content:center}tw-backdrop ~ tw-backdrop{display:none}tw-link,.link,tw-icon,.enchantment-clickblock{cursor:pointer}tw-link,.enchantment-link{color:#4169E1;font-weight:bold;text-decoration:none;transition:color 0.2s ease-in-out}tw-passage [style^="color"] tw-link:not(:hover),tw-passage [style*=" color"] tw-link:not(:hover),tw-passage [style^="color"][hover="true"] tw-link:hover,tw-passage [style*=" color"][hover="true"] tw-link:hover,tw-passage [style^="color"] .enchantment-link:not(:hover),tw-passage [style*=" color"] .enchantment-link:not(:hover),tw-passage [style^="color"][hover="true"] .enchantment-link:hover,tw-passage [style*=" color"][hover="true"] .enchantment-link:hover{color:inherit}tw-link:hover,.enchantment-link:hover{color:#00bfff}tw-link:active,.enchantment-link:active{color:#DD4B39}.visited{color:#6941e1}tw-passage [style^="color"] .visited:not(:hover),tw-passage [style*=" color"] .visited:not(:hover),tw-passage [style^="color"][hover="true"] .visited:hover,tw-passage [style*=" color"][hover="true"] .visited:hover{color:inherit}.visited:hover{color:#E3E}tw-broken-link{color:#993333;border-bottom:2px solid #993333;cursor:not-allowed}tw-passage [style^="color"] tw-broken-link:not(:hover),tw-passage [style*=" color"] tw-broken-link:not(:hover),tw-passage [style^="color"][hover="true"] tw-broken-link:hover,tw-passage [style*=" color"][hover="true"] tw-broken-link:hover{color:inherit}.enchantment-mouseover{border-bottom:2px dashed #999}.enchantment-mouseout{border:rgba(64,149,191,0.6) 1px solid}.enchantment-mouseout:hover{background-color:rgba(175,197,207,0.75);border:transparent 1px solid;border-radius:0.2em}.enchantment-clickblock{width:100%;height:100%;display:block}.enchantment-clickblock>:not(tw-enchantment)::after{content:"";width:100%;height:100%;top:0;left:0;display:block;box-sizing:border-box;position:absolute;pointer-events:none;color:rgba(65,105,225,0.5);transition:color 0.2s ease-in-out}.enchantment-clickblock>:not(tw-enchantment):hover::after{color:rgba(0,191,255,0.5)}.enchantment-clickblock>:not(tw-enchantment):active::after{color:rgba(222,78,59,0.5)}.enchantment-clickblock>:not(tw-enchantment)::after{box-shadow:inset 0 0 0 0.5vmax}.enchantment-clickblock>tw-passage::after,.enchantment-clickblock>tw-sidebar::after{box-shadow:0 0 0 0.5vmax}.enchantment-mouseoverblock>:not(tw-enchantment)::after{content:"";width:100%;height:100%;top:0;left:0;display:block;box-sizing:border-box;position:absolute;pointer-events:none;border:2px dashed #999}.enchantment-mouseoutblock>:not(tw-enchantment)::after{content:"";width:100%;height:100%;top:0;left:0;display:block;box-sizing:border-box;position:absolute;pointer-events:none;border:rgba(64,149,191,0.6) 2px solid}.enchantment-mouseoutblock:hover>:not(tw-enchantment)::after{content:"";width:100%;height:100%;top:0;left:0;display:block;box-sizing:border-box;position:absolute;pointer-events:none;background-color:rgba(175,197,207,0.75);border:transparent 2px solid;border-radius:0.2em}tw-link.enchantment-button,.enchantment-link.enchantment-button,.enchantment-button:not(.enchantment-link) tw-link,.enchantment-button:not(.enchantment-link) .enchantment-link{border-radius:16px;border-style:solid;border-width:2px;text-align:center;padding:0px 8px;display:block}tw-dialog-links{padding-top:1.5em}tw-dialog-links tw-link{border-radius:16px;border-style:solid;border-width:2px;text-align:center;padding:0px 8px;display:block;display:inline-block}html{margin:0;height:100%;overflow-x:hidden}*,:before,:after{position:relative;box-sizing:inherit}body{margin:0;height:100%}tw-storydata{display:none}tw-story{display:-ms-flexbox;display:flex;-ms-flex-direction:column;flex-direction:column;font:100% Georgia, serif;box-sizing:border-box;width:100%;min-height:100%;font-size:1.5em;line-height:1.5em;padding:5% 5%;overflow:hidden;background-color:#000;color:#fff}tw-story [style*=content-box] *{box-sizing:border-box}@media (min-width: 576px){tw-story{padding:5% 20%}}tw-story tw-consecutive-br{display:block;height:1.6ex;visibility:hidden}tw-story select{background-color:transparent;font:inherit;border-style:solid;padding:2px}tw-story select:not([disabled]){color:inherit}tw-story textarea{resize:none;background-color:transparent;font:inherit;color:inherit;border-style:none;padding:2px}tw-story input[type=checkbox]{transform:scale(1.5);margin:0 0.5em}tw-story tw-noscript{animation:appear 0.8s}tw-passage{display:block}tw-sidebar{text-align:center;display:-ms-flexbox;display:flex;-ms-flex-pack:justify;justify-content:space-between}@media (min-width: 576px){tw-sidebar{left:-5em;width:3em;position:absolute;-ms-flex-direction:column;flex-direction:column}tw-enchantment[style*="width"]>tw-sidebar{width:inherit}}tw-icon{display:inline-block;margin:0.5em 0;font-size:66px;font-family:"Verdana",sans-serif}tw-icon[alt]{opacity:0.2}tw-icon[alt]:hover{opacity:0.4}tw-icon[data-label]::after{font-weight:bold;content:attr(data-label);font-size:20px;bottom:-20px;left:-50%;white-space:nowrap}tw-meter{display:block}tw-hook:empty,tw-expression:empty{display:none}tw-error{display:inline-block;border-radius:0.2em;padding:0.2em;font-size:1rem;cursor:help;white-space:pre-wrap}tw-error.error{background-color:rgba(223,58,190,0.6);color:#fff}tw-error.warning{background-color:rgba(223,140,58,0.6);color:#fff;display:none}.debug-mode tw-error.warning{display:inline}tw-error-explanation{display:block;font-size:0.8rem;line-height:1rem}tw-open-button,tw-folddown{cursor:pointer;line-height:0em;border-radius:1px;border:1px solid black;font-size:0.8rem;margin:0 0.4rem;padding:2px;white-space:pre}tw-folddown::after{content:"\25b6"}tw-folddown.open::after{content:"\25bc"}tw-open-button::after{content:"Open"}tw-notifier{border-radius:0.2em;padding:0.2em;font-size:1rem;background-color:rgba(223,182,58,0.4);display:none}.debug-mode tw-notifier{display:inline}tw-notifier::before{content:attr(message)}tw-colour{border:1px solid black;display:inline-block;width:1em;height:1em}tw-enchantment:empty{display:none}h1{font-size:3em}h2{font-size:2.25em}h3{font-size:1.75em}h1,h2,h3,h4,h5,h6{line-height:1em;margin:0.3em 0 0.6em 0}pre{font-size:1rem;line-height:initial}small{font-size:70%}big{font-size:120%}mark{color:rgba(0,0,0,0.6);background-color:#ff9}ins{color:rgba(0,0,0,0.6);background-color:rgba(255,242,204,0.5);border-radius:0.5em;box-shadow:0em 0em 0.2em #ffe699;text-decoration:none}center{text-align:center;margin:0 auto;width:60%}blink{text-decoration:none;animation:fade-in-out 1s steps(1, end) infinite alternate}tw-align{display:block}tw-columns{display:-ms-flexbox;display:flex;-ms-flex-direction:row;flex-direction:row;-ms-flex-pack:justify;justify-content:space-between}.transition-in{animation:appear 0ms step-start}.transition-out{animation:appear 0ms step-end}[data-t8n^=dissolve].transition-in,[data-t8n=fade].transition-in{animation:appear .8s}[data-t8n^=dissolve].transition-out,[data-t8n=fade].transition-out{animation:appear .8s reverse}[data-t8n^=shudder].transition-in{display:inline-block !important;animation:shudder-in .8s}[data-t8n^=shudder].transition-out{display:inline-block !important;animation:shudder-in .8s reverse}[data-t8n^=rumble].transition-in{display:inline-block !important;animation:rumble-in .8s}[data-t8n^=rumble].transition-out{display:inline-block !important;animation:rumble-in .8s reverse}[data-t8n^=pulse].transition-in{animation:pulse .8s;display:inline-block !important}[data-t8n^=pulse].transition-out{animation:pulse .8s reverse;display:inline-block !important}[data-t8n^=zoom].transition-in{animation:zoom-in .8s;display:inline-block !important}[data-t8n^=zoom].transition-out{animation:zoom-in .8s reverse;display:inline-block !important}[data-t8n^=blur].transition-in{animation:blur .8s;display:inline-block !important}[data-t8n^=blur].transition-out{animation:blur .8s reverse;display:inline-block !important}[data-t8n^=slideleft].transition-in{animation:slide-left .8s;display:inline-block !important}[data-t8n^=slideleft].transition-out{animation:slide-right .8s reverse;display:inline-block !important}[data-t8n^=slideright].transition-in{animation:slide-right .8s;display:inline-block !important}[data-t8n^=slideright].transition-out{animation:slide-left .8s reverse;display:inline-block !important}[data-t8n^=slideup].transition-in{animation:slide-up .8s;display:inline-block !important}[data-t8n^=slideup].transition-out{animation:slide-down .8s reverse;display:inline-block !important}[data-t8n^=slidedown].transition-in{animation:slide-down .8s;display:inline-block !important}[data-t8n^=slidedown].transition-out{animation:slide-up .8s reverse;display:inline-block !important}[data-t8n^=fadeleft].transition-in{animation:fade-left .8s;display:inline-block !important}[data-t8n^=fadeleft].transition-out{animation:fade-right .8s reverse;display:inline-block !important}[data-t8n^=faderight].transition-in{animation:fade-right .8s;display:inline-block !important}[data-t8n^=faderight].transition-out{animation:fade-left .8s reverse;display:inline-block !important}[data-t8n^=fadeup].transition-in{animation:fade-up .8s;display:inline-block !important}[data-t8n^=fadeup].transition-out{animation:fade-down .8s reverse;display:inline-block !important}[data-t8n^=fadedown].transition-in{animation:fade-down .8s;display:inline-block !important}[data-t8n^=fadedown].transition-out{animation:fade-up .8s reverse;display:inline-block !important}[data-t8n^=flicker].transition-in{animation:flicker .8s}[data-t8n^=flicker].transition-out{animation:flicker .8s reverse}
+<style title="Twine CSS">@keyframes appear{0%{opacity:0}to{opacity:1}}@keyframes fade-in-out{0%,to{opacity:0}50%{opacity:1}}@keyframes rumble{25%{top:-0.1em}75%{top:0.1em}0%,to{top:0px}}@keyframes shudder{25%{left:0.1em}75%{left:-0.1em}0%,to{left:0px}}@keyframes buoy{25%{top:0.25em}75%{top:-0.25em}0%,to{top:0px}}@keyframes sway{25%{left:0.25em}75%{left:-0.25em}0%,to{left:0px}}@keyframes pulse{0%{transform:scale(0, 0)}20%{transform:scale(1.2, 1.2)}40%{transform:scale(0.9, 0.9)}60%{transform:scale(1.05, 1.05)}80%{transform:scale(0.925, 0.925)}to{transform:scale(1, 1)}}@keyframes zoom-in{0%{transform:scale(0, 0)}to{transform:scale(1, 1)}}@keyframes shudder-in{0%, to{transform:translateX(0em)}5%, 25%, 45%{transform:translateX(-1em)}15%, 35%, 55%{transform:translateX(1em)}65%{transform:translateX(-0.6em)}75%{transform:translateX(0.6em)}85%{transform:translateX(-0.2em)}95%{transform:translateX(0.2em)}}@keyframes rumble-in{0%, to{transform:translateY(0em)}5%, 25%, 45%{transform:translateY(-1em)}15%, 35%, 55%{transform:translateY(1em)}65%{transform:translateY(-0.6em)}75%{transform:translateY(0.6em)}85%{transform:translateY(-0.2em)}95%{transform:translateY(0.2em)}}@keyframes fidget{0%, 8.1%, 82.1%, 31.1%, 38.1%, 44.1%, 40.1%, 47.1%, 74.1%, 16.1%, 27.1%, 72.1%, 24.1%, 95.1%, 6.1%, 36.1%, 20.1%, 4.1%, 91.1%, 14.1%, 87.1%, to{left:0px;top:0px}8%, 82%, 31%, 38%, 44%{left:-1px}40%, 47%, 74%, 16%, 27%{left:1px}72%, 24%, 95%, 6%, 36%{top:-1px}20%, 4%, 91%, 14%, 87%{top:1px}}@keyframes slide-right{0%{transform:translateX(-100vw)}}@keyframes slide-left{0%{transform:translateX(100vw)}}@keyframes slide-up{0%{transform:translateY(100vh)}}@keyframes slide-down{0%{transform:translateY(-100vh)}}@keyframes fade-right{0%{opacity:0;transform:translateX(-1em)}to{opacity:1}}@keyframes fade-left{0%{opacity:0;transform:translateX(1em)}to{opacity:1}}@keyframes fade-up{0%{opacity:0;transform:translateY(1em)}to{opacity:1}}@keyframes fade-down{0%{opacity:0;transform:translateY(-1em)}to{opacity:1}}@keyframes flicker{0%,29%,31%,63%,65%,77%,79%,86%,88%,91%,93%{opacity:0}30%{opacity:0.2}64%{opacity:0.4}78%{opacity:0.6}87%{opacity:0.8}92%, to{opacity:1}}@keyframes blur{0%{filter:blur(2rem);opacity:0}25%{opacity:1}to{filter:blur(0rem);opacity:1}}.dom-debug-mode tw-story,.dom-debug-mode tw-passage,.dom-debug-mode tw-sidebar,.dom-debug-mode tw-include,.dom-debug-mode tw-hook,.dom-debug-mode tw-expression,.dom-debug-mode tw-link,.dom-debug-mode tw-dialog,.dom-debug-mode tw-columns,.dom-debug-mode tw-column,.dom-debug-mode tw-align{outline:1px solid #f5a3da;min-height:32px;display:block !important}.dom-debug-mode tw-story::before,.dom-debug-mode tw-passage::before,.dom-debug-mode tw-sidebar::before,.dom-debug-mode tw-include::before,.dom-debug-mode tw-hook::before,.dom-debug-mode tw-expression::before,.dom-debug-mode tw-link::before,.dom-debug-mode tw-dialog::before,.dom-debug-mode tw-columns::before,.dom-debug-mode tw-column::before,.dom-debug-mode tw-align::before{position:absolute;top:0;left:0;height:16px;background-color:#f5a3da;color:black;font-size:16px;font-weight:normal;font-style:normal;font-family:monospace;display:inline-block;line-height:100%;white-space:pre;z-index:999997}.dom-debug-mode tw-story:hover,.dom-debug-mode tw-passage:hover,.dom-debug-mode tw-sidebar:hover,.dom-debug-mode tw-include:hover,.dom-debug-mode tw-hook:hover,.dom-debug-mode tw-expression:hover,.dom-debug-mode tw-link:hover,.dom-debug-mode tw-dialog:hover,.dom-debug-mode tw-columns:hover,.dom-debug-mode tw-column:hover,.dom-debug-mode tw-align:hover{outline:1px solid #fc9}.dom-debug-mode tw-story:hover::before,.dom-debug-mode tw-passage:hover::before,.dom-debug-mode tw-sidebar:hover::before,.dom-debug-mode tw-include:hover::before,.dom-debug-mode tw-hook:hover::before,.dom-debug-mode tw-expression:hover::before,.dom-debug-mode tw-link:hover::before,.dom-debug-mode tw-dialog:hover::before,.dom-debug-mode tw-columns:hover::before,.dom-debug-mode tw-column:hover::before,.dom-debug-mode tw-align:hover::before{background-color:#fc9;transition:background-color 1s}.dom-debug-mode tw-passage,.dom-debug-mode tw-include,.dom-debug-mode tw-hook,.dom-debug-mode tw-expression,.dom-debug-mode tw-link,.dom-debug-mode tw-dialog,.dom-debug-mode tw-columns,.dom-debug-mode tw-column,.dom-debug-mode tw-align{padding:1em;margin:0}.dom-debug-mode tw-story::before{content:'<tw-story tags="' attr(tags) '">'}.dom-debug-mode tw-passage::before{top:-16px;content:'<tw-passage tags="' attr(tags) '">'}.dom-debug-mode tw-sidebar::before{top:-16px;content:"<tw-sidebar>"}.dom-debug-mode tw-hook::before{content:'<tw-hook name="' attr(name) '">'}.dom-debug-mode tw-expression::before{content:'<tw-expression name="' attr(name) '">'}.dom-debug-mode tw-link::before{content:'<tw-link name="' attr(name) '">'}.dom-debug-mode tw-dialog::before{content:"<tw-dialog>"}.dom-debug-mode tw-columns::before{content:"<tw-columns>"}.dom-debug-mode tw-column::before{content:"<tw-column>"}.dom-debug-mode tw-align::before{content:"<tw-align>"}.dom-debug-mode tw-include::before{content:'<tw-include type="' attr(type) '" name="' attr(name) '">'}.debug-mode tw-expression{display:inline-block !important}.debug-mode tw-expression[type=variable]::after{font-size:0.8rem;padding-left:0.2rem;padding-right:0.2rem;vertical-align:top;content:"$" attr(name)}.debug-mode tw-expression[type=tempVariable]::after{font-size:0.8rem;padding-left:0.2rem;padding-right:0.2rem;vertical-align:top;content:"_" attr(name)}.debug-mode tw-expression[return=boolean]{background-color:rgba(179,179,179,0.2)}.debug-mode tw-expression[return=array]{background-color:rgba(255,102,102,0.2)}.debug-mode tw-expression[return=dataset]{background-color:rgba(255,128,0,0.2)}.debug-mode tw-expression[return=number]{background-color:rgba(255,179,102,0.2)}.debug-mode tw-expression[return=datamap]{background-color:rgba(255,255,102,0.2)}.debug-mode tw-expression[return=changer]{background-color:rgba(179,255,102,0.2)}.debug-mode tw-expression[return=lambda]{background-color:rgba(102,255,102,0.2)}.debug-mode tw-expression[return=hookname]{background-color:rgba(102,255,204,0.2)}.debug-mode tw-expression[return=string]{background-color:rgba(102,255,255,0.2)}.debug-mode tw-expression[return=datatype]{background-color:rgba(102,153,255,0.2)}.debug-mode tw-expression[return=gradient],.debug-mode tw-expression[return=colour]{background-color:rgba(204,102,255,0.2)}.debug-mode tw-expression[return=instant],.debug-mode tw-expression[return=macro]{background-color:rgba(240,117,199,0.2)}.debug-mode tw-expression[return=command]{background-color:rgba(153,153,255,0.2)}.debug-mode tw-expression.false{background-color:rgba(255,0,0,0.2) !important}.debug-mode tw-expression[type=macro]::before{content:"(" attr(name) ":)";padding:0 0.5rem;font-size:1rem;vertical-align:middle;line-height:normal;background-color:inherit;border:1px solid rgba(255,255,255,0.5)}.debug-mode tw-hook{background-color:rgba(0,85,255,0.1) !important}.debug-mode tw-hook::before{font-size:0.8rem;padding-left:0.2rem;padding-right:0.2rem;vertical-align:top;content:"["}.debug-mode tw-hook::after{font-size:0.8rem;padding-left:0.2rem;padding-right:0.2rem;vertical-align:top;content:"]"}.debug-mode tw-hook[name]::after{font-size:0.8rem;padding-left:0.2rem;padding-right:0.2rem;vertical-align:top;content:"]<" attr(name) "|"}.debug-mode tw-pseudo-hook{background-color:rgba(255,170,0,0.1) !important}.debug-mode tw-collapsed::before{font-size:0.8rem;padding-left:0.2rem;padding-right:0.2rem;vertical-align:top;content:"{"}.debug-mode tw-collapsed::after{font-size:0.8rem;padding-left:0.2rem;padding-right:0.2rem;vertical-align:top;content:"}"}.debug-mode tw-verbatim::before,.debug-mode tw-verbatim::after{font-size:0.8rem;padding-left:0.2rem;padding-right:0.2rem;vertical-align:top;content:"`"}.debug-mode tw-align[style*="text-align: center"]{background:linear-gradient(to right, rgba(255,204,189,0) 0%, rgba(255,204,189,0.25) 50%, rgba(255,204,189,0) 100%)}.debug-mode tw-align[style*="text-align: left"]{background:linear-gradient(to right, rgba(255,204,189,0.25) 0%, rgba(255,204,189,0) 100%)}.debug-mode tw-align[style*="text-align: right"]{background:linear-gradient(to right, rgba(255,204,189,0) 0%, rgba(255,204,189,0.25) 100%)}.debug-mode tw-column{background-color:rgba(189,228,255,0.2)}.debug-mode tw-enchantment{animation:enchantment 0.5s infinite;border:1px solid}.debug-mode tw-link::after,.debug-mode tw-broken-link::after{font-size:0.8rem;padding-left:0.2rem;padding-right:0.2rem;vertical-align:top;content:attr(passage-name)}.debug-mode tw-include{background-color:rgba(204,128,51,0.1)}.debug-mode tw-include::before{font-size:0.8rem;padding-left:0.2rem;padding-right:0.2rem;vertical-align:top;content:attr(type) ' "' attr(name) '"'}@keyframes enchantment{0%,to{border-color:#ffb366}50%{border-color:#6fc}}tw-debugger{position:fixed;box-sizing:border-box;bottom:0;right:0;z-index:999999;min-width:10em;min-height:1em;padding:0em 0.5em 0.5em 1em;font-size:1.25em;font-family:sans-serif;color:#000;border-left:solid #000 2px;border-top:solid #000 2px;border-top-left-radius:.5em;background:#fff;opacity:1}tw-debugger select{margin-right:1em;width:12em}tw-debugger button{border-radius:3px;border:solid #999 1px;margin:auto 4px;background-color:#fff;font-size:inherit;color:#000}tw-debugger button.enabled{background-color:#eee;box-shadow:inset #ddd 3px 5px 0.5em}tw-debugger .panel{display:-ms-flexbox;display:flex;-ms-flex-direction:column;flex-direction:column;position:absolute;bottom:100%;left:-2px;right:0;padding:1em;max-height:40vh;overflow-y:scroll;overflow-x:hidden;z-index:999998;background:#fff;border:inherit;border-bottom:solid #999 2px;border-top-left-radius:.5em;border-bottom-left-radius:.5em;font-size:0.8em}tw-debugger .panel:empty,tw-debugger .panel[hidden]{display:none}tw-debugger .panel-source,tw-debugger .panel-row-source{font-family:monospace;overflow-x:scroll;white-space:pre;-ms-flex-preferred-size:100%;flex-basis:100%}tw-debugger .panel-row-source{margin:5px 0}tw-debugger .panel-rows{width:100%;overflow-x:scroll}tw-debugger .panel-rows>*{display:table-row}tw-debugger .panel-rows>div:nth-of-type(2n){background:#EEE}tw-debugger .panel-row-buttons{text-align:right}tw-debugger .panel-variables .panel-rows:empty::before{content:"~ No variables ~";font-style:italic;color:#888;text-align:center}tw-debugger .panel-enchantments .panel-rows:empty::before{content:"~ No enchantments ~";font-style:italic;color:#888;text-align:center}tw-debugger .panel-errors .panel-rows:empty::before{content:"~ No errors... for now. ~";font-style:italic;color:#888;text-align:center}tw-debugger .panel-rows:empty+.panel-variables-bottom{display:none}tw-debugger .panel-storylets:not(.panel-exclusive) .storylet-exclusive,tw-debugger .panel-storylets:not(.panel-urgent) .storylet-urgent{display:none}tw-debugger .panel-variables-bottom{padding-top:5px}tw-debugger .enchantment-row{min-height:1.5em}tw-debugger .variable-path{opacity:0.4}tw-debugger .temporary-variable-scope,tw-debugger .enchantment-local{font-family:sans-serif;font-weight:normal;opacity:0.8;font-size:0.75em}tw-debugger .temporary-variable-scope:not(:empty)::before,tw-debugger .enchantment-local:not(:empty)::before{content:" in "}tw-debugger .variable-name,tw-debugger .enchantment-name{font-family:monospace;font-weight:bold}tw-debugger .variable-type{color:#444;font-weight:normal;text-overflow:ellipsis;overflow:hidden;max-width:10em}tw-debugger .error-row{display:table-row;background-color:rgba(230,101,204,0.3)}tw-debugger .error-row:nth-of-type(2n){background-color:rgba(237,145,219,0.3)}tw-debugger .error-row>*{display:table-cell;padding:0.25em 0.5em}tw-debugger .error-row .error-message{cursor:help}tw-debugger .error-row .error-passage{color:#444}tw-debugger .storylet-row{background-color:rgba(201,233,222,0.3)}tw-debugger .storylet-row:nth-child(2n){background-color:rgba(128,203,178,0.3)}tw-debugger .storylet-row.storylet-closed{font-style:italic;opacity:0.4;background-color:rgba(217,217,217,0.3)}tw-debugger .storylet-row.storylet-closed:nth-child(2n){background-color:rgba(166,166,166,0.3)}.storylet-error tw-debugger .storylet-row{background-color:rgba(230,101,204,0.3)}.storylet-error tw-debugger .storylet-row:nth-child(2n){background-color:rgba(237,145,219,0.3)}tw-debugger .storylet-row .storylet-name,tw-debugger .storylet-row .storylet-value{display:inline-block;width:50%}tw-debugger .tabs{padding-bottom:0.5em}tw-debugger .tab{border-radius:0px 0px 0.5em 0.5em;border-top:none}tw-debugger .resizer{position:absolute;height:3em;border-left:2px solid #ccc;border-right:2px solid #ccc;top:10px;left:4px;width:8px;cursor:ew-resize}tw-dialog{z-index:999997;border:#fff solid 2px;padding:2em;color:#fff;background-color:#000;display:block}@media (min-width: 576px){tw-dialog{max-width:50vw}}tw-dialog input[type=text]{font-size:inherit;width:100%}tw-dialog-links{text-align:right;display:-ms-flexbox;display:flex;-ms-flex-pack:end;justify-content:flex-end}tw-backdrop{z-index:999996;position:fixed;top:0;left:0;right:0;bottom:0;background-color:rgba(0,0,0,0.8);display:-ms-flexbox;display:flex;-ms-flex-align:center;align-items:center;-ms-flex-pack:center;justify-content:center}tw-backdrop ~ tw-backdrop{display:none}tw-link,.link,tw-icon,.enchantment-clickblock{cursor:pointer}tw-link,.enchantment-link{color:#4169E1;font-weight:bold;text-decoration:none;transition:color 0.2s ease-in-out}tw-passage [style^="color"] tw-link:not(:hover),tw-passage [style*=" color"] tw-link:not(:hover),tw-passage [style^="color"][hover="true"] tw-link:hover,tw-passage [style*=" color"][hover="true"] tw-link:hover,tw-passage [style^="color"] .enchantment-link:not(:hover),tw-passage [style*=" color"] .enchantment-link:not(:hover),tw-passage [style^="color"][hover="true"] .enchantment-link:hover,tw-passage [style*=" color"][hover="true"] .enchantment-link:hover{color:inherit}tw-link:hover,.enchantment-link:hover{color:#00bfff}tw-link:active,.enchantment-link:active{color:#DD4B39}.visited{color:#6941e1}tw-passage [style^="color"] .visited:not(:hover),tw-passage [style*=" color"] .visited:not(:hover),tw-passage [style^="color"][hover="true"] .visited:hover,tw-passage [style*=" color"][hover="true"] .visited:hover{color:inherit}.visited:hover{color:#E3E}tw-broken-link{color:#993333;border-bottom:2px solid #993333;cursor:not-allowed}tw-passage [style^="color"] tw-broken-link:not(:hover),tw-passage [style*=" color"] tw-broken-link:not(:hover),tw-passage [style^="color"][hover="true"] tw-broken-link:hover,tw-passage [style*=" color"][hover="true"] tw-broken-link:hover{color:inherit}.enchantment-mouseover{border-bottom:2px dashed #999}.enchantment-mouseout{border:rgba(64,149,191,0.6) 1px solid}.enchantment-mouseout:hover{background-color:rgba(175,197,207,0.75);border:transparent 1px solid;border-radius:0.2em}.enchantment-clickblock{width:100%;height:100%;display:block}.enchantment-clickblock>:not(tw-enchantment)::after{content:"";width:100%;height:100%;top:0;left:0;display:block;box-sizing:border-box;position:absolute;pointer-events:none;color:rgba(65,105,225,0.5);transition:color 0.2s ease-in-out}.enchantment-clickblock>:not(tw-enchantment):hover::after{color:rgba(0,191,255,0.5)}.enchantment-clickblock>:not(tw-enchantment):active::after{color:rgba(222,78,59,0.5)}.enchantment-clickblock>:not(tw-enchantment)::after{box-shadow:inset 0 0 0 0.5vmax}.enchantment-clickblock>tw-passage::after,.enchantment-clickblock>tw-sidebar::after{box-shadow:0 0 0 0.5vmax}.enchantment-mouseoverblock>:not(tw-enchantment)::after{content:"";width:100%;height:100%;top:0;left:0;display:block;box-sizing:border-box;position:absolute;pointer-events:none;border:2px dashed #999}.enchantment-mouseoutblock>:not(tw-enchantment)::after{content:"";width:100%;height:100%;top:0;left:0;display:block;box-sizing:border-box;position:absolute;pointer-events:none;border:rgba(64,149,191,0.6) 2px solid}.enchantment-mouseoutblock:hover>:not(tw-enchantment)::after{content:"";width:100%;height:100%;top:0;left:0;display:block;box-sizing:border-box;position:absolute;pointer-events:none;background-color:rgba(175,197,207,0.75);border:transparent 2px solid;border-radius:0.2em}tw-link.enchantment-button,.enchantment-link.enchantment-button,.enchantment-button:not(.enchantment-link) tw-link,.enchantment-button:not(.enchantment-link) .enchantment-link{border-radius:16px;border-style:solid;border-width:2px;text-align:center;padding:0px 8px;display:block}tw-dialog-links{padding-top:1.5em}tw-dialog-links tw-link{border-radius:16px;border-style:solid;border-width:2px;text-align:center;padding:0px 8px;display:block;display:inline-block}html{margin:0;height:100%;overflow-x:hidden}*,:before,:after{position:relative;box-sizing:inherit}body{margin:0;height:100%}tw-storydata{display:none}tw-story{display:-ms-flexbox;display:flex;-ms-flex-direction:column;flex-direction:column;font:100% Georgia, serif;box-sizing:border-box;width:100%;min-height:100%;font-size:1.5em;line-height:1.5em;padding:5% 5%;overflow:hidden;background-color:#000;color:#fff}tw-story [style*=content-box] *{box-sizing:border-box}@media (min-width: 576px){tw-story{padding:5% 20%}}tw-story tw-consecutive-br{display:block;height:1.6ex;visibility:hidden}tw-story select{background-color:transparent;font:inherit;border-style:solid;padding:2px}tw-story select:not([disabled]){color:inherit}tw-story textarea{resize:none;background-color:transparent;font:inherit;color:inherit;border-style:none;padding:2px}tw-story input[type=checkbox]{transform:scale(1.5);margin:0 0.5em}tw-story tw-noscript{animation:appear 0.8s}tw-passage{display:block}tw-sidebar{text-align:center;display:-ms-flexbox;display:flex;-ms-flex-pack:justify;justify-content:space-between}@media (min-width: 576px){tw-sidebar{left:-5em;width:3em;position:absolute;-ms-flex-direction:column;flex-direction:column}tw-enchantment[style*="width"]>tw-sidebar{width:inherit}}tw-icon{display:inline-block;margin:0.5em 0;font-size:66px;font-family:"Verdana",sans-serif}tw-icon[alt]{opacity:0.2}tw-icon[alt]:hover{opacity:0.4}tw-icon[data-label]::after{font-weight:bold;content:attr(data-label);font-size:20px;bottom:-20px;left:-50%;white-space:nowrap}tw-meter{display:block}tw-hook:empty,tw-expression:empty{display:none}tw-error{display:inline-block;border-radius:0.2em;padding:0.2em;font-size:1rem;cursor:help;white-space:pre-wrap}tw-error.error{background-color:rgba(223,58,190,0.6);color:#fff}tw-error.warning{background-color:rgba(223,140,58,0.6);color:#fff;display:none}.debug-mode tw-error.warning{display:inline}tw-error-explanation{display:block;font-size:0.8rem;line-height:1rem}tw-open-button,tw-folddown{cursor:pointer;line-height:0em;border-radius:1px;border:1px solid black;font-size:0.8rem;margin:0 0.4rem;padding:2px;white-space:pre}tw-folddown::after{content:"\25b6"}tw-folddown.open::after{content:"\25bc"}tw-open-button::after{content:"Open"}tw-notifier{border-radius:0.2em;padding:0.2em;font-size:1rem;background-color:rgba(223,182,58,0.4);display:none}.debug-mode tw-notifier{display:inline}tw-notifier::before{content:attr(message)}tw-colour{border:1px solid black;display:inline-block;width:1em;height:1em}tw-enchantment:empty{display:none}h1{font-size:3em}h2{font-size:2.25em}h3{font-size:1.75em}h1,h2,h3,h4,h5,h6{line-height:1em;margin:0.3em 0 0.6em 0}pre{font-size:1rem;line-height:initial}small{font-size:70%}big{font-size:120%}mark{color:rgba(0,0,0,0.6);background-color:#ff9}ins{color:rgba(0,0,0,0.6);background-color:rgba(255,242,204,0.5);border-radius:0.5em;box-shadow:0em 0em 0.2em #ffe699;text-decoration:none}center{text-align:center;margin:0 auto;width:60%}blink{text-decoration:none;animation:fade-in-out 1s steps(1, end) infinite alternate}tw-align{display:block}tw-columns{display:-ms-flexbox;display:flex;-ms-flex-direction:row;flex-direction:row;-ms-flex-pack:justify;justify-content:space-between}.transition-in{animation:appear 0ms step-start}.transition-out{animation:appear 0ms step-end}[data-t8n^=dissolve].transition-in,[data-t8n=fade].transition-in{animation:appear .8s}[data-t8n^=dissolve].transition-out,[data-t8n=fade].transition-out{animation:appear .8s reverse}[data-t8n^=shudder].transition-in{display:inline-block !important;animation:shudder-in .8s}[data-t8n^=shudder].transition-out{display:inline-block !important;animation:shudder-in .8s reverse}[data-t8n^=rumble].transition-in{display:inline-block !important;animation:rumble-in .8s}[data-t8n^=rumble].transition-out{display:inline-block !important;animation:rumble-in .8s reverse}[data-t8n^=pulse].transition-in{animation:pulse .8s;display:inline-block !important}[data-t8n^=pulse].transition-out{animation:pulse .8s reverse;display:inline-block !important}[data-t8n^=zoom].transition-in{animation:zoom-in .8s;display:inline-block !important}[data-t8n^=zoom].transition-out{animation:zoom-in .8s reverse;display:inline-block !important}[data-t8n^=blur].transition-in{animation:blur .8s;display:inline-block !important}[data-t8n^=blur].transition-out{animation:blur .8s reverse;display:inline-block !important}[data-t8n^=slideleft].transition-in{animation:slide-left .8s;display:inline-block !important}[data-t8n^=slideleft].transition-out{animation:slide-right .8s reverse;display:inline-block !important}[data-t8n^=slideright].transition-in{animation:slide-right .8s;display:inline-block !important}[data-t8n^=slideright].transition-out{animation:slide-left .8s reverse;display:inline-block !important}[data-t8n^=slideup].transition-in{animation:slide-up .8s;display:inline-block !important}[data-t8n^=slideup].transition-out{animation:slide-down .8s reverse;display:inline-block !important}[data-t8n^=slidedown].transition-in{animation:slide-down .8s;display:inline-block !important}[data-t8n^=slidedown].transition-out{animation:slide-up .8s reverse;display:inline-block !important}[data-t8n^=fadeleft].transition-in{animation:fade-left .8s;display:inline-block !important}[data-t8n^=fadeleft].transition-out{animation:fade-right .8s reverse;display:inline-block !important}[data-t8n^=faderight].transition-in{animation:fade-right .8s;display:inline-block !important}[data-t8n^=faderight].transition-out{animation:fade-left .8s reverse;display:inline-block !important}[data-t8n^=fadeup].transition-in{animation:fade-up .8s;display:inline-block !important}[data-t8n^=fadeup].transition-out{animation:fade-down .8s reverse;display:inline-block !important}[data-t8n^=fadedown].transition-in{animation:fade-down .8s;display:inline-block !important}[data-t8n^=fadedown].transition-out{animation:fade-up .8s reverse;display:inline-block !important}[data-t8n^=flicker].transition-in{animation:flicker .8s}[data-t8n^=flicker].transition-out{animation:flicker .8s reverse}
 </style>
 </head>
 <body>
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play Cap2.</tw-noscript></noscript></tw-story>
-<tw-storydata name="Cap2" startnode="51" creator="Twine" creator-version="2.3.16" ifid="BD0D17D2-C4FA-489C-8989-3B18A93EFAFB" zoom="0.6" format="Harlowe" format-version="3.2.3" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">tw-story[tags~="Grigio_c"] {
+<tw-storydata name="Cap2" startnode="50" creator="Twine" creator-version="2.3.16" ifid="BD0D17D2-C4FA-489C-8989-3B18A93EFAFB" zoom="0.6" format="Harlowe" format-version="3.2.3" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">tw-story[tags~="Grigio_c"] {
   background-color: #f2f2f2;
 }
 
@@ -115,7 +115,7 @@ tw-story[tags~="Legno"] {
   background-size: 15% 15%;
   background-repeat: repeat;
 }
-</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-tag name="Bianco" color="blue"></tw-tag>,<tw-tag name="Grigio_c" color="green"></tw-tag>,<tw-tag name="Legno" color="yellow"></tw-tag>,<tw-tag name="Pistola" color="yellow"></tw-tag>,<tw-tag name="Postit" color="yellow"></tw-tag>,<tw-tag name="T_Nero" color="orange"></tw-tag>,<tw-tag name="Telefono" color="yellow"></tw-tag><tw-passagedata pid="1" name="frontespizio" tags="Bianco T_Nero" position="1400,900" size="100,100">
+</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-tag name="Bianco" color="blue"></tw-tag>,<tw-tag name="Grigio_c" color="green"></tw-tag>,<tw-tag name="Legno" color="yellow"></tw-tag>,<tw-tag name="Pistola" color="yellow"></tw-tag>,<tw-tag name="Postit" color="yellow"></tw-tag>,<tw-tag name="T_Nero" color="orange"></tw-tag>,<tw-tag name="Telefono" color="yellow"></tw-tag><tw-passagedata pid="1" name="frontespizio" tags="Bianco T_Nero" position="1400,904.9999999999999" size="100,100">
 # Il furto della Lupa capitolina
 ### //Una storia di investigazione,&lt;br&gt;basata sulla scienza dei dati//
 
@@ -148,46 +148,62 @@ Hai 5 punti a disposizione, da ripartire tra intelligenza e capacità relazional
 
 (live: 0.2s)[(set: $punti_int to (num: $punti))]
 (live: 0.2s)[(set: $punti_soc to 5 - $punti_int)]
+\
+&lt;!-- inizializza le variabili globali che sono usate in seguito --&gt;
 (set: $risp_sbagliate to 0)
+(set: $flag_stran_Stat is 0)
+(set: $extra_punti to 0)
+(set: $flag_video_Stat to 0)
+(set: $risp_stat_sbagliata to 0)
+(set: $new_point to 0)
+(set: $controlla_targhe to 0)
+(set: $scontrino1 to 0
+(set: $flag_rebus to 0)
+(set: $soluzione_val to 0)
+(set: $Frappè_ogg to &quot;No&quot;)
+(set: $controlla_postit to 0)
+(set: $scontrino_generico to 0)
 
 (if: (trimmed: &quot; &quot;, $nome) is &quot;&quot;) [(set: $nome to &quot;Alex&quot;)] \
-(if: (trimmed: &quot; &quot;, $cognome) is &quot;&quot;) [(set: $cognome to &quot;Bianchi&quot;)]</tw-passagedata><tw-passagedata pid="2" name="Targhe" tags="Grigio_c T_Nero" position="4598,897" size="100,100">
-## (text-colour:#339af0)[Scova il veicolo del colpevole]
-
+(if: (trimmed: &quot; &quot;, $cognome) is &quot;&quot;) [(set: $cognome to &quot;Bianchi&quot;)]</tw-passagedata><tw-passagedata pid="2" name="Targhe" tags="Grigio_c T_Nero" position="4594.666666666666,897" size="100,100">
+## Scova il veicolo del colpevole
+\
 (if: $controlla_targhe is 0)[In ogni modo, anche se ne conosci l&#39;identità, il ladro è scappato. Devi attivarti per ritrovarlo, e magari recuperare anche il simbolo della città eterna. Arrivato alla centrale di polizia, incontri il maresciallo Caputo che ti viene incontro.
 
-(text-colour:#74c0fc)[&#39;&#39;[Maresciallo Caputo]&#39;&#39;]“Detective, l&#39;agente Riccardi ci ha anticipato e si è messo a controllare i video di una banca che ha sede su via Monte dei Faggi, che è una strada obbligata per lasciare il museo. Si è scritto tutte le targhe delle auto e le relative ore di passaggio. Inoltre, dalle ultime rilevazioni noi sappiamo che, il ladro deve essere uscito dal museo verso le 2:35, e più o meno ci si mette circa 20 minuti ad arrivare a via Monte dei Faggi. Ecco, questa è la lista con tutte le targhe passate dalle 2:30 alle 3:10, che quindi dovrebbe contenere di sicuro il mezzo usato da David Mercer per fuggire. Siamo sicuri di ciò: la probabilità che il mezzo sia fra questi è del 100%. Inoltre, un guardiano notturno ha visto un mezzo muoversi in modo sospettoso vicino al museo. Non ricorda che veicolo fosse, ma ricorda che era moderna, perché aveva avuto l&#39;impressione che fosse stato immatricolato di recente.”]
+(text-colour:$colore_dialogo)[&#39;&#39;[Maresciallo Caputo]&#39;&#39;]: Detective, l&#39;agente Riccardi ci ha anticipato e si è messo a controllare i video di una banca che ha sede su via Monte dei Faggi, che è una strada obbligata per lasciare il museo. Si è scritto tutte le targhe delle auto e le relative ore di passaggio. Inoltre, dalle ultime rilevazioni noi sappiamo che, il ladro deve essere uscito dal museo verso le 2:35, e più o meno ci si mette circa 20 minuti ad arrivare a via Monte dei Faggi. Ecco, questa è la lista con tutte le targhe passate dalle 2:30 alle 3:10, che quindi dovrebbe contenere di sicuro il mezzo usato da David Mercer per fuggire. Siamo sicuri di ciò: la probabilità che il mezzo sia fra questi è del 100%. Inoltre, un guardiano notturno ha visto un mezzo muoversi in modo sospettoso vicino al museo. Non ricorda che veicolo fosse, ma ricorda che era moderna, perché aveva avuto l&#39;impressione che fosse stato immatricolato di recente.] 
+\
+(set: $controlla_targhe to 1)\
 
 Hai quindi a disposizione due dati:
 * sai che l&#39;auto è passata dopo le 2:45, ma che non potrà essere passata troppo tempo dopo (altrimenti sarebbe stata intercettata dal guardiano notturno venuto a controllare);
 * sai che l’auto è stata di recente immatricolazione.
 
 Di seguente, la lista stilata dall&#39;agente Riccardi. 
-
+\
 =|=
 (text-colour:#339af0)[&#39;&#39;Targhe:&#39;&#39;]
-(text-colour:#74c0fc)[(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;dissolve&quot;)+(t8n-time:1s)[[GD 829 QC|Errore 1]]
-(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;dissolve&quot;)+(t8n-time:1s)[[EE 381 OI|Errore 1]]
-(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;dissolve&quot;)+(t8n-time:1s)[[FP 345 LS|Errore 1]]
-(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;dissolve&quot;)+(t8n-time:1s)[[CD 235 FD|Errore 1]]
-(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;dissolve&quot;)+(t8n-time:1s)[[EH 846 EF|Errore 1]]
-(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;dissolve&quot;)+(t8n-time:1s)[[DU 170 HP|Errore 1]]
-(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;dissolve&quot;)+(t8n-time:1s)[[GC 203 EH|Errore 1]]
-(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;dissolve&quot;)+(t8n-time:1s)[[BU 378 AU|Errore 1]]
-(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;dissolve&quot;)+(t8n-time:1s)[[FF 638 QA|Errore 1]]
-(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;dissolve&quot;)+(t8n-time:1s)[[FQ 975 BH|Errore 3]]
-(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;dissolve&quot;)+(t8n-time:1s)[[DQ 942 DF|Errore 3]]
-(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;dissolve&quot;)+(t8n-time:1s)[[FW 179 QH|Errore 3]]
-(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;dissolve&quot;)+(t8n-time:1s)[[GI 721 AM|Esatto]]
-(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;dissolve&quot;)+(t8n-time:1s)[[GC 607 ZV|Corridoio 1]]
-(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;dissolve&quot;)+(t8n-time:1s)[[BB 488 HL|Errore 3]]
-(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;dissolve&quot;)+(t8n-time:1s)[[GB 489 EH|Corridoio 2]]
-(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;dissolve&quot;)+(t8n-time:1s)[[GI 893 BT|Errore 2]]
-(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;dissolve&quot;)+(t8n-time:1s)[[GD 756 UC|Errore 2]]
-(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;dissolve&quot;)+(t8n-time:1s)[[GD 132 ON|Errore 2]]]
+(text-colour:#37b24d)[[[GD 829 QC|Errore 1]]
+[[EE 381 OI|Errore 1]]
+[[FP 345 LS|Errore 1]]
+[[CD 235 FD-&gt;Errore 1]]
+[[EH 846 EF-&gt;Errore 1]]
+[[DU 170 HP-&gt;Errore 1]]
+[[GC 203 EH-&gt;Errore 1]]
+[[BU 378 AU-&gt;Errore 1]]
+[[FF 638 QA-&gt;Errore 1]]
+[[FQ 975 BH-&gt;Errore 3]]
+[[DQ 942 DF-&gt;Errore 3]]
+[[FW 179 QH-&gt;Errore 3]]
+[[GI 721 AM-&gt;Esatto]]
+[[GC 607 ZV-&gt;Corridoio 1]]
+[[BB 488 HL-&gt;Errore 3]]
+[[GB 489 EH-&gt;Corridoio 2]]
+[[GI 893 BT-&gt;Errore 2]]
+[[GD 756 UC-&gt;Errore 2]]
+[[GD 132 ON-&gt;Errore 2]]]
 =|=
 (text-colour:#339af0)[&#39;&#39;Ore:&#39;&#39;]
-(text-colour:black)[2:30
+2:30
 2:35
 2:36
 2:36
@@ -205,42 +221,42 @@ Di seguente, la lista stilata dall&#39;agente Riccardi.
 2:58
 3:01
 3:05
-3:09]
+3:09
 |==|
-
-Se non sai come funziona l&#39;assegnazione delle targhe delle automobili, puoi mandare un messaggio su Whatsapp alla tua amica Valeria Lombroni, ingegnera meccanica e grande esperta di automobili, per chiederle [[come si legge una targa]]. Altrimenti, clicca sulla targa che pensi corrisponda al mezzo del colpevole, per scoprire se sia giusta o sbagliata.
-
-(set: $controlla_targhe to 1)
-
-</tw-passagedata><tw-passagedata pid="3" name="Errore 1" tags="Grigio_c T_Nero" position="4895,1198" size="100,100">
-## (text-colour:#339af0)[Troppo presto!]
 \
+Se non sai come funziona l&#39;assegnazione delle targhe delle automobili, puoi mandare un messaggio su Whatsapp alla tua amica Valeria Lombroni, ingegnera meccanica e grande esperta di automobili, per chiederle [[come si legge una targa]]. Altrimenti, clicca sulla targa che pensi corrisponda al mezzo del colpevole, per scoprire se sia giusta o sbagliata.
+\
+(display: &quot;piepagina&quot;)
+</tw-passagedata><tw-passagedata pid="3" name="Errore 1" tags="Grigio_c T_Nero" position="4895,1198" size="100,100">
+## Troppo presto!
+\
+(set: $risp_sbagliate to $risp_sbagliate + 1) \
+
 Tu indichi la targa, e dietro di te il maresciallo Capito sorride sornione.
 
-(text-colour:#74c0fc)[&#39;&#39;[Maresciallo Caputo]&#39;&#39;] “Ehm...agente $cognome, sei sicur$g? Il colpevole non doveva passare una ventina di minuti dopo le 2:30? Se il colpo viene effettuato alle 2:41, il tragitto impiegato per raggiungere una delle telecamere è di almeno 20 minuti.&quot;
+(text-colour:$colore_dialogo)[&#39;&#39;[Maresciallo Caputo]&#39;&#39;]: Ehm...agente $cognome, sei sicur$g? Il colpevole non doveva passare una ventina di minuti dopo le 2:30? Se il colpo viene effettuato alle 2:41, il tragitto impiegato per raggiungere una delle telecamere è di almeno 20 minuti.
 
-(if: $targhe_e1 is 0)[Questo errore ti fa perdere 1 punto intuito e 1 punto socialità. Adesso hai $punto_int_n punti intuito e $punto_soc_n punti socialità.]
-
-[[Torna indietro e riguarda le targhe|Targhe]]].
-
-(if: $targhe_e1 is 0)[(set: $punto_int_n to $punto_int_n - 1)]
-(if: $targhe_e1 is 0)[(set: $punto_soc_n to $punto_soc_n - 1)]
+(if: $targhe_e1 is 0)[(set: $punti_int to $punti_int - 1)Questo errore ti fa perdere 1 punto intelligenza.]
 (set: $targhe_e1 to 1)
 
-(set: $risp_sbagliate to $risp_sbagliate + 1)</tw-passagedata><tw-passagedata pid="4" name="Corridoio 1" tags="Grigio_c T_Nero" position="4899,399" size="100,100">
-## (text-colour:#339af0)[La Ferrari di Asia Marzola]
+[[Torna indietro e riguarda le targhe|-&gt;Targhe]]].
 \
-(text-colour:#74c0fc)[&#39;&#39;[Maresciallo Caputo]&#39;&#39;]“Su forza, non perdiamo tempo. Procediamo immediatamente a contattare l’aci per la visura della targa”. Il maresciallo ci ha consigliato di ottenere i dettagli della targa, essa infatti fa parte di un catalogo, a cui appartengono anche il numero del telaio, il peso del veicolo.
+(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="4" name="Corridoio 1" tags="Grigio_c T_Nero" position="4899,399" size="100,100">
+## La Ferrari di Asia Marzola
+\
+(set: $risp_sbagliate to $risp_sbagliate + 1)\
 
-(text-colour:#74c0fc)[&#39;&#39;[Maresciallo Caputo]&#39;&#39;]“Ecco i dettagli del veicolo…” Telaio: DKFKEOSS30D, Peso 756 kg. La proprietaria si chiama Asia Marzola.”
+(text-colour:#74c0fc)[&#39;&#39;[Maresciallo Caputo]&#39;&#39;]: Su forza, non perdiamo tempo. Procediamo immediatamente a contattare l’aci per la visura della targa”. Il maresciallo ci ha consigliato di ottenere i dettagli della targa, essa infatti fa parte di un catalogo, a cui appartengono anche il numero del telaio, il peso del veicolo.
 
-(text-colour:#74c0fc)[&#39;&#39;[Detective $nome]&#39;&#39;]“Pesa davvero poco, è strano, sembra si tratti di una vettura sportiva, nessuno ci farebbe mai un colpo.”
+(text-colour:#74c0fc)[&#39;&#39;[Maresciallo Caputo]&#39;&#39;]: Ecco i dettagli del veicolo…” Telaio: DKFKEOSS30D, Peso 756 kg. La proprietaria si chiama Asia Marzola.
 
-(text-colour:#74c0fc)[&#39;&#39;[Maresciallo Caputo]&#39;&#39;]“Povo a chidedere in centrale di rintracciare quest&#39;auto... Oh che notizia! Un’auto con targa corrispondente alla precedente è stata trovata a solo 1 km da qui.”
+(text-colour:$colore_dialogo)[&#39;&#39;[Detective $nome]&#39;&#39;]: Pesa davvero poco, è strano, sembra si tratti di una vettura sportiva, nessuno ci farebbe mai un colpo.”
 
-(text-colour:#74c0fc)[&#39;&#39;[Detective $nome]&#39;&#39;]“Chiamo un taxi?”
+(text-colour:$colore_dialogo)[&#39;&#39;[Maresciallo Caputo]&#39;&#39;]: Povo a chidedere in centrale di rintracciare quest&#39;auto... Oh che notizia! Un’auto con targa corrispondente alla precedente è stata trovata a solo 1 km da qui.
 
-(text-colour:#74c0fc)[&#39;&#39;[Maresciallo Caputo]&#39;&#39;]“Noo, a piedi dovremmo riuscire”
+(text-colour:$colore_dialogo)[&#39;&#39;[Detective $nome]&#39;&#39;]: Chiamo un taxi?
+
+(text-colour:$colore_dialogo)[&#39;&#39;[Maresciallo Caputo]&#39;&#39;]: No dai, non serve, facciamo un favore al pianeta e anche al nostro fisico: per due persone ben allenate come noi, non ci vuole più di un quarto d&#39;ora a fare un chilometro a piedi, anche contando qualche semaforo rosso.
 
 &lt;style&gt; img {
 	max-width: 100%;
@@ -254,23 +270,23 @@ src=https://images.unsplash.com/photo-1598377390308-e8898b5036a8?ixlib=rb-1.2.1&
 
 Percorrete di corsa il breve chilometro che vi separa dalla posizione in cui è stata osserva la vettura l&#39;ultima volta. 
 
-(text-colour:#74c0fc)[&#39;&#39;[Detective $nome]&#39;&#39;]“Eccola, strana auto per un colpo, non credi?”
+(text-colour:$colore_dialogo)[&#39;&#39;[Detective $nome]&#39;&#39;]: Eccola, strana auto per un colpo, non credi?
 
-(text-colour:#74c0fc)[&#39;&#39;[Maresciallo Caputo]&#39;&#39;]“Già, provo ad avvicinarmi.”
+(text-colour:$colore_dialogo)[&#39;&#39;[Maresciallo Caputo]&#39;&#39;]: Già, provo ad avvicinarmi.
 
 In quel momento si avvicina una ragazza dai tratti asiatici. Deve essere Asia Marzola, la proprietaria dell&#39;auto.
-(text-colour:#74c0fc)[&#39;&#39;[Asia Marzola]&#39;&#39;]“Hey tu!!! Lontano dalla mia auto, rischi di graffiarla!.”
+(text-colour:$colore_dialogo)[&#39;&#39;[Asia Marzola]&#39;&#39;]: Ehi tu!!! Che stai facendo? Stai lontano dalla mia auto, rischi di graffiarla!”
 
-Guardi il Maresciallo Caputo, e vi mettete a ridere. Questo è il mondo reale, non una serie di Netflix: le persone reali non vanno a fare furti d&#39;arte di opere di valore inestimabile su una Ferrari!
+Guardi il Maresciallo Caputo, e vi mettete a ridere. Questo è il mondo reale, non una serie prodotta da Netflix: le persone reali non vanno a fare furti d&#39;arte di opere di valore inestimabile su una Ferrari!
 
-[[Torna indietro e riguarda le targhe|Targhe]]].
-
-(set: $risp_sbagliate to $risp_sbagliate + 1)</tw-passagedata><tw-passagedata pid="5" name="Esatto" tags="Grigio_c T_Nero" position="4900,797" size="100,100">
-## (text-colour:#339af0)[Sembra essere una pista promettente!]
+[[Torna indietro e riguarda le targhe-&gt;Targhe]]].
+\
+(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="5" name="Esatto" tags="Grigio_c T_Nero" position="4901.666666666667,797" size="100,100">
+## Sembra essere una pista promettente!
 \
 (text-colour:#74c0fc)[&#39;&#39;[Detective $nome]&#39;&#39;]&quot;Allora, questa mi sembra l&#39;auto corretta. Fra quelle che sono passate in un periodo di tempo compatibile è quella più moderna. Il periodo di tempo è verosimile perché c&#39;è uno scarto fra l&#39;ora prevista di passaggio sottola telecamera e il passaggio effettivo. Maresciallo, concorda con me?&quot;
 
-(text-colour:#74c0fc)[&#39;&#39;[Maresciallo Caputo]&#39;&#39;]“Si, assolutamente! Secondo me siamo sulla buona stada. Forza, non perdiamo tempo. Procediamo immediatamente a contattare l’[[ACI]] per la visura della targa”. 
+(text-colour:#74c0fc)[&#39;&#39;[Maresciallo Caputo]&#39;&#39;]“Si, assolutamente! Secondo me siamo sulla buona stada. Forza, non perdiamo tempo. Procediamo immediatamente a contattare l’ACI per la visura della targa”. 
 
 Dopo qualche minuto di attesa, ricevete una mail da un funzionario dell&#39;ACI, che vi invia la visura contenente tutti i dati utili. 
 
@@ -290,16 +306,18 @@ Il maresciallo dirama la comunicazione. Fatto ciò, vi mettetre in attesa. Non c
 
 (text-colour:#74c0fc)[&#39;&#39;[Maresciallo Caputo]&#39;&#39;]“Ora detective $nome abbiamo due alternative per arrivare all’auto del presunto ladro. Ho un cugino che lavora proprio qui vicino che ci [[darebbe immediatamente un passaggio|Cugino]], e forse con il traffico di Roma in queste ore di punta potremmo risparmiare un po&#39; di tempo. Altrimenti possiamo farci [[portare dai miei fidati agenti |Volante]]Riccardi e Palladini con una volante che però partirebbe dalla caserma, a circa 3km da noi. Forza detective, decida! Non abbiamo molto tempo, questa è un’emergenza!&quot;
 
+(if: $targhe_e1 + $targhe_e2 is 0)[(set: $punti_int to $punti_int + 1)(set: $punti_soc to $punti_soc + 1) In ogni caso, complimenti! Sei riuscit$g a trovare la targa corretta al primo tentativo. Per questa ragione guadagni 1 punto intelligenza e 1 punto socialità.]
 
-(if: $targhe_e1 + $targhe_e2 is 0)[(set: $punto_int_n to $punto_int_n + 1)]
-(if: $targhe_e1 + $targhe_e2 is 0)[(set: $punto_soc_n to $punto_soc_n + 2)]</tw-passagedata><tw-passagedata pid="6" name="come si legge una targa" tags="Bianco T_Nero" position="4902,1003" size="100,100">
-## (text-colour:#339af0)[Come leggere una targa]
+(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="6" name="come si legge una targa" tags="Bianco T_Nero" position="4902,1003" size="100,100">
+## Come leggere una targa
 \
-La prima targa assegnata con la procedura attuale è stata AA000AA, mentre l’auto immatricolata subito dopo aveva la targa AA001AA, arrivati a AA999AA ci sarà AA000AB e così via. Una volta arrivati a 999, le modifiche riguardano le ultime due lettere, e poi (arrivati a 999 ZZ)  è la volta delle prime due.
+Scrivi un messaggio di aiuto alla tua amica Valeria, che ti risponde dopo pochissimi minuti.
 
-(text-colour:#74c0fc)[(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;dissolve&quot;)+(t8n-time:1s)[[Torna indietro|Targhe]]]
+//Ciao bell$g! Come stai? È tanto che non ci si vede...da quando sei diventat$g famos$g non ti fai più sentire ahahahah! Comunque, provo a spiegarti come funzionano l&#39;assegnazione delle targhe in modo semplice. Vedi, le targhe sono dei codici alfanumerici assegnati in modo progressivo. L&#39;attuale classificazione, introdotta nel 1996, è tale per cui la prima targa assegnata è stata AA000AA, mentre la seconda era AA001AA. In pratica, di solito  due targhe successive si riconoscono perché hanno tutte le lettere identiche e due numeri in successioni. Però quando una targa ha numero 999, si torna a 000 e la lettera più a destra aumenta di 1. Ti faccio un esempietto. La 1000esima automobile immatricolata con questo sistema ha avuto targa AA999AA, mentre la targa della 1001esima era AA000AB. Quando poi tutte e 26 le lettere dell&#39;alfabeto anglosassone sono state usate per la lettera più a destra (quindi, arrivati a 999AZ nelle ultime due lettere, dopo ben 26&#39;000 automobili!), la seconda lettera a partire da destra scala una posizione. Quindi, per esempio, alla targa AA999AZ è succeduta la targa AA000BA. Lo stesso procedimento poi si ripete anche per le due lettere a sinistra, per cui, per fare un ultimo esempio, alla targa AZ999ZZ è succeduta la targa BA000AA. Spero che sia tutto chiaro, in bocca al lupo con l&#39;indagine!//
 
-</tw-passagedata><tw-passagedata pid="7" name="1 Introduzione" tags="Grigio_c T_Nero" position="1600,900" size="100,100">
+Ora che sai come si legge una targa, e hai i mezzi per capire quale sia più recente e quale invece più vecchia, [[torna indietro-&gt;Targhe]]] e controlla di nuovo le targhe che sono passate negli ultimi giorni. 
+\
+(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="7" name="1 Introduzione" tags="Grigio_c T_Nero" position="1600,900" size="100,100">
 ## Alla ricerca della Lupa Capitolina
  \
 Sono passati mesi da quando hai brillantemente risolto il caso del furto del Bacio dell’Hayez. Il clamore mediatico del ritrovamento del quadro rubato ti ha dato i proverbiali 15 minuti di notorietà. Interviste su tutti i principali telegiornali, ospitate in televisione. Ti è arrivato addirittura un invito da parte della neo-eletta presidente della Repubblica, che si è voluta congraturare con te di persona per il contributo che hai dato alla comunità.
@@ -322,13 +340,13 @@ In treno ti metti a riflettere su chi possa aver compiuto un furto del genere, e
 (if: $g is &quot;o&quot;) [&lt;img src=&#39;res2/inv_m2.png&#39; class=&#39;center&#39; width=&#39;200&#39;&gt;] (else: ) [&lt;img src=&#39;res2/inv_f2.png&#39; class=&#39;center&#39; width=&#39;200&#39;&gt;]
 |==|
 
-(text-colour:#74c0fc)[&#39;&#39;Maresciallo Caputo&#39;&#39;]: Dice benissimo, agente $cognome. La piazza non è così grande da non accorgersi dell’arrivo di un mezzo per portare via la statua. Penso che siano stati dei professionisti, o un solo professionista con un’adeguata strumentazione. La statua è molto pesante e pure abbastanza voluminosa: solo un ladro molto capace poteva portarla via di nascosto, in così poco tempo, e senza neppure attirare l’attenzione delle guardie. Certo, ieri sera c’era sola una pattuglia, come sempre durante la settimana. A tal proposito, agente $cognome, ti presento l’agente Riccardi, uno dei poliziotti della pattuglia che controllava la piazza questa notte.”
+(text-colour:$colore_dialogo)[&#39;&#39;Maresciallo Caputo&#39;&#39;]: Dice benissimo, agente $cognome. La piazza non è così grande da non accorgersi dell’arrivo di un mezzo per portare via la statua. Penso che siano stati dei professionisti, o un solo professionista con un’adeguata strumentazione. La statua è molto pesante e pure abbastanza voluminosa: solo un ladro molto capace poteva portarla via di nascosto, in così poco tempo, e senza neppure attirare l’attenzione delle guardie. Certo, ieri sera c’era sola una pattuglia, come sempre durante la settimana. A tal proposito, agente $cognome, ti presento l’agente Riccardi, uno dei poliziotti della pattuglia che controllava la piazza questa notte.
 
-(text-colour:#74c0fc)[&#39;&#39;Agente Riccardi&#39;&#39;]: Piacere di conoscerla, agente $cognome. L’ho vista al telegiornale qualche mese fa, spero davvero che ci possa aiutare a risolvere il caso. Ma vado subito al punto. Noi durante la serata ci appostiamo periodicamente in una parte diversa della piazza, o nei suoi immediati dintorni, muovendosi ogni 15 o 20 minuti. In effetti, non prestiamo una particolare attenzione alla statua: stiamo lì giusto per essere sicuri che non ci sia qualche perditempo che si metta a fare festa davanti al municipio.  
-Ieri sera però è successa una cosa strana, che col senno di poi potrebbe essere importante. Dopo che siamo rimasti qualche minuto sotto le scale del municipio, abbiamo avuto tutti una forte sonnolenza, come se fossimo confusi. Nessuno di noi sa dire con certezza cosa fosse successo, ma sta di fatto che quando ci siamo schiariti le idee e siamo tornati verso il centro della piazza, la statua era sparita. Io mi sento veramente in colpa, però mai avrei pensato che qualcuno potesse rubare la &#39;&#39;Lupa capitolina&#39;&#39;: è una cosa davvero assurda.”
+(text-colour:$colore_dialogo)[&#39;&#39;Agente Riccardi&#39;&#39;]: Piacere di conoscerla, agente $cognome. L’ho vista al telegiornale qualche mese fa, spero davvero che ci possa aiutare a risolvere il caso. Ma vado subito al punto. Noi durante la serata ci appostiamo periodicamente in una parte diversa della piazza, o nei suoi immediati dintorni, muovendosi ogni 15 o 20 minuti. In effetti, non prestiamo una particolare attenzione alla statua: stiamo lì giusto per essere sicuri che non ci sia qualche perditempo che si metta a fare festa davanti al municipio.  
+Ieri sera però è successa una cosa strana, che col senno di poi potrebbe essere importante. Dopo che siamo rimasti qualche minuto sotto le scale del municipio, abbiamo avuto tutti una forte sonnolenza, come se fossimo confusi. Nessuno di noi sa dire con certezza cosa fosse successo, ma sta di fatto che quando ci siamo schiariti le idee e siamo tornati verso il centro della piazza, la statua era sparita. Io mi sento veramente in colpa, però mai avrei pensato che qualcuno potesse rubare la &#39;&#39;Lupa capitolina&#39;&#39;: è una cosa davvero assurda.
 
 |||||=
-(text-colour:#74c0fc)[&#39;&#39;Detective $nome&#39;&#39;]: Ah, ecco una prima pista. È chiaro che vi abbiano in qualche modo narcotizzato per tutto il tempo necessario a fare il colpo. Probabilmente i responsabili di questo erano appostati sopra alle scale, e vi hanno stordito con un qualche genere di gas rilassante. Però io la capisco, agente Riccardi. Anche a me non torna qualcosa. Perché? Qual è il movente? Cosa può spingere una o più persone a rubare una statua sul suolo pubblico, visto che non si trattava nemmeno della versione originale! Com’è possibile?&quot;
+(text-colour:$colore_dialogo)[&#39;&#39;Detective $nome&#39;&#39;]: Ah, ecco una prima pista. È chiaro che vi abbiano in qualche modo narcotizzato per tutto il tempo necessario a fare il colpo. Probabilmente i responsabili di questo erano appostati sopra alle scale, e vi hanno stordito con un qualche genere di gas rilassante. Però io la capisco, agente Riccardi. Anche a me non torna qualcosa. Perché? Qual è il movente? Cosa può spingere una o più persone a rubare una statua sul suolo pubblico, visto che non si trattava nemmeno della versione originale! Com’è possibile?
 =|=
 (if: $g is &quot;o&quot;) [&lt;img src=&#39;res2/inv_m2.png&#39; class=&#39;center&#39; width=&#39;200&#39;&gt;] (else: ) [&lt;img src=&#39;res2/inv_f2.png&#39; class=&#39;center&#39; width=&#39;200&#39;&gt;]
 |==|
@@ -339,74 +357,73 @@ Dopo due lunghi giorni di indagini infruttuose, arriva una chiamata nella prima 
 
 Tu ci pensi subito: i Musei Capitolini sono proprio accanto alla Piazza del Campidoglio. Sarà una coincidenza? Non credi proprio... A questo punto, hai due strade possibili. Puoi cercare le [[coordinate]] dei Musei Capitolini, e poi capire come usarle per metterle sul tuo navigatore GPS, per arrivare prima sulla scena del crimine. Oppure, puoi andare [[senza navigatore]], rischiando di perderti ma anche conoscendo un po’ meglio la città, dato che comunque sei stato in quell’area giusto due giorni prima e dovresti perciò ricordarti il tragitto. \
  \
-(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="8" name="3 Esatto" tags="Grigio_c T_Nero" position="5499,797" size="100,100">
-## (text-colour:#339af0)[Ispeziona il furgoncino]
-
+(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="8" name="3 Esatto" tags="Grigio_c T_Nero" position="5499,795.3333333333334" size="100,100">
+## Ispeziona il furgoncino
+\
 Arrivati alla posizione segnalata, trovate un furgoncino bianco. Vi basta dare un&#39;occhiata alla targa per rendervi conto che si tratti del mezzo che stavate cercando. 
 
-(text-colour:#74c0fc)[&#39;&#39;[Detective $nome]&#39;&#39;]“Ecco il veicolo.”
+(text-colour:$colore_dialogo)[&#39;&#39;[Detective $nome]&#39;&#39;]: Ecco il veicolo.
 
-(text-colour:#74c0fc)[&#39;&#39;[Maresciallo Caputo]&#39;&#39;]“Si, lo vedo...aspetta un attimo, il finestrino è aperto!”
+(text-colour:$colore_dialogo)[&#39;&#39;[Maresciallo Caputo]&#39;&#39;]: Si, lo vedo...aspetta un attimo, il finestrino è aperto!
 
-(text-colour:#74c0fc)[&#39;&#39;[Detective $nome]&#39;&#39;]“Beh, per una volta, ci hanno semplificato il lavoro!”
+(text-colour:$colore_dialogo)[&#39;&#39;[Detective $nome]&#39;&#39;]: Beh, per una volta, ci hanno reso semplice il lavoro...non ci sono più i delinquenti di una volta!
 
 Mettendo la mano dentro il veicolo, trovi un modo per aprire la portiera ed entri, osservando tutta una serie di oggetti lì presenti. Che cosa vuoi guardare?
-
-(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[&lt;style&gt; img {max-width: 100%; max-height: 100%; } &lt;/style&gt; &lt;img src=https://i.ibb.co/7yzj4mw/Auto.png&gt; &lt;/div&gt;]
-
-=|=
-(if: $controlla_postit is 0)[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[(text-colour:#ff922b)[(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;dissolve&quot;)+(t8n-time:1s)[[&#39;&#39;- Post it 🗒 &#39;&#39;&lt;style&gt; img {max-width: 100%; max-height: 100%; } &lt;/style&gt; &lt;img src=https://i.ibb.co/ypW4p1s/Post-it-con-Auto.png&gt; &lt;/div&gt;|Postit]]]]]
-=|=
-(if: $controlla_frappe is 0)[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[(text-colour:#ff922b)[(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;dissolve&quot;)+(t8n-time:1s)[[&#39;&#39;- Frappè 🥛&#39;&#39;&lt;style&gt; img {max-width: 100%; max-height: 100%; } &lt;/style&gt; &lt;img src=https://i.ibb.co/ncRNt2r/Frapp-con-auto.png&gt; &lt;/div&gt;|Frappè]]]]]
-=|=
-(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[(text-colour:#ff922b)[(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;dissolve&quot;)+(t8n-time:1s)[[&#39;&#39;- Telefono 📱&#39;&#39;&lt;style&gt; img {max-width: 100%; max-height: 100%; } &lt;/style&gt; &lt;img src=https://i.ibb.co/7RyLJP3/Oggetti-con-Auto-2.png&gt; &lt;/div&gt;|Rebus]]]]
-|==|
-
-
-
-
-
-</tw-passagedata><tw-passagedata pid="9" name="Postit" tags="Grigio_c T_Nero" position="5701,600" size="100,100">## (text-colour:#339af0)[Controlla il post it] 🗒
 \
-(text-colour:#74c0fc)[&#39;&#39;[Detective $nome]&#39;&#39;]“Una perdita di tempo. Sebrava un codice segreto, ma è solo utile per aprire un garage!”
+(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[&lt;style&gt; img {max-width: 100%; max-height: 100%; } &lt;/style&gt; &lt;img src=https://i.ibb.co/7yzj4mw/Auto.png&gt; &lt;/div&gt;]
+\
+=|=
+(if: $controlla_postit is 0)[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[(text-colour:#ff922b)[(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;dissolve&quot;)+(t8n-time:1s)[[&#39;&#39;- Post it 🗒 &#39;&#39;&lt;style&gt; img {max-width: 100%; max-height: 100%; } &lt;/style&gt; &lt;img src=https://i.ibb.co/ypW4p1s/Post-it-con-Auto.png&gt; &lt;/div&gt;-&gt;Postit]]]]]
+=|=
+(if: $controlla_frappe is 0)[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[(text-colour:#ff922b)[(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;dissolve&quot;)+(t8n-time:1s)[[&#39;&#39;- Frappè 🥛&#39;&#39;&lt;style&gt; img {max-width: 100%; max-height: 100%; } &lt;/style&gt; &lt;img src=https://i.ibb.co/ncRNt2r/Frapp-con-auto.png&gt; &lt;/div&gt;-&gt;Frappè]]]]]
+=|=
+(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[(text-colour:#ff922b)[(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;dissolve&quot;)+(t8n-time:1s)[[&#39;&#39;- Telefono 📱&#39;&#39;&lt;style&gt; img {max-width: 100%; max-height: 100%; } &lt;/style&gt; &lt;img src=https://i.ibb.co/7RyLJP3/Oggetti-con-Auto-2.png&gt; &lt;/div&gt;-&gt;Rebus]]]]
+|==|
+\
+(display: &quot;piepagina&quot;)
 
 
+
+
+</tw-passagedata><tw-passagedata pid="9" name="Postit" tags="Grigio_c T_Nero" position="5701,600" size="100,100">## Controlla il post it 🗒
+\
+(set: $controlla_postit to 1)
+\
+(text-colour:$colore_dialogo)[&#39;&#39;[Detective $nome]&#39;&#39;]: Lasciamo stare, maresciallo, è una perdita di tempo. Sembrava un codice segreto, ma è solo un bigliettino per un garage!
+\
 |=
 &lt;style&gt; img {max-width: 100%; max-height: 100%; } &lt;/style&gt; &lt;img src=https://i.ibb.co/TMZwzjR/Post-it.png&gt; &lt;/div&gt;
 |= 
 &lt;style&gt; img {max-width: 100%; max-height: 100%; } &lt;/style&gt; &lt;img src=https://i.ibb.co/ypW4p1s/Post-it-con-Auto.png&gt; &lt;/div&gt;
 |==|
-(set: $Oggetti_v to 1)
-
-
+\
 [[Torna indietro|3 Esatto]]
-
-(set: $controlla_postit to 1)</tw-passagedata><tw-passagedata pid="10" name="Rebus" tags="Bianco T_Nero" position="5705,796" size="100,100">
-## (text-colour:#339af0)[Telefono 📱]
+\
+(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="10" name="Rebus" tags="Bianco T_Nero" position="5705,794.3333333333334" size="100,100">
+## Telefono 📱
 \
 (if: $flag_rebus is 0)[Guardando il telefono, tu e il maresciallo vi accorgete subito che ci sono dei messaggi sullo schermo.
 
-(text-colour:#74c0fc)[&#39;&#39;[Maresciallo Caputo]&#39;&#39;]“Dai, leggiamoli: potrebbero essere un indizio!”
+(text-colour:$colore_dialogo)[&#39;&#39;[Maresciallo Caputo]&#39;&#39;]“Dai, leggiamoli: potrebbero essere un indizio!”
 
 |=
 &lt;style&gt; img {max-width: 100%; max-height: 100%; } &lt;/style&gt; &lt;img src=https://i.ibb.co/BqjtkNd/Telefono.png&gt; &lt;/div&gt;
 |= 
 &lt;style&gt; img {max-width: 100%; max-height: 100%; } &lt;/style&gt; &lt;img src=https://i.ibb.co/7RyLJP3/Oggetti-con-Auto-2.png&gt; &lt;/div&gt;
 |==|
-](else:)[(text-colour:#74c0fc)[&#39;&#39;[Maresciallo Caputo]&#39;&#39;]“La soluzione è sbagliata, così non sembra avere senso: riproviamo!”]
+](else:)[(text-colour:$colore_dialogo)[&#39;&#39;[Maresciallo Caputo]&#39;&#39;]“La soluzione è sbagliata, così non sembra avere senso: riproviamo!”]
 |=
-(if:$Frappè_ogg is not &quot;Sì&quot;)[(set: $Frappè_ogg to &quot;No&quot;)]
 &lt;style&gt; img { max-width: 100%; max-height: 100%; } &lt;/style&gt; &lt;img src=https://i.ibb.co/SsGffBb/Whats-App-Image-2022-05-19-at-17-17-52.jpg&gt; &lt;/div&gt;
 
-(text-colour:#74c0fc)[&#39;&#39;[Detective $nome]&#39;&#39;]“Inserisca la soluzione del rebus:”
+(text-colour:$colore_dialogo)[&#39;&#39;[Detective $nome]&#39;&#39;]“Inserisca la soluzione del rebus:”
 
 (input-box:2bind $soluzione,&quot;=XX=&quot;)
-
+\
 (live: 1s)[(if: $soluzione_val is 1)[[[Controlla se è corretta|Fine]]](else:)[[[Controlla se è corretta|Rebus]]]]
 |==| 
-
-
+\
 (live: 1s)[
+(set: $soluzione_val to 0)
 (if:$soluzione is &quot;Treviso&quot;)[(set: $soluzione_val to 1)]
 (if:$soluzione is &quot;treviso&quot;)[(set: $soluzione_val to 1)]
 (if:$soluzione is &quot;Treviso &quot;)[(set: $soluzione_val to 1)]
@@ -416,20 +433,21 @@ Mettendo la mano dentro il veicolo, trovi un modo per aprire la portiera ed entr
 (if:$soluzione is &quot;treviso
 &quot;)[(set: $soluzione_val to 1)]
 ]
-
-(set: $flag_rebus to 1)
-(set: $soluzione_val to 0)
-
+\
 (if: $flag_rebus is 0)[&lt;audio src=&quot;https://cdn.pixabay.com/download/audio/2022/04/19/audio_37bb6e26a7.mp3?filename=suono-messaggio-109758.mp3
-autoplay&gt;&lt;/audio&gt;]</tw-passagedata><tw-passagedata pid="11" name="2 Introduzione" tags="Grigio_c T_Nero" position="2600,900" size="100,100">
+autoplay&gt;&lt;/audio&gt;]\
+\&lt;!-- la variabile flag_rebus è qui perché scatta dopo l&#39;audio (così il suono del messaggio arriva una volta sola e non tutte le volte che si entra sulla pagina--&gt;
+(set: $flag_rebus to 1)
+\
+(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="11" name="2 Introduzione" tags="Grigio_c T_Nero" position="2600,903.3333333333333" size="100,100">
 ## Ispezione dei Musei Capitolini
  \
 Arrivat$g sulla scena del crimine, ti imbatti subito nel Maresciallo Caputo, che ti viene incontro chiaramente preoccupato, il viso scuro.
 
-(text-colour:#74c0fc)[&#39;&#39;Maresciallo Caputo&#39;&#39;]: Carissim$g agente $nome, sono felice che sia riuscit$g ad arrivare così in fretta: la ringrazio molto. Io sono qui giusto da qualche minuto, e non ho trovato nulla di strano, per adesso. Certo che però si tratta di una strana coincidenza, che l’allarme dei Musei Capitolini suoni due giorni dopo il furto della Lupa dalla piazza. Cosa pensa che sia accaduto?
+(text-colour:$colore_dialogo)[&#39;&#39;Maresciallo Caputo&#39;&#39;]: Carissim$g agente $nome, sono felice che sia riuscit$g ad arrivare così in fretta: la ringrazio molto. Io sono qui giusto da qualche minuto, e non ho trovato nulla di strano, per adesso. Certo che però si tratta di una strana coincidenza, che l’allarme dei Musei Capitolini suoni due giorni dopo il furto della Lupa dalla piazza. Cosa pensa che sia accaduto?
 
 |||||=
-(text-colour:#74c0fc)[&#39;&#39;[Detective $nome]&#39;&#39;]: Insomma... Se i tecnici del sistema d’allarme confermano che è tutto in regola e perfettamente funzionante, e le pattuglie garantiscono che hanno eseguito a perfezione il protocollo per arrivare qui il prima possibile, proprio non mi spiego cosa sia successo. Magari ci stiamo preoccupando per niente, e l’allarme, che immagino sia molto sensibile, è stato fatto scattare da un topo o qualche altro animaletto che è riuscito a infilarsi nel museo da qualche pertugio.
+(text-colour:$colore_dialogo)[&#39;&#39;[Detective $nome]&#39;&#39;]: Insomma... Se i tecnici del sistema d’allarme confermano che è tutto in regola e perfettamente funzionante, e le pattuglie garantiscono che hanno eseguito a perfezione il protocollo per arrivare qui il prima possibile, proprio non mi spiego cosa sia successo. Magari ci stiamo preoccupando per niente, e l’allarme, che immagino sia molto sensibile, è stato fatto scattare da un topo o qualche altro animaletto che è riuscito a infilarsi nel museo da qualche pertugio.
 Propongo di aspettare che i tecnici facciano le loro rilevazioni, e allontanoci dal trambusto, così possiamo lavorare con un po’ più di silenzio al furto dell’altra sera.
 =|=
 (if: $g is &quot;o&quot;) [&lt;img src=&#39;res2/inv_m2.png&#39; class=&#39;center&#39; width=&#39;200&#39;&gt;] (else: ) [&lt;img src=&#39;res2/inv_f2.png&#39; class=&#39;center&#39; width=&#39;200&#39;&gt;]
@@ -437,28 +455,28 @@ Propongo di aspettare che i tecnici facciano le loro rilevazioni, e allontanoci 
 
 Vi allontanate e ricominciate a discutere del furto avvenuto due sere prima, mentre la notte lascia spazio definitivamente al giorno e le luci del mattino accarezzano con sempre più forza i tetti della città eterna.
 
-(text-colour:#74c0fc)[&#39;&#39;Maresciallo Caputo&#39;&#39;]: Ci sono novità? Indizi? Una pista su cui indagare?
+(text-colour:$colore_dialogo)[&#39;&#39;Maresciallo Caputo&#39;&#39;]: Ci sono novità? Indizi? Una pista su cui indagare?
 
 |||||=
-(text-colour:#74c0fc)[&#39;&#39;Detective $nome&#39;&#39;]: Non ancora purtroppo: piccole tracce o solo qualche segno lasciato sulla pavimentazione, ma sono prove irrilevanti per ora. Ciò che non mi torna in nessun modo è il movente. Cosa può spingere un criminale a rubare una statua del genere? Non ha neppure un grande valore economico, essendo una copia. Rubare un simbolo del genere è più che altro uno sfregio all’urbe, un danno morale più che economico.
+(text-colour:$colore_dialogo)[&#39;&#39;Detective $nome&#39;&#39;]: Non ancora purtroppo: piccole tracce o solo qualche segno lasciato sulla pavimentazione, ma sono prove irrilevanti per ora. Ciò che non mi torna in nessun modo è il movente. Cosa può spingere un criminale a rubare una statua del genere? Non ha neppure un grande valore economico, essendo una copia. Rubare un simbolo del genere è più che altro uno sfregio all’urbe, un danno morale più che economico.
 =|=
 (if: $g is &quot;o&quot;) [&lt;img src=&#39;res2/inv_m2.png&#39; class=&#39;center&#39; width=&#39;200&#39;&gt;] (else: ) [&lt;img src=&#39;res2/inv_f2.png&#39; class=&#39;center&#39; width=&#39;200&#39;&gt;]
 |==|
 
-(text-colour:#74c0fc)[&#39;&#39;Maresciallo Caputo&#39;&#39;]: Ha perfettamente ragione. Ma vedrà, troveremo sicuramente una prova o un indizio che incastrerà il ladro, ne sono certo!
+(text-colour:$colore_dialogo)[&#39;&#39;Maresciallo Caputo&#39;&#39;]: Ha perfettamente ragione. Ma vedrà, troveremo sicuramente una prova o un indizio che incastrerà il ladro, ne sono certo!
 
 In quel momento, un uomo della scientifica vi fa cenno da lontano di entrare: evidentemente ci deve essere qualcosa da vedere. Un’impronta digitale, magari, oppure un filmato che possa chiarire l’identità del ladro. Mentre camminate, passi davanti alla statua della Lupa Capitolina, l’originale, e non puoi fare a meno di squadrarla, pensando che sei venut$g a Roma per la sua gemella, che è uguale a parte... a parte... e in quel momento hai un’epifania.
 
 |||||=
-(text-colour:#74c0fc)[&#39;&#39;Detective $nome&#39;&#39;]: Solo un attimo, Maresciallo: temo di aver capito cosa ci sta sfuggendo. Non ci posso credere, aspetti che controllo meglio... ma sì, è proprio così... Non ho parole! Maresciallo, questa non è la Lupa Capitolina originale. Non so veramente cosa dire, ce l’hanno fatta sotto il naso!
+(text-colour:$colore_dialogo)[&#39;&#39;Detective $nome&#39;&#39;]: Solo un attimo, Maresciallo: temo di aver capito cosa ci sta sfuggendo. Non ci posso credere, aspetti che controllo meglio... ma sì, è proprio così... Non ho parole! Maresciallo, questa non è la Lupa Capitolina originale. Non so veramente cosa dire, ce l’hanno fatta sotto il naso!
 =|=
 (if: $g is &quot;o&quot;) [&lt;img src=&#39;res2/inv_m2.png&#39; class=&#39;center&#39; width=&#39;200&#39;&gt;] (else: ) [&lt;img src=&#39;res2/inv_f2.png&#39; class=&#39;center&#39; width=&#39;200&#39;&gt;]
 |==|
 
-(text-colour:#74c0fc)[&#39;&#39;Maresciallo Caputo&#39;&#39;]: Ma non mi dica che...
+(text-colour:$colore_dialogo)[&#39;&#39;Maresciallo Caputo&#39;&#39;]: Ma non mi dica che...
 
 |||||=
-(text-colour:#74c0fc)[&#39;&#39;Detective $nome&#39;&#39;]: Sì, purtroppo! Questa è la statua della Lupa di Piazza del Campidoglio, quella rubata tre notti fa. Ora tutto torna. La statua in piazza era stata rubata solamente come diversivo, dato che la sorveglianza all’esterno è molto più blanda.
+(text-colour:$colore_dialogo)[&#39;&#39;Detective $nome&#39;&#39;]: Sì, purtroppo! Questa è la statua della Lupa di Piazza del Campidoglio, quella rubata tre notti fa. Ora tutto torna. La statua in piazza era stata rubata solamente come diversivo, dato che la sorveglianza all’esterno è molto più blanda.
 
 Il ladro ha studiato tutto nei minimi dettagli, aveva già la statua pronta per sostituirla all’originale con una versione a prima vista molto simile. In questo modo ha guadagnato del tempo prezioso per la fuga. Se non avessi una certa competenza di storia dell&#39;arte, non me ne sarei mai accort$g neanch’io, e magari ci sarebbero volute settimane prima che qualcuno ci facesse caso. Ha fatto tutto questo per prendere tempo, e ci è riuscito, almeno un po’.
 
@@ -471,11 +489,11 @@ Sei ancora sbalordito, e quasi non vuoi credere a ciò che hai appena realizzato
 
 Mentre tu rifletti, si avvicinano due agenti di corsa, trafelati.
 
-(text-colour:#74c0fc)[&#39;&#39;Agenti Palladini e Riccardi all’unisono&#39;&#39;]: Abbiamo delle novità!
+(text-colour:$colore_dialogo)[&#39;&#39;Agenti Palladini e Riccardi all’unisono&#39;&#39;]: Abbiamo delle novità!
 
 Questa frase ti desta dallo tuo stato di concentrazione: di colpo, lasci i tuoi pensieri e ti metti ad ascoltare che cosa hanno da dirti.
 
-(text-colour:#74c0fc)[&#39;&#39;Agente Palladini&#39;&#39;]: Sono stati analizzati tutti i filmati delle telecamere all’ora in cui è suonato l’allarme. Effettivamente questa notte qualcuno è entrato nel museo, ma purtroppo non è possibile identificare il ladro perché era a volto coperto.
+(text-colour:$colore_dialogo)[&#39;&#39;Agente Palladini&#39;&#39;]: Sono stati analizzati tutti i filmati delle telecamere all’ora in cui è suonato l’allarme. Effettivamente questa notte qualcuno è entrato nel museo, ma purtroppo non è possibile identificare il ladro perché era a volto coperto.
 
 Ciò significa che non c’è tempo da perdere, non puoi più stare lì ferm$g a riflettere: devi assolutamente riuscire a scovare il ladro e ritrovare la statua.
 
@@ -487,25 +505,27 @@ C’è però una cosa interessante: il manuale è la versione scritta in inglese
 
 Quindi, arrivato a questo punto, [[valuta le possibili opzioni-&gt;1 Stat]] a tua disposizione. \
  \
-(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="12" name="Fine" tags="Grigio_c T_Nero" position="5904,801" size="100,100">
-## (text-colour:#74c0fc)[Il colpevole è a Treviso]
+(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="12" name="Fine" tags="Grigio_c T_Nero" position="5902.333333333333,802.6666666666666" size="100,100">
+## Il colpevole è a Treviso!
+\
+(if:$soluzione_val is 1)[(text-colour:#74c0fc)[&#39;&#39;[Detective $nome]&#39;&#39;]: Maresciallo credo che in questo codice sia contenuta la posizione del colpevole.
 
-(if:$soluzione_val is 1)[(text-colour:#74c0fc)[&#39;&#39;[Detective $nome]&#39;&#39;] “Maresciallo credo che in questo codice sia contenuta la posizione del colpevole.”
-
-(text-colour:#74c0fc)[&#39;&#39;[Maresciallo Caputo]&#39;&#39;]“Sono d&#39;accordo, partiamo subito: deve essere a Treviso! Codice 534 ripeto abbiamo un codice 534 passo e chiudo”]
+(text-colour:$colore_dialogo)[&#39;&#39;[Maresciallo Caputo]&#39;&#39;]: Sono d&#39;accordo, partiamo subito: deve essere a Treviso! Codice 534 ripeto abbiamo un codice 534 passo e chiudo]
 
 (if: $Frappè_ogg is &quot;No&quot;)[(align:&quot;==&gt;&quot;)+(box:&quot;XXXXXXXXX=&quot;)[(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;dissolve&quot;)+(t8n-time:1s)[[Arriva a Treviso|2 Fine]]]]
 
 (if: $Frappè_ogg is &quot;Sì&quot;)[(if: $punto_int_n &gt; 3)[Poi, all&#39;improvviso, al risultato del rebus un dato diventa più chiaro. Ma certo! Evidentemente era rimasto nei meandri della tua mente fino a quel momento.
-(text-colour:#74c0fc)[&#39;&#39;[Detective $nome]&#39;&#39;]“Maresciallo guardi! Il frappè non proviene da Starbucks, ma da SturBancks! Deve essere una specie di copia.”
+(text-colour:$colore_dialogo)[&#39;&#39;[Detective $nome]&#39;&#39;]: Maresciallo guardi! Il frappè non proviene da Starbucks, ma da SturBancks! Deve essere una specie di copia.
 
 (align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[&lt;style&gt; img {max-width: 100%; max-height: 100%; } &lt;/style&gt; &lt;img src=https://assettstemp.yolasite.com/ws/media-library/763d0956f0b6475b85f0d163e2ced0a5/frappe.webp&gt; &lt;/div&gt;]
 
 Capite subito che, se il frappé viene da un posto così strano, probabilmente deve esserci un legame fra il colpevole e questo StarBanks. Vi mettete entrambi all&#39;opera, smanettando sul telefono per cercare dove si trovi questo strano negozio. 
 
-(text-colour:#74c0fc)[&#39;&#39;[Maresciallo Caputo]&#39;&#39;]“Detective $nome, guardi! Ho scoperto che quel negozio è presente solo a Treviso. Questo conferma anche il messaggio che abbiamo risolto. Andiamo direttamente lì”
+(text-colour:$colore_dialogo)[&#39;&#39;[Maresciallo Caputo]&#39;&#39;]: Detective $nome, guardi! Ho scoperto che quel negozio è presente solo a Treviso. Questo conferma anche il messaggio che abbiamo risolto. Andiamo direttamente lì.
 
-[[Arriva allo StarBanks di Treviso|2 Fine2]]]]</tw-passagedata><tw-passagedata pid="13" name="coordinate" tags="Grigio_c T_Nero" position="1800,1000" size="100,100">
+[[Arriva allo StarBanks di Treviso-&gt;2 Fine2]]]]
+\
+(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="13" name="coordinate" tags="Grigio_c T_Nero" position="1800,1000" size="100,100">
 ## Interpreta le coordinate
  \
 (set: $extra_punti to 0)
@@ -525,35 +545,39 @@ Queste sono coordinate in (dropdown: 2bind $risp_coord_1, &quot;Gradi decimali (
 |cloacked)[ [[Coordinate 2]] [[Coordinate 3]]]
 
 (display: &quot;piepagina&quot;) }</tw-passagedata><tw-passagedata pid="14" name="Cugino" tags="Grigio_c T_Nero" position="5300,704" size="100,100">
-## (text-colour:#339af0)[Fatti dare un passaggio dal cugino del maresciallo]
-
+## Fatti dare un passaggio dal cugino del maresciallo
+\
+(set: $punti_int to $punti_int - 1)
+(set: $punti_soc to $punti_soc + 1)
+\
 Hai scelto di farti dare un passaggio dal cugino del maresciallo, che è ovviamente disponibile.
 
-(text-colour:#74c0fc)[&#39;&#39;[Cugino]&#39;&#39;] (text-colour:white)[“Farò il possibile detective, ma senza usare le sirene, con il traffico di Roma ci vorrà almeno un ora.”]
+(text-colour:$colore_dialogo)[&#39;&#39;[Cugino]&#39;&#39;]: Farò il possibile detective, ma senza usare le sirene, con il traffico di Roma ci vorrà almeno un ora.”
 
-Guadagni 1 punto interazione e -1 punti intuizione per aver accettato l’aiuto dal cugino del maresciallo. Ora hai $punto_int_n punti intuizione e $punto_soc_n punti socialità.
-
-[[Dopo un&#39;ora e mezza di tragitto, finalmente arrivi all&#39;auto del sospettato|3 Esatto]].
-
-(if: $Passaggio_v is 0)[(set: $punto_int_n to $punto_int_n + 1)]
-(if: $Passaggio_v is 0)[(set: $punto_soc_n to $punto_soc_n - 1)]
-(set: $Passaggio_v to 1)</tw-passagedata><tw-passagedata pid="15" name="Volante" tags="Grigio_c T_Nero" position="5301,899" size="100,100">
-## (text-colour:#339af0)[Fatti venire a prendere dagli agenti Riccardi e Palladini]
-
-(text-colour:#74c0fc)[&#39;&#39;[Maresciallo Caputo]&#39;&#39;]Ottima idea detective $nome! Nonostante il la caserma fosse lontana, le sirene ci fanno saltare il traffico.
+Guadagni 1 punto socialità e perdi 1 punto intuizione per aver accettato l’aiuto dal cugino del maresciallo.
+\
+Dopo un&#39;ora e mezza di tragitto, finalmente [[arrivi all&#39;auto del sospettato-&gt;3 Esatto]].
+\
+(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="15" name="Volante" tags="Grigio_c T_Nero" position="5301,900.6666666666666" size="100,100">
+## Fatti venire a prendere dagli agenti Riccardi e Palladini
+\
+(text-colour:$colore_dialogo)[&#39;&#39;[Maresciallo Caputo]&#39;&#39;]Ottima idea detective $nome! Nonostante il la caserma fosse lontana, le sirene ci fanno saltare il traffico.
 
 Guadagni 2 punto intuizione per aver capito come muoverti rapidamente nel traffico della città eterna. Ora hai $punto_int_n punti intuizione.
 
-[[Dopo mezz&#39;ora di tragitto, finalmente arrivi all&#39;auto del sospettato|3 Esatto]].
-
+[[Dopo mezz&#39;ora di tragitto, finalmente arrivi all&#39;auto del sospettato-&gt;3 Esatto]].
+\
 (if: $Passaggio_v is 0)[(set: $punto_int_n to $punto_int_n + 2)]
 (set: $Passaggio_v to 1)
-</tw-passagedata><tw-passagedata pid="16" name="Frappè" tags="Grigio_c T_Nero" position="5702,1001" size="100,100">
-## (text-colour:#339af0)[Frappè 🥛]
+\
+(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="16" name="Frappè" tags="Grigio_c T_Nero" position="5700.333333333333,1001" size="100,100">
+## Frappè 🥛
+\
+(set: $controlla_frappe to 1)
 \
 (text-colour:#74c0fc)[&#39;&#39;[Detective $nome]&#39;&#39;]“Beh, a parte avere qualche informazione sui gusti del ladro, potremmo analizzare le impronte digitali o trovare del dna!”
 (text-colour:#74c0fc)[&#39;&#39;[Maresciallo Caputo]&#39;&#39;]Agente $cognome, non dica sciocchezze! Questo è il mondo reale, non NCIS. Anche se riuscissimo a tirarci fuori del DNA, ci vorrebbe comunque troppo tempo.”
-(text-colour:#74c0fc)[&#39;&#39;[Detective $nome]&#39;&#39;]“Si, hai ragione. Al momento ci si fa poco, ma in futuro potrebbe essere utile”
+(text-colour:#74c0fc)[&#39;&#39;[Detective $nome]&#39;&#39;]“Si, hai ragione. Al momento ci si fa poco, ma in futuro potrebbe essere utile. Certo che portarsi dietro un bicchiere di frappè usato...chissà se è una buona idea!”
 
 
 |=
@@ -566,36 +590,36 @@ Guadagni 2 punto intuizione per aver capito come muoverti rapidamente nel traffi
 Quindi, pensi che sia una buona idea o meno prendere il Frappè?
 (dropdown: 2bind $Frappè_ogg,&quot;No&quot;, &quot;Sì&quot;)
 
-(if: $Oggetti_v is 0)[(set: $punto_soc_n to $punto_soc_n + 1)]
-(set: $Oggetti_v to 1)
 =|=
 [[Decidi cosa fare del frappé e controlla gli altri oggetti|3 Esatto]]
 =|=
 
 |==| 
 
-(set: $controlla_frappe to 1)</tw-passagedata><tw-passagedata pid="17" name="5 Stat Sì" tags="Grigio_c T_Nero" position="4200,1097" size="100,100">
-## (text-colour:#339af0)[Hai scelto di tornare subito in dipartimento]
+(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="17" name="5 Stat Sì" tags="Grigio_c T_Nero" position="4200,1097" size="100,100">
+## Hai scelto di tornare subito in dipartimento
 \
 
-(text-colour:#74c0fc)[&#39;&#39;[Detective $nome]&#39;&#39;]“Mi scusi maresciallo, andiamo.”
+(text-colour:$colore_dialogo)[&#39;&#39;[Detective $nome]&#39;&#39;]“Mi scusi maresciallo, andiamo.”
 
 Fuori il cielo è sereno e limpido. Ormai è mattina inoltrata, e Roma p splendida nel mese di aprile. Il sole splende e i suoi raggi riflettono sulla vettura del maresciallo. Nonostante la fretta e l’agitazione di arrivare il prima possibile in dipartimento, l’atmosfera circostante produce una sorta di allegria e spensieratezza. Non puoi non notare come si tratti davvero di una delle città più belle del mondo.
 Come sempre c’è traffico nelle strade. Il maresciallo abbassa leggermente il finestrino ed accende la radio: è sintonizzata sul canale Notizie Polizia, il suo preferito.
 
-(text-colour:#74c0fc)[&#39;&#39;[Radio Zia Poli]&#39;&#39;]“Nella giornata di ieri, in via ………… è stato rubato un furgone bianco. Il proprietario dichiara di averlo lasciato parcheggiato la mattina, prima di iniziare a lavorare. La sera però, una volta tornato al parcheggio, il veicolo era scomparso. Il ladro non è stato identificato. Nel caso ci sia stato qualche testimone al momento del furto, è pregato di chiamare il numero……..”
+(text-colour:$colore_dialogo)[&#39;&#39;[Radio Zia Poli]&#39;&#39;]“Nella giornata di ieri, in via ………… è stato rubato un furgone bianco. Il proprietario dichiara di averlo lasciato parcheggiato la mattina, prima di iniziare a lavorare. La sera però, una volta tornato al parcheggio, il veicolo era scomparso. Il ladro non è stato identificato. Nel caso ci sia stato qualche testimone al momento del furto, è pregato di chiamare il numero……..”
 
 Questa notizia giunge a te come un tuono. Non lasci finire la frase e spegni la radio.
 
-(text-colour:#74c0fc)[&#39;&#39;[Detective $nome]&#39;&#39;]“Maresciallo mi raccomando, tenga bene a mente il furgoncino. Ho come l’impressione possa essere collegato al furto della statua”.
+(text-colour:$colore_dialogo)[&#39;&#39;[Detective $nome]&#39;&#39;]“Maresciallo mi raccomando, tenga bene a mente il furgoncino. Ho come l’impressione possa essere collegato al furto della statua”.
 
-(align:&quot;==&gt;&quot;)+(box:&quot;XXXXXXXXX=&quot;)[(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;dissolve&quot;)+(t8n-time:1s)[[Tieni a mente il furgoncino e arriva in dipartimento|Targhe]]]</tw-passagedata><tw-passagedata pid="18" name="5 Stat No" tags="Grigio_c T_Nero" position="4199,700" size="100,100">
-##(text-colour:#339af0)[ Controlla il manuale con più attenzione]
+Tieni a mente il furgoncino e [[arriva in dipartimento-&gt;Targhe]].
+
+(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="18" name="5 Stat No" tags="Grigio_c T_Nero" position="4199,700" size="100,100">
+## Controlla il manuale con più attenzione
 \
-(text-colour:#74c0fc)[&#39;&#39;[Detective $nome]&#39;&#39;]“D’accordo maresciallo, io rimango qui ancora per un attimo, ci vediamo tra poco”.
+(text-colour:$colore_dialogo)[&#39;&#39;[Detective $nome]&#39;&#39;]: D’accordo maresciallo, io rimango qui ancora per un attimo, ci vediamo tra poco.
 
 L’incognita del manuale è diventata la tua priorità, sei convinto sia un tassello fondamentale per lo sviluppo dell’indagine. Vai sulle scale di emergenza a dare un’occhiata. &quot;Non ci sono telecamere&quot; pensi fra te e te, &quot;quindi il ladro non può essere ripreso stato&quot;. Esamini quindi con attenzione la porta. È una di quelle classiche porte antincendio, bianca e con il maniglione antipanico rosso. È bloccata dall’esterno. Al contempo sai anche che la sala è costantemente sorvegliata dalle guardie, le quali non consentono ai visitatori di passare dall’uscita di emergenza, se non per situazioni appunto di pericolo. Dunque, se le guardie hanno svolto correttamente il proprio lavoro, ci sono due possibili alternative:
-
+\
 =|=
 //Opzione 1//
 Il ladro è stato lasciato dal ladro mentre scappava, e ha usato le scale come via di fuga per fuggire. Se ne è liberato per non essere riconosciuto, e lo stava tenendo prima per potersi presentare come uno studente di storia dell&#39;arte molto zelante nel caso qualcuno lo avesse visto in giro.
@@ -603,15 +627,15 @@ Il ladro è stato lasciato dal ladro mentre scappava, e ha usato le scale come v
 //Opzione 2//
 Il libro è stato portato lì da qualcuno interno al museo, a cui era consentito passare dalla porta d’emergenza, ed è stato usato in qualche modo dal ladro per entrare.
 |==|
-
+\
 &lt;h3&gt;(text-colour:#4dabf7)[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[A una prima occhiata il libro sembra non avere alcuna caratteristica particolare. Su quale ipotesi scegli di concentrarti?]]&lt;/h3&gt;
-
+\
 =|=
-(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)+(text-colour:#ffa8a8)[&#39;&#39;[[Opzione 1]]&#39;&#39;]
+(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)+(text-colour:#ffa8a8)[ [[Opzione 1]] ]
 =|=
-(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)+(text-colour:#ffa8a8)[&#39;&#39;[[Opzione 2]]&#39;&#39;]
-
-
+(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)+(text-colour:#ffa8a8)[ [[Opzione 2]] ]
+\
+(display: &quot;piepagina&quot;)
 
 </tw-passagedata><tw-passagedata pid="19" name="Coordinate 2" tags="Grigio_c T_Nero" position="2000,1100" size="100,100">
 ## Ancora sulla lettura di coordinate
@@ -634,38 +658,41 @@ Qual è la tua scelta? (dropdown: 2bind $risp_coord_2, &quot;1&quot;, &quot;2&qu
 
 |cloacked)[ [[Coordinate 3]] ]
 
-(display: &quot;piepagina&quot;)}</tw-passagedata><tw-passagedata pid="20" name="3 Fine" tags="T_Nero Legno" position="6303,698" size="100,100">
-## (text-colour:#74c0fc)[Scegli quale oggetto prendere]
-
-(bg:#f1f3f5)[(text-colour:#74c0fc)[&#39;&#39;[Maresciallo Caputo]&#39;&#39;] Detective $nome quale dei seguenti oggetti ci può essere utile?
-
+(display: &quot;piepagina&quot;)}</tw-passagedata><tw-passagedata pid="20" name="3 Fine" tags="T_Nero Legno" position="6304.666666666667,698" size="100,100">
+## Scegli quale oggetto prendere
+\
+(bg:#f1f3f5)[(text-colour:$colore_dialogo)[&#39;&#39;[Maresciallo Caputo]&#39;&#39;] Detective $nome quale dei seguenti oggetti ci può essere utile?
+\
 Premi uno dei seguenti oggetti sulla scrivania:]
-
+\
 =|=
-(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;dissolve&quot;)+(t8n-time:1s)[[&lt;style&gt; img {max-width: 100%; max-height: 100%; } &lt;/style&gt; &lt;img src=https://i.ibb.co/zXwpYwM/1-trt.png&gt; &lt;/div&gt;|3 Finef]]
+[[&lt;style&gt; img {max-width: 100%; max-height: 100%; } &lt;/style&gt; &lt;img src=https://i.ibb.co/zXwpYwM/1-trt.png&gt; &lt;/div&gt;-&gt;scontrino_generico]]
 =|=
-(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;dissolve&quot;)+(t8n-time:1s)[[&lt;style&gt; img {max-width: 100%; max-height: 100%; } &lt;/style&gt; &lt;img src=https://i.ibb.co/rbz1QMX/2-trt.png&gt; &lt;/div&gt;|3 Finef]]
+[[&lt;style&gt; img {max-width: 100%; max-height: 100%; } &lt;/style&gt; &lt;img src=https://i.ibb.co/rbz1QMX/2-trt.png&gt; &lt;/div&gt;-&gt;scontrino_generico]]
 =|=
-(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;dissolve&quot;)+(t8n-time:1s)[[&lt;style&gt; img {max-width: 100%; max-height: 100%; } &lt;/style&gt; &lt;img src=https://i.ibb.co/tKdwsMX/3-trt.png&gt; &lt;/div&gt;|3 Finef]]
+[[&lt;style&gt; img {max-width: 100%; max-height: 100%; } &lt;/style&gt; &lt;img src=https://i.ibb.co/tKdwsMX/3-trt.png&gt; &lt;/div&gt;-&gt;scontrino_generico]]
 =|=
-(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;dissolve&quot;)+(t8n-time:1s)[[&lt;style&gt; img {max-width: 100%; max-height: 100%; } &lt;/style&gt; &lt;img src=https://i.ibb.co/ncm5bXw/4-trt.png&gt; &lt;/div&gt;|3 Finef]]
+[[&lt;style&gt; img {max-width: 100%; max-height: 100%; } &lt;/style&gt; &lt;img src=https://i.ibb.co/ncm5bXw/4-trt.png&gt; &lt;/div&gt;-&gt;scontrino_generico]]
 |==|
 
 =|=
-(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;dissolve&quot;)+(t8n-time:1s)[[&lt;style&gt; img {max-width: 100%; max-height: 100%; } &lt;/style&gt; &lt;img src=https://i.ibb.co/dcKRV27/5-ilb.png&gt; &lt;/div&gt;|3 Finef]]
+[[&lt;style&gt; img {max-width: 100%; max-height: 100%; } &lt;/style&gt; &lt;img src=https://i.ibb.co/dcKRV27/5-ilb.png&gt; &lt;/div&gt;-&gt;scontrino_generico]]
 =|=
-(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;dissolve&quot;)+(t8n-time:1s)[[&lt;style&gt; img {max-width: 100%; max-height: 100%; } &lt;/style&gt; &lt;img src=https://i.ibb.co/jZ0qykT/6-ilb.png&gt; &lt;/div&gt;|3 Finef]]
+[[&lt;style&gt; img {max-width: 100%; max-height: 100%; } &lt;/style&gt; &lt;img src=https://i.ibb.co/jZ0qykT/6-ilb.png&gt; &lt;/div&gt;-&gt;scontrino_generico]]
 =|=
-(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;dissolve&quot;)+(t8n-time:1s)[[&lt;style&gt; img {max-width: 100%; max-height: 100%; } &lt;/style&gt; &lt;img src=https://i.ibb.co/72gGYLB/0-lav.png&gt; &lt;/div&gt;|3 Finev]]
+[[&lt;style&gt; img {max-width: 100%; max-height: 100%; } &lt;/style&gt; &lt;img src=https://i.ibb.co/72gGYLB/0-lav.png&gt; &lt;/div&gt;-&gt;scontrino_lavanderia]]
 =|=
-(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;dissolve&quot;)+(t8n-time:1s)[[&lt;style&gt; img {max-width: 100%; max-height: 100%; } &lt;/style&gt; &lt;img src=https://i.ibb.co/tY3ytbX/7-lav.png&gt; &lt;/div&gt;|3 Finei]]
-|==|</tw-passagedata><tw-passagedata pid="21" name="4 Fine" tags="Grigio_c T_Nero" position="6900,704" size="100,100">## (text-colour:#74c0fc)[ Conclusione ]
+[[&lt;style&gt; img {max-width: 100%; max-height: 100%; } &lt;/style&gt; &lt;img src=https://i.ibb.co/tY3ytbX/7-lav.png&gt; &lt;/div&gt;-&gt;bigliettino_lavanderia]]
+|==|
+\
+(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="21" name="4 Fine" tags="Grigio_c T_Nero" position="6900,704" size="100,100">
+## Conclusione
+\
+(text-colour:$colore_dialogo)[&#39;&#39;[Maresciallo Caputo]&#39;&#39;]: Eccoci al dunque detective!
 
-(text-colour:#74c0fc)[&#39;&#39;[Maresciallo Caputo]&#39;&#39;]  “Eccoci al dunque detective!”
+(text-colour:$colore_dialogo)[&#39;&#39;[Detective $nome]&#39;&#39;]: Non ci posso credere che finalmente lo abbiamo catturato.
 
-(text-colour:#74c0fc)[&#39;&#39;[Detective $nome]&#39;&#39;]  &quot;Non ci posso credere che finalmente lo abbiamo catturato.&quot;
-
-(text-colour:#74c0fc)[&#39;&#39;[Maresciallo Caputo]&#39;&#39;]  “Neppure io, ecco le sue generalità”
+(text-colour:$colore_dialogo)[&#39;&#39;[Maresciallo Caputo]&#39;&#39;]: Neppure io, ecco le sue generalità
 (align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[
 Nome: David
 Cognome: Mercer
@@ -685,87 +712,109 @@ Dopo essersi diplomato al liceo scientifico ha proseguito gli studi e ha lavorat
 
 &lt;hr&gt;
 
-&lt;h3&gt;(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[(text-colour:#4dabf7)[&#39;&#39;Complimenti, detective $nome: sei riuscit$g a catturare il colpevole! Ecco il tuo punteggio!&#39;&#39;]]&lt;/h3&gt;
+&lt;h3&gt;(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[(text-colour:#4dabf7)[&#39;&#39;Complimenti, agente $nome $cognome: sei riuscit$g a catturare il colpevole! Ecco il tuo punteggio!&#39;&#39;]]&lt;/h3&gt;
 (align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[&#39;&#39;Punti Intuizione: $punto_int_n
 Punti Socialità $punto_soc_n
 Errori commessi nel gioco $risp_sbagliate&#39;&#39;]
+\
+(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X=&quot;)[(link: &quot;Clicca qui per rigiocare la storia&quot;)
+[(goto: &quot;frontespizio&quot;)]]</tw-passagedata><tw-passagedata pid="22" name="2 Fine2" tags="Grigio_c T_Nero" position="6602,1097" size="100,100">
+## Arriva da Sturbanks
+\
+&lt;style&gt; img {max-width: 100%; max-height: 100%; } &lt;/style&gt; &lt;img src=https://i.ibb.co/48pW7Zw/Bar.png&gt; &lt;/div&gt; 1
 
+(text-colour:#74c0fc)[&#39;&#39;[Maresciallo Caputo]&#39;&#39;]: Eccoci, siamo arrivati!
 
-(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X=&quot;)[(link: &quot;Clicca qui per rigiocare la storia&quot;)[(goto: &quot;frontespizio&quot;)]]</tw-passagedata><tw-passagedata pid="22" name="2 Fine2" tags="Grigio_c T_Nero" position="6602,1097" size="100,100">&lt;style&gt; img {max-width: 100%; max-height: 100%; } &lt;/style&gt; &lt;img src=https://i.ibb.co/48pW7Zw/Bar.png&gt; &lt;/div&gt;
+(text-colour:#74c0fc)[&#39;&#39;[Detective $nome]&#39;&#39;]: Già, questo è il famoso Sturbanks presente solo a Treviso.
 
+(text-colour:#74c0fc)[&#39;&#39;[Maresciallo Caputo]&#39;&#39;]: Entriamo e chiediamo informazioni.
 
-(text-colour:#74c0fc)[&#39;&#39;[Maresciallo Caputo]&#39;&#39;]“Eccoci, siamo arrivati!”
+Entrate nel locale, e non c&#39;è quasi nessuno dentro al locale. Quieto, tranquillo. In verità, visto che sei in centro storico, ti aspetteresti qualche persona in più.
 
-(text-colour:#74c0fc)[&#39;&#39;[Detective $nome]&#39;&#39;]“Già, ed ecco lo Sturbanks presente solo a Treviso.”
+(text-colour:$colore_dialogo)[&#39;&#39;[Detective $nome]&#39;&#39;]: A me sembra un posto troppo tranquillo. Sospettosamente tranquillo. Maresciallo mostri il distintivo al barista e vediamo cosa ha da dirci.
 
-(text-colour:#74c0fc)[&#39;&#39;[Maresciallo Caputo]&#39;&#39;]“Entriamo a chiedere informazioni.”
-
-(text-colour:#74c0fc)[&#39;&#39;[Detective $nome]&#39;&#39;]“Devo dire che sembra un posto fin troppo tranquillo. Maresciallo mostri il distintivo al barista.”
-
-Il maresciallo si avvicina al barista.
-
+Il maresciallo si avvicina al barista, gli mostra il distintivo e inizia a parlargli. 
+\
 =|=
 (align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[&lt;style&gt; img {max-width: 100%; max-height: 100%; } &lt;/style&gt; &lt;img src=https://i.ibb.co/R4CFGM2/M3.png&gt; &lt;/div&gt;]
 =|=
-(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[(text-colour:#74c0fc)[&#39;&#39;[Maresciallo Caputo]&#39;&#39;] “Buongiorno, sono il Maresciallo Caputo, sono qui per farle quanche domanda.”]
+(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[(text-colour:$colore_dialogo)[&#39;&#39;[Maresciallo Caputo]&#39;&#39;] Buongiorno, sono il Maresciallo Caputo, sono qui per farle quanche domanda.]
 |==|
 
 =|=
-(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[(text-colour:#74c0fc)[&#39;&#39;[Barista]&#39;&#39;]“Si i ehm mm c&#39;è, certament...sa, aspetti che chiamo un collega, io ho cominciato a lavorare settimana scorsa, sono appena arrivato...”]
+(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[(text-colour:$colore_dialogo)[&#39;&#39;[Barista]&#39;&#39;]“Si i ehm mm c&#39;è, certament...sa, aspetti che chiamo un collega, io ho cominciato a lavorare settimana scorsa, sono appena arrivato...”]
 =|=
 (align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[&lt;style&gt; img {max-width: 75%; max-height: 100%; } &lt;/style&gt; &lt;img src=https://i.ibb.co/jTTLWgz/B1.png&gt; &lt;/div&gt;]
 |==|
 
-Senza che voi ve lo aspettiate, il barista si mette a correre. Deve essere lui il colpevole!
+Senza che voi ve lo aspettiate, il barista si mette a correre. 
+
+&#39;&#39;Deve essere lui il colpevole!&#39;&#39;
  
- (text-colour:#74c0fc)[&#39;&#39;[Maresciallo Caputo]&#39;&#39;]“Si fermi! Si fermi immediatamente!!”
+ (text-colour:$colore_dialogo)[&#39;&#39;[Maresciallo Caputo]&#39;&#39;]: Si fermi! Si fermi immediatamente!!
 
-(text-colour:#74c0fc)[&#39;&#39;[Maresciallo Caputo]&#39;&#39;]“Codice rosso! Ripeto, codice rosso!”
+Tu sei sopres$g, ma il Maresciallo no. I suoi lunghi anni di esperienza in questa occasione si fanno sentire. Si lancia all&#39;inseguimento chiamando contemporaneamente rinforzi con la sua trasmittente.
 
-(text-colour:#74c0fc)[&#39;&#39;[Maresciallo Caputo]&#39;&#39;]“Pijalo Pijalo!!!!”
+(text-colour:$colore_dialogo)[&#39;&#39;[Maresciallo Caputo]&#39;&#39;]: Codice rosso! Ripeto, codice rosso!
 
-Con uno scatto da ver$g atleta, riesci a raggiungere il barista che stava cercando di scappare, e lo immobilizzi. Lui ti guarda gridandoti di lasciarlo andare, e dall&#39;accento francese capisci che quello che stai per ammanettare è proprio il colpevole!
+Con uno scatto da ver$g atleta, riesce a raggiungere il barista che stava cercando di scappare, e lo immobilizza. Lui lo guarda gridandoti di lasciarlo andare, e in quel momento raggiungi la strana coppia e ammanetti il barista. Lo senti sbraitare e dall&#39;accento francese capisci che quello che hai appena ammanettato è proprio il colpevole!
+\
+[[Scopri chi hai catturato-&gt;4 Fine]]]
+|==| 
+\
+(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="23" name="scontrino_generico" tags="Grigio_c T_Nero" position="6598.333333333333,911" size="100,100">
+## Errato! 
+\
+Non c’è una reale correlazione oggettiva tra di loro, andare alla trattoria ci farebbe solo perdere altro tempo!
 
-[[Scopri chi hai catturato|4 Fine]]]
-|==| </tw-passagedata><tw-passagedata pid="23" name="3 Finef" tags="Grigio_c T_Nero" position="6600,911" size="100,100">Errato! Non c’è una reale correlazione oggettiva tra di loro, andare alla trattoria ci farebbe solo perdere altro tempo!
-
+(if: $scontrino_generico is 0)[Perdi un punto intelligena per aver scelto lo scontrino sbagliato. 
+(set: $punto_int_n to $punto_int_n + -1)]
+(set: $scontrino_generico to 1) \ &lt;!-- qui e non sopra altrimenti il testo con la flag scontrino generico non funziona mai non funziona --&gt;
+\
 |=
-(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;dissolve&quot;)+(t8n-time:1s)[[Torna indietro|3 Fine]]
+[[Torna indietro-&gt;3 Fine]]
 |=
 |==| 
-
-(if: $2fine_v is 0)[(set: $punto_int_n to $punto_int_n + -1)]
-(set: $2fine_v to 1)</tw-passagedata><tw-passagedata pid="24" name="3 Finev" tags="Grigio_c T_Nero" position="6600,507" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[&lt;style&gt; img {max-width: 40%; max-height: 100%; } &lt;/style&gt; &lt;img src=https://i.ibb.co/72gGYLB/0-lav.png&gt; &lt;/div&gt;]
+\
+(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="24" name="scontrino_lavanderia" tags="Grigio_c T_Nero" position="6600,507" size="100,100">(if: $scontrino1 is 0)[
+## Scontrino della lavanderia
+\
+(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[&lt;style&gt; img {max-width: 40%; max-height: 100%; } &lt;/style&gt; &lt;img src=https://i.ibb.co/72gGYLB/0-lav.png&gt; &lt;/div&gt;]
 
 (if: $2fine_v is 0)[Bene...il colpevole deve andare a ritirare i panni nella Lavanderia Lions. Ma quale delle tante che ci sono? Questo è un franchising che ha sede in tutta Italia, e solo a Treviso guardando su Google si vede che ci sono 5 diverse lavanderie. Non possiamo controllarle tutte. Ci vogliono dei dati ulteriori, in modo da avere un&#39;informazione più precisa.
 
-[[Torna a vedere se uno degli altri scontrini ti dice l&#39;indirizzo della lavanderia|3 Fine]]]
-(if: $2fine_v is 1)[Corretto, ottima scelta!
+[[Torna a vedere se uno degli altri scontrini ti dice l&#39;indirizzo della lavanderia-&gt;3 Fine]]] \
+]
+(else:)[
+## Agguato alla lavanderia
+\
+Corretto, ottima scelta!
 
-(text-colour:#74c0fc)[&#39;&#39;[Detective $nome]&#39;&#39;] “Significa che per forza il nostro ricercato si recherà a breve alla lavanderia. A giudicare dal bigliettino, andrà nel tardo pomeriggio di oggi (alle 18:30), o comunque prima dell’orario di chiusura.&quot;
+(text-colour:$colore_dialogo)[&#39;&#39;[Detective $nome]&#39;&#39;]: Significa che per forza il nostro ricercato si recherà a breve alla lavanderia. A giudicare dal bigliettino, andrà nel tardo pomeriggio di oggi (alle 18:30), o comunque prima dell’orario di chiusura.
 
 Il maresciallo è d&#39;accordo con te. Richiama tutti all&#39;ordine con la sua poderosa voce e organizza la retata al ladro.
 
-(text-colour:#74c0fc)[&#39;&#39;[Maresciallo Caputo]&#39;&#39;] &quot;Statemi tutti ad ascoltare. Lo aspetteremo là direttamente e si ritroverà circondato senza nessuna possibilità di fuga. Mi raccomando, niente sirene e niente uniformi, non dobbiamo destare il minimo sospetto. Forza! Forza! Non può scapparci!&quot;
+(text-colour:$colore_dialogo)[&#39;&#39;[Maresciallo Caputo]&#39;&#39;]: Statemi tutti ad ascoltare. Lo aspetteremo là direttamente e si ritroverà circondato senza nessuna possibilità di fuga. Mi raccomando, niente sirene e niente uniformi, non dobbiamo destare il minimo sospetto. Forza! Forza! Non può scapparci!
 
-Andate alla lavanderia, e dopo qualche minuto di appostamento, effettivamente David Mercer compare nella via, camminando rapido in direzione della lavanderia. Non fa in tempo ad accorgersi che ci sia qualcosa di strano che un nugulo di poliziotti gli è addosso. [[Prosegui e arresta David Mercer|4 Fine]].]
+Andate alla lavanderia, e dopo qualche minuto di appostamento, effettivamente David Mercer compare nella via, camminando rapido in direzione della lavanderia. Non fa in tempo ad accorgersi che ci sia qualcosa di strano che un nugulo di poliziotti gli è addosso. [[Prosegui e arresta David Mercer-&gt;4 Fine]].]
 |==| 
+\
+(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="25" name="bigliettino_lavanderia" tags="Grigio_c T_Nero" position="6599.666666666667,702.6666666666666" size="100,100">
+## Scopri dov&#39;è la lavanderia
+\
+(set: $scontrino1 to 1) \
 
-(if: $2fine_v is 0)[(set: $punto_int_n to $punto_int_n + 1)]
-(if: $2fine_v is 0)[(set: $punto_soc_n to $punto_soc_n + 2)]
-(set: $2fine_v to 1)</tw-passagedata><tw-passagedata pid="25" name="3 Finei" tags="Grigio_c T_Nero" position="6598,701" size="100,100">Ulteriore scontrino molto recente, precisamente del giorno prima rispetto all’arrivo degli agenti nel covo del ladro. 
+Ulteriore scontrino molto recente, precisamente del giorno prima rispetto all’arrivo degli agenti nel covo del ladro. 
 
-Ok, questo va bene: vuol dire che ci possiamo appostare vicino alla lavanderia, ma ci sapere quando Mercer andrà a ritirare gli abito, in mood da preparare un&#39;imboscata. Forza non c’è tempo: andiamo avanti!
-
-(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[&lt;style&gt; img {max-width: 40%; max-height: 100%; } &lt;/style&gt; &lt;img src=https://i.ibb.co/tY3ytbX/7-lav.png&gt;]
-
+Ok, questo va bene: vuol dire che ci possiamo appostare vicino alla lavanderia, ma dobbiamo ancora scoprire quando Mercer andrà a ritirare gli abito, in modo da preparare un agguato e riuscire ad arrestarlo!
+\
+(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[&lt;style&gt; img {max-width: 40%; max-height: 100%; } &lt;/style&gt; &lt;img src=https://i.ibb.co/tY3ytbX/7-lav.png&gt;] \
 |=
-(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;dissolve&quot;)+(t8n-time:1s)[[Torna indietro|3 Fine]]
+[[Torna indietro-&gt;3 Fine]]
 |=
 |==| 
-
-(if: $2fine_v is 0)[(set: $punto_soc_n to $punto_soc_n + 1)]
-(set: $2fine_v to 1)
+\
+(display: &quot;piepagina&quot;)
 </tw-passagedata><tw-passagedata pid="26" name="Coordinate 3" tags="Grigio_c T_Nero" position="2200,1000" size="100,100">
 ## Tira le somme sulle coordinate
  \
@@ -780,9 +829,9 @@ Potresti ora decidere di informarti un poco a proposito di [[coordinate geografi
 
 In ogni caso, stai cominciando a capire che la questione ai Musei Capitolini potrebbe essere seria, e che sia davvero necessario [[proseguire la tua indagine-&gt;2 Introduzione]]. \
  \
-(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="27" name="coordinate geografiche" tags="Grigio_c T_Nero" position="2400,1000" size="100,100">
+(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="27" name="coordinate geografiche" tags="Grigio_c T_Nero" position="2400,1001.6666666666666" size="100,100">
 ## Un’occhiata a Wikipedia
-
+\
 Apri Wikipedia dal tuo dispositivo e cerchi coordinate geografiche. Ti si presenta un’interessante pagina. Il tuo istinto ti dice che rimanere a leggere la pagina almeno 30 secondi potrebbe esserti utile...
 
 &lt;iframe src=&#39;https://it.m.wikipedia.org/wiki/Coordinate_geografiche&#39; width=&#39;800&#39; height=&#39;1200&#39;&gt;&lt;/iframe&gt;
@@ -797,9 +846,9 @@ Ora che sei un po’ più espert$g di dati e coordinate geografiche, [[prosegui 
 (live: $time_ass + 0.5)[(if: $flag is 1) [(if: $punti_assegnati is 0)[(set: $punti_assegnati to 1)(set: $punti_int to $punti_int + 1)]]] \
  \
 (live: $time_ass + 0.5)
-|enfat&gt;[Complimenti! Hai passato più di $time_ass_text secondi a leggere il testo. Non solo hai imparato qualcosa che magari ti tornerà magari utile in futuro, ma noi sviluppatori di questo libro-game abbiamo deciso di premiare la tua curiosità con un ulteriore punto intelligenza. Adesso, hai $punti_int //punti intelligenza//!] \
+|enfat&gt;[Complimenti! Hai passato più di $time_ass_text secondi a leggere il testo. Non solo hai imparato qualcosa che magari ti tornerà magari utile in futuro, ma noi sviluppatori di questo libro-game abbiamo deciso di premiare la tua curiosità con un ulteriore punto intelligenza.] \
  \
-(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="28" name="senza navigatore" tags="Grigio_c T_Nero" position="1800,800" size="100,100">
+(live: $time_ass + 0.5)[(display: &quot;piepagina&quot;)]</tw-passagedata><tw-passagedata pid="28" name="senza navigatore" tags="Grigio_c T_Nero" position="1800,801.6666666666666" size="100,100">
 ## Viaggiando senza navigatore
  \
 Andare in giro per Roma senza navigatore è una scelta per lo meno coraggiosa... 
@@ -831,189 +880,200 @@ Meno male che non hai perso del tempo a chiedere informazioni su come arrivare a
 Scendi dunque dall’auto e [[arrivi ai Musei Capitolini-&gt;2 Introduzione]]. \
  \
 (display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="31" name="2 Fine" tags="T_Nero Grigio_c" position="6100,699" size="100,100">
-## (text-colour:#74c0fc)[ Il covo di Mercer]]
-
+## Il covo di Mercer
+\
 Gli agenti e tu, Detective $nome, siete arrivati nel minor tempo possibile 
 
-(text-colour:#74c0fc)[&#39;&#39;[Maresciallo Caputo]&#39;&#39;] (text-colour:black)[“Eccoci, siamo arrivati!”]
+(text-colour:$colore_dialogo)[&#39;&#39;[Maresciallo Caputo]&#39;&#39;]: Eccoci, siamo arrivati!
 
-(text-colour:#74c0fc)[&#39;&#39;[Detective $nome]&#39;&#39;] (text-colour:black)[“Già, ed ecco la torre di Treviso.”]
+(text-colour:$colore_dialogo)[&#39;&#39;[Detective $nome]&#39;&#39;]: Già, ed ecco la torre di Treviso.
 
-(text-colour:#74c0fc)[&#39;&#39;[Maresciallo Caputo]&#39;&#39;] (text-colour:black)[“Rechiamoci nei sotterranei.”]
+(text-colour:$colore_dialogo)[&#39;&#39;[Maresciallo Caputo]&#39;&#39;]: Rechiamoci nei sotterranei.
 
-(text-colour:black)[Scendete al piano -3.]
+Insieme, entrate da una porta secondaria e, con l&#39;aiuto del signor Bianchin, il vecchio custode del posto, perlustrate la torre fino a scoprire una piccola porta nascosta, che vi viene detto portare nei sotterrane. Provate ad aprirla, ma non si muove. Sembra proprio essere chiusa. Fortunatamente, il custode ha un enorme mazzo di chiavi da cui, dopo qualche tentativo a vuoto, trova quella giusta. La porta si apre, e tu e il maresciallo scendete un paio di rampe di scale. È tutto molto scuro: siete sicuramente sotto il livello della strada. 
 &lt;style&gt; img {max-width: 100%; max-height: 100%; } &lt;/style&gt; &lt;img src=https://cdnb.artstation.com/p/assets/images/images/002/173/345/large/avril-gibbon-hackerden.jpg?1458217081&amp;dl=1&gt; &lt;/div&gt;
 
-Senz’ombra di dubbio, la stanza, sembra essere stata il covo in cui il ladro ha progettato tutto. Un’organizzazione impeccabile da parte sua. Ha scelto il sotterraneo di una torre per pianificare tutto quanto, sicuramente un luogo dove può lavorare indisturbato e senza destare nessun sospetto ad occhi indiscreti. Insieme agli agenti ci sono anche alcuni membri del gruppo poliziesco della scientifica pronti ad analizzare anche il più piccolo granello di polvere della stanza se necessario.
+Vi ritrovate in una stanza strana, cupa, le foto della lupa capitolina ovunque, mappe dei Musei Capitolini, di Piazza del Campidoglio e dei turni di guardia della sorveglianza. Quante informazioni! Chissà come avrà fatto a reperirle tutte, quale lavoro maniacale ci sarà voluto per mettere in piedi una simile organizzazione. La stanza, sembra essere stata il covo in cui il ladro ha progettato tutto. Un’organizzazione impeccabile da parte sua. Ha scelto il sotterraneo di una torre per pianificare tutto quanto, sicuramente un luogo dove può lavorare indisturbato e senza destare nessun sospetto ad occhi indiscreti. Insieme agli agenti ci sono anche alcuni membri del gruppo poliziesco della scientifica pronti ad analizzare anche il più piccolo granello di polvere della stanza se necessario.
 
-(text-colour:#74c0fc)[&#39;&#39;[Maresciallo Caputo]&#39;&#39;] (text-colour:black)[“Detective non ci posso credere, come hanno fatto a realizzare tutto ciò nei sotterranei della torre, sotto gli occhi di tutti.”]
+(text-colour:$colore_dialogo)[&#39;&#39;[Maresciallo Caputo]&#39;&#39;]: Detective non ci posso credere, come hanno fatto a realizzare tutto ciò nei sotterranei della torre, sotto gli occhi di tutti.
 
-(text-colour:#74c0fc)[&#39;&#39;[Detective $nome]&#39;&#39;] (text-colour:black)[“Questa è una falla nella sicurezza troppo grande”]
+(text-colour:$colore_dialogo)[&#39;&#39;[Detective $nome]&#39;&#39;]: Questa è un&#39;enorme falla nella sicurezza, un oltraggio al corpo della Polizia...quasi una presa in giro.
 
-(text-colour:#74c0fc)[&#39;&#39;[Maresciallo Caputo]&#39;&#39;] (text-colour:black)[“Wow, non mi immaginavo nulla di tutto ciò!”]
+(text-colour:$colore_dialogo)[&#39;&#39;[Maresciallo Caputo]&#39;&#39;]: Davvero. Certo che però è straordinario...chi sarebbe mai venuto a cercare in questo posto? Senza quel messaggio provvidenziale non ci saremmo mai arrivati.
 
-(text-colour:#74c0fc)[&#39;&#39;[Detective $nome]&#39;&#39;] (text-colour:black)[“Sembra essere un covo, una base operativa segreta. Forse qui possiamo trovare indizi sulla posizione del colpevole”]
+(text-colour:$colore_dialogo)[&#39;&#39;[Detective $nome]&#39;&#39;]: Verissimo Maresciallo! Ora mettiamoci al lavoro: se questo è davvero il covo del colpevole, qui possiamo trovare degli indizi sulla sua posizione.
 
-(text-colour:#74c0fc)[&#39;&#39;[Maresciallo Caputo]&#39;&#39;] (text-colour:black)[“Effettivamente nessuno mai si sarebbe immaginato di trovare il ladro nei sotterranei della torre di Treviso.”]
+La scientifica con le sue classiche tute bianche arriva e inizia scattare foto e perlustrare il posto. Poi, una volta concluse le operazioni, rimette tutto perfettamente in ordine perché, se dovesse ritornare al covo, il ladro non deve avere sospetti. Ma sia tu che il maresciallo sperate di metterci le mani sopra prima.
 
-(text-colour:#74c0fc)[&#39;&#39;[Detective $nome]&#39;&#39;] (text-colour:black)[“Maresciallo è vero, ma poco importante ora. Cerchiamo oggetti che ci possano indirizzare dal colpevole.”]
-
-La scientifica con le sue tipiche tute inodore e antibatteriche è pronta a scattare foto e rimettere eventualmente tutto perfettamente in ordine. Una volta di ritorno al covo, il ladro, non deve destare sospetti. Proprio per questo servono subito prove che ci possano dare una pista!
-
-È tutto maniacalmente in ordine e non c’è granché alla fine. L’unica cosa che risalta all’occhio degli agenti è la scrivania, sopra la quale apparentemente non è presente nessun oggetto di grande rilevanza (apparte una pigna di scontrini e fogli) ma non c’è tempo, bisogna provarle tutte, il ladro non può scappare ancora una volta!
-
-[[Guarda il tavolo con gli scontrini|3 Fine]]</tw-passagedata><tw-passagedata pid="32" name="1 Stat" tags="Grigio_c T_Nero" position="2800,900" size="100,100">
+Nonostante tutto l&#39;impegno, la scientifica non trova un gran che. L’unica cosa che viene all&#39;occhio è la scrivania, sopra la quale ci sono giusto degli scontrini e delle cartacce, che sembrano senza valore ma che sono anche l&#39;unica cosa che avete a disposizione per trovare la posizione del colpevole. 
+\
+[[Guarda il tavolo con gli scontrini-&gt;3 Fine]]
+\
+(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="32" name="1 Stat" tags="Grigio_c T_Nero" position="2800,900" size="100,100">
 ## Decidi cosa fare!
  \
 Arrivat$g a questo punto, hai quattro possibili strade, per acquisire informazioni su:
-* [[le persone non italiane che potrebbero aver compiuto il furto|stranieri Stat]];
-* [[i filmati del furto|filmati Stat]];
-* [[i percorsi nel museo dei possibili sospettati|percorsi Stat]];
-* [[i tempi di percorrenza nel museo dei possibili sospettati|tempi Stat]]. \
+* [[le persone non italiane che potrebbero aver compiuto il furto-&gt;stranieri Stat]];
+* [[i filmati del furto-&gt;filmati Stat]];
+* [[i percorsi nel museo dei possibili sospettati-&gt;percorsi Stat]];
+* [[i tempi di percorrenza nel museo dei possibili sospettati-&gt;tempi Stat]]. \
  \
-(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="33" name="stranieri Stat" tags="Grigio_c T_Nero" position="3025,625" size="100,100">
+(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="33" name="stranieri Stat" tags="Grigio_c T_Nero" position="3001.666666666667,603.3333333333334" size="100,100">
 ## Nazionalità dei partecipanti al corso d’arte dei Musei Capitolini
 \
-&lt;img src=&#39;res2/graf1.png&#39; class=&#39;center&#39; width=&#39;600&#39;&gt;
+(set: $flag_stran_Stat is 1) \
 
-(if: $flag_stan_Stat is 0) [Prendi in mano il grafico che ti ha fornito un funzionario del museo, appena arrivato, e la osservi con cura. Vedi che la maggioranza degli studenti sono italiani, ma che ci sono pure molti stranieri. Non solo: questi stranieri in grande maggioranza Francesi. Quindi, è possibile che il colpevole sia francese, ma non hai né prove né certezze, arrivati a questo punto. Se pensi di aver bisogno di una mano a capire la tabella, puoi [[mandare un messaggio|scrivi a Rebecca 1]] alla tua amica Rebecca, laureata in statistica e grande esperta di scienza dei dati.]
+&lt;img src=&#39;res2/graf1.png&#39; class=&#39;center&#39; width=&#39;600&#39;&gt;\
 
-Se vuoi, vai avanti e [[scegli il colpevole|2 Stat]] oppure, [[torna indietro e analizza un’altra prova-&gt;1 Stat]].
-
-(set: $Stat2 to false)
-(set: $Tabella2 to false)
-(set: $Stat2tot to false)
-
-(set: $flag_stan_Stat is 1) \
- \
-(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="34" name="filmati Stat" tags="Grigio_c T_Nero" position="3025,775" size="100,100">
-## (text-colour:#339af0)[Controlla le telecamere]
+(if: $flag_stran_Stat is 0) [Prendi in mano il grafico che ti ha fornito un funzionario del museo, appena arrivato, e la osservi con cura. Vedi che la maggioranza degli studenti sono italiani, ma che ci sono pure molti stranieri. Non solo: questi stranieri in grande maggioranza Francesi. Quindi, è possibile che il colpevole sia francese, ma non hai né prove né certezze, arrivati a questo punto. Se pensi di aver bisogno di una mano a capire la tabella, puoi [[mandare un messaggio|scrivi a Rebecca 1]] alla tua amica Rebecca, laureata in statistica e grande esperta di scienza dei dati.]
+\
+Se vuoi, vai avanti e [[scegli il colpevole-&gt;2 Stat]] oppure, [[torna indietro e analizza un’altra prova-&gt;1 Stat]].
+\
+(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="34" name="filmati Stat" tags="Grigio_c T_Nero" position="2996.666666666666,753.3333333333334" size="100,100">
+## Controlla le telecamere
 \
 (if: $flag_video_Stat is 0)[Hai chiesto di dare un’occhiata ai filmati di sicurezza. Vieni condotto in una stanzetta scura, nei meandri del museo. Ti fanno sedere davanti ad uno schermo e inizi a guardare le riprese.
-
-(text-colour:#74c0fc)[&#39;&#39;[Detective $nome]&#39;&#39;]&quot;Maresciallo, dobbiamo controllare le telecamere!
-
-(text-colour:#74c0fc)[&#39;&#39;[Maresciallo Caputo]&#39;&#39;]“Certo, adesso faccio partire il video.”]
+\
+(text-colour:$colore_dialogo)[&#39;&#39;[Detective $nome]&#39;&#39;]: Maresciallo, dobbiamo controllare le telecamere!
+\
+(text-colour:$colore_dialogo)[&#39;&#39;[Maresciallo Caputo]&#39;&#39;: “Certo, adesso faccio partire il video.] 
+\
+(set: $flag_video_Stat to 1) \
 
 (align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/tsG5KCYlfMU?controls=0&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;]
-
-(if: $flag_video_Stat is 0)[Mentre guardi il filmato a velocità accelerata, scambi due parole con il Maresciallo Caputo. 
-
-(text-colour:#74c0fc)[&#39;&#39;[Detective $nome]&#39;&#39;]&quot;Sono ancora le 8 di ieri, il furto non è ancora avvenuto.&quot;
-(text-colour:#74c0fc)[&#39;&#39;[Maresciallo Caputo]&#39;&#39;]“Eccoci al dunque! Guarda l&#39;ora, agente $cognome: sono le 4:40. Detective, ecco il ladro!&quot;
-(text-colour:#74c0fc)[&#39;&#39;[Detective $nome]&#39;&#39;]&quot;Sì, lo vedo! Purtroppo ha il volto coperto, e le luci sono spente. Non riusciremmo ad individuarlo solo con questi elementi.&quot;]
-
-Il ladro è entrato nel museo a volto coperto, indossando un casco. Chiaramente che è una persona agile, forte e con grandi abilità manuali: è stato capace di sostituire una statua con cura e senza rompere nulla. Queste sono le uniche informazioni che riesci a trarre da quei pochi secondi di immagini. Non bastano: i dati sono troppo pochi per poter generare dell&#39;informazione valida che consenta di prendere una decisione affidabile, ciò individuare il colpevole.
-
-Se vuoi, vai avanti e prova comunque a [[scegliere il colpevole|2 Stat]] oppure, [[torna indietro e analizza un&#39;altra prova|1 Stat]].
-
-(set: $flag_video_Stat to 1)</tw-passagedata><tw-passagedata pid="35" name="percorsi Stat" tags="Grigio_c T_Nero" position="3025,925" size="100,100">
-## (text-colour:#339af0)[Visualizza i percorsi]
 \
-(if: $flag_percorsi_Stat is 0)[Un giro di telefonate e il supporto di uno dei tecnici informatici del museo ti permette di avere sotto mano le heatmap dei percorsi di tutti gli studenti del corso che hanno visitato il museo nell&#39;ultima settimana, e fra i quali, verosimilmente, si nasconde la persona che ha lasciato il manuale d&#39;arte in inglese.]
+(if: $flag_video_Stat is 0)[Mentre guardi il filmato a velocità accelerata, scambi due parole con il Maresciallo Caputo. 
+\
+(text-colour:$colore_dialogo)[&#39;&#39;[Detective $nome]&#39;&#39;]: Sono ancora le 8 di ieri, il furto non è ancora avvenuto.
+(text-colour:$colore_dialogo)[&#39;&#39;[Maresciallo Caputo]&#39;&#39;]: Eccoci al dunque! Guarda l&#39;ora, agente $cognome: sono le 4:40. Detective, ecco il ladro!
+(text-colour:$colore_dialogo)[&#39;&#39;[Detective $nome]&#39;&#39;]: Sì, lo vedo! Purtroppo ha il volto coperto, e le luci sono spente. Non riusciremmo ad individuarlo solo con questi elementi.]
+\
+Il ladro è entrato nel museo a volto coperto, indossando un casco. Chiaramente che è una persona agile, forte e con grandi abilità manuali: è stato capace di sostituire una statua con cura e senza rompere nulla. Queste sono le uniche informazioni che riesci a trarre da quei pochi secondi di immagini. Non bastano: i dati sono troppo pochi per poter generare dell&#39;informazione valida che consenta di prendere una decisione affidabile, ciò individuare il colpevole.
+\
+Se vuoi, vai avanti e prova comunque a [[scegliere il colpevole-&gt;2 Stat]] oppure, [[torna indietro e analizza un&#39;altra prova-&gt;1 Stat]].
+\
+(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="35" name="percorsi Stat" tags="Grigio_c T_Nero" position="3000,905" size="100,100">
+## Visualizza i percorsi
+\
+(if: $flag_percorsi_Stat is 0)[Un giro di telefonate e il supporto di uno dei tecnici informatici del museo ti permette di avere sotto mano le heatmap dei percorsi di tutti gli studenti del corso che hanno visitato il museo nell&#39;ultima settimana, e fra i quali, verosimilmente, si nasconde la persona che ha lasciato il manuale d&#39;arte in inglese.] 
+\
+(set: $flag_percorsi_Stat to 1) \
 
 &#39;&#39;Di quale sospettato vuoi visualizzare la heatmap?&#39;&#39;
-
+\
 (dropdown: 2bind $stat_3_name,&quot;Marco Bagni&quot;, &quot;Andres Salza&quot;,&quot;Chiara Rassio&quot;,&quot;Sofia Cremoli&quot;,&quot;Axel Jorri&quot;,&quot;Beatrice Ravilio&quot;,&quot;Giorgio Entommi&quot;,&quot;Matilde Francolini&quot;,&quot;Rosalie Renoire&quot;,&quot;Franco Drevi&quot;,&quot;David Mercer&quot;,&quot;Valerio Liggio&quot;,&quot;Rebecca Gerri&quot;,&quot;Vittorio Iozzi&quot;,&quot;Damien Bunchard&quot;,&quot;Fabio Bressa&quot;,&quot;Jacopo Attolo&quot;,&quot;Isabelle Tucci&quot;,&quot;Tommaso Millezza&quot;)
-
+\
 (align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[(live: 0.2s)[&lt;h3&gt;&#39;&#39;$stat_3_name&#39;&#39;&lt;/h3&gt;(if:$stat_3_name is &quot;Marco Bagni&quot;)[&lt;style&gt; img {max-width: 100%; max-height: 100%; } &lt;/style&gt; &lt;img src=https://i.ibb.co/Q8c0GW3/Heatmap1.png&gt; &lt;/div&gt;](if:$stat_3_name is &quot;Andres Salza&quot;)[&lt;style&gt; img {max-width: 100%; max-height: 100%; } &lt;/style&gt; &lt;img src=https://i.ibb.co/xgrFQgn/Heatmap2.png&gt; &lt;/div&gt;](if:$stat_3_name is &quot;Chiara Rassio&quot;)[&lt;style&gt; img {max-width: 100%; max-height: 100%; } &lt;/style&gt; &lt;img src=https://i.ibb.co/qFLW0VH/Heatmap3.png&gt; &lt;/div&gt;](if:$stat_3_name is &quot;Sofia Cremoli&quot;)[&lt;style&gt; img {max-width: 100%; max-height: 100%; } &lt;/style&gt; &lt;img src=https://i.ibb.co/1fY5sq1/Heatmap4.png&gt; &lt;/div&gt;](if:$stat_3_name is &quot;Axel Jorri&quot;)[&lt;style&gt; img {max-width: 100%; max-height: 100%; } &lt;/style&gt; &lt;img src=https://i.ibb.co/XJsN9HP/Heatmap5.png&gt; &lt;/div&gt;](if:$stat_3_name is &quot;Beatrice Ravilio&quot;)[&lt;style&gt; img {max-width: 100%; max-height: 100%; } &lt;/style&gt; &lt;img src=https://i.ibb.co/SKkgd7d/Heatmap6.png&gt; &lt;/div&gt;](if:$stat_3_name is &quot;Giorgio Entommi&quot;)[&lt;style&gt; img {max-width: 100%; max-height: 100%; } &lt;/style&gt; &lt;img src=https://i.ibb.co/HTS4zqb/Heatmap7.png&gt; &lt;/div&gt;](if:$stat_3_name is &quot;Matilde Francolini&quot;)[&lt;style&gt; img {max-width: 100%; max-height: 100%; } &lt;/style&gt; &lt;img src=https://i.ibb.co/xsjYH98/Heatmap8.png&gt; &lt;/div&gt;](if:$stat_3_name is &quot;Rosalie Renoire&quot;)[&lt;style&gt; img {max-width: 100%; max-height: 100%; } &lt;/style&gt; &lt;img src=https://i.ibb.co/JHPck53/Heatmap9.png&gt; &lt;/div&gt;](if:$stat_3_name is &quot;Franco Drevi&quot;)[&lt;style&gt; img {max-width: 100%; max-height: 100%; } &lt;/style&gt; &lt;img src=https://i.ibb.co/tYkmrQg/Heatmap10.png&gt; &lt;/div&gt;](if:$stat_3_name is &quot;David Mercer&quot;)[&lt;style&gt; img {max-width: 100%; max-height: 100%; } &lt;/style&gt; &lt;img src=https://i.ibb.co/bBVgT0W/Heatmap19.png&gt; &lt;/div&gt;](if:$stat_3_name is &quot;Valerio Liggio&quot;)[&lt;style&gt; img {max-width: 100%; max-height: 100%; } &lt;/style&gt; &lt;img src=https://i.ibb.co/wQm0vhX/Whats-App-Image-2022-05-19-at-18-58-22.jpg&gt; &lt;/div&gt;](if:$stat_3_name is &quot;Rebecca Gerri&quot;)[&lt;style&gt; img {max-width: 100%; max-height: 100%; } &lt;/style&gt; &lt;img src=https://i.ibb.co/9scYLd7/Whats-App-Image-2022-05-19-at-19-28-39.jpg&gt; &lt;/div&gt;](if:$stat_3_name is &quot;Vittorio Iozzi&quot;)[&lt;style&gt; img {max-width: 100%; max-height: 100%; } &lt;/style&gt; &lt;img src=https://i.ibb.co/rQ9V44h/Heatmap13.png&gt; &lt;/div&gt;](if:$stat_3_name is &quot;Damien Bunchard&quot;)[&lt;style&gt; img {max-width: 100%; max-height: 100%; } &lt;/style&gt; &lt;img src=https://i.ibb.co/x7G6VP5/Heatmap14.png&gt; &lt;/div&gt;](if:$stat_3_name is &quot;Fabio Bressa&quot;)[&lt;style&gt; img {max-width: 100%; max-height: 100%; } &lt;/style&gt; &lt;img src=https://i.ibb.co/3N84qk3/Heatmap15.png&gt; &lt;/div&gt;](if:$stat_3_name is &quot;Jacopo Attolo&quot;)[&lt;style&gt; img {max-width: 100%; max-height: 100%; } &lt;/style&gt; &lt;img src=https://i.ibb.co/2YGNYX9/Heatmap16.png&gt; &lt;/div&gt;](if:$stat_3_name is &quot;Isabelle Tucci&quot;)[&lt;style&gt; img {max-width: 100%; max-height: 100%; } &lt;/style&gt; &lt;img src=https://i.ibb.co/5FgmdkW/Heatmap17.png&gt; &lt;/div&gt;](if:$stat_3_name is &quot;Tommaso Millezza&quot;)[&lt;style&gt; img {max-width: 100%; max-height: 100%; } &lt;/style&gt; &lt;img src=https://i.ibb.co/7g66Q0Z/Heatmap18.png&gt; &lt;/div&gt;]]]
-
+\
 &#39;&#39;Questa invece è la Heatmap di tutte le persone che hanno visitato il museo nell&#39;ultima settimana.&#39;&#39;
-
+\
 (align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[&lt;style&gt; img {max-width: 100%; max-height: 100%; } &lt;/style&gt; &lt;img src=https://i.ibb.co/P6jn5pz/Heatmap20.png&gt; &lt;/div&gt;]
-
-Se vuoi, vai avanti e [[scegli il colpevole|2 Stat]] oppure, [[torna indietro e analizza un&#39;altra prova|1 Stat]]. Infine, se pensi di aver bisogno di una spiegazione sulle heatmap, puoi [[mandare un messaggio|scrivi a Rebecca 2]] alla tua amica Rebecca, laureata in statistica e grande esperta di scienza dei dati.
-
-(set: $flag_percorsi_Stat to 1)</tw-passagedata><tw-passagedata pid="36" name="tempi Stat" tags="Grigio_c T_Nero" position="3025,1075" size="100,100">
-### (text-colour:#339af0)[Tempi di percorrenza]
+\
+Se vuoi, vai avanti e [[scegli il colpevole-&gt;2 Stat]] oppure, [[torna indietro e analizza un&#39;altra prova-&gt;1 Stat]]. Infine, se pensi di aver bisogno di una spiegazione sulle heatmap, puoi [[mandare un messaggio-&gt;scrivi a Rebecca 2]] alla tua amica Rebecca, laureata in statistica e grande esperta di scienza dei dati.
+\
+(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="36" name="tempi Stat" tags="Grigio_c T_Nero" position="3000,1075" size="100,100">
+## Tempi di percorrenza
 
 (if: $flag_tempi_Stat is 0)[Ti rechi nell&#39;ufficio gestione flussi del museo, dove un addetto è appena arrivato e si sta giusto levando un cappotto leggero. Ti presenti e gli spieghi ciò di cui ha bisogno. Lui è affabile e disponibile, si mette subito al lavoro. Nel giro di qualche minuti, la stampante inizia a rumoreggiare, e ne viene fuori in pochi secondi uno schema estratto da Excel. &quot;Agente $cognome, questi sono i tempi di percorrenza dall&#39;ingresso all&#39;uscita del museo dei suoi possibili sospettati&quot;.] 
+\
+(set: $flag_tempi_Stat to 1) \
 
 &lt;style&gt; img {max-width: 50%; max-height: 100%; } &lt;/style&gt; &lt;img src=https://i.ibb.co/4jj0LLG/IMG-8792.jpg&gt; &lt;/div&gt;
 
-Se vuoi, vai avanti e [[scegli il colpevole|2 Stat]] oppure, [[torna indietro e analizza un&#39;altra prova|1 Stat]].
+Se vuoi, vai avanti e [[scegli il colpevole-&gt;2 Stat]] oppure, [[torna indietro e analizza un&#39;altra prova-&gt;1 Stat]].
 
-(set: $flag_tempi_Stat to 1)</tw-passagedata><tw-passagedata pid="37" name="2 Stat" tags="Grigio_c T_Nero" position="3400,900" size="100,100">
+(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="37" name="2 Stat" tags="Grigio_c T_Nero" position="3398.3333333333335,898.3333333333334" size="100,100">
 ## Scegli chi accusare?
  \
 Bene, $nome $cognome, hai analizzato tutte le prove a disposizone. Ora, secondo te, chi fra questi possibili sospettati è il colpevole?
-
+\
 (dropdown: 2bind $stat_scelta_name,&quot;Marco Bagni&quot;, &quot;Andres Salza&quot;,&quot;Chiara Rassio&quot;,&quot;Sofia Cremoli&quot;,&quot;Axel Jorri&quot;,&quot;Beatrice Ravilio&quot;,&quot;Giorgio Entommi&quot;,&quot;Matilde Francolini&quot;,&quot;Rosalie Renoire&quot;,&quot;Franco Drevi&quot;,&quot;David Mercer&quot;,&quot;Valerio Liggio&quot;,&quot;Rebecca Gerri&quot;,&quot;Vittorio Iozzi&quot;,&quot;Damien Bunchard&quot;,&quot;Fabio Bressa&quot;,&quot;Jacopo Attolo&quot;,&quot;Isabelle Tucci&quot;,&quot;Tommaso Millezza&quot;)
+\
+(live: 1s)[(if: $stat_scelta_name is &quot;David Mercer&quot;)[[[Vai avanti-&gt;risp giusta Stat]]]
+(else:)[[[Vai avanti-&gt;risp sbagliata Stat]]]]
+\
+(display: &quot;piepagina&quot;)
 
-(live: 1s)[(if: $stat_scelta_name is &quot;David Mercer&quot;)[[[Vai avanti|risp giusta Stat]]]
-(else:)[[[Vai avanti|risp sbagliata Stat]]]]
-
-</tw-passagedata><tw-passagedata pid="38" name="scrivi a Rebecca 1" tags="Grigio_c T_Nero" position="3200,625" size="100,100">
-## (text-colour:#339af0)[Chiedi consiglio a Rebecca riguardo la probabilità che il colpevole sia francese]
+</tw-passagedata><tw-passagedata pid="38" name="scrivi a Rebecca 1" tags="Grigio_c T_Nero" position="3201.6666666666665,603.3333333333334" size="100,100">
+## Chiedi consiglio a Rebecca riguardo la probabilità che il colpevole sia francese
 \
 Mandi un messaggio a Rebecca, spiegandole la situazione e mandandole la foto del grafico a torta che ti hanno apppena fatto vedere. Lei, nonostante la tarda ora, ti risponde dopo pochi minuti un messaggio abbastanza chiaro. 
 
 //&quot;Ciao $nome!! Sono contenta di sentirti! Come sta andando a Roma? Guarda, la cosa interessante del grafico è che lo puoi risolvere con un giochino di probabilità. Se tu non sapessi che il ladro è straniero, allora avresti il 70% di probabilità che sia italiano, e dovresti andare in quella direzione. Però, una volta che hai già capito che sia straniero, allora quel 70% di probabilità sparisce. Quindi, la probabilità che sia francese è più alta, 26% / 30%, poco meno del 90%. Quindi, non sei ancora cert$g, ma di sicuro è molto probabile che sia francese. Spero di esserti stat$g d&#39;aiuto! Buona serata e in bocca al lupo con l&#39;indagine!!&quot;//
 
-Rileggi più volte il messaggio, cercando di capire che cosa voglia dire Rebecca, che è molto preparata ma ogni tanto usa parole strane. Quando sei soddisfatt$g e hai finalmente capito, vai avanti e [[scegli il colpevole|2 Stat]] oppure, [[torna indietro e analizza un&#39;altra prova|1 Stat]].</tw-passagedata><tw-passagedata pid="39" name="scrivi a Rebecca 2" tags="Grigio_c T_Nero" position="3200,925" size="100,100">
-## (text-colour:#339af0)[Chiedi consiglio a Rebecca riguardo le Heatmap]
+Rileggi più volte il messaggio, cercando di capire che cosa voglia dire Rebecca, che è molto preparata ma ogni tanto usa parole strane. Quando sei soddisfatt$g e hai finalmente capito, [[riguarda il grafico a torta-&gt;stranieri Stat]] oppure [[torna indietro e analizza un&#39;altra prova-&gt;1 Stat]].
+\
+(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="39" name="scrivi a Rebecca 2" tags="Grigio_c T_Nero" position="3200,923.3333333333334" size="100,100">
+## Chiedi consiglio a Rebecca riguardo le Heatmap
 \
 Mandi un messaggio a Rebecca, spiegandole la situazione e mandandole la foto del grafico a torta che ti hanno apppena fatto vedere. Lei, nonostante la tarda ora, ti risponde dopo pochi minuti un messaggio abbastanza chiaro. 
 
 //&quot;Ciao $nome!! Sono contenta di sentirti! Come sta andando a Roma? Ooooh , io amoooo le heatmap!!! Vedi, sono degli strumenti semplici ed efficaci. Praticamente, le celle con un colore più intenso sono quelle che descrivono delle zone del museo in cui ha camminato più gente, oppure su cui la singola persona osservata ha camminato di più. Sai come potresti usarla? Cerca di trovare qualche percorso strano, molto diverso dal percorso medio: magari era qualcuno non interessato alle opere d&#39;arte, che stava controllando la sicurezza e le telecamere! A presto!!!&quot;//
 
-Rileggi più volte il messaggio, cercando di capire che cosa voglia dire Rebecca, che è molto preparata ma ogni tanto usa parole strane. Quando sei soddisfatt$g e hai finalmente capito, [[riguarda le heatmap|percorsi Stat]] oppure, [[torna indietro e analizza un&#39;altra prova|1 Stat]].</tw-passagedata><tw-passagedata pid="40" name="risp giusta Stat" tags="Grigio_c T_Nero" position="3575,975" size="100,100">
-## (text-colour:#339af0)[Bel colpo, agente $cognome!]
+Rileggi più volte il messaggio, cercando di capire che cosa voglia dire Rebecca, che è molto preparata ma ogni tanto usa parole strane. Quando sei soddisfatt$g e hai finalmente capito, [[riguarda le heatmap-&gt;percorsi Stat]] oppure [[torna indietro e analizza un&#39;altra prova-&gt;1 Stat]].
+\
+(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="40" name="risp giusta Stat" tags="Grigio_c T_Nero" position="3598.333333333333,998.3333333333334" size="100,100">
+## Bel colpo, agente $cognome!
 \
 Come per magia, le prove si mettono in ordine davanti ai tuoi occhi, e all&#39;improvviso tutti i dati che hai letto diventano un&#39;informazione: il sospettato su cui devi concentrarti è David Mercer. 
-
-(if: $risp_stat_sbagliata &lt; 3)[ Sei riuscito a capire chi sia il colpevole pure abbastanza in fretta! Ottimo lavoro: guadagni quindi (if: $new_point is 2)[due punti](else:)[un punto] intuito.](else:)[Ci hai messo molto ad arrivare alla risposta, dopo vari tentativi, e quindi non hai guadagnato punti intuito]
-
-(if: $risp_stat_sbagliata is 0)[(set: $new_point to 2)](else:)[(set: $new_point to 1)](set: $punto_int_n to $punto_int_n + $new_point)
-]
-
-A questo punto, prosegui con le indagini e [[decidi come andare avanti|3 Stat]]. </tw-passagedata><tw-passagedata pid="41" name="risp sbagliata Stat" tags="Grigio_c T_Nero" position="3575,775" size="100,100">
-## (text-colour:#339af0)[Purtroppo non è la persona che stavi cercando!]
 \
-Mi spiace, purtroppo quello che hai selezionato non è il colpevole. Puoi [[tornare indietro|2 Stat]], riguardare gli indizi e provare a selezionarne un altro.
-
-(if: $risp_stat_sbagliata is 5)[Purtroppo, hai collezionato numerosi errori, e quindi perdi un punto intuito. Adesso hai $punto_int_n punti intuito. (set: $punto_int_n to $punto_int_n - 1)]
-
+(if: $risp_stat_sbagliata &lt; 3)[ Sei riuscito a capire chi sia il colpevole pure abbastanza in fretta! Ottimo lavoro: guadagni quindi (if: $new_point is 2)[due punti](else:)[un punto] intelligenza.](else:)[Ci hai messo molto ad arrivare alla risposta, dopo vari tentativi, e quindi non hai guadagnato punti intelligenza]
+\&lt;!-- è qui dentro così l&#39;else che assegna comunque punti vale solo quando la somma di risposte sbagliate è minore di 3 (condizione sopra) --&gt;
+(if: $risp_stat_sbagliata is 0)[(set: $new_point to 2)](else:)[(set: $new_point to 1)](set: $punti_int to $punti_int + $new_point)
+]
+\
+A questo punto, prosegui con le indagini e [[decidi come andare avanti-&gt;3 Stat]]. 
+\
+(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="41" name="risp sbagliata Stat" tags="Grigio_c T_Nero" position="3598.3333333333335,798.3333333333334" size="100,100">
+## Purtroppo non è la persona che stavi cercando!
+\
 (set: $risp_sbagliate to $risp_sbagliate + 1)
-(set: $risp_stat_sbagliata to $risp_stat_sbagliata + 1)</tw-passagedata><tw-passagedata pid="42" name="3 Stat" tags="Grigio_c T_Nero" position="4002,899" size="100,100">
-## (text-colour:#339af0)[Tornare in dipartimento?]
+(set: $risp_stat_sbagliata to $risp_stat_sbagliata + 1)
+\
+Mi spiace, purtroppo quello che hai selezionato non è il colpevole. Puoi [[tornare indietro-&gt;2 Stat]], riguardare gli indizi e provare a selezionarne un altro.
+
+(if: $risp_stat_sbagliata is 5)[Purtroppo, hai collezionato numerosi errori, e quindi perdi un punto intelligenza. (set: $punti_int to $punti_int - 1)]
+\
+(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="42" name="3 Stat" tags="Grigio_c T_Nero" position="4002,897.3333333333334" size="100,100">
+## Tornare in dipartimento?
 \
 Bene, adesso sai che il sospettato è David Mercer. Ma adesso come puoi rintracciarlo? Dove potrà mai essere andato? E, soprattutto, Mercer avrà ancora con sé la refurtiva o l&#39;avrà nascosta da qualche parte?
 
 Il maresciallo ti raggiunge e ti da una pacca sulla spalla. Poi, con tono profondo, inizia a parlare.
 
-(text-colour:#74c0fc)[&#39;&#39;[Maresciallo Caputo]&#39;&#39;]“Detective,tutti gli altri dipartimenti di polizia in Italia sono stati avvertiti. Ciò che ci rimane da fare è tenere ben dritte le antenne e controllare i filmati delle telecamere stradali, per capire con quale mezzo si stia muovendo.”
+(text-colour:$colore_dialogo)[&#39;&#39;[Maresciallo Caputo]&#39;&#39;]: Detective,tutti gli altri dipartimenti di polizia in Italia sono stati avvertiti. Ciò che ci rimane da fare è tenere ben dritte le antenne e controllare i filmati delle telecamere stradali, per capire con quale mezzo si stia muovendo.
 
 Tu sai perfettamente che, individuando la macchina del ladro, sarà molto più facile risalire alla sua posizione. Tuttavia hai ancora un dubbio che ti assilla.
 
-(text-colour:#74c0fc)[&#39;&#39;[Detective $nome]&#39;&#39;]“C&#39;è una cosa che non mi torna in questo furto. Perché mai il ladro, al momento della rapina, avrebbe dovuto portare con sé il manuale dell’arte? A cosa avrebbe mai potuto servirgli? Pensare che volesse semplicemente informarsi sulla statua è un’ipotesi assolutamente inverosimile. E poi, perché quel libro si trovava sulle scale antincendio, quando le riprese mostrano il ladro entrare dalla porta principale?”
+(text-colour:$colore_dialogo)[&#39;&#39;[Detective $nome]&#39;&#39;]: C&#39;è una cosa che non mi torna in questo furto. Perché mai il ladro, al momento della rapina, avrebbe dovuto portare con sé il manuale dell’arte? A cosa avrebbe mai potuto servirgli? Pensare che volesse semplicemente informarsi sulla statua è un’ipotesi assolutamente inverosimile. E poi, perché quel libro si trovava sulle scale antincendio, quando le riprese mostrano il ladro entrare dalla porta principale?
 
 Queste sono tutte le domande a cui non sai dare spiegazioni.
 Il maresciallo, un po’ indispettito dalla tua mancata risposta, esclama:
 
-(text-colour:#74c0fc)[&#39;&#39;[Maresciallo Caputo]&#39;&#39;]“Detective, la vedo pensieros$g, ma dobbiamo andare a controllare i filmati! Io comincio ad andare in dipartimento, se vuole mi metto controllare i filmati del traffico e poi lei mi raggiunge. Oppure può venire subito: veda lei!”
+(text-colour:$colore_dialogo)[&#39;&#39;[Maresciallo Caputo]&#39;&#39;]: Detective, la vedo pensieros$g, ma dobbiamo andare a controllare i filmati! Io comincio ad andare in dipartimento, se vuole mi metto controllare i filmati del traffico e poi lei mi raggiunge. Oppure può venire subito: veda lei!
 
-Devi prendere una decisione. Se vai subito in dipartimento a controllare i filmati potresti risparmiare tempo prezioso che ti permetterà di mettere le mani sul ladro. Se invece rimani al museo, potresti scoprire a che cosa servisse il manuale, e magari capire qualcosa in più sul furto.
-
-&lt;h3&gt;(text-colour:#4dabf7)[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[Vai subito in centrale a controllare i filmati o controlla di nuovo la scena del crimine?]]
-=|=
-(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;dissolve&quot;)+(t8n-time:1s)[[Sì|5 Stat Sì]]]
-=|=
-(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;dissolve&quot;)+(t8n-time:1s)[[No|5 Stat No]]]&lt;/h3&gt;</tw-passagedata><tw-passagedata pid="43" name="Opzione 1" tags="T_Nero Grigio_c" position="4403,603" size="100,100">
-## (text-colour:#339af0)[Opzione 1]
+Devi prendere una decisione, e la devi prendere adesso. Se vai subito in dipartimento a controllare i filmati potresti risparmiare tempo prezioso che ti permetterà forse di mettere le mani sul ladro. Se invece rimani al museo, rallenterai l&#39;investigazione, ma potresti scoprire a che cosa è servito il manuale, e quindi aggiungere nuova informazione alla tua indagine.
 \
+&lt;h3&gt;(text-colour:$colore_dialogo)[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[Corri in centrale a controllare i filmati o rimani ancora sulla scena del crimine?]]
+=|=
+(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[[[Sì-&gt;5 Stat Sì]]]
+=|=
+(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[[[No-&gt;5 Stat No]]]&lt;/h3&gt;
+\
+(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="43" name="Opzione 1" tags="T_Nero Grigio_c" position="4403,603" size="100,100">
+## Opzione 1
+\
+(set: $punti_int to $punti_int - 1)\
+
 Perché mai il ladro avrebbe dovuto portare con sé il manuale, per poi abbandonarlo lì? Nella pianificazione di una rapina tutto viene studiato nei minimi dettagli, quindi è impossibile che si tratti di una banale dimenticanza.
 
-No, chiaramente doveva essere un&#39;altra la ragione per cui lì si trova il libro, ma tu non hai più tempo per rifletterci, devi andare in dipartimento a [[visionare i filmati|Targhe]] con il maresciallo Caputo. 
-
-Però, questo errore di valutazione ti costa un punto intuizione, e adesso hai $punto_int_n punti intuizione. 
-
-(set: $punto_int_n to $punto_int_n - 1)
-
-</tw-passagedata><tw-passagedata pid="44" name="Opzione 2" tags="T_Nero Grigio_c" position="4402,798" size="100,100">
-## (text-colour:#339af0)[Opzione 2]
+No, chiaramente doveva essere un&#39;altra la ragione per cui lì si trova il libro, ma tu non hai più tempo per rifletterci, devi andare in dipartimento a [[visionare i filmati-&gt;Targhe]] con il maresciallo Caputo. 
 \
-
+Però, questo errore di valutazione ti costa un punto intuizione.
+\
+(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="44" name="Opzione 2" tags="T_Nero Grigio_c" position="4400.333333333333,799.6666666666666" size="100,100">
+## Opzione 2
+\
 Perché mai il ladro avrebbe dovuto portare con sé il manuale, per poi abbandonarlo lì? Nella pianificazione di una rapina tutto viene studiato nei minimi dettagli, quindi è impossibile che si tratti di una banale dimenticanza. Quindi hai preso ovviamente la decisione giusta. 
 
 Sei nervoso, agitato, batti ripetutamente un piede a terra per sfogare la tensione. Hai capito di essere sulla buona strada. Tieni in mano il manuale e lo esaminini di nuovo per l&#39;ennesima volta, con ancora più attenzione. È un libro molto grande e pesante, che contiene più di un migliaio di pagine sottili. Inizi a sfogliarlo. Guardi con attenzione ogni singola riga, cercando dei codici, qualcosa. Prima vai in ordine, e poi rinunci perché ci metteresti troppo, e sfogli le pagine alla ricerca di qualche segno utile. E poi, ti sembra che il libro sia ancora nuovo, che nessuno lo abbia mai usato per studiare. Non c&#39;è una piega, o una sottolineatura. Che sia stato comprato appunto per questo colpo? Ma perché, in quel caso?
@@ -1031,52 +1091,56 @@ Ti serve solo la conferma. Ritorni correndo dentro al museo e ti dirigi direttam
 
 (text-colour:#74c0fc)[&#39;&#39;[Detective $nome]&#39;&#39;] &quot;Ma certo, così tutto torna. Bel colpo, agente $cognome! Ora vieni in dipartimento che guardiamo i filmati insieme.&quot;
 
-Lascia i Musei Capitolini e vai in dipartimento a [[visionare i filmati|Targhe]]]. 
+Lascia i Musei Capitolini e vai in dipartimento a [[visionare i filmati-&gt;Targhe]]]. 
 
-(set: $4Stat_v to 1)</tw-passagedata><tw-passagedata pid="45" name="Errore 2" tags="Grigio_c T_Nero" position="4898,1401" size="100,100">
-## (text-colour:#339af0)[Troppo tardi!]
+(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="45" name="Errore 2" tags="Grigio_c T_Nero" position="4898,1401" size="100,100">
+## Troppo tardi!
 \
+(set: $risp_sbagliate to $risp_sbagliate + 1) \
+
 Tu indichi la targa, e dietro di te il maresciallo Capito sorride sornione.
 
-(text-colour:#74c0fc)[&#39;&#39;[Maresciallo Caputo]&#39;&#39;] “Ehm...agente $cognome, sei sicur$g? Il colpevole non doveva passare una ventina di minuti dopo le 2:30? Il tragitto impiegato per raggiungere una delle telecamere è al massimo di 30 minuti.&quot;
+(text-colour:$colore_dialogo)[&#39;&#39;[Maresciallo Caputo]&#39;&#39;]: Ehm...agente $cognome, sei sicur$g? Il colpevole non doveva passare una ventina di minuti dopo le 2:30? Il tragitto impiegato per raggiungere una delle telecamere è al massimo di 30 minuti.
 
-(if: $targhe_e2 is 0)[Questo errore ti fa perdere 1 punto intuito e 1 punto socialità. Adesso hai $punto_int_n punti intuito e $punto_soc_n punti socialità.]
+(if: $targhe_e2 is 0)[(set: $punti_int to $punti_int - 1)Questo errore ti fa perdere 1 punto intelligenza.]
 
-[[Torna indietro e riguarda le targhe|Targhe]]].
-
-(if: $targhe_e2 is 0)[(set: $punto_int_n to $punto_int_n - 1)]
-(if: $targhe_e2 is 0)[(set: $punto_soc_n to $punto_soc_n - 1)]
-(set: $targhe_e2 to 1)
-
-(set: $risp_sbagliate to $risp_sbagliate + 1)</tw-passagedata><tw-passagedata pid="46" name="Errore 3" tags="Grigio_c T_Nero" position="4900,1599" size="100,100">
-## (text-colour:#339af0)[È un auto troppo vecchia!]
+[[Torna indietro e riguarda le targhe-&gt;Targhe]]].
 \
+(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="46" name="Errore 3" tags="Grigio_c T_Nero" position="4900,1599" size="100,100">
+## È un auto troppo vecchia!
+\
+(set: $risp_sbagliate to $risp_sbagliate + 1) \
+
 Tu indichi la targa, e dietro di te il maresciallo Capito sorride sornione.
 
-(text-colour:#74c0fc)[&#39;&#39;[Maresciallo Caputo]&#39;&#39;] “Ehm...agente $cognome, sei sicur$g? L&#39;orario sembra compatibile, ma la macchina non è recente. Guarda la targa: deve essere stata immatricolata letteralmente in un altro millenio.&quot;
-
+(text-colour:$colore_dialogo)[&#39;&#39;[Maresciallo Caputo]&#39;&#39;] “Ehm...agente $cognome, sei sicur$g? L&#39;orario sembra compatibile, ma la macchina non è recente. Guarda la targa: deve essere stata immatricolata letteralmente in un altro millenio.&quot;
+\
 [[Torna indietro e riguarda le targhe|Targhe]]].
-
-(set: $risp_sbagliate to $risp_sbagliate + 1)</tw-passagedata><tw-passagedata pid="47" name="Corridoio 2" tags="Grigio_c T_Nero" position="4902,597" size="100,100">
-## (text-colour:#339af0)[L&#39;auto della famiglia Caputo]
+\
+(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="47" name="Corridoio 2" tags="Grigio_c T_Nero" position="4898.666666666666,597" size="100,100">
+## L&#39;auto della famiglia Caputo
+\
+(set: $risp_sbagliate to $risp_sbagliate + 1)
 \
 Tu indichi la targa e il Maresciallo si mette a ridere. 
 
-(text-colour:#74c0fc)[&#39;&#39;[Maresciallo Caputo]&#39;&#39;]“Ahahahahah ma è incredibile&quot; Si fidi, agente $cognome, quell&#39;auto è passata per una coincidenza. Sa come lo so? È l&#39;auto di mia figlia! Ieri sera è andata in discoteca e stava probabilmente tornando a casa.”
+(text-colour:$colore_dialogo)[&#39;&#39;[Maresciallo Caputo]&#39;&#39;]: Ahahahahah ma è incredibile! Si fidi, agente $cognome, quell&#39;auto è passata per una coincidenza. Sa come lo so? È l&#39;auto di mia figlia! Ieri sera è andata in discoteca e stava probabilmente tornando a casa.
 
-Tu sorridi, però un po&#39; ti insospettisci. È mai possibile che il maresciallo Riccardi sia in qualche modo coinvolto? Hai di fronte due scelte. Puoi [[mettere alle strette il maresciallo|interroga Caputo]]], e cercare di capire se questo tuo sospetto abbia qualche fondamento, oppure puoi fidarti, [[tornare indietro e riguarda le altre targhe|Targhe]]].guardare le altre targhe. 
-
-(set: $risp_sbagliate to $risp_sbagliate + 1)</tw-passagedata><tw-passagedata pid="48" name="interroga Caputo" tags="Grigio_c T_Nero" position="5100,599" size="100,100">
-## (text-colour:#339af0)[Interroghi il maresciallo Caputo!]
+Tu sorridi, però un po&#39; ti insospettisci. È mai possibile che il maresciallo Riccardi sia in qualche modo coinvolto? Hai di fronte due scelte. Puoi [[mettere alle strette il maresciallo-&gt;interroga Caputo]]], e cercare di capire se questo tuo sospetto abbia qualche fondamento, oppure puoi fidarti, [[tornare indietro e riguarda le altre targhe-&gt;Targhe]]].
 \
+(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="48" name="interroga Caputo" tags="Grigio_c T_Nero" position="5100,599" size="100,100">
+## Interroghi il maresciallo Caputo!
+\
+(set: $punti_soc to $punti_soc - 1) \
+
 Decidi di lanciarti. Ed è un&#39;idea pessima. Cominci a pressare il maresciallo, che prima sorride pensando che tu stia scherzando, ma dopo qualche minuto inizia a innervosirsi. &quot;Che cosa stai facendo? Sei impazzito$g&quot; ti apostrofa irritato. Non solo_ come se non bastasse è chiaro subito che hai fatto un buco nell&#39;acqua. Ti bastano poche domande per capire che efettivamente lui non possa centrare. E poi, era ovvio: come poteva il maresciallo essere il colpevole? Lo stesso maresciallo che finora ti ha aiutato così tanto nelle indagini? Capisci che non può essere lui.
 
-Il maresciallo Caputo lascia la stanza, e tu hai un bel da fare a rincorrerlo e chiedergli scusa, spergiurando che non ne metterai più in questione l&#39;integrità. Lui prima rimane offeso, poi, dopo qualche minuto, inizia a rilassarsi. Vi prendete un caffé insieme, dopo di che siete pronti a [[guardare le altre targhe|Targhe]]].
+Il maresciallo Caputo lascia la stanza, e tu hai un bel da fare a rincorrerlo e chiedergli scusa, spergiurando che non ne metterai più in questione l&#39;integrità. Lui prima rimane offeso, poi, dopo qualche minuto, inizia a rilassarsi. Vi prendete un caffé insieme, dopo di che siete pronti a [[guardare le altre targhe-&gt;Targhe]]].
 
-Questo errore però ha delle conseguenze: perdi 1 punto socialità, e adesso ne hai $punto_soc_n.
-
-(set: $punto_soc_n to $punto_soc_n - 1)
-</tw-passagedata><tw-passagedata pid="49" name="ACI" tags="Grigio_c T_Nero" position="5100,902" size="100,100">PLACEHOLDER APPROFONDIMENTO SU COSA SIA L&#39;ACI</tw-passagedata><tw-passagedata pid="50" name="credits" tags="Bianco T_Nero" position="1400,1050" size="100,100">&lt;img src=&quot;res2/loghi.png&quot; class=&quot;center&quot;&gt;
+Questo errore però ha delle conseguenze: perdi 1 punto socialità.
+\
+(display: &quot;piepagina&quot;)
+</tw-passagedata><tw-passagedata pid="49" name="credits" tags="Bianco T_Nero" position="1400,1050" size="100,100">&lt;img src=&quot;res2/loghi.png&quot; class=&quot;center&quot;&gt;
 
 &#39;&#39;Il furto della Lupa Capitolina - Una storia di investigazione, basata sulla scienza dei dati&#39;&#39; è un libro-game realizzato nell’ambito del &#39;&#39;progetto GaLe&#39;&#39; (//Game supported / enhanced Learning//), che ha l’obiettivo di esplorare e sperimentare nella scuola modelli e condizioni di uso di giochi per migliorare l’efficacia dell’apprendimento, nella prospettiva che gli strumenti per giocare siano assimilabili a materiali didattici e nell’ipotesi che possano essere i docenti stessi a progettare e almeno in qualche situazione a realizzare tali materiali.
 
@@ -1092,17 +1156,18 @@ Quest&#39;opera è distribuita con (link-rerun: &quot;Licenza Creative Commons A
 Il progetto GaLe è promosso dalla (link-rerun: &quot;Camera di Commercio di Varese&quot;)[(open-url: &quot;https://www.va.camcom.it&quot;)] nell’ambito del progetto (link-rerun: &quot;“Interreg Transform”&quot;)[(open-url: &quot;https://www.va.camcom.it/archivio42_transform_0_84.html&quot;)] (finanziato a valere sul Programma Operativo di Cooperazione Transfrontaliera Italia Svizzera 2014-2020) ed è realizzato da (link-rerun: &quot;idea.lab&quot;)[(open-url: &quot;https://idealab.va.it&quot;)] e (link-rerun: &quot;FlipFly&quot;)[(open-url: &quot;https://www.flipfly.it&quot;)] con il supporto dell’(link-rerun: &quot;Ufficio Scolastico Territoriale di Varese&quot;)[(open-url: &quot;https://varese.istruzione.lombardia.gov.it&quot;)].
 
 ---
-[[Torna al gioco-&gt;frontespizio]]</tw-passagedata><tw-passagedata pid="51" name="start" tags="" position="1200,900" size="100,100">(if: &quot;auto&quot; is in (saved-games:)) [(load-game: &quot;auto&quot;)]
-(else:) [(go-to: &quot;frontespizio&quot;)]</tw-passagedata><tw-passagedata pid="52" name="piepagina" tags="" position="1400,700" size="100,100">&lt;!-- deve essere incluso esplicitamente, con: (display: &quot;piepagina&quot;) --&gt;
+[[Torna al gioco-&gt;frontespizio]]</tw-passagedata><tw-passagedata pid="50" name="start" tags="" position="1200,900" size="100,100">(if: &quot;auto&quot; is in (saved-games:)) [(load-game: &quot;auto&quot;)]
+(else:) [(go-to: &quot;frontespizio&quot;)]</tw-passagedata><tw-passagedata pid="51" name="piepagina" tags="" position="1400,700" size="100,100">&lt;!-- deve essere incluso esplicitamente, con: (display: &quot;piepagina&quot;) --&gt;
 ---
-|piccolo&gt;[([[puoi sempre ricominciare il gioco dall’inizio-&gt;frontespizio]] -- hai $punti_int //punt(if: $punti_int is 1)[o](else:)[i] intelligenza// e $punti_soc //punt(if: $punti_soc is 1)[o](else:)[i] socialità//)]</tw-passagedata><tw-passagedata pid="53" name="include" tags="header" position="1257,698" size="100,100">&lt;!-- dei default, anche per rendere più semplice il testing in fase di sviluppo --&gt; \
+|piccolo&gt;[([[puoi sempre ricominciare il gioco dall’inizio-&gt;frontespizio]] -- hai $punti_int //punt(if: $punti_int is 1)[o](else:)[i] intelligenza// e $punti_soc //punt(if: $punti_soc is 1)[o](else:)[i] socialità//)]</tw-passagedata><tw-passagedata pid="52" name="include" tags="header" position="1207,703" size="100,100">&lt;!-- dei default, anche per rendere più semplice il testing in fase di sviluppo --&gt; \
 (if: $nome is 0) [(set: $nome to &quot;Alex&quot;)] \
 (if: $cognome is 0) [(set: $cognome to &quot;Bianchi&quot;)] \
 (if: $punti_int is 0) [(set: $punti_int to 1)] \
 (if: $punti_soc is 0) [(set: $punti_soc to 4)] \
 (if: $g is 0) [(set: $g to &quot;a&quot;)] \
  \
-(if: (passage:)&#39;s name is not &quot;start&quot;) [(save-game: &quot;auto&quot;)]</tw-passagedata></tw-storydata>
+(if: (passage:)&#39;s name is not &quot;start&quot;) [(save-game: &quot;auto&quot;)]
+(set: $colore_dialogo to #74c0fc)</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">"use strict";var _slicedToArray=function(){return function(e,t){if(Array.isArray(e))return e;if(Symbol.iterator in Object(e))return function(e,t){var n=[],r=!0,a=!1,i=void 0;try{for(var o,s=e[Symbol.iterator]();!(r=(o=s.next()).done)&&(n.push(o.value),!t||n.length!==t);r=!0);}catch(e){a=!0,i=e}finally{try{!r&&s.return&&s.return()}finally{if(a)throw i}}return n}(e,t);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}!function(){
 /**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
