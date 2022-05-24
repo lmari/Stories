@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1" name="viewport">
 <title>Cap1</title>
-<style title="Twine CSS">@keyframes appear{0%{opacity:0}to{opacity:1}}@keyframes fade-in-out{0%,to{opacity:0}50%{opacity:1}}@keyframes rumble{25%{top:-0.1em}75%{top:0.1em}0%,to{top:0px}}@keyframes shudder{25%{left:0.1em}75%{left:-0.1em}0%,to{left:0px}}@keyframes buoy{25%{top:0.25em}75%{top:-0.25em}0%,to{top:0px}}@keyframes sway{25%{left:0.25em}75%{left:-0.25em}0%,to{left:0px}}@keyframes pulse{0%{transform:scale(0, 0)}20%{transform:scale(1.2, 1.2)}40%{transform:scale(0.9, 0.9)}60%{transform:scale(1.05, 1.05)}80%{transform:scale(0.925, 0.925)}to{transform:scale(1, 1)}}@keyframes zoom-in{0%{transform:scale(0, 0)}to{transform:scale(1, 1)}}@keyframes shudder-in{0%, to{transform:translateX(0em)}5%, 25%, 45%{transform:translateX(-1em)}15%, 35%, 55%{transform:translateX(1em)}65%{transform:translateX(-0.6em)}75%{transform:translateX(0.6em)}85%{transform:translateX(-0.2em)}95%{transform:translateX(0.2em)}}@keyframes rumble-in{0%, to{transform:translateY(0em)}5%, 25%, 45%{transform:translateY(-1em)}15%, 35%, 55%{transform:translateY(1em)}65%{transform:translateY(-0.6em)}75%{transform:translateY(0.6em)}85%{transform:translateY(-0.2em)}95%{transform:translateY(0.2em)}}@keyframes fidget{0%, 8.1%, 82.1%, 31.1%, 38.1%, 44.1%, 40.1%, 47.1%, 74.1%, 16.1%, 27.1%, 72.1%, 24.1%, 95.1%, 6.1%, 36.1%, 20.1%, 4.1%, 91.1%, 14.1%, 87.1%, to{left:0px;top:0px}8%, 82%, 31%, 38%, 44%{left:-1px}40%, 47%, 74%, 16%, 27%{left:1px}72%, 24%, 95%, 6%, 36%{top:-1px}20%, 4%, 91%, 14%, 87%{top:1px}}@keyframes slide-right{0%{transform:translateX(-100vw)}}@keyframes slide-left{0%{transform:translateX(100vw)}}@keyframes slide-up{0%{transform:translateY(100vh)}}@keyframes slide-down{0%{transform:translateY(-100vh)}}@keyframes fade-right{0%{opacity:0;transform:translateX(-1em)}to{opacity:1}}@keyframes fade-left{0%{opacity:0;transform:translateX(1em)}to{opacity:1}}@keyframes fade-up{0%{opacity:0;transform:translateY(1em)}to{opacity:1}}@keyframes fade-down{0%{opacity:0;transform:translateY(-1em)}to{opacity:1}}@keyframes flicker{0%,29%,31%,63%,65%,77%,79%,86%,88%,91%,93%{opacity:0}30%{opacity:0.2}64%{opacity:0.4}78%{opacity:0.6}87%{opacity:0.8}92%, to{opacity:1}}@keyframes blur{0%{filter:blur(2rem);opacity:0}25%{opacity:1}to{filter:blur(0rem);opacity:1}}.dom-debug-mode tw-story,.dom-debug-mode tw-passage,.dom-debug-mode tw-sidebar,.dom-debug-mode tw-include,.dom-debug-mode tw-hook,.dom-debug-mode tw-expression,.dom-debug-mode tw-link,.dom-debug-mode tw-dialog,.dom-debug-mode tw-columns,.dom-debug-mode tw-column,.dom-debug-mode tw-align{outline:1px solid #f5a3da;min-height:32px;display:block !important}.dom-debug-mode tw-story::before,.dom-debug-mode tw-passage::before,.dom-debug-mode tw-sidebar::before,.dom-debug-mode tw-include::before,.dom-debug-mode tw-hook::before,.dom-debug-mode tw-expression::before,.dom-debug-mode tw-link::before,.dom-debug-mode tw-dialog::before,.dom-debug-mode tw-columns::before,.dom-debug-mode tw-column::before,.dom-debug-mode tw-align::before{position:absolute;top:0;left:0;height:16px;background-color:#f5a3da;color:black;font-size:16px;font-weight:normal;font-style:normal;font-family:monospace;display:inline-block;line-height:100%;white-space:pre;z-index:999997}.dom-debug-mode tw-story:hover,.dom-debug-mode tw-passage:hover,.dom-debug-mode tw-sidebar:hover,.dom-debug-mode tw-include:hover,.dom-debug-mode tw-hook:hover,.dom-debug-mode tw-expression:hover,.dom-debug-mode tw-link:hover,.dom-debug-mode tw-dialog:hover,.dom-debug-mode tw-columns:hover,.dom-debug-mode tw-column:hover,.dom-debug-mode tw-align:hover{outline:1px solid #fc9}.dom-debug-mode tw-story:hover::before,.dom-debug-mode tw-passage:hover::before,.dom-debug-mode tw-sidebar:hover::before,.dom-debug-mode tw-include:hover::before,.dom-debug-mode tw-hook:hover::before,.dom-debug-mode tw-expression:hover::before,.dom-debug-mode tw-link:hover::before,.dom-debug-mode tw-dialog:hover::before,.dom-debug-mode tw-columns:hover::before,.dom-debug-mode tw-column:hover::before,.dom-debug-mode tw-align:hover::before{background-color:#fc9;transition:background-color 1s}.dom-debug-mode tw-passage,.dom-debug-mode tw-include,.dom-debug-mode tw-hook,.dom-debug-mode tw-expression,.dom-debug-mode tw-link,.dom-debug-mode tw-dialog,.dom-debug-mode tw-columns,.dom-debug-mode tw-column,.dom-debug-mode tw-align{padding:1em;margin:0}.dom-debug-mode tw-story::before{content:'<tw-story tags="' attr(tags) '">'}.dom-debug-mode tw-passage::before{top:-16px;content:'<tw-passage tags="' attr(tags) '">'}.dom-debug-mode tw-sidebar::before{top:-16px;content:"<tw-sidebar>"}.dom-debug-mode tw-hook::before{content:'<tw-hook name="' attr(name) '">'}.dom-debug-mode tw-expression::before{content:'<tw-expression name="' attr(name) '">'}.dom-debug-mode tw-link::before{content:'<tw-link name="' attr(name) '">'}.dom-debug-mode tw-dialog::before{content:"<tw-dialog>"}.dom-debug-mode tw-columns::before{content:"<tw-columns>"}.dom-debug-mode tw-column::before{content:"<tw-column>"}.dom-debug-mode tw-align::before{content:"<tw-align>"}.dom-debug-mode tw-include::before{content:'<tw-include type="' attr(type) '" name="' attr(name) '">'}.debug-mode tw-expression{display:inline-block !important}.debug-mode tw-expression[type=variable]::after{font-size:0.8rem;padding-left:0.2rem;padding-right:0.2rem;vertical-align:top;content:"$" attr(name)}.debug-mode tw-expression[type=tempVariable]::after{font-size:0.8rem;padding-left:0.2rem;padding-right:0.2rem;vertical-align:top;content:"_" attr(name)}.debug-mode tw-expression[return=boolean]{background-color:rgba(179,179,179,0.2)}.debug-mode tw-expression[return=array]{background-color:rgba(255,102,102,0.2)}.debug-mode tw-expression[return=dataset]{background-color:rgba(255,128,0,0.2)}.debug-mode tw-expression[return=number]{background-color:rgba(255,179,102,0.2)}.debug-mode tw-expression[return=datamap]{background-color:rgba(255,255,102,0.2)}.debug-mode tw-expression[return=changer]{background-color:rgba(179,255,102,0.2)}.debug-mode tw-expression[return=lambda]{background-color:rgba(102,255,102,0.2)}.debug-mode tw-expression[return=hookname]{background-color:rgba(102,255,204,0.2)}.debug-mode tw-expression[return=string]{background-color:rgba(102,255,255,0.2)}.debug-mode tw-expression[return=datatype]{background-color:rgba(102,153,255,0.2)}.debug-mode tw-expression[return=gradient],.debug-mode tw-expression[return=colour]{background-color:rgba(204,102,255,0.2)}.debug-mode tw-expression[return=instant],.debug-mode tw-expression[return=macro]{background-color:rgba(240,117,199,0.2)}.debug-mode tw-expression[return=command]{background-color:rgba(153,153,255,0.2)}.debug-mode tw-expression.false{background-color:rgba(255,0,0,0.2) !important}.debug-mode tw-expression[type=macro]::before{content:"(" attr(name) ":)";padding:0 0.5rem;font-size:1rem;vertical-align:middle;line-height:normal;background-color:inherit;border:1px solid rgba(255,255,255,0.5)}.debug-mode tw-hook{background-color:rgba(0,85,255,0.1) !important}.debug-mode tw-hook::before{font-size:0.8rem;padding-left:0.2rem;padding-right:0.2rem;vertical-align:top;content:"["}.debug-mode tw-hook::after{font-size:0.8rem;padding-left:0.2rem;padding-right:0.2rem;vertical-align:top;content:"]"}.debug-mode tw-hook[name]::after{font-size:0.8rem;padding-left:0.2rem;padding-right:0.2rem;vertical-align:top;content:"]<" attr(name) "|"}.debug-mode tw-pseudo-hook{background-color:rgba(255,170,0,0.1) !important}.debug-mode tw-collapsed::before{font-size:0.8rem;padding-left:0.2rem;padding-right:0.2rem;vertical-align:top;content:"{"}.debug-mode tw-collapsed::after{font-size:0.8rem;padding-left:0.2rem;padding-right:0.2rem;vertical-align:top;content:"}"}.debug-mode tw-verbatim::before,.debug-mode tw-verbatim::after{font-size:0.8rem;padding-left:0.2rem;padding-right:0.2rem;vertical-align:top;content:"`"}.debug-mode tw-align[style*="text-align: center"]{background:linear-gradient(to right, rgba(255,204,189,0) 0%, rgba(255,204,189,0.25) 50%, rgba(255,204,189,0) 100%)}.debug-mode tw-align[style*="text-align: left"]{background:linear-gradient(to right, rgba(255,204,189,0.25) 0%, rgba(255,204,189,0) 100%)}.debug-mode tw-align[style*="text-align: right"]{background:linear-gradient(to right, rgba(255,204,189,0) 0%, rgba(255,204,189,0.25) 100%)}.debug-mode tw-column{background-color:rgba(189,228,255,0.2)}.debug-mode tw-enchantment{animation:enchantment 0.5s infinite;border:1px solid}.debug-mode tw-link::after,.debug-mode tw-broken-link::after{font-size:0.8rem;padding-left:0.2rem;padding-right:0.2rem;vertical-align:top;content:attr(passage-name)}.debug-mode tw-include{background-color:rgba(204,128,51,0.1)}.debug-mode tw-include::before{font-size:0.8rem;padding-left:0.2rem;padding-right:0.2rem;vertical-align:top;content:attr(type) ' "' attr(name) '"'}@keyframes enchantment{0%,to{border-color:#ffb366}50%{border-color:#6fc}}tw-debugger{position:fixed;box-sizing:border-box;bottom:0;right:0;z-index:999999;min-width:10em;min-height:1em;padding:0em 0.5em 0.5em 1em;font-size:1.25em;font-family:sans-serif;color:#000;border-left:solid #000 2px;border-top:solid #000 2px;border-top-left-radius:.5em;background:#fff;opacity:1}tw-debugger select{margin-right:1em;width:12em}tw-debugger button{border-radius:3px;border:solid #999 1px;margin:auto 4px;background-color:#fff;font-size:inherit;color:#000}tw-debugger button.enabled{background-color:#eee;box-shadow:inset #ddd 3px 5px 0.5em}tw-debugger .panel{display:-ms-flexbox;display:flex;-ms-flex-direction:column;flex-direction:column;position:absolute;bottom:100%;left:-2px;right:0;padding:1em;max-height:40vh;overflow-y:scroll;overflow-x:hidden;z-index:999998;background:#fff;border:inherit;border-bottom:solid #999 2px;border-top-left-radius:.5em;border-bottom-left-radius:.5em;font-size:0.8em}tw-debugger .panel:empty,tw-debugger .panel[hidden]{display:none}tw-debugger .panel-source,tw-debugger .panel-row-source{font-family:monospace;overflow-x:scroll;white-space:pre;-ms-flex-preferred-size:100%;flex-basis:100%}tw-debugger .panel-row-source{margin:5px 0}tw-debugger .panel-rows{width:100%;overflow-x:scroll}tw-debugger .panel-rows>*{display:table-row}tw-debugger .panel-rows>div:nth-of-type(2n){background:#EEE}tw-debugger .panel-row-buttons{text-align:right}tw-debugger .panel-variables .panel-rows:empty::before{content:"~ No variables ~";font-style:italic;color:#888;text-align:center}tw-debugger .panel-enchantments .panel-rows:empty::before{content:"~ No enchantments ~";font-style:italic;color:#888;text-align:center}tw-debugger .panel-errors .panel-rows:empty::before{content:"~ No errors... for now. ~";font-style:italic;color:#888;text-align:center}tw-debugger .panel-rows:empty+.panel-variables-bottom{display:none}tw-debugger .panel-storylets:not(.panel-exclusive) .storylet-exclusive,tw-debugger .panel-storylets:not(.panel-urgent) .storylet-urgent{display:none}tw-debugger .panel-variables-bottom{padding-top:5px}tw-debugger .enchantment-row{min-height:1.5em}tw-debugger .variable-path{opacity:0.4}tw-debugger .temporary-variable-scope,tw-debugger .enchantment-local{font-family:sans-serif;font-weight:normal;opacity:0.8;font-size:0.75em}tw-debugger .temporary-variable-scope:not(:empty)::before,tw-debugger .enchantment-local:not(:empty)::before{content:" in "}tw-debugger .variable-name,tw-debugger .enchantment-name{font-family:monospace;font-weight:bold}tw-debugger .variable-type{color:#444;font-weight:normal;text-overflow:ellipsis;overflow:hidden;max-width:10em}tw-debugger .error-row{display:table-row;background-color:rgba(230,101,204,0.3)}tw-debugger .error-row:nth-of-type(2n){background-color:rgba(237,145,219,0.3)}tw-debugger .error-row>*{display:table-cell;padding:0.25em 0.5em}tw-debugger .error-row .error-message{cursor:help}tw-debugger .error-row .error-passage{color:#444}tw-debugger .storylet-row{background-color:rgba(201,233,222,0.3)}tw-debugger .storylet-row:nth-child(2n){background-color:rgba(128,203,178,0.3)}tw-debugger .storylet-row.storylet-closed{font-style:italic;opacity:0.4;background-color:rgba(217,217,217,0.3)}tw-debugger .storylet-row.storylet-closed:nth-child(2n){background-color:rgba(166,166,166,0.3)}.storylet-error tw-debugger .storylet-row{background-color:rgba(230,101,204,0.3)}.storylet-error tw-debugger .storylet-row:nth-child(2n){background-color:rgba(237,145,219,0.3)}tw-debugger .storylet-row .storylet-name,tw-debugger .storylet-row .storylet-value{display:inline-block;width:50%}tw-debugger .tabs{padding-bottom:0.5em}tw-debugger .tab{border-radius:0px 0px 0.5em 0.5em;border-top:none}tw-debugger .resizer{position:absolute;height:3em;border-left:2px solid #ccc;border-right:2px solid #ccc;top:10px;left:4px;width:8px;cursor:ew-resize}tw-dialog{z-index:999997;border:#fff solid 2px;padding:2em;color:#fff;background-color:#000;display:block}@media (min-width: 576px){tw-dialog{max-width:50vw}}tw-dialog input[type=text]{font-size:inherit;width:100%}tw-dialog-links{text-align:right;display:-ms-flexbox;display:flex;-ms-flex-pack:end;justify-content:flex-end}tw-backdrop{z-index:999996;position:fixed;top:0;left:0;right:0;bottom:0;background-color:rgba(0,0,0,0.8);display:-ms-flexbox;display:flex;-ms-flex-align:center;align-items:center;-ms-flex-pack:center;justify-content:center}tw-backdrop ~ tw-backdrop{display:none}tw-link,.link,tw-icon,.enchantment-clickblock{cursor:pointer}tw-link,.enchantment-link{color:#4169E1;font-weight:bold;text-decoration:none;transition:color 0.2s ease-in-out}tw-passage [style^="color"] tw-link:not(:hover),tw-passage [style*=" color"] tw-link:not(:hover),tw-passage [style^="color"][hover="true"] tw-link:hover,tw-passage [style*=" color"][hover="true"] tw-link:hover,tw-passage [style^="color"] .enchantment-link:not(:hover),tw-passage [style*=" color"] .enchantment-link:not(:hover),tw-passage [style^="color"][hover="true"] .enchantment-link:hover,tw-passage [style*=" color"][hover="true"] .enchantment-link:hover{color:inherit}tw-link:hover,.enchantment-link:hover{color:#00bfff}tw-link:active,.enchantment-link:active{color:#DD4B39}.visited{color:#6941e1}tw-passage [style^="color"] .visited:not(:hover),tw-passage [style*=" color"] .visited:not(:hover),tw-passage [style^="color"][hover="true"] .visited:hover,tw-passage [style*=" color"][hover="true"] .visited:hover{color:inherit}.visited:hover{color:#E3E}tw-broken-link{color:#993333;border-bottom:2px solid #993333;cursor:not-allowed}tw-passage [style^="color"] tw-broken-link:not(:hover),tw-passage [style*=" color"] tw-broken-link:not(:hover),tw-passage [style^="color"][hover="true"] tw-broken-link:hover,tw-passage [style*=" color"][hover="true"] tw-broken-link:hover{color:inherit}.enchantment-mouseover{border-bottom:2px dashed #999}.enchantment-mouseout{border:rgba(64,149,191,0.6) 1px solid}.enchantment-mouseout:hover{background-color:rgba(175,197,207,0.75);border:transparent 1px solid;border-radius:0.2em}.enchantment-clickblock{width:100%;height:100%;display:block}.enchantment-clickblock>:not(tw-enchantment)::after{content:"";width:100%;height:100%;top:0;left:0;display:block;box-sizing:border-box;position:absolute;pointer-events:none;color:rgba(65,105,225,0.5);transition:color 0.2s ease-in-out}.enchantment-clickblock>:not(tw-enchantment):hover::after{color:rgba(0,191,255,0.5)}.enchantment-clickblock>:not(tw-enchantment):active::after{color:rgba(222,78,59,0.5)}.enchantment-clickblock>:not(tw-enchantment)::after{box-shadow:inset 0 0 0 0.5vmax}.enchantment-clickblock>tw-passage::after,.enchantment-clickblock>tw-sidebar::after{box-shadow:0 0 0 0.5vmax}.enchantment-mouseoverblock>:not(tw-enchantment)::after{content:"";width:100%;height:100%;top:0;left:0;display:block;box-sizing:border-box;position:absolute;pointer-events:none;border:2px dashed #999}.enchantment-mouseoutblock>:not(tw-enchantment)::after{content:"";width:100%;height:100%;top:0;left:0;display:block;box-sizing:border-box;position:absolute;pointer-events:none;border:rgba(64,149,191,0.6) 2px solid}.enchantment-mouseoutblock:hover>:not(tw-enchantment)::after{content:"";width:100%;height:100%;top:0;left:0;display:block;box-sizing:border-box;position:absolute;pointer-events:none;background-color:rgba(175,197,207,0.75);border:transparent 2px solid;border-radius:0.2em}tw-link.enchantment-button,.enchantment-link.enchantment-button,.enchantment-button:not(.enchantment-link) tw-link,.enchantment-button:not(.enchantment-link) .enchantment-link{border-radius:16px;border-style:solid;border-width:2px;text-align:center;padding:0px 8px;display:block}tw-dialog-links{padding-top:1.5em}tw-dialog-links tw-link{border-radius:16px;border-style:solid;border-width:2px;text-align:center;padding:0px 8px;display:block;display:inline-block}html{margin:0;height:100%;overflow-x:hidden}*,:before,:after{position:relative;box-sizing:inherit}body{margin:0;height:100%}tw-storydata{display:none}tw-story{display:-ms-flexbox;display:flex;-ms-flex-direction:column;flex-direction:column;font:100% Georgia, serif;box-sizing:border-box;width:100%;min-height:100%;font-size:1.5em;line-height:1.5em;padding:5% 5%;overflow:hidden;background-color:#000;color:#fff}tw-story [style*=content-box] *{box-sizing:border-box}@media (min-width: 576px){tw-story{padding:5% 20%}}tw-story tw-consecutive-br{display:block;height:1.6ex;visibility:hidden}tw-story select{background-color:transparent;font:inherit;border-style:solid;padding:2px}tw-story select:not([disabled]){color:inherit}tw-story textarea{resize:none;background-color:transparent;font:inherit;color:inherit;border-style:none;padding:2px}tw-story input[type=checkbox]{transform:scale(1.5);margin:0 0.5em}tw-story tw-noscript{animation:appear 0.8s}tw-passage{display:block}tw-sidebar{text-align:center;display:-ms-flexbox;display:flex;-ms-flex-pack:justify;justify-content:space-between}@media (min-width: 576px){tw-sidebar{left:-5em;width:3em;position:absolute;-ms-flex-direction:column;flex-direction:column}tw-enchantment[style*="width"]>tw-sidebar{width:inherit}}tw-icon{display:inline-block;margin:0.5em 0;font-size:66px;font-family:"Verdana",sans-serif}tw-icon[alt]{opacity:0.2}tw-icon[alt]:hover{opacity:0.4}tw-icon[data-label]::after{font-weight:bold;content:attr(data-label);font-size:20px;bottom:-20px;left:-50%;white-space:nowrap}tw-meter{display:block}tw-hook:empty,tw-expression:empty{display:none}tw-error{display:inline-block;border-radius:0.2em;padding:0.2em;font-size:1rem;cursor:help;white-space:pre-wrap}tw-error.error{background-color:rgba(223,58,190,0.6);color:#fff}tw-error.warning{background-color:rgba(223,140,58,0.6);color:#fff;display:none}.debug-mode tw-error.warning{display:inline}tw-error-explanation{display:block;font-size:0.8rem;line-height:1rem}tw-open-button,tw-folddown{cursor:pointer;line-height:0em;border-radius:1px;border:1px solid black;font-size:0.8rem;margin:0 0.4rem;padding:2px;white-space:pre}tw-folddown::after{content:"\25b6"}tw-folddown.open::after{content:"\25bc"}tw-open-button::after{content:"Open"}tw-notifier{border-radius:0.2em;padding:0.2em;font-size:1rem;background-color:rgba(223,182,58,0.4);display:none}.debug-mode tw-notifier{display:inline}tw-notifier::before{content:attr(message)}tw-colour{border:1px solid black;display:inline-block;width:1em;height:1em}tw-enchantment:empty{display:none}h1{font-size:3em}h2{font-size:2.25em}h3{font-size:1.75em}h1,h2,h3,h4,h5,h6{line-height:1em;margin:0.3em 0 0.6em 0}pre{font-size:1rem;line-height:initial}small{font-size:70%}big{font-size:120%}mark{color:rgba(0,0,0,0.6);background-color:#ff9}ins{color:rgba(0,0,0,0.6);background-color:rgba(255,242,204,0.5);border-radius:0.5em;box-shadow:0em 0em 0.2em #ffe699;text-decoration:none}center{text-align:center;margin:0 auto;width:60%}blink{text-decoration:none;animation:fade-in-out 1s steps(1, end) infinite alternate}tw-align{display:block}tw-columns{display:-ms-flexbox;display:flex;-ms-flex-direction:row;flex-direction:row;-ms-flex-pack:justify;justify-content:space-between}.transition-in{animation:appear 0ms step-start}.transition-out{animation:appear 0ms step-end}[data-t8n^=dissolve].transition-in,[data-t8n=fade].transition-in{animation:appear .8s}[data-t8n^=dissolve].transition-out,[data-t8n=fade].transition-out{animation:appear .8s reverse}[data-t8n^=shudder].transition-in{display:inline-block !important;animation:shudder-in .8s}[data-t8n^=shudder].transition-out{display:inline-block !important;animation:shudder-in .8s reverse}[data-t8n^=rumble].transition-in{display:inline-block !important;animation:rumble-in .8s}[data-t8n^=rumble].transition-out{display:inline-block !important;animation:rumble-in .8s reverse}[data-t8n^=pulse].transition-in{animation:pulse .8s;display:inline-block !important}[data-t8n^=pulse].transition-out{animation:pulse .8s reverse;display:inline-block !important}[data-t8n^=zoom].transition-in{animation:zoom-in .8s;display:inline-block !important}[data-t8n^=zoom].transition-out{animation:zoom-in .8s reverse;display:inline-block !important}[data-t8n^=blur].transition-in{animation:blur .8s;display:inline-block !important}[data-t8n^=blur].transition-out{animation:blur .8s reverse;display:inline-block !important}[data-t8n^=slideleft].transition-in{animation:slide-left .8s;display:inline-block !important}[data-t8n^=slideleft].transition-out{animation:slide-right .8s reverse;display:inline-block !important}[data-t8n^=slideright].transition-in{animation:slide-right .8s;display:inline-block !important}[data-t8n^=slideright].transition-out{animation:slide-left .8s reverse;display:inline-block !important}[data-t8n^=slideup].transition-in{animation:slide-up .8s;display:inline-block !important}[data-t8n^=slideup].transition-out{animation:slide-down .8s reverse;display:inline-block !important}[data-t8n^=slidedown].transition-in{animation:slide-down .8s;display:inline-block !important}[data-t8n^=slidedown].transition-out{animation:slide-up .8s reverse;display:inline-block !important}[data-t8n^=fadeleft].transition-in{animation:fade-left .8s;display:inline-block !important}[data-t8n^=fadeleft].transition-out{animation:fade-right .8s reverse;display:inline-block !important}[data-t8n^=faderight].transition-in{animation:fade-right .8s;display:inline-block !important}[data-t8n^=faderight].transition-out{animation:fade-left .8s reverse;display:inline-block !important}[data-t8n^=fadeup].transition-in{animation:fade-up .8s;display:inline-block !important}[data-t8n^=fadeup].transition-out{animation:fade-down .8s reverse;display:inline-block !important}[data-t8n^=fadedown].transition-in{animation:fade-down .8s;display:inline-block !important}[data-t8n^=fadedown].transition-out{animation:fade-up .8s reverse;display:inline-block !important}[data-t8n^=flicker].transition-in{animation:flicker .8s}[data-t8n^=flicker].transition-out{animation:flicker .8s reverse}
+<style title="Twine CSS">@keyframes appear{0%{opacity:0}to{opacity:1}}@keyframes fade-in-out{0%,to{opacity:0}50%{opacity:1}}@keyframes rumble{25%{top:-0.1em}75%{top:0.1em}0%,to{top:0px}}@keyframes shudder{25%{left:0.1em}75%{left:-0.1em}0%,to{left:0px}}@keyframes buoy{25%{top:0.25em}75%{top:-0.25em}0%,to{top:0px}}@keyframes sway{25%{left:0.25em}75%{left:-0.25em}0%,to{left:0px}}@keyframes pulse{0%{transform:scale(0, 0)}20%{transform:scale(1.2, 1.2)}40%{transform:scale(0.9, 0.9)}60%{transform:scale(1.05, 1.05)}80%{transform:scale(0.925, 0.925)}to{transform:scale(1, 1)}}@keyframes zoom-in{0%{transform:scale(0, 0)}to{transform:scale(1, 1)}}@keyframes shudder-in{0%, to{transform:translateX(0em)}5%, 25%, 45%{transform:translateX(-1em)}15%, 35%, 55%{transform:translateX(1em)}65%{transform:translateX(-0.6em)}75%{transform:translateX(0.6em)}85%{transform:translateX(-0.2em)}95%{transform:translateX(0.2em)}}@keyframes rumble-in{0%, to{transform:translateY(0em)}5%, 25%, 45%{transform:translateY(-1em)}15%, 35%, 55%{transform:translateY(1em)}65%{transform:translateY(-0.6em)}75%{transform:translateY(0.6em)}85%{transform:translateY(-0.2em)}95%{transform:translateY(0.2em)}}@keyframes fidget{0%, 8.1%, 82.1%, 31.1%, 38.1%, 44.1%, 40.1%, 47.1%, 74.1%, 16.1%, 27.1%, 72.1%, 24.1%, 95.1%, 6.1%, 36.1%, 20.1%, 4.1%, 91.1%, 14.1%, 87.1%, to{left:0px;top:0px}8%, 82%, 31%, 38%, 44%{left:-1px}40%, 47%, 74%, 16%, 27%{left:1px}72%, 24%, 95%, 6%, 36%{top:-1px}20%, 4%, 91%, 14%, 87%{top:1px}}@keyframes slide-right{0%{transform:translateX(-100vw)}}@keyframes slide-left{0%{transform:translateX(100vw)}}@keyframes slide-up{0%{transform:translateY(100vh)}}@keyframes slide-down{0%{transform:translateY(-100vh)}}@keyframes fade-right{0%{opacity:0;transform:translateX(-1em)}to{opacity:1}}@keyframes fade-left{0%{opacity:0;transform:translateX(1em)}to{opacity:1}}@keyframes fade-up{0%{opacity:0;transform:translateY(1em)}to{opacity:1}}@keyframes fade-down{0%{opacity:0;transform:translateY(-1em)}to{opacity:1}}@keyframes flicker{0%,29%,31%,63%,65%,77%,79%,86%,88%,91%,93%{opacity:0}30%{opacity:0.2}64%{opacity:0.4}78%{opacity:0.6}87%{opacity:0.8}92%, to{opacity:1}}@keyframes blur{0%{filter:blur(2rem);opacity:0}25%{opacity:1}to{filter:blur(0rem);opacity:1}}.dom-debug-mode tw-story,.dom-debug-mode tw-passage,.dom-debug-mode tw-sidebar,.dom-debug-mode tw-include,.dom-debug-mode tw-hook,.dom-debug-mode tw-expression,.dom-debug-mode tw-link,.dom-debug-mode tw-dialog,.dom-debug-mode tw-columns,.dom-debug-mode tw-column,.dom-debug-mode tw-align{outline:1px solid #f5a3da;min-height:32px;display:block !important}.dom-debug-mode tw-story::before,.dom-debug-mode tw-passage::before,.dom-debug-mode tw-sidebar::before,.dom-debug-mode tw-include::before,.dom-debug-mode tw-hook::before,.dom-debug-mode tw-expression::before,.dom-debug-mode tw-link::before,.dom-debug-mode tw-dialog::before,.dom-debug-mode tw-columns::before,.dom-debug-mode tw-column::before,.dom-debug-mode tw-align::before{position:absolute;top:0;left:0;height:16px;background-color:#f5a3da;color:black;font-size:16px;font-weight:normal;font-style:normal;font-family:monospace;display:inline-block;line-height:100%;white-space:pre;z-index:999997}.dom-debug-mode tw-story:hover,.dom-debug-mode tw-passage:hover,.dom-debug-mode tw-sidebar:hover,.dom-debug-mode tw-include:hover,.dom-debug-mode tw-hook:hover,.dom-debug-mode tw-expression:hover,.dom-debug-mode tw-link:hover,.dom-debug-mode tw-dialog:hover,.dom-debug-mode tw-columns:hover,.dom-debug-mode tw-column:hover,.dom-debug-mode tw-align:hover{outline:1px solid #fc9}.dom-debug-mode tw-story:hover::before,.dom-debug-mode tw-passage:hover::before,.dom-debug-mode tw-sidebar:hover::before,.dom-debug-mode tw-include:hover::before,.dom-debug-mode tw-hook:hover::before,.dom-debug-mode tw-expression:hover::before,.dom-debug-mode tw-link:hover::before,.dom-debug-mode tw-dialog:hover::before,.dom-debug-mode tw-columns:hover::before,.dom-debug-mode tw-column:hover::before,.dom-debug-mode tw-align:hover::before{background-color:#fc9;transition:background-color 1s}.dom-debug-mode tw-passage,.dom-debug-mode tw-include,.dom-debug-mode tw-hook,.dom-debug-mode tw-expression,.dom-debug-mode tw-link,.dom-debug-mode tw-dialog,.dom-debug-mode tw-columns,.dom-debug-mode tw-column,.dom-debug-mode tw-align{padding:1em;margin:0}.dom-debug-mode tw-story::before{content:'<tw-story tags="' attr(tags) '">'}.dom-debug-mode tw-passage::before{top:-16px;content:'<tw-passage tags="' attr(tags) '">'}.dom-debug-mode tw-sidebar::before{top:-16px;content:"<tw-sidebar>"}.dom-debug-mode tw-hook::before{content:'<tw-hook name="' attr(name) '">'}.dom-debug-mode tw-expression::before{content:'<tw-expression name="' attr(name) '">'}.dom-debug-mode tw-link::before{content:'<tw-link name="' attr(name) '">'}.dom-debug-mode tw-dialog::before{content:"<tw-dialog>"}.dom-debug-mode tw-columns::before{content:"<tw-columns>"}.dom-debug-mode tw-column::before{content:"<tw-column>"}.dom-debug-mode tw-align::before{content:"<tw-align>"}.dom-debug-mode tw-include::before{content:'<tw-include type="' attr(type) '" name="' attr(name) '">'}.debug-mode tw-expression{display:inline-block !important}.debug-mode tw-expression[type=variable]::after{font-size:0.8rem;padding-left:0.2rem;padding-right:0.2rem;vertical-align:top;content:"$" attr(name)}.debug-mode tw-expression[type=tempVariable]::after{font-size:0.8rem;padding-left:0.2rem;padding-right:0.2rem;vertical-align:top;content:"_" attr(name)}.debug-mode tw-expression[return=boolean]{background-color:rgba(179,179,179,0.2)}.debug-mode tw-expression[return=array]{background-color:rgba(255,102,102,0.2)}.debug-mode tw-expression[return=dataset]{background-color:rgba(255,128,0,0.2)}.debug-mode tw-expression[return=number]{background-color:rgba(255,179,102,0.2)}.debug-mode tw-expression[return=datamap]{background-color:rgba(255,255,102,0.2)}.debug-mode tw-expression[return=changer]{background-color:rgba(179,255,102,0.2)}.debug-mode tw-expression[return=lambda]{background-color:rgba(102,255,102,0.2)}.debug-mode tw-expression[return=hookname]{background-color:rgba(102,255,204,0.2)}.debug-mode tw-expression[return=string]{background-color:rgba(102,255,255,0.2)}.debug-mode tw-expression[return=datatype]{background-color:rgba(102,153,255,0.2)}.debug-mode tw-expression[return=gradient],.debug-mode tw-expression[return=colour]{background-color:rgba(204,102,255,0.2)}.debug-mode tw-expression[return=instant],.debug-mode tw-expression[return=macro]{background-color:rgba(240,117,199,0.2)}.debug-mode tw-expression[return=command]{background-color:rgba(153,153,255,0.2)}.debug-mode tw-expression.false{background-color:rgba(255,0,0,0.2) !important}.debug-mode tw-expression[type=macro]::before{content:"(" attr(name) ":)";padding:0 0.5rem;font-size:1rem;vertical-align:middle;line-height:normal;background-color:inherit;border:1px solid rgba(255,255,255,0.5)}.debug-mode tw-hook{background-color:rgba(0,85,255,0.1) !important}.debug-mode tw-hook::before{font-size:0.8rem;padding-left:0.2rem;padding-right:0.2rem;vertical-align:top;content:"["}.debug-mode tw-hook::after{font-size:0.8rem;padding-left:0.2rem;padding-right:0.2rem;vertical-align:top;content:"]"}.debug-mode tw-hook[name]::after{font-size:0.8rem;padding-left:0.2rem;padding-right:0.2rem;vertical-align:top;content:"]<" attr(name) "|"}.debug-mode tw-pseudo-hook{background-color:rgba(255,170,0,0.1) !important}.debug-mode tw-collapsed::before{font-size:0.8rem;padding-left:0.2rem;padding-right:0.2rem;vertical-align:top;content:"{"}.debug-mode tw-collapsed::after{font-size:0.8rem;padding-left:0.2rem;padding-right:0.2rem;vertical-align:top;content:"}"}.debug-mode tw-verbatim::before,.debug-mode tw-verbatim::after{font-size:0.8rem;padding-left:0.2rem;padding-right:0.2rem;vertical-align:top;content:"`"}.debug-mode tw-align[style*="text-align: center"]{background:linear-gradient(to right, rgba(255,204,189,0) 0%, rgba(255,204,189,0.25) 50%, rgba(255,204,189,0) 100%)}.debug-mode tw-align[style*="text-align: left"]{background:linear-gradient(to right, rgba(255,204,189,0.25) 0%, rgba(255,204,189,0) 100%)}.debug-mode tw-align[style*="text-align: right"]{background:linear-gradient(to right, rgba(255,204,189,0) 0%, rgba(255,204,189,0.25) 100%)}.debug-mode tw-column{background-color:rgba(189,228,255,0.2)}.debug-mode tw-enchantment{animation:enchantment 0.5s infinite;border:1px solid}.debug-mode tw-link::after,.debug-mode tw-broken-link::after{font-size:0.8rem;padding-left:0.2rem;padding-right:0.2rem;vertical-align:top;content:attr(passage-name)}.debug-mode tw-include{background-color:rgba(204,128,51,0.1)}.debug-mode tw-include::before{font-size:0.8rem;padding-left:0.2rem;padding-right:0.2rem;vertical-align:top;content:attr(type) ' "' attr(name) '"'}@keyframes enchantment{0%,to{border-color:#ffb366}50%{border-color:#6fc}}tw-debugger{position:fixed;box-sizing:border-box;bottom:0;right:0;z-index:999999;min-width:10em;min-height:1em;padding:0em 0.5em 0.5em 1em;font-size:1.25em;font-family:sans-serif;color:#000;border-left:solid #000 2px;border-top:solid #000 2px;border-top-left-radius:.5em;background:#fff;opacity:1}tw-debugger select{margin-right:1em;width:12em}tw-debugger button{border-radius:3px;border:solid #999 1px;margin:auto 4px;background-color:#fff;font-size:inherit;color:#000}tw-debugger button.enabled{background-color:#eee;box-shadow:inset #ddd 3px 5px 0.5em}tw-debugger .panel{display:-ms-flexbox;display:flex;-ms-flex-direction:column;flex-direction:column;position:absolute;bottom:100%;left:-2px;right:0;padding:1em;max-height:40vh;overflow-y:scroll;overflow-x:hidden;z-index:999998;background:#fff;border:inherit;border-bottom:solid #999 2px;border-top-left-radius:.5em;border-bottom-left-radius:.5em;font-size:0.8em}tw-debugger .panel:empty,tw-debugger .panel[hidden]{display:none}tw-debugger .panel-source,tw-debugger .panel-row-source{font-family:monospace;overflow-x:scroll;white-space:pre;-ms-flex-preferred-size:100%;flex-basis:100%}tw-debugger .panel-row-source{margin:5px 0}tw-debugger .panel-rows{width:100%;overflow-x:scroll}tw-debugger .panel-rows>*{display:table-row}tw-debugger .panel-rows>div:nth-of-type(2n){background:#EEE}tw-debugger .panel-row-buttons{text-align:right}tw-debugger .panel-variables .panel-rows:empty::before{content:"~ No variables ~";font-style:italic;color:#888;text-align:center}tw-debugger .panel-enchantments .panel-rows:empty::before{content:"~ No enchantments ~";font-style:italic;color:#888;text-align:center}tw-debugger .panel-errors .panel-rows:empty::before{content:"~ No errors... for now. ~";font-style:italic;color:#888;text-align:center}tw-debugger .panel-rows:empty+.panel-variables-bottom{display:none}tw-debugger .panel-storylets:not(.panel-exclusive) .storylet-exclusive,tw-debugger .panel-storylets:not(.panel-urgent) .storylet-urgent{display:none}tw-debugger .panel-variables-bottom{padding-top:5px}tw-debugger .enchantment-row{min-height:1.5em}tw-debugger .variable-path{opacity:0.4}tw-debugger .temporary-variable-scope,tw-debugger .enchantment-local{font-family:sans-serif;font-weight:normal;opacity:0.8;font-size:0.75em}tw-debugger .temporary-variable-scope:not(:empty)::before,tw-debugger .enchantment-local:not(:empty)::before{content:" in "}tw-debugger .variable-name,tw-debugger .enchantment-name{font-family:monospace;font-weight:bold}tw-debugger .variable-type{color:#444;font-weight:normal;text-overflow:ellipsis;overflow:hidden;max-width:10em}tw-debugger .error-row{display:table-row;background-color:rgba(230,101,204,0.3)}tw-debugger .error-row:nth-of-type(2n){background-color:rgba(237,145,219,0.3)}tw-debugger .error-row>*{display:table-cell;padding:0.25em 0.5em}tw-debugger .error-row .error-message{cursor:help}tw-debugger .error-row .error-passage{color:#444}tw-debugger .storylet-row{background-color:rgba(201,233,222,0.3)}tw-debugger .storylet-row:nth-child(2n){background-color:rgba(128,203,178,0.3)}tw-debugger .storylet-row.storylet-closed{font-style:italic;opacity:0.4;background-color:rgba(217,217,217,0.3)}tw-debugger .storylet-row.storylet-closed:nth-child(2n){background-color:rgba(166,166,166,0.3)}.storylet-error tw-debugger .storylet-row{background-color:rgba(230,101,204,0.3)}.storylet-error tw-debugger .storylet-row:nth-child(2n){background-color:rgba(237,145,219,0.3)}tw-debugger .storylet-row .storylet-name,tw-debugger .storylet-row .storylet-value{display:inline-block;width:50%}tw-debugger .tabs{padding-bottom:0.5em}tw-debugger .tab{border-radius:0px 0px 0.5em 0.5em;border-top:none}tw-debugger .resizer{position:absolute;height:3em;border-left:2px solid #ccc;border-right:2px solid #ccc;top:10px;left:4px;width:8px;cursor:ew-resize}tw-dialog{z-index:999997;border:#fff solid 2px;padding:2em;color:#fff;background-color:#000;display:block}@media (min-width: 576px){tw-dialog{max-width:50vw}}tw-dialog input[type=text]{font-size:inherit;width:100%}tw-dialog-links{text-align:right;display:-ms-flexbox;display:flex;-ms-flex-pack:end;justify-content:flex-end}tw-backdrop{z-index:999996;position:fixed;top:0;left:0;right:0;bottom:0;background-color:rgba(0,0,0,0.8);display:-ms-flexbox;display:flex;-ms-flex-align:center;align-items:center;-ms-flex-pack:center;justify-content:center}tw-backdrop ~ tw-backdrop{display:none}tw-link,.link,tw-icon,.enchantment-clickblock{cursor:pointer}tw-link,.enchantment-link{color:#4169E1;font-weight:bold;text-decoration:none;transition:color 0.2s ease-in-out}tw-passage [style^="color"] tw-link:not(:hover),tw-passage [style*=" color"] tw-link:not(:hover),tw-passage [style^="color"][hover="true"] tw-link:hover,tw-passage [style*=" color"][hover="true"] tw-link:hover,tw-passage [style^="color"] .enchantment-link:not(:hover),tw-passage [style*=" color"] .enchantment-link:not(:hover),tw-passage [style^="color"][hover="true"] .enchantment-link:hover,tw-passage [style*=" color"][hover="true"] .enchantment-link:hover{color:inherit}tw-link:hover,.enchantment-link:hover{color:#00bfff}tw-link:active,.enchantment-link:active{color:#DD4B39}.visited{color:#6941e1}tw-passage [style^="color"] .visited:not(:hover),tw-passage [style*=" color"] .visited:not(:hover),tw-passage [style^="color"][hover="true"] .visited:hover,tw-passage [style*=" color"][hover="true"] .visited:hover{color:inherit}.visited:hover{color:#E3E}tw-broken-link{color:#993333;border-bottom:2px solid #993333;cursor:not-allowed}tw-passage [style^="color"] tw-broken-link:not(:hover),tw-passage [style*=" color"] tw-broken-link:not(:hover),tw-passage [style^="color"][hover="true"] tw-broken-link:hover,tw-passage [style*=" color"][hover="true"] tw-broken-link:hover{color:inherit}.enchantment-mouseover{border-bottom:2px dashed #999}.enchantment-mouseout{border:rgba(64,149,191,0.6) 1px solid}.enchantment-mouseout:hover{background-color:rgba(175,197,207,0.75);border:transparent 1px solid;border-radius:0.2em}.enchantment-clickblock{width:100%;height:100%;display:block}.enchantment-clickblock>:not(tw-enchantment)::after{content:"";width:100%;height:100%;top:0;left:0;display:block;box-sizing:border-box;position:absolute;pointer-events:none;color:rgba(65,105,225,0.5);transition:color 0.2s ease-in-out}.enchantment-clickblock>:not(tw-enchantment):hover::after{color:rgba(0,191,255,0.5)}.enchantment-clickblock>:not(tw-enchantment):active::after{color:rgba(222,78,59,0.5)}.enchantment-clickblock>:not(tw-enchantment)::after{box-shadow:inset 0 0 0 0.5vmax}.enchantment-clickblock>tw-passage::after,.enchantment-clickblock>tw-sidebar::after{box-shadow:0 0 0 0.5vmax}.enchantment-mouseoverblock>:not(tw-enchantment)::after{content:"";width:100%;height:100%;top:0;left:0;display:block;box-sizing:border-box;position:absolute;pointer-events:none;border:2px dashed #999}.enchantment-mouseoutblock>:not(tw-enchantment)::after{content:"";width:100%;height:100%;top:0;left:0;display:block;box-sizing:border-box;position:absolute;pointer-events:none;border:rgba(64,149,191,0.6) 2px solid}.enchantment-mouseoutblock:hover>:not(tw-enchantment)::after{content:"";width:100%;height:100%;top:0;left:0;display:block;box-sizing:border-box;position:absolute;pointer-events:none;background-color:rgba(175,197,207,0.75);border:transparent 2px solid;border-radius:0.2em}tw-link.enchantment-button,.enchantment-link.enchantment-button,.enchantment-button:not(.enchantment-link) tw-link,.enchantment-button:not(.enchantment-link) .enchantment-link{border-radius:16px;border-style:solid;border-width:2px;text-align:center;padding:0px 8px;display:block}tw-dialog-links{padding-top:1.5em}tw-dialog-links tw-link{border-radius:16px;border-style:solid;border-width:2px;text-align:center;padding:0px 8px;display:block;display:inline-block}html{margin:0;height:100%;overflow-x:hidden}*,:before,:after{position:relative;box-sizing:inherit}body{margin:0;height:100%}tw-storydata{display:none}tw-story{display:-ms-flexbox;display:flex;-ms-flex-direction:column;flex-direction:column;font:100% Georgia, serif;box-sizing:border-box;width:100%;min-height:100%;font-size:1.5em;line-height:1.5em;padding:5% 5%;overflow:hidden;background-color:#000;color:#fff}tw-story [style*=content-box] *{box-sizing:border-box}@media (min-width: 576px){tw-story{padding:5% 20%}}tw-story tw-consecutive-br{display:block;height:1.6ex;visibility:hidden}tw-story select{background-color:transparent;font:inherit;border-style:solid;padding:2px}tw-story select:not([disabled]){color:inherit}tw-story textarea{resize:none;background-color:transparent;font:inherit;color:inherit;border-style:none;padding:2px}tw-story input[type=checkbox]{transform:scale(1.5);margin:0 0.5em}tw-story tw-noscript{animation:appear 0.8s}tw-passage{display:block}tw-sidebar{text-align:center;display:-ms-flexbox;display:flex;-ms-flex-pack:justify;justify-content:space-between}@media (min-width: 576px){tw-sidebar{left:-5em;width:3em;position:absolute;-ms-flex-direction:column;flex-direction:column}tw-enchantment[style*="width"]>tw-sidebar{width:inherit}}tw-icon{display:inline-block;margin:0.5em 0;font-size:66px;font-family:"Verdana",sans-serif}tw-icon[alt]{opacity:0.2}tw-icon[alt]:hover{opacity:0.4}tw-icon[data-label]::after{font-weight:bold;content:attr(data-label);font-size:20px;bottom:-20px;left:-50%;white-space:nowrap}tw-meter{display:block}tw-hook:empty,tw-expression:empty{display:none}tw-error{display:inline-block;border-radius:0.2em;padding:0.2em;font-size:1rem;cursor:help;white-space:pre-wrap}tw-error.error{background-color:rgba(223,58,190,0.6);color:#fff}tw-error.warning{background-color:rgba(223,140,58,0.6);color:#fff;display:none}.debug-mode tw-error.warning{display:inline}tw-error-explanation{display:block;font-size:0.8rem;line-height:1rem}tw-open-button,tw-folddown{cursor:pointer;line-height:0em;border-radius:1px;border:1px solid black;font-size:0.8rem;margin:0 0.4rem;padding:2px;white-space:pre}tw-folddown::after{content:"\25b6"}tw-folddown.open::after{content:"\25bc"}tw-open-button::after{content:"Open"}tw-notifier{border-radius:0.2em;padding:0.2em;font-size:1rem;background-color:rgba(223,182,58,0.4);display:none}.debug-mode tw-notifier{display:inline}tw-notifier::before{content:attr(message)}tw-colour{border:1px solid black;display:inline-block;width:1em;height:1em}tw-enchantment:empty{display:none}h1{font-size:3em}h2{font-size:2.25em}h3{font-size:1.75em}h1,h2,h3,h4,h5,h6{line-height:1em;margin:0.3em 0 0.6em 0}pre{font-size:1rem;line-height:initial}small{font-size:70%}big{font-size:120%}mark{color:rgba(0,0,0,0.6);background-color:#ff9}ins{color:rgba(0,0,0,0.6);background-color:rgba(255,242,204,0.5);border-radius:0.5em;box-shadow:0em 0em 0.2em #ffe699;text-decoration:none}center{text-align:center;margin:0 auto;width:60%}blink{text-decoration:none;animation:fade-in-out 1s steps(1, end) infinite alternate}tw-align{display:block}tw-columns{display:-ms-flexbox;display:flex;-ms-flex-direction:row;flex-direction:row;-ms-flex-pack:justify;justify-content:space-between}.transition-in{animation:appear 0ms step-start}.transition-out{animation:appear 0ms step-end}[data-t8n^=dissolve].transition-in,[data-t8n=fade].transition-in{animation:appear .8s}[data-t8n^=dissolve].transition-out,[data-t8n=fade].transition-out{animation:appear .8s reverse}[data-t8n^=shudder].transition-in{display:inline-block !important;animation:shudder-in .8s}[data-t8n^=shudder].transition-out{display:inline-block !important;animation:shudder-in .8s reverse}[data-t8n^=rumble].transition-in{display:inline-block !important;animation:rumble-in .8s}[data-t8n^=rumble].transition-out{display:inline-block !important;animation:rumble-in .8s reverse}[data-t8n^=pulse].transition-in{animation:pulse .8s;display:inline-block !important}[data-t8n^=pulse].transition-out{animation:pulse .8s reverse;display:inline-block !important}[data-t8n^=zoom].transition-in{animation:zoom-in .8s;display:inline-block !important}[data-t8n^=zoom].transition-out{animation:zoom-in .8s reverse;display:inline-block !important}[data-t8n^=blur].transition-in{animation:blur .8s;display:inline-block !important}[data-t8n^=blur].transition-out{animation:blur .8s reverse;display:inline-block !important}[data-t8n^=slideleft].transition-in{animation:slide-left .8s;display:inline-block !important}[data-t8n^=slideleft].transition-out{animation:slide-right .8s reverse;display:inline-block !important}[data-t8n^=slideright].transition-in{animation:slide-right .8s;display:inline-block !important}[data-t8n^=slideright].transition-out{animation:slide-left .8s reverse;display:inline-block !important}[data-t8n^=slideup].transition-in{animation:slide-up .8s;display:inline-block !important}[data-t8n^=slideup].transition-out{animation:slide-down .8s reverse;display:inline-block !important}[data-t8n^=slidedown].transition-in{animation:slide-down .8s;display:inline-block !important}[data-t8n^=slidedown].transition-out{animation:slide-up .8s reverse;display:inline-block !important}[data-t8n^=fadeleft].transition-in{animation:fade-left .8s;display:inline-block !important}[data-t8n^=fadeleft].transition-out{animation:fade-right .8s reverse;display:inline-block !important}[data-t8n^=faderight].transition-in{animation:fade-right .8s;display:inline-block !important}[data-t8n^=faderight].transition-out{animation:fade-left .8s reverse;display:inline-block !important}[data-t8n^=fadeup].transition-in{animation:fade-up .8s;display:inline-block !important}[data-t8n^=fadeup].transition-out{animation:fade-down .8s reverse;display:inline-block !important}[data-t8n^=fadedown].transition-in{animation:fade-down .8s;display:inline-block !important}[data-t8n^=fadedown].transition-out{animation:fade-up .8s reverse;display:inline-block !important}[data-t8n^=flicker].transition-in{animation:flicker .8s}[data-t8n^=flicker].transition-out{animation:flicker .8s reverse}
 </style>
 </head>
 <body>
@@ -93,6 +93,11 @@ tw-story[tags~="sfondo_sfumato3"] select {
   margin-right: auto;  
 }
 
+/* *** per dimensionare in modo ottimale immagini html (class='full') *** */
+img.full {
+  max-width: 100%;
+  max-height: 100%;
+}
 
 /* *** per formattare testo typewriter (hook |preformat>) *** */
 tw-hook[name="preformat"] {
@@ -102,19 +107,16 @@ tw-hook[name="preformat"] {
   display: block;
 }
 
-
 /* *** per formattare testo in font più piccolo (hook |piccolo>) *** */
 tw-hook[name="piccolo"] {
   font-size: 14px;
 }
-
 
 /* *** per enfatizzare (hook |enfat>) *** */
 tw-hook[name="enfat"] {
   display: block;
   background-color: yellow;
 }
-
 
 /* *** per enfatizzare (hook |bianco>) *** */
 tw-hook[name="bianco"] {
@@ -132,9 +134,9 @@ tw-hook[name="scuro"] {
 
 
 tw-sidebar {
-  display: none;
+/*  display: none; */
 }
-</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-tag name="Bianco" color="gray"></tw-tag>,<tw-tag name="bicicletta" color="red"></tw-tag>,<tw-tag name="frontespizio" color="red"></tw-tag>,<tw-tag name="macchina" color="red"></tw-tag>,<tw-tag name="sfondo_bianco" color="yellow"></tw-tag>,<tw-tag name="sfondo_nero" color="purple"></tw-tag>,<tw-tag name="sfondo_sanmarino" color="purple"></tw-tag>,<tw-tag name="sfondo_trascrizione" color="red"></tw-tag>,<tw-tag name="sfumato_sanmarino" color="purple"></tw-tag>,<tw-tag name="testo_bianco" color="purple"></tw-tag>,<tw-tag name="testo_bright_1" color="red"></tw-tag>,<tw-tag name="testo_font" color="green"></tw-tag>,<tw-tag name="testo_nero" color="yellow"></tw-tag>,<tw-tag name="testo_trascrizione" color="red"></tw-tag><tw-passagedata pid="1" name="un&#39;insolita sveglia" tags="testo_bianco sfondo_sfumato0" position="1075,650" size="100,100">&lt;img src=&#39;res1/sunrise.jpg&#39; class=&#39;center&#39; width=&#39;600&#39; alt=&#39;immagine&#39;&gt;
+</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-tag name="Bianco" color="gray"></tw-tag>,<tw-tag name="bicicletta" color="red"></tw-tag>,<tw-tag name="frontespizio" color="red"></tw-tag>,<tw-tag name="macchina" color="red"></tw-tag>,<tw-tag name="sfondo_bianco" color="yellow"></tw-tag>,<tw-tag name="sfondo_nero" color="purple"></tw-tag>,<tw-tag name="sfondo_sanmarino" color="purple"></tw-tag>,<tw-tag name="sfondo_trascrizione" color="red"></tw-tag>,<tw-tag name="sfumato_sanmarino" color="purple"></tw-tag>,<tw-tag name="testo_bianco" color="purple"></tw-tag>,<tw-tag name="testo_bright_1" color="red"></tw-tag>,<tw-tag name="testo_font" color="green"></tw-tag>,<tw-tag name="testo_nero" color="yellow"></tw-tag>,<tw-tag name="testo_trascrizione" color="red"></tw-tag><tw-passagedata pid="1" name="un&#39;insolita sveglia" tags="testo_bianco sfondo_sfumato0" position="1075,650" size="100,100">&lt;img src=&#39;res1/sunrise.jpg&#39; class=&#39;full&#39; alt=&#39;immagine&#39;&gt;
 
 ## Un’insolita sveglia
  \
@@ -146,23 +148,23 @@ Un suono acuto ti sveglia di soprassalto: $nome, 24 anni, una laurea appena comp
 
 “Fatti un buon caffè: mi serve che tu sia in grado di ragionare. Nel frattempo accendi la televisione. Sono appena tornato dal museo e sotto è già pieno di giornalisti, capirai subito perché ti ho chiamato. Poi vola qui.”
 
-&lt;img src=&#39;res1/caffe.jpg&#39; class=&#39;center&#39; width=&#39;600&#39; alt=&#39;immagine&#39;&gt;
+&lt;img src=&#39;res1/caffe.jpg&#39; class=&#39;full&#39; alt=&#39;immagine&#39;&gt;
 
 Il commissario chiude la chiamata, e tu, ancora in dormiveglia, rimani sdraiat$g per qualche minuto, chiedendoti se la telefonata non sia l’ennesimo sogno in cui ti immagini di essere diventat$g una persona importante, grazie a ciò che hai studiato così a lungo. E invece, fino ad ora hai passato le tue giornate in un piccolo ufficio polveroso, quasi inoperos$g. (if: $t is &quot;org&quot;) [Da persona organizzata e operosa quale sei, hai almeno speso pomeriggi a catalogare vecchi casi e digitalizzare l’immenso archivio cartaceo del dipartimento di furti d’arte, respirando la polvere dei vecchi faldoni ma ritrovandoti ora con un efficientissimo archivio digitalizzato.]
 
 Quando ripensi alla fatica che hai fatto per laurearti... Il futuro che ti eri immaginat$g è così diverso dal presente! Anni fa hai rinunciato a iscriverti all’Accademia di Brera per studiare pittura, la tua passione, e hai invece studiato criminologia, specializzandoti in furti d’arte. Speravi che il tuo lavoro avrebbe potuto essere utile per difendere l’arte che tanto ami, ma finora non è successo nulla di davvero interessante...
 
-&lt;img src=&#39;res1/bed.jpg&#39; class=&#39;center&#39; width=&#39;600&#39; alt=&#39;immagine&#39;&gt;
+&lt;img src=&#39;res1/bed.jpg&#39; class=&#39;full&#39; alt=&#39;immagine&#39;&gt;
 
 Però la voce del tuo capo, il commissario Tomba, era davvero troppo nitida per essere un sogno. “Accendi la televisione”, ti ha detto. Ma come fai? Tu neanche ce l’hai, un televisore! Controlli le news sul telefono. Se è successo qualcosa di importante verrà sicuramente fuori nella home.
 
 Ti basta consultare per pochi secondi il tuo sito di news preferito per scoprire che stanotte qualcuno ha rubato &#39;&#39;Il Bacio di Hayez&#39;&#39; dalla Pinacoteca di Brera, e sembra che la polizia brancoli nel buio. Adesso sei completamente svegli$g, l’adrenalina al lavoro. Non hai più bisogno di bere un caffé. Ti vesti più in fretta possibile: questa è l’opportunità che stavi aspettando! 
 
-Ora, scegli come vuoi andare in ufficio. Vuoi [[prendere la bicicletta]] e pedalare fino in ufficio, ascoltando i suoni della città durante il tragitto? Oppure vuoi [[prendere la macchina]], e ascoltare la radio durante il percorso? \
- \
-(if: $m) [(print: $cs1)] \
- \
-(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="2" name="arrivando in ufficio" tags="testo_nero sfondo_sfumato3" position="1325,650" size="100,100">&lt;img src=&#39;res1/ufficio.jpg&#39; class=&#39;center&#39; width=&#39;600&#39; alt=&#39;immagine&#39;&gt;
+Ora, scegli come vuoi andare in ufficio. Vuoi [[prendere la bicicletta]] e pedalare fino in ufficio, ascoltando i suoni della città durante il tragitto? Oppure vuoi [[prendere la macchina]], e ascoltare la radio durante il percorso? {
+
+(if: $m) [(print: $cs1)]
+
+(display: &quot;piepagina&quot;) }</tw-passagedata><tw-passagedata pid="2" name="arrivando in ufficio" tags="testo_nero sfondo_sfumato3" position="1325,650" size="100,100">&lt;img src=&#39;res1/ufficio.jpg&#39; class=&#39;center&#39; width=&#39;600&#39; alt=&#39;immagine&#39;&gt;
 
 ## In ufficio
  \
@@ -176,7 +178,7 @@ Tu non rispondi. Sei abbastanza intelligente da sapere che Carlo sa che tu hai c
 
 “Al momento, non sappiamo praticamente niente. Il museo ha delle telecamere, che non sono state disattivate, ma il ladro in qualche modo sapeva come aggirarle. Quindi anche se abbiamo alcuni brevi video del ladro, sono pochi e confusi. Si vede che indossa vestiti neri larghi e un passamontagna. Il modo in cui cammina non presenta segni particolari e non riusciamo a stimare in modo chiaro la sua altezza. Quindi, onestamente, al momento non sappiamo neanche se sia un uomo o una donna. $nome, ascoltami bene: tu mi devi risolvere il caso. Lo so che sembra impossibile, ma tu me lo devi risolvere.”
 
-&lt;img src=&#39;res1/phone.jpg&#39; class=&#39;center&#39; width=&#39;600&#39; alt=&#39;immagine&#39;&gt;
+&lt;img src=&#39;res1/phone.jpg&#39; class=&#39;full&#39; alt=&#39;immagine&#39;&gt;
 
 Discuti ancora un po’ con il commissario. Non ci sono piste, non ci sono prove. A parte qualche fotogramma inutile, il ladro sembra avere attraversato il museo come un fantasma...
 
@@ -192,11 +194,11 @@ Il tuo browser non supporta la gestione di audio: per favore gioca con un browse
 Come era iniziata, la conversazione si chiude di scatto. Il commissario Tomba ti guarda. 
 “$nome, è il nostro giorno fortunato! Trova queste quattro persone, e cerca di capire chi sia stato. Interrogali, metti alla prova i loro alibi, trova un modo. Una volta che ce l’abbiamo in pugno, attivo tutte le forze a disposizione della polizia per ritrovare il quadro in base ai suoi recenti spostamenti.” 
 
-Recati allo [[schedario]] per scoprire chi siano Marco Freschini, Martino Ravanelli, Claudio Lodigiani e Gerry Rosso. Oppure [[ripensa alla telefonata]]. \
- \
-(if: $m) [(print: $cs2)] \
- \
-(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="3" name="schedario" tags="testo_nero sfondo_sfumato4" position="1598.3333333333333,650" size="100,100">&lt;img src=&#39;res1/schedario.jpg&#39; class=&#39;center&#39; width=&#39;600&#39; alt=&#39;immagine&#39;&gt;
+Recati allo [[schedario]] per scoprire chi siano Marco Freschini, Martino Ravanelli, Claudio Lodigiani e Gerry Rosso. Oppure [[ripensa alla telefonata]]. {
+
+(if: $m) [(print: $cs2)]
+
+(display: &quot;piepagina&quot;) }</tw-passagedata><tw-passagedata pid="3" name="schedario" tags="testo_nero sfondo_sfumato4" position="1600,650" size="100,100">&lt;img src=&#39;res1/schedario.jpg&#39; class=&#39;full&#39; alt=&#39;immagine&#39;&gt;
 
 ## Nello schedario
  \
@@ -234,18 +236,17 @@ Dopo ore di lavoro, riesci giusto a ottenere i numeri di telefono dei quattro so
 * [[interroga Claudio Lodigiani]] 
 * [[interroga Marco Freschini]] 
 * [[interroga Martino Ravanelli]] 
-* [[interroga Gerry Rosso]] ] \
- \
-(set: $schedario to true) \
- \
-(if: $m) [(print: $cs2)] \
- \
-(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="4" name="frontespizio" tags="testo_bianco sfondo_sfumato1" position="926.6666666666666,650" size="100,100">
+* [[interroga Gerry Rosso]] ] {
+
+(set: $schedario to true)
+
+(if: $m) [(print: $cs2)]
+
+(display: &quot;piepagina&quot;) }</tw-passagedata><tw-passagedata pid="4" name="frontespizio" tags="testo_bianco sfondo_sfumato1" position="925,650" size="100,100">
 #Il furto dell’Hayez
 ###//Una storia di investigazione,&lt;br&gt;basata sulla scienza dei dati//
-#### //Versione 27-05-2022//
 
-&lt;img src=&#39;res1/bacio.jpg&#39; class=&#39;center&#39; width=&#39;600&#39; alt=&#39;immagine&#39;&gt;
+&lt;img src=&#39;res1/bacio.jpg&#39; class=&#39;full&#39; alt=&#39;immagine&#39;&gt;
 
 Questo che hai appena aperto è un &#39;&#39;libro-game digitale&#39;&#39;, il cui racconto è sviluppato secondo i canoni classici del genere “giallo”. In questo gioco il protagonista sei tu: un’investigatrice / un investigatore che ha un caso da risolvere e per riuscirci dovrai trovare la soluzione dei problemi che nel corso dell’indagine ti si presenteranno.
 
@@ -260,23 +261,24 @@ Prima di cominciare con il racconto, rispondi per favore a qualche domanda per p
 
 ---
 //[[Qualche informazione-&gt;credits]] su questo gioco e chi l’ha realizzato.//
- \
-(set: $schedario to false) \
-(set: $interrogatori to (ds:)) \
-(set: $poligrafo to false) \
-(set: $poligrafo_Freschini to false) \
- \
-(if: $nome is &quot;&quot;) [(set: $nome to &quot;Alex&quot;)] \
-(if: $cognome is &quot;&quot;) [(set: $cognome to &quot;Bianchi&quot;)] \
- \
-(live: 0.2s)[(if: $tipo is &quot;organizzata/o e razionale&quot;) [(set: $t to &quot;org&quot;)] \
-(else:) [(set: $t to &quot;cor&quot;)]] \
- \
-(live: 0.2s)[(if: $genere is &quot;maschile&quot;) [(set: $g to &quot;o&quot;)] \
-(else:) [(set: $g to &quot;a&quot;)]] \
- \
-(live: 0.2s)[(if: $musica is &quot;si&quot;) [(set: $m to true)] \
-(else:) [(set: $m to false)]]</tw-passagedata><tw-passagedata pid="5" name="leggi la scheda di Claudio Lodigiani" tags="sfondo_bianco testo_nero" position="1800,900" size="100,100">
+|piccolo&gt;[versione 24 maggio 2022] {
+
+(set: $schedario to false)
+(set: $interrogatori to (ds:))
+(set: $poligrafo to false)
+(set: $poligrafo_Freschini to false)
+
+(if: $nome is &quot;&quot;) [(set: $nome to &quot;Alex&quot;)]
+(if: $cognome is &quot;&quot;) [(set: $cognome to &quot;Bianchi&quot;)]
+
+(live: 0.2s)[(if: $tipo is &quot;organizzata/o e razionale&quot;) [(set: $t to &quot;org&quot;)]
+(else:) [(set: $t to &quot;cor&quot;)]]
+
+(live: 0.2s)[(if: $genere is &quot;maschile&quot;) [(set: $g to &quot;o&quot;)]
+(else:) [(set: $g to &quot;a&quot;)]]
+
+(live: 0.2s)[(if: $musica is &quot;si&quot;) [(set: $m to true)]
+(else:) [(set: $m to false)]] }</tw-passagedata><tw-passagedata pid="5" name="leggi la scheda di Claudio Lodigiani" tags="sfondo_bianco testo_nero" position="1800,900" size="100,100">
 ## Claudio Lodigiani
  \
 Decidi quindi di aprire la scheda di Claudio Lodigiani, per scoprire di chi si tratti. Ecco cosa ci trovi dentro. 
@@ -295,11 +297,11 @@ Decidi quindi di aprire la scheda di Claudio Lodigiani, per scoprire di chi si t
 ### Descrizione
 Claudio Lodigiani è un commerciante molto noto di una delle zone più vivaci di Milano. Il suo negozio, una volta un semplice studio di artigianato, negli anni si è trasformato in un centro pulsante di commerci di piccoli manufatti ideati e realizzati da Lodigiani stesso, che possiede manualità e creatività rare. Purtroppo, questa pare non essere l’unica attività di Lodigiani. Da qualche anno a questa parte, infatti, il talentuoso artigiano ha cominciato anche a smerciare prodotti d’arte di alta qualità ma anche di dubbia provenienza. Il dipartimento di polizia non è mai stato in grado di incastrarlo, ma si ritiene che ci sia proprio lui dietro al furto dei piccioni di vetro del Louvre dell&#39;estate 2019.]
 ---
-Ora, hai finito di leggere la scheda del sospettato e devi decidere come procedere. Se vuoi, [[interroga Claudio Lodigiani]], altrimenti puoi prima leggere la scheda di un altro sospettato tornando allo [[schedario]]. \
- \
-(if: $m) [(print: $cs3)] \
- \
-(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="6" name="leggi la scheda di Marco Freschini" tags="sfondo_bianco testo_nero" position="1800,750" size="100,100">
+Ora, hai finito di leggere la scheda del sospettato e devi decidere come procedere. Se vuoi, [[interroga Claudio Lodigiani]], altrimenti puoi prima leggere la scheda di un altro sospettato tornando allo [[schedario]]. {
+
+(if: $m) [(print: $cs3)]
+
+(display: &quot;piepagina&quot;) }</tw-passagedata><tw-passagedata pid="6" name="leggi la scheda di Marco Freschini" tags="sfondo_bianco testo_nero" position="1800,750" size="100,100">
 ## Marco Freschini
  \
 Decidi quindi di aprire la scheda di Marco Freschini, per scoprire di chi si tratti. Ecco cosa ci trovi dentro.
@@ -318,11 +320,11 @@ Decidi quindi di aprire la scheda di Marco Freschini, per scoprire di chi si tra
 ### Descrizione
 Freschini è stato per anni il preparatore atletico di una delle più famose squadre di calcio del panorama europeo, e ciò lo ha portato a viaggiare in aerei privati in tutta Europa. Per questa ragione, ha potuto affiancare alla sua professione iniziale quella di “fattorino” di opere d’arte di contrabbando, trafugando soprattutto reperti archeologici di piccole dimensioni. Questi venivano via via recapitati nelle diverse città europee quando Freschini si recava in esse per seguire la sua squadra. Questa attività parallela lo ha reso molto ricco, e il suo stile di vita era noto a molte persone: qualche anno fa, tutti i più lussuosi negozi di Parigi lo conoscevano per nome. Ciò ha ovviamente attirato l’attenzione delle forze dell’ordine, che hanno investigato su questa stranezza e lo hanno successivamente arrestato. Dopo un lungo periodo di detenzione, adesso Freschini vive a Milano, dove ha un piccolo studio di preparazione atletica in cui lavora con squadre giovanili. Al momento, pare che frequenti ancora certi ambienti loschi ma non si occupi che di piccoli lavoretti, per arrotondare.]
 ---
-Ora, hai finito di leggere la scheda del sospettato e devi decidere come procedere. Se vuoi, [[interroga Marco Freschini]], altrimenti puoi prima leggere la scheda di un altro sospettato tornando allo [[schedario]]. \
- \
-(if: $m) [(print: $cs3)] \
- \
-(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="7" name="leggi la scheda di Martino Ravanelli" tags="sfondo_bianco testo_nero" position="1800,600" size="100,100">
+Ora, hai finito di leggere la scheda del sospettato e devi decidere come procedere. Se vuoi, [[interroga Marco Freschini]], altrimenti puoi prima leggere la scheda di un altro sospettato tornando allo [[schedario]]. {
+
+(if: $m) [(print: $cs3)]
+
+(display: &quot;piepagina&quot;) }</tw-passagedata><tw-passagedata pid="7" name="leggi la scheda di Martino Ravanelli" tags="sfondo_bianco testo_nero" position="1800,600" size="100,100">
 ## Martino Ravanelli
  \
 Decidi quindi di aprire la scheda di Martino Ravanelli, per scoprire di chi si tratti. Ecco cosa ci trovi dentro.
@@ -341,11 +343,11 @@ Decidi quindi di aprire la scheda di Martino Ravanelli, per scoprire di chi si t
 ### Descrizione
 Martino Ravanelli è un noto geometra che lavora in una città ai margini dell’hinterland milanese. In altri ambienti, più loschi, è conosciuto anche per le sue grandi doti da falsario. Aver studiato disegno tecnico sin da giovane gli ha fornito uno straordinario occhio per la riproduzione di quadri originali. Si tratta però di una persona astuta: al momento è incensurato, e non siamo mai riusciti a trovarlo con le mani nel sacco. Ciò probabilmente deriva dalla sua principale occupazione, la riproduzione di opere di artisti emergenti, più difficili da identificare e tracciare. Si dice che abbia un leggendario fiuto per la scoperta di nuovi artisti. Inoltre, pare che abbia un giro di ottimi compratori, potenti e discreti, che lo aiutano ad agire sotto traccia e tenere un basso profilo.]
 ---
-Ora, hai finito di leggere la scheda del sospettato e devi decidere come procedere. Se vuoi, [[interroga Martino Ravanelli]], altrimenti puoi prima leggere la scheda di un altro sospettato tornando allo [[schedario]]. \
- \
-(if: $m) [(print: $cs3)] \
- \
-(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="8" name="leggi la scheda di Gerry Rosso" tags="sfondo_bianco testo_nero" position="1800,450" size="100,100">
+Ora, hai finito di leggere la scheda del sospettato e devi decidere come procedere. Se vuoi, [[interroga Martino Ravanelli]], altrimenti puoi prima leggere la scheda di un altro sospettato tornando allo [[schedario]]. {
+
+(if: $m) [(print: $cs3)]
+
+(display: &quot;piepagina&quot;) }</tw-passagedata><tw-passagedata pid="8" name="leggi la scheda di Gerry Rosso" tags="sfondo_bianco testo_nero" position="1800,450" size="100,100">
 ## Gerry Rosso
  \
 Decidi quindi di aprire la scheda di Gerry Rosso, per scoprire di chi si tratti. Ecco cosa ci trovi dentro.
@@ -364,11 +366,11 @@ Decidi quindi di aprire la scheda di Gerry Rosso, per scoprire di chi si tratti.
 ### Descrizione
 La famiglia del commendator Rosso gestisce da tre generazioni una nota azienda di impianti di riciclo di plastica, e ha una lunga storia di collezione di opere d’arte di grande valore. Rosso, in particolare, ha ereditato dal padre il senso per gli affari, e dalla madre un grande gusto per i classici della pittura e per il design di interni. Con la crisi del 2008, l’attività dell’azienda si è ridimensionata. Per mantenere il proprio stile di vita, Rosso ha quindi iniziato non solo a collezionare opere d’arte ma anche a operare come ricettatore, rivendendo in tutta Italia opere d’arte usando come pretesto un lavoro che lo porta a viaggiare molto. Di fatto, è in perpetuo movimento fra Milano e Roma. Questa vita itinerante lo ha peraltro reso un guidatore provetto. Arrestato nel 2019 per ricettazione di un lotto di piccoli pezzi d’arte etrusca, al momento sta affrontando un processo. Da allora, ha aperto una piccola società satellite che si occupa in modo legale di compravendita di opere d’arte, ma non si hanno segnali definitivi del fatto che abbia definitivamente smesso di operare fuori dai confini della legalità.]
 ---
-Ora, hai finito di leggere la scheda del sospettato e devi decidere come procedere. Se vuoi, [[interroga Gerry Rosso]], altrimenti puoi prima leggere la scheda di un altro sospettato tornando allo [[schedario]]. \
- \
-(if: $m) [(print: $cs3)] \
- \
-(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="9" name="interroga Gerry Rosso" tags="testo_nero sfondo_sfumato3" position="1950,450" size="100,100">&lt;img src=&#39;res1/interr.jpg&#39; class=&#39;center&#39; width=&#39;800&#39; alt=&#39;immagine&#39;&gt;
+Ora, hai finito di leggere la scheda del sospettato e devi decidere come procedere. Se vuoi, [[interroga Gerry Rosso]], altrimenti puoi prima leggere la scheda di un altro sospettato tornando allo [[schedario]]. {
+
+(if: $m) [(print: $cs3)]
+
+(display: &quot;piepagina&quot;) }</tw-passagedata><tw-passagedata pid="9" name="interroga Gerry Rosso" tags="testo_nero sfondo_sfumato3" position="1950,450" size="100,100">&lt;img src=&#39;res1/interr.jpg&#39; class=&#39;full&#39; alt=&#39;immagine&#39;&gt;
 
 ## L’interrogatorio di Gerry Rosso
  \
@@ -404,11 +406,11 @@ Potresti chiedere un aiuto alla tua amica Rebecca, per capire (link: &quot;in ch
 (set: $interrogatori to it + (ds: &quot;Rosso&quot;)) \
  \
 (if: $interrogatori&#39;s length &gt;= $min_interr) [D&#39;altra parte, hai già interrogato vari sospettati: se credi di avere di fronte il colpevole, [[accusa Rosso]].] \
-(else:) [Il commissario è stato comunque chiaro: prima di accusare qualcuno, è necessario aver interrogato anche qualche altro sospettato!] \
- \
-(if: $m) [(print: $cs4)] \
- \
-(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="10" name="interroga Martino Ravanelli" tags="testo_nero sfondo_sfumato3" position="1950,600" size="100,100">&lt;img src=&#39;res1/interr.jpg&#39; class=&#39;center&#39; width=&#39;800&#39; alt=&#39;immagine&#39;&gt;
+(else:) [Il commissario è stato comunque chiaro: prima di accusare qualcuno, è necessario aver interrogato anche qualche altro sospettato!] {
+
+(if: $m) [(print: $cs4)]
+
+(display: &quot;piepagina&quot;) }</tw-passagedata><tw-passagedata pid="10" name="interroga Martino Ravanelli" tags="testo_nero sfondo_sfumato3" position="1950,600" size="100,100">&lt;img src=&#39;res1/interr.jpg&#39; class=&#39;full&#39; alt=&#39;immagine&#39;&gt;
 
 ## L’interrogatorio di Martino Ravanelli
  \
@@ -431,11 +433,11 @@ Se vuoi interrogare un altro sospettato, [[torna allo schedario-&gt;schedario]].
 (set: $interrogatori to it + (ds: &quot;Ravanelli&quot;)) \
  \
 (if: $interrogatori&#39;s length &gt;= $min_interr) [A questo punto, se credi che quello che hai interrogato sia il colpevole, [[accusa Ravanelli]].] \
-(else:) [Ricordi comunque la raccomandazione del commissario: prima di accusare qualcuno, è necessario aver interrogato anche qualche altro sospettato!] \
- \
-(if: $m) [(print: $cs4)] \
- \
-(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="11" name="interroga Marco Freschini" tags="testo_nero sfondo_sfumato3" position="1950,750" size="100,100">&lt;img src=&#39;res1/interr.jpg&#39; class=&#39;center&#39; width=&#39;800&#39; alt=&#39;immagine&#39;&gt;
+(else:) [Ricordi comunque la raccomandazione del commissario: prima di accusare qualcuno, è necessario aver interrogato anche qualche altro sospettato!] {
+
+(if: $m) [(print: $cs4)]
+
+(display: &quot;piepagina&quot;) }</tw-passagedata><tw-passagedata pid="11" name="interroga Marco Freschini" tags="testo_nero sfondo_sfumato3" position="1950,750" size="100,100">&lt;img src=&#39;res1/interr.jpg&#39; class=&#39;full&#39; alt=&#39;immagine&#39;&gt;
 
 ## L’interrogatorio di Marco Freschini
  \
@@ -460,11 +462,11 @@ Per ora pare che tu possa solo [[tornare allo schedario|schedario]] oppure [[ril
 (set: $interrogatori to it + (ds: &quot;Freschini&quot;)) \
  \
 (if: $interrogatori&#39;s length &gt;= $min_interr) [Hai già interrogato vari sospettati: se credi di avere di fronte il colpevole, [[accusa Freschini]].] \
-(else:) [In ogni caso, il commissario è stato chiaro: prima di accusare qualcuno, è necessario aver interrogato anche qualche altro sospettato!] \
- \
-(if: $m) [(print: $cs4)] \
- \
-(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="12" name="interroga Claudio Lodigiani" tags="testo_nero sfondo_sfumato3" position="1950,900" size="100,100">&lt;img src=&#39;res1/interr.jpg&#39; class=&#39;center&#39; width=&#39;800&#39; alt=&#39;immagine&#39;&gt;
+(else:) [In ogni caso, il commissario è stato chiaro: prima di accusare qualcuno, è necessario aver interrogato anche qualche altro sospettato!] {
+
+(if: $m) [(print: $cs4)]
+
+(display: &quot;piepagina&quot;) }</tw-passagedata><tw-passagedata pid="12" name="interroga Claudio Lodigiani" tags="testo_nero sfondo_sfumato3" position="1950,900" size="100,100">&lt;img src=&#39;res1/interr.jpg&#39; class=&#39;full&#39; alt=&#39;immagine&#39;&gt;
 
 ## L’interrogatorio di Claudio Lodigiani
  \
@@ -481,11 +483,11 @@ Se concordi con la proposta di Claudio Lodigiani e vuoi fidarti della strumentaz
 (set: $interrogatori to it + (ds: &quot;Lodigiani&quot;)) \
  \
 (if: $interrogatori&#39;s length &gt;= $min_interr) [Hai già interrogato vari sospettati: se credi di avere di fronte il colpevole, [[accusa Lodigiani]].] \
-(else:) [In ogni caso, il commissario è stato chiaro: prima di accusare qualcuno, è necessario aver interrogato anche qualche altro sospettato!] \
- \
-(if: $m) [(print: $cs4)] \
- \
-(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="13" name="accusa Lodigiani" tags="sfondo_nero testo_bianco" position="2275,900" size="100,100">&lt;img src=&quot;res1/error.png&quot; width=&quot;400&quot; height=&quot;90&quot;&gt;
+(else:) [In ogni caso, il commissario è stato chiaro: prima di accusare qualcuno, è necessario aver interrogato anche qualche altro sospettato!] {
+
+(if: $m) [(print: $cs4)]
+
+(display: &quot;piepagina&quot;) }</tw-passagedata><tw-passagedata pid="13" name="accusa Lodigiani" tags="sfondo_nero testo_bianco" position="2275,900" size="100,100">&lt;img src=&quot;res1/error.png&quot; width=&quot;400&quot; height=&quot;90&quot;&gt;
 
 ## Hai accusato Lodigiani... che però non c’entra nulla!
 
@@ -496,11 +498,11 @@ Nonostante il tuo ottimo lavoro, riconosciuto anche dal tuo capo, alla fine non 
 Per te, adesso, si apre una nuova attesa, in vista della prossima indagine...  
 ... oppure, puoi ricominciare la tua investigazione (//per capirci: è come se prendessi la macchina del tempo e tornassi a qualche minuto fa...!//), e (link: &quot;vedere se con un nuovo tentativo sarai più abile!&quot;)[(goto: &quot;schedario&quot;)]
 
-&lt;img src=&#39;res1/interr.jpg&#39; height=&#39;400&#39; alt=&#39;immagine&#39;&gt;\
-\
-(if: $m) [(print: $cs5)] \
- \
-(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="14" name="accusa Freschini" tags="testo_bianco sfondo_nero" position="2275,750" size="100,100">
+&lt;img src=&#39;res1/interr.jpg&#39; class=&#39;full&#39; alt=&#39;immagine&#39;&gt; {
+
+(if: $m) [(print: $cs5)]
+
+(display: &quot;piepagina&quot;) }</tw-passagedata><tw-passagedata pid="14" name="accusa Freschini" tags="testo_bianco sfondo_nero" position="2275,750" size="100,100">
 ## Hai accusato Freschini dunque!
 
 Quando hai chiesto a Freschini se fosse a conoscenza di qualunque informazione utile a ritrovare il quadro, la serie storica generata dal poligrafo ha avuto una forte oscillazione, sintomo che la risposta alla domanda ha causato stress nell’interrogato. Il che, dato il principio di funzionamento della macchina della verità, significa che ha mentito.
@@ -521,11 +523,11 @@ Ringrazi Freschini, ma sei indecis$g su cosa fare. Dovresti accusarlo comunque? 
 
 Freschini annuisce con un cenno, si alza e, la giacca ancora sotto braccio, esce senza neanche rivestirsi. Ora, finalmente, hai qualche informazione in più. Puoi dunque [[tornare allo schedario-&gt;schedario]] per proseguire con le tue indagini.
 
-&lt;img src=&#39;res1/interr.jpg&#39; height=&#39;400&#39; alt=&#39;immagine&#39;&gt;\
-\
-(if: $m) [(print: $cs5)] \
- \
-(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="15" name="accusa Ravanelli" tags="testo_nero sfondo_sfumato2" position="2275,600" size="100,100">
+&lt;img src=&#39;res1/interr.jpg&#39; class=&#39;full&#39; alt=&#39;immagine&#39;&gt; {
+
+(if: $m) [(print: $cs5)]
+
+(display: &quot;piepagina&quot;) }</tw-passagedata><tw-passagedata pid="15" name="accusa Ravanelli" tags="testo_nero sfondo_sfumato2" position="2275,600" size="100,100">
 ## Hai accusato Ravanelli, dunque!
 
 Messo alle strette, di fronte all’evidenza di un alibi che non regge, Martino Ravanelli crolla e confessa tutto. “Va bene, basta! Lo ammetto! Sono stato io!”
@@ -555,11 +557,11 @@ Nonostante il tuo ottimo lavoro, riconosciuto anche dal tuo capo, alla fine non 
 Per te, adesso, si apre una nuova attesa, in vista della prossima indagine...  
 ... oppure, puoi ricominciare la tua investigazione (//per capirci: è come se prendessi la macchina del tempo e tornassi a qualche minuto fa...!//), e (link: &quot;vedere se con un nuovo tentativo sarai più abile!&quot;)[(goto: &quot;schedario&quot;)]
 
-&lt;img src=&#39;res1/interr.jpg&#39; height=&#39;400&#39; alt=&#39;immagine&#39;&gt;\
-\
-(if: $m) [(print: $cs5)] \
- \
-(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="17" name="serie storiche" tags="testo_nero sfondo_bianco" position="3350,1015" size="100,100">
+&lt;img src=&#39;res1/interr.jpg&#39; class=&#39;full&#39; alt=&#39;immagine&#39;&gt; {
+
+(if: $m) [(print: $cs5)]
+
+(display: &quot;piepagina&quot;) }</tw-passagedata><tw-passagedata pid="17" name="serie storiche" tags="testo_nero sfondo_bianco" position="3525,750" size="100,100">
 ## Serie storiche
 \
 &lt;img src=&quot;res1/poliLodigiani.png&quot; height=&quot;400&quot;&gt;
@@ -575,7 +577,7 @@ E quindi, perché un grande esperto di serie storiche diventerebbe molto ricco? 
 Capisci adesso perché le serie storiche sono così importanti?
 
 (set: $ultima_pag to (history:)&#39;s last)
-(link: &quot;Torna indietro&quot;)[(goto: $ultima_pag)]</tw-passagedata><tw-passagedata pid="18" name="istogrammi" tags="testo_nero sfondo_bianco" position="3350,535" size="100,100">
+(link: &quot;Torna indietro&quot;)[(goto: $ultima_pag)]</tw-passagedata><tw-passagedata pid="18" name="istogrammi" tags="testo_nero sfondo_bianco" position="3350,700" size="100,100">
 ## Istogrammi
 \
 &lt;img src=&quot;res1/graf1.png&quot; height=&quot;300&quot;&gt;
@@ -601,7 +603,7 @@ Si può quindi valutare la numerosità di ciascuna categoria con un semplice col
 
 La mappa si presenta così:
 
-&lt;img src=&quot;res1/mappa.png&quot; width=&quot;600&quot;&gt;
+&lt;img src=&#39;res1/mappa.png&#39; class=&#39;full&#39;&gt;
 
 Hai appena guardato la legenda della mappa, secondo cui di ogni simbolo, cerchio o triangolo:
 * la dimensione è proporzionale alla durata del tempo passato nel luogo localizzato mediante GPS;
@@ -621,11 +623,11 @@ Scegli quale luogo vuoi perquisire (dropdown: 2bind $direzione, &quot;1&quot;, &
 {(click: &quot;vai a investigare&quot;)[
 (if: $direzione is &quot;5&quot;) [(go-to: &quot;Direzione corretta&quot;)]
 (else:) [(go-to: &quot;Direzione sbagliata&quot;)]
-]}
- \
-(if: $m) [(print: $cs6)] \
- \
-(display: &quot;piepagina&quot;) [[...-&gt;schedario]]</tw-passagedata><tw-passagedata pid="20" name="visualizzazione di dati" tags="testo_nero sfondo_bianco" position="3350,475" size="100,100">
+]} {
+
+(if: $m) [(print: $cs6)]
+
+(display: &quot;piepagina&quot;) }</tw-passagedata><tw-passagedata pid="20" name="visualizzazione di dati" tags="testo_nero sfondo_bianco" position="3350,575" size="100,100">
 ## Visualizzazione di dati
 \
 Guarda la tabella qui in basso, un esempio possibile fra i milioni che si possono trovare con una veloce ricerca sul web. Prova a leggerla, giusto qualche secondo. 
@@ -656,11 +658,11 @@ La ricerca ha dato i suoi frutti. Seguendo la traccia GPS, il tuo navigatore ti 
 
 Dopo esserti domandat$g come abbia fatto Ravanelli a entrare nella villa senza essere scoperto, e a scavalcare la protezione, ecco arrivare un’intuizione: la siepe, così folta e spessa, è il luogo ideale per nascondere un quadro, specialmente se questo è ripiegato con attenzione in un tubo. Informi i proprietari del problema e ti armi di pazienza, perlustrando centimetro per centimetro l’intero perimetro della villa, rovistando con pazienza fra i rami della siepe. Sei quasi arrivat$g alla fine e non hai trovato ancora nulla. Ma, negli ultimi metri di siepe, la tua mano tocca un oggetto strano. 
 
-[[Guarda l’oggetto-&gt;Guarda l&#39;oggetto]], oppure se ritieni che sia una pista cieca [[torna alla mappa-&gt;la mappa]]. \
-\
-(if: $m) [(print: $cs6)] \
- \
-(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="22" name="Direzione sbagliata" tags="sfondo_sfumato2 testo_nero" position="2700,450" size="100,100">
+[[Guarda l’oggetto-&gt;Guarda l&#39;oggetto]], oppure se ritieni che sia una pista cieca [[torna alla mappa-&gt;la mappa]]. {
+
+(if: $m) [(print: $cs6)]
+
+(display: &quot;piepagina&quot;) }</tw-passagedata><tw-passagedata pid="22" name="Direzione sbagliata" tags="sfondo_sfumato2 testo_nero" position="2700,450" size="100,100">
 ## ... e dunque?
 
 Avendo ipotizzato quale sia la località in cui è nascosto il quadro, ti ci rechi subito a perdifiato, le sirene spiegate. Una volta arrivata, perlustri l’area con attenzione, senza dimenticare alcun angolo, né dando nulla per scontato.
@@ -670,11 +672,11 @@ Purtroppo dopo ore di ricerche, arrivi alla conclusione: hai scelto il posto sba
 Ma dove hai sbagliato? Potresti fare una rapida telefonata alla tua amica Rebecca e (link: &quot;chiederle un parere&quot;)[(goto: &quot;visualizzazione di dati&quot;)].
 
 Per te, adesso, si apre una nuova attesa, in vista della prossima indagine...  
-... oppure, puoi provare tornando a guardare la mappa (//per capirci: è come se prendessi la macchina del tempo e tornassi a quando eri ancora in commissariato...!//), e (link: &quot;vedere se con un nuovo tentativo sarai più abile!&quot;)[(goto: &quot;la mappa&quot;)] \
-\
-(if: $m) [(print: $cs5)] \
- \
-(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="23" name="Guarda l&#39;oggetto" tags="testo_nero sfondo_sfumato2" position="2875,600" size="100,100">
+... oppure, puoi provare tornando a guardare la mappa (//per capirci: è come se prendessi la macchina del tempo e tornassi a quando eri ancora in commissariato...!//), e (link: &quot;vedere se con un nuovo tentativo sarai più abile!&quot;)[(goto: &quot;la mappa&quot;)] {
+
+(if: $m) [(print: $cs5)]
+
+(display: &quot;piepagina&quot;) }</tw-passagedata><tw-passagedata pid="23" name="Guarda l&#39;oggetto" tags="testo_nero sfondo_sfumato2" position="2875,600" size="100,100">
 ## Eccoci...
 
 È il contenitore di un quadro!
@@ -683,11 +685,11 @@ Lo apri velocemente, con impazienza, ed ecco che dal tubo appare &#39;&#39;Il Ba
 
 Prendi il telefono e chiami il commissario Tomba: “Capo, l’ho trovato!” In breve il commissario è lì con te, e con lui poco dopo vi raggiungono anche altri colleghi e i media, che trasmettono in diretta il ritrovamento del quadro: che successo! 
 
-&lt;img src=&quot;res1/bacio2.webp&quot; width=&quot;800&quot; height=&quot;400&quot;&gt;
+&lt;img src=&#39;res1/bacio2.webp&#39; class=&#39;full&#39;&gt;
 
 ### Complimenti $nome $cognome, il caso è risolto!
 
-&lt;img src=&quot;res1/missioncomplete.png&quot; width=&quot;800&quot; height=&quot;180&quot;&gt;
+&lt;img src=&#39;res1/missioncomplete.png&#39; class=&#39;full&#39;&gt;
 
 ---
 
@@ -699,10 +701,9 @@ oppure puoi (link: &quot;scoprire che cosa hai imparato giocando (per esempio, p
 
 o anche (link: &quot;scoprire curiosità legate al gioco (per esempio, come ingannare la macchina della verità)&quot;)[(goto: &quot;curiosità&quot;)].
 
-Oppure, puoi andare (link-rerun: &quot;avanti con il secondo capitolo o compilare il questionario per darci un tuo parere su questo gioco&quot;)[(open-url:&quot;https://flipfly.it/gale/&quot;)].
+Oppure, puoi andare (link-rerun: &quot;avanti con il secondo capitolo o compilare il questionario per darci un tuo parere su questo gioco&quot;)[(open-url:&quot;https://flipfly.it/gale/&quot;)]. ] {
 
-\
-(if: $m) [(print: $cs7)]</tw-passagedata><tw-passagedata pid="24" name="poligrafo a Lodigiani" tags="testo_nero sfondo_sfumato3" position="2100,900" size="100,100">&lt;img src=&#39;res1/interr.jpg&#39; height=&#39;400&#39; alt=&#39;immagine&#39;&gt;
+(if: $m) [(print: $cs7)] }</tw-passagedata><tw-passagedata pid="24" name="poligrafo a Lodigiani" tags="testo_nero sfondo_sfumato3" position="2100,900" size="100,100">&lt;img src=&#39;res1/interr.jpg&#39; class=&#39;full&#39; alt=&#39;immagine&#39;&gt;
 
 ## La seconda parte dell’interrogatorio di Claudio Lodigiani
 
@@ -731,7 +732,7 @@ A questo punto, fai a Lodigiani tre domande:
 * Sei a conoscenza di qualunque informazione che ci possa essere utile a ritrovare il quadro?
 
 Come avevi immaginato, a tutte e tre le tue domande Lodigiani risponde negativamente, e questo è il risultato prodotto dal poligrafo:
-&lt;img src=&quot;res1/poliLodigiani.png&quot; height=&quot;400&quot;&gt;
+&lt;img src=&quot;res1/poliLodigiani.png&quot; class=&quot;full&quot;&gt;
 in cui ogni linea verticale nera corrisponde al momento in cui una delle tre domande è stata posta, la linea blu per la respirazione toracica, la linea verde per la sudorazione, e la linea rossa per l’intensità dell’attività cardiaca.
 
 In base alla lettura del poligrafo, ora hai abbastanza informazioni per prendere una decisione. 
@@ -739,13 +740,13 @@ In base alla lettura del poligrafo, ora hai abbastanza informazioni per prendere
 Vai allo [[schedario]] per tornare indietro e interrogare un altro sospettato. (if: $t is &quot;org&quot;) [Se invece vuoi riguardare le informazioni sull’interrogato, lascia per qualche istante la sala dell’interrogatorio e [[rileggi la scheda di Claudio Lodigiani-&gt;leggi la scheda di Claudio Lodigiani]].]  
 
 (if: $interrogatori&#39;s length &gt;= $min_interr) [Hai già interrogato vari sospettati: se credi di avere di fronte il colpevole, [[accusa Lodigiani]].] \
-(else:) [In ogni caso, il commissario è stato chiaro: prima di accusare qualcuno, è necessario aver interrogato anche qualche altro sospettato!] \
- \
-(set: $poligrafo to true) \
- \
-(if: $m) [(print: $cs4)] \
- \
-(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="25" name="poligrafo a Freschini" tags="testo_nero sfondo_sfumato3" position="2100,750" size="100,100">&lt;img src=&#39;res1/interr.jpg&#39; height=&#39;400&#39; alt=&#39;immagine&#39;&gt;
+(else:) [In ogni caso, il commissario è stato chiaro: prima di accusare qualcuno, è necessario aver interrogato anche qualche altro sospettato!] {
+
+(set: $poligrafo to true)
+
+(if: $m) [(print: $cs4)]
+
+(display: &quot;piepagina&quot;) }</tw-passagedata><tw-passagedata pid="25" name="poligrafo a Freschini" tags="testo_nero sfondo_sfumato3" position="2100,750" size="100,100">&lt;img src=&#39;res1/interr.jpg&#39; class=&#39;full&#39; alt=&#39;immagine&#39;&gt;
 
 ## La seconda parte dell’interrogatorio di Marco Freschini
 
@@ -768,7 +769,7 @@ Ti metti quindi all’opera. Colleghi Freschini alla macchina, e fai un po’ di
 
 Ecco quello che si è formato sotto i tuoi occhi sullo schermo del poligrafo:
 
-&lt;img src=&quot;res1/poliFreschini.png&quot; height=&quot;400&quot;&gt;
+&lt;img src=&#39;res1/poliFreschini.png&#39; class=&#39;full&#39;&gt;
 
 in cui, ti ricordi, ogni linea verticale trattaggiata corrisponde al momento in cui una delle tre domande è stata posta.
 
@@ -777,13 +778,13 @@ In base alla lettura del poligrafo, ora hai abbastanza informazioni per prendere
 Vai allo [[schedario]] per tornare a interrogare un altro sospettato(if: $t is &quot;org&quot;) [ oppure, se vuoi rivedere le informazioni sull’interrogato, lascia per un attimo la sala dell’interrogatorio e [[rileggi la scheda di Marco Freschini-&gt;leggi la scheda di Marco Freschini]]].
 
 (if: $interrogatori&#39;s length &gt;= $min_interr) [Hai già interrogato vari sospettati: se credi di avere di fronte il colpevole, [[accusa Freschini]].] \
-(else:) [In ogni caso, il commissario è stato chiaro: prima di accusare qualcuno, è necessario aver interrogato anche qualche altro sospettato!] \
- \
-(set: $poligrafo_Freschini to true) \
- \
-(if: $m) [(print: $cs4)] \
- \
-(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="26" name="curiosità" tags="testo_nero sfondo_bianco" position="3125,775" size="100,100">
+(else:) [In ogni caso, il commissario è stato chiaro: prima di accusare qualcuno, è necessario aver interrogato anche qualche altro sospettato!] {
+
+(set: $poligrafo_Freschini to true)
+
+(if: $m) [(print: $cs4)]
+
+(display: &quot;piepagina&quot;) }</tw-passagedata><tw-passagedata pid="26" name="curiosità" tags="testo_nero sfondo_bianco" position="3125,775" size="100,100">
 ## Curiosità
 
 Adesso che hai completato il gioco, ti vogliamo lasciare con qualche informazione aggiuntiva, che ti possa aiutare a capire come hai preso le decisioni che hai preso, quale sia stata la loro bontà, e se nel mondo reale avrebbe avuto senso comportarsi in questo modo.
@@ -837,7 +838,7 @@ Ti proponiamo una spiegazione semplice ma, speriamo, chiara e utile su:
 * [[serie storiche]] 
 * [[risultati dei test]]
 
-Quando vuoi, puoi (link: &quot;tornare all’ultima pagina del gioco&quot;)[(goto: &quot;Guarda l&#39;oggetto&quot;)].</tw-passagedata><tw-passagedata pid="28" name="campioni di dati" tags="testo_nero sfondo_bianco" position="3348.3333333333335,655" size="100,100">
+Quando vuoi, puoi (link: &quot;tornare all’ultima pagina del gioco&quot;)[(goto: &quot;Guarda l&#39;oggetto&quot;)].</tw-passagedata><tw-passagedata pid="28" name="campioni di dati" tags="testo_nero sfondo_bianco" position="3350,825" size="100,100">
 ## Campioni di dati
 \
 Negli ultimi anni si è sentita spesso, ripetuta in diverse forme, una frase che suona più o meno in questo modo: “I dati sono il nuovo petrolio”. Si tratta di un’affermazione di Clive Humby, un imprenditore e matematico britannico, che allude all’idea che, come accade per il petrolio, i dati siano la base per produrre cose diverse, e più precisamente informazioni diverse, ma, come per il petrolio, siano davvero utili solo quando sono stati trasformati, in informazione appunto.
@@ -858,7 +859,7 @@ Questo sottoinsieme è detto &quot;campione&quot;, e l&#39;operazione di selezio
 Un ultimissima nota riguardo ai campioni. Quelli più attenti di voi potranno aver notato che, se il campione non corrisponde con la popolazione &quot;campionata&quot;, allora si potrebbero avere degli errori. Questo è, ovviamente, vero. Dato che il più delle volte è impossibile campionare l&#39;intera popolazione, ci sono delle tecniche numeriche che collegano la numerosità del campione all&#39;errore potenziale, in modo da sapere quante persone intervistare (o, in modo più generico, quanti dati raccogliere) prima di avere un risultato sufficientemente affidabile.
 
 (set: $ultima_pag to (history:)&#39;s last)
-(link: &quot;Torna indietro&quot;)[(goto: $ultima_pag)]</tw-passagedata><tw-passagedata pid="29" name="statistiche di un campione" tags="testo_nero sfondo_bianco" position="3350,775" size="100,100">
+(link: &quot;Torna indietro&quot;)[(goto: $ultima_pag)]</tw-passagedata><tw-passagedata pid="29" name="statistiche di un campione" tags="testo_nero sfondo_bianco" position="3525,500" size="100,100">
 ## Statistiche di un campione
 \
 Tutti sanno che la statistica è una branca della matematica e uno dei pilastri della scienza dei dati. Ciò nonostante, il significato di &quot;statistica&quot; è spesso vago, almeno per i non addetti ai lavori. Per provare a capire che cosa ciò voglia dire, facciamo un esempio pratico. Mettiamoci nei panni del proprietario di un ristorante, che intenda migliorare i risultati economici della propria attività. Come prima cosa, dovrà ottenere delle informazioni sullo stato attuale del ristorante, come per esempio sapere quanto ha guadagnato complessivamente nell&#39;ultimo anno (il fatturato), quali sono i piatti più venduti fra quelli in menù e quante persone vengono nel locale ogni sera, magari distinguendo fra weekend e le serate infrasettimanali. Verosimilmente, questi sono dati che si possono ottenere a partire dagli scontrini emessi nelle settimane e nei mesi precedenti, oppure da un software gestionale che contenga questi dati. In entrambi i casi, risulta intuitivo che per prendere decisioni a partire da questi dati bisogna avere degli strumenti per usarli. Mettersi a un tavolo pieno di scontrini è un&#39;attività che da sola non genera alcuna informazione, anche se poi questi hanno al loro interno dei dati potenzialmente utili. Bisogna trovare delle tecniche che consentano di &quot;riassumere&quot; questi dati. Ed eccoci arrivati al significato di statistica: fare una statistica di dati vuole dire farne appunto un riassunto. A questo punto, dovrebbe essere chiaro anche la ragione per cui si fanno delle statistiche: per riuscire a carpire i segreti celati da un insieme di dati in apparenza confuso.
@@ -874,11 +875,11 @@ La statistica più famosa, e probabilmente anche la più utilizzata, è la media
 |preformat&gt;[“Commissario, non mi interrompa e soprattutto non provi a rintracciarmi. Il quadro rubato, signor Tomba, non è un problema normale. Immagino che lei non sappia dove andare a parare. Non le posso dire chi sia stato, se lo trovasse troppo in fretta poi qualcuno comincerebbe a fare domande. Però le posso dare un suggerimento: lo prenda come un piccolo aiuto da parte di un amico, che ha interesse quanto lei che la faccenda si risolva per il meglio. Al Bar Camillo, nella periferia nord, si trovano spesso antiquari che affiancano alle attività legali furto e contrabbando, basisti che devono smerciare quadri e piccole sculture, ladri d’arte e saccheggiatori di siti archeologici. Mi è giunta voce che quattro di loro nelle ultime settimane siano stati stranamente assenti: Claudio Lodigiani, Marco Freschini, Martino Ravanelli e Gerry Rosso. Magari, uno di questi era impegnato a preparare il colpo. E magari è passato da Brera il giorno prima del furto a fare un ultimo sopralluogo e controllare se la via di fuga che si era preparato fosse libera. Stia bene, commissario.”] \
 ] \
 (else:)[Se fossi stat$g (if: $g is &quot;o&quot;)[un investigatore organizzato](else:)[un’investigatrice organizzata] e razionale, avresti trascritto la telefonata... Hai certamente altre doti, ma ora ti rendi conto che le parole ti stanno sfuggendo dalla mente. Meno male che almeno ti ricordi i quattro nomi, e con un po’ di lavoro ne puoi recuperare i contatti.]
-Ora, è davvero il momento giusto per andare allo [[schedario]]. \
- \
-(if: $m) [(print: $cs2)] \
- \
-(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="31" name="prendere la bicicletta" tags="testo_bianco sfondo_sfumato0" position="1200,775" size="100,100">&lt;img src=&#39;res1/bici.jpg&#39; class=&#39;center&#39; width=&#39;600&#39; alt=&#39;immagine&#39;&gt;
+Ora, è davvero il momento giusto per andare allo [[schedario]]. {
+
+(if: $m) [(print: $cs2)]
+
+(display: &quot;piepagina&quot;) }</tw-passagedata><tw-passagedata pid="31" name="prendere la bicicletta" tags="testo_bianco sfondo_sfumato0" position="1200,775" size="100,100">&lt;img src=&#39;res1/bici.jpg&#39; class=&#39;full&#39; alt=&#39;immagine&#39;&gt;
 
 ##In viaggio in bicicletta...
  \
@@ -888,7 +889,7 @@ Ti ricordi infatti che una sera la tua amica Rebecca, con cui chiacchieri spesso
 
 Inserisci la combinazione nel riquadro sottostante. Quando avrai inserito precisamente i quattro numeri della combinazione corretta, potrai dunque aprire il lucchetto della tua bicicletta e proseguire.
 
-(input-box: bind $pswd_lucchetto, &quot;====X====&quot;, 1)
+(input-box: bind $pswd_lucchetto, &quot;===X===&quot;, 1)
 
 (live: 1s)[(if: $pswd_lucchetto is &quot;1807&quot;) [Meno male che ti sei ricordat$g la combinazione...
 
@@ -899,11 +900,13 @@ Inserisci la combinazione nel riquadro sottostante. Quando avrai inserito precis
 Chissà se verrà fuori qualcosa di utile... ma ora stai [[arrivando in ufficio]].] \
 (else:) [Apri il lucchetto, inforchi la bicicletta e vai!
 
-La pedalata è stata piacevole, e ti ha consentito di cominciare a riordinare le idee, ora che stai [[arrivando in ufficio]].]]] \
- \
-(if: $m) [(print: $cs2)] \
- \
-(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="32" name="prendere la macchina" tags="testo_bianco sfondo_sfumato0" position="1200,525" size="100,100">&lt;img src=&#39;res1/citta.webp&#39; class=&#39;center&#39; width=&#39;600&#39; alt=&#39;immagine&#39;&gt;
+La pedalata è stata piacevole, e ti ha consentito di cominciare a riordinare le idee, ora che stai [[arrivando in ufficio]].]] \
+(else-if: $pswd_lucchetto&#39;s length is 4) [(niente da fare...)]
+(else:) []] {
+
+(if: $m) [(print: $cs2)]
+
+(display: &quot;piepagina&quot;) }</tw-passagedata><tw-passagedata pid="32" name="prendere la macchina" tags="testo_bianco sfondo_sfumato0" position="1200,525" size="100,100">&lt;img src=&#39;res1/citta.webp&#39; class=&#39;full&#39; alt=&#39;immagine&#39;&gt;
 
 ##In viaggio in macchina...
  \
@@ -915,24 +918,26 @@ Al proposito ti ricordi due cose: la prima è che si tratta di un codice di quat
 
 Inserisci la combinazione nel riquadro sottostante. Quando avrai inserito precisamente i quattro numeri della combinazione corretta, potrai dunque recuperare le chiavi e proseguire.
 
-(input-box: bind $pswd_cassaforte, &quot;====X====&quot;, 1)
+(input-box: bind $pswd_cassaforte, &quot;===X===&quot;, 1)
 
 (live: 1s)[(if: $pswd_cassaforte is &quot;1312&quot;) [Meno male che ti sei ricordat$g la combinazione...
 
 Recuperi le chiavi al volo e ti metti in auto. Durante il breve viaggio verso il commissariato, come avresti potuto aspettarti alla radio non hai ascoltato nesssuna notizia che non conoscessi già...  
 
-... e ora dunque stai [[arrivando in ufficio]]]] \
- \
-(if: $m) [(print: $cs2)] \
- \
-(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="33" name="interrogare ulteriormente Ravanelli" tags="testo_nero sfondo_sfumato2" position="2425,450" size="100,100">
+... e ora dunque stai [[arrivando in ufficio]]]
+(else-if: $pswd_cassaforte&#39;s length is 4) [(niente da fare...)]
+(else:) []] {
+
+(if: $m) [(print: $cs2)]
+
+(display: &quot;piepagina&quot;) }</tw-passagedata><tw-passagedata pid="33" name="interrogare ulteriormente Ravanelli" tags="testo_nero sfondo_sfumato2" position="2425,450" size="100,100">
 ## La seconda parte dell’interrogatorio di Martino Ravanelli
 
-Ore e ore di interrogatorio non danno frutti. Purtroppo Ravanelli non vuole parlare. A un certo punto, gli racconti della telefonata misteriosa che avevi ricevuto all’inizio. (if: $t is &quot;cor&quot;)[Sei (if: $g is &quot;o&quot;)[un investigatore](else:)[un’investigatrice] originale e fantasios$g, e la tua empatia riesce evidentemente a fare breccia nella corazza di Ravanelli, che per un momento si lascia sfuggire un mormorio. “Maledetto traditore, ecco perché...” riesci a sentire. Ma poi rimane in silenzio.](else:)[Anche in questo caso, la corazza di Ravanelli non viene intaccata]. Di fronte a un silenzio costante, non ti rimane che andare avanti con le indagini, e guardare [[la mappa]]. \
-\
-(if: $m) [(print: $cs6)] \
- \
-(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="34" name="include" tags="header" position="800,475" size="100,100">&lt;!-- dei default, anche per rendere più semplice il testing in fase di sviluppo --&gt; \
+Ore e ore di interrogatorio non danno frutti. Purtroppo Ravanelli non vuole parlare. A un certo punto, gli racconti della telefonata misteriosa che avevi ricevuto all’inizio. (if: $t is &quot;cor&quot;)[Sei (if: $g is &quot;o&quot;)[un investigatore](else:)[un’investigatrice] originale e fantasios$g, e la tua empatia riesce evidentemente a fare breccia nella corazza di Ravanelli, che per un momento si lascia sfuggire un mormorio. “Maledetto traditore, ecco perché...” riesci a sentire. Ma poi rimane in silenzio.](else:)[Anche in questo caso, la corazza di Ravanelli non viene intaccata]. Di fronte a un silenzio costante, non ti rimane che andare avanti con le indagini, e guardare [[la mappa]]. {
+
+(if: $m) [(print: $cs6)]
+
+(display: &quot;piepagina&quot;) }</tw-passagedata><tw-passagedata pid="34" name="include" tags="header" position="800,475" size="100,100">&lt;!-- dei default, anche per rendere più semplice il testing in fase di sviluppo --&gt; \
 (if: $nome is 0) [(set: $nome to &quot;Alex&quot;)] \
 (if: $cognome is 0) [(set: $cognome to &quot;Bianchi&quot;)] \
 (if: $t is 0) [(set: $t to &quot;org&quot;)] \
@@ -951,7 +956,7 @@ $cs_post to &quot;.mp3&#39; type=&#39;audio/mp3&#39; autoplay&gt;&lt;/audio&gt;&
 (set: $cs6 to $cs_pre + &quot;2021/10/03/audio_0b0df33160&quot; + $cs_post) \
 (set: $cs7 to $cs_pre + &quot;2022/02/10/audio_798efbe865&quot; + $cs_post) \
 \
-(if: (passage:)&#39;s name is not &quot;start&quot;) [(save-game: &quot;auto&quot;)]</tw-passagedata><tw-passagedata pid="35" name="risultati dei test" tags="testo_nero sfondo_bianco" position="3350,1135" size="100,100">
+(if: (passage:)&#39;s name is not &quot;start&quot;) [(save-game: &quot;auto&quot;)]</tw-passagedata><tw-passagedata pid="35" name="risultati dei test" tags="testo_nero sfondo_bianco" position="3525,875" size="100,100">
 ## Risultati dei test
 \
 A un certo punto del gioco hai sottoposto al test del poligrafo almeno uno fra i sospettati Lodigiani e Freschini. In questo caso, hai probabilmente adottato un atteggiamento fiducioso, e hai dato per scontato che il test fosse affidabile. Ecco, questo però per i test non è sempre vero, e i test statistici non fanno eccezioni. Un test in genere può dare risultato positivo o negativo, e questo risultato può essere vero o falso. Quindi, esistono quattro casi:
@@ -982,7 +987,7 @@ Una sintesi dei contenuti di questo gioco:
 Il progetto GaLe è promosso dalla (link-rerun: &quot;Camera di Commercio di Varese&quot;)[(open-url: &quot;https://www.va.camcom.it&quot;)] nell’ambito del progetto (link-rerun: &quot;“Interreg Transform”&quot;)[(open-url: &quot;https://www.va.camcom.it/archivio42_transform_0_84.html&quot;)] (finanziato a valere sul Programma Operativo di Cooperazione Transfrontaliera Italia Svizzera 2014-2020) ed è realizzato da (link-rerun: &quot;idea.lab&quot;)[(open-url: &quot;https://idealab.va.it&quot;)] e (link-rerun: &quot;FlipFly&quot;)[(open-url: &quot;https://www.flipfly.it&quot;)] con il supporto dell’(link-rerun: &quot;Ufficio Scolastico Territoriale di Varese&quot;)[(open-url: &quot;https://varese.istruzione.lombardia.gov.it&quot;)].
 
 ---
-[[Torna al gioco-&gt;frontespizio]]</tw-passagedata><tw-passagedata pid="39" name="tipi di dati" tags="testo_nero sfondo_bianco" position="3351.6666666666665,355" size="100,100">
+[[Torna al gioco-&gt;frontespizio]]</tw-passagedata><tw-passagedata pid="39" name="tipi di dati" tags="testo_nero sfondo_bianco" position="3350,450" size="100,100">
 ## Tipi di dati
 \
 Capire che esistono tipi di dati diversi non è forse così interessante, ma è perlomeno molto utile per capire la ragione per cui scrivere &quot;1 + Rosso&quot; non ha alcun significato. Proviamo a ragionarci brevemente, partendo da questo semplicissimo esempio, chiaramente senza significato. 
@@ -992,7 +997,7 @@ Se al posto di scrivere &quot;1 + Rosso&quot; avessi scritto &quot;1 + 1&quot;, 
 Insomma, ci sono non solo dati numerici ma anche dati non numerici, che chiamiamo &quot;categorici&quot;, perché definiscono le categorie a cui appertengono. Per esempio, nella tua classe potresti raccogliere i dati del colore dei capelli delle persone che la compongono, e ritrovarti quindi un insieme di dati riferiti a categorie come &quot;biondo&quot;, &quot;moro&quot;, &quot;rosso&quot; o &quot;castano&quot;.
 
 (set: $ultima_pag to (history:)&#39;s last)
-(link: &quot;Torna indietro&quot;)[(goto: $ultima_pag)]</tw-passagedata><tw-passagedata pid="40" name="una statistica più sofisticata" tags="testo_nero sfondo_bianco" position="3348.3333333333335,893.3333333333334" size="100,100">
+(link: &quot;Torna indietro&quot;)[(goto: $ultima_pag)]</tw-passagedata><tw-passagedata pid="40" name="una statistica più sofisticata" tags="testo_nero sfondo_bianco" position="3525,625" size="100,100">
 ## La deviazione standard
 \
 Un&#39;altra statistica molto famosa è la deviazione standard, che indica la dispersione di un campione. Ma, più nel dettaglio, cosa vuol dire che un campione è &quot;tanto disperso&quot; o &quot;poco disperso&quot;? Proviamo a rispondere usando un esempio sportivo (come il campionato di Serie A, o un qualunque altro campionato sportivo, professionistico o meno, in cui i risultati possibili sono vittoria, pareggio o sconfitta). 
