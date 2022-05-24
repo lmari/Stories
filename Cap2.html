@@ -50,12 +50,16 @@ img.full {
   max-height: 100%;
 }
 
+tw-hook[name="dialogo"] {
+  display: block;
+  background-color: #e8eff1;
+}
+
 /* *** per centrare testo (hook |centrato>) *** */
 tw-hook[name="centrato"] {
   display: block;
   text-align: center;
 }
-
 
 /* *** per formattare testo in font più piccolo (hook |piccolo>) *** */
 tw-hook[name="piccolo"] {
@@ -344,18 +348,18 @@ In treno ti metti a riflettere su chi possa aver compiuto un furto del genere, e
 &lt;img src=&#39;res2/roma.jpeg&#39; class=&#39;center&#39; width=&#39;600&#39;&gt;
 
 |||||=
-(text-colour:$colore_dialogo)[&#39;&#39;Detective $nome&#39;&#39;]: Maresciallo Caputo, mi diceva che il protocollo di sicurezza della piazza del Campidoglio comporta diverse pattuglie di guardia che controllano la statua e si danno il cambio durante la notte, giusto?  Se è così, allora chiunque abbia effettuato il furto deve avere aspettato il momento esatto in cui le guardie si sono date il cambio. Cosa ne pensa?
+|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;Detective $nome&#39;&#39;]: Maresciallo Caputo, mi diceva che il protocollo di sicurezza della piazza del Campidoglio comporta diverse pattuglie di guardia che controllano la statua e si danno il cambio durante la notte, giusto?  Se è così, allora chiunque abbia effettuato il furto deve avere aspettato il momento esatto in cui le guardie si sono date il cambio. Cosa ne pensa?]
 =|=
 (if: $g is &quot;o&quot;) [&lt;img src=&#39;res2/inv_m2.png&#39; class=&#39;center&#39; width=&#39;200&#39;&gt;] (else: ) [&lt;img src=&#39;res2/inv_f2.png&#39; class=&#39;center&#39; width=&#39;200&#39;&gt;]
 |==|
-
-(text-colour:$colore_dialogo)[&#39;&#39;Maresciallo Caputo&#39;&#39;]: Dice benissimo, agente $cognome. La piazza non è così grande da non accorgersi dell’arrivo di un mezzo per portare via la statua. Penso che siano stati dei professionisti, o un solo professionista con un’adeguata strumentazione. La statua è molto pesante e pure abbastanza voluminosa: solo un ladro molto capace poteva portarla via di nascosto, in così poco tempo, e senza neppure attirare l’attenzione delle guardie. Certo, ieri sera c’era sola una pattuglia, come sempre durante la settimana. A tal proposito, agente $cognome, ti presento l’agente Riccardi, uno dei poliziotti della pattuglia che controllava la piazza questa notte.
-
-(text-colour:$colore_dialogo)[&#39;&#39;Agente Riccardi&#39;&#39;]: Piacere di conoscerla, agente $cognome. L’ho vista al telegiornale qualche mese fa, spero davvero che ci possa aiutare a risolvere il caso. Ma vado subito al punto. Noi durante la serata ci appostiamo periodicamente in una parte diversa della piazza, o nei suoi immediati dintorni, muovendosi ogni 15 o 20 minuti. In effetti, non prestiamo una particolare attenzione alla statua: stiamo lì giusto per essere sicuri che non ci sia qualche perditempo che si metta a fare festa davanti al municipio.  
-Ieri sera però è successa una cosa strana, che col senno di poi potrebbe essere importante. Dopo che siamo rimasti qualche minuto sotto le scale del municipio, abbiamo avuto tutti una forte sonnolenza, come se fossimo confusi. Nessuno di noi sa dire con certezza cosa fosse successo, ma sta di fatto che quando ci siamo schiariti le idee e siamo tornati verso il centro della piazza, la statua era sparita. Io mi sento veramente in colpa, però mai avrei pensato che qualcuno potesse rubare la &#39;&#39;Lupa capitolina&#39;&#39;: è una cosa davvero assurda.
-
+\
+|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;Maresciallo Caputo&#39;&#39;]: Dice benissimo, agente $cognome. La piazza non è così grande da non accorgersi dell’arrivo di un mezzo per portare via la statua. Penso che siano stati dei professionisti, o un solo professionista con un’adeguata strumentazione. La statua è molto pesante e pure abbastanza voluminosa: solo un ladro molto capace poteva portarla via di nascosto, in così poco tempo, e senza neppure attirare l’attenzione delle guardie. Certo, ieri sera c’era sola una pattuglia, come sempre durante la settimana. A tal proposito, agente $cognome, ti presento l’agente Riccardi, uno dei poliziotti della pattuglia che controllava la piazza questa notte.]
+\
+|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;Agente Riccardi&#39;&#39;]: Piacere di conoscerla, agente $cognome. L’ho vista al telegiornale qualche mese fa, spero davvero che ci possa aiutare a risolvere il caso. Ma vado subito al punto. Noi durante la serata ci appostiamo periodicamente in una parte diversa della piazza, o nei suoi immediati dintorni, muovendosi ogni 15 o 20 minuti. In effetti, non prestiamo una particolare attenzione alla statua: stiamo lì giusto per essere sicuri che non ci sia qualche perditempo che si metta a fare festa davanti al municipio.  
+Ieri sera però è successa una cosa strana, che col senno di poi potrebbe essere importante. Dopo che siamo rimasti qualche minuto sotto le scale del municipio, abbiamo avuto tutti una forte sonnolenza, come se fossimo confusi. Nessuno di noi sa dire con certezza cosa fosse successo, ma sta di fatto che quando ci siamo schiariti le idee e siamo tornati verso il centro della piazza, la statua era sparita. Io mi sento veramente in colpa, però mai avrei pensato che qualcuno potesse rubare la &#39;&#39;Lupa capitolina&#39;&#39;: è una cosa davvero assurda.]
+\
 |||||=
-(text-colour:$colore_dialogo)[&#39;&#39;Detective $nome&#39;&#39;]: Ah, ecco una prima pista. È chiaro che vi abbiano in qualche modo narcotizzato per tutto il tempo necessario a fare il colpo. Probabilmente i responsabili di questo erano appostati sopra alle scale, e vi hanno stordito con un qualche genere di gas rilassante. Però io la capisco, agente Riccardi. Anche a me non torna qualcosa. Perché? Qual è il movente? Cosa può spingere una o più persone a rubare una statua sul suolo pubblico, visto che non si trattava nemmeno della versione originale! Com’è possibile?
+|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;Detective $nome&#39;&#39;]: Ah, ecco una prima pista. È chiaro che vi abbiano in qualche modo narcotizzato per tutto il tempo necessario a fare il colpo. Probabilmente i responsabili di questo erano appostati sopra alle scale, e vi hanno stordito con un qualche genere di gas rilassante. Però io la capisco, agente Riccardi. Anche a me non torna qualcosa. Perché? Qual è il movente? Cosa può spingere una o più persone a rubare una statua sul suolo pubblico, visto che non si trattava nemmeno della versione originale! Com’è possibile?]
 =|=
 (if: $g is &quot;o&quot;) [&lt;img src=&#39;res2/inv_m2.png&#39; class=&#39;center&#39; width=&#39;200&#39;&gt;] (else: ) [&lt;img src=&#39;res2/inv_f2.png&#39; class=&#39;center&#39; width=&#39;200&#39;&gt;]
 |==|
@@ -452,40 +456,41 @@ autoplay&gt;&lt;/audio&gt;]\
  \
 Arrivat$g sulla scena del crimine, ti imbatti subito nel Maresciallo Caputo, che ti viene incontro chiaramente preoccupato, il viso scuro.
 
-(text-colour:$colore_dialogo)[&#39;&#39;Maresciallo Caputo&#39;&#39;]: Carissim$g agente $nome, sono felice che sia riuscit$g ad arrivare così in fretta: la ringrazio molto. Io sono qui giusto da qualche minuto, e non ho trovato nulla di strano, per adesso. Certo che però si tratta di una strana coincidenza, che l’allarme dei Musei Capitolini suoni due giorni dopo il furto della Lupa dalla piazza. Cosa pensa che sia accaduto?
-
+|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;Maresciallo Caputo&#39;&#39;]: Carissim$g agente $nome, sono felice che sia riuscit$g ad arrivare così in fretta: la ringrazio molto. Io sono qui giusto da qualche minuto, e non ho trovato nulla di strano, per adesso. Certo che però si tratta di una strana coincidenza, che l’allarme dei Musei Capitolini suoni due giorni dopo il furto della Lupa dalla piazza. Cosa pensa che sia accaduto?]
+\
 |||||=
-(text-colour:$colore_dialogo)[&#39;&#39;[Detective $nome]&#39;&#39;]: Insomma... Se i tecnici del sistema d’allarme confermano che è tutto in regola e perfettamente funzionante, e le pattuglie garantiscono che hanno eseguito a perfezione il protocollo per arrivare qui il prima possibile, proprio non mi spiego cosa sia successo. Magari ci stiamo preoccupando per niente, e l’allarme, che immagino sia molto sensibile, è stato fatto scattare da un topo o qualche altro animaletto che è riuscito a infilarsi nel museo da qualche pertugio.
-Propongo di aspettare che i tecnici facciano le loro rilevazioni, e allontanoci dal trambusto, così possiamo lavorare con un po’ più di silenzio al furto dell’altra sera.
+|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;[Detective $nome]&#39;&#39;]: Insomma... Se i tecnici del sistema d’allarme confermano che è tutto in regola e perfettamente funzionante, e le pattuglie garantiscono che hanno eseguito a perfezione il protocollo per arrivare qui il prima possibile, proprio non mi spiego cosa sia successo. Magari ci stiamo preoccupando per niente, e l’allarme, che immagino sia molto sensibile, è stato fatto scattare da un topo o qualche altro animaletto che è riuscito a infilarsi nel museo da qualche pertugio.
+
+Propongo di aspettare che i tecnici facciano le loro rilevazioni, e allontanoci dal trambusto, così possiamo lavorare con un po’ più di silenzio al furto dell’altra sera.]
 =|=
 (if: $g is &quot;o&quot;) [&lt;img src=&#39;res2/inv_m2.png&#39; class=&#39;center&#39; width=&#39;200&#39;&gt;] (else: ) [&lt;img src=&#39;res2/inv_f2.png&#39; class=&#39;center&#39; width=&#39;200&#39;&gt;]
 |==|
-
+\
 Vi allontanate e ricominciate a discutere del furto avvenuto due sere prima, mentre la notte lascia spazio definitivamente al giorno e le luci del mattino accarezzano con sempre più forza i tetti della città eterna.
 
-(text-colour:$colore_dialogo)[&#39;&#39;Maresciallo Caputo&#39;&#39;]: Ci sono novità? Indizi? Una pista su cui indagare?
-
+|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;Maresciallo Caputo&#39;&#39;]: Ci sono novità? Indizi? Una pista su cui indagare?]
+\
 |||||=
-(text-colour:$colore_dialogo)[&#39;&#39;Detective $nome&#39;&#39;]: Non ancora purtroppo: piccole tracce o solo qualche segno lasciato sulla pavimentazione, ma sono prove irrilevanti per ora. Ciò che non mi torna in nessun modo è il movente. Cosa può spingere un criminale a rubare una statua del genere? Non ha neppure un grande valore economico, essendo una copia. Rubare un simbolo del genere è più che altro uno sfregio all’urbe, un danno morale più che economico.
+|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;Detective $nome&#39;&#39;]: Non ancora purtroppo: piccole tracce o solo qualche segno lasciato sulla pavimentazione, ma sono prove irrilevanti per ora. Ciò che non mi torna in nessun modo è il movente. Cosa può spingere un criminale a rubare una statua del genere? Non ha neppure un grande valore economico, essendo una copia. Rubare un simbolo del genere è più che altro uno sfregio all’urbe, un danno morale più che economico.]
 =|=
 (if: $g is &quot;o&quot;) [&lt;img src=&#39;res2/inv_m2.png&#39; class=&#39;center&#39; width=&#39;200&#39;&gt;] (else: ) [&lt;img src=&#39;res2/inv_f2.png&#39; class=&#39;center&#39; width=&#39;200&#39;&gt;]
 |==|
-
-(text-colour:$colore_dialogo)[&#39;&#39;Maresciallo Caputo&#39;&#39;]: Ha perfettamente ragione. Ma vedrà, troveremo sicuramente una prova o un indizio che incastrerà il ladro, ne sono certo!
-
+\
+|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;Maresciallo Caputo&#39;&#39;]: Ha perfettamente ragione. Ma vedrà, troveremo sicuramente una prova o un indizio che incastrerà il ladro, ne sono certo!]
+\
 In quel momento, un uomo della scientifica vi fa cenno da lontano di entrare: evidentemente ci deve essere qualcosa da vedere. Un’impronta digitale, magari, oppure un filmato che possa chiarire l’identità del ladro. Mentre camminate, passi davanti alla statua della Lupa Capitolina, l’originale, e non puoi fare a meno di squadrarla, pensando che sei venut$g a Roma per la sua gemella, che è uguale a parte... a parte... e in quel momento hai un’epifania.
 
 |||||=
-(text-colour:$colore_dialogo)[&#39;&#39;Detective $nome&#39;&#39;]: Solo un attimo, Maresciallo: temo di aver capito cosa ci sta sfuggendo. Non ci posso credere, aspetti che controllo meglio... ma sì, è proprio così... Non ho parole! Maresciallo, questa non è la Lupa Capitolina originale. Non so veramente cosa dire, ce l’hanno fatta sotto il naso!
+|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;Detective $nome&#39;&#39;]: Solo un attimo, Maresciallo: temo di aver capito cosa ci sta sfuggendo. Non ci posso credere, aspetti che controllo meglio... ma sì, è proprio così... Non ho parole! Maresciallo, questa non è la Lupa Capitolina originale. Non so veramente cosa dire, ce l’hanno fatta sotto il naso!]
 =|=
 (if: $g is &quot;o&quot;) [&lt;img src=&#39;res2/inv_m2.png&#39; class=&#39;center&#39; width=&#39;200&#39;&gt;] (else: ) [&lt;img src=&#39;res2/inv_f2.png&#39; class=&#39;center&#39; width=&#39;200&#39;&gt;]
 |==|
-
-(text-colour:$colore_dialogo)[&#39;&#39;Maresciallo Caputo&#39;&#39;]: Ma non mi dica che...
-
+\
+|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;Maresciallo Caputo&#39;&#39;]: Ma non mi dica che...]
+\
 |||||=
-(text-colour:$colore_dialogo)[&#39;&#39;Detective $nome&#39;&#39;]: Sì, purtroppo! Questa è la statua della Lupa di Piazza del Campidoglio, quella rubata tre notti fa. Ora tutto torna. La statua in piazza era stata rubata solamente come diversivo, dato che la sorveglianza all’esterno è molto più blanda.
-
+|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;Detective $nome&#39;&#39;]: Sì, purtroppo! Questa è la statua della Lupa di Piazza del Campidoglio, quella rubata tre notti fa. Ora tutto torna. La statua in piazza era stata rubata solamente come diversivo, dato che la sorveglianza all’esterno è molto più blanda.]
+\
 Il ladro ha studiato tutto nei minimi dettagli, aveva già la statua pronta per sostituirla all’originale con una versione a prima vista molto simile. In questo modo ha guadagnato del tempo prezioso per la fuga. Se non avessi una certa competenza di storia dell&#39;arte, non me ne sarei mai accort$g neanch’io, e magari ci sarebbero volute settimane prima che qualcuno ci facesse caso. Ha fatto tutto questo per prendere tempo, e ci è riuscito, almeno un po’.
 
 Adesso ha quattro ore di vantaggio, tutto il tempo necessario per essersi nascosto a dovere. Ma non può farla franca. Quattro ore di vantaggio sono poche, se ti porti dietro una scultura di quel peso e di quelle dimensioni. Lo prenderemo, ha la mia parola!
@@ -497,12 +502,12 @@ Sei ancora sbalordito, e quasi non vuoi credere a ciò che hai appena realizzato
 
 Mentre tu rifletti, si avvicinano due agenti di corsa, trafelati.
 
-(text-colour:$colore_dialogo)[&#39;&#39;Agenti Palladini e Riccardi all’unisono&#39;&#39;]: Abbiamo delle novità!
-
+|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;Agenti Palladini e Riccardi all’unisono&#39;&#39;]: Abbiamo delle novità!]
+\
 Questa frase ti desta dallo tuo stato di concentrazione: di colpo, lasci i tuoi pensieri e ti metti ad ascoltare che cosa hanno da dirti.
 
-(text-colour:$colore_dialogo)[&#39;&#39;Agente Palladini&#39;&#39;]: Sono stati analizzati tutti i filmati delle telecamere all’ora in cui è suonato l’allarme. Effettivamente questa notte qualcuno è entrato nel museo, ma purtroppo non è possibile identificare il ladro perché era a volto coperto.
-
+|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;Agente Palladini&#39;&#39;]: Sono stati analizzati tutti i filmati delle telecamere all’ora in cui è suonato l’allarme. Effettivamente questa notte qualcuno è entrato nel museo, ma purtroppo non è possibile identificare il ladro perché era a volto coperto.]
+\
 Ciò significa che non c’è tempo da perdere, non puoi più stare lì ferm$g a riflettere: devi assolutamente riuscire a scovare il ladro e ritrovare la statua.
 
 Sei nervos$g ma anche molto concentrat$g, hai l’ansia di trovare indizi ma non sai da dove partire. A un certo punto vedi avvicinarsi una guardia, cammina con la testa bassa e passo svelto. Ti arriva in fianco e ti consegna un libro, dichiarando che è stato trovato vicino all’uscita di emergenza.
@@ -604,48 +609,47 @@ Quindi, pensi che sia una buona idea o meno prendere il Frappè?
 
 |==| 
 
-(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="17" name="5 Stat Sì" tags="Grigio_c T_Nero" position="4200,1097" size="100,100">
-## Hai scelto di tornare subito in dipartimento
+(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="17" name="5 Stat Sì" tags="Grigio_c T_Nero" position="4000,1000" size="100,100">
+## Hai scelto di tornare subito in dipartimento...
 \
+|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;Detective $nome&#39;&#39;]: Eccomi maresciallo: andiamo.] \
 
-(text-colour:$colore_dialogo)[&#39;&#39;[Detective $nome]&#39;&#39;]“Mi scusi maresciallo, andiamo.”
+Fuori il cielo è sereno e limpido. Ormai è mattina inoltrata, e Roma è splendida nel mese di aprile. Il sole splende e i suoi raggi si riflettono sulla vettura del maresciallo.
 
-Fuori il cielo è sereno e limpido. Ormai è mattina inoltrata, e Roma p splendida nel mese di aprile. Il sole splende e i suoi raggi riflettono sulla vettura del maresciallo. Nonostante la fretta e l’agitazione di arrivare il prima possibile in dipartimento, l’atmosfera circostante produce una sorta di allegria e spensieratezza. Non puoi non notare come si tratti davvero di una delle città più belle del mondo.
-Come sempre c’è traffico nelle strade. Il maresciallo abbassa leggermente il finestrino ed accende la radio: è sintonizzata sul canale Notizie Polizia, il suo preferito.
+Nonostante la fretta e l’agitazione di arrivare il prima possibile in dipartimento, l’atmosfera circostante produce in te una sorta di allegria e spensieratezza: non puoi non notare come si tratti davvero di una delle città più belle del mondo... anche se, come quasi sempre, c’è traffico nelle strade. Il maresciallo abbassa leggermente il finestrino e accende la radio: è sintonizzata sul canale Notizie Polizia, il suo preferito:
 
-(text-colour:$colore_dialogo)[&#39;&#39;[Radio Zia Poli]&#39;&#39;]“Nella giornata di ieri, in via ………… è stato rubato un furgone bianco. Il proprietario dichiara di averlo lasciato parcheggiato la mattina, prima di iniziare a lavorare. La sera però, una volta tornato al parcheggio, il veicolo era scomparso. Il ladro non è stato identificato. Nel caso ci sia stato qualche testimone al momento del furto, è pregato di chiamare il numero……..”
+“Nella giornata di ieri, in via ………… è stato rubato un furgone bianco. Il proprietario dichiara di averlo lasciato parcheggiato la mattina, prima di iniziare a lavorare. La sera però il veicolo era scomparso. Il ladro non è stato identificato. Nel caso ci sia stato qualche testimone al momento del furto, è pregato di chiamare il numero…….”
 
 Questa notizia giunge a te come un tuono. Non lasci finire la frase e spegni la radio.
 
-(text-colour:$colore_dialogo)[&#39;&#39;[Detective $nome]&#39;&#39;]“Maresciallo mi raccomando, tenga bene a mente il furgoncino. Ho come l’impressione possa essere collegato al furto della statua”.
+|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;Detective $nome&#39;&#39;]: Maresciallo mi raccomando, tenga bene a mente questa faccenda del furgoncino: ho come l’impressione che possa essere collegato al furto della statua.]
 
-Tieni a mente il furgoncino e [[arriva in dipartimento-&gt;Targhe]].
+E con questo [[arrivate in dipartimento-&gt;Targhe]]. {
 
-(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="18" name="5 Stat No" tags="Grigio_c T_Nero" position="4199,700" size="100,100">
+(display: &quot;piepagina&quot;)}</tw-passagedata><tw-passagedata pid="18" name="5 Stat No" tags="Grigio_c T_Nero" position="4000,800" size="100,100">
 ## Controlla il manuale con più attenzione
 \
-(text-colour:$colore_dialogo)[&#39;&#39;[Detective $nome]&#39;&#39;]: D’accordo maresciallo, io rimango qui ancora per un attimo, ci vediamo tra poco.
+|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;[Detective $nome]&#39;&#39;]: D’accordo maresciallo, io rimango qui ancora per un attimo, ci vediamo tra poco.]\
 
-L’incognita del manuale è diventata la tua priorità, sei convinto sia un tassello fondamentale per lo sviluppo dell’indagine. Vai sulle scale di emergenza a dare un’occhiata. &quot;Non ci sono telecamere&quot; pensi fra te e te, &quot;quindi il ladro non può essere ripreso stato&quot;. Esamini quindi con attenzione la porta. È una di quelle classiche porte antincendio, bianca e con il maniglione antipanico rosso. È bloccata dall’esterno. Al contempo sai anche che la sala è costantemente sorvegliata dalle guardie, le quali non consentono ai visitatori di passare dall’uscita di emergenza, se non per situazioni appunto di pericolo. Dunque, se le guardie hanno svolto correttamente il proprio lavoro, ci sono due possibili alternative:
-\
+L’incognita del manuale è diventata la tua priorità, dato che sei convint$g sia un tassello fondamentale per lo sviluppo dell’indagine.
+
+Vai sulle scale di emergenza a dare un’occhiata. “Non ci sono telecamere”, pensi fra te e te, “e quindi il ladro non può essere stato ripreso.” Esamini quindi con attenzione la porta. È una di quelle classiche porte antincendio, bianca e con il maniglione antipanico rosso. Ed è bloccata dall’esterno. In più, sai che la sala è costantemente sorvegliata dalle guardie, che non consentono ai visitatori di passare dall’uscita di emergenza, se non per situazioni appunto di pericolo. Dunque, se le guardie hanno svolto correttamente il proprio lavoro, ci sono due possibili alternative:
+
 =|=
 //Opzione 1//
-Il ladro è stato lasciato dal ladro mentre scappava, e ha usato le scale come via di fuga per fuggire. Se ne è liberato per non essere riconosciuto, e lo stava tenendo prima per potersi presentare come uno studente di storia dell&#39;arte molto zelante nel caso qualcuno lo avesse visto in giro.
+Il libro è stato lasciato dal ladro mentre scappava, e ha usato le scale come via di fuga per fuggire: se ne è liberato per non essere riconosciuto, e lo stava tenendo prima per potersi presentare come uno studente di storia dell’arte zelante nel caso qualcuno lo avesse visto in giro.
 =|=
 //Opzione 2//
 Il libro è stato portato lì da qualcuno interno al museo, a cui era consentito passare dalla porta d’emergenza, ed è stato usato in qualche modo dal ladro per entrare.
 |==|
 \
-&lt;h3&gt;(text-colour:#4dabf7)[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[A una prima occhiata il libro sembra non avere alcuna caratteristica particolare. Su quale ipotesi scegli di concentrarti?]]&lt;/h3&gt;
-\
+&lt;h3&gt;(text-colour:$colore_dialogo)[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[A una prima occhiata, il libro sembra non avere alcuna caratteristica particolare: su quale ipotesi scegli di concentrarti?]]
 =|=
-(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)+(text-colour:#ffa8a8)[ [[Opzione 1]] ]
+(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[ [[Opzione 1]] ]
 =|=
-(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)+(text-colour:#ffa8a8)[ [[Opzione 2]] ]
-\
-(display: &quot;piepagina&quot;)
+(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[ [[Opzione 2]] ]&lt;/h3&gt; {
 
-</tw-passagedata><tw-passagedata pid="19" name="Coordinate 2" tags="Grigio_c T_Nero" position="2000,1100" size="100,100">
+(display: &quot;piepagina&quot;)}</tw-passagedata><tw-passagedata pid="19" name="Coordinate 2" tags="Grigio_c T_Nero" position="2000,1100" size="100,100">
 ## Ancora sulla lettura di coordinate
  \
 Brav$g, risposta corretta. Cerca di capire bene in che direzione muoverti, per arrivare ai Musei nel minor tempo possibile. 
@@ -1084,66 +1088,84 @@ A questo punto [[prosegui con le indagini-&gt;3 Stat]]. {
 
 (if: $risp_sbagliate_stat is 5 and $punti_int &gt; 1) [Purtroppo, hai collezionato numerosi errori, e quindi perdi un //punto intelligenza//. (set: $punti_int to $punti_int - 1)] {
 
-(display: &quot;piepagina&quot;)}</tw-passagedata><tw-passagedata pid="42" name="3 Stat" tags="Grigio_c T_Nero" position="4002,897" size="100,100">
+(display: &quot;piepagina&quot;)}</tw-passagedata><tw-passagedata pid="42" name="3 Stat" tags="Grigio_c T_Nero" position="3800,900" size="100,100">
 ## Tornare in dipartimento?
 \
-Bene, adesso sai che il sospettato è David Mercer. Ma adesso come puoi rintracciarlo? Dove potrà mai essere andato? E, soprattutto, Mercer avrà ancora con sé la refurtiva o l&#39;avrà nascosta da qualche parte?
+Bene, adesso hai un sospettato su cui investigare: David Mercer.
 
-Il maresciallo ti raggiunge e ti da una pacca sulla spalla. Poi, con tono profondo, inizia a parlare.
+Ma come rintracciarlo? Dove potrà mai essere andato? E, soprattutto, Mercer avrà ancora con sé la refurtiva o l’avrà nascosta da qualche parte?
 
-(text-colour:$colore_dialogo)[&#39;&#39;[Maresciallo Caputo]&#39;&#39;]: Detective,tutti gli altri dipartimenti di polizia in Italia sono stati avvertiti. Ciò che ci rimane da fare è tenere ben dritte le antenne e controllare i filmati delle telecamere stradali, per capire con quale mezzo si stia muovendo.
+Il maresciallo ti raggiunge e ti dà una pacca sulla spalla. Poi, con tono profondo, inizia a parlare.
 
+|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;Maresciallo Caputo&#39;&#39;]: Detective, tutti gli altri dipartimenti di polizia in Italia sono stati avvertiti. Quello che ci rimane da fare è di tenere ben dritte le antenne e controllare i filmati delle telecamere stradali, per capire con quale mezzo Mercer si stia muovendo.]
+\
 Tu sai perfettamente che, individuando la macchina del ladro, sarà molto più facile risalire alla sua posizione. Tuttavia hai ancora un dubbio che ti assilla.
 
-(text-colour:$colore_dialogo)[&#39;&#39;[Detective $nome]&#39;&#39;]: C&#39;è una cosa che non mi torna in questo furto. Perché mai il ladro, al momento della rapina, avrebbe dovuto portare con sé il manuale dell’arte? A cosa avrebbe mai potuto servirgli? Pensare che volesse semplicemente informarsi sulla statua è un’ipotesi assolutamente inverosimile. E poi, perché quel libro si trovava sulle scale antincendio, quando le riprese mostrano il ladro entrare dalla porta principale?
+|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;Detective $nome&#39;&#39;]: Certo, ma c’è una cosa che non mi torna in questo furto. Perché mai il ladro, al momento della rapina, avrebbe dovuto portare con sé quel libro, che poi ha perso? A cosa avrebbe mai potuto servirgli? Pensare che volesse semplicemente informarsi sulla statua è un’ipotesi assolutamente inverosimile. E poi, perché quel libro si trovava sulle scale antincendio, quando le riprese mostrano il ladro entrare dalla porta principale?]
+\
+Ti fermi a pensare: sono tutte le domande a cui non sai dare spiegazioni...
 
-Queste sono tutte le domande a cui non sai dare spiegazioni.
 Il maresciallo, un po’ indispettito dalla tua mancata risposta, esclama:
 
-(text-colour:$colore_dialogo)[&#39;&#39;[Maresciallo Caputo]&#39;&#39;]: Detective, la vedo pensieros$g, ma dobbiamo andare a controllare i filmati! Io comincio ad andare in dipartimento, se vuole mi metto controllare i filmati del traffico e poi lei mi raggiunge. Oppure può venire subito: veda lei!
+|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;[Maresciallo Caputo]&#39;&#39;]: Detective, la vedo pensieros$g, ma dobbiamo andare a controllare i filmati! Io comincio ad andare in dipartimento e mi metto al lavoro, e lei mi raggiungerà quando vorrà. Oppure può venire subito: veda lei!]
+\
+Devi prendere una decisione, e la devi prendere adesso.
 
-Devi prendere una decisione, e la devi prendere adesso. Se vai subito in dipartimento a controllare i filmati potresti risparmiare tempo prezioso che ti permetterà forse di mettere le mani sul ladro. Se invece rimani al museo, rallenterai l&#39;investigazione, ma potresti scoprire a che cosa è servito il manuale, e quindi aggiungere nuova informazione alla tua indagine.
+Se vai subito in dipartimento a controllare i filmati, potresti risparmiare tempo prezioso per mettere le mani sul ladro. Se invece rimani al museo, potresti scoprire a che cosa è servito il manuale, e quindi ottenere altre informazioni per la tua indagine.
 \
 &lt;h3&gt;(text-colour:$colore_dialogo)[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[Corri in centrale a controllare i filmati o rimani ancora sulla scena del crimine?]]
 =|=
-(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[[[Sì-&gt;5 Stat Sì]]]
+(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[[[Vai in centrale-&gt;5 Stat Sì]]]
 =|=
-(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[[[No-&gt;5 Stat No]]]&lt;/h3&gt;
+(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[[[Rimani al museo-&gt;5 Stat No]]]&lt;/h3&gt; {
+
+(display: &quot;piepagina&quot;)}</tw-passagedata><tw-passagedata pid="43" name="Opzione 1" tags="T_Nero Grigio_c" position="4175,650" size="100,100">
+## Pensi che il libro sia stato abbandonato dal ladro mentre scappava...
 \
-(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="43" name="Opzione 1" tags="T_Nero Grigio_c" position="4403,603" size="100,100">
-## Opzione 1
+... ma perché mai il ladro avrebbe dovuto portare con sé un libro, per poi abbandonarlo lì? Nella pianificazione di una rapina tutto viene studiato nei minimi dettagli, e quindi questa spiegazione pare poco plausibile.
+
+No, chiaramente doveva essere un’altra la ragione per cui lì si trova il libro, ma tu non hai più tempo per rifletterci: devi andare in dipartimento a [[visionare i filmati-&gt;Targhe]] con il maresciallo Caputo.
+
+Questo errore di valutazione ti costa però un //punto intelligenza//. {
+
+(set: $punti_int to $punti_int - 1)
+
+(display: &quot;piepagina&quot;)}</tw-passagedata><tw-passagedata pid="44" name="Opzione 2" tags="T_Nero Grigio_c" position="4175,775" size="100,100">
+## Pensi che il libro sia stato portato lì da qualcuno interno al museo...
 \
-(set: $punti_int to $punti_int - 1)\
+... e infatti, perché mai il ladro avrebbe dovuto portare con sé un libro, per poi abbandonarlo lì? Nella pianificazione di una rapina tutto viene studiato nei minimi dettagli, quindi è poco plausibile che si tratti di una banale dimenticanza. Insomma, hai preso la decisione giusta!
 
-Perché mai il ladro avrebbe dovuto portare con sé il manuale, per poi abbandonarlo lì? Nella pianificazione di una rapina tutto viene studiato nei minimi dettagli, quindi è impossibile che si tratti di una banale dimenticanza.
+Sei nervos$g, agitat$g, batti ripetutamente un piede a terra per sfogare la tensione: hai capito di essere sulla buona strada...
 
-No, chiaramente doveva essere un&#39;altra la ragione per cui lì si trova il libro, ma tu non hai più tempo per rifletterci, devi andare in dipartimento a [[visionare i filmati-&gt;Targhe]] con il maresciallo Caputo. 
-\
-Però, questo errore di valutazione ti costa un punto intuizione.
-\
-(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="44" name="Opzione 2" tags="T_Nero Grigio_c" position="4400,799" size="100,100">
-## Opzione 2
-\
-Perché mai il ladro avrebbe dovuto portare con sé il manuale, per poi abbandonarlo lì? Nella pianificazione di una rapina tutto viene studiato nei minimi dettagli, quindi è impossibile che si tratti di una banale dimenticanza. Quindi hai preso ovviamente la decisione giusta. 
+Tieni in mano il libro e lo esaminini di nuovo, con ancora più attenzione. È un libro molto grande e pesante, che contiene più di un migliaio di pagine sottili. Inizi a sfogliarlo. Cominci a guardarlo con attenzione, cercando qualcosa che ti sembri strano: dei codici, forse?
 
-Sei nervoso, agitato, batti ripetutamente un piede a terra per sfogare la tensione. Hai capito di essere sulla buona strada. Tieni in mano il manuale e lo esaminini di nuovo per l&#39;ennesima volta, con ancora più attenzione. È un libro molto grande e pesante, che contiene più di un migliaio di pagine sottili. Inizi a sfogliarlo. Guardi con attenzione ogni singola riga, cercando dei codici, qualcosa. Prima vai in ordine, e poi rinunci perché ci metteresti troppo, e sfogli le pagine alla ricerca di qualche segno utile. E poi, ti sembra che il libro sia ancora nuovo, che nessuno lo abbia mai usato per studiare. Non c&#39;è una piega, o una sottolineatura. Che sia stato comprato appunto per questo colpo? Ma perché, in quel caso?
-Ma con il passare dei minuti la tua convinzione inizia a sfumare, e cominci a sospettare che forse il manuale non c’entri nulla con la rapina. Che sia solo una fantasia? Però, quando avevi già esaminato quasi la metà delle pagine, noti che alcuni fogli hanno come una piccola piegatura al centro. Dalla deformazione capisci che doveva esserci inserito un oggetto sottile e rettangolare.
+Dopo poco, però, rinunci a questa analisi così meticolosa, perché capisci che ti richiederebbe troppo tempo, e sfogli le pagine alla ricerca di qualche segno utile. E poi, ti sembra che il libro sia ancora nuovo, che nessuno lo abbia mai usato per studiare: non c’è una piega, o una sottolineatura... Che sia stato comprato appunto per questo colpo? Ma perché, allora?
 
-&#39;&#39;I tuoi occhi si illuminano all’istante. “Ma certo, ora è tutto chiaro!”.&#39;&#39;
+Ma con il passare dei minuti la tua convinzione inizia a sfumare, e cominci a sospettare che forse il manuale non c’entri nulla con la rapina. Che sia solo una fantasia?
 
-Ti serve solo la conferma. Ritorni correndo dentro al museo e ti dirigi direttamente dentro l’ufficio della sicurezza. Tiri fuori la cassetta delle chiavi, la apri e ti accorgi che è come pensavi: manca una copia delle chiavi magnetiche. Ci hai visto giusto! &quot;Allora avevo proprio ragione: ci deve essere un complice interno al museo. Chiami subito il Maresciallo Caputo, che nel frattempo sta guidando per tornare in dipartimento, e gli spieghi quello che hai scoperto.
+Ma a un certo punto... che strano! Alcuni fogli hanno come una piccola piegatura al centro. Dalla deformazione capisci che doveva esserci inserito un oggetto sottile e rettangolare.
 
-(text-colour:#74c0fc)[&#39;&#39;[Detective $nome]&#39;&#39;]&quot;Maresciallo, mi ascolti: ho capito cosa è successo. C&#39;è un complice dentro al museo, o counque qualcuno che aveva accesso all&#39;ufficio sicurezza. Abbiamo capito che la rapina doveva passare inosservata, e che la statua rubata sarebbe stata sostituita da una sua copia. Ma per far si che ciò avvenisse, il ladro non avrebbe lasciato alcun segno di irruzione. Quindi bisognava fare in modo che il ladro potesse entrare dalla porta d&#39;emergenza, facendoli avere la chiave.&quot;
+&#39;&#39;I tuoi occhi si illuminano: “Ma certo, ora è tutto chiaro!”&#39;&#39;
 
-(text-colour:#74c0fc)[&#39;&#39;[Detective $nome]&#39;&#39;] &quot;Si certo, è una bella teoria, ma c&#39;è un problema: perché non gliel&#39;ha data in mano? Perché pensare a quessto processo complicato, quando sarebbe bastato passargliela di persona senza correre rischio?&quot;
+Ti serve solo la conferma. Entri nell’ufficio della sicurezza del museo, apri la cassetta delle chiavi e ti accorgi che è come pensavi: manca una copia delle chiavi magnetiche. Ci hai visto giusto! “Allora avevo proprio ragione: ci deve essere un complice interno al museo!”
 
-(text-colour:#74c0fc)[&#39;&#39;[Detective $nome]&#39;&#39;] &quot;Appunto, è questa la chiave del problema. Il complice non l’ha consegnata direttamente al ladro perché i due non si conoscono, e probabilmente il nostro uomo misterioso, con l&#39;accesso alla chiave, non voleva rendere nota la propria identità al ladro, per evitare di essere incastrato nel caso le cose andassero male. Forse colui che ha preso la chiave è il misterioro basista, e ha preferito mantenere segreta le propria identità. Per questo la chiave è stata nascosta sulle scale antincendio. Ci pensi: è un posto tranquillo, non sorvegliato, nascosto alla vista. Nessuno lo avrebbe visto lasciare la chiave, e il ladro sarebbe potuto passare a prenderla in un secondo momento. L’unico problema era che le scale antincendio sono esposte alle intemperie. La chiave da sola sarebbe stata troppo leggera ed avrebbe così rischiato di essere spostata da una folata di vento. Per quello che il complice ha deciso di inserirla all’interno di un voluminoso manuale plastificato. Un piano geniale: in questi giorni non ha mai piovuto, e nessuno avrebbe notato nulla di strano in un libro d&#39;arte in un museo. Così facendo la rapina si è svolta alla perfezione e non sono rimasti segni evidenti che qualcuno sia entrato di nascosto.&quot;.
+Chiami subito il Maresciallo Caputo, che nel frattempo sta guidando per tornare in dipartimento, e gli spieghi quello che hai scoperto.
 
-(text-colour:#74c0fc)[&#39;&#39;[Detective $nome]&#39;&#39;] &quot;Ma certo, così tutto torna. Bel colpo, agente $cognome! Ora vieni in dipartimento che guardiamo i filmati insieme.&quot;
+|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;Detective $nome&#39;&#39;]: Maresciallo, mi ascolti: penso di aver capito cosa è successo. C’è un complice che aveva accesso all’ufficio sicurezza. Abbiamo capito che la rapina doveva passare inosservata, e che la statua rubata sarebbe stata sostituita da una sua copia. Ma per far si che ciò avvenisse, il ladro non avrebbe lasciato alcun segno di irruzione. Quindi bisognava fare in modo che il ladro potesse entrare dalla porta di emergenza, facendogli avere la chiave.] \
 
-Lascia i Musei Capitolini e vai in dipartimento a [[visionare i filmati-&gt;Targhe]]]. 
+|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;Maresciallo Caputo&#39;&#39;]: Sì certo, è una bella teoria, ma c’è un problema: perché non gliel’ha data in mano? Perché pensare a questa cosa complicata del libro, quando sarebbe bastato passargliela di persona senza correre rischio?] \
 
-(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="45" name="Errore 2" tags="Grigio_c T_Nero" position="4898,1401" size="100,100">
+|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;Detective $nome&#39;&#39;] Appunto, è questa la chiave del problema. Il complice non l’ha consegnata direttamente al ladro perché i due non si conoscono, e probabilmente il nostro uomo misterioso, quello che ha accesso alla chiave, non voleva rendere nota la propria identità al ladro, per evitare di essere incastrato nel caso le cose andassero male. Forse colui che ha preso la chiave è il misterioro basista, e ha preferito mantenere segreta le propria identità. Per questo la chiave è stata nascosta sulle scale antincendio.
+
+Ci pensi: è un posto tranquillo, non sorvegliato, nascosto alla vista. Nessuno avrebbe notato qualcuno lasciare una chiave, e il ladro sarebbe potuto passare a prenderla in un secondo momento. L’unico problema era che le scale antincendio sono esposte alle intemperie, e una chiave sarebbe stata troppo leggera e avrebbe rischiato di essere spostata da una folata di vento. Per questo motivo il complice ha deciso di inserirla all’interno di un voluminoso manuale plastificato...
+
+Un piano geniale: in questi giorni non ha mai piovuto, e nessuno avrebbe notato nulla di strano in un libro d’arte in un museo. Così facendo la rapina si è svolta alla perfezione e non sono rimasti segni evidenti che qualcuno sia entrato di nascosto.] \
+
+|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;Maresciallo Caputo&#39;&#39;]: Ma certo, così tutto torna. Bel colpo, agente $cognome! Ora venga in dipartimento che guardiamo i filmati insieme.] \
+
+Lascia i Musei Capitolini e vai in dipartimento a [[visionare i filmati-&gt;Targhe]]]. {
+
+(display: &quot;piepagina&quot;)}</tw-passagedata><tw-passagedata pid="45" name="Errore 2" tags="Grigio_c T_Nero" position="4898,1401" size="100,100">
 ## Troppo tardi!
 \
 (set: $risp_sbagliate to $risp_sbagliate + 1) \
