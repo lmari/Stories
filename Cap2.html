@@ -150,9 +150,10 @@ Hai 5 punti a disposizione, da ripartire tra intelligenza e capacità relazional
 
 ---
 //[[Qualche informazione-&gt;credits]] su questo gioco e chi l’ha realizzato.//
+|piccolo&gt;[Versione 25 maggio 2022]
 {
 (live: 0.2s)[(if: $genere is &quot;maschile&quot;) [(set: $g to &quot;o&quot;)]
-(else:)[(set: $g to &quot;a&quot;)]]
+(else:) [(set: $g to &quot;a&quot;)]]
 
 (live: 0.2s)[(set: $punti_int to (num: $punti))]
 (live: 0.2s)[(set: $punti_soc to 5 - $punti_int)]
@@ -168,36 +169,41 @@ Hai 5 punti a disposizione, da ripartire tra intelligenza e capacità relazional
 (set: $risp_sbagliate_stat to 0)
 (set: $sospettato to &quot;&quot;)
 
-(set: $controlla_targhe to 0)
-(set: $scontrino1 to 0
+(set: $visitato_targhe to 0)
+(set: $scontrino1 to 0)
 (set: $flag_rebus to 0)
 (set: $soluzione_val to 0)
 (set: $Frappè_ogg to &quot;No&quot;)
 (set: $controlla_postit to 0)
 (set: $scontrino_generico to 0)
 
-(if: (trimmed: &quot; &quot;, $nome) is &quot;&quot;) [(set: $nome to &quot;Alex&quot;)] \
+(if: (trimmed: &quot; &quot;, $nome) is &quot;&quot;) [(set: $nome to &quot;Alex&quot;)]
 (if: (trimmed: &quot; &quot;, $cognome) is &quot;&quot;) [(set: $cognome to &quot;Bianchi&quot;)]
-}</tw-passagedata><tw-passagedata pid="2" name="Targhe" tags="Grigio_c T_Nero" position="4594,897" size="100,100">
+}</tw-passagedata><tw-passagedata pid="2" name="Targhe" tags="Grigio_c T_Nero" position="4400,900" size="100,100">
 ## Scova il veicolo del colpevole
 \
-(if: $controlla_targhe is 0)[In ogni modo, anche se ne conosci l&#39;identità, il ladro è scappato. Devi attivarti per ritrovarlo, e magari recuperare anche il simbolo della città eterna. Arrivato alla centrale di polizia, incontri il maresciallo Caputo che ti viene incontro.
+(if: $visitato_targhe is 0) [Anche se molto probabilmente ne conosci l’identità, il ladro è scappato. Devi attivarti per ritrovarlo, e magari recuperare anche la Lupa capitolina, simbolo della città eterna.
 
-(text-colour:$colore_dialogo)[&#39;&#39;[Maresciallo Caputo]&#39;&#39;]: Detective, l&#39;agente Riccardi ci ha anticipato e si è messo a controllare i video di una banca che ha sede su via Monte dei Faggi, che è una strada obbligata per lasciare il museo. Si è scritto tutte le targhe delle auto e le relative ore di passaggio. Inoltre, dalle ultime rilevazioni noi sappiamo che, il ladro deve essere uscito dal museo verso le 2:35, e più o meno ci si mette circa 20 minuti ad arrivare a via Monte dei Faggi. Ecco, questa è la lista con tutte le targhe passate dalle 2:30 alle 3:10, che quindi dovrebbe contenere di sicuro il mezzo usato da David Mercer per fuggire. Siamo sicuri di ciò: la probabilità che il mezzo sia fra questi è del 100%. Inoltre, un guardiano notturno ha visto un mezzo muoversi in modo sospettoso vicino al museo. Non ricorda che veicolo fosse, ma ricorda che era moderna, perché aveva avuto l&#39;impressione che fosse stato immatricolato di recente.] 
+Arrivato alla centrale di polizia, incontri il maresciallo Caputo che ti viene incontro.
+
+|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;Maresciallo Caputo&#39;&#39;]: Detective $nome, l’agente Riccardi ci ha anticipato e si è messo a controllare i video di una banca che ha sede su via Monte dei Faggi, che è una strada obbligata per lasciare il museo. Di ogni auto ha scritto la targa e la relativa ora di passaggio.
+
+Inoltre, dalle ultime rilevazioni, sappiamo che il ladro deve essere uscito dal museo verso le 2:35. Dato che ci si mettono circa 20 minuti ad arrivare a via Monte dei Faggi, questo elenco è quello che ci dovrebbe essere utile: ci sono i dati relativi ai veicoli passati tra le 2:30 e le 3:10, e quindi tra questi ci dovrebbe essere la targa del mezzo usato da David Mercer per fuggire. Penso che possiamo essere certi di questo...
+
+Un’altra informazione che abbiamo acquisito nel frattempo è che un guardiano notturno ha visto un mezzo muoversi in modo sospetto vicino al museo. Non ricorda che veicolo fosse, ma ricorda che dava l’idea di essere nuovo, e quindi possiamo supporre che il veicolo che cerchiamo sia stato immatricolato di recente.]]
 \
-(set: $controlla_targhe to 1)\
-
 Hai quindi a disposizione due dati:
-* sai che l&#39;auto è passata dopo le 2:45, ma che non potrà essere passata troppo tempo dopo (altrimenti sarebbe stata intercettata dal guardiano notturno venuto a controllare);
-* sai che l’auto è stata di recente immatricolazione.
+* sai che l’auto è passata dopo le 2:45, ma che non può essere passata troppo tempo dopo, dato che in quel caso sarebbe stata intercettata dal guardiano notturno venuto a controllare;
+* sai che l’auto è di recente immatricolazione. \
 
-Di seguente, la lista stilata dall&#39;agente Riccardi. 
+Ecco l’elenco preparato dall’agente Riccardi. \
 \
 =|=
 (text-colour:#339af0)[&#39;&#39;Targhe:&#39;&#39;]
-(text-colour:#37b24d)[[[GD 829 QC|Errore 1]]
-[[EE 381 OI|Errore 1]]
-[[FP 345 LS|Errore 1]]
+(text-colour:#37b24d)[\
+[[GD 829 QC-&gt;Errore 1]]
+[[EE 381 OI-&gt;Errore 1]]
+[[FP 345 LS-&gt;Errore 1]]
 [[CD 235 FD-&gt;Errore 1]]
 [[EH 846 EF-&gt;Errore 1]]
 [[DU 170 HP-&gt;Errore 1]]
@@ -236,11 +242,12 @@ Di seguente, la lista stilata dall&#39;agente Riccardi.
 3:05
 3:09
 |==|
-\
-Se non sai come funziona l&#39;assegnazione delle targhe delle automobili, puoi mandare un messaggio su Whatsapp alla tua amica Valeria Lombroni, ingegnera meccanica e grande esperta di automobili, per chiederle [[come si legge una targa]]. Altrimenti, clicca sulla targa che pensi corrisponda al mezzo del colpevole, per scoprire se sia giusta o sbagliata.
-\
-(display: &quot;piepagina&quot;)
-</tw-passagedata><tw-passagedata pid="3" name="Errore 1" tags="Grigio_c T_Nero" position="4895,1198" size="100,100">
+
+Se non sai come funziona l’assegnazione delle targhe delle automobili, puoi mandare un messaggio su whatsapp alla tua amica Valeria Lombroni, ingegnera meccanica e grande esperta di automobili, per chiederle [[come si legge una targa]]. Altrimenti, seleziona la targa che pensi corrisponda al veicolo del colpevole, per scoprire se hai fatto la scelta giusta o sbagliata. {
+
+(set: $visitato_targhe to 1)\
+
+(display: &quot;piepagina&quot;)}</tw-passagedata><tw-passagedata pid="3" name="Errore 1" tags="Grigio_c T_Nero" position="4895,1198" size="100,100">
 ## Troppo presto!
 \
 (set: $risp_sbagliate to $risp_sbagliate + 1) \
@@ -345,7 +352,7 @@ Non ci pensi due volte. Ti tiri su dal letto, ti fai una doccia in fretta, e in 
 
 In treno ti metti a riflettere su chi possa aver compiuto un furto del genere, e se per caso esista una connessione fra questo furto e quello dell’Hayez. Insomma, come diceva il tuo vecchio professore di criminologia, le coincidenze non esistono: raramente l’universo è così pigro. In un batter d’occhio, il treno è arrivato, e appena quattro ore dopo aver ascoltato il messaggio di Tomba sei già sul luogo del misfatto, accolt$g da due colleghi romani: il maresciallo Caputo e l’agente Riccardi. Vi presentate, scambiate qualche convenevole e poi vi mettete al lavoro.
 
-&lt;img src=&#39;res2/roma.jpeg&#39; class=&#39;center&#39; width=&#39;600&#39;&gt;
+&lt;img src=&#39;res2/roma.jpeg&#39; class=&#39;full&#39;&gt;
 
 |||||=
 |dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;Detective $nome&#39;&#39;]: Maresciallo Caputo, mi diceva che il protocollo di sicurezza della piazza del Campidoglio comporta diverse pattuglie di guardia che controllano la statua e si danno il cambio durante la notte, giusto?  Se è così, allora chiunque abbia effettuato il furto deve avere aspettato il momento esatto in cui le guardie si sono date il cambio. Cosa ne pensa?]
@@ -928,14 +935,14 @@ Arrivat$g a questo punto, hai quattro possibili strade, per acquisire informazio
 * [[le persone non italiane che potrebbero aver compiuto il furto-&gt;stranieri Stat]];
 * [[i filmati del furto-&gt;filmati Stat]];
 * [[i percorsi nel museo dei possibili sospettati-&gt;percorsi Stat]];
-* [[i tempi di percorrenza nel museo dei possibili sospettati-&gt;tempi Stat]].
+* [[i tempi di percorrenza nel museo dei possibili sospettati-&gt;tempi Stat]]. \
 
 (if: $sospettato is not &quot;&quot;) [Oppure, se pensi di avere informazione sufficiente, puoi [[decidere di accusare-&gt;2 Stat]] la persona che sospetti sia la responsabile del furto.] {
 
-(display: &quot;piepagina&quot;)}</tw-passagedata><tw-passagedata pid="33" name="stranieri Stat" tags="Grigio_c T_Nero" position="3001,601.3333333333334" size="100,100">
+(display: &quot;piepagina&quot;)}</tw-passagedata><tw-passagedata pid="33" name="stranieri Stat" tags="Grigio_c T_Nero" position="3001,601" size="100,100">
 ## Nazionalità dei partecipanti al corso d’arte dei Musei Capitolini
  \
-&lt;img src=&#39;res2/graf1.png&#39; class=&#39;center&#39; width=&#39;600&#39;&gt; \
+&lt;img src=&#39;res2/graf1.png&#39; class=&#39;full&#39;&gt; \
  \
 (if: $visitato_stranstat is 0) [Prendi in mano il grafico che ti ha fornito un funzionario del museo, appena arrivato, e lo osservi con cura...
 
@@ -1119,7 +1126,7 @@ Se vai subito in dipartimento a controllare i filmati, potresti risparmiare temp
 =|=
 (align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[[[Rimani al museo-&gt;5 Stat No]]]&lt;/h3&gt; {
 
-(display: &quot;piepagina&quot;)}</tw-passagedata><tw-passagedata pid="43" name="Opzione 1" tags="T_Nero Grigio_c" position="4175,650" size="100,100">
+(display: &quot;piepagina&quot;)}</tw-passagedata><tw-passagedata pid="43" name="Opzione 1" tags="T_Nero Grigio_c" position="4200,650" size="100,100">
 ## Pensi che il libro sia stato abbandonato dal ladro mentre scappava...
 \
 ... ma perché mai il ladro avrebbe dovuto portare con sé un libro, per poi abbandonarlo lì? Nella pianificazione di una rapina tutto viene studiato nei minimi dettagli, e quindi questa spiegazione pare poco plausibile.
@@ -1130,7 +1137,7 @@ Questo errore di valutazione ti costa però un //punto intelligenza//. {
 
 (set: $punti_int to $punti_int - 1)
 
-(display: &quot;piepagina&quot;)}</tw-passagedata><tw-passagedata pid="44" name="Opzione 2" tags="T_Nero Grigio_c" position="4175,775" size="100,100">
+(display: &quot;piepagina&quot;)}</tw-passagedata><tw-passagedata pid="44" name="Opzione 2" tags="T_Nero Grigio_c" position="4200,775" size="100,100">
 ## Pensi che il libro sia stato portato lì da qualcuno interno al museo...
 \
 ... e infatti, perché mai il ladro avrebbe dovuto portare con sé un libro, per poi abbandonarlo lì? Nella pianificazione di una rapina tutto viene studiato nei minimi dettagli, quindi è poco plausibile che si tratti di una banale dimenticanza. Insomma, hai preso la decisione giusta!
