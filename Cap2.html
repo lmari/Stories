@@ -142,25 +142,28 @@ Hai 5 punti a disposizione, da ripartire tra intelligenza e capacità relazional
 (live: 0.5s)[Avrai dunque $punti_int //punt(if: $punti_int is 1)[o](else:)[i] intelligenza// e $punti_soc //punt(if: $punti_soc is 1)[o](else:)[i] socialità//].
 
 
-|enfat&gt;[Benissimo: puoi ora [[iniziare-&gt;1 Introduzione]] la tua avventura!]
+|enfat&gt;[Benissimo: puoi ora [[iniziare la tua avventura!-&gt;1 Introduzione]]]
 
 ---
 //[[Qualche informazione-&gt;credits]] su questo gioco e chi l’ha realizzato.//
-
-(live: 0.2s)[(if: $genere is &quot;maschile&quot;) [(set: $g to &quot;o&quot;)] \
+{
+(live: 0.2s)[(if: $genere is &quot;maschile&quot;) [(set: $g to &quot;o&quot;)]
 (else:)[(set: $g to &quot;a&quot;)]]
 
 (live: 0.2s)[(set: $punti_int to (num: $punti))]
 (live: 0.2s)[(set: $punti_soc to 5 - $punti_int)]
-\
-&lt;!-- inizializza le variabili globali che sono usate in seguito --&gt;
+
+&lt;!-- inizializza le variabili globali usate in seguito --&gt;
 (set: $risp_sbagliate to 0)
 (set: $extra_punti to 0)
+
 (set: $visitato_stranstat to 0)
 (set: $visitato_videostat to 0)
 (set: $visitato_percorsistat to 0)
-(set: $risp_stat_sbagliata to 0)
-(set: $new_point to 0)
+(set: $visitato_tempistat to 0)
+(set: $risp_sbagliate_stat to 0)
+(set: $sospettato to &quot;&quot;)
+
 (set: $controlla_targhe to 0)
 (set: $scontrino1 to 0
 (set: $flag_rebus to 0)
@@ -170,7 +173,8 @@ Hai 5 punti a disposizione, da ripartire tra intelligenza e capacità relazional
 (set: $scontrino_generico to 0)
 
 (if: (trimmed: &quot; &quot;, $nome) is &quot;&quot;) [(set: $nome to &quot;Alex&quot;)] \
-(if: (trimmed: &quot; &quot;, $cognome) is &quot;&quot;) [(set: $cognome to &quot;Bianchi&quot;)]</tw-passagedata><tw-passagedata pid="2" name="Targhe" tags="Grigio_c T_Nero" position="4594,897" size="100,100">
+(if: (trimmed: &quot; &quot;, $cognome) is &quot;&quot;) [(set: $cognome to &quot;Bianchi&quot;)]
+}</tw-passagedata><tw-passagedata pid="2" name="Targhe" tags="Grigio_c T_Nero" position="4594,897" size="100,100">
 ## Scova il veicolo del colpevole
 \
 (if: $controlla_targhe is 0)[In ogni modo, anche se ne conosci l&#39;identità, il ladro è scappato. Devi attivarti per ritrovarlo, e magari recuperare anche il simbolo della città eterna. Arrivato alla centrale di polizia, incontri il maresciallo Caputo che ti viene incontro.
@@ -920,9 +924,11 @@ Arrivat$g a questo punto, hai quattro possibili strade, per acquisire informazio
 * [[le persone non italiane che potrebbero aver compiuto il furto-&gt;stranieri Stat]];
 * [[i filmati del furto-&gt;filmati Stat]];
 * [[i percorsi nel museo dei possibili sospettati-&gt;percorsi Stat]];
-* [[i tempi di percorrenza nel museo dei possibili sospettati-&gt;tempi Stat]]. \
- \
-(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="33" name="stranieri Stat" tags="Grigio_c T_Nero" position="3001,603" size="100,100">
+* [[i tempi di percorrenza nel museo dei possibili sospettati-&gt;tempi Stat]].
+
+(if: $sospettato is not &quot;&quot;) [Oppure, se pensi di avere informazione sufficiente, puoi [[decidere di accusare-&gt;2 Stat]] la persona che sospetti sia la responsabile del furto.] {
+
+(display: &quot;piepagina&quot;)}</tw-passagedata><tw-passagedata pid="33" name="stranieri Stat" tags="Grigio_c T_Nero" position="3001,601.3333333333334" size="100,100">
 ## Nazionalità dei partecipanti al corso d’arte dei Musei Capitolini
  \
 &lt;img src=&#39;res2/graf1.png&#39; class=&#39;center&#39; width=&#39;600&#39;&gt; \
@@ -964,26 +970,41 @@ Se pensi dunque di avere informazioni sufficienti, prosegui e [[scegli il sospet
 \
 (if: $visitato_percorsistat is 0) [Un giro di telefonate e il supporto di uno dei tecnici informatici del museo ti permettono di avere sotto mano le heatmap dei percorsi di tutti gli studenti del corso che hanno visitato il museo nell’ultima settimana, e fra i quali, verosimilmente, si nasconde la persona che nella fuga ha perso il manuale d’arte in inglese.
 
-Prima di guardare le heatmap, ti ricordi che la Lupa si trova -- “si trovava”, pensi con un sospiro -- nell’angolo in basso a sinistra della mappa del museo.]
-(else:) [Eccoti nuovamente a lavorare sui percorsi nel museo dei sospettati... Prima di guardare le heatmap, ti ricordi che la Lupa
-si trovava nell’angolo in basso a sinistra della mappa del museo.]
+Prima di guardare le heatmap, ti ricordi che la Lupa si trova -- “si trovava”, pensi con un sospiro... -- nell’angolo in basso a sinistra della mappa del museo.]
+(else:) [Eccoti nuovamente a lavorare sui percorsi nel museo dei sospettati...
+
+Prima di guardare le heatmap, ti ricordi che la Lupa si trovava nell’angolo in basso a sinistra della mappa del museo.]
 
 &#39;&#39;Di quale sospettato vuoi visualizzare la heatmap?&#39;&#39;
+(dropdown: bind $n, &quot;Marco Bagni&quot;, &quot;Andres Salza&quot;, &quot;Chiara Rassio&quot;, &quot;Sofia Cremoli&quot;, &quot;Axel Jorri&quot;, &quot;Beatrice Ravilio&quot;, &quot;Giorgio Entommi&quot;, &quot;Matilde Francolini&quot;, &quot;Rosalie Renoire&quot;, &quot;Franco Drevi&quot;, &quot;David Mercer&quot;, &quot;Valerio Liggio&quot;, &quot;Rebecca Gerri&quot;, &quot;Vittorio Iozzi&quot;, &quot;Damien Bunchard&quot;, &quot;Fabio Bressa&quot;, &quot;Jacopo Attolo&quot;, &quot;Isabelle Tucci&quot;, &quot;Tommaso Millezza&quot;)
+(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[(live: 0.2s)[&lt;h3&gt;&#39;&#39;$n&#39;&#39;&lt;/h3&gt; {
+(set: _x to (cond: $n is &quot;Marco Bagni&quot;, &quot;Q8c0GW3/Heatmap1&quot;,
+$n is &quot;Andres Salza&quot;, &quot;xgrFQgn/Heatmap2&quot;,
+$n is &quot;Chiara Rassio&quot;, &quot;qFLW0VH/Heatmap3&quot;,
+$n is &quot;Sofia Cremoli&quot;, &quot;1fY5sq1/Heatmap4&quot;,
+$n is &quot;Axel Jorri&quot;, &quot;XJsN9HP/Heatmap5&quot;,
+$n is &quot;Beatrice Ravilio&quot;, &quot;SKkgd7d/Heatmap6&quot;,
+$n is &quot;Giorgio Entommi&quot;, &quot;HTS4zqb/Heatmap7&quot;,
+$n is &quot;Matilde Francolini&quot;, &quot;xsjYH98/Heatmap8&quot;,
+$n is &quot;Rosalie Renoire&quot;, &quot;Heatmap9&quot;,
+$n is &quot;Franco Drevi&quot;, &quot;tYkmrQg/Heatmap10&quot;,
+$n is &quot;David Mercer&quot;, &quot;bBVgT0W/Heatmap19&quot;,
+$n is &quot;Valerio Liggio&quot;, &quot;wQm0vhX/Whats-App-Image-2022-05-19-at-18-58-22&quot;,
+$n is &quot;Rebecca Gerri&quot;, &quot;9scYLd7/Whats-App-Image-2022-05-19-at-19-28-39&quot;,
+$n is &quot;Vittorio Iozzi&quot;, &quot;rQ9V44h/Heatmap13&quot;,
+$n is &quot;Damien Bunchard&quot;, &quot;x7G6VP5/Heatmap14&quot;,
+$n is &quot;Fabio Bressa&quot;, &quot;3N84qk3/Heatmap15&quot;,
+$n is &quot;Jacopo Attolo&quot;, &quot;2YGNYX9/Heatmap16&quot;,
+$n is &quot;Isabelle Tucci&quot;, &quot;5FgmdkW/Heatmap17&quot;, &quot;7g66Q0Z/Heatmap18&quot;))
 
-(dropdown: 2bind $stat_3_name, &quot;Marco Bagni&quot;, &quot;Andres Salza&quot;, &quot;Chiara Rassio&quot;, &quot;Sofia Cremoli&quot;, &quot;Axel Jorri&quot;, &quot;Beatrice Ravilio&quot;, &quot;Giorgio Entommi&quot;, &quot;Matilde Francolini&quot;, &quot;Rosalie Renoire&quot;, &quot;Franco Drevi&quot;, &quot;David Mercer&quot;, &quot;Valerio Liggio&quot;, &quot;Rebecca Gerri&quot;, &quot;Vittorio Iozzi&quot;, &quot;Damien Bunchard&quot;, &quot;Fabio Bressa&quot;, &quot;Jacopo Attolo&quot;, &quot;Isabelle Tucci&quot;, &quot;Tommaso Millezza&quot;)
-
-(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[(live: 0.2s)[&lt;h3&gt;&#39;&#39;$stat_3_name&#39;&#39;&lt;/h3&gt;(if:$stat_3_name is &quot;Marco Bagni&quot;)[&lt;img src=https://i.ibb.co/Q8c0GW3/Heatmap1.png&gt;]
-
-(if:$stat_3_name is &quot;Andres Salza&quot;)[&lt;style&gt; img {max-width: 100%; max-height: 100%; } &lt;/style&gt; &lt;img src=https://i.ibb.co/xgrFQgn/Heatmap2.png&gt; &lt;/div&gt;]
-&lt;!--
-(if:$stat_3_name is &quot;Chiara Rassio&quot;)[&lt;style&gt; img {max-width: 100%; max-height: 100%; } &lt;/style&gt; &lt;img src=https://i.ibb.co/qFLW0VH/Heatmap3.png&gt; &lt;/div&gt;](if:$stat_3_name is &quot;Sofia Cremoli&quot;)[&lt;style&gt; img {max-width: 100%; max-height: 100%; } &lt;/style&gt; &lt;img src=https://i.ibb.co/1fY5sq1/Heatmap4.png&gt; &lt;/div&gt;](if:$stat_3_name is &quot;Axel Jorri&quot;)[&lt;style&gt; img {max-width: 100%; max-height: 100%; } &lt;/style&gt; &lt;img src=https://i.ibb.co/XJsN9HP/Heatmap5.png&gt; &lt;/div&gt;](if:$stat_3_name is &quot;Beatrice Ravilio&quot;)[&lt;style&gt; img {max-width: 100%; max-height: 100%; } &lt;/style&gt; &lt;img src=https://i.ibb.co/SKkgd7d/Heatmap6.png&gt; &lt;/div&gt;](if:$stat_3_name is &quot;Giorgio Entommi&quot;)[&lt;style&gt; img {max-width: 100%; max-height: 100%; } &lt;/style&gt; &lt;img src=https://i.ibb.co/HTS4zqb/Heatmap7.png&gt; &lt;/div&gt;](if:$stat_3_name is &quot;Matilde Francolini&quot;)[&lt;style&gt; img {max-width: 100%; max-height: 100%; } &lt;/style&gt; &lt;img src=https://i.ibb.co/xsjYH98/Heatmap8.png&gt; &lt;/div&gt;](if:$stat_3_name is &quot;Rosalie Renoire&quot;)[&lt;style&gt; img {max-width: 100%; max-height: 100%; } &lt;/style&gt; &lt;img src=https://i.ibb.co/JHPck53/Heatmap9.png&gt; &lt;/div&gt;](if:$stat_3_name is &quot;Franco Drevi&quot;)[&lt;style&gt; img {max-width: 100%; max-height: 100%; } &lt;/style&gt; &lt;img src=https://i.ibb.co/tYkmrQg/Heatmap10.png&gt; &lt;/div&gt;](if:$stat_3_name is &quot;David Mercer&quot;)[&lt;style&gt; img {max-width: 100%; max-height: 100%; } &lt;/style&gt; &lt;img src=https://i.ibb.co/bBVgT0W/Heatmap19.png&gt; &lt;/div&gt;](if:$stat_3_name is &quot;Valerio Liggio&quot;)[&lt;style&gt; img {max-width: 100%; max-height: 100%; } &lt;/style&gt; &lt;img src=https://i.ibb.co/wQm0vhX/Whats-App-Image-2022-05-19-at-18-58-22.jpg&gt; &lt;/div&gt;](if:$stat_3_name is &quot;Rebecca Gerri&quot;)[&lt;style&gt; img {max-width: 100%; max-height: 100%; } &lt;/style&gt; &lt;img src=https://i.ibb.co/9scYLd7/Whats-App-Image-2022-05-19-at-19-28-39.jpg&gt; &lt;/div&gt;](if:$stat_3_name is &quot;Vittorio Iozzi&quot;)[&lt;style&gt; img {max-width: 100%; max-height: 100%; } &lt;/style&gt; &lt;img src=https://i.ibb.co/rQ9V44h/Heatmap13.png&gt; &lt;/div&gt;](if:$stat_3_name is &quot;Damien Bunchard&quot;)[&lt;style&gt; img {max-width: 100%; max-height: 100%; } &lt;/style&gt; &lt;img src=https://i.ibb.co/x7G6VP5/Heatmap14.png&gt; &lt;/div&gt;](if:$stat_3_name is &quot;Fabio Bressa&quot;)[&lt;style&gt; img {max-width: 100%; max-height: 100%; } &lt;/style&gt; &lt;img src=https://i.ibb.co/3N84qk3/Heatmap15.png&gt; &lt;/div&gt;](if:$stat_3_name is &quot;Jacopo Attolo&quot;)[&lt;style&gt; img {max-width: 100%; max-height: 100%; } &lt;/style&gt; &lt;img src=https://i.ibb.co/2YGNYX9/Heatmap16.png&gt; &lt;/div&gt;](if:$stat_3_name is &quot;Isabelle Tucci&quot;)[&lt;style&gt; img {max-width: 100%; max-height: 100%; } &lt;/style&gt; &lt;img src=https://i.ibb.co/5FgmdkW/Heatmap17.png&gt; &lt;/div&gt;](if:$stat_3_name is &quot;Tommaso Millezza&quot;)[&lt;style&gt; img {max-width: 100%; max-height: 100%; } &lt;/style&gt; &lt;img src=https://i.ibb.co/7g66Q0Z/Heatmap18.png&gt; ]--&gt;
-]]
+(print: &quot;&lt;img src=&#39;https://i.ibb.co/&quot; + _x + &quot;.png&#39; class=&#39;full&#39;&gt;&quot;)}
+]] \
 
 Se pensi di aver bisogno di una spiegazione sulle heatmap, puoi [[mandare un messaggio-&gt;scrivi a Rebecca 2]] alla tua amica Rebecca.
 
 Questa invece è la heatmap di tutte le persone che hanno visitato il museo nell’ultima settimana.
 \
-(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[&lt;style&gt; img {max-width: 100%; max-height: 100%; } &lt;/style&gt; &lt;img src=https://i.ibb.co/P6jn5pz/Heatmap20.png&gt; &lt;/div&gt;]
+(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[&lt;img src=&#39;https://i.ibb.co/P6jn5pz/Heatmap20.png&#39; class=&#39;full&#39;&gt;]
 \
 Se pensi dunque di avere informazioni sufficienti, prosegui e [[scegli il sospettato-&gt;2 Stat]] oppure, [[torna indietro e analizza un’altra prova-&gt;1 Stat]]. {
 
@@ -991,28 +1012,31 @@ Se pensi dunque di avere informazioni sufficienti, prosegui e [[scegli il sospet
 
 (display: &quot;piepagina&quot;)}</tw-passagedata><tw-passagedata pid="36" name="tempi Stat" tags="Grigio_c T_Nero" position="3000,1075" size="100,100">
 ## Tempi di percorrenza
+ \
+(if: $visitato_tempistat is 0) [Ti rechi nell’ufficio gestione flussi del museo, dove un addetto è appena arrivato e si sta giusto levando un cappotto leggero. Ti presenti e gli spieghi ciò di cui ha bisogno. Lui è affabile e disponibile, si mette subito al lavoro. Nel giro di qualche minuti, la stampante inizia a rumoreggiare, e ne viene fuori in pochi secondi uno schema estratto da un foglio di calcolo. “Agente $cognome, questi sono i tempi di percorrenza dall’ingresso all’uscita del museo dei suoi possibili sospettati.”] \
+(else:) [Eccoti a consultare nuovamente la tabella dei tempi di percorrenza, dall’ingresso all’uscita del museo, dei possibili sospettati.]
 
-(if: $flag_tempi_Stat is 0)[Ti rechi nell&#39;ufficio gestione flussi del museo, dove un addetto è appena arrivato e si sta giusto levando un cappotto leggero. Ti presenti e gli spieghi ciò di cui ha bisogno. Lui è affabile e disponibile, si mette subito al lavoro. Nel giro di qualche minuti, la stampante inizia a rumoreggiare, e ne viene fuori in pochi secondi uno schema estratto da Excel. &quot;Agente $cognome, questi sono i tempi di percorrenza dall&#39;ingresso all&#39;uscita del museo dei suoi possibili sospettati&quot;.] 
-\
-(set: $flag_tempi_Stat to 1) \
+&lt;img src=&#39;res2/tabellatempi.jpg&#39; class=&#39;full&#39;&gt;
 
-&lt;style&gt; img {max-width: 50%; max-height: 100%; } &lt;/style&gt; &lt;img src=https://i.ibb.co/4jj0LLG/IMG-8792.jpg&gt; &lt;/div&gt;
+Se pensi dunque di avere informazioni sufficienti, prosegui e [[scegli il sospettato-&gt;2 Stat]] oppure, [[torna indietro e analizza un’altra prova-&gt;1 Stat]]. {
 
-Se vuoi, vai avanti e [[scegli il colpevole-&gt;2 Stat]] oppure, [[torna indietro e analizza un&#39;altra prova-&gt;1 Stat]].
+(set: $visitato_tempistat to 1)
 
-(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="37" name="2 Stat" tags="Grigio_c T_Nero" position="3398,898" size="100,100">
+(display: &quot;piepagina&quot;)}</tw-passagedata><tw-passagedata pid="37" name="2 Stat" tags="Grigio_c T_Nero" position="3398,898" size="100,100">
 ## Scegli chi accusare?
  \
-Bene, $nome $cognome, hai analizzato tutte le prove a disposizone. Ora, secondo te, chi fra questi possibili sospettati è il colpevole?
-\
-(dropdown: 2bind $stat_scelta_name,&quot;Marco Bagni&quot;, &quot;Andres Salza&quot;,&quot;Chiara Rassio&quot;,&quot;Sofia Cremoli&quot;,&quot;Axel Jorri&quot;,&quot;Beatrice Ravilio&quot;,&quot;Giorgio Entommi&quot;,&quot;Matilde Francolini&quot;,&quot;Rosalie Renoire&quot;,&quot;Franco Drevi&quot;,&quot;David Mercer&quot;,&quot;Valerio Liggio&quot;,&quot;Rebecca Gerri&quot;,&quot;Vittorio Iozzi&quot;,&quot;Damien Bunchard&quot;,&quot;Fabio Bressa&quot;,&quot;Jacopo Attolo&quot;,&quot;Isabelle Tucci&quot;,&quot;Tommaso Millezza&quot;)
-\
-(live: 1s)[(if: $stat_scelta_name is &quot;David Mercer&quot;)[[[Vai avanti-&gt;risp giusta Stat]]]
-(else:)[[[Vai avanti-&gt;risp sbagliata Stat]]]]
-\
-(display: &quot;piepagina&quot;)
+Bene, agente $nome $cognome, hai lavorato un po’ sull’informazione disponibile.
 
-</tw-passagedata><tw-passagedata pid="38" name="scrivi a Rebecca 1" tags="Grigio_c T_Nero" position="3201,603" size="100,100">
+Quale persona sospetti dunque sia la responsabile del furto?
+
+(dropdown: bind $sospettato,&quot;Marco Bagni&quot;, &quot;Andres Salza&quot;,&quot;Chiara Rassio&quot;,&quot;Sofia Cremoli&quot;,&quot;Axel Jorri&quot;,&quot;Beatrice Ravilio&quot;,&quot;Giorgio Entommi&quot;,&quot;Matilde Francolini&quot;,&quot;Rosalie Renoire&quot;,&quot;Franco Drevi&quot;,&quot;David Mercer&quot;,&quot;Valerio Liggio&quot;,&quot;Rebecca Gerri&quot;,&quot;Vittorio Iozzi&quot;,&quot;Damien Bunchard&quot;,&quot;Fabio Bressa&quot;,&quot;Jacopo Attolo&quot;,&quot;Isabelle Tucci&quot;,&quot;Tommaso Millezza&quot;) {
+
+(live: 1s)[
+(if: $sospettato is &quot;David Mercer&quot;) [ [[Conferma la tua scelta-&gt;risp giusta Stat]] ]
+(else:) [ [[Conferma la tua scelta-&gt;risp sbagliata Stat]] ]
+]
+
+(display: &quot;piepagina&quot;)}</tw-passagedata><tw-passagedata pid="38" name="scrivi a Rebecca 1" tags="Grigio_c T_Nero" position="3201,603" size="100,100">
 ## Chiedi un consiglio a Rebecca a proposito di grafici a torta
  \
 Mandi un messaggio a Rebecca, spiegandole la situazione e inviandole la foto del grafico a torta che ti hanno apppena fatto vedere. Lei, nonostante la tarda ora, ti risponde dopo pochi minuti con un messaggio abbastanza chiaro. 
@@ -1022,37 +1046,45 @@ Mandi un messaggio a Rebecca, spiegandole la situazione e inviandole la foto del
 Rileggi più volte il messaggio, cercando di capire che cosa voglia dire Rebecca, che è molto preparata ma ogni tanto usa parole strane. Quando sei soddisfatt$g e hai finalmente capito, [[riguarda il grafico a torta-&gt;stranieri Stat]] oppure [[torna indietro e analizza un’altra prova-&gt;1 Stat]]. {
 
 (display: &quot;piepagina&quot;)}</tw-passagedata><tw-passagedata pid="39" name="scrivi a Rebecca 2" tags="Grigio_c T_Nero" position="3200,923" size="100,100">
-## Chiedi consiglio a Rebecca riguardo le Heatmap
+## Chiedi consiglio a Rebecca a proposito delle heatmap
 \
-Mandi un messaggio a Rebecca, spiegandole la situazione e mandandole la foto del grafico a torta che ti hanno apppena fatto vedere. Lei, nonostante la tarda ora, ti risponde dopo pochi minuti un messaggio abbastanza chiaro. 
+Mandi un messaggio a Rebecca, chiedendole il favore di spiegarti, con parole semplici, come si legge una heatmap. Al solito, la sua risposta arriva in fretta... 
 
-//&quot;Ciao $nome! Eccoci! Come sta andando a Roma? Ooooh , io amoooo le heatmap!!! Vedi, sono degli strumenti semplici ed efficaci. Praticamente, le celle con un colore più intenso sono quelle che descrivono delle zone del museo in cui ha camminato più gente, oppure su cui la singola persona osservata ha camminato di più. Sai come potresti usarla? Cerca di trovare qualche percorso strano, molto diverso dal percorso medio: magari era qualcuno non interessato alle opere d&#39;arte, che stava controllando la sicurezza e le telecamere! A presto!!!&quot;//
+//&quot;Ciao $nome! Eccoci! Sempre tutto bene a Roma? Ooooh, io amoooo le heatmap!!! Vedi, sono degli strumenti semplici ed efficaci. In pratica, è come se sulla mappa fosse sovrapposta una griglia invisibile, che divide la mappa stessa in piccole parti, che sono colorate: le parti con un colore più intenso sono quelle che descrivono delle zone del museo in cui ha camminato più gente, oppure in cui una singola persona si è fermata più a lungo. Sai come potresti usarla? Cerca di trovare una mappa in cui la zona che ti interessa è più colorata: magari si riferisce a qualcuno che non era interessato alle opere d’arte, e che invece stava controllando la sicurezza e le telecamere! A presto!!!&quot;//
 
-Rileggi più volte il messaggio, cercando di capire che cosa voglia dire Rebecca, che è molto preparata ma ogni tanto usa parole strane. Quando sei soddisfatt$g e hai finalmente capito, [[riguarda le heatmap-&gt;percorsi Stat]] oppure [[torna indietro e analizza un&#39;altra prova-&gt;1 Stat]]. {
+Rileggi più volte il messaggio, cercando di capire che cosa voglia dire Rebecca, che è molto preparata ma ogni tanto usa parole strane. Quando sei soddisfatt$g e hai finalmente capito, [[riguardi le heatmap-&gt;percorsi Stat]] oppure [[torni indietro per analizzare un’altra prova-&gt;1 Stat]]. {
 
-(display: &quot;piepagina&quot;)}</tw-passagedata><tw-passagedata pid="40" name="risp giusta Stat" tags="Grigio_c T_Nero" position="3598,998" size="100,100">
+(display: &quot;piepagina&quot;)}</tw-passagedata><tw-passagedata pid="40" name="risp giusta Stat" tags="Grigio_c T_Nero" position="3598,1003" size="100,100">
 ## Bel colpo, agente $cognome!
 \
-Come per magia, le prove si mettono in ordine davanti ai tuoi occhi, e all&#39;improvviso tutti i dati che hai letto diventano un&#39;informazione: il sospettato su cui devi concentrarti è David Mercer. 
+(set: _punti to 0) \
 \
-(if: $risp_stat_sbagliata &lt; 3)[ Sei riuscito a capire chi sia il colpevole pure abbastanza in fretta! Ottimo lavoro: guadagni quindi (if: $new_point is 2)[due punti](else:)[un punto] intelligenza.](else:)[Ci hai messo molto ad arrivare alla risposta, dopo vari tentativi, e quindi non hai guadagnato punti intelligenza]
-\&lt;!-- è qui dentro così l&#39;else che assegna comunque punti vale solo quando la somma di risposte sbagliate è minore di 3 (condizione sopra) --&gt;
-(if: $risp_stat_sbagliata is 0)[(set: $new_point to 2)](else:)[(set: $new_point to 1)](set: $punti_int to $punti_int + $new_point)
-]
-\
-A questo punto, prosegui con le indagini e [[decidi come andare avanti-&gt;3 Stat]]. 
-\
-(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="41" name="risp sbagliata Stat" tags="Grigio_c T_Nero" position="3598,798" size="100,100">
-## Purtroppo non è la persona che stavi cercando!
-\
-(set: $risp_sbagliate to $risp_sbagliate + 1)
-(set: $risp_stat_sbagliata to $risp_stat_sbagliata + 1)
-\
-Mi spiace, purtroppo quello che hai selezionato non è il colpevole. Puoi [[tornare indietro-&gt;2 Stat]], riguardare gli indizi e provare a selezionarne un altro.
+Come per magia, le prove si mettono in ordine davanti ai tuoi occhi, e all’improvviso tutti i dati che hai acquisito diventano informazione coerente: il sospettato su cui devi concentrarti è David Mercer! 
 
-(if: $risp_stat_sbagliata is 5)[Purtroppo, hai collezionato numerosi errori, e quindi perdi un punto intelligenza. (set: $punti_int to $punti_int - 1)]
+{(if: $risp_sbagliate_stat &lt; 3) [Per di più, sei riuscit$g a individuare il probabile colpevole abbastanza in fretta... Ottimo lavoro: guadagni quindi 
+
+(if: $risp_sbagliate_stat is 0) [(set: _punti to 2) due //punti intelligenza//]
+(else:) [(set: _punti to 1) un //punto intelligenza//].
+
+(set: $punti_int to $punti_int + _punti)]
+
+(else:) [Ci hai messo molto ad arrivare alla risposta, dopo vari tentativi, e quindi non hai guadagnato punti intelligenza]}
+
+A questo punto [[prosegui con le indagini-&gt;3 Stat]]. {
+
+(display: &quot;piepagina&quot;)}</tw-passagedata><tw-passagedata pid="41" name="risp sbagliata Stat" tags="Grigio_c T_Nero" position="3598,798" size="100,100">
+## Niente da fare...
 \
-(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="42" name="3 Stat" tags="Grigio_c T_Nero" position="4002,897" size="100,100">
+&#39;&#39;$sospettato&#39;&#39; non è la persona probabilmente responsabile del furto... {
+
+(set: $risp_sbagliate to $risp_sbagliate + 1)
+(set: $risp_sbagliate_stat to $risp_sbagliate_stat + 1)}
+
+[[Torna ad analizzare gli indizi-&gt;1 Stat]] o, se pensi di avere comunque le idee abbastanza chiare, prova a [[selezionare una altra persona-&gt;2 Stat]].
+
+(if: $risp_sbagliate_stat is 5 and $punti_int &gt; 1) [Purtroppo, hai collezionato numerosi errori, e quindi perdi un //punto intelligenza//. (set: $punti_int to $punti_int - 1)] {
+
+(display: &quot;piepagina&quot;)}</tw-passagedata><tw-passagedata pid="42" name="3 Stat" tags="Grigio_c T_Nero" position="4002,897" size="100,100">
 ## Tornare in dipartimento?
 \
 Bene, adesso sai che il sospettato è David Mercer. Ma adesso come puoi rintracciarlo? Dove potrà mai essere andato? E, soprattutto, Mercer avrà ancora con sé la refurtiva o l&#39;avrà nascosta da qualche parte?
