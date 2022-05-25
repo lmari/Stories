@@ -564,7 +564,7 @@ Per te, adesso, si apre una nuova attesa, in vista della prossima indagine...
 (display: &quot;piepagina&quot;) }</tw-passagedata><tw-passagedata pid="17" name="serie storiche" tags="testo_nero sfondo_bianco" position="3525,750" size="100,100">
 ## Serie storiche
 \
-&lt;img src=&quot;res1/poliLodigiani.png&quot; height=&quot;400&quot;&gt;
+&lt;img src=&#39;res1/poliLodigiani.png&#39; class=&#39;full&#39;&gt;
 \
 Perché le serie storiche sono importanti? Per esempio perché per diventare ricchi basterebbe saper trattare perfettamente delle serie storiche. Che poi questo possa non essere realizzabile è un altro discorso, ma di sicuro hai colto il punto. 
 
@@ -580,15 +580,14 @@ Capisci adesso perché le serie storiche sono così importanti?
 (link: &quot;Torna indietro&quot;)[(goto: $ultima_pag)]</tw-passagedata><tw-passagedata pid="18" name="istogrammi" tags="testo_nero sfondo_bianco" position="3350,700" size="100,100">
 ## Istogrammi
 \
-&lt;img src=&quot;res1/graf1.png&quot; height=&quot;300&quot;&gt;
+&lt;img src=&#39;res1/graf1.png&#39; class=&#39;full&#39;&gt;
 \
-Non è necessario essere espirti di scienza di dati per accorgersi di essere circondati di istogrammi. Sui giornali, sui depliant, nei servizi di approfondimento in televisione, fino a libri di testo di più o meno qualunque materia: gli istogrammi sono forse il più comune strumento di visualizzazione di dati. Diciamo che se creassimo una squadra di calcio con gli 11 grafici di visualizzazione di dati più importanti, l’istogramma sarebbe numero 10, regista e capitano.
+Non è necessario essere esperti di scienza di dati per accorgersi di essere circondati di istogrammi. Sui giornali, sui depliant, nei servizi di approfondimento in televisione, fino a libri di testo di più o meno qualunque materia: gli //istogrammi// sono forse il più comune strumento di visualizzazione di dati. Diciamo che se creassimo una squadra di calcio con gli 11 grafici di visualizzazione di dati più importanti, l’istogramma sarebbe numero 10, regista e capitano.
 
-Ma perché è uno strumento così importante per chi lavora con i dati? Proviamo a spiegarne l’importanza svelandone il funzionamento. La procedura per costruire un istogramma è semplice, ma molto potente: 
-
+Ma perché gli istogrammi sono uno strumento così importante per chi lavora con i dati? Proviamo a spiegarlo svelandone il funzionamento. La procedura per costruire un istogramma è semplice, ma molto potente:
 1. si sceglie un insieme di categorie in cui dividere i valori di cui si dispone; 
 2. per ciascuna categoria, si conta il numero dei valori che le appartengono;
-3. si rappresenta su un piano ogni categoria con una barra, la cui altezza è proporzionale al numero dei valori in quella categoria; sotto o sopra a ciascuna barra, ci sarà un&#39;etichetta che spiega il significato della categoria.
+3. si rappresenta su un piano ogni categoria con una barra, la cui altezza è proporzionale al numero dei valori in quella categoria; sotto o sopra a ciascuna barra, ci sarà un’etichetta che spiega il significato della categoria.
 
 Facciamo un semplice esempio. Poniamo per esempio che tu sia interessat$g a quale sia la materia preferita dai tuoi compagni. Potrai allora:
 1. fare l’elenco delle materie;
@@ -632,23 +631,23 @@ Scegli quale luogo vuoi perquisire (dropdown: 2bind $direzione, &quot;1&quot;, &
 \
 Guarda la tabella qui in basso, un esempio possibile fra i milioni che si possono trovare con una veloce ricerca sul web. Prova a leggerla, giusto qualche secondo. 
 
-&lt;img src=&quot;res1/tabella.png&quot;&gt;
+&lt;img src=&#39;res1/tabella.png&#39; class=&#39;full&#39;&gt;
 
-Se non sei riuscit$g a capire niente e hai desistito dopo pochi secondi in preda allo sconforto, non preoccuparti. È la normale reazione di fronte a dei dati non riassunti in alcun modo. Con rarissime eccezioni, nessuno è in grado di leggere e usare tanti dati grezzi messi insieme.
+Se non sei riuscit$g a capire quasi niente e hai desistito dopo pochi secondi in preda allo sconforto, non preoccuparti. È la normale reazione di fronte a dei dati non riassunti in alcun modo. Con rare eccezioni, nessuno è in grado di leggere e usare tanti dati grezzi messi insieme.
 
 La statistica originariamente nasce come strumento per cercare di risolvere quel problema: creare sintesi di tanti dati sparsi per scoprire qualcosa di nuovo sul fenomeno che lo ha creato. Ma c’è un altro modo per fare ciò, più semplice e diventato molto popolare negli ultimi 20 anni: la //visualizzazione dei dati//. Ma cosa significa &quot;visualizzare dei dati&quot;? Vuol dire rappresentare i valori in forma grafica, possibilmente in modo di comunicare in modo più chiaro e rapido l’informazione contenuta e nascosta nei meandri dei dati. Forse non te ne sei accort$g, ma durante questo libro-game hai usato spesso strumenti di visualizzazione di dati, e sei anche riuscit$g, almeno grazie al tuo intuitivo, a usarli (altrimenti non saresti arrivat$g alla fine della storia!). Proviamo a dare una rapida occhiata insieme.
 
 #### Istogramma
 
-&lt;img src=&quot;res1/graf1.png&quot; height=&quot;300&quot;&gt;
+&lt;img src=&#39;res1/graf1.png&#39; class=&#39;full&#39;&gt;
 
 #### Grafico a linea
 
-&lt;img src=&quot;res1/poliLodigiani.png&quot; height=&quot;400&quot;&gt;
+&lt;img src=&#39;res1/poliLodigiani.png&#39; class=&#39;full&#39;&gt;
 
 #### Diagramma di dispersione su una mappa
 
-&lt;img src=&quot;res1/mappa.png&quot; height=&quot;600&quot;&gt;
+&lt;img src=&#39;res1/mappa.png&#39; class=&#39;full&#39;&gt;
 
 (set: $ultima_pag to (history:)&#39;s last)
 (link: &quot;Torna indietro&quot;)[(goto: $ultima_pag)]</tw-passagedata><tw-passagedata pid="21" name="Direzione corretta" tags="sfondo_sfumato2 testo_nero" position="2700,600" size="100,100">
@@ -843,28 +842,25 @@ Quando vuoi, puoi (link: &quot;tornare all’ultima pagina del gioco&quot;)[(got
 \
 Negli ultimi anni si è sentita spesso, ripetuta in diverse forme, una frase che suona più o meno in questo modo: “I dati sono il nuovo petrolio”. Si tratta di un’affermazione di Clive Humby, un imprenditore e matematico britannico, che allude all’idea che, come accade per il petrolio, i dati siano la base per produrre cose diverse, e più precisamente informazioni diverse, ma, come per il petrolio, siano davvero utili solo quando sono stati trasformati, in informazione appunto.
 
-Nelle ultime decine di anni, la nostra capacità di acquisire, memorizzare, elaborare, trasmettere e condividere dati è cresciuta come mai prima durante la storia dell’uomo. Ma, cocretamente, come si trasformano dati in informazione?
+Nelle ultime decine di anni, la nostra capacità di acquisire, memorizzare, elaborare, trasmettere e condividere dati è cresciuta come mai prima durante la storia dell’uomo. Ma, concretamente, come si trasformano dati in informazione?
 
-Non è il contesto per proporre un’introduzione tecnica a questo tema, ma possiamo accennare a un argomento cruciale di scienza dei dati: il concetto di //campione//. Un campione, inteso in senso statistico, è una collezione di dati riferiti a individui diversi, o allo stesso individuo in momenti diversi (e in questo caso il campione è una //serie storica//: vedi la scheda relativa), 
+Una risposta generale non è facile, ma possiamo accennare a un argomento cruciale di scienza dei dati: il concetto di //campione//. Un campione, inteso in senso statistico, è una collezione di dati riferiti a individui diversi, o allo stesso individuo in momenti diversi (e in questo caso il campione è una serie storica: vedi la scheda relativa), e relativi a una o più proprietà di quegli individui.
 
-...
+Supponiamo, per esempio, che tu voglia conoscere l’altezza media di tutti gli abitanti della tua città, oppure la loro opinione riguardo a qualche questione civile particolarmente rilevante per esempio se costruire o meno una biblioteca in un parco, o quale candidato hanno intenzione di votare alle prossime elezioni amministrative i tuoi concittadini. Il modo più immediato per raccogliere questa informazione sarebbe domandare all’intera popolazione della città il dato in questione. Ciò è però spesso impraticabile: se vivi in una grande città, dovresti intervistare davvero troppe persone, e il tempo non ti basterebbe. Ma potresti invece intervistare solo alcune persone, con l’attenzione che siano rappresentative dell’intero insieme, che in scienza dei dati non a caso si chiama proprio &quot;popolazione&quot;! Quindi, per esempio, se sai che la popolazione è composta al 50% da maschi e al 50% da femmine, il sottoinsieme della popolazione scelto sarà rappresentativo solo se manterrà la proporzione osservata nell&#39;intera popolazione. 
 
-((( da rivedere )))
-
-
-si riassumono tramite statistiche. Poniamo, per esempio, che tu voglia conoscere l’altezza media di tutti gli abitanti della tua città, oppure la loro opinione riguardo a qualche questione civile particolarmente rilevante per esmepio se costruire o meno una biblioteca in un parco, o quale candidato hanno intenzione di votare alle prossime elezioni amministrative. Il modo più immediato per raccogliere questa informazione sarebbe domandare all’intera popolazione della città il dato in questione. Ciò è però spesso impraticabile, per ragioni meramente pratiche: se vivete in una grande città, questo vuol dire intervistare centinaia di migliaia (o milioni) di persone, con un consumo di risorse (in termini di tempo e denaro) che va spesso oltre quelle disponibili. Al contrario, si può selezionare un sottoinsieme di questa popolazione, che sia però &quot;rappresentativo&quot; della stessa. Quindi, per esempio, sapendo a priori che le altezze medie di maschi e femmine sono diverse e che la popolazione è composta al 50% da maschi e al 50% da femmine, il sottoinsieme della popolazione scelto sarà rappresentativo solo se manterrà la proporzione osservata nell&#39;intera popolazione. 
-
-Questo sottoinsieme è detto &quot;campione&quot;, e l&#39;operazione di selezionare il sottoinsieme è detta &quot;campionatura&quot;. Un campione che non sia solo un sottoinsieme delle persone ma che contenga uno (o più) dati a loro riferiti (come, per esempio, la loro altezza) è detto un &quot;campione di dati&quot;. Un campione di dati è qualcosa su cui possono essere fatte delle statistiche.
-
-Un ultimissima nota riguardo ai campioni. Quelli più attenti di voi potranno aver notato che, se il campione non corrisponde con la popolazione &quot;campionata&quot;, allora si potrebbero avere degli errori. Questo è, ovviamente, vero. Dato che il più delle volte è impossibile campionare l&#39;intera popolazione, ci sono delle tecniche numeriche che collegano la numerosità del campione all&#39;errore potenziale, in modo da sapere quante persone intervistare (o, in modo più generico, quanti dati raccogliere) prima di avere un risultato sufficientemente affidabile.
+Questo sottoinsieme si chiama appunto &quot;campione&quot;, e perciò si chiama &quot;campionamento&quot; l’operazione con cui si costruisce un campione. Di ogni persona del campione si raccolgono i dati a cui si è interessati, per esempio l’altezza, e si ottiene così finalmente un campione di dati, su cui si possono fare delle statistiche.
 
 (set: $ultima_pag to (history:)&#39;s last)
 (link: &quot;Torna indietro&quot;)[(goto: $ultima_pag)]</tw-passagedata><tw-passagedata pid="29" name="statistiche di un campione" tags="testo_nero sfondo_bianco" position="3525,500" size="100,100">
 ## Statistiche di un campione
 \
-Tutti sanno che la statistica è una branca della matematica e uno dei pilastri della scienza dei dati. Ciò nonostante, il significato di &quot;statistica&quot; è spesso vago, almeno per i non addetti ai lavori. Per provare a capire che cosa ciò voglia dire, facciamo un esempio pratico. Mettiamoci nei panni del proprietario di un ristorante, che intenda migliorare i risultati economici della propria attività. Come prima cosa, dovrà ottenere delle informazioni sullo stato attuale del ristorante, come per esempio sapere quanto ha guadagnato complessivamente nell&#39;ultimo anno (il fatturato), quali sono i piatti più venduti fra quelli in menù e quante persone vengono nel locale ogni sera, magari distinguendo fra weekend e le serate infrasettimanali. Verosimilmente, questi sono dati che si possono ottenere a partire dagli scontrini emessi nelle settimane e nei mesi precedenti, oppure da un software gestionale che contenga questi dati. In entrambi i casi, risulta intuitivo che per prendere decisioni a partire da questi dati bisogna avere degli strumenti per usarli. Mettersi a un tavolo pieno di scontrini è un&#39;attività che da sola non genera alcuna informazione, anche se poi questi hanno al loro interno dei dati potenzialmente utili. Bisogna trovare delle tecniche che consentano di &quot;riassumere&quot; questi dati. Ed eccoci arrivati al significato di statistica: fare una statistica di dati vuole dire farne appunto un riassunto. A questo punto, dovrebbe essere chiaro anche la ragione per cui si fanno delle statistiche: per riuscire a carpire i segreti celati da un insieme di dati in apparenza confuso.
+Tutti sanno che la statistica è una branca della matematica e uno dei pilastri della scienza dei dati. Ciò nonostante, il significato di &quot;statistica&quot; è spesso vago, almeno per i non addetti ai lavori.
 
-La statistica più famosa, e probabilmente anche la più utilizzata, è la media. Fare la media di un campione (numerico) di dati vuol dire sommare tutti i dati del campione, e poi dividerli per il numero di dati. Quindi, nell&#39;esempio del ristorante, il gestore che voglia stimare quale sia il numero medio di consumazioni effettuate ogni giorno dovrà contare tutti gli scontrini emessi in un certo arco di tempo e dividere poi questo numero per il numero di giorni in cui è rimasto aperto. Se quindi avra emesso 100 scontrini in 5 giorni, potrà scoprire di aver avuto in media 20 clienti al giorno. Si noti che questo sistema, come tutta la statistica, può incorrere in errore. Per esempio, una coppia di fidanzati in cui uno dei due offre la cena all&#39;altro produce un singolo scontrino, mentre gli avventori sono due. Quindi, per avere una statistica rappresentativa del campione (in questo caso, avere una media che spieghi bene quante persone vengono ogni sera a cena al ristorante), è prima necessario conoscere bene i dati e il processo che li genera, e solo in un secondo momento fare i conti. 
+Facciamo un esempio concreto, mettendoci nei panni del proprietario di un ristorante che intenda migliorare i risultati economici della propria attività. Come prima cosa, dovrà ottenere delle informazioni sulla situazione attuale del ristorante, per esempio quanto ha incassato e quanto ha guadagnato nell’ultimo anno, quali sono i piatti più venduti fra quelli in menù e quante persone vengono nel locale ogni sera, magari distinguendo fra weekend e le serate infrasettimanali. Per far ciò, potrebbe riguardare uno per uno gli scontrini emessi nelle settimane e nei mesi precedenti, e magari copiare i dati degli scontrini nella tabella di un foglio di calcolo.
+
+Ma da un tavolo pieno di scontrini o da una grande tabella piena di numeri è davvero difficile ricavare qualche informazione utile, se non si riassumono in qualche modo i tanti dati a disposizione. E questo è esattamente il punto: //fare una statistica di dati// vuole dire farne appunto un riassunto, con l’obiettivo di passare da tanti dati singolarmente forse non molto significativi a un dato che sia invece informativo.
+
+La statistica più famosa, e probabilmente anche la più utilizzata, è la media. Come sai benissimo, per fare la media di un campione di dati numerici devi semplicemente sommare tutti i dati del campione, e poi dividere il risultato per il numero di dati. Quindi, nell’esempio del ristorante, il gestore che voglia stimare quale sia il numero medio di consumazioni effettuate ogni giorno dovrà contare tutti gli scontrini emessi in un certo arco di tempo e poi dividere questo numero per il numero di giorni in cui il ristorante è rimasto aperto. Se quindi avrà emesso 100 scontrini in 5 giorni, scoprirà di aver avuto in media 20 clienti al giorno.
 
 (set: $ultima_pag to (history:)&#39;s last)
 (link: &quot;Torna indietro&quot;)[(goto: $ultima_pag)]</tw-passagedata><tw-passagedata pid="30" name="ripensa alla telefonata" tags="testo_nero sfondo_sfumato3" position="1450,525" size="100,100">
@@ -959,13 +955,17 @@ $cs_post to &quot;.mp3&#39; type=&#39;audio/mp3&#39; autoplay&gt;&lt;/audio&gt;&
 (if: (passage:)&#39;s name is not &quot;start&quot;) [(save-game: &quot;auto&quot;)]</tw-passagedata><tw-passagedata pid="35" name="risultati dei test" tags="testo_nero sfondo_bianco" position="3525,875" size="100,100">
 ## Risultati dei test
 \
-A un certo punto del gioco hai sottoposto al test del poligrafo almeno uno fra i sospettati Lodigiani e Freschini. In questo caso, hai probabilmente adottato un atteggiamento fiducioso, e hai dato per scontato che il test fosse affidabile. Ecco, questo però per i test non è sempre vero, e i test statistici non fanno eccezioni. Un test in genere può dare risultato positivo o negativo, e questo risultato può essere vero o falso. Quindi, esistono quattro casi:
-* un test ha risultato positivo vero;
-* un test ha risultato positivo falso;
-* un test ha risultato negativo vero;
-* un test ha risultato negativo falso.
+Probabilmente a un certo punto del gioco hai sottoposto al test del poligrafo almeno uno fra i sospettati Lodigiani e Freschini, e con ciò hai accettato che il test producesse risultati di cui potersi fidare. Questo però non è sempre vero, dato che anche i test possono sbagliare!
 
-Un esempio abbastanza famoso per rendere un po&#39; più concrete queste nozioni riguarda i famosi test per valutare la presenza o meno di un infezione da Sars-CoV-2. Soprattutto durante l&#39;ondata di Omicron (da dicembre 2021 a febbraio 2022), abbiamo imparato che l&#39;affidabilità dei test rapidi antigenici (i famosi test fai-da-te) è molto minore rispetto a quella dei test molecolari. Per sempio, vi sarà forse capitato di aver fatto un test rapido con esito negativo e poi essere immediatamente dopo risultati positivi a un test molecolare. Escludendo eventualli errori di somministrazione del test, da un punto di vista statistico questo può essere interpretato così: i test rapidi sono meno affidabili dei test molecolari perché hanno una percentuale di falsi negativi molto più alta. 
+Nel caso più semplice, un test può dare un risultato o positivo o negativo, e questo risultato può essere corretto o sbagliato, cioè vero o falso. Quindi, ci sono quattro casi, dato un test può produrre un risultato:
+* positivo che è vero;
+* positivo che è invece falso;
+* negativo che è vero;
+* negativo che è invece falso.
+
+Dal punto di vista della sua qualità, un test che produce sempre veri positivi o veri negativi è ottimo, e viceversa un test che produce sempre falsi positivi o falsi negativi è pessimo.
+
+Un esempio per rendere un po’ più concreto tutto ciò riguarda i famosi test per scoprire la presenza di un’infezione virale. Abbiamo imparato che l’affidabilità di certi test rapidi, i famosi test &quot;fai da te&quot;, è molto minore rispetto a quella di altri test: e così ti sarà forse capitato di aver fatto un test rapido con esito negativo e immediatamente dopo di essere risultat$g positiv$g a un test più accurato. Escludendo eventuali errori di somministrazione del test, da un punto di vista statistico questo può essere interpretato così: i test rapidi sono meno affidabili perché hanno una percentuale di falsi negativi molto più alta. 
 
 (set: $ultima_pag to (history:)&#39;s last)
 (link: &quot;Torna indietro&quot;)[(goto: $ultima_pag)]</tw-passagedata><tw-passagedata pid="36" name="piepagina" tags="" position="925,475" size="100,100">&lt;!-- deve essere incluso esplicitamente, con: (display: &quot;piepagina&quot;) --&gt;
@@ -990,27 +990,23 @@ Il progetto GaLe è promosso dalla (link-rerun: &quot;Camera di Commercio di Var
 [[Torna al gioco-&gt;frontespizio]]</tw-passagedata><tw-passagedata pid="39" name="tipi di dati" tags="testo_nero sfondo_bianco" position="3350,450" size="100,100">
 ## Tipi di dati
 \
-Capire che esistono tipi di dati diversi non è forse così interessante, ma è perlomeno molto utile per capire la ragione per cui scrivere &quot;1 + Rosso&quot; non ha alcun significato. Proviamo a ragionarci brevemente, partendo da questo semplicissimo esempio, chiaramente senza significato. 
+Capire che esistono //tipi di dati// diversi non è forse così interessante, ma è perlomeno molto utile per capire la ragione per cui scrivere “1 + Rosso&quot; non ha alcun significato. Proviamo a ragionarci brevemente, partendo da questo semplicissimo esempio, chiaramente senza significato. 
 
-Se al posto di scrivere &quot;1 + Rosso&quot; avessi scritto &quot;1 + 1&quot;, non avresti avuto alcun dubbio sul senso della cosa, equivalente a scrivere &quot;2&quot;: ragione per cui vale l’equazione &quot;1 + 1 = 2&quot;. Al contrario, scrivere &quot;Rosso + Rosso&quot; potrebbe essere perlomeno ambiguo. Magari ho due rossi, magari no: appunto, non è chiaro. In modo analogo, scrivere &quot;Rosso / Blu&quot; non sembra avere senso, mentre &quot;6 / 3&quot; equivale a scrivere &quot;2&quot;. Quindi con i numeri possiamo fare delle operazioni che non sono possibili con valori non numerici (come &quot;rosso&quot;, &quot;giallo&quot;, &quot;alto, &quot;basso, &quot;buono&quot;, &quot;cattivo&quot;, ...).
+Se al posto di scrivere “1 + Rosso” avessi scritto “1 + 1”, non avresti avuto alcun dubbio sul senso della cosa, equivalente a scrivere “2”: ragione per cui l’equazione 1 + 1 = 2 è vera. Al contrario, scrivere “Rosso + Rosso” potrebbe essere almeno ambiguo, se non proprio insensato: magari si vuole intendere che sto considerando due oggetti rossi insieme, ma, appunto, non è chiaro. In modo analogo, scrivere “Rosso / Blu” non sembra avere senso, mentre “6 / 3” equivale a scrivere “2”. Quindi con i numeri possiamo fare delle operazioni che non sono possibili con valori non numerici (come “rosso”, “giallo”, “alto”, “basso”, “buono”, “cattivo”, ...).
 
-Insomma, ci sono non solo dati numerici ma anche dati non numerici, che chiamiamo &quot;categorici&quot;, perché definiscono le categorie a cui appertengono. Per esempio, nella tua classe potresti raccogliere i dati del colore dei capelli delle persone che la compongono, e ritrovarti quindi un insieme di dati riferiti a categorie come &quot;biondo&quot;, &quot;moro&quot;, &quot;rosso&quot; o &quot;castano&quot;.
+Insomma, ci sono non solo dati numerici ma anche dati non numerici, che chiamiamo “categorici”, perché definiscono le categorie a cui appertengono. Per esempio, nella tua classe potresti raccogliere i dati del colore dei capelli delle persone che la compongono, e ritrovarti quindi un insieme di dati riferiti a categorie come “biondo”, “moro”, “rosso” o “castano”.
 
 (set: $ultima_pag to (history:)&#39;s last)
 (link: &quot;Torna indietro&quot;)[(goto: $ultima_pag)]</tw-passagedata><tw-passagedata pid="40" name="una statistica più sofisticata" tags="testo_nero sfondo_bianco" position="3525,625" size="100,100">
 ## La deviazione standard
 \
-Un&#39;altra statistica molto famosa è la deviazione standard, che indica la dispersione di un campione. Ma, più nel dettaglio, cosa vuol dire che un campione è &quot;tanto disperso&quot; o &quot;poco disperso&quot;? Proviamo a rispondere usando un esempio sportivo (come il campionato di Serie A, o un qualunque altro campionato sportivo, professionistico o meno, in cui i risultati possibili sono vittoria, pareggio o sconfitta). 
+Una statistica famosa, quasi quanto la media, è la //deviazione standard//, che descrive quanto i dati numerici di un campione sono dispersi. Ma forse l’idea di &quot;dati dispersi&quot; non ti è così chiara? Proviamo a spiegarla con un esempio sportivo, a proposito di un campionato, in cui i risultati possibili di ogni partita siano vittoria, pareggio o sconfitta. Il campione dei risultati di una squadra durante un campionato sarà allora una successione di vittorie, pareggi e sconfitte, e quindi di valori numerici, diciamo 3 punti per ogni vittoria, 1 punto per ogni pareggio e 0 punti per ogni sconfitta.
 
-In un campionato tipo, una squadra di calcio può terminare una partita in tre modi: vincendo, pareggiando o perdendo. Quindi, il campione dei risultati di una squadra durante una stagione sarà dato da una successione di quesi tre possibili risulati. Inoltre, questa serie di risultati genererà un campione con i punti ottenuti per ciascuna partita (per esempio 3 per una vittoria, 1 per un pareggio e 0 per una sconfitta).
+Una squadra molto forte probabilmente vincerà sempre, o comunque vincerà spesso. Quindi, otterrà molto spesso 3 punti, ogni tanto 1 punto e solo raramente 0 punti. Nel campionato di Serie A maschile di calcio, la squadra che alla fine arriva al primo posto tendenzialmente ha una media di punti per gara intorno a 2,4. Nella stagione 2021-22 il Milan campione d’Italia ha avuto una media di punti a partita di 2,26, mentre l’anno prima l’Inter aveva vinto con 2,39 punti a partita.
 
-Una squadra molto forte probabilmente vincerà sempre, o comunque vincerà spesso. Quindi, otterrà molto spesso 3 punti a vittoria, ogni tanto 1 punto e solo raramente 0 punti. Nel campionato di Serie A maschile di calcio, la squadra che alla fine arriva al primo posto tendenzialmente ha una media punti per gara attorno a 2.4. Nella stagione 2021-2022 il Milan campione d&#39;Italia ha ottenuto una media punti a partita di 2.26, mentre l&#39;anno prima l&#39;Inter ha vinto con 2.39 punti a partita. La Juventus nel 2013/2014 ha invece ottenuto una media di 2,68 punti a partita, a tutt&#39;oggi un record. Quindi, facendo qualche conto, ogni volta che una squadra con una media punti alta vince (e ottiene 3 punti), lo scarto dalla sua media punti (che poniamo quindi essere 2.4) sarà circa |3 - 2.4| = 0.6, mentre quando perde avrà uno scarto |0 - 2.4| = 2.4. Essendo però una squadra che vince spesso, il primo risultato accadrà più spesso, quindi la somma degli scarti sarà più vicina a 0.6 rispetto che a 2.4.
+Due squadre che sono a pari punti alla fine del campionato, ovviamente avendo giocato lo stesso numero di partite, avranno dunque la stessa media di punti a partita, giusto? Ma questo potrebbe nascondere una differenza importante rispetto a come ognuna delle due squadre si è comportata durante il campionato: per esempio, una delle due potrebbe aver avuto un andamento stabile, con tanti pareggi e qualche vittoria o sconfitta alternate regolarmente, mentre l’altra potrebbe aver avuto una prima parte del campionato disastrosa, ma essere migliorata in modo sensibile nella seconda parte (per fare un esempio facile, con solo sei partite: i risultati della prima squadra potrebbero essere 1, 1, 1, 1, 1, 1, mentre  quelli della seconda 0, 0, 0, 0, 3, 3.
 
-In modo analogo, una squadra molto debole perde la maggior parte delle partite, e ha una media punti inferire al punto a partita (per esempio, di 0.5 punti a partita). Perdendo molto spesso, la differenza dei punti ottenuti dalla media dei punti per gara (quello che prima abbiamo chiamato scarto) è spesso |0 - 0.5| = 0.5, e solo raramente |1 - 0.5| = 0.5 (in caso di pareggio) o |3 - 0.5| = 2.5 (in caso di vittoria). Come prima, anche qui lo scarto medio di una squadra che perde con costanza sarà poco più grande di 0.5. 
-
-Ora, proviamo a pensare invece a una squadra che alterni vittorie e sconfitte in modo regolare. Intuitivamente, sarà una squadra con una grande variabilità nei risultati che avrà una media punti di 1.5 punti per partita (poiché a ogni partita vinta con 3 punti corrisponde una sconfitta con 0 punti, e la media è quindi (3 + 0) / 2). In questo caso, lo scarto in caso di sconfitta è |0 - 1.5| = 1.5 e quello incaso di vittoria è |3 - 1.5| = 1.5. Vincendo e perdendo alternativamente ciascuna partita, si otterrà che lo scarto medio sarà sempre di 1.5 (poiché (1.5 + 1.5)/2 = 1.5). Si osserva immediatamente che 1.5 è ben 3 volte più grande di 0.5 (e quasi 3 volte 0.6).
-
-Quindi, qual è il modo che si usa in statistica per misurare questa variabilità riassumendo i diversi scarti? Si una statistica chiamata scarto quadratico medio (ma più comunemente nota come deviazione standard). Lo scarto quadratico medio consiste nella media dei quadrati degli scarti. Quindi, calcolare la media del campione e poi fare le medie di tutti i quadrati di |valore - media|. Una volta calcolata questa media, ne si fa la radice quadrata, in modo da tornare all&#39;unità di misura originale (lo scarto quadratico medio nel nostro esempio sarà quindi misurato in punti e non in punti al quadrato). Questa statistica riassume i dati fornendoci la seguente informazione: una squadra che ottiene risultati costanti (vince molto spesso, o perde molto spesso) e quindi ha una variabilità di punti ottenuti bassa, ha uno scarto quadratico medio basso. Al contrario, se una squadra ha una variabilità nei punti ottenuti per partita molto alta (nel caso limite, quando alternaticamente vince e perde ogni partita), allora la deviazione standard è altresì alta. Quindi, concludendo, la deviazione standard serve per scoprire, a partire dai dati, quanto essi sono mediamente lontani dalla loro valor medio. 
+La deviazione standard, chiamata anche &quot;scarto tipo&quot; o &quot;scarto quadratico medio&quot;, ci consente di descrivere con un solo numero quanto sono vicini o lontani tra loro i valori di un campione, e più precisamente quanto i valori sono vicini alla media del campione stesso. Rispetto alle sei partite sopra, i risultati della prima squadra sono tutti uguali, e hanno perciò dispersione nulla e deviazione standard zero, mentre i risultati della seconda squadra sono piuttosto dispersi e deviazione standard abbastanza grande.
 
 (set: $ultima_pag to (history:)&#39;s last)
 (link: &quot;Torna indietro&quot;)[(goto: $ultima_pag)]</tw-passagedata></tw-storydata>
