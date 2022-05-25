@@ -530,17 +530,17 @@ Quindi, arrivato a questo punto, [[valuta le possibili opzioni-&gt;1 Stat]] a tu
 |dialogo&gt;[(text-colour:#74c0fc)[&#39;&#39;[Detective $nome]&#39;&#39;]: Maresciallo credo che in questo codice sia contenuta la posizione del sospettato.]
 \
 |dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;[Maresciallo Caputo]&#39;&#39;]: Sono d&#39;accordo, partiamo subito: deve essere a Treviso! Codice 534 ripeto abbiamo un codice 534 passo e chiudo.]
-\
+
 (if: $frappe_ogg is &quot;Sì&quot; and $punti_int &gt; 3)[Poi, all&#39;improvviso, al risultato del rebus un dato diventa più chiaro. Ma certo! Evidentemente era rimasto nei meandri della tua mente fino a quel momento.
 |dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;[Detective $nome]&#39;&#39;]: Maresciallo guardi! Il frappè non proviene da Starbucks, ma da SturBancks! Deve essere una specie di copia.]
 \
 (align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[&lt;style&gt; img {max-width: 100%; max-height: 100%; } &lt;/style&gt; &lt;img src=&#39;res2/frappe.png&#39;&gt; &lt;/div&gt;]
 \
-Capite subito che, se il frappé viene da un posto così strano, probabilmente deve esserci un legame fra il sospettato e questo StarBanks. Vi mettete entrambi all&#39;opera, smanettando sul telefono per cercare dove si trovi questo strano negozio. 
+Capite subito che, se il frappé viene da un posto così strano, probabilmente deve esserci un legame fra il sospettato e questo Sturbanks. Vi mettete entrambi all&#39;opera, smanettando sul telefono per cercare dove si trovi questo strano negozio. 
 
 |dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;[Maresciallo Caputo]&#39;&#39;]: Detective $nome, guardi! Ho scoperto che quel negozio è presente solo a Treviso. Questo conferma anche il messaggio che abbiamo risolto. Andiamo direttamente in quella caffetteria!]
 \
-Salta in macchina e [[vai allo StarBanks di Treviso-&gt;2 Fine2]]](else:)
+Salta in macchina e [[vai allo Sturbanks di Treviso-&gt;2 Fine2]]](else:)
 [Salta in macchina e vai alla [[torre di Treviso|2 Fine]]]
 \
 (display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="13" name="coordinate" tags="Grigio_c T_Nero" position="1800,1000" size="100,100">
@@ -697,7 +697,7 @@ Premi uno dei seguenti oggetti sulla scrivania:]
 [[&lt;style&gt; img {max-width: 100%; max-height: 100%; } &lt;/style&gt; &lt;img src=&#39;res2/7lav.png&#39;&gt; &lt;/div&gt;-&gt;bigliettino_lavanderia]]
 |==|
 \
-(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="21" name="4 Fine" tags="Grigio_c T_Nero" position="6691.333333333333,794" size="100,100">
+(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="21" name="4 Fine" tags="Grigio_c T_Nero" position="6601.333333333333,797.3333333333334" size="100,100">
 ## Conclusione
 \
 |dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;[Maresciallo Caputo]&#39;&#39;]: Eccoci al dunque, agente $cognome]
@@ -731,7 +731,7 @@ Errori commessi durante il gioco: $risp_sbagliate&#39;&#39;]
 \
 Se vuoi riprovare a giocare, (link: &quot;clicca qui per ricominciare la storia&quot;)[(goto: &quot;frontespizio&quot;)]
 
-Inoltre, puoi,(link: &quot;scoprire curiosità legate al gioco.&quot;)[(goto: &quot;curiosità&quot;)].
+Inoltre, puoi (link: &quot;scoprire curiosità legate al gioco.&quot;)[(goto: &quot;curiosità&quot;)].
 
 Oppure, puoi (link-rerun: &quot;rigiocare il primo capitolo o compilare il questionario per darci un tuo parere su questo gioco&quot;)[(open-url:&quot;https://flipfly.it/gale/&quot;)].</tw-passagedata><tw-passagedata pid="22" name="2 Fine2" tags="Grigio_c T_Nero" position="6400,995" size="100,100">
 ## Arriva da Sturbanks
@@ -775,7 +775,7 @@ Tu sei sopres$g, ma il Maresciallo no. I suoi lunghi anni di esperienza in quest
 \
 Con uno scatto da ver$g atleta, riesce a raggiungere il barista che stava cercando di scappare, e lo immobilizza. Lui lo guarda gridandoti di lasciarlo andare, e in quel momento raggiungi la strana coppia e ammanetti il barista. Lo senti sbraitare e dall&#39;accento francese capisci che quello che hai appena ammanettato è proprio il sospettato!
 \
-[[Scopri chi hai catturato-&gt;4 Fine]]]
+Ora, è arrivato il momento di [[scoprire chi hai catturato-&gt;4 Fine]].
 |==| 
 \
 (display: &quot;piepagina&quot;)
@@ -1045,7 +1045,7 @@ Quale persona sospetti dunque sia la responsabile del furto?
 
 (dropdown: bind $sospettato,&quot;Marco Bagni&quot;, &quot;Andres Salza&quot;,&quot;Chiara Rassio&quot;,&quot;Sofia Cremoli&quot;,&quot;Axel Jorri&quot;,&quot;Beatrice Ravilio&quot;,&quot;Giorgio Entommi&quot;,&quot;Matilde Francolini&quot;,&quot;Rosalie Renoire&quot;,&quot;Franco Drevi&quot;,&quot;David Mercer&quot;,&quot;Valerio Liggio&quot;,&quot;Rebecca Gerri&quot;,&quot;Vittorio Iozzi&quot;,&quot;Damien Bunchard&quot;,&quot;Fabio Bressa&quot;,&quot;Jacopo Attolo&quot;,&quot;Isabelle Tucci&quot;,&quot;Tommaso Millezza&quot;) {
 
-(live: 1s)[
+(live: 0.5s)[
 (if: $sospettato is &quot;David Mercer&quot;) [ [[Conferma la tua scelta-&gt;risp giusta Stat]] ]
 (else:) [ [[Conferma la tua scelta-&gt;risp sbagliata Stat]] ]
 ]
@@ -1263,9 +1263,9 @@ Tu e il maresciallo Caputo vi mettete all&#39;opera. Con grande attenzione, perl
 \
 Il capo di primo acchito quasi ti ignora, e poi invece inizia a parlarti. Meno male che sei una persona socievole, che sa sempre come convincere le persone a scambiare qualche parola. 
 
-|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;[Capo della scientifica Pietro Gabrieli]&#39;&#39;] Guarda, a me sembra una piccolezza, proprio un dettaglio da niente. Però ho trovato una tazza con sopra il logo di una specie di Starbuck non originale chiamato &quot;StarBanks&quot;. Ho dato un&#39;occhiata e mi sembra un posto aperto abbastanza di recente soltanto a Treviso. Se fossi in voi darei un&#39;occhiata lì, magari scoprire qualcosa di interessante.]
+|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;[Capo della scientifica Pietro Gabrieli]&#39;&#39;] Guarda, a me sembra una piccolezza, proprio un dettaglio da niente. Però ho trovato una tazza con sopra il logo di una specie di Starbuck non originale chiamato &quot;Sturbanks&quot;. Ho dato un&#39;occhiata e mi sembra un posto aperto abbastanza di recente soltanto a Treviso. Se fossi in voi darei un&#39;occhiata lì, magari scoprire qualcosa di interessante.]
 \
-A questo punto, devo prendere una decisione. Se vuoi, vai a dare un&#39;occhiata allo [[StarBanks di Treviso-&gt;2 Fine2]], oppure [[guarda gli scontrini -&gt;3 Fine]]. \
+A questo punto, devo prendere una decisione. Se vuoi, vai a dare un&#39;occhiata allo [[Sturbanks di Treviso-&gt;2 Fine2]], oppure [[guarda gli scontrini -&gt;3 Fine]]. \
 ]
 (else:)[
 \
@@ -1274,7 +1274,7 @@ Il capo però quasi ti ignora...evidentemente non ha capito che sei tu a condurr
 A questo punto, torna indietro e [[guarda gli scontrini -&gt;3 Fine]]. \
 ]
 \
-(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="55" name="curiosità" tags="Grigio_c T_Nero" position="6896,789" size="100,100">## Curiosità
+(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="55" name="curiosità" tags="Grigio_c T_Nero" position="6802.666666666667,797.3333333333334" size="100,100">## Curiosità
 \
 Adesso che hai completato il gioco, ti vogliamo lasciare con qualche informazione aggiuntiva, che ti possa aiutare a capire come hai preso le decisioni che hai preso, quale sia stata la loro bontà, e se nel mondo reale avrebbe avuto senso comportarsi in questo modo.
 
