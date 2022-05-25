@@ -134,7 +134,7 @@ tw-hook[name="scuro"] {
 
 
 tw-sidebar {
-/*  display: none; */
+  display: none;
 }
 </style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-tag name="Bianco" color="gray"></tw-tag>,<tw-tag name="bicicletta" color="red"></tw-tag>,<tw-tag name="frontespizio" color="red"></tw-tag>,<tw-tag name="macchina" color="red"></tw-tag>,<tw-tag name="sfondo_bianco" color="yellow"></tw-tag>,<tw-tag name="sfondo_nero" color="purple"></tw-tag>,<tw-tag name="sfondo_sanmarino" color="purple"></tw-tag>,<tw-tag name="sfondo_trascrizione" color="red"></tw-tag>,<tw-tag name="sfumato_sanmarino" color="purple"></tw-tag>,<tw-tag name="testo_bianco" color="purple"></tw-tag>,<tw-tag name="testo_bright_1" color="red"></tw-tag>,<tw-tag name="testo_font" color="green"></tw-tag>,<tw-tag name="testo_nero" color="yellow"></tw-tag>,<tw-tag name="testo_trascrizione" color="red"></tw-tag><tw-passagedata pid="1" name="un&#39;insolita sveglia" tags="testo_bianco sfondo_sfumato0" position="1075,650" size="100,100">&lt;img src=&#39;res1/sunrise.jpg&#39; class=&#39;full&#39; alt=&#39;immagine&#39;&gt;
 
@@ -933,26 +933,26 @@ Ore e ore di interrogatorio non danno frutti. Purtroppo Ravanelli non vuole parl
 
 (if: $m) [(print: $cs6)]
 
-(display: &quot;piepagina&quot;) }</tw-passagedata><tw-passagedata pid="34" name="include" tags="header" position="800,475" size="100,100">&lt;!-- dei default, anche per rendere più semplice il testing in fase di sviluppo --&gt; \
-(if: $nome is 0) [(set: $nome to &quot;Alex&quot;)] \
-(if: $cognome is 0) [(set: $cognome to &quot;Bianchi&quot;)] \
-(if: $t is 0) [(set: $t to &quot;org&quot;)] \
-(if: $g is 0) [(set: $g to &quot;a&quot;)] \
-(if: $m is 0) [(set: $m to true)] \
- \
-(set: $min_interr to 3) \
- \
+(display: &quot;piepagina&quot;) }</tw-passagedata><tw-passagedata pid="34" name="include" tags="header" position="800,475" size="100,100">&lt;!-- dei default, anche per rendere più semplice il testing in fase di sviluppo --&gt; {
+(if: $nome is 0) [(set: $nome to &quot;Alex&quot;)]
+(if: $cognome is 0) [(set: $cognome to &quot;Bianchi&quot;)]
+(if: $t is 0) [(set: $t to &quot;org&quot;)]
+(if: $g is 0) [(set: $g to &quot;a&quot;)]
+(if: $m is 0) [(set: $m to true)]
+
+(set: $min_interr to 3)
+
 (set: $cs_pre to &quot;&lt;audio id=&#39;cs&#39; src=&#39;https://cdn.pixabay.com/audio/&quot;,
-$cs_post to &quot;.mp3&#39; type=&#39;audio/mp3&#39; autoplay&gt;&lt;/audio&gt;&quot;) \
-(set: $cs1 to $cs_pre + &quot;2022/03/30/audio_52a596f0b5&quot; + $cs_post) \
-(set: $cs2 to $cs_pre + &quot;2021/11/26/audio_e20882e29d&quot; + $cs_post) \
-(set: $cs3 to $cs_pre + &quot;2021/11/15/audio_75021cca14&quot; + $cs_post) \
-(set: $cs4 to $cs_pre + &quot;2022/01/05/audio_6954fd7675&quot; + $cs_post) \
-(set: $cs5 to $cs_pre + &quot;2020/08/30/audio_926fbf0b66&quot; + $cs_post) \
-(set: $cs6 to $cs_pre + &quot;2021/10/03/audio_0b0df33160&quot; + $cs_post) \
-(set: $cs7 to $cs_pre + &quot;2022/02/10/audio_798efbe865&quot; + $cs_post) \
-\
-(if: (passage:)&#39;s name is not &quot;start&quot;) [(save-game: &quot;auto&quot;)]</tw-passagedata><tw-passagedata pid="35" name="risultati dei test" tags="testo_nero sfondo_bianco" position="3525,875" size="100,100">
+$cs_post to &quot;.mp3&#39; type=&#39;audio/mp3&#39; autoplay&gt;&lt;/audio&gt;&quot;)
+(set: $cs1 to $cs_pre + &quot;2022/03/30/audio_52a596f0b5&quot; + $cs_post)
+(set: $cs2 to $cs_pre + &quot;2021/11/26/audio_e20882e29d&quot; + $cs_post)
+(set: $cs3 to $cs_pre + &quot;2021/11/15/audio_75021cca14&quot; + $cs_post)
+(set: $cs4 to $cs_pre + &quot;2022/01/05/audio_6954fd7675&quot; + $cs_post)
+(set: $cs5 to $cs_pre + &quot;2020/08/30/audio_926fbf0b66&quot; + $cs_post)
+(set: $cs6 to $cs_pre + &quot;2021/10/03/audio_0b0df33160&quot; + $cs_post)
+(set: $cs7 to $cs_pre + &quot;2022/02/10/audio_798efbe865&quot; + $cs_post)
+
+(if: (passage:)&#39;s name is not &quot;start&quot;) [(save-game: &quot;auto&quot;)] }</tw-passagedata><tw-passagedata pid="35" name="risultati dei test" tags="testo_nero sfondo_bianco" position="3525,875" size="100,100">
 ## Risultati dei test
 \
 Probabilmente a un certo punto del gioco hai sottoposto al test del poligrafo almeno uno fra i sospettati Lodigiani e Freschini, e con ciò hai accettato che il test producesse risultati di cui potersi fidare. Questo però non è sempre vero, dato che anche i test possono sbagliare!
