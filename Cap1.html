@@ -885,9 +885,11 @@ Ti ricordi infatti che una sera la tua amica Rebecca, con cui chiacchieri spesso
 
 Inserisci la combinazione nel riquadro sottostante. Quando avrai inserito precisamente i quattro numeri della combinazione corretta, potrai dunque aprire il lucchetto della tua bicicletta e proseguire.
 
+(set: $controlla_risposta_lucchetto to false)
 (input-box: bind $pswd_lucchetto, &quot;===X===&quot;, 1)
+(checkbox: 2bind $controlla_risposta_lucchetto,&quot;Controlla risposta&quot;)
 
-(live: 1s)[(if: $pswd_lucchetto is &quot;1807&quot;) [Meno male che ti sei ricordat$g la combinazione...
+(live: 1s)[(if: $controlla_risposta_lucchetto)[(if: $pswd_lucchetto is &quot;1807&quot;) [Meno male che ti sei ricordat$g la combinazione...
 
 (if: $g is &quot;a&quot;) [Apri il lucchetto, inforchi la bicicletta e fai per recarti al commissariato. Sulla strada incontri Clara, una tua cara amica medico, che sta tornando a casa dall’ospedale dopo una chiamata d’urgenza. “Hai sentito cosa è successo?”, ti domanda. Le rispondi che sai già tutto, e che stai andando in commissariato proprio per quel motivo. La saluti per andare via, ma lei ti trattiene un attimo.
 
@@ -898,11 +900,11 @@ Chissà se verrà fuori qualcosa di utile... ma ora stai [[arrivando in ufficio]
 
 La pedalata è stata piacevole, e ti ha consentito di cominciare a riordinare le idee, ora che stai [[arrivando in ufficio]].]] \
 (else-if: $pswd_lucchetto&#39;s length is 4) [(niente da fare...)]
-(else:) []] {
+(else:) []]] {
 
 (if: $m) [(print: $cs2)]
 
-(display: &quot;piepagina&quot;) }</tw-passagedata><tw-passagedata pid="32" name="prendere la macchina" tags="testo_bianco sfondo_sfumato0" position="1200,525" size="100,100">&lt;img src=&#39;res1/citta.webp&#39; class=&#39;full&#39; alt=&#39;immagine&#39;&gt;
+(display: &quot;piepagina&quot;) }</tw-passagedata><tw-passagedata pid="32" name="prendere la macchina" tags="testo_bianco sfondo_sfumato0" position="1200,523.3333333333334" size="100,100">&lt;img src=&#39;res1/citta.webp&#39; class=&#39;full&#39; alt=&#39;immagine&#39;&gt;
 
 ##In viaggio in macchina...
  \
@@ -914,19 +916,26 @@ Al proposito ti ricordi due cose: la prima è che si tratta di un codice di quat
 
 Inserisci la combinazione nel riquadro sottostante. Quando avrai inserito precisamente i quattro numeri della combinazione corretta, potrai dunque recuperare le chiavi e proseguire.
 
-(input-box: bind $pswd_cassaforte, &quot;===X===&quot;, 1)
+(set: $controlla_risposta_macchina to false)
+(input-box: bind $pswd_cassaforte, &quot;===X===&quot;,1)
+(checkbox: 2bind $controlla_risposta_macchina,&quot;Controlla risposta&quot;)
 
-(live: 1s)[(if: $pswd_cassaforte is &quot;1312&quot;) [Meno male che ti sei ricordat$g la combinazione...
+(live: 0.5s)[(if: $controlla_risposta_macchina)[(if: $pswd_cassaforte is &quot;1312&quot;) [Meno male che ti sei ricordat$g la combinazione...
 
 Recuperi le chiavi al volo e ti metti in auto. Durante il breve viaggio verso il commissariato, come avresti potuto aspettarti alla radio non hai ascoltato nesssuna notizia che non conoscessi già...  
 
 ... e ora dunque stai [[arrivando in ufficio]]]
+\
 (else-if: $pswd_cassaforte&#39;s length is 4) [(niente da fare...)]
-(else:) []] {
+\
+(else-if: $pswd_cassaforte&#39;s length &lt; 4) [(Devi aggiungere ancora qualche cifra...)]
+\
+(else-if: $pswd_cassaforte&#39;s length &gt; 4) []
+(else:) []]] {
 
 (if: $m) [(print: $cs2)]
 
-(display: &quot;piepagina&quot;) }</tw-passagedata><tw-passagedata pid="33" name="interrogare ulteriormente Ravanelli" tags="testo_nero sfondo_sfumato2" position="2425,450" size="100,100">
+(display: &quot;piepagina&quot;) } </tw-passagedata><tw-passagedata pid="33" name="interrogare ulteriormente Ravanelli" tags="testo_nero sfondo_sfumato2" position="2425,450" size="100,100">
 ## La seconda parte dell’interrogatorio di Martino Ravanelli
 
 Ore e ore di interrogatorio non danno frutti. Purtroppo Ravanelli non vuole parlare. A un certo punto, gli racconti della telefonata misteriosa che avevi ricevuto all’inizio. (if: $t is &quot;cor&quot;)[Sei (if: $g is &quot;o&quot;)[un investigatore](else:)[un’investigatrice] originale e fantasios$g, e la tua empatia riesce evidentemente a fare breccia nella corazza di Ravanelli, che per un momento si lascia sfuggire un mormorio. “Maledetto traditore, ecco perché...” riesci a sentire. Ma poi rimane in silenzio.](else:)[Anche in questo caso, la corazza di Ravanelli non viene intaccata]. Di fronte a un silenzio costante, non ti rimane che andare avanti con le indagini, e guardare [[la mappa]]. {

@@ -390,11 +390,11 @@ Mettendo la mano dentro il veicolo, trovi un modo per aprire la portiera ed entr
 (align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[&lt;img src=res2/auto.png class=&#39;full&#39;&gt; &lt;/div&gt;]
 \
 =|=
-(if: $controlla_postit is 0)[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[(text-colour:#ff922b)[ [[&#39;&#39;- Post it 🗒 &#39;&#39;&lt;style&gt; img {max-width: 100%; max-height: 100%; } &lt;/style&gt; &lt;img src=&#39;res2/post_it_auto.png&#39;&gt; &lt;/div&gt;-&gt;Postit]]]]]
+(if: $controlla_postit is 0)[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[(text-colour:#ff922b)[ [[&#39;&#39;- Post it 🗒 &#39;&#39;&lt;img src=&#39;res2/post_it_auto.png&#39; class=&#39;full&#39;&gt; &lt;/div&gt;-&gt;Postit]]]]]
 =|=
-(if: $controlla_frappe is 0)[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[(text-colour:#ff922b)[ [[&#39;&#39;- Frappè 🥛&#39;&#39;&lt;style&gt; img {max-width: 100%; max-height: 100%; } &lt;/style&gt; &lt;img src=&#39;res2/frappe_auto.png&#39;&gt; &lt;/div&gt;-&gt;Frappè]]]]]
+(if: $controlla_frappe is 0)[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[(text-colour:#ff922b)[ [[&#39;&#39;- Frappè 🥛&#39;&#39; &lt;img src=&#39;res2/frappe_auto.png&#39; class=&#39;full&#39;&gt; &lt;/div&gt;-&gt;Frappè]]]]]
 =|=
-(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[(text-colour:#ff922b)[ [[&#39;&#39;- Telefono 📱&#39;&#39;&lt;style&gt; img {max-width: 100%; max-height: 100%; } &lt;/style&gt; &lt;img src=&#39;res2/telefono_auto.png&#39;&gt; &lt;/div&gt;-&gt;Rebus]]]]
+(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[(text-colour:#ff922b)[ [[&#39;&#39;- Telefono 📱&#39;&#39;&lt;img src=&#39;res2/telefono_auto.png&#39; class=&#39;full&#39;&gt; &lt;/div&gt;-&gt;Rebus]]]]
 |==|
 \
 (display: &quot;piepagina&quot;)
@@ -410,9 +410,9 @@ Mettendo la mano dentro il veicolo, trovi un modo per aprire la portiera ed entr
 |dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;[Detective $nome]&#39;&#39;]: Lasciamo stare, maresciallo, è una perdita di tempo. Sembrava un codice segreto, ma è solo un bigliettino per entrare in un garage!]
 \
 |=
-&lt;style&gt; img {max-width: 100%; max-height: 100%; } &lt;/style&gt; &lt;img src=&#39;res2/post_it.png&#39;&gt; &lt;/div&gt;
+&lt;img src=&#39;res2/post_it.png&#39; class=&#39;full&#39;&gt; &lt;/div&gt;
 |= 
-&lt;style&gt; img {max-width: 100%; max-height: 100%; } &lt;/style&gt; &lt;img src=&#39;res2/post_it_auto.png&#39;&gt; &lt;/div&gt;
+&lt;img src=&#39;res2/post_it_auto.png&#39; class=&#39;full&#39;&gt; &lt;/div&gt;
 |==|
 \
 [[Torna indietro-&gt;3 Esatto]]
@@ -425,13 +425,13 @@ Mettendo la mano dentro il veicolo, trovi un modo per aprire la portiera ed entr
 |dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;[Maresciallo Caputo]&#39;&#39;]: Leggiamoli, potrebbero essere un indizio!]
 \
 |=
-&lt;style&gt; img {max-width: 100%; max-height: 100%; } &lt;/style&gt; &lt;img src=&#39;res2/telefono.png&#39;&gt; &lt;/div&gt;
+&lt;img src=&#39;res2/telefono.png&#39; class=&#39;full&#39;&gt; &lt;/div&gt;
 |= 
-&lt;style&gt; img {max-width: 100%; max-height: 100%; } &lt;/style&gt; &lt;img src=&#39;res2/telefono_auto.png&#39;&gt; &lt;/div&gt;
+&lt;img src=&#39;res2/telefono_auto.png&#39; class=&#39;full&#39;&gt; &lt;/div&gt;
 |==|
 ](else:)[(text-colour:$colore_dialogo)[&#39;&#39;[Maresciallo Caputo]&#39;&#39;]: La soluzione è sbagliata, così non sembra avere senso: riproviamo!]
 |=
-&lt;style&gt; img { max-width: 100%; max-height: 100%; } &lt;/style&gt; &lt;img src=&#39;res2/whatsapp.jpg&#39;&gt; &lt;/div&gt;
+&lt;img src=&#39;res2/whatsapp.jpg&#39; class=&#39;full&#39;&gt; &lt;/div&gt;
 
 |dialogo&gt;[|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;[Detective $nome]&#39;&#39;]: Dai, agente $cognome, inserisca la soluzione del rebus!]]
 \
@@ -534,7 +534,7 @@ Quindi, arrivato a questo punto, [[valuta le possibili opzioni-&gt;1 Stat]] a tu
 (if: $frappe_ogg is &quot;Sì&quot; and $punti_int &gt; 3)[Poi, all&#39;improvviso, al risultato del rebus un dato diventa più chiaro. Ma certo! Evidentemente era rimasto nei meandri della tua mente fino a quel momento.
 |dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;[Detective $nome]&#39;&#39;]: Maresciallo guardi! Il frappè non proviene da Starbucks, ma da SturBancks! Deve essere una specie di copia.]
 \
-(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[&lt;style&gt; img {max-width: 100%; max-height: 100%; } &lt;/style&gt; &lt;img src=&#39;res2/frappe.png&#39;&gt; &lt;/div&gt;]
+(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[&lt;img src=&#39;res2/frappe.png&#39; class=&#39;full&#39;&gt; &lt;/div&gt;]
 \
 Capite subito che, se il frappé viene da un posto così strano, probabilmente deve esserci un legame fra il sospettato e questo Sturbanks. Vi mettete entrambi all&#39;opera, smanettando sul telefono per cercare dove si trovi questo strano negozio. 
 
@@ -599,9 +599,9 @@ Guadagni 2 //punti intelligenza// per aver capito come muoverti rapidamente nel 
 |dialogo&gt;[(text-colour:#74c0fc)[&#39;&#39;[Detective $nome]&#39;&#39;]: Si, hai ragione. Al momento ci si fa poco, ma in futuro potrebbe essere utile. Certo che portarsi dietro un bicchiere di frappè usato...chissà se è una buona idea!]
 \
 |=
-&lt;style&gt; img {max-width: 100%; max-height: 100%; } &lt;/style&gt; &lt;img src=&#39;res2/frappe.png&#39;&gt; &lt;/div&gt;
+&lt;img src=&#39;res2/frappe.png&#39; class=&#39;full&#39;&gt; &lt;/div&gt;
 |= 
-&lt;style&gt; img {max-width: 100%; max-height: 100%; } &lt;/style&gt; &lt;img src=&#39;res2/frappe_auto.png&#39;&gt; &lt;/div&gt;
+&lt;img src=&#39;res2/frappe_auto.png&#39; class=&#39;full&#39;&gt; &lt;/div&gt;
 |==|
 
 Quindi, pensi che sia una buona idea o meno prendere il Frappè?
