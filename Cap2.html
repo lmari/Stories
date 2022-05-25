@@ -323,7 +323,7 @@ Il maresciallo dirama la comunicazione. Fatto ciò, vi mettetre in attesa. Non c
 
 (if: $targhe_e1 + $targhe_e2 is 0)[(set: $punti_int to $punti_int + 1)(set: $punti_soc to $punti_soc + 1) In ogni caso, complimenti! Sei riuscit$g a trovare la targa corretta al primo tentativo. Per questa ragione guadagni 1 punto intelligenza e 1 punto socialità.]
 
-(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="6" name="come si legge una targa" tags="T_Nero Grigio_c" position="4600,1375" size="100,100">
+(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="6" name="come si legge una targa" tags="T_Nero Grigio_c" position="4600,1373" size="100,100">
 ## Come leggere una targa
 \
 Scrivi un messaggio di aiuto alla tua amica Valeria, che ti risponde dopo pochissimi minuti.
@@ -371,7 +371,7 @@ Dopo due lunghi giorni di indagini infruttuose, arriva una chiamata nella prima 
 
 Tu ci pensi subito: i Musei Capitolini sono proprio accanto alla Piazza del Campidoglio. Sarà una coincidenza? Non credi proprio... A questo punto, hai due strade possibili. Puoi cercare le [[coordinate]] dei Musei Capitolini, e poi capire come usarle per metterle sul tuo navigatore GPS, per arrivare prima sulla scena del crimine. Oppure, puoi andare [[senza navigatore]], rischiando di perderti ma anche conoscendo un po’ meglio la città, dato che comunque sei stato in quell’area giusto due giorni prima e dovresti perciò ricordarti il tragitto. {
 
-(display: &quot;piepagina&quot;)}</tw-passagedata><tw-passagedata pid="8" name="3 Esatto" tags="Grigio_c T_Nero" position="5200,791.3333333333334" size="100,100">
+(display: &quot;piepagina&quot;)}</tw-passagedata><tw-passagedata pid="8" name="3 Esatto" tags="Grigio_c T_Nero" position="5200,791" size="100,100">
 ## Ispeziona il furgoncino
 \
 Arrivati alla posizione segnalata, trovate un furgoncino bianco. Vi basta dare un&#39;occhiata alla targa per rendervi conto che si tratti del mezzo che stavate cercando. 
@@ -414,7 +414,7 @@ Mettendo la mano dentro il veicolo, trovi un modo per aprire la portiera ed entr
 \
 [[Torna indietro-&gt;3 Esatto]]
 \
-(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="10" name="Rebus" tags="Bianco T_Nero" position="5407.666666666667,793.6666666666666" size="100,100">
+(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="10" name="Rebus" tags="Bianco T_Nero" position="5407,793" size="100,100">
 ## Telefono 📱
 \
 (if: $flag_rebus is 0)[Guardando il telefono, non siete in grado di sbloccarlo. Però all&#39;improvviso arrivano dei nuovi messaggi, che compaiono nella schermata iniziale del telefono.
@@ -559,7 +559,7 @@ Queste sono coordinate in (dropdown: 2bind $risp_coord_1, &quot;Gradi decimali (
 
 |cloacked)[ [[Coordinate 2]] [[Coordinate 3]]]
 
-(display: &quot;piepagina&quot;) }</tw-passagedata><tw-passagedata pid="14" name="Cugino" tags="Grigio_c T_Nero" position="5002.666666666667,700" size="100,100">
+(display: &quot;piepagina&quot;) }</tw-passagedata><tw-passagedata pid="14" name="Cugino" tags="Grigio_c T_Nero" position="5002,700" size="100,100">
 ## Fatti dare un passaggio dal cugino del maresciallo
 \
 (set: $punti_int to $punti_int - 1)
@@ -779,7 +779,7 @@ Con uno scatto da ver$g atleta, riesce a raggiungere il barista che stava cercan
 \
 (display: &quot;piepagina&quot;)
 
-test</tw-passagedata><tw-passagedata pid="23" name="scontrino_generico" tags="Grigio_c T_Nero" position="6398,803.6666666666666" size="100,100">
+test</tw-passagedata><tw-passagedata pid="23" name="scontrino_generico" tags="Grigio_c T_Nero" position="6398,803" size="100,100">
 ## Errato! 
 \
 Ma no, insomma! Andare in un posto in cui il sospettato ha mangiato o si è fermato per un caffé non ti porterà a nulla. Sai già di chi si tratta, devi trovare un modo per incastrarlo.
@@ -896,7 +896,7 @@ Meno male che non hai perso del tempo a chiedere informazioni su come arrivare a
 
 Scendi dunque dall’auto e [[arrivi ai Musei Capitolini-&gt;2 Introduzione]]. \
  \
-(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="31" name="2 Fine" tags="T_Nero Grigio_c" position="5808,603.6666666666666" size="100,100">
+(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="31" name="2 Fine" tags="T_Nero Grigio_c" position="5808,603" size="100,100">
 ## Il covo di Mercer
 \
 Gli agenti e tu, Detective $nome, siete arrivati nel minor tempo possibile 
@@ -991,33 +991,33 @@ Prima di guardare le heatmap, ti ricordi che la Lupa si trovava nell’angolo in
 &#39;&#39;Di quale sospettato vuoi visualizzare la heatmap?&#39;&#39;
 (dropdown: bind $n, &quot;Marco Bagni&quot;, &quot;Andres Salza&quot;, &quot;Chiara Rassio&quot;, &quot;Sofia Cremoli&quot;, &quot;Axel Jorri&quot;, &quot;Beatrice Ravilio&quot;, &quot;Giorgio Entommi&quot;, &quot;Matilde Francolini&quot;, &quot;Rosalie Renoire&quot;, &quot;Franco Drevi&quot;, &quot;David Mercer&quot;, &quot;Valerio Liggio&quot;, &quot;Rebecca Gerri&quot;, &quot;Vittorio Iozzi&quot;, &quot;Damien Bunchard&quot;, &quot;Fabio Bressa&quot;, &quot;Jacopo Attolo&quot;, &quot;Isabelle Tucci&quot;, &quot;Tommaso Millezza&quot;)
 (align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[(live: 0.2s)[&lt;h3&gt;&#39;&#39;$n&#39;&#39;&lt;/h3&gt; {
-(set: _x to (cond: $n is &quot;Marco Bagni&quot;, &quot;Q8c0GW3/Heatmap1&quot;,
-$n is &quot;Andres Salza&quot;, &quot;xgrFQgn/Heatmap2&quot;,
-$n is &quot;Chiara Rassio&quot;, &quot;qFLW0VH/Heatmap3&quot;,
-$n is &quot;Sofia Cremoli&quot;, &quot;1fY5sq1/Heatmap4&quot;,
-$n is &quot;Axel Jorri&quot;, &quot;XJsN9HP/Heatmap5&quot;,
-$n is &quot;Beatrice Ravilio&quot;, &quot;SKkgd7d/Heatmap6&quot;,
-$n is &quot;Giorgio Entommi&quot;, &quot;HTS4zqb/Heatmap7&quot;,
-$n is &quot;Matilde Francolini&quot;, &quot;xsjYH98/Heatmap8&quot;,
-$n is &quot;Rosalie Renoire&quot;, &quot;Heatmap9&quot;,
-$n is &quot;Franco Drevi&quot;, &quot;tYkmrQg/Heatmap10&quot;,
-$n is &quot;David Mercer&quot;, &quot;bBVgT0W/Heatmap19&quot;,
-$n is &quot;Valerio Liggio&quot;, &quot;wQm0vhX/Whats-App-Image-2022-05-19-at-18-58-22&quot;,
-$n is &quot;Rebecca Gerri&quot;, &quot;9scYLd7/Whats-App-Image-2022-05-19-at-19-28-39&quot;,
-$n is &quot;Vittorio Iozzi&quot;, &quot;rQ9V44h/Heatmap13&quot;,
-$n is &quot;Damien Bunchard&quot;, &quot;x7G6VP5/Heatmap14&quot;,
-$n is &quot;Fabio Bressa&quot;, &quot;3N84qk3/Heatmap15&quot;,
-$n is &quot;Jacopo Attolo&quot;, &quot;2YGNYX9/Heatmap16&quot;,
-$n is &quot;Isabelle Tucci&quot;, &quot;5FgmdkW/Heatmap17&quot;, &quot;7g66Q0Z/Heatmap18&quot;))
+(set: _x to (cond: $n is &quot;Marco Bagni&quot;, &quot;res2/Heatmap1&quot;,
+$n is &quot;Andres Salza&quot;, &quot;res2/Heatmap2&quot;,
+$n is &quot;Chiara Rassio&quot;, &quot;res2/Heatmap3&quot;,
+$n is &quot;Sofia Cremoli&quot;, &quot;res2/Heatmap4&quot;,
+$n is &quot;Axel Jorri&quot;, &quot;res2/Heatmap5&quot;,
+$n is &quot;Beatrice Ravilio&quot;, &quot;res2/Heatmap6&quot;,
+$n is &quot;Giorgio Entommi&quot;, &quot;res2/Heatmap7&quot;,
+$n is &quot;Matilde Francolini&quot;, &quot;res2/Heatmap8&quot;,
+$n is &quot;Rosalie Renoire&quot;, &quot;res2/Heatmap9&quot;,
+$n is &quot;Franco Drevi&quot;, &quot;res2/Heatmap10&quot;,
+$n is &quot;David Mercer&quot;, &quot;res2/Heatmap19&quot;,
+$n is &quot;Valerio Liggio&quot;, &quot;res2/Heatmap11&quot;,
+$n is &quot;Rebecca Gerri&quot;, &quot;res2/Heatmap12&quot;,
+$n is &quot;Vittorio Iozzi&quot;, &quot;res2/Heatmap13&quot;,
+$n is &quot;Damien Bunchard&quot;, &quot;res2/Heatmap14&quot;,
+$n is &quot;Fabio Bressa&quot;, &quot;res2/Heatmap15&quot;,
+$n is &quot;Jacopo Attolo&quot;, &quot;res2/Heatmap16&quot;,
+$n is &quot;Isabelle Tucci&quot;, &quot;res2/Heatmap17&quot;, &quot;res2/Heatmap18&quot;))
 
-(print: &quot;&lt;img src=&#39;https://i.ibb.co/&quot; + _x + &quot;.png&#39; class=&#39;full&#39;&gt;&quot;)}
+(print: &quot;&lt;img src=&#39;&quot; + _x + &quot;.png&#39; class=&#39;full&#39;&gt;&quot;)}
 ]] \
 
 Se pensi di aver bisogno di una spiegazione sulle heatmap, puoi [[mandare un messaggio-&gt;scrivi a Rebecca 2]] alla tua amica Rebecca.
 
 Questa invece è la heatmap di tutte le persone che hanno visitato il museo nell’ultima settimana.
 \
-(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[&lt;img src=&#39;https://i.ibb.co/P6jn5pz/Heatmap20.png&#39; class=&#39;full&#39;&gt;]
+(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[&lt;img src=&#39;res2/Heatmap20.png&#39; class=&#39;full&#39;&gt;]
 \
 Se pensi dunque di avere informazioni sufficienti, prosegui e [[scegli il sospettato-&gt;2 Stat]] oppure, [[torna indietro e analizza un’altra prova-&gt;1 Stat]]. {
 
@@ -1242,7 +1242,7 @@ Il progetto GaLe è promosso dalla (link-rerun: &quot;Camera di Commercio di Var
 (if: $cognome is 0) [(set: $cognome to &quot;Bianchi&quot;)]
 (if: $punti_int is 0) [(set: $punti_int to 1)]
 (if: $punti_soc is 0) [(set: $punti_soc to 4)]
-(if: $g is 0) [(set: $g to &quot;o&quot;)]
+(if: $g is 0) [(set: $g to &quot;a&quot;)]
 
 (set: $colore_dialogo to #74c0fc)
 
