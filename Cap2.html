@@ -374,7 +374,7 @@ Dopo due lunghi giorni di indagini infruttuose, arriva una chiamata nella prima 
 
 Tu ci pensi subito: i Musei Capitolini sono proprio accanto alla Piazza del Campidoglio. Sarà una coincidenza? Non credi proprio... A questo punto, hai due strade possibili. Puoi cercare le [[coordinate]] dei Musei Capitolini, e poi capire come usarle per metterle sul tuo navigatore GPS, per arrivare prima sulla scena del crimine. Oppure, puoi andare [[senza navigatore]], rischiando di perderti ma anche conoscendo un po’ meglio la città, dato che comunque sei stato in quell’area giusto due giorni prima e dovresti perciò ricordarti il tragitto. {
 
-(display: &quot;piepagina&quot;)}</tw-passagedata><tw-passagedata pid="8" name="3 Esatto" tags="Grigio_c T_Nero" position="5200,791" size="100,100">
+(display: &quot;piepagina&quot;)}</tw-passagedata><tw-passagedata pid="8" name="3 Esatto" tags="Grigio_c T_Nero" position="5198.333333333333,791" size="100,100">
 ## Ispeziona il furgoncino
 \
 Arrivati alla posizione segnalata, trovate un furgoncino bianco. Vi basta dare un&#39;occhiata alla targa per rendervi conto che si tratti del mezzo che stavate cercando. 
@@ -387,7 +387,7 @@ Arrivati alla posizione segnalata, trovate un furgoncino bianco. Vi basta dare u
 \
 Mettendo la mano dentro il veicolo, trovi un modo per aprire la portiera ed entri, osservando tutta una serie di oggetti lì presenti. Che cosa vuoi guardare?
 \
-(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[&lt;style&gt; img {max-width: 100%; max-height: 100%; } &lt;/style&gt; &lt;img src=res2/auto.png&gt; &lt;/div&gt;]
+(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[&lt;img src=res2/auto.png class=&#39;full&#39;&gt; &lt;/div&gt;]
 \
 =|=
 (if: $controlla_postit is 0)[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[(text-colour:#ff922b)[ [[&#39;&#39;- Post it 🗒 &#39;&#39;&lt;style&gt; img {max-width: 100%; max-height: 100%; } &lt;/style&gt; &lt;img src=&#39;res2/post_it_auto.png&#39;&gt; &lt;/div&gt;-&gt;Postit]]]]]
@@ -576,7 +576,7 @@ Guadagni 1 //punto socialità// (if: $punti_int &gt; 1)[e perdi 1 //punto intell
 \
 Dopo un&#39;ora e mezza di tragitto, finalmente [[arrivi all&#39;auto del sospettato-&gt;3 Esatto]].
 \
-(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="15" name="Volante" tags="Grigio_c T_Nero" position="5002,898" size="100,100">
+(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="15" name="Volante" tags="Grigio_c T_Nero" position="5000.333333333333,899.6666666666666" size="100,100">
 ## Fatti venire a prendere dagli agenti Riccardi e Palladini
 \
 |dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;[Maresciallo Caputo]&#39;&#39;]: Ottima idea detective $nome! Nonostante il la caserma è lontana, andando a sirene spiegate possiamo saltare il traffico.]
@@ -585,8 +585,7 @@ Guadagni 2 //punti intelligenza// per aver capito come muoverti rapidamente nel 
 
 [[Dopo mezz&#39;ora di tragitto, finalmente arrivi all&#39;auto del sospettato-&gt;3 Esatto]].
 \
-(if: $Passaggio_v is 0)[(set: $punti_int to $punti_int + 2)]
-(set: $Passaggio_v to 1)
+(set: $punti_int to $punti_int + 2)
 \
 (display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="16" name="Frappè" tags="Grigio_c T_Nero" position="5401,999" size="100,100">
 ## Frappè 🥛
@@ -734,7 +733,7 @@ Se vuoi riprovare a giocare, (link: &quot;clicca qui per ricominciare la storia&
 
 Inoltre, puoi,(link: &quot;scoprire curiosità legate al gioco.&quot;)[(goto: &quot;curiosità&quot;)].
 
-Oppure, puoi (link-rerun: &quot;rigiocare il primo capitolo o compilare il questionario per darci un tuo parere su questo gioco&quot;)[(open-url:&quot;https://flipfly.it/gale/&quot;)].</tw-passagedata><tw-passagedata pid="22" name="2 Fine2" tags="Grigio_c T_Nero" position="6400,973.3333333333334" size="100,100">
+Oppure, puoi (link-rerun: &quot;rigiocare il primo capitolo o compilare il questionario per darci un tuo parere su questo gioco&quot;)[(open-url:&quot;https://flipfly.it/gale/&quot;)].</tw-passagedata><tw-passagedata pid="22" name="2 Fine2" tags="Grigio_c T_Nero" position="6400,995" size="100,100">
 ## Arriva da Sturbanks
 \
 &lt;style&gt; img {max-width: 100%; max-height: 100%; } &lt;/style&gt; &lt;img src=https://i.ibb.co/48pW7Zw/Bar.png&gt; &lt;/div&gt; 1
