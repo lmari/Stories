@@ -565,14 +565,14 @@ Queste sono coordinate in (dropdown: 2bind $risp_coord_1, &quot;Gradi decimali (
 (display: &quot;piepagina&quot;) }</tw-passagedata><tw-passagedata pid="14" name="Cugino" tags="Grigio_c T_Nero" position="5002,700" size="100,100">
 ## Fatti dare un passaggio dal cugino del maresciallo
 \
-(set: $punti_int to $punti_int - 1)
+(if: $punti_int &gt; 1)[(set: $punti_int to $punti_int - 1)]
 (set: $punti_soc to $punti_soc + 1)
 \
 Hai scelto di farti dare un passaggio dal cugino del maresciallo, che è ovviamente disponibile.
 
 |dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;[Cugino]&#39;&#39;]: Farò il possibile detective, ma senza usare le sirene, con il traffico di Roma ci vorrà almeno un ora.]
 
-Guadagni 1 punto socialità e perdi 1 punto intelligenza per aver accettato l’aiuto dal cugino del maresciallo.
+Guadagni 1 //punto socialità// (if: $punti_int &gt; 1)[e perdi 1 //punto intelligenza// ]per aver accettato l’aiuto dal cugino del maresciallo.
 \
 Dopo un&#39;ora e mezza di tragitto, finalmente [[arrivi all&#39;auto del sospettato-&gt;3 Esatto]].
 \
@@ -581,11 +581,11 @@ Dopo un&#39;ora e mezza di tragitto, finalmente [[arrivi all&#39;auto del sospet
 \
 |dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;[Maresciallo Caputo]&#39;&#39;]: Ottima idea detective $nome! Nonostante il la caserma è lontana, andando a sirene spiegate possiamo saltare il traffico.]
 
-Guadagni 2 punto intelligenza per aver capito come muoverti rapidamente nel traffico della città eterna.
+Guadagni 2 //punti intelligenza// per aver capito come muoverti rapidamente nel traffico della città eterna.
 
 [[Dopo mezz&#39;ora di tragitto, finalmente arrivi all&#39;auto del sospettato-&gt;3 Esatto]].
 \
-(if: $Passaggio_v is 0)[(set: $punto_int_n to $punto_int_n + 2)]
+(if: $Passaggio_v is 0)[(set: $punti_int to $punti_int + 2)]
 (set: $Passaggio_v to 1)
 \
 (display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="16" name="Frappè" tags="Grigio_c T_Nero" position="5401,999" size="100,100">
@@ -726,9 +726,9 @@ Dopo aver preso il diploma di scuola superiore ha proseguito gli studi, laureand
 &lt;hr&gt;
 
 &lt;h3&gt;(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[(text-colour:#4dabf7)[&#39;&#39;Complimenti, agente $nome $cognome: sei riuscit$g a catturare il sospettato! Ecco il tuo punteggio!&#39;&#39;]]&lt;/h3&gt;
-(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[&#39;&#39;Punti Intuizione: $punto_int_n
-Punti Socialità $punto_soc_n
-Errori commessi nel gioco $risp_sbagliate&#39;&#39;]
+(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[&#39;&#39;//Punti Intuizione//: $punti_int
+//Punti Socialità//: $punti_soc
+Errori commessi durante il gioco: $risp_sbagliate&#39;&#39;]
 \
 
 Se vuoi riprovare a giocare, (link: &quot;clicca qui per ricominciare la storia&quot;)[(goto: &quot;frontespizio&quot;)]
@@ -787,8 +787,8 @@ test</tw-passagedata><tw-passagedata pid="23" name="scontrino_generico" tags="Gr
 \
 Ma no, insomma! Andare in un posto in cui il sospettato ha mangiato o si è fermato per un caffé non ti porterà a nulla. Sai già di chi si tratta, devi trovare un modo per incastrarlo.
 
-(if: $scontrino_generico is 0)[Perdi un punto intelligenza per aver scelto lo scontrino sbagliato. 
-(set: $punto_int_n to $punto_int_n + -1)]
+(if: $scontrino_generico is 0 and $punti_int &gt; 1)[Perdi 1 //punto intelligenza// per aver scelto lo scontrino sbagliato. 
+(set: $punti_int to $punti_int - 1)]
 (set: $scontrino_generico to 1) \ &lt;!-- qui e non sopra altrimenti il testo con la flag scontrino generico non funziona mai non funziona --&gt;
 \
 |=
@@ -866,7 +866,7 @@ Ora che sei un po’ più espert$g di dati e coordinate geografiche, [[prosegui 
 (live: $time_ass + 0.5)[(if: $flag is 1) [(if: $punti_assegnati is 0)[(set: $punti_assegnati to 1)(set: $punti_int to $punti_int + 1)]]] \
  \
 (live: $time_ass + 0.5)
-|enfat&gt;[Complimenti! Hai passato più di $time_ass_text secondi a leggere il testo. Non solo hai imparato qualcosa che magari ti tornerà magari utile in futuro, ma noi sviluppatori di questo libro-game abbiamo deciso di premiare la tua curiosità con un ulteriore punto intelligenza.] \
+|enfat&gt;[Complimenti! Hai passato più di $time_ass_text secondi a leggere il testo. Non solo hai imparato qualcosa che magari ti tornerà magari utile in futuro, ma noi sviluppatori di questo libro-game abbiamo deciso di premiare la tua curiosità con un ulteriore //punto intelligenza//.] \
  \
 (live: $time_ass + 0.5)[(display: &quot;piepagina&quot;)]</tw-passagedata><tw-passagedata pid="28" name="senza navigatore" tags="Grigio_c T_Nero" position="1800,801" size="100,100">
 ## Viaggiando senza navigatore
@@ -1088,7 +1088,7 @@ Come per magia, le prove si mettono in ordine davanti ai tuoi occhi, e all’imp
 
 A questo punto [[prosegui con le indagini-&gt;3 Stat]]. {
 
-(display: &quot;piepagina&quot;)}</tw-passagedata><tw-passagedata pid="41" name="risp sbagliata Stat" tags="Grigio_c T_Nero" position="3598,798" size="100,100">
+(display: &quot;piepagina&quot;)}</tw-passagedata><tw-passagedata pid="41" name="risp sbagliata Stat" tags="Grigio_c T_Nero" position="3598,799.6666666666666" size="100,100">
 ## Niente da fare...
 \
 &#39;&#39;$sospettato&#39;&#39; non è la persona probabilmente responsabile del furto... {
@@ -1138,9 +1138,8 @@ Se vai subito in dipartimento a controllare i filmati, potresti risparmiare temp
 
 No, chiaramente doveva essere un’altra la ragione per cui lì si trova il libro, ma tu non hai più tempo per rifletterci: devi andare in dipartimento a [[visionare i filmati-&gt;Targhe]] con il maresciallo Caputo.
 
-Questo errore di valutazione ti costa però un //punto intelligenza//. {
-
-(set: $punti_int to $punti_int - 1)
+(if: $punti_int &gt; 1)[Questo errore di valutazione ti costa però un //punto intelligenza//. 
+(set: $punti_int to $punti_int - 1)]{
 
 (display: &quot;piepagina&quot;)}</tw-passagedata><tw-passagedata pid="44" name="Opzione 2" tags="T_Nero Grigio_c" position="4200,775" size="100,100">
 ## Pensi che il libro sia stato portato lì da qualcuno interno al museo...
