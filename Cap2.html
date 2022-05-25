@@ -243,26 +243,26 @@ Ecco l’elenco preparato dall’agente Riccardi. \
 3:09
 |==|
 
-Se non sai come funziona l’assegnazione delle targhe delle automobili, puoi mandare un messaggio su whatsapp alla tua amica Valeria Lombroni, ingegnera meccanica e grande esperta di automobili, per chiederle [[come si legge una targa]]. Altrimenti, seleziona la targa che pensi corrisponda al veicolo del sospettato, per scoprire se hai fatto la scelta giusta o sbagliata.\
-(if: $targhe_e1 + $targhe_e2 &gt; 0) [Infine, ricordati sempre che puoi mandare un [[messaggio alla tua amica Rebecca--&gt;scarto]] e chiederle un suggerimento] {
+Se non sai come funziona l’assegnazione delle targhe delle automobili, puoi mandare un messaggio su whatsapp alla tua amica Valeria Lombroni, ingegnera meccanica e grande esperta di automobili, per chiederle [[come si legge una targa]]. Altrimenti, seleziona la targa che pensi corrisponda al veicolo del sospettato, per scoprire se hai fatto la scelta giusta o sbagliata.
+(if: $targhe_e1 + $targhe_e2 &gt; 0) [Infine, ricordati sempre che puoi mandare un [[messaggio alla tua amica Rebecca-&gt;scarto]] e chiederle un suggerimento.] {
 
 (set: $visitato_targhe to 1)
 
-(display: &quot;piepagina&quot;) }</tw-passagedata><tw-passagedata pid="3" name="Errore 1" tags="Grigio_c T_Nero" position="4600,1000" size="100,100">
+(display: &quot;piepagina&quot;) }</tw-passagedata><tw-passagedata pid="3" name="Errore 1" tags="Grigio_c T_Nero" position="4800,1000" size="100,100">
 ## Troppo presto!
 \
 Tu indichi la targa, e dietro di te il maresciallo Capito sorride sornione.
 
 |dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;Maresciallo Caputo&#39;&#39;]: Ehm... agente $cognome, sei sicur$g? Il sospettato non doveva passare una ventina di minuti dopo le 2:30? Se il colpo viene effettuato alle 2:41, il tragitto impiegato per raggiungere una delle telecamere è di almeno 20 minuti.]
 
-{ (if: $targhe_e1 is 0 and $punti_int &gt; 1) [(set: $punti_int to $punti_int - 1)Questo errore ti fa perdere un //punto intelligenza//.]
+(if: $targhe_e1 is 0 and $punti_int &gt; 1) [(set: $punti_int to $punti_int - 1)Questo errore ti fa perdere un //punto intelligenza//.]
 
-[[Torna indietro e riguarda le targhe-&gt;Targhe]].
+[[Torna a controllare l’elenco delle targhe-&gt;Targhe]]. {
 
 (set: $targhe_e1 to 1)
 (set: $risp_sbagliate to $risp_sbagliate + 1)
 
-(display: &quot;piepagina&quot;) }</tw-passagedata><tw-passagedata pid="4" name="Corridoio 1" tags="Grigio_c T_Nero" position="4600,400" size="100,100">
+(display: &quot;piepagina&quot;) }</tw-passagedata><tw-passagedata pid="4" name="Corridoio 1" tags="Grigio_c T_Nero" position="4600,575" size="100,100">
 ## La Ferrari di Asia Marzola
 \
 (text-colour:$colore_dialogo)[&#39;&#39;Maresciallo Caputo&#39;&#39;]: Non perdiamo tempo, dunque: contattiamo l’ACI per la visura della targa. 
@@ -297,20 +297,20 @@ Guardi il Maresciallo Caputo, e vi mettete a ridere. Questo è il mondo reale, n
 
 (set: $risp_sbagliate to $risp_sbagliate + 1)
 
-(display: &quot;piepagina&quot;) }</tw-passagedata><tw-passagedata pid="5" name="Esatto" tags="Grigio_c T_Nero" position="4601,798" size="100,100">
+(display: &quot;piepagina&quot;) }</tw-passagedata><tw-passagedata pid="5" name="Esatto" tags="Grigio_c T_Nero" position="4600,900" size="100,100">
 ## Sembra essere una pista promettente!
 \
-|dialogo&gt;[(text-colour:#74c0fc)[&#39;&#39;[Detective $nome]&#39;&#39;]: Allora, questa potrebbe essere l&#39;auto corretta. Il periodo di tempo è verosimile perché c&#39;è uno scarto basso fra l&#39;ora prevista di passaggio sottola telecamera e il passaggio effettivo. Inoltre, fra tutti i veicoli passate in un momento verosimile, questa è l&#39;unica moderna. Maresciallo, concorda con me?]
+|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;Detective $nome&#39;&#39;]: Allora, questa potrebbe essere l&#39;auto corretta. Il periodo di tempo è verosimile perché c&#39;è uno scarto basso fra l&#39;ora prevista di passaggio sottola telecamera e il passaggio effettivo. Inoltre, fra tutti i veicoli passate in un momento verosimile, questa è l&#39;unica moderna. Maresciallo, concorda con me?]
 
-|dialogo&gt;[(text-colour:#74c0fc)[&#39;&#39;[Maresciallo Caputo]&#39;&#39;]: Si, assolutamente! Secondo me siamo sulla buona stada. Forza, non perdiamo tempo. Procediamo immediatamente a contattare l’ACI per la visura della targa.]
+|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;Maresciallo Caputo&#39;&#39;]: Si, assolutamente! Secondo me siamo sulla buona stada. Forza, non perdiamo tempo. Procediamo immediatamente a contattare l’ACI per la visura della targa.]
 
 Dopo qualche minuto di attesa, ricevete una mail da un funzionario dell&#39;ACI, che vi invia la visura contenente tutti i dati utili. 
 
-|dialogo&gt;[(text-colour:#74c0fc)[&#39;&#39;[Maresciallo Caputo]&#39;&#39;]: Ecco i dettagli del veicolo…telaio numero DKFKEOSS30D, peso 3.5 tonnellate, nessun proprietario...questa è proprio un&#39;anomalia. Nellaa mia lunga carriera raramente ho visto qualcosa di simile.]
+|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;Maresciallo Caputo&#39;&#39;]: Ecco i dettagli del veicolo…telaio numero DKFKEOSS30D, peso 3.5 tonnellate, nessun proprietario...questa è proprio un&#39;anomalia. Nellaa mia lunga carriera raramente ho visto qualcosa di simile.]
 
-|dialogo&gt;[(text-colour:#74c0fc)[&#39;&#39;[Detective $nome]&#39;&#39;]: Sono sempre più sicuro che possa trattarsi del sospettato. Ricordo ancora cosa diceva il mio vecchio professore di criminologia: la coincidenze non esistono, raramente l&#39;universo è così pigro.]
+|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;Detective $nome&#39;&#39;]: Sono sempre più sicuro che possa trattarsi del sospettato. Ricordo ancora cosa diceva il mio vecchio professore di criminologia: la coincidenze non esistono, raramente l&#39;universo è così pigro.]
 
-|dialogo&gt;[(text-colour:#74c0fc)[&#39;&#39;[Maresciallo Caputo]&#39;&#39;]: Benissimo allora! Diamo la massima allerta, contattiamo le pattuglie e segnaliamo la targa. Non ci vorrà molto per ritrovarla.]
+|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;[Maresciallo Caputo]&#39;&#39;]: Benissimo allora! Diamo la massima allerta, contattiamo le pattuglie e segnaliamo la targa. Non ci vorrà molto per ritrovarla.]
 
 Il maresciallo dirama la comunicazione. Fatto ciò, vi mettetre in attesa. Non c&#39;è nulla da fare, sa non aspettare...
 ...5 minuti...
@@ -319,18 +319,21 @@ Il maresciallo dirama la comunicazione. Fatto ciò, vi mettetre in attesa. Non c
 ...30 minuti...
 ...e finalmente il telefono di Caputo suona. Lui annuisce qualche volta, e si segna un indirizzo su un foglio di carta. 
 
-|dialogo&gt;[(text-colour:#74c0fc)[&#39;&#39;[Maresciallo Caputo]&#39;&#39;]: Abbiamo una pista! L&#39;auto segnalata è stata trovata a 5 km da qui. Adesso ci sono due alternative per arrivare all’auto del presunto ladro. Ho un cugino che lavora proprio qui vicino che ci [[darebbe immediatamente un passaggio|Cugino]], e forse con il traffico di Roma in queste ore di punta potremmo risparmiare un po&#39; di tempo. Altrimenti possiamo farci [[portare dai miei fidati agenti |Volante]] Riccardi e Palladini con una volante che però non è ancora tornata in centrale, ma è circa a 3km da noi. Vai, prendi una decisione.]
+|dialogo&gt;[(text-colour:#74c0fc)[&#39;&#39;Maresciallo Caputo&#39;&#39;]: Abbiamo una pista! L&#39;auto segnalata è stata trovata a 5 km da qui. Adesso ci sono due alternative per arrivare all’auto del presunto ladro. Ho un cugino che lavora proprio qui vicino che ci [[darebbe immediatamente un passaggio|Cugino]], e forse con il traffico di Roma in queste ore di punta potremmo risparmiare un po&#39; di tempo. Altrimenti possiamo farci [[portare dai miei fidati agenti |Volante]] Riccardi e Palladini con una volante che però non è ancora tornata in centrale, ma è circa a 3km da noi. Vai, prendi una decisione.]
 
-(if: $targhe_e1 + $targhe_e2 is 0)[(set: $punti_int to $punti_int + 1)(set: $punti_soc to $punti_soc + 1) In ogni caso, complimenti! Sei riuscit$g a trovare la targa corretta al primo tentativo. Per questa ragione guadagni 1 punto intelligenza e 1 punto socialità.]
+(if: $targhe_e1 + $targhe_e2 is 0)[(set: $punti_int to $punti_int + 1)(set: $punti_soc to $punti_soc + 1) In ogni caso, complimenti! Sei riuscit$g a trovare la targa corretta al primo tentativo. Per questa ragione guadagni un //punto intelligenza// e un //punto socialità//.] {
 
-(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="6" name="come si legge una targa" tags="T_Nero Grigio_c" position="4600,1373" size="100,100">
+(display: &quot;piepagina&quot;) }</tw-passagedata><tw-passagedata pid="6" name="come si legge una targa" tags="T_Nero Grigio_c" position="4600,1125" size="100,100">
 ## Come leggere una targa
 \
 Scrivi un messaggio di aiuto alla tua amica Valeria, che ti risponde dopo pochissimi minuti.
 
-//Ciao bell$g! Come stai? È tanto che non ci si vede...da quando sei diventat$g famos$g non ti fai più sentire ahahahah! Comunque, provo a spiegarti come funzionano l&#39;assegnazione delle targhe in modo semplice. Vedi, le targhe sono dei codici alfanumerici assegnati in modo progressivo. L&#39;attuale classificazione, introdotta nel 1996, è tale per cui la prima targa assegnata è stata AA000AA, mentre la seconda era AA001AA. In pratica, di solito  due targhe successive si riconoscono perché hanno tutte le lettere identiche e due numeri in successioni. Però quando una targa ha numero 999, si torna a 000 e la lettera più a destra aumenta di 1. Ti faccio un esempietto. La 1000esima automobile immatricolata con questo sistema ha avuto targa AA999AA, mentre la targa della 1001esima era AA000AB. Quando poi tutte e 26 le lettere dell&#39;alfabeto anglosassone sono state usate per la lettera più a destra (quindi, arrivati a 999AZ nelle ultime due lettere, dopo ben 26&#39;000 automobili!), la seconda lettera a partire da destra scala una posizione. Quindi, per esempio, alla targa AA999AZ è succeduta la targa AA000BA. Lo stesso procedimento poi si ripete anche per le due lettere a sinistra, per cui, per fare un ultimo esempio, alla targa AZ999ZZ è succeduta la targa BA000AA. Spero che sia tutto chiaro, in bocca al lupo con l&#39;indagine!//
+//Ciao bell$g! Come stai? È tanto che non ci si vede... da quando sei diventat$g famos$g non ti fai più sentire, ahahahah!  
+Comunque, provo a spiegarti in modo semplice come funziona quello che mi hai chiesto.  
+Le targhe sono dei codici alfanumerici assegnati in modo progressivo. La regola attuale, introdotta nel 1996, è tale per cui la prima targa assegnata è stata AA000AA, mentre la seconda era AA001AA. In pratica, di solito  due targhe successive si riconoscono perché hanno tutte le lettere identiche e due numeri in successione. Però quando una targa ha numero 999, si torna a 000 e la lettera più a destra aumenta di 1. Ti faccio un esempietto. La 1000-esima automobile immatricolata con questo sistema ha avuto targa AA999AA, mentre la targa della 1001-esima era AA000AB.  
+Quando poi tutte e 26 le lettere dell’alfabeto anglosassone sono state usate per la lettera più a destra (quindi, arrivati a 999AZ nelle ultime due lettere, dopo ben 26&#39;000 automobili!), la seconda lettera a partire da destra scala una posizione. Quindi, per esempio, alla targa AA999AZ è succeduta la targa AA000BA. Lo stesso procedimento poi si ripete anche per le due lettere a sinistra, per cui, per fare un ultimo esempio, dopo la targa AZ999ZZ è arrivata la targa BA000AA. Spero che sia tutto chiaro, in bocca al lupo con l’indagine!//
 
-Ora che sai come si legge una targa, e hai i mezzi per capire quale sia più recente e quale invece più vecchia, [[torna indietro-&gt;Targhe]] e controlla di nuovo le targhe che sono passate negli ultimi giorni. 
+Ora che sai come si legge una targa, e hai i mezzi per capire quali siano le più recenti e quali invece le più vecchie, [[torna a controllare le targhe-&gt;Targhe]] nell’elenco. 
 \
 (display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="7" name="1 Introduzione" tags="Grigio_c T_Nero" position="1600,900" size="100,100">
 ## Alla ricerca della Lupa Capitolina
@@ -991,26 +994,26 @@ Prima di guardare le heatmap, ti ricordi che la Lupa si trovava nell’angolo in
 &#39;&#39;Di quale sospettato vuoi visualizzare la heatmap?&#39;&#39;
 (dropdown: bind $n, &quot;Marco Bagni&quot;, &quot;Andres Salza&quot;, &quot;Chiara Rassio&quot;, &quot;Sofia Cremoli&quot;, &quot;Axel Jorri&quot;, &quot;Beatrice Ravilio&quot;, &quot;Giorgio Entommi&quot;, &quot;Matilde Francolini&quot;, &quot;Rosalie Renoire&quot;, &quot;Franco Drevi&quot;, &quot;David Mercer&quot;, &quot;Valerio Liggio&quot;, &quot;Rebecca Gerri&quot;, &quot;Vittorio Iozzi&quot;, &quot;Damien Bunchard&quot;, &quot;Fabio Bressa&quot;, &quot;Jacopo Attolo&quot;, &quot;Isabelle Tucci&quot;, &quot;Tommaso Millezza&quot;)
 (align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[(live: 0.2s)[&lt;h3&gt;&#39;&#39;$n&#39;&#39;&lt;/h3&gt; {
-(set: _x to (cond: $n is &quot;Marco Bagni&quot;, &quot;res2/Heatmap1&quot;,
-$n is &quot;Andres Salza&quot;, &quot;res2/Heatmap2&quot;,
-$n is &quot;Chiara Rassio&quot;, &quot;res2/Heatmap3&quot;,
-$n is &quot;Sofia Cremoli&quot;, &quot;res2/Heatmap4&quot;,
-$n is &quot;Axel Jorri&quot;, &quot;res2/Heatmap5&quot;,
-$n is &quot;Beatrice Ravilio&quot;, &quot;res2/Heatmap6&quot;,
-$n is &quot;Giorgio Entommi&quot;, &quot;res2/Heatmap7&quot;,
-$n is &quot;Matilde Francolini&quot;, &quot;res2/Heatmap8&quot;,
-$n is &quot;Rosalie Renoire&quot;, &quot;res2/Heatmap9&quot;,
-$n is &quot;Franco Drevi&quot;, &quot;res2/Heatmap10&quot;,
-$n is &quot;David Mercer&quot;, &quot;res2/Heatmap19&quot;,
-$n is &quot;Valerio Liggio&quot;, &quot;res2/Heatmap11&quot;,
-$n is &quot;Rebecca Gerri&quot;, &quot;res2/Heatmap12&quot;,
-$n is &quot;Vittorio Iozzi&quot;, &quot;res2/Heatmap13&quot;,
-$n is &quot;Damien Bunchard&quot;, &quot;res2/Heatmap14&quot;,
-$n is &quot;Fabio Bressa&quot;, &quot;res2/Heatmap15&quot;,
-$n is &quot;Jacopo Attolo&quot;, &quot;res2/Heatmap16&quot;,
-$n is &quot;Isabelle Tucci&quot;, &quot;res2/Heatmap17&quot;, &quot;res2/Heatmap18&quot;))
+(set: _x to (cond: $n is &quot;Marco Bagni&quot;, &quot;Heatmap1&quot;,
+$n is &quot;Andres Salza&quot;, &quot;Heatmap2&quot;,
+$n is &quot;Chiara Rassio&quot;, &quot;Heatmap3&quot;,
+$n is &quot;Sofia Cremoli&quot;, &quot;Heatmap4&quot;,
+$n is &quot;Axel Jorri&quot;, &quot;Heatmap5&quot;,
+$n is &quot;Beatrice Ravilio&quot;, &quot;Heatmap6&quot;,
+$n is &quot;Giorgio Entommi&quot;, &quot;Heatmap7&quot;,
+$n is &quot;Matilde Francolini&quot;, &quot;Heatmap8&quot;,
+$n is &quot;Rosalie Renoire&quot;, &quot;Heatmap9&quot;,
+$n is &quot;Franco Drevi&quot;, &quot;Heatmap10&quot;,
+$n is &quot;David Mercer&quot;, &quot;Heatmap19&quot;,
+$n is &quot;Valerio Liggio&quot;, &quot;Heatmap11&quot;,
+$n is &quot;Rebecca Gerri&quot;, &quot;Heatmap12&quot;,
+$n is &quot;Vittorio Iozzi&quot;, &quot;Heatmap13&quot;,
+$n is &quot;Damien Bunchard&quot;, &quot;Heatmap14&quot;,
+$n is &quot;Fabio Bressa&quot;, &quot;Heatmap15&quot;,
+$n is &quot;Jacopo Attolo&quot;, &quot;Heatmap16&quot;,
+$n is &quot;Isabelle Tucci&quot;, &quot;Heatmap17&quot;, &quot;Heatmap18&quot;))
 
-(print: &quot;&lt;img src=&#39;&quot; + _x + &quot;.png&#39; class=&#39;full&#39;&gt;&quot;)}
+(print: &quot;&lt;img src=&#39;res2/&quot; + _x + &quot;.png&#39; class=&#39;full&#39;&gt;&quot;)}
 ]] \
 
 Se pensi di aver bisogno di una spiegazione sulle heatmap, puoi [[mandare un messaggio-&gt;scrivi a Rebecca 2]] alla tua amica Rebecca.
@@ -1174,31 +1177,29 @@ Un piano geniale: in questi giorni non ha mai piovuto, e nessuno avrebbe notato 
 
 Lascia i Musei Capitolini e vai in dipartimento a [[visionare i filmati-&gt;Targhe]]]. {
 
-(display: &quot;piepagina&quot;)}</tw-passagedata><tw-passagedata pid="45" name="Errore 2" tags="Grigio_c T_Nero" position="4600,1125" size="100,100">
+(display: &quot;piepagina&quot;)}</tw-passagedata><tw-passagedata pid="45" name="Errore 2" tags="Grigio_c T_Nero" position="4800,1125" size="100,100">
 ## Troppo tardi!
 \
-(set: $risp_sbagliate to $risp_sbagliate + 1) \
+Tu indichi la targa, e dietro di te il maresciallo Caputo sorride sornione.
 
-Tu indichi la targa, e dietro di te il maresciallo Capito sorride sornione.
+|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;Maresciallo Caputo&#39;&#39;]: Ehm... agente $cognome, è sicur$g? Il sospettato non doveva passare una ventina di minuti dopo le 2:30? Il tragitto impiegato per raggiungere una delle telecamere è al massimo di 30 minuti.]
 
-|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;Maresciallo Caputo&#39;&#39;]: Ehm...agente $cognome, sei sicur$g? Il sospettato non doveva passare una ventina di minuti dopo le 2:30? Il tragitto impiegato per raggiungere una delle telecamere è al massimo di 30 minuti.]
+(if: $targhe_e2 is 0 and $punti_int &gt; 1) [(set: $punti_int to $punti_int - 1) Questo errore ti fa perdere un //punto intelligenza//.]
 
-(if: $targhe_e2 is 0)[(set: $punti_int to $punti_int - 1)Questo errore ti fa perdere 1 punto intelligenza.]
+[[Torna a controllare l’elenco delle targhe-&gt;Targhe]]. {
 
-[[Torna indietro e riguarda le targhe-&gt;Targhe]]].
-\
-(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="46" name="Errore 3" tags="Grigio_c T_Nero" position="4600,1250" size="100,100">
+(display: &quot;piepagina&quot;) }</tw-passagedata><tw-passagedata pid="46" name="Errore 3" tags="Grigio_c T_Nero" position="4800,1250" size="100,100">
 ## È un auto troppo vecchia!
 \
-(set: $risp_sbagliate to $risp_sbagliate + 1) \
+Hai indicato la targa, ma il maresciallo Caputo dubita che possa essere la scelta giusta...
 
-Tu indichi la targa, e dietro di te il maresciallo Capito sorride sornione.
+|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;Maresciallo Caputo&#39;&#39;]: Ehm... agente $cognome, è sicur$g? L’orario sembra compatibile, ma la macchina non è recente. Guardi la targa: deve essere stata immatricolata letteralmente in un altro millenio.]
 
-|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;[Maresciallo Caputo]&#39;&#39;] “Ehm...agente $cognome, sei sicur$g? L&#39;orario sembra compatibile, ma la macchina non è recente. Guarda la targa: deve essere stata immatricolata letteralmente in un altro millenio.]
-\
-[[Torna indietro e riguarda le targhe|Targhe]]].
-\
-(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="47" name="Corridoio 2" tags="Grigio_c T_Nero" position="4600,525" size="100,100">
+[[Torna a controllare l’elenco delle targhe|Targhe]]. {
+
+(set: $risp_sbagliate to $risp_sbagliate + 1) 
+
+(display: &quot;piepagina&quot;) }</tw-passagedata><tw-passagedata pid="47" name="Corridoio 2" tags="Grigio_c T_Nero" position="4600,700" size="100,100">
 ## L&#39;auto della famiglia Caputo
 \
 Indichi la targa e il maresciallo si mette a ridere. 
@@ -1209,7 +1210,7 @@ Tu sorridi, però un po’ ti insospettisci. È mai possibile che il maresciallo
 
 (set: $risp_sbagliate to $risp_sbagliate + 1)
 
-(display: &quot;piepagina&quot;) }</tw-passagedata><tw-passagedata pid="48" name="interroga Caputo" tags="Grigio_c T_Nero" position="4800,525" size="100,100">
+(display: &quot;piepagina&quot;) }</tw-passagedata><tw-passagedata pid="48" name="interroga Caputo" tags="Grigio_c T_Nero" position="4800,700" size="100,100">
 ## Interroghi il maresciallo Caputo!
 \
 Decidi di lanciarti: ed è una pessima idea... Cominci a pressare il maresciallo. Questi all’inizio sorride pensando che tu stia scherzando, ma dopo qualche minuto inizia a innervosirsi. &quot;Che cosa sta facendo? E’ impazzit$g?&quot; ti apostrofa irritato. Non solo: come se non bastasse, è chiaro subito che hai fatto un buco nell’acqua. Ti bastano poche domande per capire che effettivamente lui non possa essere coinvolto. Era ovvio, $nome! Come poteva il maresciallo essere il colpevole? Lo stesso maresciallo che finora ti ha aiutato così tanto nelle indagini?
@@ -1246,15 +1247,18 @@ Il progetto GaLe è promosso dalla (link-rerun: &quot;Camera di Commercio di Var
 
 (set: $colore_dialogo to #74c0fc)
 
-(if: (passage:)&#39;s name is not &quot;start&quot;) [(save-game: &quot;auto&quot;)] }</tw-passagedata><tw-passagedata pid="53" name="scarto" tags="Grigio_c T_Nero" position="4600,1500" size="100,100">## Come leggere una targa
+(if: (passage:)&#39;s name is not &quot;start&quot;) [(save-game: &quot;auto&quot;)] }</tw-passagedata><tw-passagedata pid="53" name="scarto" tags="Grigio_c T_Nero" position="4600,1250" size="100,100">
+## Come leggere una targa
 \
-Scrivi un messaggio di aiuto alla tua amica Valeria, con una foto delle targhe e dei vari tempi, spiegandole anche con un vocale tutto il contesto. Dopo qualche minuti, ti arriva il seguente messaggio di risposta.
+Scrivi un messaggio di aiuto alla tua amica Valeria, con una foto delle targhe e dei vari tempi, spiegandole anche con un vocale tutto il contesto. Dopo qualche minuti, ti arriva questo messaggio di risposta.
 
-//Ehi ciao $nome! Che bello risentirti! Allora, secondo me quello è un problema di calcolo degli scarti, lo sai? Non so se sai cosa voglia dire, ma nel dubbio te lo spiego. In pratica, tu sai che più o meno ci sono voluti 20 minuti a partire dalle 02:35 per arrivare al semaforo. Quindi, dovrai cercare una macchina che sia passata attorno a quell&#39;ora, perché ovviamente non ci si mette mai esattamente lo stesso tempo a percorrere un percorso. Quindi, per valutare se un auto possa essere o meno quella del sospettato, devi calcolarti la differenza fra l&#39;ora in cui l&#39;auto sarebbe dovuta passare se ci avesse messo esattamente il tempo prevista e l&#39;ora in cui è passata davvero. Oppure, facendo il ragionamento inverso, controllare tutte le macchine che sono passate più o meno attorno alle 2:55, quindi con uno scarto piccolo. Mi segui? Puoi tranquillamente escludere una macchina che è passata al semaforo solo 5 minuti dopo il furto, perché non è verosimile che ci abbia messo così poco a percorrere un tempo che normalmente richiede 20 minuti. Allo stesso modo, puoi anche non considerare tutte le auto che ci hanno messo troppo...spero di esserti stat$g utile! A presto $nome!!!//
+//Ehi ciao $nome! Che bello risentirti!  
+Allora, se ho capito bene il tuo è un problema di calcolo degli scarti. Non so se sai cosa voglia dire, ma nel dubbio te lo spiego. In pratica, tu sai che più o meno ci sono voluti 20 minuti a partire dalle 02:35 per arrivare al semaforo. Quindi, dovrai cercare una macchina che sia passata attorno a quell’ora, perché ovviamente non ci si mette mai esattamente lo stesso tempo a percorrere un percorso. Quindi, per valutare se un’auto possa essere o meno quella del sospettato, devi calcolarti la differenza fra l’ora in cui l’auto sarebbe dovuta passare se ci avesse messo esattamente il tempo prevista e l’ora in cui è passata davvero. Oppure, facendo il ragionamento inverso, controllare tutte le macchine che sono passate più o meno attorno alle 2:55, quindi con uno scarto piccolo.  
+Mi segui? Puoi tranquillamente escludere una macchina che è passata al semaforo solo 5 minuti dopo il furto, perché non è verosimile che ci abbia messo così poco a percorrere un tempo che normalmente richiede 20 minuti. Allo stesso modo, puoi anche non considerare tutte le auto che ci hanno messo troppo...spero di esserti stat$g utile! A presto $nome!!!//
 
-Ora che hai qualche informazione in più, e hai i mezzi per capire quale sia più recente e quale invece più vecchia, [[torna indietro-&gt;Targhe]] e controlla di nuovo le targhe che sono passate negli ultimi giorni. 
-\
-(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="54" name="altra prova Fine" tags="Grigio_c T_Nero" position="6001,702" size="100,100">
+Ora che hai qualche informazione in più, e hai i mezzi per capire quale sia più recente e quale invece più vecchia, [[torna indietro-&gt;Targhe]] e controlla di nuovo le targhe che sono passate negli ultimi giorni. {
+
+(display: &quot;piepagina&quot;) }</tw-passagedata><tw-passagedata pid="54" name="altra prova Fine" tags="Grigio_c T_Nero" position="6001,702" size="100,100">
 ## Alla ricerca di una nuova prova
 \
 Tu e il maresciallo Caputo vi mettete all&#39;opera. Con grande attenzione, perlustrate ogni punto del covo. Dopo mezz&#39;ora di ricerca, ancora non avete trovato nulla. In quel momento ti viene in mente di chiedere al capo della scientifica se si fosse accorto di qualcosa che, pur non essendo una prova, possa essere almeno bizzarra, e guidarti sulla buona strada. Ti avvicini al capo della scientifica, e glielo domandi.\
