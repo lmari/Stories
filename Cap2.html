@@ -253,7 +253,7 @@ Se non sai come funziona l’assegnazione delle targhe delle automobili, puoi ma
 \
 Tu indichi la targa, e dietro di te il maresciallo Capito sorride sornione.
 
-|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;Maresciallo Caputo&#39;&#39;]: Ehm... agente $cognome, sei sicur$g? Il sospettato non doveva passare una ventina di minuti dopo le 2:30? Se il colpo viene effettuato alle 2:41, il tragitto impiegato per raggiungere una delle telecamere è di almeno 20 minuti.]
+|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;Maresciallo Caputo&#39;&#39;]: Ehm... agente $cognome, è sicur$g? Il sospettato non doveva passare una ventina di minuti dopo le 2:30? Se il colpo viene effettuato alle 2:41, il tragitto impiegato per raggiungere una delle telecamere è di almeno 20 minuti.]
 
 (if: $targhe_e1 is 0 and $punti_int &gt; 1) [(set: $punti_int to $punti_int - 1)Questo errore ti fa perdere un //punto intelligenza//.]
 
@@ -422,18 +422,18 @@ Mettendo la mano dentro il veicolo, trovi un modo per aprire la portiera ed entr
 \
 (if: $flag_rebus is 0)[Guardando il telefono, non siete in grado di sbloccarlo. Però all&#39;improvviso arrivano dei nuovi messaggi, che compaiono nella schermata iniziale del telefono.
 
-|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;[Maresciallo Caputo]&#39;&#39;]: Leggiamoli, potrebbero essere un indizio!]
+|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;[Maresciallo Caputo]&#39;&#39;]: Leggiamo i messaggi, potrebbero essere un indizio!]
 \
 |=
 &lt;img src=&#39;res2/telefono.png&#39; class=&#39;full&#39;&gt; &lt;/div&gt;
 |= 
 &lt;img src=&#39;res2/telefono_auto.png&#39; class=&#39;full&#39;&gt; &lt;/div&gt;
 |==|
-](else:)[(text-colour:$colore_dialogo)[&#39;&#39;[Maresciallo Caputo]&#39;&#39;]: La soluzione è sbagliata, così non sembra avere senso: riproviamo!]
+](else:)[|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;[Maresciallo Caputo]&#39;&#39;]: La soluzione è sbagliata, così non sembra avere senso: riproviamo!]]
 |=
 &lt;img src=&#39;res2/whatsapp.jpg&#39; class=&#39;full&#39;&gt; &lt;/div&gt;
 
-|dialogo&gt;[|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;[Detective $nome]&#39;&#39;]: Dai, agente $cognome, inserisca la soluzione del rebus!]]
+|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;[Detective $nome]&#39;&#39;]: Dai, agente $cognome, inserisca la soluzione del rebus!]
 \
 (input-box:2bind $soluzione,&quot;X=&quot;)
 \
@@ -712,7 +712,7 @@ Nato il: 11/01/1968//
 
 &#39;&#39;Professione:&#39;&#39; 
 
-//Ex assistente di statistica, ex candidata guida ai Musei Capitolini, attualmente barista.//
+//Ex assistente di statistica, sta studiando per fare la guida ai Musei Capitolini mentre esercita la professione di barista.//
 
 &#39;&#39;Descrizione:&#39;&#39; 
 
@@ -779,7 +779,7 @@ Ora, è arrivato il momento di [[scoprire chi hai catturato-&gt;4 Fine]].
 test</tw-passagedata><tw-passagedata pid="23" name="scontrino_generico" tags="Grigio_c T_Nero" position="6398,803" size="100,100">
 ## Errato! 
 \
-Ma no, insomma! Andare in un posto in cui il sospettato ha mangiato o si è fermato per un caffé non ti porterà a nulla. Sai già di chi si tratta, devi trovare un modo per incastrarlo.
+Eh no, insomma! Andare in un posto in cui il sospettato ha mangiato o si è fermato per un caffé non ti porterà a nulla. Sai già di chi si tratta: adesso devi trovare un modo per incastrarlo. 
 
 (if: $scontrino_generico is 0 and $punti_int &gt; 1)[Perdi 1 //punto intelligenza// per aver scelto lo scontrino sbagliato. 
 (set: $punti_int to $punti_int - 1)]
@@ -795,7 +795,7 @@ Ma no, insomma! Andare in un posto in cui il sospettato ha mangiato o si è ferm
 \
 (align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[&lt;style&gt; img {max-width: 40%; max-height: 100%; } &lt;/style&gt; &lt;img src=&#39;res2/0lav.png&#39;&gt; &lt;/div&gt;]
 
-(if: $2fine_v is 0)[Bene...il sospettato deve andare a ritirare i panni nella Lavanderia Lions. Ma quale delle tante che ci sono? Questo è un franchising che ha sede in tutta Italia, e solo a Treviso guardando su Google si vede che ci sono 5 diverse lavanderie. Non possiamo controllarle tutte. Ci vogliono dei dati ulteriori, in modo da avere un&#39;informazione più precisa.
+(if: $2fine_v is 0)[Bene...il sospettato deve andare a ritirare i panni in una Lavanderia Lions alle ore 18:30. Ma quale delle tante che ci sono? Questo è un franchising che ha sede in tutta Italia, e solo a Treviso guardando su Google si vede che ci sono 5 diverse lavanderie. Non possiamo controllarle tutte. Ci vogliono dei dati ulteriori, in modo da avere un&#39;informazione più precisa.
 \
 [[Torna a vedere se uno degli altri scontrini ti dice l&#39;indirizzo della lavanderia-&gt;3 Fine]]] \
 ]
@@ -818,9 +818,9 @@ Andate alla lavanderia, e dopo qualche minuto di appostamento, effettivamente Da
 \
 (set: $scontrino1 to 1) \
 
-Ulteriore scontrino molto recente, precisamente del giorno prima rispetto all’arrivo degli agenti nel covo del ladro. 
+Questo scontrino è di una lavanderia è molto recente, esattamente del giorno prima all’arrivo degli agenti nel covo del ladro. 
 
-Ok, questo va bene: vuol dire che ci possiamo appostare vicino alla lavanderia, ma dobbiamo ancora scoprire quando Mercer andrà a ritirare gli abito, in modo da preparare un agguato e riuscire ad arrestarlo!
+Ottimo, : vuol dire che ti puoi appostare vicino al negozio e aspettare che Mercer passi a ritirare gli abiti...ma per farlo devi ancora scoprire effettivamente in che momento Mercer si recherà ul posto, altrimenti non potrai fargli un&#39;imboscata!
 \
 (align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[&lt;style&gt; img {max-width: 40%; max-height: 100%; } &lt;/style&gt; &lt;img src=&#39;res2/7lav.png&#39;&gt;] \
 |=
