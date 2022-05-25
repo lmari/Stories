@@ -451,10 +451,6 @@ Mettendo la mano dentro il veicolo, trovi un modo per aprire la portiera ed entr
 (if:$soluzione is &quot;treviso
 &quot;)[(set: $soluzione_val to 1)]
 ]
-\
-(if: $flag_rebus is 0)[&lt;audio src=&quot;https://cdn.pixabay.com/download/audio/2022/04/19/audio_37bb6e26a7.mp3?filename=suono-messaggio-109758.mp3
-autoplay&gt;&lt;/audio&gt;]\
-\&lt;!-- la variabile flag_rebus è qui perché scatta dopo l&#39;audio (così il suono del messaggio arriva una volta sola e non tutte le volte che si entra sulla pagina--&gt;
 (set: $flag_rebus to 1)
 \
 (display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="11" name="2 Introduzione" tags="Grigio_c T_Nero" position="2600,903" size="100,100">
@@ -736,7 +732,7 @@ Inoltre, puoi (link: &quot;scoprire curiosità legate al gioco.&quot;)[(goto: &q
 Oppure, puoi (link-rerun: &quot;rigiocare il primo capitolo o compilare il questionario per darci un tuo parere su questo gioco&quot;)[(open-url:&quot;https://flipfly.it/gale/&quot;)].</tw-passagedata><tw-passagedata pid="22" name="2 Fine2" tags="Grigio_c T_Nero" position="6400,995" size="100,100">
 ## Arriva da Sturbanks
 \
-&lt;style&gt; img {max-width: 100%; max-height: 100%; } &lt;/style&gt; &lt;img src=https://i.ibb.co/48pW7Zw/Bar.png&gt; &lt;/div&gt; 1
+&lt;style&gt; img {max-width: 100%; max-height: 100%; } &lt;/style&gt; &lt;img src=&#39;res2/Bar.png&#39;&gt; &lt;/div&gt; 1
 
 |dialogo&gt;[(text-colour:#74c0fc)[&#39;&#39;[Maresciallo Caputo]&#39;&#39;]: Eccoci, siamo arrivati!]
 
