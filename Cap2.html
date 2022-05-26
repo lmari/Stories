@@ -442,7 +442,7 @@ Mettendo la mano dentro il veicolo, trovi un modo per aprire la portiera ed entr
 (if: (uppercase: $soluzione) is &quot;TREVISO&quot;) [(set: $soluzione_val to 1)]]
 (set: $flag_rebus to 1)
 
-(display: &quot;piepagina&quot;) }</tw-passagedata><tw-passagedata pid="11" name="2 Introduzione" tags="Grigio_c T_Nero" position="2601.6666666666665,903" size="100,100">
+(display: &quot;piepagina&quot;) }</tw-passagedata><tw-passagedata pid="11" name="2 Introduzione" tags="Grigio_c T_Nero" position="2601,903" size="100,100">
 ## Ispezione dei Musei Capitolini
  \
 Arrivat$g sulla scena del crimine, ti imbatti subito nel Maresciallo Caputo, che ti viene incontro chiaramente preoccupato, il viso scuro.
@@ -684,7 +684,7 @@ Scegli uno degli oggetti sulla scrivania:]
 [[&lt;img src=&#39;res2/7lav.png&#39; class=&#39;full&#39;&gt;-&gt;bigliettino lavanderia]]
 |==|
 \
-(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="21" name="4 Fine" tags="Grigio_c T_Nero" position="6602.666666666667,797" size="100,100">
+(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="21" name="4 Fine" tags="Grigio_c T_Nero" position="6602,797" size="100,100">
 ## Conclusione
 \
 |dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;[Maresciallo Caputo]&#39;&#39;]: Eccoci al dunque, agente $cognome]
@@ -720,7 +720,7 @@ Se vuoi riprovare a giocare, (link: &quot;clicca qui per ricominciare la storia&
 
 Inoltre, puoi (link: &quot;scoprire curiosità legate al gioco.&quot;)[(goto: &quot;curiosità&quot;)].
 
-Oppure, puoi (link-rerun: &quot;rigiocare il primo capitolo o compilare il questionario per darci un tuo parere su questo gioco&quot;)[(open-url:&quot;https://flipfly.it/gale/&quot;)].</tw-passagedata><tw-passagedata pid="22" name="2 Fine2" tags="Grigio_c T_Nero" position="6200,900" size="100,100">
+Oppure, puoi (link-rerun: &quot;rigiocare il primo capitolo o compilare il questionario per darci un tuo parere su questo gioco&quot;)[(open-url:&quot;https://flipfly.it/gale/&quot;)].</tw-passagedata><tw-passagedata pid="22" name="2 Fine2" tags="Grigio_c T_Nero" position="6200,800" size="100,100">
 ## Arrivate da Sturbanks
 \
 &lt;img src=&#39;res2/Bar.png&#39; class=&#39;full&#39;&gt;
@@ -763,61 +763,55 @@ Con uno scatto da atleta, riesce a raggiungere il barista che stava cercando di 
 \
 Ora, è arrivato il momento di [[scoprire chi hai catturato-&gt;4 Fine]]. {
 
-(display: &quot;piepagina&quot;) }</tw-passagedata><tw-passagedata pid="23" name="scontrino generico" tags="Grigio_c T_Nero" position="6400,800" size="100,100">
+(display: &quot;piepagina&quot;) }</tw-passagedata><tw-passagedata pid="23" name="scontrino generico" tags="Grigio_c T_Nero" position="6400,675" size="100,100">
 ## Errato! 
 \
-Eh no, insomma! Andare in un posto in cui il sospettato ha mangiato o si è fermato una volta a prendersi un caffé non ti porterà a nulla. Sarebbe utile se non conoscessi l&#39;identità del sospettato, ma tu sai già di esere sulle tracce di David Mercer: adesso devi solo trovare un modo per incastrarlo. 
+Eh no, insomma! Andare in un posto in cui il sospettato ha mangiato o si è fermato una volta a prendersi un caffé non ti porterà a nulla.
 
-(if: $scontrino_generico is 0 and $punti_int &gt; 1)[Perdi 1 //punto intelligenza// per aver scelto lo scontrino sbagliato. 
+Sarebbe utile se non conoscessi l’identità del sospettato, ma tu sai già di essere sulle tracce di David Mercer: adesso devi solo trovare un modo per incastrarlo. 
+
+(if: $scontrino_generico is 0 and $punti_int &gt; 1) [Perdi un //punto intelligenza// per aver scelto lo scontrino sbagliato. 
 (set: $punti_int to $punti_int - 1)]
-(set: $scontrino_generico to 1) \ &lt;!-- qui e non sopra altrimenti il testo con la flag scontrino generico non funziona mai non funziona --&gt;
-\
-|=
-[[Torna indietro-&gt;3 Fine]]
-|=
-|==| 
-\
-(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="24" name="scontrino lavanderia" tags="Grigio_c T_Nero" position="6405,426.6666666666667" size="100,100">(if: $scontrino1 is 0)[
+[[Torna a guardare gli altri scontrini-&gt;3 Fine]]. {
+
+(set: $scontrino_generico to 1)
+
+(display: &quot;piepagina&quot;) }</tw-passagedata><tw-passagedata pid="24" name="scontrino lavanderia" tags="Grigio_c T_Nero" position="6400,425" size="100,100">(if: $scontrino1 is 0) [
 ## Scontrino della lavanderia
 \
-(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[&lt;img src=&#39;res2/0lav.png&#39;&gt;]\
+&lt;img src=&#39;res2/0lav.png&#39; class=&#39;full&#39;&gt;
 \
-(if: $2fine_v is 0)[Bene...il sospettato deve andare a ritirare i panni in una lavanderia Lions alle ore 18:30. Ma in quale delle tante che ci sono? Questo è un franchising che ha sede in tutta Italia, e cercando su Google si può vedere che solo a Treviso ci sono  5 diverse lavanderie Lions. Non hai le risorse per metterle sotto controllo tutti. Hai bisogno di più dati, in modo da ottenere un&#39;informazione più precisa.
+(if: $2fine_v is 0) [Bene... il sospettato deve andare a ritirare i panni in una lavanderia Lions alle ore 18:30. Ma in quale delle tante che ci sono? Questo è un franchising che ha sede in tutta Italia, e cercando su Google si può vedere che solo a Treviso ci sono  5 diverse lavanderie Lions. Non hai le risorse per metterle sotto controllo tutti. Hai bisogno di più dati, in modo da ottenere un&#39;informazione più precisa.
 \
 [[Torna a vedere se uno degli altri scontrini ti dice l&#39;indirizzo della lavanderia-&gt;3 Fine]]] \
 ]
-(else:)[
+(else:) [
 ## Agguato alla lavanderia
 \
 Corretto, ottima scelta: questo bigliettino, in combinazione con lo scontrino della lavanderia, ti basta per organizzare un agguato. Adesso non solo sai dove Mercer andrà a ritirare i panni, ma anche a che ora. 
 
-(text-colour:$colore_dialogo)[&#39;&#39;Tu&#39;&#39;]: Guardi maresciallo, metta insieme questi due dati, lo vede che informazione se ne ricava? Il nostro ricercato si recherà a breve in questa esatta lavanderia. A giudicare dal bigliettino, andrà nel tardo pomeriggio di oggi, dalle 18:30  a prima dell’orario di chiusura.
+|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;Tu&#39;&#39;]: Guardi maresciallo, metta insieme questi due dati, lo vede che informazione se ne ricava? Il nostro ricercato si recherà a breve in questa esatta lavanderia. A giudicare dal bigliettino, andrà nel tardo pomeriggio di oggi, dalle 18:30  a prima dell’orario di chiusura.]
 \
 Il maresciallo è d&#39;accordo con te. Richiama tutti all&#39;ordine con la sua poderosa voce e organizza la retata al ladro.
 
-|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;[Maresciallo Caputo]&#39;&#39;]: Statemi tutti a sentire. Andiamo ad appostarci attorno alla Lavanderia Lions di via Calamaggiore qui a Treviso. Una volta in posizione, aspetteremo Mercer, e quando questi entrerà nel negozio si ritroverà circondato senza nessuna possibilità di fuga. Mi raccomando: niente sirene e niente uniformi...non dobbiamo destare il minimo sospetto! Forza, non può scapparci!]
+|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;Maresciallo Caputo&#39;&#39;]: Statemi tutti a sentire. Andiamo ad appostarci attorno alla Lavanderia Lions di via Calamaggiore qui a Treviso. Una volta in posizione, aspetteremo Mercer, e quando questi entrerà nel negozio si ritroverà circondato senza nessuna possibilità di fuga. Mi raccomando: niente sirene e niente uniformi...non dobbiamo destare il minimo sospetto! Forza, non può scapparci!]
 \
-Andate alla lavanderia, e dopo qualche minuto di appostamento, effettivamente David Mercer appare nella via, camminando rapido in direzione della lavanderia. Si guarda attorno con circospezione, ma non si accorge di nulla. Appena entra nel negozio, un nugulo di poliziotti gli è addosso, lo immobilizza e lo ammanetta. Lo hai preso! E adesso è finalmente arrivato il momento di [[arrestare David Mercer-&gt;4 Fine]].]
-|==| 
-\
-(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="25" name="bigliettino lavanderia" tags="Grigio_c T_Nero" position="6400,600" size="100,100">
+Andate alla lavanderia, e dopo qualche minuto di appostamento, effettivamente David Mercer appare nella via, camminando rapido in direzione della lavanderia. Si guarda attorno con circospezione, ma non si accorge di nulla. Appena entra nel negozio, un nugulo di poliziotti gli è addosso, lo immobilizza e lo ammanetta. Lo hai preso! E adesso è finalmente arrivato il momento di [[arrestare David Mercer-&gt;4 Fine]].] {
+
+(display: &quot;piepagina&quot;) }</tw-passagedata><tw-passagedata pid="25" name="bigliettino lavanderia" tags="Grigio_c T_Nero" position="6400,550" size="100,100">
 ## Scopri dov&#39;è la lavanderia
 \
 (set: $scontrino1 to 1) \
 \
 (align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[&lt;img src=&#39;res2/7lav.png&#39;&gt;] \
 \
-Questo scontrino è di una lavanderia è molto recente, esattamente qualche  giorno prima del furto della Lupa Capitolina. Magari il sospettato è già passato a ritirare i vestiti...o magari no. Per ora non lo puoi sapere, dovresti trovare un ulteriore indizio, magari qualcosa che ti indichi quando Mercer si sia recato in lavanderia, o se vi si debba ancora recare..
+Questo scontrino è di una lavanderia è molto recente, esattamente qualche  giorno prima del furto della Lupa capitolina. Magari il sospettato è già passato a ritirare i vestiti...o magari no. Per ora non lo puoi sapere, dovresti trovare un ulteriore indizio, magari qualcosa che ti indichi quando Mercer si sia recato in lavanderia, o se vi si debba ancora recare..
 
-...se lo scoprissi, potresti organizzare un&#39;imboscata e mettere le mani sul colpevole. 
+...se lo scoprissi, potresti organizzare un’imboscata e mettere le mani sul colpevole. 
 \
-|=
-A questo punto, torna indietro e [[controlla gli altri scontrini-&gt;3 Fine]].
-|=
-|==| 
-\
-(display: &quot;piepagina&quot;)
-</tw-passagedata><tw-passagedata pid="26" name="Coordinate 3" tags="Grigio_c T_Nero" position="2200,1000" size="100,100">
+A questo punto, torna indietro e [[controlla gli altri scontrini-&gt;3 Fine]]. {
+
+(display: &quot;piepagina&quot;) }</tw-passagedata><tw-passagedata pid="26" name="Coordinate 3" tags="Grigio_c T_Nero" position="2200,1000" size="100,100">
 ## Tira le somme sulle coordinate
  \
 (set: $punti_int to $punti_int + $extra_punti) \
