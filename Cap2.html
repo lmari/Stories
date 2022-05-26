@@ -512,23 +512,25 @@ Quindi, arrivato a questo punto, [[valuta le possibili opzioni-&gt;1 Stat]] a tu
 (display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="12" name="Fine" tags="Grigio_c T_Nero" position="5600,900" size="100,100">
 ## Il sospettato è a Treviso!
 \
-|dialogo&gt;[(text-colour:#74c0fc)[&#39;&#39;[Detective $nome]&#39;&#39;]: Maresciallo credo che in questo codice sia contenuta la posizione del sospettato.]
+|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;Detective $nome&#39;&#39;]: Maresciallo, credo che questo messaggio in codice ci faccia capire dove potremo trovare il nostro sospettato.]
 \
-|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;[Maresciallo Caputo]&#39;&#39;]: Sono d&#39;accordo, partiamo subito: deve essere a Treviso! Codice 534 ripeto abbiamo un codice 534 passo e chiudo.]
+|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;[Maresciallo Caputo]&#39;&#39;]: Sono d’accordo, partiamo subito: deve essere a Treviso! Codice 534 ripeto abbiamo un codice 534 passo e chiudo.]
 
-(if: $frappe_ogg is &quot;Sì&quot; and $punti_int &gt; 3)[Poi, all&#39;improvviso, al risultato del rebus un dato diventa più chiaro. Ma certo! Evidentemente era rimasto nei meandri della tua mente fino a quel momento.
-|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;[Detective $nome]&#39;&#39;]: Maresciallo guardi! Il frappè non proviene da Starbucks, ma da SturBancks! Deve essere una specie di copia.]
-\
-(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[&lt;img src=&#39;res2/frappe.png&#39; class=&#39;full&#39;&gt; &lt;/div&gt;]
-\
-Capite subito che, se il frappé viene da un posto così strano, probabilmente deve esserci un legame fra il sospettato e questo Sturbanks. Vi mettete entrambi all&#39;opera, smanettando sul telefono per cercare dove si trovi questo strano negozio. 
+(if: $frappe_ogg is &quot;Sì&quot; and $punti_int &gt; 3) [Poi, all&#39;improvviso, al risultato del rebus un dato diventa più chiaro. Ma certo! Evidentemente era rimasto nei meandri della tua mente fino a quel momento.
 
-|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;[Maresciallo Caputo]&#39;&#39;]: Detective $nome, guardi! Ho scoperto che quel negozio è presente solo a Treviso. Questo conferma anche il messaggio che abbiamo risolto. Andiamo direttamente in quella caffetteria!]
+|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;Detective $nome&#39;&#39;]: Maresciallo guardi! Il frappé non proviene da Starbucks, ma da SturBancks! Deve essere una specie di copia.]
 \
-Salta in macchina e [[vai allo Sturbanks di Treviso-&gt;2 Fine2]]](else:)
-[Salta in macchina e vai alla [[torre di Treviso|2 Fine]]]
+&lt;img src=&#39;res2/frappe.png&#39; class=&#39;full&#39;&gt;
 \
-(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="13" name="coordinate" tags="Grigio_c T_Nero" position="1800,1000" size="100,100">
+Capite subito che, se il frappé viene da un posto così strano, probabilmente deve esserci un legame fra il sospettato e questo Sturbanks. Vi mettete entrambi all’opera, smanettando sul telefono per cercare dove si trovi questo strano negozio.
+
+|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;Maresciallo Caputo&#39;&#39;]: Detective $nome, guardi! Ho scoperto che quel negozio è presente solo a Treviso. Questo conferma anche il messaggio che abbiamo risolto. Andiamo direttamente in quella caffetteria!]
+\
+Salta in macchina e [[vai allo Sturbanks di Treviso-&gt;2 Fine2]].] \
+\
+(else:) [Salta in macchina e vai alla [[torre di Treviso|2 Fine]]] {
+
+(display: &quot;piepagina&quot;) }</tw-passagedata><tw-passagedata pid="13" name="coordinate" tags="Grigio_c T_Nero" position="1800,1000" size="100,100">
 ## Interpreta le coordinate
  \
 (set: $extra_punti to 0)
@@ -590,7 +592,7 @@ Dopo mezz’ora di tragitto, finalmente [[arrivate all’auto del sospettato-&gt
 Quindi, pensi che sia una buona idea o meno prendere il frappé?
 (dropdown: 2bind $frappe_ogg,&quot;No&quot;, &quot;Sì&quot;)
 
-[[Decidi cosa fare del frappé e controlla gli altri oggetti|3 Esatto]] {
+Dopo aver deciso cosa fare del frappé, [[controlla gli altri oggetti|3 Esatto]] {
 
 (set: $controlla_frappe to 1)
 
@@ -655,15 +657,15 @@ Qual è la tua scelta? (dropdown: 2bind $risp_coord_2, &quot;1&quot;, &quot;2&qu
 
 |cloacked)[ [[Coordinate 3]] ]
 
-(display: &quot;piepagina&quot;)}</tw-passagedata><tw-passagedata pid="20" name="3 Fine" tags="T_Nero Legno" position="6199,592" size="100,100">
-## Scegli quale oggetto prendere
+(display: &quot;piepagina&quot;)}</tw-passagedata><tw-passagedata pid="20" name="3 Fine" tags="T_Nero Grigio_c" position="6200,600" size="100,100">
+## Alla ricerca di indizi tra qualche scontrino...
 \
-(bg:#f1f3f5)[(text-colour:$colore_dialogo)[&#39;&#39;[Maresciallo Caputo]&#39;&#39;] Detective $nome quale dei seguenti oggetti ci può essere utile?
+|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;Maresciallo Caputo&#39;&#39;]: Detective $nome: quale dei seguenti oggetti ci può essere utile?
 \
-Premi uno dei seguenti oggetti sulla scrivania:]
+Scegli uno degli oggetti sulla scrivania:]
 \
 =|=
-[[&lt;style&gt; img {max-width: 100%; max-height: 100%; } &lt;/style&gt; &lt;img src=&#39;res2/1trt.png&#39;&gt; &lt;/div&gt;-&gt;scontrino_generico]]
+[[&lt;img src=&#39;res2/1trt.png&#39; class=&#39;full&#39;&gt;-&gt;scontrino_generico]]
 =|=
 [[&lt;style&gt; img {max-width: 100%; max-height: 100%; } &lt;/style&gt; &lt;img src=&#39;res2/2trt.png&#39;&gt; &lt;/div&gt;-&gt;scontrino_generico]]
 =|=
@@ -718,54 +720,50 @@ Se vuoi riprovare a giocare, (link: &quot;clicca qui per ricominciare la storia&
 
 Inoltre, puoi (link: &quot;scoprire curiosità legate al gioco.&quot;)[(goto: &quot;curiosità&quot;)].
 
-Oppure, puoi (link-rerun: &quot;rigiocare il primo capitolo o compilare il questionario per darci un tuo parere su questo gioco&quot;)[(open-url:&quot;https://flipfly.it/gale/&quot;)].</tw-passagedata><tw-passagedata pid="22" name="2 Fine2" tags="Grigio_c T_Nero" position="6400,995" size="100,100">
-## Arriva da Sturbanks
+Oppure, puoi (link-rerun: &quot;rigiocare il primo capitolo o compilare il questionario per darci un tuo parere su questo gioco&quot;)[(open-url:&quot;https://flipfly.it/gale/&quot;)].</tw-passagedata><tw-passagedata pid="22" name="2 Fine2" tags="Grigio_c T_Nero" position="6200,900" size="100,100">
+## Arrivate da Sturbanks
 \
-&lt;style&gt; img {max-width: 100%; max-height: 100%; } &lt;/style&gt; &lt;img src=&#39;res2/Bar.png&#39;&gt; &lt;/div&gt; 1
+&lt;img src=&#39;res2/Bar.png&#39; class=&#39;full&#39;&gt;
 
-|dialogo&gt;[(text-colour:#74c0fc)[&#39;&#39;[Maresciallo Caputo]&#39;&#39;]: Eccoci, siamo arrivati!]
+|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;Maresciallo Caputo&#39;&#39;]: Eccoci, siamo arrivati!]
+\
+|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;Detective $nome&#39;&#39;]: Già, questo è il famoso &quot;Sturbanks&quot;, presente solo a Treviso.]
+\
+|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;Maresciallo Caputo&#39;&#39;]: Entriamo e chiediamo informazioni.]
+\
+Entrate nel locale, e non c’è quasi nessuno dentro al locale: è quieto, tranquillo. In verità, visto che sei in centro storico, ti saresti aspettat$g qualche persona in più...
 
-|dialogo&gt;[(text-colour:#74c0fc)[&#39;&#39;[Detective $nome]&#39;&#39;]: Già, questo è il famoso Sturbanks presente solo a Treviso.]
+|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;Detective $nome&#39;&#39;]: A me sembra un posto troppo tranquillo. Sospettosamente tranquillo. Maresciallo mostri il distintivo al barista e vediamo cosa ha da dirci.]
 
-|dialogo&gt;[(text-colour:#74c0fc)[&#39;&#39;[Maresciallo Caputo]&#39;&#39;]: Entriamo e chiediamo informazioni.]
-
-Entrate nel locale, e non c&#39;è quasi nessuno dentro al locale. Quieto, tranquillo. In verità, visto che sei in centro storico, ti aspetteresti qualche persona in più.
-
-
-|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;[Detective $nome]&#39;&#39;]: A me sembra un posto troppo tranquillo. Sospettosamente tranquillo. Maresciallo mostri il distintivo al barista e vediamo cosa ha da dirci.]
-
-Il maresciallo si avvicina al barista, gli mostra il distintivo e inizia a parlargli. 
+Il maresciallo si avvicina al barista, gli mostra il distintivo e inizia a parlargli.
 \
 =|=
-(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[&lt;style&gt; img {max-width: 100%; max-height: 100%; } &lt;/style&gt; &lt;img src=&#39;res2/m3.png&#39;&gt; &lt;/div&gt;]
+&lt;img src=&#39;res2/m3.png&#39; class=&#39;full&#39;&gt;
 =|=
-|dialogo&gt;[(align:&quot;==&gt;&quot;)+(box:&quot;X&quot;)[(text-colour:$colore_dialogo)[&#39;&#39;[Maresciallo Caputo]&#39;&#39;] Buongiorno, sono il Maresciallo Caputo, sono qui per farle quanche domanda.]] \
+|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;Maresciallo Caputo&#39;&#39;]: Buongiorno, sono il Maresciallo Caputo, e sono qui per farle qualche domanda.]
 |==|
 \
 =|=
-|dialogo&gt;[(align:&quot;&lt;==&quot;)+(box:&quot;X&quot;)[(text-colour:$colore_dialogo)[&#39;&#39;[Barista]&#39;&#39;]“Si...ehm...ehmm cert...certament...sa, aspetti che chiamo un collega, io ho cominciato a lavorare settimana scorsa, sono appena arrivato...”]]
+|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;Barista&#39;&#39;]: Sì...ehm...ehm... certam... sa, aspetti che chiamo un collega, io ho cominciato a lavorare settimana scorsa, sono appena arrivato...]
 =|=
-(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[&lt;style&gt; img {max-width: 75%; max-height: 100%; } &lt;/style&gt; &lt;img src=&#39;res2/b1.png&#39;&gt; &lt;/div&gt;]
+&lt;img src=&#39;res2/b1.png&#39; class=&#39;full&#39;&gt;
 |==|
 
 Senza che voi ve lo aspettiate, il barista si mette a correre. 
 
 &#39;&#39;Deve essere lui il sospettato!&#39;&#39;
  
-|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;[Maresciallo Caputo]&#39;&#39;]: Si fermi! Si fermi immediatamente!!]
+|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;Maresciallo Caputo&#39;&#39;]: Si fermi! Si fermi immediatamente!!!]
 \
-Tu sei sopres$g, ma il Maresciallo no. I suoi lunghi anni di esperienza in questa occasione si fanno sentire. Si lancia all&#39;inseguimento chiamando contemporaneamente rinforzi con la sua trasmittente.
+Tu sei sorpres$g, ma il Maresciallo no. I suoi lunghi anni di esperienza sul campo in questa occasione si fanno sentire. Si lancia all’inseguimento chiamando contemporaneamente rinforzi con la sua trasmittente.
 
-|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;[Maresciallo Caputo]&#39;&#39;]: Codice rosso! Ripeto, codice rosso!]
+|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;Maresciallo Caputo&#39;&#39;]: Codice rosso! Ripeto, codice rosso!]
 \
-Con uno scatto da ver$g atleta, riesce a raggiungere il barista che stava cercando di scappare, e lo immobilizza. Lui lo guarda gridandoti di lasciarlo andare, e in quel momento raggiungi la strana coppia e ammanetti il barista. Lo senti sbraitare e dall&#39;accento francese capisci che quello che hai appena ammanettato è proprio il sospettato!
+Con uno scatto da atleta, riesce a raggiungere il barista che stava cercando di scappare, e lo immobilizza. Lui lo guarda gridandogli di lasciarlo andare, e in quel momento raggiungi la strana coppia e ammanetti il barista. Lo senti parlare e dall’accento francese capisci che quello che hai appena ammanettato è proprio il sospettato!
 \
-Ora, è arrivato il momento di [[scoprire chi hai catturato-&gt;4 Fine]].
-|==| 
-\
-(display: &quot;piepagina&quot;)
+Ora, è arrivato il momento di [[scoprire chi hai catturato-&gt;4 Fine]]. {
 
-test</tw-passagedata><tw-passagedata pid="23" name="scontrino_generico" tags="Grigio_c T_Nero" position="6398,803" size="100,100">
+(display: &quot;piepagina&quot;) }</tw-passagedata><tw-passagedata pid="23" name="scontrino_generico" tags="Grigio_c T_Nero" position="6400,800" size="100,100">
 ## Errato! 
 \
 Eh no, insomma! Andare in un posto in cui il sospettato ha mangiato o si è fermato per un caffé non ti porterà a nulla. Sai già di chi si tratta: adesso devi trovare un modo per incastrarlo. 
@@ -802,7 +800,7 @@ Il maresciallo è d&#39;accordo con te. Richiama tutti all&#39;ordine con la sua
 Andate alla lavanderia, e dopo qualche minuto di appostamento, effettivamente David Mercer compare nella via, camminando rapido in direzione della lavanderia. Non fa in tempo ad accorgersi che ci sia qualcosa di strano che un nugulo di poliziotti gli è addosso. [[Prosegui e arresta David Mercer-&gt;4 Fine]].]
 |==| 
 \
-(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="25" name="bigliettino_lavanderia" tags="Grigio_c T_Nero" position="6400,605" size="100,100">
+(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="25" name="bigliettino_lavanderia" tags="Grigio_c T_Nero" position="6400,600" size="100,100">
 ## Scopri dov&#39;è la lavanderia
 \
 (set: $scontrino1 to 1) \
@@ -882,41 +880,44 @@ Meno male che non hai perso del tempo a chiedere informazioni su come arrivare a
 
 Scendi dunque dall’auto e [[arrivi ai Musei Capitolini-&gt;2 Introduzione]]. \
  \
-(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="31" name="2 Fine" tags="T_Nero Grigio_c" position="5808,603" size="100,100">
+(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="31" name="2 Fine" tags="T_Nero Grigio_c" position="5800,700" size="100,100">
 ## Il covo di Mercer
 \
-Gli agenti e tu, Detective $nome, siete arrivati nel minor tempo possibile 
+Viaggiando con gli agenti, sei arrivat$g a Treviso nel minor tempo possibile.
 
-|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;[Maresciallo Caputo]&#39;&#39;]: Eccoci, siamo arrivati!]
+|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;Maresciallo Caputo&#39;&#39;]: Eccoci, siamo arrivati!]
 \
-|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;[Detective $nome]&#39;&#39;]: Già, ed ecco la torre di Treviso.]
+|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;Detective $nome&#39;&#39;]: Già, ed ecco la torre di Treviso.]
 \
-|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;[Maresciallo Caputo]&#39;&#39;]: Rechiamoci nei sotterranei.]
+|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;Maresciallo Caputo&#39;&#39;]: Rechiamoci nei sotterranei.]
 \
-Insieme, entrate da una porta secondaria e, con l&#39;aiuto del signor Bianchin, il vecchio custode del posto, perlustrate la torre fino a scoprire una piccola porta nascosta, che vi viene detto portare nei sotterrane. Provate ad aprirla, ma non si muove. Sembra proprio essere chiusa. Fortunatamente, il custode ha un enorme mazzo di chiavi da cui, dopo qualche tentativo a vuoto, trova quella giusta. La porta si apre, e tu e il maresciallo scendete un paio di rampe di scale. È tutto molto scuro: siete sicuramente sotto il livello della strada. 
-&lt;style&gt; img {max-width: 100%; max-height: 100%; } &lt;/style&gt; &lt;img src=&#39;res2/sotterraneo.jpg&#39;&gt; &lt;/div&gt;
+Insieme, entrate da una porta secondaria e, con l’aiuto del signor Bianchin, il vecchio custode del posto, perlustrate con cura la torre, a finalmente scoprite una piccola porta nascosta, che vi viene detto portare nei sotterranei. Provate ad aprirla, ma non si muove.
 
-Vi ritrovate in una stanza strana, cupa, ovunque foto della lupa capitolina ovunque, mappe dei Musei Capitolini e di Piazza del Campidoglio. In un angolo, i dettagli dei turni di guardia della sorveglianza. Quante informazioni! Chissà come avrà fatto il sospettato a reperirle tutte, quale lavoro maniacale ci sarà voluto per mettere in piedi una simile organizzazione. E quanto tempo. Anche se ha commesso un crimine, si tratta sicuramente del lavoro di una grande mente. 
+Fortunatamente, il custode ha un enorme mazzo di chiavi in cui, dopo qualche tentativo a vuoto, trova quella giusta. La porta si apre, e tu e il maresciallo scendete un paio di rampe di scale. È tutto molto scuro: siete sicuramente sotto il livello della strada.
+
+&lt;img src=&#39;res2/sotterraneo.jpg&#39; class=&#39;full&#39;&gt;
+
+Vi ritrovate in una stanza strana, cupa: ovunque foto della Lupa capitolina e mappe dei Musei Capitolini e di Piazza del Campidoglio. In un angolo, i dettagli dei turni di guardia della sorveglianza. Quante informazioni! Chissà come avranno fatto a reperirle, quale lavoro maniacale ci sarà voluto per mettere in piedi una simile organizzazione. E quanto tempo... Anche se hanno commesso un crimine, riconosci che si tratta del lavoro di una grande mente.
 
 Più vi guardate attorno e più vi sentite sicuri che questa stanza sia stata il covo in cui il ladro ha progettato tutto. Ha scelto il sotterraneo di una torre lontano dalla scena del crimine per pianificare tutto. Un luogo insospettabile, dove nessuno sarebbe mai entrato, e in cui lavorare lontano da occhi indiscreti. 
 
-Chiamate la squadra della scientifica per dare delle analisi. In pochi minuti sono con voi, guidati dalloro esperto capo, Pietro Gabrieli. Con attenzione maniacale, raccolgono reperti potenzialmente utili e fotografano ogni cosa, stando però attenti a lasciare ogni oggetto nella posizione in cui l&#39;hanno trovato. Mentre si mettono all&#39;opera, tu e il Maresciallo Caputo vi confrontate.
+Chiamate la squadra della scientifica per fare un po’ di analisi. In pochi minuti sono con voi, guidati dal loro esperto capo, Pietro Gabrieli. Con attenzione maniacale, raccolgono reperti potenzialmente utili e fotografano ogni cosa, stando però attenti a lasciare ogni oggetto nella posizione in cui l’hanno trovato.
+
+Nel frattempo, tu e il Maresciallo Caputo vi confrontate.
 \
-|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;[Maresciallo Caputo]&#39;&#39;]: Detective non ci posso credere, come hanno fatto a realizzare tutto ciò nei sotterranei della torre. Un posto chiuso e riservato...ma sotto gli occhi di tutti.]
+|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;Maresciallo Caputo&#39;&#39;]: Detective non ci posso credere: come hanno fatto a realizzare tutto ciò nei sotterranei della torre? Un posto chiuso e riservato... ma sotto gli occhi di tutti.]
 \
-|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;[Detective $nome]&#39;&#39;]: Questa è un&#39;enorme falla nella sicurezza, un oltraggio al corpo della Polizia...quasi una presa in giro.]
+|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;Detective $nome&#39;&#39;]: Tutta questa vicenda rivela un’enorme falla nei nostri sistemi di sicurezza... quasi che avessero voluto non solo compiere il furto, ma anche prenderci in giro...]
 \
-|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;[Maresciallo Caputo]&#39;&#39;]: Davvero. Certo che però è straordinario...chi sarebbe mai venuto a cercare in questo posto? Se non avessimo decifrato il messaggio, non ci saremmo mai arrivati.]
+|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;Maresciallo Caputo&#39;&#39;]: Sì, è vero... Certo che però è straordinario: chi sarebbe mai venuto a cercare in questo posto? Se non avessimo decifrato il messaggio, non ci saremmo mai arrivati.]
 \
-|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;[Detective $nome]&#39;&#39;]: Verissimo Maresciallo! Ora mettiamoci al lavoro: se questo è davvero il covo del sospettato, qui possiamo trovare degli indizi sulla sua posizione.]
+|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;Detective $nome&#39;&#39;]: Senza dubbio, maresciallo! Ma ora mettiamoci al lavoro: se questo è davvero il covo del sospettato, è qui che possiamo sperare di trovare degli indizi sulla sua posizione.]
 \
-Il capo della scientifica Pietro Gabrieli viene e vi interrompe. Nonostante l&#39;impegno e le indubbie capacità del suo team, non sono riusciti a trovare indizi utili. L’unica cosa che potrebbe essere utile è una pila di bigliettini e scontrini su una scrivania. Il capo della scientifica vi dice che sono cartacce senza valore, ma tu non ne sei ancora sicuro. Cosa vuoi fare? Rischi di perdere tempo guardando gli scontrini o cerchi un&#39;altra prova. Ricorda: ogni istante può essere cruciale!
-\
-[[Guarda il tavolo con gli scontrini-&gt;3 Fine]]
-\
-[[Cerca un&#39;altra prova-&gt;altra prova Fine]]
-\
-(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="32" name="1 Stat" tags="Grigio_c T_Nero" position="2800,900" size="100,100">
+Il capo della scientifica Pietro Gabrieli arriva e vi interrompe. Nonostante l’impegno e le indubbie capacità del suo team, non sono riusciti a trovare indizi significativi.
+
+L’unica cosa che potrebbe essere utile è una pila di bigliettini e scontrini su una scrivania. Il capo della scientifica vi dice che sono cartacce senza valore, ma tu non ne sei ancora sicuro. Cosa vuoi fare? Rischi di perdere tempo [[guardando gli scontrini-&gt;3 Fine]] o [[cerchi un’altra prova-&gt;altra prova Fine]]? Ricorda: ogni istante può essere cruciale! {
+
+(display: &quot;piepagina&quot;) }</tw-passagedata><tw-passagedata pid="32" name="1 Stat" tags="Grigio_c T_Nero" position="2800,900" size="100,100">
 ## Decidi cosa fare!
  \
 Arrivat$g a questo punto, hai quattro possibili strade, per acquisire informazioni su:
@@ -1241,26 +1242,22 @@ Mi segui? Puoi tranquillamente escludere una macchina che è passata al semaforo
 
 Ora che hai qualche informazione in più, [[torna indietro-&gt;Targhe]] e controlla di nuovo le targhe nell’elenco. {
 
-(display: &quot;piepagina&quot;) }</tw-passagedata><tw-passagedata pid="54" name="altra prova Fine" tags="Grigio_c T_Nero" position="6001,702" size="100,100">
+(display: &quot;piepagina&quot;) }</tw-passagedata><tw-passagedata pid="54" name="altra prova Fine" tags="Grigio_c T_Nero" position="6000,700" size="100,100">
 ## Alla ricerca di una nuova prova
 \
-Tu e il maresciallo Caputo vi mettete all&#39;opera. Con grande attenzione, perlustrate ogni punto del covo. Dopo mezz&#39;ora di ricerca, ancora non avete trovato nulla. In quel momento ti viene in mente di chiedere al capo della scientifica se si fosse accorto di qualcosa che, pur non essendo una prova, possa essere almeno bizzarra, e guidarti sulla buona strada. Ti avvicini al capo della scientifica, e glielo domandi.\
-(if: $socialita &gt; 4)[
-\
-Il capo di primo acchito quasi ti ignora, e poi invece inizia a parlarti. Meno male che sei una persona socievole, che sa sempre come convincere le persone a scambiare qualche parola. 
+Tu e il maresciallo Caputo vi mettete all’opera. Con grande attenzione, perlustrate ogni punto del covo. Dopo mezz’ora di ricerca, ancora non avete trovato nulla. In quel momento ti viene in mente di chiedere al capo della scientifica se si fosse accorto di qualcosa che, pur non essendo una prova, possa essere almeno bizzarra, e guidarti sulla buona strada. Ti avvicini al capo della scientifica, e glielo domandi. \
 
-|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;[Capo della scientifica Pietro Gabrieli]&#39;&#39;] Guarda, a me sembra una piccolezza, proprio un dettaglio da niente. Però ho trovato una tazza con sopra il logo di una specie di Starbuck non originale chiamato &quot;Sturbanks&quot;. Ho dato un&#39;occhiata e mi sembra un posto aperto abbastanza di recente soltanto a Treviso. Se fossi in voi darei un&#39;occhiata lì, magari scoprire qualcosa di interessante.]
-\
-A questo punto, devo prendere una decisione. Se vuoi, vai a dare un&#39;occhiata allo [[Sturbanks di Treviso-&gt;2 Fine2]], oppure [[guarda gli scontrini -&gt;3 Fine]]. \
-]
-(else:)[
-\
-Il capo però quasi ti ignora...evidentemente non ha capito che sei tu a condurre le indagini! Provi ancora ad attirare la sua attenzione, ma lui ti risponde che sta facendo qualcosa e di lasciarlo lavorare. Lo lasci perdere. Che cosa mai potrai tirare fuori da una persona così? Beh certo, se solo fossi stat$g un po&#39; più socievole...
+(if: $punti_soc &gt; 4) [
+Pietro Gabrieli di primo acchito quasi ti ignora, e poi invece inizia a parlarti. Meno male che sei una persona socievole, che sa sempre come convincere le persone a scambiare qualche parola. 
 
-A questo punto, torna indietro e [[guarda gli scontrini -&gt;3 Fine]]. \
-]
+|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;Pietro Gabrieli&#39;&#39;]: Guardi, a me sembra una piccolezza, proprio un dettaglio da niente. Però ho trovato una tazza con sopra il logo di una specie di Starbuck non originale, uno strano &quot;Sturbanks&quot;. Ho dato un’occhiata e mi sembra un posto aperto abbastanza di recente e soltanto qui a Treviso. Se fossi in voi darei un’occhiata lì, magari scoprite qualcosa di interessante.]
 \
-(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="55" name="curiosità" tags="Grigio_c T_Nero" position="6802,797" size="100,100">## Curiosità
+A questo punto, devi prendere una decisione. Se vuoi, vai a dare un’occhiata allo [[Sturbanks di Treviso-&gt;2 Fine2]], oppure [[guarda gli scontrini-&gt;3 Fine]].]
+(else:) [Il capo però quasi ti ignora...evidentemente non ha capito che sei tu a condurre le indagini! Provi ancora ad attirare la sua attenzione, ma lui ti risponde che sta facendo qualcosa e di lasciarlo lavorare. Lo lasci perdere. Che cosa mai potrai tirare fuori da una persona così? Beh certo, se solo fossi stat$g un po&#39; più socievole...
+
+A questo punto, torni indietro e [[guardi gli scontrini-&gt;3 Fine]].] {
+
+(display: &quot;piepagina&quot;) }</tw-passagedata><tw-passagedata pid="55" name="curiosità" tags="Grigio_c T_Nero" position="6802,797" size="100,100">## Curiosità
 \
 Adesso che hai completato il gioco, ti vogliamo lasciare con qualche informazione aggiuntiva, che ti possa aiutare a capire come hai preso le decisioni che hai preso, quale sia stata la loro bontà, e se nel mondo reale avrebbe avuto senso comportarsi in questo modo.
 
