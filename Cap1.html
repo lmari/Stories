@@ -875,7 +875,7 @@ Ora, è davvero il momento giusto per andare allo [[schedario]]. {
 
 (if: $m) [(print: $cs2)]
 
-(display: &quot;piepagina&quot;) }</tw-passagedata><tw-passagedata pid="31" name="prendere la bicicletta" tags="testo_bianco sfondo_sfumato0" position="1200,775" size="100,100">&lt;img src=&#39;res1/bici.jpg&#39; class=&#39;full&#39; alt=&#39;immagine&#39;&gt;
+(display: &quot;piepagina&quot;) }</tw-passagedata><tw-passagedata pid="31" name="prendere la bicicletta" tags="testo_bianco sfondo_sfumato0" position="1200,771.6666666666667" size="100,100">&lt;img src=&#39;res1/bici.jpg&#39; class=&#39;full&#39; alt=&#39;immagine&#39;&gt;
 
 ##In viaggio in bicicletta...
  \
@@ -887,7 +887,7 @@ Inserisci la combinazione nel riquadro sottostante. Quando avrai inserito precis
 
 (set: $pswd_lucchetto to &quot;&quot;)
 (input-box: 2bind $pswd_lucchetto, &quot;X=&quot;, 1)\
-(live: 0.1s) [(set: $y to (split: newline, $pswd_lucchetto)) (set: $pswd_cassaforte to $y&#39;s 1st)]
+(live: 0.1s) [(set: $y to (split: newline, $pswd_lucchetto)) (set: $pswd_lucchetto to (trimmed: $y&#39;s 1st))]
 
 (live: 1s)[(if: $pswd_lucchetto is &quot;1807&quot;) [Meno male che ti sei ricordat$g la combinazione...
 
@@ -899,14 +899,14 @@ Chissà se verrà fuori qualcosa di utile... ma ora stai [[arrivando in ufficio]
 (else:) [Apri il lucchetto, inforchi la bicicletta e vai!
 
 La pedalata è stata piacevole, e ti ha consentito di cominciare a riordinare le idee, ora che stai [[arrivando in ufficio]].]] \
-(else-if: $pswd_cassaforte&#39;s length &lt; 4) [(devi aggiungere ancora qualche cifra...)]
+(else-if: $pswd_lucchetto&#39;s length &lt; 4) [(devi aggiungere ancora qualche cifra...)] \
 (else-if: $pswd_lucchetto&#39;s length is 4) [(niente da fare, per adesso...)] \
 (else-if: $pswd_lucchetto&#39;s length &gt; 4) [(prova a togliere qualche cifra...)] \
 (else:) []] {
 
 (if: $m) [(print: $cs2)]
 
-(display: &quot;piepagina&quot;) }</tw-passagedata><tw-passagedata pid="32" name="prendere la macchina" tags="testo_bianco sfondo_sfumato0" position="1198.3333333333333,529.6666666666667" size="100,100">&lt;img src=&#39;res1/citta.webp&#39; class=&#39;full&#39; alt=&#39;immagine&#39;&gt;
+(display: &quot;piepagina&quot;) }</tw-passagedata><tw-passagedata pid="32" name="prendere la macchina" tags="testo_bianco sfondo_sfumato0" position="1198.3333333333333,528.0000000000001" size="100,100">&lt;img src=&#39;res1/citta.webp&#39; class=&#39;full&#39; alt=&#39;immagine&#39;&gt;
 
 ##In viaggio in macchina...
  \
@@ -920,7 +920,7 @@ Inserisci la combinazione nel riquadro sottostante. Quando avrai inserito precis
 
 (set: $pswd_cassaforte to &quot;&quot;)
 (input-box: 2bind $pswd_cassaforte, &quot;X=&quot;, 1)\
-(live: 0.1s) [(set: $y to (split: newline, $pswd_cassaforte)) (set: $pswd_cassaforte to $y&#39;s 1st)]
+(live: 0.1s) [(set: $y to (split: newline, $pswd_cassaforte)) (set: $pswd_cassaforte to (trimmed: $y&#39;s 1st))]
 \
 (live: 0.5s)[(if: $pswd_cassaforte is &quot;1312&quot;) [Meno male che ti sei ricordat$g la combinazione...
 
