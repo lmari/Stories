@@ -443,7 +443,7 @@ Mettendo la mano dentro il veicolo, trovi un modo per aprire la portiera ed entr
 (if: (uppercase: $soluzione) is &quot;TREVISO&quot;) [(set: $soluzione_val to 1)]]
 (set: $flag_rebus to 1)
 
-(display: &quot;piepagina&quot;) }</tw-passagedata><tw-passagedata pid="11" name="2 Introduzione" tags="Grigio_c T_Nero" position="2601,903" size="100,100">
+(display: &quot;piepagina&quot;) }</tw-passagedata><tw-passagedata pid="11" name="2 Introduzione" tags="Grigio_c T_Nero" position="2602.6666666666665,903" size="100,100">
 ## Ispezione dei Musei Capitolini
  \
 Arrivat$g sulla scena del crimine, ti imbatti subito nel Maresciallo Caputo, che ti viene incontro chiaramente preoccupato, il viso scuro.
@@ -471,9 +471,9 @@ Vi allontanate e ricominciate a discutere del furto avvenuto due sere prima, men
 |dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;Maresciallo Caputo&#39;&#39;]: Ha perfettamente ragione. Ma vedrà, troveremo sicuramente una prova o un indizio che incastrerà il ladro, ne sono certo!]
 \
 In quel momento, un uomo della scientifica vi fa cenno da lontano di entrare: evidentemente ci deve essere qualcosa da vedere. Un’impronta digitale, magari, oppure un filmato che possa chiarire l’identità del ladro. Mentre camminate, passi davanti alla statua della Lupa Capitolina, l’originale, e non puoi fare a meno di squadrarla, pensando che sei venut$g a Roma per la sua gemella, che è uguale a parte... a parte... e in quel momento hai un’epifania.
-\
-&lt;img src=‘res2/musei_capitolini_lupa.jpg&#39; class=&#39;full’&gt;
-\
+
+&lt;img src=‘res2/musei_capitolini_lupa.png&#39; class=&#39;full’&gt;
+
 |||||=
 |dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;Tu&#39;&#39;]: Solo un attimo, Maresciallo: temo di aver capito cosa ci sta sfuggendo. Non ci posso credere, aspetti che controllo meglio... ma sì, è proprio così... Non ho parole! Maresciallo, questa non è la Lupa Capitolina originale. Non so veramente cosa dire, ce l’hanno fatta sotto il naso!]
 =|=
@@ -514,9 +514,9 @@ Quindi, arrivato a questo punto, [[valuta le possibili opzioni-&gt;1 Stat]] a tu
  \
 (display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="12" name="Fine" tags="Grigio_c T_Nero" position="5600,900" size="100,100">
 ## Il sospettato è a Treviso!
-\
-&lt;img src=‘res2/treviso.jpg&#39; class=&#39;full’&gt;
-\
+
+&lt;img src=‘res2/treviso.png&#39; class=&#39;full’&gt;
+
 |dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;Tu&#39;&#39;]: Maresciallo, credo che questo messaggio in codice ci faccia capire dove potremo trovare il nostro sospettato.]
 \
 |dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;[Maresciallo Caputo]&#39;&#39;]: Sono d’accordo, partiamo subito: deve essere a Treviso! Codice 534 ripeto abbiamo un codice 534 passo e chiudo.]
@@ -554,11 +554,11 @@ Queste sono coordinate in (dropdown: 2bind $risp_coord_1, &quot;Gradi decimali (
 
 |cloacked)[ [[Coordinate 2]] [[Coordinate 3]]]
 
-(display: &quot;piepagina&quot;) }</tw-passagedata><tw-passagedata pid="14" name="Cugino" tags="Grigio_c T_Nero" position="5000,800" size="100,100">
+(display: &quot;piepagina&quot;) }</tw-passagedata><tw-passagedata pid="14" name="Cugino" tags="Grigio_c T_Nero" position="5001.666666666667,800" size="100,100">
 ## Fatti dare un passaggio dal cugino del maresciallo
-\
-&lt;img src=‘res2/auto_roma2.jpg&#39; class=&#39;full’&gt;
- \
+
+&lt;img src=‘res2/auto_roma2.png&#39; class=&#39;full’&gt;
+
 Hai scelto di farti dare un passaggio dal cugino del maresciallo, che è ovviamente disponibile.
 
 |dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;Cugino&#39;&#39;]: Farò il possibile detective, ma senza usare le sirene, con il traffico di Roma ci vorrà almeno un’ora.]
@@ -622,9 +622,9 @@ E con questo [[arrivate in dipartimento-&gt;Targhe]]. {
 
 (display: &quot;piepagina&quot;)}</tw-passagedata><tw-passagedata pid="18" name="5 Stat No" tags="Grigio_c T_Nero" position="4000,800" size="100,100">
 ## Controlla il manuale con più attenzione
-\
-&lt;img src=‘res2/musei_capitolini.jpg&#39; class=&#39;full’&gt;
-\
+
+&lt;img src=‘res2/musei_capitolini.png&#39; class=&#39;full’&gt;
+
 |dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;[Tu]&#39;&#39;]: D’accordo maresciallo, io rimango qui ancora per un attimo, ci vediamo tra poco.]\
 
 L’incognita del manuale è diventata la tua priorità, dato che sei convint$g sia un tassello fondamentale per lo sviluppo dell’indagine.
@@ -855,16 +855,15 @@ Ora che sei un po’ più espert$g di dati e coordinate geografiche, [[prosegui 
  \
 (live: $time_ass + 0.5)[(display: &quot;piepagina&quot;)]</tw-passagedata><tw-passagedata pid="28" name="senza navigatore" tags="Grigio_c T_Nero" position="1800,801" size="100,100">
 ## Viaggiando senza navigatore
-\ 
-&lt;img src=‘res2/auto_roma.jpg&#39; class=&#39;full’&gt;
-&lt;img src=&#39;res2/lupa.png&#39; class=&#39;full&#39;&gt;
-\
+
+&lt;img src=‘res2/auto_roma.png&#39; class=&#39;full’&gt;
+
 Andare in giro per Roma senza navigatore è una scelta per lo meno coraggiosa... 
 
 Ti godi le vie della città eterna, di primissima mattina, quando il traffico non rumoreggia ancora per i viali e la maggior parte delle persone sta dormendo tranquilla nei propri letti. Perlomeno, quelle che non stanno tentando un colpo nei Musei Capitolini!
 
 Arrivato però all’ultimo bivio, è veramente poco chiaro dove devi andare: a destra o a sinistra? Puoi [[chiedere indicazioni]] a una persona che sta camminando al marciapiede poco distante da te e fumando tranquillamente una pipa. Oppure, puoi [[tentare la fortuna]]. \
- \
+ \ 
 (display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="29" name="chiedere indicazioni" tags="Grigio_c T_Nero" position="2000,800" size="100,100">
 ## Hai chiesto indicazioni
  \
@@ -889,9 +888,9 @@ Scendi dunque dall’auto e [[arrivi ai Musei Capitolini-&gt;2 Introduzione]]. \
  \
 (display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="31" name="2 Fine" tags="T_Nero Grigio_c" position="5800,701.6666666666666" size="100,100">
 ## Il covo di Mercer
-\
-&lt;img src=‘res2/treviso_torre.jpg&#39; class=&#39;full’&gt;
-\
+
+&lt;img src=‘res2/treviso_torre.png&#39; class=&#39;full’&gt;
+
 Viaggiando con gli agenti, sei arrivat$g a Treviso nel minor tempo possibile.
 
 |dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;Maresciallo Caputo&#39;&#39;]: Eccoci, siamo arrivati!]
