@@ -885,11 +885,11 @@ Ti ricordi infatti che una sera la tua amica Rebecca, con cui chiacchieri spesso
 
 Inserisci la combinazione nel riquadro sottostante. Quando avrai inserito precisamente i quattro numeri della combinazione corretta, potrai dunque aprire il lucchetto della tua bicicletta e proseguire.
 
-(set: $controlla_risposta_lucchetto to false)
-(input-box: bind $pswd_lucchetto, &quot;===X===&quot;, 1)
-(checkbox: 2bind $controlla_risposta_lucchetto,&quot;Controlla risposta&quot;)
+(set: $pswd_lucchetto to &quot;&quot;)
+(input-box: 2bind $pswd_lucchetto, &quot;X=&quot;, 1)\
+(live: 0.1s) [(set: $y to (split: newline, $pswd_lucchetto)) (set: $pswd_cassaforte to $y&#39;s 1st)]
 
-(live: 1s)[(if: $controlla_risposta_lucchetto)[(if: $pswd_lucchetto is &quot;1807&quot;) [Meno male che ti sei ricordat$g la combinazione...
+(live: 1s)[(if: $pswd_lucchetto is &quot;1807&quot;) [Meno male che ti sei ricordat$g la combinazione...
 
 (if: $g is &quot;a&quot;) [Apri il lucchetto, inforchi la bicicletta e fai per recarti al commissariato. Sulla strada incontri Clara, una tua cara amica medico, che sta tornando a casa dall’ospedale dopo una chiamata d’urgenza. “Hai sentito cosa è successo?”, ti domanda. Le rispondi che sai già tutto, e che stai andando in commissariato proprio per quel motivo. La saluti per andare via, ma lei ti trattiene un attimo.
 
@@ -899,12 +899,14 @@ Chissà se verrà fuori qualcosa di utile... ma ora stai [[arrivando in ufficio]
 (else:) [Apri il lucchetto, inforchi la bicicletta e vai!
 
 La pedalata è stata piacevole, e ti ha consentito di cominciare a riordinare le idee, ora che stai [[arrivando in ufficio]].]] \
-(else-if: $pswd_lucchetto&#39;s length is 4) [(niente da fare...)]
-(else:) []]] {
+(else-if: $pswd_cassaforte&#39;s length &lt; 4) [(devi aggiungere ancora qualche cifra...)]
+(else-if: $pswd_lucchetto&#39;s length is 4) [(niente da fare, per adesso...)] \
+(else-if: $pswd_lucchetto&#39;s length &gt; 4) [(prova a togliere qualche cifra...)] \
+(else:) []] {
 
 (if: $m) [(print: $cs2)]
 
-(display: &quot;piepagina&quot;) }</tw-passagedata><tw-passagedata pid="32" name="prendere la macchina" tags="testo_bianco sfondo_sfumato0" position="1200,523.3333333333334" size="100,100">&lt;img src=&#39;res1/citta.webp&#39; class=&#39;full&#39; alt=&#39;immagine&#39;&gt;
+(display: &quot;piepagina&quot;) }</tw-passagedata><tw-passagedata pid="32" name="prendere la macchina" tags="testo_bianco sfondo_sfumato0" position="1198.3333333333333,529.6666666666667" size="100,100">&lt;img src=&#39;res1/citta.webp&#39; class=&#39;full&#39; alt=&#39;immagine&#39;&gt;
 
 ##In viaggio in macchina...
  \
@@ -916,22 +918,20 @@ Al proposito ti ricordi due cose: la prima è che si tratta di un codice di quat
 
 Inserisci la combinazione nel riquadro sottostante. Quando avrai inserito precisamente i quattro numeri della combinazione corretta, potrai dunque recuperare le chiavi e proseguire.
 
-(set: $controlla_risposta_macchina to false)
-(input-box: bind $pswd_cassaforte, &quot;===X===&quot;,1)
-(checkbox: 2bind $controlla_risposta_macchina,&quot;Controlla risposta&quot;)
-
-(live: 0.5s)[(if: $controlla_risposta_macchina)[(if: $pswd_cassaforte is &quot;1312&quot;) [Meno male che ti sei ricordat$g la combinazione...
+(set: $pswd_cassaforte to &quot;&quot;)
+(input-box: 2bind $pswd_cassaforte, &quot;X=&quot;, 1)\
+(live: 0.1s) [(set: $y to (split: newline, $pswd_cassaforte)) (set: $pswd_cassaforte to $y&#39;s 1st)]
+\
+(live: 0.5s)[(if: $pswd_cassaforte is &quot;1312&quot;) [Meno male che ti sei ricordat$g la combinazione...
 
 Recuperi le chiavi al volo e ti metti in auto. Durante il breve viaggio verso il commissariato, come avresti potuto aspettarti alla radio non hai ascoltato nesssuna notizia che non conoscessi già...  
 
 ... e ora dunque stai [[arrivando in ufficio]]]
 \
-(else-if: $pswd_cassaforte&#39;s length is 4) [(niente da fare...)]
-\
-(else-if: $pswd_cassaforte&#39;s length &lt; 4) [(Devi aggiungere ancora qualche cifra...)]
-\
-(else-if: $pswd_cassaforte&#39;s length &gt; 4) []
-(else:) []]] {
+(else-if: $pswd_cassaforte&#39;s length is 4) [(niente da fare, per adesso...)] \
+(else-if: $pswd_cassaforte&#39;s length &lt; 4) [(devi aggiungere ancora qualche cifra...)] \
+(else-if: $pswd_cassaforte&#39;s length &gt; 4) [(prova a togliere qualche cifra...)] 
+(else:) []] {
 
 (if: $m) [(print: $cs2)]
 
@@ -942,12 +942,12 @@ Ore e ore di interrogatorio non danno frutti. Purtroppo Ravanelli non vuole parl
 
 (if: $m) [(print: $cs6)]
 
-(display: &quot;piepagina&quot;) }</tw-passagedata><tw-passagedata pid="34" name="include" tags="header" position="800,475" size="100,100">&lt;!-- dei default, anche per rendere più semplice il testing in fase di sviluppo --&gt; {
+(display: &quot;piepagina&quot;) }</tw-passagedata><tw-passagedata pid="34" name="include" tags="header" position="760,473.3333333333333" size="100,100">&lt;!-- dei default, anche per rendere più semplice il testing in fase di sviluppo --&gt; {
 (if: $nome is 0) [(set: $nome to &quot;Alex&quot;)]
 (if: $cognome is 0) [(set: $cognome to &quot;Bianchi&quot;)]
 (if: $t is 0) [(set: $t to &quot;org&quot;)]
 (if: $g is 0) [(set: $g to &quot;a&quot;)]
-(if: $m is 0) [(set: $m to true)]
+(if: $m is 0) [(set: $m to false)]
 
 (set: $min_interr to 3)
 
@@ -977,7 +977,7 @@ Dal punto di vista della sua qualità, un test che produce sempre veri positivi 
 Un esempio per rendere un po’ più concreto tutto ciò riguarda i famosi test per scoprire la presenza di un’infezione virale. Abbiamo imparato che l’affidabilità di certi test rapidi, i famosi test &quot;fai da te&quot;, è molto minore rispetto a quella di altri test: e così ti sarà forse capitato di aver fatto un test rapido con esito negativo e immediatamente dopo di essere risultat$g positiv$g a un test più accurato. Escludendo eventuali errori di somministrazione del test, da un punto di vista statistico questo può essere interpretato così: i test rapidi sono meno affidabili perché hanno una percentuale di falsi negativi molto più alta. 
 
 (set: $ultima_pag to (history:)&#39;s last)
-(link: &quot;Torna indietro&quot;)[(goto: $ultima_pag)]</tw-passagedata><tw-passagedata pid="36" name="piepagina" tags="" position="925,475" size="100,100">&lt;!-- deve essere incluso esplicitamente, con: (display: &quot;piepagina&quot;) --&gt;
+(link: &quot;Torna indietro&quot;)[(goto: $ultima_pag)]</tw-passagedata><tw-passagedata pid="36" name="piepagina" tags="" position="925,476.6666666666667" size="100,100">&lt;!-- deve essere incluso esplicitamente, con: (display: &quot;piepagina&quot;) --&gt;
 ---
 |piccolo&gt;[(se preferisci, [[puoi sempre ricominciare il gioco dall’inizio-&gt;frontespizio]] \
 (if: $m) [(link: &quot;&amp;nbsp;&amp;nbsp;e puoi sospendere l’audio&quot;) [&lt;script&gt;document.getElementById(&#39;cs&#39;).pause();&lt;/script&gt;]] )]</tw-passagedata><tw-passagedata pid="37" name="start" tags="" position="750,650" size="100,100">(if: &quot;auto&quot; is in (saved-games:)) [(load-game: &quot;auto&quot;)]
