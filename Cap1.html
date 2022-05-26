@@ -602,7 +602,7 @@ Facciamo un semplice esempio. Poniamo per esempio che tu sia interessat$g a qual
 Si può quindi valutare la numerosità di ciascuna categoria con un semplice colpo d’occhio. 
 
 (set: $ultima_pag to (history:)&#39;s last)
-(link: &quot;Torna indietro&quot;)[(goto: $ultima_pag)]</tw-passagedata><tw-passagedata pid="19" name="la mappa" tags="sfondo_sfumato2 testo_nero" position="2525,600" size="100,100">
+(link: &quot;Torna indietro&quot;)[(goto: $ultima_pag)]</tw-passagedata><tw-passagedata pid="19" name="la mappa" tags="sfondo_sfumato2 testo_nero" position="2523.3333333333335,600" size="100,100">
 ## Studiare la Mappa!
 
 La mappa si presenta così:
@@ -628,7 +628,8 @@ Scegli quale luogo vuoi perquisire (dropdown: 2bind $direzione, &quot;1&quot;, &
 (if: $direzione is &quot;5&quot;) [(go-to: &quot;Direzione corretta&quot;)]
 (else:) [(go-to: &quot;Direzione sbagliata&quot;)]
 ]}
-(if: $errori_mappa &gt; 0)[Se non sei esperto di lettura di mappe, puoi sempre mandare una foto alla tua amica Rebecca, grande esperta di Data Science e giovane campionessa di orienteering, per vedere se ti possa [[dare una mano nella lettura della mappa-&gt;aiuto a Rebecca]].]
+(if: $errori_mappa is 1)[Se non sei espert$g di lettura di mappe, puoi sempre mandare una foto della mappa alla tua amica Rebecca, grande esperta di Data Science e giovane campionessa di orienteering (e quindi molto esperta di mappe), per vedere se ti possa [[dare una mano nella lettura della mappa-&gt;aiuto a Rebecca]].]\
+(if: $errori_mappa &gt; 1)[Beh, potresti chiedere ancora aiuto alla tua amica Rebecca...sei sicur$g di aver letto con attenzione tutto il testo? magari ti sei scordat$g l&#39;ultimo paragrafo del suo messaggio, che era il più importante. Per controllare, [[rileggi il messaggio di Rebecca-&gt;aiuto a Rebecca]].]
 {
 
 (if: $m) [(print: $cs6)]
@@ -1025,25 +1026,29 @@ Due squadre che sono a pari punti alla fine del campionato, ovviamente avendo gi
 La deviazione standard, chiamata anche &quot;scarto tipo&quot; o &quot;scarto quadratico medio&quot;, ci consente di descrivere con un solo numero quanto sono vicini o lontani tra loro i valori di un campione, e più precisamente quanto i valori sono vicini alla media del campione stesso. Rispetto alle sei partite sopra, i risultati della prima squadra sono tutti uguali, e hanno perciò dispersione nulla e deviazione standard zero, mentre i risultati della seconda squadra sono piuttosto dispersi e deviazione standard abbastanza grande.
 
 (set: $ultima_pag to (history:)&#39;s last)
-(link: &quot;Torna indietro&quot;)[(goto: $ultima_pag)]</tw-passagedata><tw-passagedata pid="41" name="aiuto a Rebecca" tags="sfondo_sfumato2 testo_nero" position="2705,774.9999999999999" size="100,100">
+(link: &quot;Torna indietro&quot;)[(goto: $ultima_pag)]</tw-passagedata><tw-passagedata pid="41" name="aiuto a Rebecca" tags="sfondo_sfumato2 testo_nero" position="2701.666666666667,774.9999999999999" size="100,100">
 ## L&#39;aiuto di Rebecca
 \
 &lt;img src=&#39;res1/mappa.png&#39; class=&#39;full&#39;&gt;
 \
-Mandi un messaggio alla tua amica Rebecca, che dopo pochi minuti ti risponde. 
+(if: $errori_mappa &lt; 2)[
+Mandi un messaggio alla tua amica Rebecca, che dopo pochi minuti ti risponde.]
+(else:)[
+Riapri il telefono e rileggi il messaggio di Rebecca, concentrandoti sull&#39;ultimo paragrafo, che potrebbe essere cruciale per risolvere l&#39;enigma.]
 
 |preformat&gt;[Ciaoooo $nome!! Ma che piacere sentirti, sono giorni che sei sparit$g...va tutto bene? Hai avuto problemi al lavoro??
 
-Comunque ti aiuto con piacere, ma che messaggio strano che mi hai mandato, da quando ti interessi di visualizzazione di dati su mappe?? Comunque, ho guardato la mappa, e secondo me non si tratta di un problema così difficile, una volta che lo si guarda dal lato giusto...ma questo succede solo se si è esperti di scienza dei dati! 
+Comunque ti aiuto con piacere, ma che messaggio strano che mi hai mandato, da quando ti interessi di &#39;&#39;visualizzazione di dati su mappe&#39;&#39;?? Comunque, ho guardato la mappa, e secondo me non si tratta di un problema così difficile, una volta che lo si guarda dal lato giusto...ma questo succede solo se si è esperti di scienza dei dati! 
 
 Io non so bene che vita faccia questo signore di cui mi hai raccontato ne cosa stia nascondendo e sarebbe certo più semplice se mi dessi qualche dato in più. Con le informazioni che mi hai dato, non so dirti esattamente in quale punto sia ciò che cerchi. Però appunto sono sicuro di poterti dare qualche dritta metodologica. 
 
-Secondo me per risolvere questo enigma devi cercare delle anomalie, ovvero dei dati strani che non sono spiegati dagli spostamenti e dalle abitudini di cui hai notizia. Ti faccio un esempio: se sapessi che c&#39;è una buona ragione per cui sia andato a Milano o a Como, ecco che dovresti escludere quelle località a priori, e quindi potresti escludere quelle località. \
+Secondo me per risolvere questo enigma devi &#39;&#39;cercare delle anomalie&#39;&#39;, ovvero dei dati strani che non sono spiegati dagli spostamenti e dalle abitudini di cui hai notizia. Ti faccio un esempio: se sapessi che c&#39;è una buona ragione per cui sia andato a Milano o a Como, ecco che dovresti escludere quelle località a priori, e quindi potresti escludere quelle località. 
 (if: $errori_mappa &gt; 1)[
-Tu mi hai scritto che questo sospettato stava nascondendo qualcosa di notte. Quindi verosimilmente puoi assumere che debba cercare un &quot;marker&quot; con delle caratteristiche particolari:
-* deve essere di colore rosa, che come mi hai detto indica un viaggio notturno;
-* deve essere di piccole dimensioni, perché sarà rimasto sul posto solo il tempo necessario a nascondere quello che doveva fare
-* deve essere a forma di triangolo, perché se stava facendo qualcosa di losco magari ha spento i dati del telefono!]Spero di esserti stata di aiuto...un abbraccio, ci vediamo presto!!! E non lavorare troppo!!]
+(text-colour:#c2255c)[Tu mi hai scritto che questo sospettato stava nascondendo qualcosa di notte. Quindi verosimilmente puoi assumere che debba cercare un &quot;marker&quot; con delle caratteristiche particolari:
+* deve essere di &#39;&#39;colore rosa&#39;&#39;, che come mi hai detto indica un viaggio notturno;
+* deve essere di &#39;&#39;piccole dimensioni&#39;&#39;, perché sarà rimasto sul posto solo il tempo necessario a nascondere quello che doveva fare
+* deve essere a &#39;&#39;forma di triangolo&#39;&#39;, perché se stava facendo qualcosa di losco magari ha spento i dati del telefono!]]
+Spero di esserti stata di aiuto...un abbraccio, ci vediamo presto!!! E non lavorare troppo!!]
 \
 Il messaggio di Rebecca è lungo e pieno di informazioni, come nel suo stile, ma alla seconda o terza rilettura pensi di aver capito che cosa intenda, e sei pront$g a [[riguardare la mappa-&gt;la mappa]].
 {
