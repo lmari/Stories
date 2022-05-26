@@ -545,14 +545,14 @@ Salta in macchina e [[vai allo Sturbanks di Treviso-&gt;2 Fine2]].] \
 \
 (else:) [Salta in macchina e vai alla [[torre di Treviso|2 Fine]]] {
 
-(display: &quot;piepagina&quot;) }</tw-passagedata><tw-passagedata pid="13" name="coordinate" tags="Grigio_c T_Nero" position="1800,1000" size="100,100">
+(display: &quot;piepagina&quot;) }</tw-passagedata><tw-passagedata pid="13" name="coordinate" tags="Grigio_c T_Nero" position="1798.3333333333333,1000" size="100,100">
 ## Interpreta le coordinate
  \
 (set: $extra_punti to 0)
  \
 Come si interpretano queste coordinate, che indicano la posizione dei Musei Capitolini a Roma?
 
-|centrato&gt;[&#39;&#39;41°53′34.6″N 12°28′57.54″E&#39;&#39;]
+|centrato&gt;[&#39;&#39;41° 53′ 34.6″N  12° 28′ 57.54″E&#39;&#39;]
 
 Queste sono coordinate in (dropdown: 2bind $risp_coord_1, &quot;Gradi decimali (DD)&quot;, &quot;Gradi, minuti e secondi (DMS)&quot;,&quot;Gradi e minuti decimali (DMM)&quot;)
 
@@ -662,7 +662,7 @@ Brav$g, risposta corretta. Cerca di capire bene in che direzione muoverti, per a
 
 Come si interpretano dunque le coordinate dei Musei Capitolini? 
 
-|centrato&gt;[&#39;&#39;41°53′34.6″N 12°28′57.54″E&#39;&#39;]
+|centrato&gt;[&#39;&#39;41° 53′ 34.6″N  12° 28′ 57.54″E&#39;&#39;]
 
 1: quasi 42° a nord dell’equatore in latitudine e a circa 12° a est del meridiano fondamentale in longitudine
 2: quasi 42° a nord dell’equatore in longitudine e a circa 12° a est del meridiano fondamentale in latitudine
@@ -672,7 +672,7 @@ Come si interpretano dunque le coordinate dei Musei Capitolini?
 Qual è la tua scelta? (dropdown: 2bind $risp_coord_2, &quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;4&quot;)
 
 {(link: &quot;Conferma la tua scelta&quot;) [
-(if: $risp_coord_2 is &quot;2&quot;) [(set: $extra_punti to 2)] + (goto: &quot;Coordinate 3&quot;)]
+(if: $risp_coord_2 is &quot;1&quot;) [(set: $extra_punti to 2)] + (goto: &quot;Coordinate 3&quot;)]
 
 |cloacked)[ [[Coordinate 3]] ]
 
