@@ -37,6 +37,13 @@ tw-passage[tags~="T_Nero"] tw-link:hover {
 }
 
 
+/* *** per formattare testo typewriter (hook |preformat>) *** */
+tw-hook[name="preformat"] {
+  font-family: Courier New;
+  font-size: 16px;
+  line-height: 22px;
+  display: block;
+}
 
 /* *** per centrare oggetti html (class='center') *** */
 .center {
@@ -329,11 +336,11 @@ Il maresciallo dirama la comunicazione. Fatto ciò, vi mettete in attesa. Non c�
 \
 Scrivi un messaggio di aiuto alla tua amica Valeria, che ti risponde dopo pochissimi minuti.
 
-//Ciao bell$g! Come stai? È tanto che non ci si vede... da quando sei diventat$g famos$g non ti fai più sentire, ahahahah!  
+|preformat&gt;[Ciao bell$g! Come stai? È tanto che non ci si vede... da quando sei diventat$g famos$g non ti fai più sentire, ahahahah!  
 Comunque, provo a spiegarti in modo semplice come funziona quello che mi hai chiesto.  
 Le targhe sono dei codici alfanumerici assegnati in modo progressivo. La regola attuale, introdotta nel 1996, è tale per cui la prima targa assegnata è stata AA000AA, mentre la seconda era AA001AA. In pratica, di solito  due targhe successive si riconoscono perché hanno tutte le lettere identiche e due numeri in successione. Però quando una targa ha numero 999, si torna a 000 e la lettera più a destra aumenta di 1. Ti faccio un esempietto. La 1000-esima automobile immatricolata con questo sistema ha avuto targa AA999AA, mentre la targa della 1001-esima era AA000AB.  
-Quando poi tutte e 26 le lettere dell’alfabeto anglosassone sono state usate per la lettera più a destra (quindi, arrivati a 999AZ nelle ultime due lettere, dopo ben 26&#39;000 automobili!), la seconda lettera a partire da destra scala una posizione. Quindi, per esempio, alla targa AA999AZ è succeduta la targa AA000BA. Lo stesso procedimento poi si ripete anche per le due lettere a sinistra, per cui, per fare un ultimo esempio, dopo la targa AZ999ZZ è arrivata la targa BA000AA. Spero che sia tutto chiaro, in bocca al lupo con l’indagine!//
-
+Quando poi tutte e 26 le lettere dell’alfabeto anglosassone sono state usate per la lettera più a destra (quindi, arrivati a 999AZ nelle ultime due lettere, dopo ben 26&#39;000 automobili!), la seconda lettera a partire da destra scala una posizione. Quindi, per esempio, alla targa AA999AZ è succeduta la targa AA000BA. Lo stesso procedimento poi si ripete anche per le due lettere a sinistra, per cui, per fare un ultimo esempio, dopo la targa AZ999ZZ è arrivata la targa BA000AA. Spero che sia tutto chiaro, in bocca al lupo con l’indagine!]\
+\
 Ora che sai come si legge una targa, e hai i mezzi per capire quali siano le più recenti e quali invece le più vecchie, [[torna a controllare le targhe-&gt;Targhe]] nell’elenco. 
 \
 (display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="7" name="1 Introduzione" tags="Grigio_c T_Nero" position="1600,901" size="100,100">
@@ -495,7 +502,7 @@ Adesso ha quattro ore di vantaggio, tutto il tempo necessario per essersi nascos
 (if: $g is &quot;o&quot;) [&lt;img src=&#39;res2/inv_m2.png&#39; class=&#39;center&#39; width=&#39;200&#39;&gt;] (else: ) [&lt;img src=&#39;res2/inv_f2.png&#39; class=&#39;center&#39; width=&#39;200&#39;&gt;]
 |==|
 
-Sei ancora sbalordito, e quasi non vuoi credere a ciò che hai appena realizzato. Dentro alla tua testa continua a risuonare una sola domanda: “Quale genio del male potrà mai aver pensato una cosa del genere?”. Il furto è stato compiuto alla perfezione: tutto è in ordine, nulla è rotto Solamente, al posto della statua originale, è presente una sua copia. Ma ormai sei sicur$g: la mente diabolica che ha progettato questo furto deve essere la stessa che ha progettato il furto dell&#39;Hayez dalla Pinacoteca di Brera.
+Sei ancora sbalordito, e quasi non vuoi credere a ciò che hai appena realizzato. Nella tua testa continua a risuonare una sola domanda: “Quale genio del male potrà mai aver pensato una cosa del genere?”. Il furto è stato compiuto alla perfezione: tutto è in ordine, nulla è rotto Solamente, al posto della statua originale, è presente una sua copia. Ma ormai sei sicur$g: la mente diabolica che ha progettato questo furto deve essere la stessa che ha progettato il furto dell&#39;Hayez dalla Pinacoteca di Brera.
 
 Mentre tu rifletti, si avvicinano due agenti di corsa, trafelati.
 
@@ -735,7 +742,7 @@ Se vuoi riprovare a giocare, puoi (link: &quot;ricominciare la storia&quot;)[(go
 
 Inoltre, puoi (link: &quot;scoprire curiosità legate al gioco&quot;)[(goto: &quot;curiosità&quot;)].
 
-Oppure, e per finire, per favore (link-rerun: &quot;compila il questionario per darci un tuo parere su questo gioco&quot;)[(open-url:&quot;https://flipfly.it/gale/&quot;)].</tw-passagedata><tw-passagedata pid="22" name="2 Fine2" tags="Grigio_c T_Nero" position="6200,800" size="100,100">
+Oppure, e per finire, per favore (link-rerun: &quot;compila il questionario per darci un tuo parere su questo gioco&quot;)[(open-url:&quot;https://flipfly.it/gale/&quot;)].</tw-passagedata><tw-passagedata pid="22" name="2 Fine2" tags="Grigio_c T_Nero" position="6191.666666666667,798.3333333333334" size="100,100">
 ## Arrivate da Sturbanks
 \
 &lt;img src=&#39;res2/Bar.png&#39; class=&#39;full&#39;&gt;
@@ -871,7 +878,7 @@ Andare in giro per Roma senza navigatore è una scelta per lo meno coraggiosa...
 Ti godi le vie della città eterna, di primissima mattina, quando il traffico non rumoreggia ancora per i viali e la maggior parte delle persone sta dormendo tranquilla nei propri letti. Perlomeno, quelle che non stanno tentando un colpo nei Musei Capitolini!
 
 Arrivato però all’ultimo bivio, è veramente poco chiaro dove devi andare: a destra o a sinistra? Puoi [[chiedere indicazioni]] a una persona che sta camminando al marciapiede poco distante da te fumando tranquillamente una pipa. Oppure, puoi [[tentare la fortuna]]. \
-(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="29" name="chiedere indicazioni" tags="Grigio_c T_Nero" position="2000,798.3333333333334" size="100,100">
+(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="29" name="chiedere indicazioni" tags="Grigio_c T_Nero" position="1998.3333333333333,798.3333333333334" size="100,100">
 ## Hai chiesto indicazioni
  \
 (set: $punti_soc to $punti_soc + 1) \
@@ -1053,13 +1060,13 @@ Quale persona sospetti dunque sia la responsabile del furto?
 (else:) [ [[Conferma la tua scelta-&gt;risp sbagliata Stat]] ]
 ]
 
-(display: &quot;piepagina&quot;)}</tw-passagedata><tw-passagedata pid="38" name="scrivi a Rebecca 1" tags="Grigio_c T_Nero" position="3201,603" size="100,100">
+(display: &quot;piepagina&quot;)}</tw-passagedata><tw-passagedata pid="38" name="scrivi a Rebecca 1" tags="Grigio_c T_Nero" position="3201,604.6666666666666" size="100,100">
 ## Chiedi un consiglio a Rebecca a proposito di grafici a torta
  \
 Mandi un messaggio a Rebecca, spiegandole la situazione e inviandole la foto del grafico a torta che ti hanno apppena fatto vedere. Lei, nonostante la tarda ora, ti risponde dopo pochi minuti con un messaggio abbastanza chiaro. 
 
-//“Ciao $nome: sono contenta di sentirti! Come sta andando a Roma? Guarda, la cosa interessante del grafico è che lo puoi risolvere con un giochino di probabilità. Se tu non sapessi che il ladro è straniero, allora avresti il 70% di probabilità che sia italiano, e dovresti andare in quella direzione. Però, una volta che hai già capito che sia straniero, allora quel 70% di probabilità sparisce. Quindi, la probabilità che sia francese è più alta, 26% / 30%, poco meno del 90%. Nulla di certo, ovviamente, ma in assenza di altre informazioni i dati ti dicono che la probabilità maggiore è che il tuo colpevole sia francese. Spero di esserti stata d’aiuto! Buona serata e in bocca al lupo con l’indagine!!”//
-
+|preformat&gt;[Ciao $nome! Sono contenta di sentirti! Come sta andando a Roma? Guarda, la cosa interessante del grafico è che lo puoi risolvere con un giochino di probabilità. Se tu non sapessi che il ladro è straniero, allora avresti il 70% di probabilità che sia italiano, e dovresti andare in quella direzione. Però, una volta che hai già capito che sia straniero, allora quel 70% di probabilità sparisce. Quindi, la probabilità che sia francese è più alta, 26% / 30%, poco meno del 90%. Nulla di certo, ovviamente, ma in assenza di altre informazioni i dati ti dicono che la probabilità maggiore è che il tuo colpevole sia francese. Spero di esserti stata d’aiuto! Buona serata e in bocca al lupo con l’indagine!!]\
+\
 Rileggi più volte il messaggio, cercando di capire che cosa voglia dire Rebecca, che è molto preparata ma ogni tanto usa parole strane. Quando sei soddisfatt$g e hai finalmente capito, [[riguarda il grafico a torta-&gt;stranieri Stat]] oppure [[torna indietro e analizza un’altra prova-&gt;1 Stat]]. {
 
 (display: &quot;piepagina&quot;)}</tw-passagedata><tw-passagedata pid="39" name="scrivi a Rebecca 2" tags="Grigio_c T_Nero" position="3196,908" size="100,100">
@@ -1067,8 +1074,8 @@ Rileggi più volte il messaggio, cercando di capire che cosa voglia dire Rebecca
 \
 Mandi un messaggio a Rebecca, chiedendole il favore di spiegarti, con parole semplici, come si legge una heatmap. Al solito, la sua risposta arriva in fretta... 
 
-//&quot;Ciao $nome! Eccoci! Sempre tutto bene a Roma? Ooooh, io amoooo le heatmap!!! Vedi, sono degli strumenti semplici ed efficaci. In pratica, è come se sulla mappa fosse sovrapposta una griglia invisibile, che divide la mappa stessa in piccole parti, che sono colorate: le parti con un colore più intenso sono quelle che descrivono delle zone del museo in cui ha camminato più gente, oppure in cui una singola persona si è fermata più a lungo. Sai come potresti usarla? Cerca di trovare una mappa in cui la zona che ti interessa è più colorata: magari si riferisce a qualcuno che non era interessato alle opere d’arte, e che invece stava controllando la sicurezza e le telecamere! A presto!!!&quot;//
-
+|preformat&gt;[Ciao $nome! Eccoci! Sempre tutto bene a Roma? Ooooh, io amoooo le heatmap!!! Vedi, sono degli strumenti semplici ed efficaci. In pratica, è come se sulla mappa fosse sovrapposta una griglia invisibile, che divide la mappa stessa in piccole parti, che sono colorate: le parti con un colore più intenso sono quelle che descrivono delle zone del museo in cui ha camminato più gente, oppure in cui una singola persona si è fermata più a lungo. Sai come potresti usarla? Cerca di trovare una mappa in cui la zona che ti interessa è più colorata: magari si riferisce a qualcuno che non era interessato alle opere d’arte, e che invece stava controllando la sicurezza e le telecamere! A presto!!!]\
+\
 Rileggi più volte il messaggio, cercando di capire che cosa voglia dire Rebecca, che è molto preparata ma ogni tanto usa parole strane. Quando sei soddisfatt$g e hai finalmente capito, [[riguardi le heatmap-&gt;percorsi Stat]] oppure [[torni indietro per analizzare un’altra prova-&gt;1 Stat]]. {
 
 (display: &quot;piepagina&quot;)}</tw-passagedata><tw-passagedata pid="40" name="risp giusta Stat" tags="Grigio_c T_Nero" position="3598,1003" size="100,100">
@@ -1252,11 +1259,11 @@ Il progetto GaLe è promosso dalla (link-rerun: &quot;Camera di Commercio di Var
 \
 Scrivi un messaggio di aiuto alla tua amica Valeria, con una foto delle targhe e dei vari tempi, spiegandole anche con un vocale tutto il contesto. Dopo qualche minuti, ti arriva questo messaggio di risposta.
 
-//Ehi ciao $nome! Che bello risentirti!  
+|preformat&gt;[Ehi ciao $nome! Che bello risentirti!  
 Allora, se ho capito bene il tuo è un problema di calcolo degli scarti. Non so se sai cosa voglia dire, ma nel dubbio te lo spiego.  
 In pratica, tu sai che per il veicolo del ladro ci sono voluti più o meno 20 minuti a partire dalle 02:35 per arrivare al semaforo. Quindi, dovrai cercare una macchina che sia passata attorno a quell’ora, perché ovviamente non ci si mette mai esattamente lo stesso tempo a percorrere un percorso. Quindi, per valutare se un’auto possa essere o meno quella del sospettato, devi calcolarti la differenza fra l’ora in cui l’auto sarebbe dovuta passare se ci avesse messo esattamente il tempo prevista e l’ora in cui è passata davvero. Oppure, facendo il ragionamento inverso, controllare tutte le macchine che sono passate più o meno attorno alle 2:55, quindi con uno scarto piccolo.  
-Mi segui? Puoi tranquillamente escludere una macchina che è passata al semaforo solo 5 minuti dopo il furto, perché non è verosimile che ci abbia messo così poco a percorrere un tempo che normalmente richiede 20 minuti. Allo stesso modo, puoi anche non considerare tutte le auto che ci hanno messo troppo... spero di esserti stata utile! A presto $nome!!!//
-
+Mi segui? Puoi tranquillamente escludere una macchina che è passata al semaforo solo 5 minuti dopo il furto, perché non è verosimile che ci abbia messo così poco a percorrere un tempo che normalmente richiede 20 minuti. Allo stesso modo, puoi anche non considerare tutte le auto che ci hanno messo troppo... spero di esserti stata utile! A presto $nome!!!]\
+\
 Ora che hai qualche informazione in più, [[torna indietro-&gt;Targhe]] e controlla di nuovo le targhe nell’elenco. {
 
 (display: &quot;piepagina&quot;) }</tw-passagedata><tw-passagedata pid="54" name="altra prova Fine" tags="Grigio_c T_Nero" position="6000,700" size="100,100">
