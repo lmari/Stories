@@ -442,7 +442,7 @@ Mettendo la mano dentro il veicolo, trovi un modo per aprire la portiera ed entr
 (if: (uppercase: $soluzione) is &quot;TREVISO&quot;) [(set: $soluzione_val to 1)]]
 (set: $flag_rebus to 1)
 
-(display: &quot;piepagina&quot;) }</tw-passagedata><tw-passagedata pid="11" name="2 Introduzione" tags="Grigio_c T_Nero" position="2600,903" size="100,100">
+(display: &quot;piepagina&quot;) }</tw-passagedata><tw-passagedata pid="11" name="2 Introduzione" tags="Grigio_c T_Nero" position="2601.6666666666665,903" size="100,100">
 ## Ispezione dei Musei Capitolini
  \
 Arrivat$g sulla scena del crimine, ti imbatti subito nel Maresciallo Caputo, che ti viene incontro chiaramente preoccupato, il viso scuro.
@@ -450,7 +450,7 @@ Arrivat$g sulla scena del crimine, ti imbatti subito nel Maresciallo Caputo, che
 |dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;Maresciallo Caputo&#39;&#39;]: Carissim$g agente $nome, sono felice che sia riuscit$g ad arrivare così in fretta: la ringrazio molto. Io sono qui giusto da qualche minuto, e non ho trovato nulla di strano, per adesso. Certo che però si tratta di una strana coincidenza, che l’allarme dei Musei Capitolini suoni due giorni dopo il furto della Lupa dalla piazza. Cosa pensa che sia accaduto?]
 \
 |||||=
-|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;[Detective $nome]&#39;&#39;]: Insomma... Se i tecnici del sistema d’allarme confermano che è tutto in regola e perfettamente funzionante, e le pattuglie garantiscono che hanno eseguito a perfezione il protocollo per arrivare qui il prima possibile, proprio non mi spiego cosa sia successo. Magari ci stiamo preoccupando per niente, e l’allarme, che immagino sia molto sensibile, è stato fatto scattare da un topo o qualche altro animaletto che è riuscito a infilarsi nel museo da qualche pertugio.
+|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;[Tu]&#39;&#39;]: Insomma... Se i tecnici del sistema d’allarme confermano che è tutto in regola e perfettamente funzionante, e le pattuglie garantiscono che hanno eseguito a perfezione il protocollo per arrivare qui il prima possibile, proprio non mi spiego cosa sia successo. Magari ci stiamo preoccupando per niente, e l’allarme, che immagino sia molto sensibile, è stato fatto scattare da un topo o qualche altro animaletto che è riuscito a infilarsi nel museo da qualche pertugio.
 
 Propongo di aspettare che i tecnici facciano le loro rilevazioni, e allontanoci dal trambusto, così possiamo lavorare con un po’ più di silenzio al furto dell’altra sera.]
 =|=
@@ -616,7 +616,7 @@ E con questo [[arrivate in dipartimento-&gt;Targhe]]. {
 (display: &quot;piepagina&quot;)}</tw-passagedata><tw-passagedata pid="18" name="5 Stat No" tags="Grigio_c T_Nero" position="4000,800" size="100,100">
 ## Controlla il manuale con più attenzione
 \
-|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;[Detective $nome]&#39;&#39;]: D’accordo maresciallo, io rimango qui ancora per un attimo, ci vediamo tra poco.]\
+|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;[Tu]&#39;&#39;]: D’accordo maresciallo, io rimango qui ancora per un attimo, ci vediamo tra poco.]\
 
 L’incognita del manuale è diventata la tua priorità, dato che sei convint$g sia un tassello fondamentale per lo sviluppo dell’indagine.
 
@@ -657,7 +657,7 @@ Qual è la tua scelta? (dropdown: 2bind $risp_coord_2, &quot;1&quot;, &quot;2&qu
 
 |cloacked)[ [[Coordinate 3]] ]
 
-(display: &quot;piepagina&quot;)}</tw-passagedata><tw-passagedata pid="20" name="3 Fine" tags="T_Nero Grigio_c" position="6198.333333333333,600" size="100,100">
+(display: &quot;piepagina&quot;)}</tw-passagedata><tw-passagedata pid="20" name="3 Fine" tags="T_Nero Grigio_c" position="6200,600" size="100,100">
 ## Alla ricerca di indizi tra qualche scontrino...
 \
 |dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;Maresciallo Caputo&#39;&#39;]: Detective $nome: quale dei seguenti oggetti ci può essere utile?
@@ -684,12 +684,12 @@ Scegli uno degli oggetti sulla scrivania:]
 [[&lt;img src=&#39;res2/7lav.png&#39; class=&#39;full&#39;&gt;-&gt;bigliettino lavanderia]]
 |==|
 \
-(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="21" name="4 Fine" tags="Grigio_c T_Nero" position="6601,797" size="100,100">
+(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="21" name="4 Fine" tags="Grigio_c T_Nero" position="6602.666666666667,797" size="100,100">
 ## Conclusione
 \
 |dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;[Maresciallo Caputo]&#39;&#39;]: Eccoci al dunque, agente $cognome]
 
-|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;[Detective $nome]&#39;&#39;]: Non ci posso credere Maresciallo...finalmente lo abbiamo catturato!]
+|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;[Tu]&#39;&#39;]: Non ci posso credere Maresciallo...finalmente lo abbiamo catturato!]
 
 |dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;[Maresciallo Caputo]&#39;&#39;]: Neppure io. Ecco la sua scheda, gentilmente arrivata via mail dalla centrale di Roma. Come vede è proprio lui, corrisponde in tutto e per tutto!]
 (align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[
@@ -699,7 +699,7 @@ Nato il: 11/01/1968//
 
 &#39;&#39;Immagine Segnaletica:&#39;&#39; 
 
-&lt;style&gt; img {max-width: 60%; max-height: 100%; } &lt;/style&gt; &lt;img src=&#39;res2/prigione.png&#39;&gt; &lt;/div&gt;
+&lt;img src=&#39;res2/prigione.png&#39;&gt;
 
 &#39;&#39;Professione:&#39;&#39; 
 
@@ -766,7 +766,7 @@ Ora, è arrivato il momento di [[scoprire chi hai catturato-&gt;4 Fine]]. {
 (display: &quot;piepagina&quot;) }</tw-passagedata><tw-passagedata pid="23" name="scontrino generico" tags="Grigio_c T_Nero" position="6400,800" size="100,100">
 ## Errato! 
 \
-Eh no, insomma! Andare in un posto in cui il sospettato ha mangiato o si è fermato per un caffé non ti porterà a nulla. Sai già di chi si tratta: adesso devi trovare un modo per incastrarlo. 
+Eh no, insomma! Andare in un posto in cui il sospettato ha mangiato o si è fermato una volta a prendersi un caffé non ti porterà a nulla. Sarebbe utile se non conoscessi l&#39;identità del sospettato, ma tu sai già di esere sulle tracce di David Mercer: adesso devi solo trovare un modo per incastrarlo. 
 
 (if: $scontrino_generico is 0 and $punti_int &gt; 1)[Perdi 1 //punto intelligenza// per aver scelto lo scontrino sbagliato. 
 (set: $punti_int to $punti_int - 1)]
@@ -777,41 +777,42 @@ Eh no, insomma! Andare in un posto in cui il sospettato ha mangiato o si è ferm
 |=
 |==| 
 \
-(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="24" name="scontrino lavanderia" tags="Grigio_c T_Nero" position="6405,425" size="100,100">(if: $scontrino1 is 0)[
+(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="24" name="scontrino lavanderia" tags="Grigio_c T_Nero" position="6405,426.6666666666667" size="100,100">(if: $scontrino1 is 0)[
 ## Scontrino della lavanderia
 \
-(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[&lt;style&gt; img {max-width: 40%; max-height: 100%; } &lt;/style&gt; &lt;img src=&#39;res2/0lav.png&#39;&gt; &lt;/div&gt;]
-
-(if: $2fine_v is 0)[Bene...il sospettato deve andare a ritirare i panni in una Lavanderia Lions alle ore 18:30. Ma quale delle tante che ci sono? Questo è un franchising che ha sede in tutta Italia, e solo a Treviso guardando su Google si vede che ci sono 5 diverse lavanderie. Non possiamo controllarle tutte. Ci vogliono dei dati ulteriori, in modo da avere un&#39;informazione più precisa.
+(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[&lt;img src=&#39;res2/0lav.png&#39;&gt;]\
+\
+(if: $2fine_v is 0)[Bene...il sospettato deve andare a ritirare i panni in una lavanderia Lions alle ore 18:30. Ma in quale delle tante che ci sono? Questo è un franchising che ha sede in tutta Italia, e cercando su Google si può vedere che solo a Treviso ci sono  5 diverse lavanderie Lions. Non hai le risorse per metterle sotto controllo tutti. Hai bisogno di più dati, in modo da ottenere un&#39;informazione più precisa.
 \
 [[Torna a vedere se uno degli altri scontrini ti dice l&#39;indirizzo della lavanderia-&gt;3 Fine]]] \
 ]
 (else:)[
 ## Agguato alla lavanderia
 \
-Corretto, ottima scelta!
+Corretto, ottima scelta: questo bigliettino, in combinazione con lo scontrino della lavanderia, ti basta per organizzare un agguato. Adesso non solo sai dove Mercer andrà a ritirare i panni, ma anche a che ora. 
 
-(text-colour:$colore_dialogo)[&#39;&#39;[Detective $nome]&#39;&#39;]: Significa che per forza il nostro ricercato si recherà a breve alla lavanderia. A giudicare dal bigliettino, andrà nel tardo pomeriggio di oggi (alle 18:30), o comunque prima dell’orario di chiusura.
+(text-colour:$colore_dialogo)[&#39;&#39;Tu&#39;&#39;]: Guardi maresciallo, metta insieme questi due dati, lo vede che informazione se ne ricava? Il nostro ricercato si recherà a breve in questa esatta lavanderia. A giudicare dal bigliettino, andrà nel tardo pomeriggio di oggi, dalle 18:30  a prima dell’orario di chiusura.
 \
 Il maresciallo è d&#39;accordo con te. Richiama tutti all&#39;ordine con la sua poderosa voce e organizza la retata al ladro.
 
-|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;[Maresciallo Caputo]&#39;&#39;]: Statemi tutti ad ascoltare. Lo aspetteremo là direttamente e si ritroverà circondato senza nessuna possibilità di fuga. Mi raccomando, niente sirene e niente uniformi, non dobbiamo destare il minimo sospetto. Forza! Forza! Non può scapparci!]
+|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;[Maresciallo Caputo]&#39;&#39;]: Statemi tutti a sentire. Andiamo ad appostarci attorno alla Lavanderia Lions di via Calamaggiore qui a Treviso. Una volta in posizione, aspetteremo Mercer, e quando questi entrerà nel negozio si ritroverà circondato senza nessuna possibilità di fuga. Mi raccomando: niente sirene e niente uniformi...non dobbiamo destare il minimo sospetto! Forza, non può scapparci!]
 \
-Andate alla lavanderia, e dopo qualche minuto di appostamento, effettivamente David Mercer compare nella via, camminando rapido in direzione della lavanderia. Non fa in tempo ad accorgersi che ci sia qualcosa di strano che un nugulo di poliziotti gli è addosso. [[Prosegui e arresta David Mercer-&gt;4 Fine]].]
+Andate alla lavanderia, e dopo qualche minuto di appostamento, effettivamente David Mercer appare nella via, camminando rapido in direzione della lavanderia. Si guarda attorno con circospezione, ma non si accorge di nulla. Appena entra nel negozio, un nugulo di poliziotti gli è addosso, lo immobilizza e lo ammanetta. Lo hai preso! E adesso è finalmente arrivato il momento di [[arrestare David Mercer-&gt;4 Fine]].]
 |==| 
 \
 (display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="25" name="bigliettino lavanderia" tags="Grigio_c T_Nero" position="6400,600" size="100,100">
 ## Scopri dov&#39;è la lavanderia
 \
 (set: $scontrino1 to 1) \
-
-Questo scontrino è di una lavanderia è molto recente, esattamente del giorno prima all’arrivo degli agenti nel covo del ladro. 
-
-Ottimo, : vuol dire che ti puoi appostare vicino al negozio e aspettare che Mercer passi a ritirare gli abiti...ma per farlo devi ancora scoprire effettivamente in che momento Mercer si recherà ul posto, altrimenti non potrai fargli un&#39;imboscata!
 \
-(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[&lt;style&gt; img {max-width: 40%; max-height: 100%; } &lt;/style&gt; &lt;img src=&#39;res2/7lav.png&#39;&gt;] \
+(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[&lt;img src=&#39;res2/7lav.png&#39;&gt;] \
+\
+Questo scontrino è di una lavanderia è molto recente, esattamente qualche  giorno prima del furto della Lupa Capitolina. Magari il sospettato è già passato a ritirare i vestiti...o magari no. Per ora non lo puoi sapere, dovresti trovare un ulteriore indizio, magari qualcosa che ti indichi quando Mercer si sia recato in lavanderia, o se vi si debba ancora recare..
+
+...se lo scoprissi, potresti organizzare un&#39;imboscata e mettere le mani sul colpevole. 
+\
 |=
-[[Torna indietro-&gt;3 Fine]]
+A questo punto, torna indietro e [[controlla gli altri scontrini-&gt;3 Fine]].
 |=
 |==| 
 \
