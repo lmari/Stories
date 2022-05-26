@@ -253,13 +253,13 @@ Dopo ore di lavoro, riesci giusto a ottenere i numeri di telefono dei quattro so
 
 Questo che hai appena aperto è un &#39;&#39;libro-game digitale&#39;&#39;, il cui racconto è sviluppato secondo i canoni classici del genere “giallo”. In questo gioco il protagonista sei tu: un’investigatrice / un investigatore che ha un caso da risolvere e per riuscirci dovrai trovare la soluzione dei problemi che nel corso dell’indagine ti si presenteranno.
 
-(set: $nome to &quot;&quot;)
-(set: $cognome to &quot;&quot;)
+(set: $nome to &quot;&quot;) \
+(set: $cognome to &quot;&quot;) \
 Prima di cominciare con il racconto, rispondi per favore a qualche domanda per personalizzare la tua esperienza di gioco.
 * Qual è il tuo nome? (input-box: 2bind $nome, &quot;XXX==&quot;, 1)
-(live: 0.1s)[(set: $y1 to (split: newline, $nome)) (set: $nome to $y1&#39;s 1st)]
+(live: 0.1s)[(set: $y1 to (split: newline, $nome)) (set: $nome to $y1&#39;s 1st)] \
 * Qual è il tuo cognome? (input-box: 2bind $cognome, &quot;XXX==&quot;, 1)
-(live: 0.1s)[(set: $y2 to (split: newline, $cognome)) (set: $cognome to $y2&#39;s 1st)]
+(live: 0.1s)[(set: $y2 to (split: newline, $cognome)) (set: $cognome to $y2&#39;s 1st)] \
 * Con che genere vuoi che ci si riferisca a te durante il gioco? (dropdown: 2bind $genere, &quot;maschile&quot;, &quot;femminile&quot;)
 * Che tipo di detective vuoi essere? (dropdown: 2bind $tipo, &quot;organizzata/o e razionale&quot;, &quot;cordiale e fantasiosa/o&quot;)
 * Vuoi tenere attiva la colonna sonora durante il gioco? (dropdown: 2bind $musica, &quot;si&quot;, &quot;no&quot;)&lt;br&gt;//(se giochi in classe, insieme o vicino ai tuoi compagni, potrebbe essere meglio disattivare l’audio)//
@@ -602,24 +602,25 @@ Facciamo un semplice esempio. Poniamo per esempio che tu sia interessat$g a qual
 Si può quindi valutare la numerosità di ciascuna categoria con un semplice colpo d’occhio. 
 
 (set: $ultima_pag to (history:)&#39;s last)
-(link: &quot;Torna indietro&quot;)[(goto: $ultima_pag)]</tw-passagedata><tw-passagedata pid="19" name="la mappa" tags="sfondo_sfumato2 testo_nero" position="2523.3333333333335,600" size="100,100">
+(link: &quot;Torna indietro&quot;)[(goto: $ultima_pag)]</tw-passagedata><tw-passagedata pid="19" name="la mappa" tags="sfondo_sfumato2 testo_nero" position="2523,600" size="100,100">
 ## Studiare la Mappa!
 
 La mappa si presenta così:
 
 &lt;img src=&#39;res1/mappa.png&#39; class=&#39;full&#39;&gt;
 
-Hai appena guardato la legenda della mappa, secondo cui di ogni simbolo, cerchio o triangolo:
-* la dimensione è proporzionale alla durata del tempo passato nel luogo localizzato mediante GPS;
-* il colore indica il momento del giorno in cui si è visitato il luogo, blu per il giorno e viola per la notte;
-* e infine la forma specifica se la connessione internet era attiva, sì se è un cerchio e no se è un triangolo.\
+Hai appena guardato la legenda della mappa, da cui hai capito come interpretare ogni simbolo, dunque un cerchio o un triangolo, che contiene:
+* la sua posizione indica che il sogetto si è fermato in quel luogo, identificato grazie alla localizzazione mediante GPS;
+* la sua dimensione è proporzionale alla durata del tempo che il soggetto ha passato nel luogo;
+* il suo colore indica il momento del giorno in cui il soggetto è stato nel luogo, blu per il giorno e viola per la notte;
+* e infine la forma specifica se in quel luogo il soggetto aveva attivato la connessione internet, sì se è un cerchio e no se è un triangolo. \
 
-Grazie a ulteriori approfondimenti e indagini, oltre che da quanto emerso durante l’interrogatorio, disponi di queste informazioni su Ravanelli:
+Grazie a ulteriori approfondimenti e indagini, oltre che da quanto emerso durante l’interrogatorio, disponi di queste informazioni su Ravanelli, che ti possono essere utili per capire il senso dei simboli sulla mappa:
 * è domiciliato a Busto Arsizio;
 * il suo studio si trova ad Abbiategrasso;
 * ha moltissimi clienti a Milano, in Brianza (l’area compresa fra Milano e Como) e a Como;
 * nell’ultima settimana si è recato a un concerto a Seregno, al cinema a Magenta e allo stadio a San Siro (Milano);
-* ha due fratelli: uno vive a Como e l’altro a Varese. Entrambi sono famosi per la grande onestà e non aver mai avuto problemi di sorta con la legge.
+* ha due fratelli, uno che vive a Como e l’altro a Varese, entrambi noti per la grande onestà e non aver mai avuto problemi con la legge.
 
 Sai bene che hai una sola possibilità, e che probabilmente il complice di Ravanelli è già in viaggio per recuperare il quadro, e che quindi devi trovare il nascondiglio della refurtiva a colpo sicuro.
 
@@ -628,9 +629,8 @@ Scegli quale luogo vuoi perquisire (dropdown: 2bind $direzione, &quot;1&quot;, &
 (if: $direzione is &quot;5&quot;) [(go-to: &quot;Direzione corretta&quot;)]
 (else:) [(go-to: &quot;Direzione sbagliata&quot;)]
 ]}
-(if: $errori_mappa is 1)[Se non sei espert$g di lettura di mappe, puoi sempre mandare una foto della mappa alla tua amica Rebecca, grande esperta di Data Science e giovane campionessa di orienteering (e quindi molto esperta di mappe), per vedere se ti possa [[dare una mano nella lettura della mappa-&gt;aiuto a Rebecca]].]\
-(if: $errori_mappa &gt; 1)[Beh, potresti chiedere ancora aiuto alla tua amica Rebecca...sei sicur$g di aver letto con attenzione tutto il testo? magari ti sei scordat$g l&#39;ultimo paragrafo del suo messaggio, che era il più importante. Per controllare, [[rileggi il messaggio di Rebecca-&gt;aiuto a Rebecca]].]
-{
+(if: $errori_mappa is 1) [Se non sei espert$g di lettura di mappe, puoi sempre mandare una foto della mappa alla tua amica Rebecca, grande esperta di scienza dei dati oltre che giovane campionessa di orienteering, e quindi molto esperta di mappe, per vedere se ti potrebbe [[dare una mano nella lettura della mappa-&gt;aiuto a Rebecca]].]\
+(if: $errori_mappa &gt; 1)[Beh, potresti chiedere ancora aiuto alla tua amica Rebecca... Sei sicur$g di aver letto con attenzione tutto il testo del suo messaggio? Potrebbe essere che ti sia scordat$g dell’ultimo paragrafo, che era il più importante? Per controllare, [[rileggi il messaggio di Rebecca-&gt;aiuto a Rebecca]].] {
 
 (if: $m) [(print: $cs6)]
 
@@ -894,7 +894,7 @@ Ti ricordi infatti che una sera la tua amica Rebecca, con cui chiacchieri spesso
 Inserisci la combinazione nel riquadro sottostante. Quando avrai inserito precisamente i quattro numeri della combinazione corretta, potrai dunque aprire il lucchetto della tua bicicletta e proseguire.
 
 (set: $pswd_lucchetto to &quot;&quot;)
-(input-box: 2bind $pswd_lucchetto, &quot;X=&quot;, 1)\
+(input-box: 2bind $pswd_lucchetto, &quot;==X==&quot;, 1)\
 (live: 0.1s) [(set: $y to (split: newline, $pswd_lucchetto)) (set: $pswd_lucchetto to (trimmed: $y&#39;s 1st))]
 
 (live: 1s)[(if: $pswd_lucchetto is &quot;1807&quot;) [Meno male che ti sei ricordat$g la combinazione...
@@ -927,7 +927,7 @@ Al proposito ti ricordi due cose: la prima è che si tratta di un codice di quat
 Inserisci la combinazione nel riquadro sottostante. Quando avrai inserito precisamente i quattro numeri della combinazione corretta, potrai dunque recuperare le chiavi e proseguire.
 
 (set: $pswd_cassaforte to &quot;&quot;)
-(input-box: 2bind $pswd_cassaforte, &quot;X=&quot;, 1)\
+(input-box: 2bind $pswd_cassaforte, &quot;==X==&quot;, 1)\
 (live: 0.1s) [(set: $y to (split: newline, $pswd_cassaforte)) (set: $pswd_cassaforte to (trimmed: $y&#39;s 1st))]
 \
 (live: 0.5s)[(if: $pswd_cassaforte is &quot;1312&quot;) [Meno male che ti sei ricordat$g la combinazione...
@@ -995,7 +995,7 @@ Un esempio per rendere un po’ più concreto tutto ciò riguarda i famosi test 
 
 
 Una sintesi dei contenuti di questo gioco:
-* “scienza dei dati”: campioni di dati; media, minimo e massimo di un campione; comprendere semplici serie storiche; visualizzare dati su una mappa; istogrammi e frequenze; variabili ordinali;
+* scienza dei dati: campioni di dati; media, minimo e massimo di un campione; comprendere semplici serie storiche; visualizzare dati su una mappa; istogrammi e frequenze; variabili ordinali;
 * altre discipline: arte: Bacio di Hayez e risorgimento; scienze: funzionamento della macchina della verità; storia: attraversare l’Italia in epoche diverse; geografia: dov’è/che cos’è la Brianza; educazione civica: digitalizzazione di archivi pubblici.
 
 
@@ -1026,32 +1026,30 @@ Due squadre che sono a pari punti alla fine del campionato, ovviamente avendo gi
 La deviazione standard, chiamata anche &quot;scarto tipo&quot; o &quot;scarto quadratico medio&quot;, ci consente di descrivere con un solo numero quanto sono vicini o lontani tra loro i valori di un campione, e più precisamente quanto i valori sono vicini alla media del campione stesso. Rispetto alle sei partite sopra, i risultati della prima squadra sono tutti uguali, e hanno perciò dispersione nulla e deviazione standard zero, mentre i risultati della seconda squadra sono piuttosto dispersi e deviazione standard abbastanza grande.
 
 (set: $ultima_pag to (history:)&#39;s last)
-(link: &quot;Torna indietro&quot;)[(goto: $ultima_pag)]</tw-passagedata><tw-passagedata pid="41" name="aiuto a Rebecca" tags="sfondo_sfumato2 testo_nero" position="2701.666666666667,774.9999999999999" size="100,100">
+(link: &quot;Torna indietro&quot;)[(goto: $ultima_pag)]</tw-passagedata><tw-passagedata pid="41" name="aiuto a Rebecca" tags="sfondo_sfumato2 testo_nero" position="2701,774" size="100,100">
 ## L&#39;aiuto di Rebecca
 \
 &lt;img src=&#39;res1/mappa.png&#39; class=&#39;full&#39;&gt;
 \
-(if: $errori_mappa &lt; 2)[
-Mandi un messaggio alla tua amica Rebecca, che dopo pochi minuti ti risponde.]
-(else:)[
-Riapri il telefono e rileggi il messaggio di Rebecca, concentrandoti sull&#39;ultimo paragrafo, che potrebbe essere cruciale per risolvere l&#39;enigma.]
+(if: $errori_mappa &lt; 2) [Mandi un messaggio alla tua amica Rebecca, che dopo pochi minuti ti risponde.]
+(else:) [Riapri il telefono e rileggi il messaggio di Rebecca, concentrandoti sull’ultimo paragrafo, che potrebbe essere cruciale per risolvere l’enigma.]
 
-|preformat&gt;[Ciaoooo $nome!! Ma che piacere sentirti, sono giorni che sei sparit$g...va tutto bene? Hai avuto problemi al lavoro??
+|preformat&gt;[Ciaoooo $nome!! Ma che piacere sentirti, sono giorni che sei sparit$g... va tutto bene? Hai avuto problemi al lavoro??
 
-Comunque ti aiuto con piacere, ma che messaggio strano che mi hai mandato, da quando ti interessi di &#39;&#39;visualizzazione di dati su mappe&#39;&#39;?? Comunque, ho guardato la mappa, e secondo me non si tratta di un problema così difficile, una volta che lo si guarda dal lato giusto...ma questo succede solo se si è esperti di scienza dei dati! 
+Comunque ti aiuto con piacere, ma che messaggio strano che mi hai mandato, da quando ti interessi di &#39;&#39;visualizzazione di dati su mappe&#39;&#39;?? Comunque, ho guardato la mappa, e secondo me non si tratta di un problema così difficile, una volta che lo si guarda dal lato giusto... ma questo succede solo se si è abbastanza esperti di scienza dei dati! 
 
-Io non so bene che vita faccia questo signore di cui mi hai raccontato ne cosa stia nascondendo e sarebbe certo più semplice se mi dessi qualche dato in più. Con le informazioni che mi hai dato, non so dirti esattamente in quale punto sia ciò che cerchi. Però appunto sono sicuro di poterti dare qualche dritta metodologica. 
+Non so bene che vita faccia questo signore di cui mi hai raccontato, né cosa stia nascondendo, e sarebbe certo più semplice se tu mi dessi qualche dato in più. Con le informazioni che mi hai dato, non so dirti esattamente in quale punto sia ciò che cerchi. Però appunto sono sicura di poterti dare qualche suggerimento.
 
-Secondo me per risolvere questo enigma devi &#39;&#39;cercare delle anomalie&#39;&#39;, ovvero dei dati strani che non sono spiegati dagli spostamenti e dalle abitudini di cui hai notizia. Ti faccio un esempio: se sapessi che c&#39;è una buona ragione per cui sia andato a Milano o a Como, ecco che dovresti escludere quelle località a priori, e quindi potresti escludere quelle località. 
-(if: $errori_mappa &gt; 1)[
-(text-colour:#c2255c)[Tu mi hai scritto che questo sospettato stava nascondendo qualcosa di notte. Quindi verosimilmente puoi assumere che debba cercare un &quot;marker&quot; con delle caratteristiche particolari:
-* deve essere di &#39;&#39;colore rosa&#39;&#39;, che come mi hai detto indica un viaggio notturno;
-* deve essere di &#39;&#39;piccole dimensioni&#39;&#39;, perché sarà rimasto sul posto solo il tempo necessario a nascondere quello che doveva fare
-* deve essere a &#39;&#39;forma di triangolo&#39;&#39;, perché se stava facendo qualcosa di losco magari ha spento i dati del telefono!]]
-Spero di esserti stata di aiuto...un abbraccio, ci vediamo presto!!! E non lavorare troppo!!]
+Secondo me per risolvere questo enigma devi &#39;&#39;cercare delle anomalie&#39;&#39;, ovvero dei dati strani che non sono spiegati dagli spostamenti e dalle abitudini di cui hai notizia. Ti faccio un esempio: se sapessi che c’è una buona ragione per cui la persona è stata a Milano o a Como, ecco che potresti escludere quelle località. 
+
+Mi hai scritto che questo sospettato stava nascondendo qualcosa di notte. Quindi verosimilmente puoi assumere che tu debba cercare un simbolo che sia coerente con questa informazione. E dunque dovrebbe essere:
+* di &#39;&#39;colore rosa&#39;&#39;, che come mi hai detto indica un viaggio notturno;
+* di &#39;&#39;piccole dimensioni&#39;&#39;, perché la persona sarà rimasta sul posto solo il tempo necessario a nascondere quello che doveva nascondere;
+* di &#39;&#39;forma triangolare&#39;&#39;, perché se la persona stava facendo qualcosa di losco è probabile che avesse spento la connessione internet del suo telefono.
+
+Spero di esserti stata di aiuto... Un abbraccio, ci vediamo presto!!! E non lavorare troppo!]
 \
-Il messaggio di Rebecca è lungo e pieno di informazioni, come nel suo stile, ma alla seconda o terza rilettura pensi di aver capito che cosa intenda, e sei pront$g a [[riguardare la mappa-&gt;la mappa]].
-{
+Il messaggio di Rebecca è lungo e pieno di informazioni, come nel suo stile, ma alla seconda o terza rilettura pensi di aver capito che cosa intenda, e sei pront$g a [[riguardare la mappa-&gt;la mappa]]. {
 
 (if: $m) [(print: $cs6)]
 
