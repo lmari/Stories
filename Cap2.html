@@ -134,7 +134,7 @@ tw-story[tags~="Legno"] {
 # Il furto della Lupa Capitolina
 ### //Una storia di investigazione,&lt;br&gt;basata sulla scienza dei dati//
 
-&lt;img src=&#39;res2/.png&#39; class=&#39;full&#39;&gt;
+&lt;img src=&#39;res2/lupa.png&#39; class=&#39;full&#39;&gt;
 
 Questo che hai appena aperto è un &#39;&#39;libro-game digitale&#39;&#39;, il cui racconto è sviluppato secondo i canoni classici del genere “giallo”. In questo gioco il protagonista sei tu: un’investigatrice / un investigatore che ha un caso da risolvere e per riuscirci dovrai trovare la soluzione dei problemi che nel corso dell’indagine ti si presenteranno.
 
@@ -160,7 +160,7 @@ Hai 5 punti a disposizione, da ripartire tra intelligenza e capacità relazional
 
 ---
 //[[Qualche informazione-&gt;credits]] su questo gioco e chi l’ha realizzato.//
-|piccolo&gt;[Versione 25 maggio 2022]
+|piccolo&gt;[Versione 26 maggio 2022]
 {
 (live: 0.2s)[(if: $genere is &quot;maschile&quot;) [(set: $g to &quot;o&quot;)]
 (else:) [(set: $g to &quot;a&quot;)]]
@@ -190,11 +190,11 @@ Hai 5 punti a disposizione, da ripartire tra intelligenza e capacità relazional
 }</tw-passagedata><tw-passagedata pid="2" name="Targhe" tags="Grigio_c T_Nero" position="4400,900" size="100,100">
 ## Scova il veicolo del sospettato
 \
-(if: $visitato_targhe is 0) [Anche se molto probabilmente ne conosci l’identità, il ladro è scappato. Devi attivarti per ritrovarlo, e magari recuperare anche la &#39;&#39;Lupa Capitolina&#39;&#39;, simbolo della città eterna.
+(if: $visitato_targhe is 0) [Anche se molto probabilmente ne conosci l’identità, il ladro è scappato. Devi attivarti per ritrovarlo, e a tutti i costi cercare di recuperare la Lupa Capitolina, simbolo della città eterna.
 
-Arrivato alla centrale di polizia, incontri il maresciallo Caputo che ti viene incontro.
+Arrivat$g alla centrale di polizia, incontri il maresciallo Caputo che ti viene incontro.
 
-|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;Maresciallo Caputo&#39;&#39;]: Detective $nome, l’agente Riccardi ci ha anticipato e si è messo a controllare i video di una banca che ha sede su via Monte dei Faggi, che è una strada obbligata per lasciare il museo. Di ogni auto ha scritto la targa e la relativa ora di passaggio.
+|dialogo&gt;[$dial[Maresciallo Caputo]: Detective $nome, l’agente Riccardi ci ha anticipato e si è messo a controllare i video di una banca che ha sede su via Monte dei Faggi, che è una strada obbligata per lasciare il museo. Di ogni auto ha scritto la targa e la relativa ora di passaggio.
 
 Inoltre, dalle ultime rilevazioni, sappiamo che il ladro deve essere uscito dal museo verso le 2:35. Dato che ci si mettono circa 20 minuti ad arrivare a via Monte dei Faggi, questo elenco è quello che ci dovrebbe essere utile: ci sono i dati relativi ai veicoli passati tra le 2:30 e le 3:10, e quindi tra questi ci dovrebbe essere la targa del mezzo usato da David Mercer per fuggire. Penso che possiamo essere certi di questo...
 
@@ -261,7 +261,7 @@ Se non sai come funziona l’assegnazione delle targhe delle automobili, puoi ma
 \
 Tu indichi la targa, e dietro di te il maresciallo Capito sorride sornione.
 
-|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;Maresciallo Caputo&#39;&#39;]: Ehm... agente $cognome, è sicur$g? Il sospettato non doveva passare una ventina di minuti dopo le 2:30? Se il colpo viene effettuato alle 2:41, il tragitto impiegato per raggiungere una delle telecamere è di almeno 20 minuti.]
+|dialogo&gt;[$dial[Maresciallo Caputo]: Ehm... agente $cognome, è sicur$g? Il sospettato non doveva passare una ventina di minuti dopo le 2:30? Se il colpo viene effettuato alle 2:41, il tragitto impiegato per raggiungere una delle telecamere è di almeno 20 minuti.] \
 
 (if: $targhe_e1 is 0 and $punti_int &gt; 1) [(set: $punti_int to $punti_int - 1)Questo errore ti fa perdere un //punto intelligenza//.]
 
@@ -273,53 +273,53 @@ Tu indichi la targa, e dietro di te il maresciallo Capito sorride sornione.
 (display: &quot;piepagina&quot;) }</tw-passagedata><tw-passagedata pid="4" name="Corridoio 1" tags="Grigio_c T_Nero" position="4600,575" size="100,100">
 ## La Ferrari di Asia Marzola
 \
-(text-colour:$colore_dialogo)[&#39;&#39;Maresciallo Caputo&#39;&#39;]: Non perdiamo tempo, dunque: contattiamo l’ACI per la visura della targa. 
+|dialogo&gt;[$dial[Maresciallo Caputo]: Non perdiamo tempo, dunque: contattiamo l’ACI per la visura della targa.]
 
-Nel giro di pochi minuti vi arriva la visura dell’automobile, ovvero una scheda di informazioni sui dettagli dell’automobile.
+Nel giro di pochi minuti vi arriva la visura, ovvero una scheda di informazioni sui dettagli dell’automobile.
 
-|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;Maresciallo Caputo&#39;&#39;]: Ecco i dettagli del veicolo: telaio numero DKFKEOSS30D, peso 756 kg, la proprietaria è una ragazza di 29 di nome Asia Marzola.]
+|dialogo&gt;[$dial[Maresciallo Caputo]: Ecco i dettagli del veicolo: telaio numero DKFKEOSS30D, peso 756 kg, la proprietaria è una ragazza di 29 di nome Asia Marzola.]
 
-|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;Tu&#39;&#39;]: Pesa davvero poco. Che cosa strana! Io non sono appassionat$g di motori, ma vista così mi sembra si tratti di una vettura sportiva. Chi la userebbe per fare un furto?”]
+|dialogo&gt;[$dial[Tu]: Pesa davvero poco. Che cosa strana! Io non sono appassionat$g di motori, ma vista così mi sembra si tratti di una vettura sportiva. Chi la userebbe per fare un furto?]
 
-|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;Maresciallo Caputo&#39;&#39;]: Provo a chiedere in centrale per rintracciare quest’auto.]
+|dialogo&gt;[$dial)[Maresciallo Caputo]: Provo a chiedere in centrale per rintracciare quest’auto.]
 
 Il maresciallo chiama, e nel giro di pochi minuti vi viene detto che l’automobile si trova a circa 1 km dalla vostra posizione.
 
-|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;Tu&#39;&#39;]: Chiamo un taxi?]
+|dialogo&gt;[$dial[Tu]: Chiamo un taxi?]
 
-|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;Maresciallo Caputo&#39;&#39;]: Ma no, non serve: andiamo a piedi e facciamo un favore al pianeta, oltre che al nostro corpo. Per due persone ben allenate come noi, non ci vorrà più di un quarto d’ora a camminare un chilometro, anche mettendo in conto di trovare qualche attraversamento pedonale.]
-
-&lt;img src=&#39;res2/ferrari.jpeg&#39; class=&#39;full&#39;&gt;
+|dialogo&gt;[$dial[Maresciallo Caputo]: Ma no, non serve: andiamo a piedi e facciamo un favore al pianeta, oltre che al nostro corpo. Per due persone ben allenate come noi, non ci vorrà più di un quarto d’ora a percorrere un chilometro, anche mettendo in conto di trovare qualche attraversamento pedonale.]
 
 Percorrete di corsa il chilometro che vi separa dalla posizione in cui è stata osservata la vettura l’ultima volta.
 
-|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;Tu&#39;&#39;]: Eccola, strana auto per un colpo, non crede?]
+&lt;img src=&#39;res2/ferrari.jpeg&#39; class=&#39;full&#39;&gt;
 
-|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;Maresciallo Caputo&#39;&#39;]: Già, provo ad avvicinarmi.]
+|dialogo&gt;[$dial[Tu]: Eccola, strana auto per un colpo, non crede?]
+
+|dialogo&gt;[$dial[Maresciallo Caputo]: Già, provo ad avvicinarmi.]
 
 In quel momento si avvicina una ragazza dai tratti asiatici. Deve essere Asia Marzola, la proprietaria dell’auto.
 
-|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;Asia Marzola&#39;&#39;]: Ehi tu!!! Che stai facendo? Stai lontano dalla mia auto, rischi di graffiarla!”]
+|dialogo&gt;[$dial[Asia Marzola]: Ehi lei!!! Che sta facendo? Stia lontano dalla mia auto, rischia di graffiarla!”]
 
-Guardi il Maresciallo Caputo, e vi mettete a ridere. Questo è il mondo reale, non una serie prodotta da Netflix: le persone reali non vanno a fare furti d’arte di opere di valore inestimabile su una Ferrari... Vi spiegate e [[tornate a controllare le altre targhe-&gt;Targhe]]. {
+Guardi il maresciallo Caputo, e vi mettete a ridere. Questo è il mondo reale, non una serie prodotta da Netflix: le persone reali non vanno a fare furti d’arte di opere di valore inestimabile su una Ferrari... Vi spiegate e [[tornate a controllare le altre targhe-&gt;Targhe]]. {
 
 (set: $risp_sbagliate to $risp_sbagliate + 1)
 
 (display: &quot;piepagina&quot;) }</tw-passagedata><tw-passagedata pid="5" name="Esatto" tags="Grigio_c T_Nero" position="4600,900" size="100,100">
 ## Sembra essere una pista promettente!
 \
-|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;Tu&#39;&#39;]: Allora, questa potrebbe essere l’auto corretta. Il periodo di tempo è verosimile perché c’è un piccolo scarto fra l’ora prevista di passaggio sotto la telecamera e il passaggio effettivo. Inoltre, fra tutti i veicoli passati in un momento verosimile, questa è l’unica di immatricolazione recente. Maresciallo, concorda con me?]
-
-|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;Maresciallo Caputo&#39;&#39;]: Sì, certamente! Secondo me siamo sulla buona strada. Forza, non perdiamo tempo: procediamo immediatamente a contattare l’ACI per la visura della targa.]
-
+|dialogo&gt;[$dial[Tu]: Allora, questa potrebbe essere l’auto corretta. Il periodo di tempo è verosimile perché c’è un piccolo scarto fra l’ora prevista di passaggio sotto la telecamera e il passaggio effettivo. Inoltre, fra tutti i veicoli passati in un momento verosimile, questa è l’unica di immatricolazione recente. Maresciallo, concorda con me?]
+\
+|dialogo&gt;[$dial[Maresciallo Caputo]: Sì, certamente! Secondo me siamo sulla buona strada. Forza, non perdiamo tempo: procediamo immediatamente a contattare l’ACI per la visura della targa.]
+\
 Dopo qualche minuto di attesa, ricevete un’email da un funzionario dell’ACI, che vi invia la visura contenente tutti i dati utili. 
 
-|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;Maresciallo Caputo&#39;&#39;]: Ecco i dettagli del veicolo: telaio numero DKFKEOSS30D, peso 3,5 tonnellate, nessun proprietario. E questa è proprio un’anomalia: nella mia lunga carriera raramente ho visto qualcosa di simile.]
-
-|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;Tu&#39;&#39;]: Sono sempre più sicur$g che possa trattarsi del sospettato. Ricordo ancora cosa diceva il mio vecchio professore di criminologia: la coincidenze non esistono, raramente l’universo è così pigro.]
-
-|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;Maresciallo Caputo&#39;&#39;]: Benissimo allora! Diamo la massima allerta, contattiamo le pattuglie e segnaliamo la targa. Non ci vorrà molto per ritrovarla.]
-
+|dialogo&gt;[$dial[Maresciallo Caputo]: Ecco i dettagli del veicolo: telaio numero DKFKEOSS30D, peso 3,5 tonnellate, nessun proprietario. E questa è proprio un’anomalia: nella mia lunga carriera raramente ho visto qualcosa di simile.]
+\
+|dialogo&gt;[$dial[Tu]: Sono sempre più sicur$g che possa trattarsi del sospettato. Ricordo ancora cosa diceva il mio vecchio professore di criminologia: la coincidenze non esistono, raramente l’universo è così pigro.]
+\
+|dialogo&gt;[$dial[Maresciallo Caputo]: Benissimo allora! Diamo la massima allerta, contattiamo le pattuglie e segnaliamo la targa. Non ci vorrà molto per ritrovarla.]
+\
 Il maresciallo dirama la comunicazione. Fatto ciò, vi mettete in attesa. Non c’è nulla da fare, se non aspettare...
 ...5 minuti...
 ...15 minuti...
@@ -327,7 +327,7 @@ Il maresciallo dirama la comunicazione. Fatto ciò, vi mettete in attesa. Non c�
 ...30 minuti...
 ...e finalmente il telefono di Caputo suona. Lui annuisce qualche volta, e si segna un indirizzo su un foglio di carta. 
 
-|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;Maresciallo Caputo&#39;&#39;]: Abbiamo una pista! L&#39;auto segnalata è stata trovata a 5 km da qui. Adesso ci sono due alternative per arrivare all’auto del presunto ladro. Ho un cugino che lavora proprio qui vicino che ci potrebbe [[dare immediatamente un passaggio-&gt;Cugino]], e forse con il traffico di Roma in queste ore di punta potremmo risparmiare un po’ di tempo. Altrimenti possiamo farci [[portare dai miei fidati agenti-&gt;Volante]] Riccardi e Palladini con una volante che però non è ancora tornata in centrale, e in questo momento è a circa 3 km da qui. Decida lei...]
+|dialogo&gt;[$dial[Maresciallo Caputo]: Abbiamo una pista! L&#39;auto segnalata è stata trovata a 5 km da qui. Adesso ci sono due alternative per arrivare all’auto del presunto ladro. Ho un cugino che lavora proprio qui vicino che ci potrebbe [[dare immediatamente un passaggio-&gt;Cugino]], e forse con il traffico di Roma in queste ore di punta potremmo risparmiare un po’ di tempo. Altrimenti possiamo farci [[portare dai miei fidati agenti-&gt;Volante]] Riccardi e Palladini con una volante che però non è ancora tornata in centrale, e in questo momento è a circa 3 km da qui. Decida lei...]
 
 (if: $targhe_e1 + $targhe_e2 is 0)[(set: $punti_int to $punti_int + 1)(set: $punti_soc to $punti_soc + 1) In ogni caso, complimenti! Sei riuscit$g a trovare la targa corretta al primo tentativo. Per questa ragione guadagni un //punto intelligenza// e un //punto socialità//.] {
 
@@ -346,10 +346,7 @@ Ora che sai come si legge una targa, e hai i mezzi per capire quali siano le pi�
 (display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="7" name="1 Introduzione" tags="Grigio_c T_Nero" position="1600,901" size="100,100">
 ## Alla ricerca della Lupa Capitolina
 \
-(if: (trimmed: &quot; &quot;, $nome) is &quot;&quot;) [(set: $nome to &quot;Alex&quot;)]
-(if: (trimmed: &quot; &quot;, $cognome) is &quot;&quot;) [(set: $cognome to &quot;Bianchi&quot;)]
-\
-Sono passati mesi da quando hai brillantemente risolto il caso del furto del Bacio dell’Hayez. Il clamore mediatico del ritrovamento del quadro rubato ti ha dato i proverbiali 15 minuti di notorietà. Interviste su tutti i principali telegiornali, ospitate in televisione. Ti è arrivato addirittura un invito da parte della neo-eletta presidente della Repubblica, che si è voluta congraturare con te di persona per il contributo che hai dato alla comunità.
+Sono passati mesi da quando hai brillantemente risolto il caso del furto del Bacio dell’Hayez. Il clamore mediatico del ritrovamento del quadro rubato ti ha dato i proverbiali 15 minuti di notorietà. Interviste su tutti i principali telegiornali, ospitate in televisione. Ti è arrivato addirittura un invito da parte della neo-eletta presidente della Repubblica, che si è voluta congratulare con te di persona per il contributo che hai dato alla comunità.
 
 Poi, però, il clamore è finito, e hai potuto ricominciare con la tua normale routine lavorativa... tirando un sospiro di sollievo! Un po’ perché dopo qualche giorno non ne potevi già più di essere fermat$g da sconosciuti per strada in cerca di un selfie. E, soprattutto, perché avevi cose più importanti a cui pensare: quando hai arrestato Ravanelli, il colpevole del furto del Bacio di Hayez, non sei riuscit$g a trovare il complice.
 
@@ -357,44 +354,44 @@ Mentre, questi pensieri ti scorrono nella testa nel dormiveglia, il telefono vib
 
 Uffa... Una delle solite pubblicità... Ti rigiri nel letto e provi a riaddormentarti. Hai ancora qualche minuto di sonno prima che la sveglia ti ricordi di andare in dipartimento. Ma il telefono vibra di nuovo, una volta sola anche questa volta. Lo guardi, scocciat$g. È un messaggio è del commissario Tomba, il tuo capo e mentore: &quot;Hanno rubato la Lupa Capitolina. Il prefetto di Roma mi ha chiesto di mandare la mia persona migliore: sei pront$g per una trasferta?&quot;
 
-Non ci pensi due volte. Ti tiri su dal letto, ti fai una doccia in fretta, e in pochi minuti sei in ufficio. Recuperi distintivo e tutto il necessario per una trasferta, più le pacche sulle spalle e gli auguri dei colleghi e del commissario. In pochi minuti sei in stazione, e in un batter d’occhio sei sedut$g su un treno ad alta velocità, dirett$g verso la capitale.
+Non ci pensi due volte. Ti tiri su dal letto, ti fai una doccia in fretta, e in pochi minuti sei in ufficio. Recuperi distintivo e tutto il necessario per una trasferta, più le pacche sulle spalle e gli auguri dei colleghi e del commissario. Poco dopo sei in stazione, e in un batter d’occhio sei sedut$g su un treno ad alta velocità, dirett$g verso la capitale.
 
 In treno ti metti a riflettere su chi possa aver compiuto un furto del genere, e se per caso esista una connessione fra questo furto e quello dell’Hayez. Insomma, come diceva il tuo vecchio professore di criminologia, le coincidenze non esistono: raramente l’universo è così pigro. In un batter d’occhio, il treno è arrivato, e appena quattro ore dopo aver ascoltato il messaggio di Tomba sei già sul luogo del misfatto, accolt$g da due colleghi romani: il maresciallo Caputo e l’agente Riccardi. Vi presentate, scambiate qualche convenevole e poi vi mettete al lavoro.
 
 &lt;img src=&#39;res2/roma.jpeg&#39; class=&#39;full&#39;&gt;
 
 |||||=
-|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;Tu&#39;&#39;]: Maresciallo Caputo, mi diceva che il protocollo di sicurezza della piazza del Campidoglio comporta diverse pattuglie di guardia che controllano la statua e si danno il cambio durante la notte, giusto?  Se è così, allora chiunque abbia effettuato il furto deve avere aspettato il momento esatto in cui le guardie si sono date il cambio. Cosa ne pensa?]
+|dialogo&gt;[$dial[Tu]: Maresciallo Caputo, mi diceva che il protocollo di sicurezza della piazza del Campidoglio comporta diverse pattuglie di guardia che controllano la statua e si danno il cambio durante la notte, giusto?  Se è così, allora chiunque abbia effettuato il furto deve avere aspettato il momento esatto in cui le guardie si sono date il cambio. Cosa ne pensa?]
 =|=
 (if: $g is &quot;o&quot;) [&lt;img src=&#39;res2/inv_m2.png&#39; class=&#39;center&#39; width=&#39;200&#39;&gt;] (else: ) [&lt;img src=&#39;res2/inv_f2.png&#39; class=&#39;center&#39; width=&#39;200&#39;&gt;]
 |==|
 \
-|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;Maresciallo Caputo&#39;&#39;]: Dice benissimo, agente $cognome. La piazza non è così grande da non accorgersi dell’arrivo di un mezzo per portare via la statua. Penso che siano stati dei professionisti, o un solo professionista con un’adeguata strumentazione. La statua è molto pesante e pure abbastanza voluminosa: solo un ladro molto capace poteva portarla via di nascosto, in così poco tempo, e senza neppure attirare l’attenzione delle guardie. Certo, ieri sera c’era sola una pattuglia, come sempre durante la settimana. A tal proposito, agente $cognome, le presento l’agente Riccardi, uno dei poliziotti della pattuglia che controllava la piazza questa notte.]
+|dialogo&gt;[$dial[Maresciallo Caputo]: Dice benissimo, agente $cognome. La piazza non è così grande da non accorgersi dell’arrivo di un mezzo per portare via la statua. Penso che siano stati dei professionisti, o un solo professionista con un’adeguata strumentazione. La statua è molto pesante e pure abbastanza voluminosa: solo un ladro molto capace poteva portarla via di nascosto, in così poco tempo, e senza neppure attirare l’attenzione delle guardie. Certo, ieri sera c’era una sola pattuglia, come sempre durante la settimana. A tal proposito, agente $cognome, le presento l’agente Riccardi, uno dei poliziotti della pattuglia che controllava la piazza questa notte.]
 \
-|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;Agente Riccardi&#39;&#39;]: Piacere di conoscerla, agente $cognome. L’ho vista al telegiornale qualche mese fa, spero davvero che ci possa aiutare a risolvere il caso. Ma vado subito al punto. Noi durante la serata ci appostiamo periodicamente in una parte diversa della piazza, o nei suoi immediati dintorni, muovendosi ogni 15 o 20 minuti. In effetti, non prestiamo una particolare attenzione alla statua: stiamo lì giusto per essere sicuri che non ci sia qualche perditempo che si metta a fare festa davanti al municipio.  
+|dialogo&gt;[$dial[Agente Riccardi]: Piacere di conoscerla, agente $cognome. L’ho vista al telegiornale qualche mese fa, spero davvero che ci possa aiutare a risolvere il caso. Ma vado subito al punto. Noi durante la serata ci appostiamo periodicamente in una parte diversa della piazza, o nei suoi immediati dintorni, muovendosi ogni 15 o 20 minuti. In effetti, non prestiamo una particolare attenzione alla statua: stiamo lì giusto per essere sicuri che non ci sia qualche perditempo che si metta a fare festa davanti al municipio.  
 Ieri sera però è successa una cosa strana, che col senno di poi potrebbe essere importante. Dopo che siamo rimasti qualche minuto sotto le scale del municipio, abbiamo avuto tutti una forte sonnolenza, come se fossimo confusi. Nessuno di noi sa dire con certezza cosa fosse successo, ma sta di fatto che quando ci siamo schiariti le idee e siamo tornati verso il centro della piazza, la statua era sparita. Io mi sento veramente in colpa, però mai avrei pensato che qualcuno potesse rubare la &#39;&#39;Lupa Capitolina&#39;&#39;: è una cosa davvero assurda.]
 \
 |||||=
-|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;Tu&#39;&#39;]: Ah, ecco una prima pista. È chiaro che vi abbiano in qualche modo narcotizzato per tutto il tempo necessario a fare il colpo. Probabilmente i responsabili di questo erano appostati sopra alle scale, e vi hanno stordito con un qualche genere di gas rilassante. Però io la capisco, agente Riccardi. Anche a me non torna qualcosa. Perché? Qual è il movente? Cosa può spingere una o più persone a rubare una statua sul suolo pubblico, visto che non si trattava nemmeno della versione originale! Com’è possibile?]
+|dialogo&gt;[$dial[Tu]: Ah, ecco una prima pista. È chiaro che vi abbiano in qualche modo narcotizzato per tutto il tempo necessario a fare il colpo. Probabilmente i responsabili di questo erano appostati sopra alle scale, e vi hanno stordito con un qualche genere di gas rilassante. Però io la capisco, agente Riccardi. Anche a me non torna qualcosa. Perché? Qual è il movente? Cosa può spingere una o più persone a rubare una statua sul suolo pubblico, visto che non si trattava nemmeno della versione originale! Com’è possibile?]
 =|=
 (if: $g is &quot;o&quot;) [&lt;img src=&#39;res2/inv_m2.png&#39; class=&#39;center&#39; width=&#39;200&#39;&gt;] (else: ) [&lt;img src=&#39;res2/inv_f2.png&#39; class=&#39;center&#39; width=&#39;200&#39;&gt;]
 |==|
-Finita questa utile conversazione, effettui con i colleghi un’ispezione sul campo, senza però ottenere alcun risultato: più ci pensi, più ti convinci che non abbia senso. C’è una cosa però che ti preoccupa più delle altre: chi ti ha mandato quel messaggio la mattina del 20 aprile, prima ancora che ti scrivesse il commissario Tomba per avvisarti? Magari era solo uno scherzo, ma tu hai il sospetto che ci sia qualcuno che si stia prendendo gioco di te. Magari, sospetti, è la stessa persona coinvolta nel furto del &#39;&#39;Bacio di Hayez&#39;&#39;...
+Finita questa utile conversazione, effettui con i colleghi un’ispezione sul campo, senza però ottenere alcun risultato: più ci pensi, più ti convinci che non abbia senso. C’è una cosa però che ti preoccupa più delle altre: chi ti ha mandato quel messaggio la mattina del 20 aprile, prima ancora che ti scrivesse il commissario Tomba per avvisarti? Magari era solo uno scherzo, ma tu hai il sospetto che ci sia qualcuno che si stia prendendo gioco di te. Magari, sospetti, è la stessa persona coinvolta nel furto del Bacio dell’Hayez...
 
 Dopo due lunghi giorni di indagini infruttuose, arriva una chiamata nella prima mattinata. È il maresciallo Caputo che ti dice di correre ai Musei Capitolini: sta suonando un allarme!
 
-Tu ci pensi subito: i Musei Capitolini sono proprio accanto alla Piazza del Campidoglio. Sarà una coincidenza? Non credi proprio... A questo punto, hai due strade possibili. Puoi cercare le [[coordinate]] dei Musei Capitolini, e poi capire come usarle per metterle sul tuo navigatore GPS, per arrivare prima sulla scena del crimine. Oppure, puoi andare [[senza navigatore]], rischiando di perderti ma anche conoscendo un po’ meglio la città, dato che comunque sei stato in quell’area giusto due giorni prima e dovresti perciò ricordarti il tragitto. {
+Tu ci pensi subito: i Musei Capitolini sono proprio accanto alla Piazza del Campidoglio. Sarà una coincidenza? Non credi proprio... A questo punto, hai due strade possibili. Puoi cercare le [[coordinate]] dei Musei Capitolini, e poi capire come usarle per metterle sul tuo navigatore GPS, per arrivare prima sulla scena del crimine. Oppure, puoi andare [[senza navigatore]], rischiando di perderti ma anche conoscendo un po’ meglio la città, dato che comunque sei stat$g in quell’area giusto due giorni prima e dovresti perciò ricordarti il tragitto. {
 
 (display: &quot;piepagina&quot;)}</tw-passagedata><tw-passagedata pid="8" name="3 Esatto" tags="Grigio_c T_Nero" position="5200,900" size="100,100">
 ## Ispeziona il furgoncino
 \
 Arrivati alla posizione segnalata, trovate un furgoncino bianco. Vi basta un’occhiata alla targa per rendervi conto che si tratta del mezzo che stavate cercando.
 
-|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;Tu&#39;&#39;]: Ecco il veicolo!]
+|dialogo&gt;[$dial[Tu]: Ecco il veicolo!]
 \
-|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;Maresciallo Caputo&#39;&#39;]: Sì, lo vedo... Ma... un attimo: un finestrino è aperto!]
+|dialogo&gt;[$dial[Maresciallo Caputo]: Sì, lo vedo... Ma... un attimo: un finestrino è aperto!]
 \
-|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;Tu&#39;&#39;]: Beh, per una volta, ci hanno reso semplice il lavoro... non ci sono più i delinquenti di una volta!]
+|dialogo&gt;[$dial[Tu]: Beh, per una volta, ci hanno reso semplice il lavoro... non ci sono più i delinquenti di una volta!]
 \
 Mettendo la mano dentro il veicolo, trovi un modo per aprire la portiera ed entri, notando in particolare alcuni oggetti lì presenti. Che cosa vuoi guardare?
 
@@ -412,7 +409,7 @@ Mettendo la mano dentro il veicolo, trovi un modo per aprire la portiera ed entr
 (display: &quot;piepagina&quot;) }</tw-passagedata><tw-passagedata pid="9" name="Postit" tags="Grigio_c T_Nero" position="5400,700" size="100,100">
 ## Controlla il post it 🗒
 \
-|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;Tu&#39;&#39;]: Lasciamo stare, maresciallo, è una perdita di tempo. Sembrava un codice segreto, ma è solo un bigliettino per entrare in un garage!]
+|dialogo&gt;[$dial[Tu]: Lasciamo stare, maresciallo, è una perdita di tempo. Sembrava un codice segreto, ma è solo un bigliettino per entrare in un garage!]
 \
 |=
 &lt;img src=&#39;res2/post_it.png&#39; class=&#39;full&#39;&gt;
@@ -424,12 +421,12 @@ Mettendo la mano dentro il veicolo, trovi un modo per aprire la portiera ed entr
 
 (set: $controlla_postit to 1)
 
-(display: &quot;piepagina&quot;) }</tw-passagedata><tw-passagedata pid="10" name="Rebus" tags="Bianco T_Nero" position="5400,900" size="100,100">
+(display: &quot;piepagina&quot;) }</tw-passagedata><tw-passagedata pid="10" name="Rebus" tags="T_Nero Grigio_c" position="5400,900" size="100,100">
 ## Telefono 📱
 \
 (if: $flag_rebus is 0) [Guardando il telefono, non siete in grado di sbloccarlo. Però all’improvviso arrivano dei nuovi messaggi, che compaiono nella schermata iniziale del telefono.
 
-|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;Maresciallo Caputo&#39;&#39;]: Leggiamo i messaggi, potrebbero darci qualche indizio!]
+|dialogo&gt;[$dial[Maresciallo Caputo]: Leggiamo i messaggi, potrebbero darci qualche indizio!]
 \
 |=
 &lt;img src=&#39;res2/telefono.png&#39; class=&#39;full&#39;&gt;
@@ -438,11 +435,11 @@ Mettendo la mano dentro il veicolo, trovi un modo per aprire la portiera ed entr
 |==|
 ] \
 (else:) [ \
-|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;Maresciallo Caputo&#39;&#39;]: La soluzione è sbagliata, così non sembra avere senso: riproviamo!]]
+|dialogo&gt;[$dial[Maresciallo Caputo]: La soluzione è sbagliata, così non sembra avere senso: riproviamo!]]
 |=
 &lt;img src=&#39;res2/whatsapp.jpg&#39; class=&#39;full&#39;&gt;
 
-|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;Tu&#39;&#39;]: Vediamo... quale potrebbe essere la soluzione del rebus?]
+|dialogo&gt;[$dial[Tu]: Vediamo... quale potrebbe essere la soluzione del rebus?]
 {(set: $soluzione to &quot;&quot;)
 (input-box: 2bind $soluzione, &quot;X=&quot;, 1)
 (live: 0.1s) [(set: $x to (split: newline, $soluzione)) (set: $soluzione to (trimmed: $x&#39;s 1st))] }
@@ -456,12 +453,12 @@ Mettendo la mano dentro il veicolo, trovi un modo per aprire la portiera ed entr
 (display: &quot;piepagina&quot;) }</tw-passagedata><tw-passagedata pid="11" name="2 Introduzione" tags="Grigio_c T_Nero" position="2602,903" size="100,100">
 ## Ispezione dei Musei Capitolini
  \
-Arrivat$g sulla scena del crimine, ti imbatti subito nel Maresciallo Caputo, che ti viene incontro chiaramente preoccupato, il viso scuro.
+Arrivat$g sulla scena del crimine, ti imbatti subito nel Maresciallo Caputo, che ti viene incontro chiaramente preoccupato e con il viso scuro.
 
-|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;Maresciallo Caputo&#39;&#39;]: Carissim$g agente $cognome, sono felice che sia riuscit$g ad arrivare così in fretta: la ringrazio molto. Io sono qui giusto da qualche minuto, e non ho trovato nulla di strano, per adesso. Certo che però si tratta di una strana coincidenza, che l’allarme dei Musei Capitolini suoni due giorni dopo il furto della Lupa dalla piazza. Cosa pensa che sia accaduto?]
+|dialogo&gt;[$dial[Maresciallo Caputo]: Carissim$g agente $cognome, sono felice che sia riuscit$g ad arrivare così in fretta: la ringrazio molto. Io sono qui giusto da qualche minuto, e non ho trovato nulla di strano, per adesso. Certo che però si tratta di una strana coincidenza, che l’allarme dei Musei Capitolini suoni due giorni dopo il furto della Lupa dalla piazza. Cosa pensa che sia accaduto?]
 \
 |||||=
-|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;[Tu]&#39;&#39;]: Insomma... Se i tecnici del sistema d’allarme confermano che è tutto in regola e perfettamente funzionante, e le pattuglie garantiscono che hanno eseguito a perfezione il protocollo per arrivare qui il prima possibile, proprio non mi spiego cosa sia successo. Magari ci stiamo preoccupando per niente, e l’allarme, che immagino sia molto sensibile, è stato fatto scattare da un topo o qualche altro animaletto riuscito a infilarsi da qualche pertugio.
+|dialogo&gt;[$dial[Tu]: Insomma... Se i tecnici del sistema d’allarme confermano che è tutto in regola e perfettamente funzionante, e le pattuglie garantiscono che hanno eseguito a perfezione il protocollo per arrivare qui il prima possibile, proprio non mi spiego cosa sia successo. Magari ci stiamo preoccupando per niente, e l’allarme, che immagino sia molto sensibile, è stato fatto scattare da un topo o qualche altro animaletto riuscito a infilarsi in qualche pertugio.
 
 Propongo di aspettare che i tecnici facciano le loro rilevazioni, magari allontanoci dal trambusto, così possiamo lavorare con un po’ più di calma al furto dell’altra sera.]
 =|=
@@ -470,82 +467,82 @@ Propongo di aspettare che i tecnici facciano le loro rilevazioni, magari allonta
 \
 Vi allontanate e ricominciate a discutere del furto avvenuto due sere prima, mentre la notte lascia spazio definitivamente al giorno e le luci del mattino accarezzano con sempre più forza i tetti della città eterna.
 
-|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;Maresciallo Caputo&#39;&#39;]: Ci sono novità? Indizi? Una pista su cui indagare?]
+|dialogo&gt;[$dial[Maresciallo Caputo]: Ci sono novità? Indizi? Una pista su cui indagare?]
 \
 |||||=
-|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;Tu&#39;&#39;]: Non ancora purtroppo: piccole tracce o solo qualche segno lasciato sulla pavimentazione, ma sono prove irrilevanti per ora. Ciò che non mi torna in nessun modo è il movente. Cosa può spingere un criminale a rubare una statua del genere? Me lo sono chiesto mille volte in questi giorni, ma non riesco a venirne a capo. Quella statua non ha neppure un grande valore economico, essendo una copia. Rubare un simbolo del genere è più che altro uno sfregio all’urbe, un danno morale più che economico.]
+|dialogo&gt;[$dial[Tu]: Non ancora purtroppo: piccole tracce o solo qualche segno lasciato sulla pavimentazione, ma sono prove irrilevanti per ora. Ciò che non mi torna in nessun modo è il movente. Cosa può spingere un criminale a rubare una statua del genere? Me lo sono chiesto mille volte in questi giorni, ma non riesco a venirne a capo. Quella statua non ha neppure un grande valore economico, essendo una copia. Rubare un simbolo del genere è più che altro uno sfregio all’urbe, un danno morale più che economico.]
 =|=
 (if: $g is &quot;o&quot;) [&lt;img src=&#39;res2/inv_m2.png&#39; class=&#39;center&#39; width=&#39;200&#39;&gt;] (else: ) [&lt;img src=&#39;res2/inv_f2.png&#39; class=&#39;center&#39; width=&#39;200&#39;&gt;]
 |==|
 \
-|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;Maresciallo Caputo&#39;&#39;]: Ha perfettamente ragione. Ma vedrà, troveremo sicuramente una prova o un indizio che incastrerà il ladro, ne sono certo!]
+|dialogo&gt;[$dial[Maresciallo Caputo]: Ha perfettamente ragione. Ma vedrà, troveremo una prova o un indizio che incastrerà il ladro, ne sono certo!]
 \
 In quel momento, un uomo della scientifica vi fa cenno da lontano di entrare: evidentemente ci deve essere qualcosa da vedere. Un’impronta digitale, magari, oppure un filmato che possa chiarire l’identità del ladro. Mentre camminate, passi davanti alla statua della Lupa Capitolina, l’originale, e non puoi fare a meno di squadrarla, pensando che sei venut$g a Roma per la sua gemella, che è uguale a parte... a parte... e in quel momento hai un’epifania.
 
 &lt;img src=&#39;res2/musei_capitolini.png&#39; class=&#39;full&#39;&gt;
 
 |||||=
-|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;Tu&#39;&#39;]: Solo un attimo, Maresciallo: temo di aver capito cosa ci sta sfuggendo. Non ci posso credere, aspetti che controllo meglio... ma sì, è proprio così... Non ho parole! Maresciallo, questa non è la Lupa Capitolina originale. Non so veramente cosa dire, ce l’hanno fatta sotto il naso!]
+|dialogo&gt;[$dial[Tu]: Solo un attimo, Maresciallo: temo di aver capito cosa ci sta sfuggendo. Spero di sbagliarmi, ma... aspetti che controllo... Ma sì, è proprio così... Non ho parole! Maresciallo, questa non è la Lupa Capitolina originale. Non so veramente cosa dire, ce l’hanno fatta sotto il naso!]
 =|=
 (if: $g is &quot;o&quot;) [&lt;img src=&#39;res2/inv_m2.png&#39; class=&#39;center&#39; width=&#39;200&#39;&gt;] (else: ) [&lt;img src=&#39;res2/inv_f2.png&#39; class=&#39;center&#39; width=&#39;200&#39;&gt;]
 |==|
 \
-|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;Maresciallo Caputo&#39;&#39;]: Ma non mi dica che...]
+|dialogo&gt;[$dial[Maresciallo Caputo]: Ma non mi dica che...]
 \
 |||||=
-|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;Tu&#39;&#39;]: Sì, purtroppo! Questa è la statua della Lupa di Piazza del Campidoglio, quella rubata tre notti fa. Ora tutto torna. La statua in piazza era stata rubata solamente come diversivo, dato che la sorveglianza all’esterno è molto più blanda.]
+|dialogo&gt;[$dial[Tu]: Sì, purtroppo! Questa è la statua della Lupa di Piazza del Campidoglio, quella rubata tre notti fa. Ora tutto torna. La statua in piazza era stata rubata solamente come diversivo, dato che la sorveglianza all’esterno è molto più blanda.
 \
-Il ladro ha studiato tutto nei minimi dettagli, aveva già la statua pronta per sostituirla all’originale con una versione a prima vista molto simile. In questo modo ha guadagnato del tempo prezioso per la fuga. Se non avessi una certa competenza di storia dell&#39;arte, non me ne sarei mai accort$g neanch’io, e magari ci sarebbero volute settimane prima che qualcuno ci facesse caso. Ha fatto tutto questo per prendere tempo, e ci è riuscito, almeno un po’.
+Il ladro ha studiato tutto nei minimi dettagli, e aveva già la copia pronta da sostituire all’originale. In questo modo ha guadagnato del tempo prezioso per la fuga. Se non avessi una certa competenza di storia dell’arte, non me ne sarei mai accort$g neanch’io, e forse ci sarebbero volute settimane prima che qualcuno ci facesse caso. Ha fatto tutto questo per prendere tempo, e ci è riuscito, almeno un po’.
 
-Adesso ha quattro ore di vantaggio, tutto il tempo necessario per essersi nascosto a dovere. Ma non può farla franca. Quattro ore di vantaggio sono poche, se ti porti dietro una scultura di quel peso e di quelle dimensioni. Lo prenderemo, ha la mia parola!
+Adesso il responsabile di questo furto ha quattro ore di vantaggio, tutto il tempo necessario per essersi nascosto a dovere. Ma non può farla franca. Quattro ore di vantaggio sono poche, se ti porti dietro una scultura di quel peso e di quelle dimensioni. Lo prenderemo, ha la mia parola!]
 =|=
 (if: $g is &quot;o&quot;) [&lt;img src=&#39;res2/inv_m2.png&#39; class=&#39;center&#39; width=&#39;200&#39;&gt;] (else: ) [&lt;img src=&#39;res2/inv_f2.png&#39; class=&#39;center&#39; width=&#39;200&#39;&gt;]
 |==|
-
-Sei ancora sbalordito, e quasi non vuoi credere a ciò che hai appena realizzato. Nella tua testa continua a risuonare una sola domanda: “Quale genio del male potrà mai aver pensato una cosa del genere?”. Il furto è stato compiuto alla perfezione: tutto è in ordine, nulla è rotto Solamente, al posto della statua originale, è presente una sua copia. Ma ormai sei sicur$g: la mente diabolica che ha progettato questo furto deve essere la stessa che ha progettato il furto dell&#39;Hayez dalla Pinacoteca di Brera.
+\
+Sei ancora sbalordit$g, e quasi non vuoi credere a ciò che hai appena realizzato. Nella tua testa continua a risuonare una sola domanda: “Quale genio del male potrà mai aver pensato una cosa del genere?” Il furto è stato compiuto alla perfezione: tutto è in ordine, nulla è rotto. Solamente, al posto della statua originale, è presente una sua copia. Ma ormai sei sicur$g: la mente diabolica che ha progettato questo furto deve essere la stessa che ha progettato il furto dell’Hayez alla Pinacoteca di Brera.
 
 Mentre tu rifletti, si avvicinano due agenti di corsa, trafelati.
 
-|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;Agenti Palladini e Riccardi all’unisono&#39;&#39;]: Abbiamo delle novità!]
+|dialogo&gt;[$dial[Agenti Palladini e Riccardi all’unisono]: Abbiamo delle novità!]
 \
 Questa frase ti desta dallo tuo stato di concentrazione: di colpo, lasci i tuoi pensieri e ti metti ad ascoltare che cosa hanno da dirti.
 
-|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;Agente Palladini&#39;&#39;]: Sono stati analizzati tutti i filmati delle telecamere all’ora in cui è suonato l’allarme. Effettivamente questa notte qualcuno è entrato nel museo, ma purtroppo non è possibile identificare il ladro perché era a volto coperto.]
+|dialogo&gt;[$dial[Agente Palladini]: Abbiamo analizzato tutti i filmati delle telecamere all’ora in cui è suonato l’allarme: effettivamente questa notte qualcuno è entrato nel museo, ma purtroppo non è possibile identificare il ladro perché era a volto coperto.]
 \
 Ciò significa che non c’è tempo da perdere, non puoi più stare lì ferm$g a riflettere: devi assolutamente riuscire a scovare il ladro e ritrovare la statua.
 
-Sei nervos$g ma anche molto concentrat$g, hai l’ansia di trovare indizi ma non sai da dove partire. A un certo punto vedi avvicinarsi una guardia, cammina con la testa bassa e passo svelto. Ti arriva in fianco e ti consegna un libro, dichiarando che è stato trovato vicino all’uscita di emergenza.
+Sei nervos$g ma anche molto concentrat$g, hai l’ansia di trovare indizi ma non sai da dove partire. A un certo punto vedi avvicinarsi una guardia, cammina con la testa bassa e passo svelto. Ti arriva vicino e ti consegna un libro, dichiarando che è stato trovato vicino all’uscita di emergenza.
 
 Allunghi le mani, sei molto emozionat$g: sai che questa può essere finalmente la prima prova! Noti subito che è il manuale che il museo rilascia a coloro che studiano per diventare future guide. Quindi, dovrebbe appartenere a uno degli studenti del museo. È come nuovo, senza alcuna sottolineatura, appunto o pieghettatura.
 
-C’è però una cosa interessante: il manuale è la versione scritta in inglese, quella che viene consegnata in dotazione agli stranieri. E allora, potrebbe esserci una persona non italiana coinvolta. Se è una guida, vuol dire che è qualcuno venuto apposta per studiare storia dell’arte, e che non è in Italia da abbastanza tempo da poter usare un manuale in italiano. E visto che per ottenere la cittadinanza è necessario sostenere un test di lingua, è verosimile che identificando i cittadini stranieri si possa trovare il ladro. 
+C’è però una cosa interessante: il manuale è la versione scritta in inglese, quella che viene consegnata agli studenti che non parlano italiano. E perciò potrebbe esserci una persona non italiana coinvolta. Se è una guida, vuol dire che è qualcuno venuto apposta per studiare storia dell’arte, e che non è in Italia da abbastanza tempo da poter usare un manuale in italiano. E visto che per ottenere la cittadinanza è necessario sostenere un test di lingua, è verosimile che identificando i cittadini stranieri si possa trovare il ladro. 
 
-Quindi, arrivato a questo punto, [[valuta le possibili opzioni-&gt;1 Stat]] a tua disposizione. \
- \
-(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="12" name="Fine" tags="Grigio_c T_Nero" position="5600,900" size="100,100">
+Quindi, arrivato a questo punto, [[valuta le possibili opzioni-&gt;1 Stat]] a tua disposizione. {
+
+(display: &quot;piepagina&quot;) }</tw-passagedata><tw-passagedata pid="12" name="Fine" tags="Grigio_c T_Nero" position="5600,900" size="100,100">
 ## Il sospettato è a Treviso!
 
 &lt;img src=&#39;res2/treviso.png&#39; class=&#39;full&#39;&gt;
 
-|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;Tu&#39;&#39;]: Maresciallo, credo che questo messaggio in codice ci faccia capire dove potremo trovare il nostro sospettato.]
+|dialogo&gt;[$dial[Tu]: Maresciallo, credo che questo messaggio in codice ci faccia capire dove potremo trovare il nostro sospettato.]
 \
-|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;[Maresciallo Caputo]&#39;&#39;]: Sono d’accordo, partiamo subito: deve essere a Treviso! Codice 534 ripeto abbiamo un codice 534 passo e chiudo.]
+|dialogo&gt;[$dial[Maresciallo Caputo]: Sono d’accordo, partiamo subito: deve essere a Treviso! Codice 534 ripeto abbiamo un codice 534 passo e chiudo.]
 
 (if: $frappe_ogg is &quot;Sì&quot; and $punti_int &gt; 3) [Poi, all&#39;improvviso, al risultato del rebus un dato diventa più chiaro. Ma certo! Evidentemente era rimasto nei meandri della tua mente fino a quel momento.
 
-|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;Tu&#39;&#39;]: Maresciallo guardi! Il frappé non proviene da Starbucks, ma da SturBancks! Deve essere una specie di copia.]
+|dialogo&gt;[$dial[Tu]: Maresciallo guardi! Il frappé non proviene da Starbucks, ma da SturBancks! Deve essere una specie di copia.]
 \
 &lt;img src=&#39;res2/frappe.png&#39; class=&#39;full&#39;&gt;
 \
 Capite subito che, se il frappé viene da un posto così strano, probabilmente deve esserci un legame fra il sospettato e questo Sturbanks. Vi mettete entrambi all’opera, smanettando sul telefono per cercare dove si trovi questo strano negozio.
 
-|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;Maresciallo Caputo&#39;&#39;]: Detective $nome, guardi! Ho scoperto che quel negozio è presente solo a Treviso. Questo conferma anche il messaggio che abbiamo risolto. Andiamo direttamente in quella caffetteria!]
+|dialogo&gt;[$dial[Maresciallo Caputo]: Detective $nome, guardi! Ho scoperto che quel negozio è presente solo a Treviso. Questo conferma anche il messaggio che abbiamo risolto. Andiamo direttamente in quella caffetteria!]
 \
 Salta in macchina e [[vai allo Sturbanks di Treviso-&gt;2 Fine2]].] \
 \
 (else:) [Salta in macchina e vai alla [[torre di Treviso|2 Fine]]] {
 
-(display: &quot;piepagina&quot;) }</tw-passagedata><tw-passagedata pid="13" name="coordinate" tags="Grigio_c T_Nero" position="1798.3333333333333,1000" size="100,100">
+(display: &quot;piepagina&quot;) }</tw-passagedata><tw-passagedata pid="13" name="coordinate" tags="Grigio_c T_Nero" position="1798,1000" size="100,100">
 ## Interpreta le coordinate
  \
 (set: $extra_punti to 0)
@@ -571,7 +568,7 @@ Queste sono coordinate in (dropdown: 2bind $risp_coord_1, &quot;Gradi decimali (
 
 Hai scelto di farti dare un passaggio dal cugino del maresciallo, che è ovviamente disponibile.
 
-|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;Cugino&#39;&#39;]: Farò il possibile detective, ma senza usare le sirene, con il traffico di Roma ci vorrà almeno un’ora.]
+|dialogo&gt;[$dial)[Cugino]: Farò il possibile detective, ma senza usare le sirene, con il traffico di Roma ci vorrà almeno un’ora.]
 
 Guadagni un //punto socialità// (if: $punti_int &gt; 1)[e perdi 1 //punto intelligenza// ]per aver accettato l’aiuto dal cugino del maresciallo.
 
@@ -583,8 +580,8 @@ Dopo un’ora e mezza di tragitto, finalmente [[arrivate all’auto del sospetta
 (display: &quot;piepagina&quot;) }</tw-passagedata><tw-passagedata pid="15" name="Volante" tags="Grigio_c T_Nero" position="5000,1000" size="100,100">
 ## Fatti venire a prendere dagli agenti Riccardi e Palladini
 \
-|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;Maresciallo Caputo&#39;&#39;]: Ottima idea, detective $cognome! Nonostante la caserma sia lontana, andando a sirene spiegate possiamo saltare il traffico.]
-
+|dialogo&gt;[$dial[Maresciallo Caputo]: Ottima idea, detective $cognome! Nonostante la caserma sia lontana, andando a sirene spiegate possiamo saltare il traffico.]
+\
 Guadagni due //punti intelligenza// per aver capito come muoverti rapidamente nel traffico della città eterna.
 
 Dopo mezz’ora di tragitto, finalmente [[arrivate all’auto del sospettato-&gt;3 Esatto]]. {
@@ -594,11 +591,11 @@ Dopo mezz’ora di tragitto, finalmente [[arrivate all’auto del sospettato-&gt
 (display: &quot;piepagina&quot;) }</tw-passagedata><tw-passagedata pid="16" name="Frappe" tags="Grigio_c T_Nero" position="5400,1100" size="100,100">
 ## Frappé 🥛
 \
-|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;Tu&#39;&#39;]: Beh, a parte avere qualche informazione sui gusti del ladro, potremmo analizzare le impronte digitali o trovare del DNA!]
+|dialogo&gt;[$dial[Tu]: Beh, a parte avere qualche informazione sui gusti del ladro, potremmo analizzare le impronte digitali o trovare del DNA!]
 \
-|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;Maresciallo Caputo&#39;&#39;]: Dubito proprio, agente $cognome... Questo è il mondo reale, non una serie TV di investigazione. Anche se riuscissimo a tirarci fuori del DNA, ci vorrebbe comunque troppo tempo.]
+|dialogo&gt;[$dial[Maresciallo Caputo]: Dubito proprio, agente $cognome... Questo è il mondo reale, non una serie TV di investigazione. Anche se riuscissimo a tirarci fuori del DNA, ci vorrebbe comunque troppo tempo.]
 \
-|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;Tu&#39;&#39;]: Sì, è vero. In ogni caso, per ora non vedo cosa potemmo scoprire da questo, ma forse in futuro potrebbe diventare utile? Certo che portarsi dietro un bicchiere di frappé usato... chissà se è una buona idea...]
+|dialogo&gt;[$dial[Tu]: Sì, è vero. In ogni caso, per ora non vedo cosa potemmo scoprire da questo, ma forse in futuro potrebbe diventare utile? Certo che portarsi dietro un bicchiere di frappé usato... chissà se è una buona idea...]
 \
 |=
 &lt;img src=&#39;res2/frappe.png&#39; class=&#39;full&#39;&gt;
@@ -606,8 +603,7 @@ Dopo mezz’ora di tragitto, finalmente [[arrivate all’auto del sospettato-&gt
 &lt;img src=&#39;res2/frappe_auto.png&#39; class=&#39;full&#39;&gt;
 |==|
 
-Quindi, pensi che sia una buona idea o meno prendere il frappé?
-(dropdown: 2bind $frappe_ogg,&quot;No&quot;, &quot;Sì&quot;)
+Quindi, pensi che sia una buona idea o meno prendere il frappé? (dropdown: 2bind $frappe_ogg,&quot;No&quot;, &quot;Sì&quot;)
 
 Dopo aver deciso cosa fare del frappé, [[controlla gli altri oggetti|3 Esatto]] {
 
@@ -616,28 +612,28 @@ Dopo aver deciso cosa fare del frappé, [[controlla gli altri oggetti|3 Esatto]]
 (display: &quot;piepagina&quot;) }</tw-passagedata><tw-passagedata pid="17" name="5 Stat Sì" tags="Grigio_c T_Nero" position="4000,1000" size="100,100">
 ## Hai scelto di tornare subito in dipartimento...
 \
-|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;Tu&#39;&#39;]: Eccomi maresciallo: andiamo.] \
+|dialogo&gt;[$dial[Tu]: Eccomi maresciallo: andiamo.] \
 
 Fuori il cielo è sereno e limpido. Ormai è mattina inoltrata, e Roma è splendida nel mese di aprile. Il sole splende e i suoi raggi si riflettono sulla vettura del maresciallo.
 
-Nonostante la fretta e l’agitazione di arrivare il prima possibile in dipartimento, l’atmosfera circostante produce in te una sorta di allegria e spensieratezza: non puoi non notare come si tratti davvero di una delle città più belle del mondo... anche se, come quasi sempre, c’è traffico nelle strade. Il maresciallo abbassa leggermente il finestrino e accende la radio: è sintonizzata sul canale Notizie Polizia, il suo preferito:
+Nonostante la fretta e l’agitazione di arrivare il prima possibile in dipartimento, l’atmosfera circostante produce in te una sorta di allegria: non puoi non notare che la città in cui ti trovi è davvero una delle più belle del mondo... anche se, come quasi sempre, c’è un traffico tremendo nelle strade!
 
-“Nella giornata di ieri, in via ………… è stato rubato un furgone bianco. Il proprietario dichiara di averlo lasciato parcheggiato la mattina, prima di iniziare a lavorare. La sera però il veicolo era scomparso. Il ladro non è stato identificato. Nel caso ci sia stato qualche testimone al momento del furto, è pregato di chiamare il numero…….”
+Il maresciallo abbassa leggermente il finestrino e accende la radio: è sintonizzata sul canale Notizie Polizia, il suo preferito: “Nella giornata di ieri, in via ………… è stato rubato un furgone bianco. Il proprietario dichiara di averlo lasciato parcheggiato la mattina, prima di iniziare a lavorare. La sera però il veicolo era scomparso. Il ladro non è stato identificato. Nel caso ci sia stato qualche testimone al momento del furto, è pregato di chiamare il numero…….”
 
 Questa notizia giunge a te come un tuono. Non lasci finire la frase e spegni la radio.
 
-|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;Tu&#39;&#39;]: Maresciallo mi raccomando, tenga bene a mente questa faccenda del furgoncino: ho come l’impressione che possa essere collegato al furto della statua.]
+|dialogo&gt;[$dial[Tu]: Maresciallo mi raccomando, tenga bene a mente questa faccenda del furgoncino: ho come l’impressione che possa essere collegata al furto della statua.] \
 
 E con questo [[arrivate in dipartimento-&gt;Targhe]]. {
 
-(display: &quot;piepagina&quot;)}</tw-passagedata><tw-passagedata pid="18" name="5 Stat No" tags="Grigio_c T_Nero" position="4000,800" size="100,100">
+(display: &quot;piepagina&quot;) }</tw-passagedata><tw-passagedata pid="18" name="5 Stat No" tags="Grigio_c T_Nero" position="4000,800" size="100,100">
 ## Controlla il manuale con più attenzione
 
 &lt;img src=&#39;res2/musei_capitolini.png&#39; class=&#39;full&#39;&gt;
 
-|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;[Tu]&#39;&#39;]: D’accordo maresciallo, io rimango qui ancora per un attimo, ci vediamo tra poco.]\
+|dialogo&gt;[$dial[Tu]: D’accordo maresciallo, io rimango qui ancora per un attimo, ci vediamo tra poco.]\
 
-L’incognita del manuale è diventata la tua priorità, dato che sei convint$g sia un tassello fondamentale per lo sviluppo dell’indagine.
+L’incognita del manuale è diventata la tua priorità, dato che sei convint$g che sia un tassello fondamentale per lo sviluppo dell’indagine.
 
 Vai sulle scale di emergenza a dare un’occhiata. “Non ci sono telecamere”, pensi fra te e te, “e quindi il ladro non può essere stato ripreso.” Esamini quindi con attenzione la porta. È una di quelle classiche porte antincendio, bianca e con il maniglione antipanico rosso. Ed è bloccata dall’esterno. In più, sai che la sala è costantemente sorvegliata dalle guardie, che non consentono ai visitatori di passare dall’uscita di emergenza, se non per situazioni appunto di pericolo. Dunque, se le guardie hanno svolto correttamente il proprio lavoro, ci sono due possibili alternative:
 
@@ -648,14 +644,10 @@ Il libro è stato lasciato dal ladro mentre scappava, e ha usato le scale come v
 //Opzione 2//
 Il libro è stato portato lì da qualcuno interno al museo, a cui era consentito passare dalla porta d’emergenza, ed è stato usato in qualche modo dal ladro per entrare.
 |==|
-\
-&lt;h3&gt;(text-colour:$colore_dialogo)[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[A una prima occhiata, il libro sembra non avere alcuna caratteristica particolare: su quale ipotesi scegli di concentrarti?]]
-=|=
-(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[ [[Opzione 1]] ]
-=|=
-(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[ [[Opzione 2]] ]&lt;/h3&gt; {
 
-(display: &quot;piepagina&quot;)}</tw-passagedata><tw-passagedata pid="19" name="Coordinate 2" tags="Grigio_c T_Nero" position="2000,1100" size="100,100">
+A una prima occhiata, il libro sembra non avere alcuna caratteristica particolare... Su quale ipotesi scegli di concentrarti? Sull’[[Opzione 1]] oppure sull’[[Opzione 2]]? {
+
+(display: &quot;piepagina&quot;) }</tw-passagedata><tw-passagedata pid="19" name="Coordinate 2" tags="Grigio_c T_Nero" position="2000,1100" size="100,100">
 ## Ancora sulla lettura di coordinate
  \
 Brav$g, risposta corretta. Cerca di capire bene in che direzione muoverti, per arrivare ai Musei nel minor tempo possibile. 
@@ -679,7 +671,7 @@ Qual è la tua scelta? (dropdown: 2bind $risp_coord_2, &quot;1&quot;, &quot;2&qu
 (display: &quot;piepagina&quot;)}</tw-passagedata><tw-passagedata pid="20" name="3 Fine" tags="T_Nero Grigio_c" position="6200,600" size="100,100">
 ## Alla ricerca di indizi tra qualche scontrino...
 \
-|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;Maresciallo Caputo&#39;&#39;]: Detective $nome: quale dei seguenti oggetti ci può essere utile?
+|dialogo&gt;[$dial[Maresciallo Caputo]: Detective $nome: quale dei seguenti oggetti ci può essere utile?
 \
 Scegli uno degli oggetti sulla scrivania:]
 \
@@ -706,11 +698,11 @@ Scegli uno degli oggetti sulla scrivania:]
 (display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="21" name="4 Fine" tags="Grigio_c T_Nero" position="6602,797" size="100,100">
 ## Conclusione
 \
-|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;Maresciallo Caputo&#39;&#39;]: Eccoci al dunque, agente $cognome!]
+|dialogo&gt;[$dial[Maresciallo Caputo]: Eccoci al dunque, agente $cognome!]
 \
-|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;Tu&#39;&#39;]: Non ci posso credere, maresciallo... finalmente lo abbiamo catturato!]
+|dialogo&gt;[$dial[Tu]: Non ci posso credere, maresciallo... finalmente lo abbiamo catturato!]
 \
-|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;Maresciallo Caputo&#39;&#39;]: Ecco la sua scheda, inviata via email dalla centrale di Roma, e incredibilmente già aggiornata, proprio in tempo reale... Come vede, è proprio lui: corrisponde in tutto e per tutto!]
+|dialogo&gt;[$dial[Maresciallo Caputo]: Ecco la sua scheda, inviata via email dalla centrale di Roma, e incredibilmente già aggiornata, proprio in tempo reale... Come vede, è proprio lui: corrisponde in tutto e per tutto!]
 
 |centrato&gt;[
 //Nome: David
@@ -727,7 +719,7 @@ Nato il: 11/01/1988//
 
 &#39;&#39;Descrizione:&#39;&#39; 
 
-//Dopo aver preso il diploma di scuola superiore ha proseguito gli studi, laureandosi in Data Science e ha lavorato come assistente nel corso di Statistica in università. Dopo un po’ di tempo decide di abbandonare il mestiere per concentrarsi sulla pianificazione del furto della Lupa Capitolina. Inizierà a lavorare in una caffetteria di Treviso chiamata &quot;SturBanks&quot;, in modo da essere vicino al suo covo, situato nei sotterrani della torre.// ]
+//Dopo aver preso il diploma di scuola superiore ha proseguito gli studi, laureandosi in Data Science e ha lavorato come assistente nel corso di Statistica in università. Dopo un po’ di tempo decide di abbandonare il mestiere per concentrarsi sulla pianificazione del furto della Lupa Capitolina. Inizierà a lavorare in una caffetteria di Treviso chiamata &quot;SturBanks&quot;, in modo da essere vicino al suo covo, situato nei sotterranei della torre.// ]
 \
 ---
 \
@@ -742,7 +734,7 @@ Se vuoi riprovare a giocare, puoi (link: &quot;ricominciare la storia&quot;)[(go
 
 Inoltre, puoi (link: &quot;scoprire curiosità legate al gioco&quot;)[(goto: &quot;curiosità&quot;)].
 
-Oppure, e per finire, per favore (link-rerun: &quot;compila il questionario per darci un tuo parere su questo gioco&quot;)[(open-url:&quot;https://flipfly.it/gale/&quot;)].</tw-passagedata><tw-passagedata pid="22" name="2 Fine2" tags="Grigio_c T_Nero" position="6191.666666666667,798.3333333333334" size="100,100">
+Oppure, e per finire, per favore (link-rerun: &quot;compila il questionario per darci un tuo parere su questo gioco&quot;)[(open-url:&quot;https://flipfly.it/gale/&quot;)].</tw-passagedata><tw-passagedata pid="22" name="2 Fine2" tags="Grigio_c T_Nero" position="6191,798" size="100,100">
 ## Arrivate da Sturbanks
 \
 &lt;img src=&#39;res2/Bar.png&#39; class=&#39;full&#39;&gt;
@@ -814,11 +806,11 @@ Evidentemente, non hai le risorse per metterle sotto controllo tutte. Hai bisogn
 \
 Corretto, ottima scelta: questo bigliettino, in combinazione con lo scontrino della lavanderia, ti basta per organizzare un agguato. Adesso non solo sai dove Mercer andrà a ritirare i panni, ma anche a che ora lo farà. 
 
-|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;Tu&#39;&#39;]: Maresciallo: mettendo insieme questi due dati, vede che informazione se ne ricava? Il nostro ricercato si recherà a breve proprio in questa lavanderia. A giudicare dal bigliettino, andrà nel tardo pomeriggio di oggi, dalle 18:30  a prima dell’orario di chiusura.]
+|dialogo&gt;[$dial[Tu]: Maresciallo: mettendo insieme questi due dati, vede che informazione se ne ricava? Il nostro ricercato si recherà a breve proprio in questa lavanderia. A giudicare dal bigliettino, andrà nel tardo pomeriggio di oggi, dalle 18:30  a prima dell’orario di chiusura.]
 \
 Il maresciallo è d’accordo con te. Richiama tutti all’ordine con la sua poderosa voce e organizza l’operazione di tentativo di cattura del ladro.
 
-|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;Maresciallo Caputo&#39;&#39;]: Statemi tutti a sentire. Andiamo ad appostarci attorno alla Lavanderia Lions di via Calamaggiore qui a Treviso. Una volta in posizione, aspetteremo Mercer, e quando questi entrerà nel negozio si ritroverà circondato senza nessuna possibilità di fuga. Mi raccomando: niente sirene e niente uniformi... Non dobbiamo destare il minimo sospetto! Forza, non può scapparci!]
+|dialogo&gt;[$dial[Maresciallo Caputo]: Statemi tutti a sentire. Andiamo ad appostarci attorno alla Lavanderia Lions di via Calamaggiore qui a Treviso. Una volta in posizione, aspetteremo Mercer, e quando questi entrerà nel negozio si ritroverà circondato senza nessuna possibilità di fuga. Mi raccomando: niente sirene e niente uniformi... Non dobbiamo destare il minimo sospetto! Forza, non può scapparci!]
 \
 Andate alla lavanderia, e dopo qualche minuto di appostamento, effettivamente David Mercer appare nella via, camminando rapido in direzione della lavanderia. Si guarda attorno con circospezione, ma non si accorge di nulla. Appena entra nel negozio, un nugulo di poliziotti gli è addosso, lo immobilizza e lo ammanetta. Lo hai preso! E adesso è finalmente arrivato il momento di [[arrestare David Mercer-&gt;4 Fine]].] {
 
@@ -877,17 +869,17 @@ Andare in giro per Roma senza navigatore è una scelta per lo meno coraggiosa...
 
 Ti godi le vie della città eterna, di primissima mattina, quando il traffico non rumoreggia ancora per i viali e la maggior parte delle persone sta dormendo tranquilla nei propri letti. Perlomeno, quelle che non stanno tentando un colpo nei Musei Capitolini!
 
-Arrivato però all’ultimo bivio, è veramente poco chiaro dove devi andare: a destra o a sinistra? Puoi [[chiedere indicazioni]] a una persona che sta camminando al marciapiede poco distante da te fumando tranquillamente una pipa. Oppure, puoi [[tentare la fortuna]]. \
-(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="29" name="chiedere indicazioni" tags="Grigio_c T_Nero" position="1998.3333333333333,798.3333333333334" size="100,100">
+Arrivat$g però all’ultimo bivio, è veramente poco chiaro dove dovresti andare: a destra o a sinistra? Puoi [[chiedere indicazioni]] a una persona che sta camminando al marciapiede poco distante da te fumando tranquillamente una pipa. Oppure, puoi [[tentare la fortuna]]. \
+(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="29" name="chiedere indicazioni" tags="Grigio_c T_Nero" position="1998,798" size="100,100">
 ## Hai chiesto indicazioni
  \
 (set: $punti_soc to $punti_soc + 1) \
  \
-Ti fermi per domandare indicazioni al signore con la pipa. Questi, affabile, ti schernisce: i Musei Capitolini sono letteralmente a un centinaio di metri da dove vi trovate...
+Ti fermi per domandare indicazioni al signore con la pipa. Questi, pure con un tono affabile, ti fa notare che i Musei Capitolini sono letteralmente a un centinaio di metri da dove vi trovate...
 
-Come hai fatto a non accorgertene? Ti chiede poi se il tuo arrivo centri qualcosa con la sirena. &quot;Ovviamente&quot;, rispondi. &quot;Non sappiamo ancora perché l’allarme sia suonato, ma magari ha qualcosa a che fare con il furto della Lupa di un paio di giorni fa.&quot;
+Come hai fatto a non accorgertene? Ti chiede poi se il tuo arrivo centri qualcosa con la sirena. “Ovviamente”, rispondi. “Non sappiamo ancora perché l’allarme sia suonato, ma forse ha qualcosa a che fare con il furto della Lupa di un paio di giorni fa.”
 
-In barba all&#39;urgenza della situazione, rimani qualche minuto a chiaccherare. Dopo di che scambi qualche convenevole e ti rimetti in cammino. Avrai anche perso un po’ di tempo, ma hai migliorato le tue capacità sociali grazie alla scelta di parlare con il signore con la pipa, guadagnando un //punto socialità//. 
+In barba all’urgenza della situazione, rimani qualche minuto a chiaccherare. Dopo di che scambi qualche convenevole e ti rimetti in cammino. Avrai anche perso un po’ di tempo, ma hai migliorato le tue capacità sociali grazie alla scelta di parlare con il signore con la pipa, guadagnando un //punto socialità//. 
 
 Imbocchi quindi la direzione corretta, percorri quindi gli ultimi 100 metri e [[arrivi ai Musei Capitolini-&gt;2 Introduzione]]. \
  \
@@ -902,18 +894,18 @@ Meno male che non hai perso del tempo a chiedere informazioni su come arrivare a
 
 Scendi dunque dall’auto e [[arrivi ai Musei Capitolini-&gt;2 Introduzione]]. \
  \
-(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="31" name="2 Fine" tags="T_Nero Grigio_c" position="5798.333333333333,702" size="100,100">
+(display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="31" name="2 Fine" tags="T_Nero Grigio_c" position="5798,702" size="100,100">
 ## Il covo di Mercer
 
 &lt;img src=&#39;res2/treviso_torre.png&#39; class=&#39;full&#39;&gt;
 
 Viaggiando con gli agenti, sei arrivat$g a Treviso nel minor tempo possibile.
 
-|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;Maresciallo Caputo&#39;&#39;]: Eccoci, siamo arrivati!]
+|dialogo&gt;[$dial[Maresciallo Caputo]: Eccoci, siamo arrivati!]
 \
-|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;Tu&#39;&#39;]: Già, ed ecco la torre di Treviso.]
+|dialogo&gt;[$dial[Tu]: Già, ed ecco la torre di Treviso.]
 \
-|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;Maresciallo Caputo&#39;&#39;]: Rechiamoci nei sotterranei.]
+|dialogo&gt;[$dial[Maresciallo Caputo]: Rechiamoci nei sotterranei.]
 \
 Insieme, entrate da una porta secondaria e, con l’aiuto del signor Bianchin, il vecchio custode del posto, perlustrate con cura la torre, a finalmente scoprite una piccola porta nascosta, che vi viene detto portare nei sotterranei. Provate ad aprirla, ma non si muove.
 
@@ -923,19 +915,19 @@ Fortunatamente, il custode ha un enorme mazzo di chiavi in cui, dopo qualche ten
 
 Vi ritrovate in una stanza strana, cupa: ovunque foto della Lupa Capitolina e mappe dei Musei Capitolini e di Piazza del Campidoglio. In un angolo, i dettagli dei turni di guardia della sorveglianza. Quante informazioni! Chissà come avranno fatto a reperirle, quale lavoro maniacale ci sarà voluto per mettere in piedi una simile organizzazione. E quanto tempo... Anche se hanno commesso un crimine, riconosci che si tratta del lavoro di una grande mente.
 
-Più vi guardate attorno e più vi sentite sicuri che questa stanza sia stata il covo in cui il ladro ha progettato tutto. Ha scelto il sotterraneo di una torre lontano dalla scena del crimine per pianificare tutto. Un luogo insospettabile, dove nessuno sarebbe mai entrato, e in cui lavorare lontano da occhi indiscreti. 
+Più ti guardi intorno e più ti senti sicur$g che questa stanza sia stata il covo in cui il ladro ha progettato tutto. Ha scelto il sotterraneo di una torre lontano dalla scena del crimine per pianificare tutto. Un luogo insospettabile, dove nessuno sarebbe mai entrato, e in cui lavorare lontano da occhi indiscreti. 
 
-Chiamate la squadra della scientifica per fare un po’ di analisi. In pochi minuti sono con voi, guidati dal loro esperto capo, Pietro Gabrieli. Con attenzione maniacale, raccolgono reperti potenzialmente utili e fotografano ogni cosa, stando però attenti a lasciare ogni oggetto nella posizione in cui l’hanno trovato.
+Chiamate la squadra della scientifica per fare un po’ di analisi. In pochi minuti sono con voi, guidati dal loro esperto capo, Pietro Gabrieli. Con grande attenzione, raccolgono reperti potenzialmente utili e fotografano ogni cosa, stando però attenti a lasciare ogni oggetto nella posizione in cui l’hanno trovato.
 
 Nel frattempo, tu e il Maresciallo Caputo vi confrontate.
+
+|dialogo&gt;[$dial[Maresciallo Caputo]: Detective non ci posso credere: come hanno fatto a realizzare tutto ciò nei sotterranei della torre? Un posto chiuso e riservato... ma sotto gli occhi di tutti.]
 \
-|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;Maresciallo Caputo&#39;&#39;]: Detective non ci posso credere: come hanno fatto a realizzare tutto ciò nei sotterranei della torre? Un posto chiuso e riservato... ma sotto gli occhi di tutti.]
+|dialogo&gt;[$dial[Tu]: Tutta questa vicenda rivela un’importante falla nei nostri sistemi di sicurezza... quasi che avessero voluto non solo compiere il furto, ma anche prenderci in giro...]
 \
-|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;Tu&#39;&#39;]: Tutta questa vicenda rivela un’enorme falla nei nostri sistemi di sicurezza... quasi che avessero voluto non solo compiere il furto, ma anche prenderci in giro...]
+|dialogo&gt;[$dial[Maresciallo Caputo]: Sì, è vero... Certo che però è straordinario: chi sarebbe mai venuto a cercare in questo posto? Se non avessimo decifrato il messaggio, non ci saremmo mai arrivati.]
 \
-|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;Maresciallo Caputo&#39;&#39;]: Sì, è vero... Certo che però è straordinario: chi sarebbe mai venuto a cercare in questo posto? Se non avessimo decifrato il messaggio, non ci saremmo mai arrivati.]
-\
-|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;Tu&#39;&#39;]: Senza dubbio, maresciallo! Ma ora mettiamoci al lavoro: se questo è davvero il covo del sospettato, è qui che possiamo sperare di trovare degli indizi sulla sua posizione.]
+|dialogo&gt;[$dial[Tu]: Senza dubbio, maresciallo! Ma ora mettiamoci al lavoro: se questo è davvero il covo del sospettato, è qui che possiamo sperare di trovare degli indizi sulla sua posizione.]
 \
 Il capo della scientifica Pietro Gabrieli arriva e vi interrompe. Nonostante l’impegno e le indubbie capacità del suo team, non sono riusciti a trovare indizi significativi.
 
@@ -950,9 +942,9 @@ Arrivat$g a questo punto, hai quattro possibili strade, per acquisire informazio
 * [[i percorsi nel museo dei possibili sospettati-&gt;percorsi Stat]];
 * [[i tempi di percorrenza nel museo dei possibili sospettati-&gt;tempi Stat]]. \
 
-(if: $sospettato is not &quot;&quot;) [Oppure, se pensi di avere informazione sufficiente, puoi [[decidere di accusare-&gt;2 Stat]] la persona che sospetti sia la responsabile del furto.] {
+(if: $sospettato is not &quot;&quot;) [Oppure, se pensi di avere informazioni sufficienti, puoi [[decidere di accusare-&gt;2 Stat]] la persona che sospetti sia la responsabile del furto.] {
 
-(display: &quot;piepagina&quot;)}</tw-passagedata><tw-passagedata pid="33" name="stranieri Stat" tags="Grigio_c T_Nero" position="3001,601" size="100,100">
+(display: &quot;piepagina&quot;) }</tw-passagedata><tw-passagedata pid="33" name="stranieri Stat" tags="Grigio_c T_Nero" position="3001,601" size="100,100">
 ## Nazionalità dei partecipanti al corso d’arte dei Musei Capitolini
  \
 &lt;img src=&#39;res2/graf1.png&#39; class=&#39;full&#39;&gt; \
@@ -967,29 +959,33 @@ Se pensi dunque di avere informazioni sufficienti, prosegui e [[scegli il sospet
 
 (set: $visitato_stranstat to 1)
 
-(display: &quot;piepagina&quot;)}</tw-passagedata><tw-passagedata pid="34" name="filmati Stat" tags="Grigio_c T_Nero" position="2997,753" size="100,100">
+(display: &quot;piepagina&quot;) }</tw-passagedata><tw-passagedata pid="34" name="filmati Stat" tags="Grigio_c T_Nero" position="2997,753" size="100,100">
 ## Controlla le telecamere
  \
 (if: $visitato_videostat is 0) [Hai chiesto di dare un’occhiata ai filmati di sicurezza. Vieni condott$g in una stanzetta scura, nei meandri del museo. Ti fanno sedere davanti a uno schermo e inizi a guardare le riprese.
-(text-colour:$colore_dialogo)[&#39;&#39;Tu&#39;&#39;]: Maresciallo, dobbiamo controllare le telecamere!
-(text-colour:$colore_dialogo)[&#39;&#39;Maresciallo Caputo&#39;&#39;]: Certo, adesso faccio partire il video.]
-(else:) [Se vuoi, puoi rigardare il video...]
 
+|dialogo&gt;[$dial[Tu]: Maresciallo, dobbiamo controllare le telecamere]
+\
+|dialogo&gt;[$dial[Maresciallo Caputo]: Certo, adesso faccio partire il video.]]
+(else:) [Se vuoi, puoi riguardare il video...]
+\
 (align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;) [&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/tsG5KCYlfMU?controls=0&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;]
 
-(if: $visitato_videostat is 0)[Mentre guardi il filmato a velocità accelerata, scambi due parole con il Maresciallo Caputo. 
+(if: $visitato_videostat is 0) [Mentre guardi il filmato a velocità accelerata, scambi due parole con il Maresciallo Caputo. 
 
-(text-colour:$colore_dialogo)[&#39;&#39;Tu&#39;&#39;]: Sono ancora le 8 di ieri, e il furto non è ancora avvenuto.
-(text-colour:$colore_dialogo)[&#39;&#39;Maresciallo Caputo&#39;&#39;]: Eccoci al dunque! Guardi l’ora, agente $cognome: sono le 4:40. Detective, ecco il ladro!
-(text-colour:$colore_dialogo)[&#39;&#39;Tu&#39;&#39;]: Sì, lo vedo! Purtroppo ha il volto coperto, e le luci sono spente. Non riusciremmo a individuarlo solo con questi elementi.]
+|dialogo&gt;[$dial[Tu]: Sono ancora le 8 di ieri, e il furto non è ancora avvenuto.]
+\
+|dialogo&gt;[$dial[Maresciallo Caputo]: Eccoci al dunque! Guardi l’ora, agente $cognome: sono le 4:40. Detective, ecco il ladro!]
+\
+|dialogo&gt;[$dial[Tu]: Sì, lo vedo! Purtroppo ha il volto coperto, e le luci sono spente. Non riusciremmo a individuarlo solo con questi elementi.]]
+\
+Il ladro è entrato nel museo a volto coperto, indossando un casco. Si vede chiaramente che è una persona agile, forte e con grandi abilità manuali: è stato capace di sostituire una statua con cura e senza rompere nulla. Queste sono le uniche informazioni che riesci a trarre da quei pochi secondi di immagini. Non bastano: i dati sono troppo pochi per ottenere un’informazione valida che consenta di prendere una decisione affidabile, e orientarti a individuare il colpevole.
 
-Il ladro è entrato nel museo a volto coperto, indossando un casco. Chiaramente che è una persona agile, forte e con grandi abilità manuali: è stato capace di sostituire una statua con cura e senza rompere nulla. Queste sono le uniche informazioni che riesci a trarre da quei pochi secondi di immagini. Non bastano: i dati sono troppo pochi per produrre un’informazione valida che consenta di prendere una decisione affidabile, e orientarti a individuare il colpevole.
-
-Se pensi dunque di avere informazioni sufficienti, prosegui e [[scegli il sospettato-&gt;2 Stat]] oppure, [[torna indietro e analizza un’altra prova-&gt;1 Stat]]. {
+Se pensi comunque di avere informazioni sufficienti, prosegui e [[scegli il sospettato-&gt;2 Stat]] oppure, [[torna indietro e analizza un’altra prova-&gt;1 Stat]]. {
 
 (set: $visitato_videostat to 1)
 
-(display: &quot;piepagina&quot;)}</tw-passagedata><tw-passagedata pid="35" name="percorsi Stat" tags="Grigio_c T_Nero" position="3000,905" size="100,100">
+(display: &quot;piepagina&quot;) }</tw-passagedata><tw-passagedata pid="35" name="percorsi Stat" tags="Grigio_c T_Nero" position="3000,905" size="100,100">
 ## Visualizza i percorsi
 \
 (if: $visitato_percorsistat is 0) [Un giro di telefonate e il supporto di uno dei tecnici informatici del museo ti permettono di avere sotto mano le heatmap dei percorsi di tutti gli studenti del corso che hanno visitato il museo nell’ultima settimana, e fra i quali, verosimilmente, si nasconde la persona che nella fuga ha perso il manuale d’arte in inglese.
@@ -1028,13 +1024,13 @@ Se pensi di aver bisogno di una spiegazione sulle heatmap, puoi [[mandare un mes
 
 Questa invece è la heatmap di tutte le persone che hanno visitato il museo nell’ultima settimana.
 \
-(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[&lt;img src=&#39;res2/Heatmap20.png&#39; class=&#39;full&#39;&gt;]
+&lt;img src=&#39;res2/Heatmap20.png&#39; class=&#39;full&#39;&gt;
 \
 Se pensi dunque di avere informazioni sufficienti, prosegui e [[scegli il sospettato-&gt;2 Stat]] oppure, [[torna indietro e analizza un’altra prova-&gt;1 Stat]]. {
 
 (set: $visitato_percorsistat to 1)
 
-(display: &quot;piepagina&quot;)}</tw-passagedata><tw-passagedata pid="36" name="tempi Stat" tags="Grigio_c T_Nero" position="3000,1075" size="100,100">
+(display: &quot;piepagina&quot;) }</tw-passagedata><tw-passagedata pid="36" name="tempi Stat" tags="Grigio_c T_Nero" position="3000,1075" size="100,100">
 ## Tempi di percorrenza
  \
 (if: $visitato_tempistat is 0) [Ti rechi nell’ufficio gestione flussi del museo, dove un addetto è appena arrivato e si sta giusto levando un cappotto leggero. Ti presenti e gli spieghi ciò di cui ha bisogno. Lui è affabile e disponibile, si mette subito al lavoro. Nel giro di qualche minuti, la stampante inizia a rumoreggiare, e ne viene fuori in pochi secondi uno schema estratto da un foglio di calcolo. “Agente $cognome, questi sono i tempi di percorrenza dall’ingresso all’uscita del museo dei suoi possibili sospettati.”] \
@@ -1046,7 +1042,7 @@ Se pensi dunque di avere informazioni sufficienti, prosegui e [[scegli il sospet
 
 (set: $visitato_tempistat to 1)
 
-(display: &quot;piepagina&quot;)}</tw-passagedata><tw-passagedata pid="37" name="2 Stat" tags="Grigio_c T_Nero" position="3400,900" size="100,100">
+(display: &quot;piepagina&quot;) }</tw-passagedata><tw-passagedata pid="37" name="2 Stat" tags="Grigio_c T_Nero" position="3400,900" size="100,100">
 ## Scegli chi accusare?
  \
 Bene, agente $nome $cognome, hai lavorato un po’ sull&#39;informazione disponibile.
@@ -1060,7 +1056,7 @@ Quale persona sospetti dunque sia la responsabile del furto?
 (else:) [ [[Conferma la tua scelta-&gt;risp sbagliata Stat]] ]
 ]
 
-(display: &quot;piepagina&quot;)}</tw-passagedata><tw-passagedata pid="38" name="scrivi a Rebecca 1" tags="Grigio_c T_Nero" position="3201,604.6666666666666" size="100,100">
+(display: &quot;piepagina&quot;)}</tw-passagedata><tw-passagedata pid="38" name="scrivi a Rebecca 1" tags="Grigio_c T_Nero" position="3201,604" size="100,100">
 ## Chiedi un consiglio a Rebecca a proposito di grafici a torta
  \
 Mandi un messaggio a Rebecca, spiegandole la situazione e inviandole la foto del grafico a torta che ti hanno apppena fatto vedere. Lei, nonostante la tarda ora, ti risponde dopo pochi minuti con un messaggio abbastanza chiaro. 
@@ -1076,14 +1072,14 @@ Mandi un messaggio a Rebecca, chiedendole il favore di spiegarti, con parole sem
 
 |preformat&gt;[Ciao $nome! Eccoci! Sempre tutto bene a Roma? Ooooh, io amoooo le heatmap!!! Vedi, sono degli strumenti semplici ed efficaci. In pratica, è come se sulla mappa fosse sovrapposta una griglia invisibile, che divide la mappa stessa in piccole parti, che sono colorate: le parti con un colore più intenso sono quelle che descrivono delle zone del museo in cui ha camminato più gente, oppure in cui una singola persona si è fermata più a lungo. Sai come potresti usarla? Cerca di trovare una mappa in cui la zona che ti interessa è più colorata: magari si riferisce a qualcuno che non era interessato alle opere d’arte, e che invece stava controllando la sicurezza e le telecamere! A presto!!!]\
 \
-Rileggi più volte il messaggio, cercando di capire che cosa voglia dire Rebecca, che è molto preparata ma ogni tanto usa parole strane. Quando sei soddisfatt$g e hai finalmente capito, [[riguardi le heatmap-&gt;percorsi Stat]] oppure [[torni indietro per analizzare un’altra prova-&gt;1 Stat]]. {
+Rileggi più volte il messaggio, cercando di capire che cosa voglia dire Rebecca, che è molto esperta di questi argomenti ma ogni tanto usa parole strane. Quando sei soddisfatt$g e hai finalmente capito, [[riguardi le heatmap-&gt;percorsi Stat]] oppure [[torni indietro per analizzare un’altra prova-&gt;1 Stat]]. {
 
 (display: &quot;piepagina&quot;)}</tw-passagedata><tw-passagedata pid="40" name="risp giusta Stat" tags="Grigio_c T_Nero" position="3598,1003" size="100,100">
 ## Bel colpo, agente $cognome!
 \
 (set: _punti to 0) \
 \
-Come per magia, le prove si mettono in ordine davanti ai tuoi occhi, e all’improvviso tutti i dati che hai acquisito diventano informazione coerente: il sospettato su cui devi concentrarti è David Mercer! 
+Come per magia, le prove si mettono in ordine davanti ai tuoi occhi, e all’improvviso tutti i dati che hai acquisito diventano informazione coerente: il sospettato su cui devi concentrarti è, molto probabilmente, David Mercer! 
 
 {(if: $risp_sbagliate_stat &lt; 3) [Per di più, sei riuscit$g a individuare il probabile colpevole abbastanza in fretta... Ottimo lavoro: guadagni quindi 
 
@@ -1092,11 +1088,11 @@ Come per magia, le prove si mettono in ordine davanti ai tuoi occhi, e all’imp
 
 (set: $punti_int to $punti_int + _punti)]
 
-(else:) [Ci hai messo molto ad arrivare alla risposta, dopo vari tentativi, e quindi non hai guadagnato punti intelligenza]}
+(else:) [Ci hai messo molto ad arrivare alla risposta, dopo vari tentativi, e quindi non hai guadagnato //punti intelligenza//]}
 
 A questo punto [[prosegui con le indagini-&gt;3 Stat]]. {
 
-(display: &quot;piepagina&quot;)}</tw-passagedata><tw-passagedata pid="41" name="risp sbagliata Stat" tags="Grigio_c T_Nero" position="3598,799" size="100,100">
+(display: &quot;piepagina&quot;) }</tw-passagedata><tw-passagedata pid="41" name="risp sbagliata Stat" tags="Grigio_c T_Nero" position="3598,799" size="100,100">
 ## Niente da fare...
 \
 &#39;&#39;$sospettato&#39;&#39; non è la persona probabilmente responsabile del furto... {
@@ -1104,11 +1100,11 @@ A questo punto [[prosegui con le indagini-&gt;3 Stat]]. {
 (set: $risp_sbagliate to $risp_sbagliate + 1)
 (set: $risp_sbagliate_stat to $risp_sbagliate_stat + 1)}
 
-[[Torna ad analizzare gli indizi-&gt;1 Stat]] o, se pensi di avere comunque le idee abbastanza chiare, prova a [[selezionare una altra persona-&gt;2 Stat]].
+[[Torna ad analizzare gli indizi-&gt;1 Stat]] o, se pensi di avere comunque le idee abbastanza chiare, prova a [[scegliere un’altra persona-&gt;2 Stat]].
 
 (if: $risp_sbagliate_stat is 5 and $punti_int &gt; 1) [Purtroppo, hai collezionato numerosi errori, e quindi perdi un //punto intelligenza//. (set: $punti_int to $punti_int - 1)] {
 
-(display: &quot;piepagina&quot;)}</tw-passagedata><tw-passagedata pid="42" name="3 Stat" tags="Grigio_c T_Nero" position="3800,900" size="100,100">
+(display: &quot;piepagina&quot;) }</tw-passagedata><tw-passagedata pid="42" name="3 Stat" tags="Grigio_c T_Nero" position="3800,900" size="100,100">
 ## Tornare in dipartimento?
 \
 Bene, adesso hai un sospettato su cui investigare: David Mercer.
@@ -1117,29 +1113,23 @@ Ma come rintracciarlo? Dove potrà mai essere andato? E, soprattutto, Mercer avr
 
 Il maresciallo ti raggiunge e ti dà una pacca sulla spalla. Poi, con tono profondo, inizia a parlare.
 
-|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;Maresciallo Caputo&#39;&#39;]: Detective, tutti gli altri dipartimenti di polizia in Italia sono stati avvertiti. Quello che ci rimane da fare è di tenere ben dritte le antenne e controllare i filmati delle telecamere stradali, per capire con quale mezzo Mercer si stia muovendo.]
+|dialogo&gt;[$dial[Maresciallo Caputo]: Detective, tutti i dipartimenti di polizia in Italia sono stati avvertiti. Quello che ci rimane da fare è di tenere ben dritte le antenne e controllare i filmati delle telecamere stradali, per capire con quale mezzo Mercer si stia muovendo.]
 \
 Tu sai perfettamente che, individuando la macchina del ladro, sarà molto più facile risalire alla sua posizione. Tuttavia hai ancora un dubbio che ti assilla.
 
-|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;Tu&#39;&#39;]: Certo, ma c’è una cosa che non mi torna in questo furto. Perché mai il ladro, al momento della rapina, avrebbe dovuto portare con sé quel libro, che poi ha perso? A cosa avrebbe mai potuto servirgli? Pensare che volesse semplicemente informarsi sulla statua è un’ipotesi assolutamente inverosimile. E poi, perché quel libro si trovava sulle scale antincendio, quando le riprese mostrano il ladro entrare dalla porta principale?]
+|dialogo&gt;[$dial[Tu]: Certo, ma c’è una cosa che non mi torna in questo furto. Perché mai il ladro, al momento della rapina, avrebbe dovuto portare con sé quel libro, che poi ha perso? A cosa avrebbe mai potuto servirgli? Pensare che volesse semplicemente informarsi sulla statua è un’ipotesi inverosimile. E poi, perché quel libro si trovava sulle scale antincendio, quando le riprese mostrano il ladro entrare dalla porta principale?]
 \
-Ti fermi a pensare: sono tutte le domande a cui non sai dare spiegazioni...
+Ti fermi a pensare: sono tutte domande a cui non sai dare spiegazioni...
 
-Il maresciallo, un po’ indispettito dalla tua mancata risposta, esclama:
+Il maresciallo, un po’ indispettito dalla tua mancata reazione alla sua proposta di controllare i filmati delle telecamere, esclama:
 
-|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;[Maresciallo Caputo]&#39;&#39;]: Detective, la vedo pensieros$g, ma dobbiamo andare a controllare i filmati! Io comincio ad andare in dipartimento e mi metto al lavoro, e lei mi raggiungerà quando vorrà. Oppure può venire subito: veda lei!]
+|dialogo&gt;[$dial[Maresciallo Caputo]: Detective, la vedo pensieros$g, ma dobbiamo andare a controllare i filmati! Io comincio ad andare in dipartimento e mi metto al lavoro, e lei mi raggiungerà quando vorrà. Oppure può venire subito: veda lei!]
 \
 Devi prendere una decisione, e la devi prendere adesso.
 
-Se vai subito in dipartimento a controllare i filmati, potresti risparmiare tempo prezioso per mettere le mani sul ladro. Se invece rimani al museo, potresti scoprire a che cosa è servito il manuale, e quindi ottenere altre informazioni per la tua indagine.
-\
-&lt;h3&gt;(text-colour:$colore_dialogo)[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[Corri in centrale a controllare i filmati o rimani ancora sulla scena del crimine?]]
-=|=
-(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[[[Vai in centrale-&gt;5 Stat Sì]]]
-=|=
-(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[[[Rimani al museo-&gt;5 Stat No]]]&lt;/h3&gt; {
+Se [[vai subito in dipartimento a controllare i filmati-&gt;5 Stat Sì]], potresti risparmiare tempo prezioso per mettere le mani sul ladro. Se invece [[rimani al museo-&gt;5 Stat No]], potresti scoprire a che cosa è servito il manuale, e quindi ottenere altre informazioni per la tua indagine. {
 
-(display: &quot;piepagina&quot;)}</tw-passagedata><tw-passagedata pid="43" name="Opzione 1" tags="T_Nero Grigio_c" position="4200,650" size="100,100">
+(display: &quot;piepagina&quot;) }</tw-passagedata><tw-passagedata pid="43" name="Opzione 1" tags="T_Nero Grigio_c" position="4200,650" size="100,100">
 ## Pensi che il libro sia stato abbandonato dal ladro mentre scappava...
 \
 ... ma perché mai il ladro avrebbe dovuto portare con sé un libro, per poi abbandonarlo lì? Nella pianificazione di una rapina tutto viene studiato nei minimi dettagli, e quindi questa spiegazione pare poco plausibile.
@@ -1152,44 +1142,44 @@ No, chiaramente doveva essere un’altra la ragione per cui lì si trova il libr
 (display: &quot;piepagina&quot;)}</tw-passagedata><tw-passagedata pid="44" name="Opzione 2" tags="T_Nero Grigio_c" position="4200,775" size="100,100">
 ## Pensi che il libro sia stato portato lì da qualcuno interno al museo...
 \
-... e infatti, perché mai il ladro avrebbe dovuto portare con sé un libro, per poi abbandonarlo lì? Nella pianificazione di una rapina tutto viene studiato nei minimi dettagli, quindi è poco plausibile che si tratti di una banale dimenticanza. Insomma, hai preso la decisione giusta!
+... e infatti, perché mai il ladro avrebbe dovuto portare con sé un libro, per poi abbandonarlo lì? Generalmente, nella pianificazione di una rapina tutto viene studiato nei minimi dettagli, quindi è poco plausibile che si tratti di una banale dimenticanza. Insomma, hai preso la decisione giusta!
 
 Sei nervos$g, agitat$g, batti ripetutamente un piede a terra per sfogare la tensione: hai capito di essere sulla buona strada...
 
-Tieni in mano il libro e lo esaminini di nuovo, con ancora più attenzione. È un libro molto grande e pesante, che contiene più di un migliaio di pagine sottili. Inizi a sfogliarlo. Cominci a guardarlo con attenzione, cercando qualcosa che ti sembri strano: dei codici, forse?
+Tieni in mano il libro e lo esaminini di nuovo, con ancora più attenzione. È un libro molto grande e pesante, che contiene più di un migliaio di pagine sottili. Inizi a sfogliarlo. Cominci a guardarlo con attenzione, cercando qualcosa che ti sembri strano: magari dei codici nascosti...
 
-Dopo poco, però, rinunci a questa analisi così meticolosa, perché capisci che ti richiederebbe troppo tempo, e sfogli le pagine alla ricerca di qualche segno utile. E poi, ti sembra che il libro sia ancora nuovo, che nessuno lo abbia mai usato per studiare: non c’è una piega, o una sottolineatura... Che sia stato comprato appunto per questo colpo? Ma perché, allora?
+Dopo poco, però, rinunci a questa analisi così meticolosa, perché capisci che ti richiederebbe troppo tempo, e sfogli le pagine alla ricerca di qualche segno utile. E poi, ti sembra che il libro sia ancora nuovo, e che nessuno lo abbia mai usato per studiare: non c’è una piega, o una sottolineatura... Che sia stato comprato appunto per questo colpo? Ma perché, allora?
 
 Ma con il passare dei minuti la tua convinzione inizia a sfumare, e cominci a sospettare che forse il manuale non c’entri nulla con la rapina. Che sia solo una fantasia?
 
 Ma a un certo punto... che strano! Alcuni fogli hanno come una piccola piegatura al centro. Dalla deformazione capisci che doveva esserci inserito un oggetto sottile e rettangolare.
 
-&#39;&#39;I tuoi occhi si illuminano: “Ma certo, ora è tutto chiaro!”&#39;&#39;
+I tuoi occhi si illuminano: “Ma certo, ora è tutto chiaro!”
 
 Ti serve solo la conferma. Entri nell’ufficio della sicurezza del museo, apri la cassetta delle chiavi e ti accorgi che è come pensavi: manca una copia delle chiavi magnetiche. Ci hai visto giusto! “Allora avevo proprio ragione: ci deve essere un complice interno al museo!”
 
-Chiami subito il Maresciallo Caputo, che nel frattempo sta guidando per tornare in dipartimento, e gli spieghi quello che hai scoperto.
+Chiami subito il maresciallo Caputo, che nel frattempo sta guidando per tornare in dipartimento, e gli spieghi quello che hai scoperto.
 
-|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;Tu&#39;&#39;]: Maresciallo, mi ascolti: penso di aver capito cosa è successo. C’è un complice che aveva accesso all’ufficio sicurezza. Abbiamo capito che la rapina doveva passare inosservata, e che la statua rubata sarebbe stata sostituita da una sua copia. Ma per far si che ciò avvenisse, il ladro non avrebbe lasciato alcun segno di irruzione. Quindi bisognava fare in modo che il ladro potesse entrare dalla porta di emergenza, facendogli avere la chiave.] \
+|dialogo&gt;[$dial[Tu]: Maresciallo, mi ascolti: penso di aver capito cosa è successo. C’è un complice che aveva accesso all’ufficio sicurezza. Abbiamo capito che la rapina doveva passare inosservata, e che la statua rubata sarebbe stata sostituita da una sua copia. Ma per far si che ciò avvenisse, il ladro non avrebbe lasciato alcun segno di irruzione. Quindi bisognava fare in modo che il ladro potesse entrare dalla porta di emergenza, facendogli avere la chiave.] \
 
-|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;Maresciallo Caputo&#39;&#39;]: Sì certo, è una bella teoria, ma c’è un problema: perché non gliel’ha data in mano? Perché pensare a questa cosa complicata del libro, quando sarebbe bastato passargliela di persona senza correre rischio?] \
+|dialogo&gt;[$dial[Maresciallo Caputo]: Sì certo, è una bella teoria, ma c’è un problema: perché non gliel’ha data in mano? Perché pensare a questa cosa complicata del libro, quando sarebbe bastato passargliela di persona senza correre rischi?] \
 
-|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;Tu&#39;&#39;] Appunto, è questa la chiave del problema. Il complice non l’ha consegnata direttamente al ladro perché i due non si conoscono, e probabilmente il nostro uomo misterioso, quello che ha accesso alla chiave, non voleva rendere nota la propria identità al ladro, per evitare di essere incastrato nel caso le cose andassero male. Forse colui che ha preso la chiave è il misterioro basista, e ha preferito mantenere segreta le propria identità. Per questo la chiave è stata nascosta sulle scale antincendio.
+|dialogo&gt;[$dial[Tu]: Appunto, è questa la chiave del problema. Il complice non l’ha consegnata direttamente al ladro perché i due non si conoscono, e probabilmente il nostro uomo misterioso, quello che ha accesso alla chiave, non voleva rendere nota la propria identità al ladro, per evitare di essere incastrato nel caso le cose fossero andate male. Forse chi ha preso la chiave è un basista, che ha preferito mantenere segreta la sua identità. Per questo la chiave è stata nascosta sulle scale antincendio.
 
-Ci pensi: è un posto tranquillo, non sorvegliato, nascosto alla vista. Nessuno avrebbe notato qualcuno lasciare una chiave, e il ladro sarebbe potuto passare a prenderla in un secondo momento. L’unico problema era che le scale antincendio sono esposte alle intemperie, e una chiave sarebbe stata troppo leggera e avrebbe rischiato di essere spostata da una folata di vento. Per questo motivo il complice ha deciso di inserirla all’interno di un voluminoso manuale plastificato...
+Ci pensi: è un posto tranquillo, non sorvegliato e nascosto alla vista. Nessuno avrebbe notato qualcuno lasciare una chiave, e il ladro sarebbe potuto passare a prenderla in un secondo momento. L’unico problema era che le scale antincendio sono esposte alle intemperie, e una chiave sarebbe stata troppo leggera e avrebbe rischiato di essere spostata da una folata di vento. Per questo motivo il complice ha deciso di inserirla all’interno di un voluminoso manuale plastificato...
 
 Un piano geniale: in questi giorni non ha mai piovuto, e nessuno avrebbe notato nulla di strano in un libro d’arte in un museo. Così facendo la rapina si è svolta alla perfezione e non sono rimasti segni evidenti che qualcuno sia entrato di nascosto.] \
 
-|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;Maresciallo Caputo&#39;&#39;]: Ma certo, così tutto torna. Bel colpo, agente $cognome! Ora venga in dipartimento che guardiamo i filmati insieme.] \
+|dialogo&gt;[$dial[Maresciallo Caputo]: Ma certo, così tutto torna. Bel colpo, agente $cognome! Ora venga in dipartimento che guardiamo i filmati insieme.] \
 
 Lascia i Musei Capitolini e vai in dipartimento a [[visionare i filmati-&gt;Targhe]]]. {
 
-(display: &quot;piepagina&quot;)}</tw-passagedata><tw-passagedata pid="45" name="Errore 2" tags="Grigio_c T_Nero" position="4800,1125" size="100,100">
+(display: &quot;piepagina&quot;) }</tw-passagedata><tw-passagedata pid="45" name="Errore 2" tags="Grigio_c T_Nero" position="4800,1125" size="100,100">
 ## Troppo tardi!
 \
-Tu indichi la targa, e dietro di te il maresciallo Caputo sorride sornione.
+Tu indichi la targa, e dietro di te il maresciallo Caputo sorride...
 
-|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;Maresciallo Caputo&#39;&#39;]: Ehm... agente $cognome, è sicur$g? Il sospettato non doveva passare una ventina di minuti dopo le 2:30? Il tragitto impiegato per raggiungere una delle telecamere è al massimo di 30 minuti.]
+|dialogo&gt;[$dial[Maresciallo Caputo]: Ma insomma, agente $cognome, è sicur$g? Il sospettato non doveva passare una ventina di minuti dopo le 2:30? Il tragitto impiegato per raggiungere una delle telecamere è al massimo di 30 minuti.] \
 
 (if: $targhe_e2 is 0 and $punti_int &gt; 1) [(set: $punti_int to $punti_int - 1) Questo errore ti fa perdere un //punto intelligenza//.]
 
@@ -1211,7 +1201,7 @@ Hai indicato la targa, ma il maresciallo Caputo dubita che possa essere la scelt
 \
 Indichi la targa e il maresciallo si mette a ridere. 
 
-|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;Maresciallo Caputo&#39;&#39;]: Ahahahahah ma è incredibile! Si fidi, agente $cognome, quell’auto è passata per una coincidenza. Sa come lo so? È l’auto di mia figlia! Ieri sera è andata in discoteca e stava probabilmente tornando a casa.]
+|dialogo&gt;[$dial[Maresciallo Caputo]: Ahahahahah ma è incredibile! Si fidi, agente $cognome, quell’auto è passata per una coincidenza. Sa come lo so? È l’auto di mia figlia! Ieri sera è andata in discoteca e stava probabilmente tornando a casa.]
 
 Tu sorridi, però un po’ ti insospettisci. È mai possibile che il maresciallo Riccardi sia in qualche modo coinvolto? Hai di fronte due scelte. Puoi [[mettere alle strette il maresciallo-&gt;interroga Caputo]], e cercare di capire se questo tuo sospetto abbia qualche fondamento, oppure puoi fidarti, [[tornare indietro e guardare le altre targhe-&gt;Targhe]]. {
 
@@ -1220,7 +1210,7 @@ Tu sorridi, però un po’ ti insospettisci. È mai possibile che il maresciallo
 (display: &quot;piepagina&quot;) }</tw-passagedata><tw-passagedata pid="48" name="interroga Caputo" tags="Grigio_c T_Nero" position="4800,700" size="100,100">
 ## Interroghi il maresciallo Caputo!
 \
-Decidi di lanciarti: ed è una pessima idea... Cominci a pressare il maresciallo. Questi all’inizio sorride pensando che tu stia scherzando, ma dopo qualche minuto inizia a innervosirsi. &quot;Che cosa sta facendo? E’ impazzit$g?&quot; ti apostrofa irritato. Non solo: come se non bastasse, è chiaro subito che hai fatto un buco nell’acqua. Ti bastano poche domande per capire che effettivamente lui non possa essere coinvolto. Era ovvio, $nome! Come poteva il maresciallo essere il colpevole? Lo stesso maresciallo che finora ti ha aiutato così tanto nelle indagini?
+Decidi di lanciarti: ed è una pessima idea... Cominci a pressare il maresciallo. Questi all’inizio sorride pensando che tu stia scherzando, ma dopo qualche minuto inizia a innervosirsi. &quot;Che cosa sta facendo? E’ impazzit$g?&quot; ti apostrofa irritato. Non solo: come se non bastasse, è chiaro subito che hai fatto un buco nell’acqua. Ti bastano poche domande per capire che effettivamente lui non possa essere coinvolto. Era ovvio, $nome! Come poteva il maresciallo essere il colpevole? La stessa persona che finora ti ha aiutato così tanto nelle indagini?
 
 Il maresciallo Caputo lascia la stanza, e tu hai un bel da fare a rincorrerlo e chiedergli scusa, spergiurando che non ne metterai più in questione l’integrità. Lui prima rimane offeso, poi, dopo qualche minuto, inizia a rilassarsi. Vi prendete un caffé insieme, dopo di che siete pronti a [[guardare le altre targhe-&gt;Targhe]]. {
 
@@ -1246,18 +1236,19 @@ Il progetto GaLe è promosso dalla (link-rerun: &quot;Camera di Commercio di Var
 (else:) [(go-to: &quot;frontespizio&quot;)]</tw-passagedata><tw-passagedata pid="51" name="piepagina" tags="" position="1400,700" size="100,100">&lt;!-- deve essere incluso esplicitamente, con: (display: &quot;piepagina&quot;) --&gt;
 ---
 |piccolo&gt;[([[puoi sempre ricominciare il gioco dall’inizio-&gt;frontespizio]] -- hai $punti_int //punt(if: $punti_int is 1)[o](else:)[i] intelligenza// e $punti_soc //punt(if: $punti_soc is 1)[o](else:)[i] socialità//)]</tw-passagedata><tw-passagedata pid="52" name="include" tags="header" position="1200,700" size="100,100">&lt;!-- dei default, anche per rendere più semplice il testing in fase di sviluppo --&gt; {
-(if: $nome is 0) [(set: $nome to &quot;Alex&quot;)]
-(if: $cognome is 0) [(set: $cognome to &quot;Bianchi&quot;)]
+(if: $nome is &quot;&quot;) [(set: $nome to &quot;Alex&quot;)]
+(if: $cognome is &quot;&quot;) [(set: $cognome to &quot;Bianchi&quot;)]
 (if: $punti_int is 0) [(set: $punti_int to 1)]
 (if: $punti_soc is 0) [(set: $punti_soc to 4)]
 (if: $g is 0) [(set: $g to &quot;a&quot;)]
 
 (set: $colore_dialogo to #74c0fc)
+(set: $dial to (text-colour: #74c0fc) + (text-style:&#39;bold&#39;))
 
 (if: (passage:)&#39;s name is not &quot;start&quot;) [(save-game: &quot;auto&quot;)] }</tw-passagedata><tw-passagedata pid="53" name="scarto" tags="Grigio_c T_Nero" position="4600,1250" size="100,100">
 ## Come leggere una targa
 \
-Scrivi un messaggio di aiuto alla tua amica Valeria, con una foto delle targhe e dei vari tempi, spiegandole anche con un vocale tutto il contesto. Dopo qualche minuti, ti arriva questo messaggio di risposta.
+Scrivi un messaggio di aiuto alla tua amica Rebecca, con una foto delle targhe e dei vari tempi, spiegandole anche con un vocale tutto il contesto. Dopo qualche minuti, ti arriva questo messaggio di risposta.
 
 |preformat&gt;[Ehi ciao $nome! Che bello risentirti!  
 Allora, se ho capito bene il tuo è un problema di calcolo degli scarti. Non so se sai cosa voglia dire, ma nel dubbio te lo spiego.  
@@ -1274,7 +1265,7 @@ Tu e il maresciallo Caputo vi mettete all’opera. Con grande attenzione, perlus
 (if: $punti_soc &gt; 4) [
 Pietro Gabrieli di primo acchito quasi ti ignora, e poi invece inizia a parlarti. Meno male che sei una persona socievole, che sa sempre come convincere le persone a scambiare qualche parola. 
 
-|dialogo&gt;[(text-colour:$colore_dialogo)[&#39;&#39;Pietro Gabrieli&#39;&#39;]: Guardi, a me sembra una piccolezza, proprio un dettaglio da niente. Però ho trovato una tazza con sopra il logo di una specie di Starbuck non originale, uno strano &quot;Sturbanks&quot;. Ho dato un’occhiata e mi sembra un posto aperto abbastanza di recente e soltanto qui a Treviso. Se fossi in voi darei un’occhiata lì, magari scoprite qualcosa di interessante.]
+|dialogo&gt;[$dial[Pietro Gabrieli]: Guardi, a me sembra una piccolezza, proprio un dettaglio da niente. Però ho trovato una tazza con sopra il logo di una specie di Starbuck non originale, uno strano &quot;Sturbanks&quot;. Ho dato un’occhiata e mi sembra un posto aperto abbastanza di recente e soltanto qui a Treviso. Se fossi in voi darei un’occhiata lì, magari scoprite qualcosa di interessante.]
 \
 A questo punto, devi prendere una decisione. Se vuoi, vai a dare un’occhiata allo [[Sturbanks di Treviso-&gt;2 Fine2]], oppure [[guarda gli scontrini-&gt;3 Fine]].]
 (else:) [Il capo però quasi ti ignora...evidentemente non ha capito che sei tu a condurre le indagini! Provi ancora ad attirare la sua attenzione, ma lui ti risponde che sta facendo qualcosa e di lasciarlo lavorare. Lo lasci perdere. Che cosa mai potrai tirare fuori da una persona così? Beh certo, se solo fossi stat$g un po&#39; più socievole...
