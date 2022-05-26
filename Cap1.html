@@ -136,9 +136,12 @@ tw-hook[name="scuro"] {
 tw-sidebar {
   display: none;
 }
-</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-tag name="Bianco" color="gray"></tw-tag>,<tw-tag name="bicicletta" color="red"></tw-tag>,<tw-tag name="frontespizio" color="red"></tw-tag>,<tw-tag name="macchina" color="red"></tw-tag>,<tw-tag name="sfondo_bianco" color="yellow"></tw-tag>,<tw-tag name="sfondo_nero" color="purple"></tw-tag>,<tw-tag name="sfondo_sanmarino" color="purple"></tw-tag>,<tw-tag name="sfondo_trascrizione" color="red"></tw-tag>,<tw-tag name="sfumato_sanmarino" color="purple"></tw-tag>,<tw-tag name="testo_bianco" color="purple"></tw-tag>,<tw-tag name="testo_bright_1" color="red"></tw-tag>,<tw-tag name="testo_font" color="green"></tw-tag>,<tw-tag name="testo_nero" color="yellow"></tw-tag>,<tw-tag name="testo_trascrizione" color="red"></tw-tag><tw-passagedata pid="1" name="un&#39;insolita sveglia" tags="testo_bianco sfondo_sfumato0" position="1075,650" size="100,100">&lt;img src=&#39;res1/sunrise.jpg&#39; class=&#39;full&#39; alt=&#39;immagine&#39;&gt;
+</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-tag name="Bianco" color="gray"></tw-tag>,<tw-tag name="bicicletta" color="red"></tw-tag>,<tw-tag name="frontespizio" color="red"></tw-tag>,<tw-tag name="macchina" color="red"></tw-tag>,<tw-tag name="sfondo_bianco" color="yellow"></tw-tag>,<tw-tag name="sfondo_nero" color="purple"></tw-tag>,<tw-tag name="sfondo_sanmarino" color="purple"></tw-tag>,<tw-tag name="sfondo_trascrizione" color="red"></tw-tag>,<tw-tag name="sfumato_sanmarino" color="purple"></tw-tag>,<tw-tag name="testo_bianco" color="purple"></tw-tag>,<tw-tag name="testo_bright_1" color="red"></tw-tag>,<tw-tag name="testo_font" color="green"></tw-tag>,<tw-tag name="testo_nero" color="yellow"></tw-tag>,<tw-tag name="testo_trascrizione" color="red"></tw-tag><tw-passagedata pid="1" name="un&#39;insolita sveglia" tags="testo_bianco sfondo_sfumato0" position="1076,650" size="100,100">&lt;img src=&#39;res1/sunrise.jpg&#39; class=&#39;full&#39; alt=&#39;immagine&#39;&gt;
 
 ## Un’insolita sveglia
+\
+(if: $nome is &quot;&quot;) [(set: $nome to &quot;Alex&quot;)]
+(if: $cognome is &quot;&quot;) [(set: $cognome to &quot;Bianchi&quot;)]
  \
 Un suono acuto ti sveglia di soprassalto: $nome, 24 anni, una laurea appena completata criminologia e una specializzazione in furti d’arte. La tua carriera al dipartimento di Polizia di Milano è iniziata da pochi mesi. Ti volti verso il comodino, e vedi che il rumore che ti ha destat$g proviene dal tuo smartphone. Il numero è memorizzato, ma anche se non lo fosse lo riconoscesti subito: è quello del tuo capo e mentore, il commissario Tomba. Sbadigli rumorosamente, e poi rispondi.
 
@@ -242,7 +245,7 @@ Dopo ore di lavoro, riesci giusto a ottenere i numeri di telefono dei quattro so
 
 (if: $m) [(print: $cs2)]
 
-(display: &quot;piepagina&quot;) }</tw-passagedata><tw-passagedata pid="4" name="frontespizio" tags="testo_bianco sfondo_sfumato1" position="925,650" size="100,100">
+(display: &quot;piepagina&quot;) }</tw-passagedata><tw-passagedata pid="4" name="frontespizio" tags="testo_bianco sfondo_sfumato1" position="926,648" size="100,100">
 #Il furto dell’Hayez
 ###//Una storia di investigazione,&lt;br&gt;basata sulla scienza dei dati//
 
@@ -250,9 +253,13 @@ Dopo ore di lavoro, riesci giusto a ottenere i numeri di telefono dei quattro so
 
 Questo che hai appena aperto è un &#39;&#39;libro-game digitale&#39;&#39;, il cui racconto è sviluppato secondo i canoni classici del genere “giallo”. In questo gioco il protagonista sei tu: un’investigatrice / un investigatore che ha un caso da risolvere e per riuscirci dovrai trovare la soluzione dei problemi che nel corso dell’indagine ti si presenteranno.
 
+(set: $nome to &quot;&quot;)
+(set: $cognome to &quot;&quot;)
 Prima di cominciare con il racconto, rispondi per favore a qualche domanda per personalizzare la tua esperienza di gioco.
-* Qual è il tuo nome? (input-box: bind $nome, &quot;XXX==&quot;, 1)
-* Qual è il tuo cognome? (input-box: bind $cognome, &quot;XXX==&quot;, 1)
+* Qual è il tuo nome? (input-box: 2bind $nome, &quot;XXX==&quot;, 1)
+(live: 0.1s)[(set: $y1 to (split: newline, $nome)) (set: $nome to $y1&#39;s 1st)]
+* Qual è il tuo cognome? (input-box: 2bind $cognome, &quot;XXX==&quot;, 1)
+(live: 0.1s)[(set: $y2 to (split: newline, $cognome)) (set: $cognome to $y2&#39;s 1st)]
 * Con che genere vuoi che ci si riferisca a te durante il gioco? (dropdown: 2bind $genere, &quot;maschile&quot;, &quot;femminile&quot;)
 * Che tipo di detective vuoi essere? (dropdown: 2bind $tipo, &quot;organizzata/o e razionale&quot;, &quot;cordiale e fantasiosa/o&quot;)
 * Vuoi tenere attiva la colonna sonora durante il gioco? (dropdown: 2bind $musica, &quot;si&quot;, &quot;no&quot;)&lt;br&gt;//(se giochi in classe, insieme o vicino ai tuoi compagni, potrebbe essere meglio disattivare l’audio)//
@@ -261,15 +268,13 @@ Prima di cominciare con il racconto, rispondi per favore a qualche domanda per p
 
 ---
 //[[Qualche informazione-&gt;credits]] su questo gioco e chi l’ha realizzato.//
-|piccolo&gt;[versione 24 maggio 2022] {
+|piccolo&gt;[versione 26 maggio 2022] {
 
 (set: $schedario to false)
 (set: $interrogatori to (ds:))
 (set: $poligrafo to false)
 (set: $poligrafo_Freschini to false)
-
-(if: $nome is &quot;&quot;) [(set: $nome to &quot;Alex&quot;)]
-(if: $cognome is &quot;&quot;) [(set: $cognome to &quot;Bianchi&quot;)]
+(set: $errori_mappa to 0)
 
 (live: 0.2s)[(if: $tipo is &quot;organizzata/o e razionale&quot;) [(set: $t to &quot;org&quot;)]
 (else:) [(set: $t to &quot;cor&quot;)]]
@@ -612,9 +617,9 @@ Hai appena guardato la legenda della mappa, secondo cui di ogni simbolo, cerchio
 Grazie a ulteriori approfondimenti e indagini, oltre che da quanto emerso durante l’interrogatorio, disponi di queste informazioni su Ravanelli:
 * è domiciliato a Busto Arsizio;
 * il suo studio si trova ad Abbiategrasso;
-* ha moltissimi clienti a Milano, in Brianza (l’area fra Milano e Como) e a Como;
+* ha moltissimi clienti a Milano, in Brianza (l’area compresa fra Milano e Como) e a Como;
 * nell’ultima settimana si è recato a un concerto a Seregno, al cinema a Magenta e allo stadio a San Siro (Milano);
-* ha due fratelli: uno vive a Como e l’altro a Varese.
+* ha due fratelli: uno vive a Como e l’altro a Varese. Entrambi sono famosi per la grande onestà e non aver mai avuto problemi di sorta con la legge.
 
 Sai bene che hai una sola possibilità, e che probabilmente il complice di Ravanelli è già in viaggio per recuperare il quadro, e che quindi devi trovare il nascondiglio della refurtiva a colpo sicuro.
 
@@ -622,7 +627,9 @@ Scegli quale luogo vuoi perquisire (dropdown: 2bind $direzione, &quot;1&quot;, &
 {(click: &quot;vai a investigare&quot;)[
 (if: $direzione is &quot;5&quot;) [(go-to: &quot;Direzione corretta&quot;)]
 (else:) [(go-to: &quot;Direzione sbagliata&quot;)]
-]} {
+]}
+(if: $errori_mappa &gt; 0)[Se non sei esperto di lettura di mappe, puoi sempre mandare una foto alla tua amica Rebecca, grande esperta di Data Science e giovane campionessa di orienteering, per vedere se ti possa [[dare una mano nella lettura della mappa-&gt;aiuto a Rebecca]].]
+{
 
 (if: $m) [(print: $cs6)]
 
@@ -663,12 +670,12 @@ Dopo esserti domandat$g come abbia fatto Ravanelli a entrare nella villa senza e
 
 (display: &quot;piepagina&quot;) }</tw-passagedata><tw-passagedata pid="22" name="Direzione sbagliata" tags="sfondo_sfumato2 testo_nero" position="2700,450" size="100,100">
 ## ... e dunque?
-
+\
+(set: $errori_mappa to $errori_mappa + 1)
+\
 Avendo ipotizzato quale sia la località in cui è nascosto il quadro, ti ci rechi subito a perdifiato, le sirene spiegate. Una volta arrivata, perlustri l’area con attenzione, senza dimenticare alcun angolo, né dando nulla per scontato.
 
 Purtroppo dopo ore di ricerche, arrivi alla conclusione: hai scelto il posto sbagliato. Quando rientri in commissariato, trovi il commissario Tomba che ti aspetta all’ingresso, lo sguardo tetro: “Mi spiace, $nome. Ho appena parlato con Ravanelli. Mi ha rivelato il nascondiglio del quadro, perché, dice lui, tanto ormai è troppo tardi per recuperarlo: il suo complice l’ha sicuramente recuperato. Hai fatto un ottimo lavoro, e hai incastrato il colpevole, ma purtroppo per la refurtiva non c’è più nulla da fare.”
-
-Ma dove hai sbagliato? Potresti fare una rapida telefonata alla tua amica Rebecca e (link: &quot;chiederle un parere&quot;)[(goto: &quot;visualizzazione di dati&quot;)].
 
 Per te, adesso, si apre una nuova attesa, in vista della prossima indagine...  
 ... oppure, puoi provare tornando a guardare la mappa (//per capirci: è come se prendessi la macchina del tempo e tornassi a quando eri ancora in commissariato...!//), e (link: &quot;vedere se con un nuovo tentativo sarai più abile!&quot;)[(goto: &quot;la mappa&quot;)] {
@@ -875,7 +882,7 @@ Ora, è davvero il momento giusto per andare allo [[schedario]]. {
 
 (if: $m) [(print: $cs2)]
 
-(display: &quot;piepagina&quot;) }</tw-passagedata><tw-passagedata pid="31" name="prendere la bicicletta" tags="testo_bianco sfondo_sfumato0" position="1200,771.6666666666667" size="100,100">&lt;img src=&#39;res1/bici.jpg&#39; class=&#39;full&#39; alt=&#39;immagine&#39;&gt;
+(display: &quot;piepagina&quot;) }</tw-passagedata><tw-passagedata pid="31" name="prendere la bicicletta" tags="testo_bianco sfondo_sfumato0" position="1200,771" size="100,100">&lt;img src=&#39;res1/bici.jpg&#39; class=&#39;full&#39; alt=&#39;immagine&#39;&gt;
 
 ##In viaggio in bicicletta...
  \
@@ -906,7 +913,7 @@ La pedalata è stata piacevole, e ti ha consentito di cominciare a riordinare le
 
 (if: $m) [(print: $cs2)]
 
-(display: &quot;piepagina&quot;) }</tw-passagedata><tw-passagedata pid="32" name="prendere la macchina" tags="testo_bianco sfondo_sfumato0" position="1198.3333333333333,528.0000000000001" size="100,100">&lt;img src=&#39;res1/citta.webp&#39; class=&#39;full&#39; alt=&#39;immagine&#39;&gt;
+(display: &quot;piepagina&quot;) }</tw-passagedata><tw-passagedata pid="32" name="prendere la macchina" tags="testo_bianco sfondo_sfumato0" position="1198,528" size="100,100">&lt;img src=&#39;res1/citta.webp&#39; class=&#39;full&#39; alt=&#39;immagine&#39;&gt;
 
 ##In viaggio in macchina...
  \
@@ -942,7 +949,7 @@ Ore e ore di interrogatorio non danno frutti. Purtroppo Ravanelli non vuole parl
 
 (if: $m) [(print: $cs6)]
 
-(display: &quot;piepagina&quot;) }</tw-passagedata><tw-passagedata pid="34" name="include" tags="header" position="760,473.3333333333333" size="100,100">&lt;!-- dei default, anche per rendere più semplice il testing in fase di sviluppo --&gt; {
+(display: &quot;piepagina&quot;) }</tw-passagedata><tw-passagedata pid="34" name="include" tags="header" position="760,473" size="100,100">&lt;!-- dei default, anche per rendere più semplice il testing in fase di sviluppo --&gt; {
 (if: $nome is 0) [(set: $nome to &quot;Alex&quot;)]
 (if: $cognome is 0) [(set: $cognome to &quot;Bianchi&quot;)]
 (if: $t is 0) [(set: $t to &quot;org&quot;)]
@@ -977,7 +984,7 @@ Dal punto di vista della sua qualità, un test che produce sempre veri positivi 
 Un esempio per rendere un po’ più concreto tutto ciò riguarda i famosi test per scoprire la presenza di un’infezione virale. Abbiamo imparato che l’affidabilità di certi test rapidi, i famosi test &quot;fai da te&quot;, è molto minore rispetto a quella di altri test: e così ti sarà forse capitato di aver fatto un test rapido con esito negativo e immediatamente dopo di essere risultat$g positiv$g a un test più accurato. Escludendo eventuali errori di somministrazione del test, da un punto di vista statistico questo può essere interpretato così: i test rapidi sono meno affidabili perché hanno una percentuale di falsi negativi molto più alta. 
 
 (set: $ultima_pag to (history:)&#39;s last)
-(link: &quot;Torna indietro&quot;)[(goto: $ultima_pag)]</tw-passagedata><tw-passagedata pid="36" name="piepagina" tags="" position="925,476.6666666666667" size="100,100">&lt;!-- deve essere incluso esplicitamente, con: (display: &quot;piepagina&quot;) --&gt;
+(link: &quot;Torna indietro&quot;)[(goto: $ultima_pag)]</tw-passagedata><tw-passagedata pid="36" name="piepagina" tags="" position="925,476" size="100,100">&lt;!-- deve essere incluso esplicitamente, con: (display: &quot;piepagina&quot;) --&gt;
 ---
 |piccolo&gt;[(se preferisci, [[puoi sempre ricominciare il gioco dall’inizio-&gt;frontespizio]] \
 (if: $m) [(link: &quot;&amp;nbsp;&amp;nbsp;e puoi sospendere l’audio&quot;) [&lt;script&gt;document.getElementById(&#39;cs&#39;).pause();&lt;/script&gt;]] )]</tw-passagedata><tw-passagedata pid="37" name="start" tags="" position="750,650" size="100,100">(if: &quot;auto&quot; is in (saved-games:)) [(load-game: &quot;auto&quot;)]
@@ -1018,7 +1025,27 @@ Due squadre che sono a pari punti alla fine del campionato, ovviamente avendo gi
 La deviazione standard, chiamata anche &quot;scarto tipo&quot; o &quot;scarto quadratico medio&quot;, ci consente di descrivere con un solo numero quanto sono vicini o lontani tra loro i valori di un campione, e più precisamente quanto i valori sono vicini alla media del campione stesso. Rispetto alle sei partite sopra, i risultati della prima squadra sono tutti uguali, e hanno perciò dispersione nulla e deviazione standard zero, mentre i risultati della seconda squadra sono piuttosto dispersi e deviazione standard abbastanza grande.
 
 (set: $ultima_pag to (history:)&#39;s last)
-(link: &quot;Torna indietro&quot;)[(goto: $ultima_pag)]</tw-passagedata></tw-storydata>
+(link: &quot;Torna indietro&quot;)[(goto: $ultima_pag)]</tw-passagedata><tw-passagedata pid="41" name="aiuto a Rebecca" tags="sfondo_sfumato2 testo_nero" position="2705,774.9999999999999" size="100,100">
+## L&#39;aiuto di Rebecca
+\
+&lt;img src=&#39;res1/mappa.png&#39; class=&#39;full&#39;&gt;
+\
+Mandi un messaggio alla tua amica Rebecca, che dopo pochi minuti ti risponde. 
+
+|preformat&gt;[Ciaoooo $nome!! Ma che piacere sentirti, sono giorni che sei sparit$g...va tutto bene? Hai avuto problemi al lavoro??
+
+Comunque ti aiuto con piacere, ma che messaggio strano che mi hai mandato, da quando ti interessi di visualizzazione di dati su mappe?? Comunque, ho guardato la mappa, e secondo me non si tratta di un problema così difficile, una volta che lo si guarda dal lato giusto...ma questo succede solo se si è esperti di scienza dei dati! 
+
+Io non so bene che vita faccia questo signore di cui mi hai raccontato ne cosa stia nascondendo e sarebbe certo più semplice se mi dessi qualche dato in più. Con le informazioni che mi hai dato, non so dirti esattamente in quale punto sia ciò che cerchi. Però appunto sono sicuro di poterti dare qualche dritta metodologica. 
+
+Secondo me per risolvere questo enigma devi cercare delle anomalie, ovvero dei dati strani che non sono spiegati dagli spostamenti e dalle abitudini di cui hai notizia. Ti faccio un esempio: se sapessi che c&#39;è una buona ragione per cui sia andato a Milano o a Como, ecco che dovresti escludere quelle località a priori, e quindi potresti escludere quelle località. \
+(if: $errori_mappa &gt; 1)[
+Tu mi hai scritto che questo sospettato stava nascondendo qualcosa di notte. Quindi verosimilmente puoi assumere che debba cercare un &quot;marker&quot; con delle caratteristiche particolari:
+* deve essere di colore rosa, che come mi hai detto indica un viaggio notturno;
+* deve essere di piccole dimensioni, perché sarà rimasto sul posto solo il tempo necessario a nascondere quello che doveva fare
+* deve essere a forma di triangolo, perché se stava facendo qualcosa di losco magari ha spento i dati del telefono!]Spero di esserti stata di aiuto...un abbraccio, ci vediamo presto!!! E non lavorare troppo!!]
+\
+Il messaggio di Rebecca è lungo e pieno di informazioni, come nel suo stile, ma alla seconda o terza rilettura pensi di aver capito che cosa intenda, e sei pront$g a [[riguardare la mappa-&gt;la mappa]].</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">"use strict";var _slicedToArray=function(){return function(e,t){if(Array.isArray(e))return e;if(Symbol.iterator in Object(e))return function(e,t){var n=[],r=!0,a=!1,i=void 0;try{for(var o,s=e[Symbol.iterator]();!(r=(o=s.next()).done)&&(n.push(o.value),!t||n.length!==t);r=!0);}catch(e){a=!0,i=e}finally{try{!r&&s.return&&s.return()}finally{if(a)throw i}}return n}(e,t);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}!function(){
 /**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.

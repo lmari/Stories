@@ -133,9 +133,13 @@ Questo che hai appena aperto è un &#39;&#39;libro-game digitale&#39;&#39;, il c
 
 Prima di cominciare con il racconto, rispondi per favore a qualche domanda per personalizzare la tua esperienza di gioco.
 
+(set: $nome to &quot;&quot;)
+(set: $cognome to &quot;&quot;)
 ### Detective, inserisci le tue generalità!
-Qual è il tuo nome? (input-box: bind $nome, &quot;XXX==&quot;, 1)
-Qual è il tuo cognome? (input-box: bind $cognome, &quot;XXX==&quot;, 1)
+Qual è il tuo nome? (input-box: 2bind $nome, &quot;XXX==&quot;, 1)
+(live: 0.1s)[(set: $y1 to (split: newline, $nome)) (set: $nome to $y1&#39;s 1st)] \
+Qual è il tuo cognome? (input-box: 2bind $cognome, &quot;XXX==&quot;, 1)
+(live: 0.1s)[(set: $y2 to (split: newline, $cognome)) (set: $cognome to $y2&#39;s 1st)] \
 Con che genere vuoi che ci si riferisca a te durante il gioco?
 (dropdown: 2bind $genere, &quot;femminile&quot;, &quot;maschile&quot;)
 
@@ -144,7 +148,6 @@ Con che genere vuoi che ci si riferisca a te durante il gioco?
 ### Detective, dichiara le tue capacità!
 Hai 5 punti a disposizione, da ripartire tra intelligenza e capacità relazionali: quanti punti vuoi destinare alla tua intelligenza? (dropdown: 2bind $punti, &quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;4&quot;)
 (live: 0.5s)[Avrai dunque $punti_int //punt(if: $punti_int is 1)[o](else:)[i] intelligenza// e $punti_soc //punt(if: $punti_soc is 1)[o](else:)[i] socialità//].
-
 
 |enfat&gt;[Benissimo: puoi ora [[iniziare la tua avventura!-&gt;1 Introduzione]]]
 
@@ -177,9 +180,6 @@ Hai 5 punti a disposizione, da ripartire tra intelligenza e capacità relazional
 (set: $controlla_postit to 0)
 (set: $controlla_frappe to 0)
 (set: $scontrino_generico to 0)
-
-(if: (trimmed: &quot; &quot;, $nome) is &quot;&quot;) [(set: $nome to &quot;Alex&quot;)]
-(if: (trimmed: &quot; &quot;, $cognome) is &quot;&quot;) [(set: $cognome to &quot;Bianchi&quot;)]
 }</tw-passagedata><tw-passagedata pid="2" name="Targhe" tags="Grigio_c T_Nero" position="4400,900" size="100,100">
 ## Scova il veicolo del sospettato
 \
@@ -338,7 +338,10 @@ Ora che sai come si legge una targa, e hai i mezzi per capire quali siano le pi�
 \
 (display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="7" name="1 Introduzione" tags="Grigio_c T_Nero" position="1600,901" size="100,100">
 ## Alla ricerca della Lupa Capitolina
- \
+\
+(if: (trimmed: &quot; &quot;, $nome) is &quot;&quot;) [(set: $nome to &quot;Alex&quot;)]
+(if: (trimmed: &quot; &quot;, $cognome) is &quot;&quot;) [(set: $cognome to &quot;Bianchi&quot;)]
+\
 Sono passati mesi da quando hai brillantemente risolto il caso del furto del Bacio dell’Hayez. Il clamore mediatico del ritrovamento del quadro rubato ti ha dato i proverbiali 15 minuti di notorietà. Interviste su tutti i principali telegiornali, ospitate in televisione. Ti è arrivato addirittura un invito da parte della neo-eletta presidente della Repubblica, che si è voluta congraturare con te di persona per il contributo che hai dato alla comunità.
 
 Poi, però, il clamore è finito, e hai potuto ricominciare con la tua normale routine lavorativa... tirando un sospiro di sollievo! Un po’ perché dopo qualche giorno non ne potevi già più di essere fermat$g da sconosciuti per strada in cerca di un selfie. E, soprattutto, perché avevi cose più importanti a cui pensare: quando hai arrestato Ravanelli, il colpevole del furto del Bacio di Hayez, non sei riuscit$g a trovare il complice.
