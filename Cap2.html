@@ -679,9 +679,9 @@ Scegli uno degli oggetti sulla scrivania:]
 =|=
 [[&lt;img src=&#39;res2/6ilb.png&#39; class=&#39;full&#39;&gt;-&gt;scontrino generico]]
 =|=
-[[&lt;img src=&#39;res2/0lav.png&#39; class=&#39;full&#39;&gt;-&gt;scontrino lavanderia]]
+[[&lt;img src=&#39;res2/0lav.png&#39; class=&#39;full&#39;&gt;-&gt;bigliettino lavanderia]]
 =|=
-[[&lt;img src=&#39;res2/7lav.png&#39; class=&#39;full&#39;&gt;-&gt;bigliettino lavanderia]]
+[[&lt;img src=&#39;res2/7lav.png&#39; class=&#39;full&#39;&gt;-&gt;scontrino lavanderia]]
 |==|
 \
 (display: &quot;piepagina&quot;)</tw-passagedata><tw-passagedata pid="21" name="4 Fine" tags="Grigio_c T_Nero" position="6602,797" size="100,100">
@@ -776,8 +776,8 @@ Sarebbe utile se non conoscessi l’identità del sospettato, ma tu sai già di 
 
 (set: $scontrino_generico to 1)
 
-(display: &quot;piepagina&quot;) }</tw-passagedata><tw-passagedata pid="24" name="scontrino lavanderia" tags="Grigio_c T_Nero" position="6400,425" size="100,100">(if: $scontrino1 is 0) [
-## Scontrino della lavanderia
+(display: &quot;piepagina&quot;) }</tw-passagedata><tw-passagedata pid="24" name="bigliettino lavanderia" tags="Grigio_c T_Nero" position="6400,425" size="100,100">(if: $scontrino1 is 0) [
+## Bigliettino della lavanderia
 \
 &lt;img src=&#39;res2/0lav.png&#39; class=&#39;full&#39;&gt;
 \
@@ -798,14 +798,14 @@ Il maresciallo è d&#39;accordo con te. Richiama tutti all&#39;ordine con la sua
 \
 Andate alla lavanderia, e dopo qualche minuto di appostamento, effettivamente David Mercer appare nella via, camminando rapido in direzione della lavanderia. Si guarda attorno con circospezione, ma non si accorge di nulla. Appena entra nel negozio, un nugulo di poliziotti gli è addosso, lo immobilizza e lo ammanetta. Lo hai preso! E adesso è finalmente arrivato il momento di [[arrestare David Mercer-&gt;4 Fine]].] {
 
-(display: &quot;piepagina&quot;) }</tw-passagedata><tw-passagedata pid="25" name="bigliettino lavanderia" tags="Grigio_c T_Nero" position="6400,550" size="100,100">
+(display: &quot;piepagina&quot;) }</tw-passagedata><tw-passagedata pid="25" name="scontrino lavanderia" tags="Grigio_c T_Nero" position="6400,551.6666666666666" size="100,100">
 ## Scopri dov&#39;è la lavanderia
 \
 (set: $scontrino1 to 1) \
 \
 (align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[&lt;img src=&#39;res2/7lav.png&#39;&gt;] \
 \
-Questo scontrino è di una lavanderia è molto recente, esattamente qualche  giorno prima del furto della Lupa capitolina. Magari il sospettato è già passato a ritirare i vestiti...o magari no. Per ora non lo puoi sapere, dovresti trovare un ulteriore indizio, magari qualcosa che ti indichi quando Mercer si sia recato in lavanderia, o se vi si debba ancora recare..
+Questo scontrino è di una lavanderia è molto recente, esattamente qualche  giorno prima del furto della Lupa Capitolina. Magari il sospettato è già passato a ritirare i vestiti...o magari no. Per ora non lo puoi sapere, dovresti trovare un ulteriore indizio, magari qualcosa che ti indichi quando Mercer si sia recato in lavanderia, o se vi si debba ancora recare..
 
 ...se lo scoprissi, potresti organizzare un’imboscata e mettere le mani sul colpevole. 
 \
@@ -818,8 +818,8 @@ A questo punto, torna indietro e [[controlla gli altri scontrini-&gt;3 Fine]]. {
 (set: $risp_sbagliate to 2 - $extra_punti) \
  \
 (if: $extra_punti is 0) [Peccato che tu non ricordassi come interpretare le coordinate geografiche: avresti guadagnato qualche //punto intelligenza//...] \
-(else-if: $extra_punti is 1) [Questa risposta è invece sbagliata, purtroppo... Grazie al buon lavoro a proposito di coordinate geografiche, hai tenuto in allenamento la tua intelligenza, hai guadagnato 1 punto e hai ora $punti_int //punti intelligenza//.] \
-(else:) [Giusto anche questa volta! Grazie al buon lavoro a proposito di coordinate geografiche, hai tenuto in allenamento la tua intelligenza, hai guadagnato 1 punto e hai ora $punti_int //punti intelligenza//.]
+(else-if: $extra_punti is 1) [Questa risposta è invece sbagliata, purtroppo... Grazie al buon lavoro a proposito di coordinate geografiche, hai tenuto in allenamento la tua intelligenza, hai guadagnato un punto e hai ora $punti_int //punti intelligenza//.] \
+(else:) [Giusto anche questa volta! Grazie al buon lavoro a proposito di coordinate geografiche, hai tenuto in allenamento la tua intelligenza, hai guadagnato due punti e hai ora $punti_int //punti intelligenza//.]
 
 Potresti ora decidere di informarti un poco a proposito di [[coordinate geografiche]].
 
